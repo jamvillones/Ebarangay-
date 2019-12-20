@@ -73,7 +73,7 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Bebas Neue", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -103,7 +103,7 @@
             this.DashBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.DashBtn.FlatAppearance.BorderSize = 0;
             this.DashBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DashBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashBtn.Font = new System.Drawing.Font("Bebas Neue", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DashBtn.ForeColor = System.Drawing.Color.White;
             this.DashBtn.Image = ((System.Drawing.Image)(resources.GetObject("DashBtn.Image")));
             this.DashBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -136,7 +136,7 @@
             this.RegisterBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.RegisterBtn.FlatAppearance.BorderSize = 0;
             this.RegisterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegisterBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisterBtn.Font = new System.Drawing.Font("Bebas Neue", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterBtn.ForeColor = System.Drawing.Color.White;
             this.RegisterBtn.Image = ((System.Drawing.Image)(resources.GetObject("RegisterBtn.Image")));
             this.RegisterBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -157,7 +157,7 @@
             this.QueryBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.QueryBtn.FlatAppearance.BorderSize = 0;
             this.QueryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.QueryBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QueryBtn.Font = new System.Drawing.Font("Bebas Neue", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QueryBtn.ForeColor = System.Drawing.Color.White;
             this.QueryBtn.Image = ((System.Drawing.Image)(resources.GetObject("QueryBtn.Image")));
             this.QueryBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -230,7 +230,7 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Bebas Neue", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(43, 0);
             this.label1.Name = "label1";
@@ -245,7 +245,7 @@
             this.MaximizeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.MaximizeBtn.FlatAppearance.BorderSize = 0;
             this.MaximizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MaximizeBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaximizeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaximizeBtn.ForeColor = System.Drawing.Color.White;
             this.MaximizeBtn.Image = ((System.Drawing.Image)(resources.GetObject("MaximizeBtn.Image")));
             this.MaximizeBtn.Location = new System.Drawing.Point(760, 3);
@@ -272,7 +272,7 @@
             this.ExitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ExitBtn.FlatAppearance.BorderSize = 0;
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitBtn.ForeColor = System.Drawing.Color.White;
             this.ExitBtn.Image = ((System.Drawing.Image)(resources.GetObject("ExitBtn.Image")));
             this.ExitBtn.Location = new System.Drawing.Point(794, 3);

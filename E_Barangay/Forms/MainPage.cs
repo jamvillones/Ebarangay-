@@ -82,9 +82,16 @@ namespace E_Barangay.Forms
         {
             Current = DashControl;
             currentAccept = DashControl;
-            DashControl.ShowStats();
-            QueryPage.showData();
-            RegisterPage.LoadValues();
+            try
+            {
+                DashControl.ShowStats();
+                QueryPage.showData();
+                RegisterPage.LoadValues();
+            }
+            catch
+            {
+
+            }
 
             QueryPage.Enabled = false;
             RegisterPage.Enabled = false;
