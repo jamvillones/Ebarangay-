@@ -307,7 +307,7 @@
             // OrNo
             // 
             this.OrNo.Location = new System.Drawing.Point(72, 17);
-            this.OrNo.MaxLength = 20;
+            this.OrNo.MaxLength = 13;
             this.OrNo.Name = "OrNo";
             this.OrNo.Size = new System.Drawing.Size(98, 20);
             this.OrNo.TabIndex = 1;

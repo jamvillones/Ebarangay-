@@ -36,10 +36,10 @@ namespace E_Barangay.Forms
 
             e.Graphics.DrawString(text, font, Brushes.Black, rect);
 
-            var rectangleTest = new RectangleF(e.PageBounds.Width / 3 - 30, e.PageBounds.Height - 300, 240, 60);
+            var rectangleTest = new RectangleF(e.PageBounds.Width / 3 - 30, e.PageBounds.Height - 300, 240, 100);
 
             string orTxt = "Paid Under OR No: " + TextBoxFormat(OrNo) + "\n" +
-                           "Issued On: " + ORIssueDate.Value.ToString("MMMM") + " " + ORIssueDate.Value.Day.ToString() + ", " + ORIssueDate.Value.Year.ToString() + "\n" +
+                           //"Issued On: " + ORIssueDate.Value.ToString("MMMM") + " " + ORIssueDate.Value.Day.ToString() + ", " + ORIssueDate.Value.Year.ToString() + "\n" +
                            "Issued On: " + ORIssueDate.Value.ToString("MMMM") + " " + ORIssueDate.Value.Day.ToString() + ", " + ORIssueDate.Value.Year.ToString() + "\n" +
                            "Note: Valid Until: " + OrValidityDate.Value.ToString("MMMM") + " " + OrValidityDate.Value.Day.ToString() + ", " + OrValidityDate.Value.Year.ToString();
 
