@@ -1,6 +1,6 @@
 ﻿namespace E_Barangay.Forms
 {
-    partial class IssuePage
+    partial class BarangayClearanceForm
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IssuePage));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BarangayClearanceForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -56,12 +56,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.PrintBtn = new System.Windows.Forms.Button();
-            this.UpdateBtn = new System.Windows.Forms.Button();
             this.PrintPreviewBtn = new System.Windows.Forms.Button();
             this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.UpdateBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -76,7 +76,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 477);
+            this.panel1.Size = new System.Drawing.Size(200, 655);
             this.panel1.TabIndex = 0;
             // 
             // groupBox3
@@ -119,8 +119,7 @@
             this.Purpose.Location = new System.Drawing.Point(83, 121);
             this.Purpose.Name = "Purpose";
             this.Purpose.Size = new System.Drawing.Size(87, 20);
-            this.Purpose.TabIndex = 27;
-            this.Purpose.Text = "EMPLOYMENT";
+            this.Purpose.TabIndex = 5;
             this.Purpose.TextChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // label11
@@ -139,7 +138,6 @@
             this.Age.Name = "Age";
             this.Age.Size = new System.Drawing.Size(87, 20);
             this.Age.TabIndex = 4;
-            this.Age.Text = "21";
             this.Age.TextChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // label10
@@ -167,7 +165,6 @@
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(87, 20);
             this.lastName.TabIndex = 3;
-            this.lastName.Text = "VILLONES";
             this.lastName.TextChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // middleName
@@ -178,7 +175,6 @@
             this.middleName.Name = "middleName";
             this.middleName.Size = new System.Drawing.Size(87, 20);
             this.middleName.TabIndex = 2;
-            this.middleName.Text = "P";
             this.middleName.TextChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // label1
@@ -206,7 +202,6 @@
             this.firstName.Name = "firstName";
             this.firstName.Size = new System.Drawing.Size(87, 20);
             this.firstName.TabIndex = 1;
-            this.firstName.Text = "JAMIL";
             this.firstName.TextChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // CStatusOption
@@ -219,7 +214,7 @@
             this.CStatusOption.Location = new System.Drawing.Point(72, 207);
             this.CStatusOption.Name = "CStatusOption";
             this.CStatusOption.Size = new System.Drawing.Size(98, 21);
-            this.CStatusOption.TabIndex = 7;
+            this.CStatusOption.TabIndex = 8;
             this.CStatusOption.SelectedIndexChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // label2
@@ -245,8 +240,7 @@
             this.Address.Location = new System.Drawing.Point(72, 180);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(98, 20);
-            this.Address.TabIndex = 6;
-            this.Address.Text = "Torralba, Banga, Aklan";
+            this.Address.TabIndex = 7;
             this.Address.TextChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // IssuedOn
@@ -255,7 +249,7 @@
             this.IssuedOn.Location = new System.Drawing.Point(72, 153);
             this.IssuedOn.Name = "IssuedOn";
             this.IssuedOn.Size = new System.Drawing.Size(98, 20);
-            this.IssuedOn.TabIndex = 5;
+            this.IssuedOn.TabIndex = 6;
             this.IssuedOn.ValueChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // groupBox1
@@ -289,6 +283,7 @@
             this.OrValidityDate.Name = "OrValidityDate";
             this.OrValidityDate.Size = new System.Drawing.Size(98, 20);
             this.OrValidityDate.TabIndex = 3;
+            this.OrValidityDate.TabStop = false;
             this.OrValidityDate.ValueChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // label8
@@ -316,7 +311,6 @@
             this.OrNo.Name = "OrNo";
             this.OrNo.Size = new System.Drawing.Size(98, 20);
             this.OrNo.TabIndex = 1;
-            this.OrNo.Text = "0001";
             this.OrNo.TextChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // label5
@@ -330,16 +324,15 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.PrintBtn);
+            this.panel2.BackColor = System.Drawing.Color.Teal;
             this.panel2.Controls.Add(this.UpdateBtn);
+            this.panel2.Controls.Add(this.PrintBtn);
             this.panel2.Controls.Add(this.PrintPreviewBtn);
             this.panel2.Controls.Add(this.printPreviewControl1);
-            this.panel2.Location = new System.Drawing.Point(216, 8);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(200, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(423, 447);
+            this.panel2.Size = new System.Drawing.Size(519, 655);
             this.panel2.TabIndex = 1;
             // 
             // PrintBtn
@@ -349,24 +342,13 @@
             this.PrintBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PrintBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PrintBtn.Image = ((System.Drawing.Image)(resources.GetObject("PrintBtn.Image")));
-            this.PrintBtn.Location = new System.Drawing.Point(385, 8);
+            this.PrintBtn.Location = new System.Drawing.Point(481, 8);
             this.PrintBtn.Name = "PrintBtn";
             this.PrintBtn.Size = new System.Drawing.Size(35, 30);
             this.PrintBtn.TabIndex = 4;
+            this.PrintBtn.TabStop = false;
             this.PrintBtn.UseVisualStyleBackColor = false;
             this.PrintBtn.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // UpdateBtn
-            // 
-            this.UpdateBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UpdateBtn.Image = ((System.Drawing.Image)(resources.GetObject("UpdateBtn.Image")));
-            this.UpdateBtn.Location = new System.Drawing.Point(3, 8);
-            this.UpdateBtn.Name = "UpdateBtn";
-            this.UpdateBtn.Size = new System.Drawing.Size(35, 30);
-            this.UpdateBtn.TabIndex = 3;
-            this.UpdateBtn.UseVisualStyleBackColor = false;
-            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // PrintPreviewBtn
             // 
@@ -378,6 +360,7 @@
             this.PrintPreviewBtn.Name = "PrintPreviewBtn";
             this.PrintPreviewBtn.Size = new System.Drawing.Size(35, 30);
             this.PrintPreviewBtn.TabIndex = 1;
+            this.PrintPreviewBtn.TabStop = false;
             this.PrintPreviewBtn.UseVisualStyleBackColor = false;
             this.PrintPreviewBtn.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -389,9 +372,9 @@
             this.printPreviewControl1.AutoZoom = false;
             this.printPreviewControl1.Location = new System.Drawing.Point(3, 44);
             this.printPreviewControl1.Name = "printPreviewControl1";
-            this.printPreviewControl1.Size = new System.Drawing.Size(417, 403);
+            this.printPreviewControl1.Size = new System.Drawing.Size(513, 608);
             this.printPreviewControl1.TabIndex = 0;
-            this.printPreviewControl1.Zoom = 0.36272727272727273D;
+            this.printPreviewControl1.Zoom = 0.5D;
             // 
             // printDocument1
             // 
@@ -411,15 +394,38 @@
             // 
             this.printDialog1.UseEXDialog = true;
             // 
-            // IssuePage
+            // UpdateBtn
             // 
+            this.UpdateBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.UpdateBtn.FlatAppearance.BorderSize = 0;
+            this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateBtn.Image = ((System.Drawing.Image)(resources.GetObject("UpdateBtn.Image")));
+            this.UpdateBtn.Location = new System.Drawing.Point(3, 8);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(35, 30);
+            this.UpdateBtn.TabIndex = 5;
+            this.UpdateBtn.TabStop = false;
+            this.UpdateBtn.UseVisualStyleBackColor = false;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click_1);
+            // 
+            // BarangayClearanceForm
+            // 
+            this.AcceptButton = this.UpdateBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(719, 655);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "IssuePage";
-            this.Size = new System.Drawing.Size(655, 477);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "BarangayClearanceForm";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Barangay Clearcance";
             this.Load += new System.EventHandler(this.IssuePage_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -463,8 +469,8 @@
         private System.Windows.Forms.TextBox Purpose;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker ORIssueDate;
-        private System.Windows.Forms.Button UpdateBtn;
         private System.Windows.Forms.Button PrintBtn;
         private System.Windows.Forms.PrintDialog printDialog1;
+        private System.Windows.Forms.Button UpdateBtn;
     }
 }

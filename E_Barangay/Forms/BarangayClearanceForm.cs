@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace E_Barangay.Forms
 {
-    public partial class IssuePage : UserControl
+    public partial class BarangayClearanceForm : Form
     {
         bool EditMade = false;
-        public IssuePage()
+        public BarangayClearanceForm()
         {
             InitializeComponent();
 
@@ -30,20 +30,26 @@ namespace E_Barangay.Forms
             Font font = new Font("Arial Narrow", 12, FontStyle.Regular);
 
             RectangleF rect = new RectangleF(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3, 548, 300);
-            string text = Indention + "This is to certify that as per record of this Barangay " + firstName.Text + " " + middleName.Text + ". " + lastName.Text + ", " + Age.Text + " years old, " + CStatusOption.Text + ", Filipino and a resident of " + Address.Text + ", whose signature appears below has no criminal, civil or administrative charges before this office and has good moral standing in the community." + LineSpace
-                          + Indention + "This certification is issued upon the request of Mr. " + lastName.Text + " for the purpose of his " + Purpose.Text + "." + LineSpace
+            string text = Indention + "This is to certify that as per record of this Barangay " + TextBoxFormat(firstName) + " " + TextBoxFormat(middleName) + ". " + TextBoxFormat(lastName) + ", " + TextBoxFormat(Age) + " years old, " + TextBoxFormat(CStatusOption) + ", Filipino and a resident of " + TextBoxFormat(Address) + ", whose signature appears below has no criminal, civil or administrative charges before this office and has good moral standing in the community." + LineSpace
+                          + Indention + "This certification is issued upon the request of Mr. " + TextBoxFormat(lastName) + " for the purpose of his " + TextBoxFormat(Purpose) + "." + LineSpace
                           + "WITNESS MY HAND SEAL, this " + IssuedOn.Value.Day + "th  day of " + IssuedOn.Value.ToString("MMMM") + ", " + IssuedOn.Value.Year + " at Barangay Poblacion, Kalibo, Aklan, Philippines.";
 
             e.Graphics.DrawString(text, font, Brushes.Black, rect);
 
             var rectangleTest = new RectangleF(e.PageBounds.Width / 3 - 30, e.PageBounds.Height - 300, 240, 60);
 
-            string orTxt = "Paid Under OR No: " + OrNo.Text + "\n" +
+            string orTxt = "Paid Under OR No: " + TextBoxFormat(OrNo) + "\n" +
                            "Issued On: " + ORIssueDate.Value.ToString("MMMM") + " " + ORIssueDate.Value.Day.ToString() + ", " + ORIssueDate.Value.Year.ToString() + "\n" +
                            "Issued On: " + ORIssueDate.Value.ToString("MMMM") + " " + ORIssueDate.Value.Day.ToString() + ", " + ORIssueDate.Value.Year.ToString() + "\n" +
                            "Note: Valid Until: " + OrValidityDate.Value.ToString("MMMM") + " " + OrValidityDate.Value.Day.ToString() + ", " + OrValidityDate.Value.Year.ToString();
 
             e.Graphics.DrawString(orTxt, font, Brushes.Black, rectangleTest);
+        }
+        string TextBoxFormat(Control c)
+        {
+            if (c.Text == "")
+                return "*****";
+            return c.Text;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -70,10 +76,10 @@ namespace E_Barangay.Forms
                 UpdateBtn.Enabled = false;
             }
         }
-        private void UpdateBtn_Click(object sender, EventArgs e)
-        {
-            ToggleEdit();
-        }
+        //private void UpdateBtn_Click(object sender, EventArgs e)
+        //{
+        //    ToggleEdit();
+        //}
         private void MadeChangesCallback(object sender, EventArgs e)
         {
             Control c = (Control)sender;
@@ -91,6 +97,11 @@ namespace E_Barangay.Forms
             {
                 printDocument1.Print();
             }
+        }
+
+        private void UpdateBtn_Click_1(object sender, EventArgs e)
+        {
+            ToggleEdit();
         }
     }
 }

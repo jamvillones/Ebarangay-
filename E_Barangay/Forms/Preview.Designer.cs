@@ -96,7 +96,7 @@
             // 
             this.ImageBox.Location = new System.Drawing.Point(-30, -2);
             this.ImageBox.Name = "ImageBox";
-            this.ImageBox.Size = new System.Drawing.Size(166, 110);
+            this.ImageBox.Size = new System.Drawing.Size(166, 111);
             this.ImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImageBox.TabIndex = 0;
             this.ImageBox.TabStop = false;
@@ -262,7 +262,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SpouseTxt.BackColor = System.Drawing.Color.Silver;
             this.SpouseTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SpouseTxt.Location = new System.Drawing.Point(482, 175);
+            this.SpouseTxt.Location = new System.Drawing.Point(482, 176);
             this.SpouseTxt.Name = "SpouseTxt";
             this.SpouseTxt.ReadOnly = true;
             this.SpouseTxt.Size = new System.Drawing.Size(256, 25);
@@ -415,7 +415,7 @@
             this.IsPwd.AutoSize = true;
             this.IsPwd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.IsPwd.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IsPwd.Location = new System.Drawing.Point(6, 201);
+            this.IsPwd.Location = new System.Drawing.Point(6, 202);
             this.IsPwd.Name = "IsPwd";
             this.IsPwd.Size = new System.Drawing.Size(58, 21);
             this.IsPwd.TabIndex = 29;

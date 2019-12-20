@@ -138,10 +138,10 @@ namespace E_Barangay.Forms
         {
 
         }
-        TestForm printing;
+        BarangayClearanceForm printing;
         private void button1_Click_1(object sender, EventArgs e)
         {
-            printing = new TestForm();
+            printing = new BarangayClearanceForm();
             printing.FormClosing += Printing_FormClosing;
             printing.Show();
             this.Enabled = false;

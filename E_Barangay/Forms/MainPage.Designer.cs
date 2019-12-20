@@ -103,7 +103,7 @@
             this.DashBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.DashBtn.FlatAppearance.BorderSize = 0;
             this.DashBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DashBtn.Font = new System.Drawing.Font("Birch Std", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DashBtn.ForeColor = System.Drawing.Color.White;
             this.DashBtn.Image = ((System.Drawing.Image)(resources.GetObject("DashBtn.Image")));
             this.DashBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

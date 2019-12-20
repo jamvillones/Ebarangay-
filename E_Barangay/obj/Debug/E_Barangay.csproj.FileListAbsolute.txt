@@ -85,7 +85,6 @@ C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Baran
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.Documents.Barangay_Clearance.resources
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.Forms.CaptureImageForm.resources
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.Forms.EditCitizenInfoForm.resources
-C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.Forms.IssuePage.resources
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.Forms.MainPage.resources
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.Forms.Preview.resources
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.Forms.QueryControl.resources
@@ -93,9 +92,9 @@ C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Baran
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.Forms.RegisterControl.resources
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.Forms.Dashboard.resources
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.Properties.Resources.resources
-C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.TestForm.resources
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.csproj.GenerateResource.cache
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.csproj.CoreCompileInputs.cache
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.csproj.CopyComplete
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.exe
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.pdb
+C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.Forms.BarangayClearanceForm.resources

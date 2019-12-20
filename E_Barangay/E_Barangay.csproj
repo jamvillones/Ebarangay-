@@ -114,11 +114,11 @@
     <Compile Include="Forms\EditCitizenInfoForm.Designer.cs">
       <DependentUpon>EditCitizenInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\IssuePage.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Forms\BarangayClearanceForm.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\IssuePage.Designer.cs">
-      <DependentUpon>IssuePage.cs</DependentUpon>
+    <Compile Include="Forms\BarangayClearanceForm.Designer.cs">
+      <DependentUpon>BarangayClearanceForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainPage.cs">
       <SubType>Form</SubType>
@@ -167,12 +167,6 @@
     <Compile Include="Record.cs">
       <DependentUpon>Ebarangaymodel.tt</DependentUpon>
     </Compile>
-    <Compile Include="TestForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TestForm.Designer.cs">
-      <DependentUpon>TestForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>Ebarangaymodel.tt</DependentUpon>
     </Compile>
@@ -185,8 +179,8 @@
     <EmbeddedResource Include="Forms\EditCitizenInfoForm.resx">
       <DependentUpon>EditCitizenInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\IssuePage.resx">
-      <DependentUpon>IssuePage.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\BarangayClearanceForm.resx">
+      <DependentUpon>BarangayClearanceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
@@ -216,9 +210,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TestForm.resx">
-      <DependentUpon>TestForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EntityDeploy Include="Ebarangaymodel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Ebarangaymodel.Designer.cs</LastGenOutput>

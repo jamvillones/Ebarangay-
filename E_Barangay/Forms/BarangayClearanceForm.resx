@@ -118,6 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="UpdateBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAE9SURBVDhPpdS9LgRRGMbxEZ9LgQRxAVspFQQ3oBPFJgrRCBeg0QoiQi+hJZEouACh0yqU2wih
+        pRAJDf4P+07emcyZxJkn+SW755w8Ozv77iQl6cUarnCGUURnEo/4hgpVHp1xvENlrxhBdDrRhMpkH5Wy
+        BCsTffVKOYeVfaIbocyg/+9lOPewwictBDKBD1yiXQs+q1hv0SErfG6tyRwsw7AJkE1kcgrbDNmA0oFr
+        +L0vzCNNDbfwh7wLtEHZRdEZjVcdacbwhvzBBwxBaUBXkz9j7tCHNAvwB3Q/bWz0a+oq/H6RLWSyB9tc
+        1oLLAAahD/ElJ9C69CAT/VNucPz7rjhT8IXbKI0eBCoOJf9vmkWlHMLKNPxdiI6u/gVWmL/P/84OrOxI
+        C1WyAs2hxkdPchv2qEzjAIsoecIkyQ9FbXje3ZM3MwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="PrintBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAO9JREFUOE/l
@@ -126,17 +137,6 @@
         zgQTK7zOPyisQ3MfzW6SWviGlqH1nwvzh317lxQVDrGB5jv8GFprT7MBnBQVHtFHO0CzA5wUFWpf7+s9
         wL5LJ7bQ99vSftdcV/gytM7PnNjCGN9HsZyU4PttSQ1N6FAHr4bW2tNM9/0q10+TxyzLzhqka9J+0lnI
         AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="UpdateBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAT1JREFUOE+l
-        1L0uBFEYxvERn0uBBHEBWykVBDegE8UmCtEIF6DRCiJCL6ElkSi4AKHTKpTbCKGlEAkN/g/7Tt6ZzJnE
-        mSf5JbvnnDw7O/vuJCXpxRqucIZRRGcSj/iGClUenXG8Q2WvGEF0OtGEymQflbIEKxN99Uo5h5V9ohuh
-        zKD/72U497DCJy0EMoEPXKJdCz6rWG/RISt8bq3JHCzDsAmQTWRyCtsM2YDSgWv4vS/MI00Nt/CHvAu0
-        QdlF0RmNVx1pxvCG/MEHDEFpQFeTP2Pu0Ic0C/AHdD9tbPRr6ir8fpEtZLIH21zWgssABqEP8SUn0Lr0
-        IBP9U25w/PuuOFPwhdsojR4EKg4l/2+aRaUcwso0/F2Ijq7+BVaYv8//zg6s7EgLVbICzaHGR09yG/ao
-        TOMAiyh5wiTJD0VteN7dkzczAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="PrintPreviewBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
