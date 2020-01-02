@@ -63,6 +63,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.IDField = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageBox)).BeginInit();
             this.Group.SuspendLayout();
@@ -147,6 +149,8 @@
             this.Group.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Group.Controls.Add(this.IDField);
+            this.Group.Controls.Add(this.label12);
             this.Group.Controls.Add(this.SaveBtn);
             this.Group.Controls.Add(this.CivilStatusOption);
             this.Group.Controls.Add(this.label9);
@@ -495,6 +499,26 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Contact ";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(134, 24);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 15);
+            this.label12.TabIndex = 55;
+            this.label12.Text = "Citizen ID";
+            // 
+            // IDField
+            // 
+            this.IDField.BackColor = System.Drawing.Color.Silver;
+            this.IDField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.IDField.Location = new System.Drawing.Point(203, 19);
+            this.IDField.Name = "IDField";
+            this.IDField.ReadOnly = true;
+            this.IDField.Size = new System.Drawing.Size(534, 25);
+            this.IDField.TabIndex = 56;
+            // 
             // Preview
             // 
             this.AcceptButton = this.OkayBtn;
@@ -558,5 +582,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox CivilStatusOption;
         private System.Windows.Forms.Button SaveBtn;
+        private System.Windows.Forms.TextBox IDField;
+        private System.Windows.Forms.Label label12;
     }
 }

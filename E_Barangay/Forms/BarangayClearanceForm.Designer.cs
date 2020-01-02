@@ -30,9 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BarangayClearanceForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.Purpose = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.IssuedOn = new System.Windows.Forms.DateTimePicker();
+            this.ResetBtn = new System.Windows.Forms.Button();
+            this.IdGroup = new System.Windows.Forms.GroupBox();
+            this.AssignBtn = new System.Windows.Forms.Button();
+            this.IDField = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.Age = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -43,10 +50,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.firstName = new System.Windows.Forms.TextBox();
             this.CStatusOption = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Address = new System.Windows.Forms.TextBox();
-            this.IssuedOn = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ORIssueDate = new System.Windows.Forms.DateTimePicker();
             this.OrValidityDate = new System.Windows.Forms.DateTimePicker();
@@ -55,14 +60,18 @@
             this.OrNo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.UpdateBtn = new System.Windows.Forms.Button();
             this.PrintBtn = new System.Windows.Forms.Button();
             this.PrintPreviewBtn = new System.Windows.Forms.Button();
             this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.UpdateBtn = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.SexOption = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.IdGroup.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -71,6 +80,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Controls.Add(this.ResetBtn);
+            this.panel1.Controls.Add(this.IdGroup);
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -79,10 +91,98 @@
             this.panel1.Size = new System.Drawing.Size(200, 655);
             this.panel1.TabIndex = 0;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.Purpose);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.IssuedOn);
+            this.groupBox2.Location = new System.Drawing.Point(12, 382);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(176, 76);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "MISC";
+            // 
+            // label12
+            // 
+            this.label12.Location = new System.Drawing.Point(6, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 20);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "Purpose:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Purpose
+            // 
+            this.Purpose.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.Purpose.Location = new System.Drawing.Point(72, 17);
+            this.Purpose.Name = "Purpose";
+            this.Purpose.Size = new System.Drawing.Size(98, 20);
+            this.Purpose.TabIndex = 1;
+            this.Purpose.TextChanged += new System.EventHandler(this.MadeChangesCallback);
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(6, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Issued On:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // IssuedOn
+            // 
+            this.IssuedOn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.IssuedOn.Location = new System.Drawing.Point(72, 43);
+            this.IssuedOn.Name = "IssuedOn";
+            this.IssuedOn.Size = new System.Drawing.Size(98, 20);
+            this.IssuedOn.TabIndex = 2;
+            this.IssuedOn.ValueChanged += new System.EventHandler(this.MadeChangesCallback);
+            // 
+            // ResetBtn
+            // 
+            this.ResetBtn.Location = new System.Drawing.Point(12, 594);
+            this.ResetBtn.Name = "ResetBtn";
+            this.ResetBtn.Size = new System.Drawing.Size(176, 23);
+            this.ResetBtn.TabIndex = 5;
+            this.ResetBtn.Text = "Reset";
+            this.ResetBtn.UseVisualStyleBackColor = true;
+            this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
+            // 
+            // IdGroup
+            // 
+            this.IdGroup.Controls.Add(this.AssignBtn);
+            this.IdGroup.Controls.Add(this.IDField);
+            this.IdGroup.Location = new System.Drawing.Point(12, 12);
+            this.IdGroup.Name = "IdGroup";
+            this.IdGroup.Size = new System.Drawing.Size(176, 77);
+            this.IdGroup.TabIndex = 4;
+            this.IdGroup.TabStop = false;
+            this.IdGroup.Text = "User ID";
+            // 
+            // AssignBtn
+            // 
+            this.AssignBtn.Location = new System.Drawing.Point(51, 45);
+            this.AssignBtn.Name = "AssignBtn";
+            this.AssignBtn.Size = new System.Drawing.Size(75, 23);
+            this.AssignBtn.TabIndex = 4;
+            this.AssignBtn.Text = "Assign";
+            this.AssignBtn.UseVisualStyleBackColor = true;
+            this.AssignBtn.Click += new System.EventHandler(this.AssignBtn_Click);
+            // 
+            // IDField
+            // 
+            this.IDField.Location = new System.Drawing.Point(6, 19);
+            this.IDField.MaxLength = 10;
+            this.IDField.Name = "IDField";
+            this.IDField.Size = new System.Drawing.Size(164, 20);
+            this.IDField.TabIndex = 3;
+            // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.Purpose);
+            this.groupBox3.Controls.Add(this.SexOption);
+            this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.Age);
             this.groupBox3.Controls.Add(this.label10);
@@ -93,38 +193,18 @@
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.firstName);
             this.groupBox3.Controls.Add(this.CStatusOption);
-            this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.Address);
-            this.groupBox3.Controls.Add(this.IssuedOn);
-            this.groupBox3.Location = new System.Drawing.Point(13, 16);
+            this.groupBox3.Location = new System.Drawing.Point(12, 95);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(176, 234);
+            this.groupBox3.Size = new System.Drawing.Size(176, 207);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DETAILS";
             // 
-            // label12
-            // 
-            this.label12.Location = new System.Drawing.Point(6, 120);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 20);
-            this.label12.TabIndex = 28;
-            this.label12.Text = "Purpose:";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Purpose
-            // 
-            this.Purpose.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.Purpose.Location = new System.Drawing.Point(83, 121);
-            this.Purpose.Name = "Purpose";
-            this.Purpose.Size = new System.Drawing.Size(87, 20);
-            this.Purpose.TabIndex = 5;
-            this.Purpose.TextChanged += new System.EventHandler(this.MadeChangesCallback);
-            // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(6, 94);
+            this.label11.Location = new System.Drawing.Point(6, 95);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 20);
             this.label11.TabIndex = 26;
@@ -142,7 +222,7 @@
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(6, 68);
+            this.label10.Location = new System.Drawing.Point(6, 69);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(71, 20);
             this.label10.TabIndex = 24;
@@ -151,7 +231,7 @@
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(6, 42);
+            this.label9.Location = new System.Drawing.Point(6, 43);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(71, 20);
             this.label9.TabIndex = 23;
@@ -179,7 +259,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Location = new System.Drawing.Point(6, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 2;
@@ -188,7 +268,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(6, 208);
+            this.label4.Location = new System.Drawing.Point(6, 173);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 20);
             this.label4.TabIndex = 20;
@@ -211,24 +291,15 @@
             this.CStatusOption.Items.AddRange(new object[] {
             "Single",
             "Married"});
-            this.CStatusOption.Location = new System.Drawing.Point(72, 207);
+            this.CStatusOption.Location = new System.Drawing.Point(72, 174);
             this.CStatusOption.Name = "CStatusOption";
             this.CStatusOption.Size = new System.Drawing.Size(98, 21);
             this.CStatusOption.TabIndex = 8;
             this.CStatusOption.SelectedIndexChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(6, 154);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Issued On:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(6, 180);
+            this.label3.Location = new System.Drawing.Point(6, 121);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 20);
             this.label3.TabIndex = 5;
@@ -237,20 +308,11 @@
             // 
             // Address
             // 
-            this.Address.Location = new System.Drawing.Point(72, 180);
+            this.Address.Location = new System.Drawing.Point(72, 121);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(98, 20);
-            this.Address.TabIndex = 7;
+            this.Address.TabIndex = 6;
             this.Address.TextChanged += new System.EventHandler(this.MadeChangesCallback);
-            // 
-            // IssuedOn
-            // 
-            this.IssuedOn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.IssuedOn.Location = new System.Drawing.Point(72, 153);
-            this.IssuedOn.Name = "IssuedOn";
-            this.IssuedOn.Size = new System.Drawing.Size(98, 20);
-            this.IssuedOn.TabIndex = 6;
-            this.IssuedOn.ValueChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // groupBox1
             // 
@@ -260,10 +322,10 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.OrNo);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(13, 256);
+            this.groupBox1.Location = new System.Drawing.Point(12, 464);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(176, 124);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "OR";
             // 
@@ -283,7 +345,6 @@
             this.OrValidityDate.Name = "OrValidityDate";
             this.OrValidityDate.Size = new System.Drawing.Size(98, 20);
             this.OrValidityDate.TabIndex = 3;
-            this.OrValidityDate.TabStop = false;
             this.OrValidityDate.ValueChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // label8
@@ -334,6 +395,21 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(519, 655);
             this.panel2.TabIndex = 1;
+            // 
+            // UpdateBtn
+            // 
+            this.UpdateBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.UpdateBtn.FlatAppearance.BorderSize = 0;
+            this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateBtn.Image = ((System.Drawing.Image)(resources.GetObject("UpdateBtn.Image")));
+            this.UpdateBtn.Location = new System.Drawing.Point(3, 8);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(35, 30);
+            this.UpdateBtn.TabIndex = 5;
+            this.UpdateBtn.TabStop = false;
+            this.UpdateBtn.UseVisualStyleBackColor = false;
+            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click_1);
             // 
             // PrintBtn
             // 
@@ -394,20 +470,26 @@
             // 
             this.printDialog1.UseEXDialog = true;
             // 
-            // UpdateBtn
+            // label6
             // 
-            this.UpdateBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.UpdateBtn.FlatAppearance.BorderSize = 0;
-            this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UpdateBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateBtn.Image = ((System.Drawing.Image)(resources.GetObject("UpdateBtn.Image")));
-            this.UpdateBtn.Location = new System.Drawing.Point(3, 8);
-            this.UpdateBtn.Name = "UpdateBtn";
-            this.UpdateBtn.Size = new System.Drawing.Size(35, 30);
-            this.UpdateBtn.TabIndex = 5;
-            this.UpdateBtn.TabStop = false;
-            this.UpdateBtn.UseVisualStyleBackColor = false;
-            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click_1);
+            this.label6.Location = new System.Drawing.Point(6, 147);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 20);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Sex";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // SexOption
+            // 
+            this.SexOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SexOption.FormattingEnabled = true;
+            this.SexOption.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.SexOption.Location = new System.Drawing.Point(72, 147);
+            this.SexOption.Name = "SexOption";
+            this.SexOption.Size = new System.Drawing.Size(98, 21);
+            this.SexOption.TabIndex = 7;
             // 
             // BarangayClearanceForm
             // 
@@ -428,6 +510,10 @@
             this.Text = "Barangay Clearcance";
             this.Load += new System.EventHandler(this.IssuePage_Load);
             this.panel1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.IdGroup.ResumeLayout(false);
+            this.IdGroup.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -472,5 +558,12 @@
         private System.Windows.Forms.Button PrintBtn;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.Button UpdateBtn;
+        private System.Windows.Forms.GroupBox IdGroup;
+        private System.Windows.Forms.Button AssignBtn;
+        private System.Windows.Forms.TextBox IDField;
+        private System.Windows.Forms.Button ResetBtn;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox SexOption;
+        private System.Windows.Forms.Label label6;
     }
 }

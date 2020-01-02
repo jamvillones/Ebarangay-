@@ -77,7 +77,7 @@ namespace E_Barangay.Forms
 
             Citizen temp = new Citizen();
             temp.ID = IDField.Text == string.Empty ? Guid.NewGuid().ToString() : IDField.Text;
-            //temp.ID = Guid.NewGuid().ToString();
+            
             temp.Name = FirstNameField.Text + " " + MiddleNameField.Text + " " + LastNameField.Text;
             temp.Gender = SexOption.Text;
 
@@ -293,6 +293,7 @@ namespace E_Barangay.Forms
             {
                 foreach (var c in requiredControls)
                     c.Text = "test_dummy";
+                IDField.Text =  Guid.NewGuid().ToString();
             }
         }
     }

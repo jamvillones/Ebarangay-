@@ -14,7 +14,7 @@ namespace E_Barangay.Forms
 {
     public partial class Preview : Form, Interface.IRecordAcceptor
     {
-       
+
         Citizen target;
         public Preview()
         {
@@ -22,7 +22,7 @@ namespace E_Barangay.Forms
         }
         private void Preview_Load(object sender, EventArgs e)
         {
-           
+
         }
         public void AcceptDetails(Citizen c)
         {
@@ -68,22 +68,22 @@ namespace E_Barangay.Forms
                 MessageBox.Show("Citizen Instance not assigned");
                 return;
             }
-            Group.Text = "Citizen ID: "+ target.ID;
+            IDField.Text = target.ID;
             NameTxt.Text = target.Name;
             AddressTxt.Text = target.Address;
             BdayTxt.Text = target.Birthday.ToShortDateString();
             SexTxt.Text = target.Gender;
-            ContactTxt.Text = target.ContactInfo;   
-            
+            ContactTxt.Text = target.ContactInfo;
+
             CivilStatusOption.Text = target.CivilStatus;
 
             MotherTxt.Text = target.MothersName;
             FatherTxt.Text = target.FathersName;
-            if (target.SpouseName == null || target.SpouseName == "")          
+            if (target.SpouseName == null || target.SpouseName == "")
                 SpouseTxt.Text = "NONE";
-            else      
+            else
                 SpouseTxt.Text = target.SpouseName;
-            
+
             AgeTxt.Text = (DateTime.Today.Year - target.Birthday.Year).ToString();
 
             IsIndigent.Checked = target.Indigent ? true : false;
@@ -127,7 +127,7 @@ namespace E_Barangay.Forms
         private void Recform_FormClosed(object sender, FormClosedEventArgs e)
         {
             recform.FormClosed -= Recform_FormClosed;
-            recform = null;          
+            recform = null;
         }
         public Image byteArrayToImage(byte[] byteArrayIn)
         {
@@ -138,7 +138,7 @@ namespace E_Barangay.Forms
 
         public void AcceptRecord(Record r)
         {
-            
+
         }
 
         private void ImageBox_Click(object sender, EventArgs e)
@@ -148,7 +148,7 @@ namespace E_Barangay.Forms
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            using(var c = new EBarangayEntities())
+            using (var c = new EBarangayEntities())
             {
                 Citizen citizen = c.Citizens.Find(target.ID);
                 citizen.Name = NameTxt.Text;
