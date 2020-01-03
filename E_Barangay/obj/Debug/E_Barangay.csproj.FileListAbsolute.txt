@@ -98,3 +98,4 @@ C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Baran
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.exe
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.pdb
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.Forms.BarangayClearanceForm.resources
+C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.Forms.Login.resources

@@ -81,6 +81,7 @@
       <DependentUpon>Ebarangaymodel.tt</DependentUpon>
     </Compile>
     <Compile Include="Class\Statistics.cs" />
+    <Compile Include="Class\UserManager.cs" />
     <Compile Include="Documents\Barangay Clearance.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,6 +120,12 @@
     </Compile>
     <Compile Include="Forms\BarangayClearanceForm.Designer.cs">
       <DependentUpon>BarangayClearanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MainPage.cs">
       <SubType>Form</SubType>
@@ -181,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\BarangayClearanceForm.resx">
       <DependentUpon>BarangayClearanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>

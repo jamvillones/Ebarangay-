@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using E_Barangay.Forms;
+using E_Barangay.Class;
 
 namespace E_Barangay
 {
@@ -16,7 +18,10 @@ namespace E_Barangay
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new E_Barangay.Forms.MainPage());
+            UserManager.instance = new UserManager();
+            Application.Run(new Login());
+       
+            //Application.Run(new E_Barangay.Forms.MainPage());
            // Application.Run(new ());
         }
     }
