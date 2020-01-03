@@ -63,6 +63,28 @@ namespace E_Barangay.Forms
         private void PasswordTxt_TextChanged(object sender, EventArgs e)
         {
             PasswordTxt.PasswordChar = '*';
+           // PasswordLabel.Text = string.Empty;
+        }
+
+        private void UsernameTxt_TextChanged(object sender, EventArgs e)
+        {
+            //UsernameLabel.Text = string.Empty;
+        }
+
+        private void PasswordTxt_Enter(object sender, EventArgs e)
+        {
+            Console.WriteLine("hey");
+            //PasswordTxt.Clear();
+            //PasswordTxt.SelectAll();
+        }
+
+        private void PasswordTxt_Leave(object sender, EventArgs e)
+        {
+            if(PasswordTxt.Text == string.Empty)
+            {
+               // PasswordTxt.PasswordChar = Convert.ToChar("");
+               // PasswordTxt.Text = "Password";
+            }
         }
     }
 }

@@ -81,7 +81,6 @@ C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\bin\Debug\EntityF
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\bin\Debug\EntityFramework.xml
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.csprojAssemblyReference.cache
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.Documents.Barangay_Clearance.resources
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.Forms.CaptureImageForm.resources
 C:\Users\Jamil Villones\Documents\GitHub\Ebarangay-\E_Barangay\obj\Debug\E_Barangay.Forms.EditCitizenInfoForm.resources
