@@ -29,6 +29,9 @@ namespace E_Barangay.Forms
                 MessageBox.Show("Invalid Login");
                 return;
             }
+            MainPage m = new MainPage();
+            m.Show();
+            this.Hide();
 
         }
         bool canLogin()
