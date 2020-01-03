@@ -19,10 +19,13 @@ namespace E_Barangay
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             UserManager.instance = new UserManager();
-            Application.Run(new Login());
-       
-            //Application.Run(new E_Barangay.Forms.MainPage());
-           // Application.Run(new ());
+            Login login = new Login();
+            Application.Run(login);
+
+            if(login.UserSuccessfullyAuthenticated)
+            {
+                Application.Run(new MainPage());
+            }
         }
     }
 }

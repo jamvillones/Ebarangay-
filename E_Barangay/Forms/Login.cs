@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace E_Barangay.Forms
 {
@@ -29,11 +30,20 @@ namespace E_Barangay.Forms
                 MessageBox.Show("Invalid Login");
                 return;
             }
-            MainPage m = new MainPage();
-            m.Show();
-            this.Hide();
+
+            // //this.Close();
+            // MainPage m = new MainPage();
+            // //m.Load += M_Load1;
+            // m.ShowDialog();
+            // this.Close();
+            //// this.Hide();
+            UserSuccessfullyAuthenticated = true;
+            Close();
+
+
 
         }
+        public bool UserSuccessfullyAuthenticated { get; private set; }
         bool canLogin()
         {
             if ((UsernameTxt.Text != string.Empty && UsernameTxt.Text != "Username") &&
@@ -47,6 +57,7 @@ namespace E_Barangay.Forms
         private void ExitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
 
         private void PasswordTxt_TextChanged(object sender, EventArgs e)

@@ -121,7 +121,7 @@ namespace E_Barangay.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+           this.Close();
         }
 
         private void MaximizeBtn_Click(object sender, EventArgs e)
