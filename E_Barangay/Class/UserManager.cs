@@ -13,5 +13,6 @@ namespace E_Barangay.Class
 
         }
         public static UserManager instance;
+        public User currentUser { get; set; }
     }
 }
