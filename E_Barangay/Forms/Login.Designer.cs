@@ -48,7 +48,7 @@
             // 
             // UsernameTxt
             // 
-            this.UsernameTxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.UsernameTxt.BackColor = System.Drawing.Color.DarkSlateGray;
             this.UsernameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UsernameTxt.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameTxt.ForeColor = System.Drawing.SystemColors.Info;
@@ -61,7 +61,7 @@
             // 
             // PasswordTxt
             // 
-            this.PasswordTxt.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.PasswordTxt.BackColor = System.Drawing.Color.DarkSlateGray;
             this.PasswordTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PasswordTxt.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTxt.ForeColor = System.Drawing.SystemColors.Info;
@@ -125,6 +125,7 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Location = new System.Drawing.Point(96, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 23);
@@ -159,13 +160,13 @@
             // 
             // ExitBtn
             // 
-            this.ExitBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ExitBtn.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ExitBtn.FlatAppearance.BorderSize = 0;
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitBtn.ForeColor = System.Drawing.Color.Black;
             this.ExitBtn.Image = ((System.Drawing.Image)(resources.GetObject("ExitBtn.Image")));
-            this.ExitBtn.Location = new System.Drawing.Point(343, 3);
+            this.ExitBtn.Location = new System.Drawing.Point(334, 12);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(20, 20);
             this.ExitBtn.TabIndex = 9;
@@ -177,7 +178,7 @@
             this.AcceptButton = this.LoginBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(366, 525);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.LoginBtn);
