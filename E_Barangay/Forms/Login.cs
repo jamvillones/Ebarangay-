@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using E_Barangay.Class;
 
 namespace E_Barangay.Forms
 {
     public partial class Login : Form
     {
+        //string username, password;
         public Login()
         {
             InitializeComponent();
@@ -25,23 +27,27 @@ namespace E_Barangay.Forms
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
+
             if (!canLogin())
             {
                 MessageBox.Show("Invalid Login");
                 return;
             }
+            using (var t = new EBarangayEntities())
+            {
+                var u = from user in t.Users
+                        where user.Username == UsernameTxt.Text && user.Password == PasswordTxt.Text
+                        select user;
+                if (u.Count() == 0)
+                {
+                    MessageBox.Show("User Not Found");
+                    return;
+                }
+                UserManager.instance.currentUser = u.First();
+            }
 
-            // //this.Close();
-            // MainPage m = new MainPage();
-            // //m.Load += M_Load1;
-            // m.ShowDialog();
-            // this.Close();
-            //// this.Hide();
             UserSuccessfullyAuthenticated = true;
             Close();
-
-
-
         }
         public bool UserSuccessfullyAuthenticated { get; private set; }
         bool canLogin()
@@ -63,7 +69,7 @@ namespace E_Barangay.Forms
         private void PasswordTxt_TextChanged(object sender, EventArgs e)
         {
             PasswordTxt.PasswordChar = '*';
-           // PasswordLabel.Text = string.Empty;
+            // PasswordLabel.Text = string.Empty;
         }
 
         private void UsernameTxt_TextChanged(object sender, EventArgs e)
@@ -80,10 +86,10 @@ namespace E_Barangay.Forms
 
         private void PasswordTxt_Leave(object sender, EventArgs e)
         {
-            if(PasswordTxt.Text == string.Empty)
+            if (PasswordTxt.Text == string.Empty)
             {
-               // PasswordTxt.PasswordChar = Convert.ToChar("");
-               // PasswordTxt.Text = "Password";
+                // PasswordTxt.PasswordChar = Convert.ToChar("");
+                // PasswordTxt.Text = "Password";
             }
         }
     }
