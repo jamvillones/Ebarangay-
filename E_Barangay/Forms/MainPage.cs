@@ -81,6 +81,7 @@ namespace E_Barangay.Forms
 
         private void MainPage_Load(object sender, EventArgs e)
         {
+            UserWelcomeTxt.Text = "Welcome: "+ UserManager.instance.currentUser.Username;
             // Class.UserManager.instance = new Class.UserManager();
             Current = DashControl;
             currentAccept = DashControl;

@@ -37,14 +37,15 @@
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.QueryBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.DashControl = new E_Barangay.Forms.Dashboard();
-            this.QueryPage = new E_Barangay.Forms.QueryControl();
-            this.RegisterPage = new E_Barangay.Forms.RegisterControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.MaximizeBtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ExitBtn = new System.Windows.Forms.Button();
+            this.UserWelcomeTxt = new System.Windows.Forms.Label();
+            this.DashControl = new E_Barangay.Forms.Dashboard();
+            this.QueryPage = new E_Barangay.Forms.QueryControl();
+            this.RegisterPage = new E_Barangay.Forms.RegisterControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -186,38 +187,10 @@
             this.panel3.Size = new System.Drawing.Size(813, 548);
             this.panel3.TabIndex = 3;
             // 
-            // DashControl
-            // 
-            this.DashControl.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DashControl.Location = new System.Drawing.Point(0, 0);
-            this.DashControl.Name = "DashControl";
-            this.DashControl.Size = new System.Drawing.Size(813, 548);
-            this.DashControl.TabIndex = 3;
-            // 
-            // QueryPage
-            // 
-            this.QueryPage.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QueryPage.Location = new System.Drawing.Point(0, 0);
-            this.QueryPage.Name = "QueryPage";
-            this.QueryPage.Size = new System.Drawing.Size(813, 548);
-            this.QueryPage.TabIndex = 0;
-            this.QueryPage.Load += new System.EventHandler(this.QueryPage_Load);
-            // 
-            // RegisterPage
-            // 
-            this.RegisterPage.BackColor = System.Drawing.Color.Silver;
-            this.RegisterPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RegisterPage.Enabled = false;
-            this.RegisterPage.Location = new System.Drawing.Point(0, 0);
-            this.RegisterPage.Name = "RegisterPage";
-            this.RegisterPage.Size = new System.Drawing.Size(813, 548);
-            this.RegisterPage.TabIndex = 1;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.UserWelcomeTxt);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.MaximizeBtn);
             this.panel2.Controls.Add(this.pictureBox2);
@@ -283,6 +256,46 @@
             this.ExitBtn.UseVisualStyleBackColor = false;
             this.ExitBtn.Click += new System.EventHandler(this.button1_Click);
             // 
+            // UserWelcomeTxt
+            // 
+            this.UserWelcomeTxt.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserWelcomeTxt.ForeColor = System.Drawing.Color.White;
+            this.UserWelcomeTxt.Location = new System.Drawing.Point(235, 8);
+            this.UserWelcomeTxt.Name = "UserWelcomeTxt";
+            this.UserWelcomeTxt.Size = new System.Drawing.Size(355, 23);
+            this.UserWelcomeTxt.TabIndex = 2;
+            this.UserWelcomeTxt.Text = "Welcome:";
+            this.UserWelcomeTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // DashControl
+            // 
+            this.DashControl.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DashControl.Location = new System.Drawing.Point(0, 0);
+            this.DashControl.Name = "DashControl";
+            this.DashControl.Size = new System.Drawing.Size(813, 548);
+            this.DashControl.TabIndex = 3;
+            // 
+            // QueryPage
+            // 
+            this.QueryPage.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueryPage.Location = new System.Drawing.Point(0, 0);
+            this.QueryPage.Name = "QueryPage";
+            this.QueryPage.Size = new System.Drawing.Size(813, 548);
+            this.QueryPage.TabIndex = 0;
+            this.QueryPage.Load += new System.EventHandler(this.QueryPage_Load);
+            // 
+            // RegisterPage
+            // 
+            this.RegisterPage.BackColor = System.Drawing.Color.Silver;
+            this.RegisterPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RegisterPage.Enabled = false;
+            this.RegisterPage.Location = new System.Drawing.Point(0, 0);
+            this.RegisterPage.Name = "RegisterPage";
+            this.RegisterPage.Size = new System.Drawing.Size(813, 548);
+            this.RegisterPage.TabIndex = 1;
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,5 +339,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label UserWelcomeTxt;
     }
 }
