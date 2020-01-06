@@ -53,6 +53,8 @@
             this.middleName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.Purpose = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.IssuedOn = new System.Windows.Forms.DateTimePicker();
             this.ResetBtn = new System.Windows.Forms.Button();
@@ -67,16 +69,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Address = new System.Windows.Forms.TextBox();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.IdGroup.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -261,7 +262,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.printPreviewControl1.AutoZoom = false;
-            this.printPreviewControl1.Location = new System.Drawing.Point(22, 47);
+            this.printPreviewControl1.Location = new System.Drawing.Point(3, 44);
             this.printPreviewControl1.Name = "printPreviewControl1";
             this.printPreviewControl1.Size = new System.Drawing.Size(517, 612);
             this.printPreviewControl1.TabIndex = 0;
@@ -291,7 +292,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.ResetBtn);
             this.panel1.Controls.Add(this.IdGroup);
@@ -305,18 +305,40 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.Purpose);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.IssuedOn);
-            this.groupBox2.Location = new System.Drawing.Point(12, 308);
+            this.groupBox2.Location = new System.Drawing.Point(12, 325);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(176, 52);
+            this.groupBox2.Size = new System.Drawing.Size(176, 133);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "MISC";
             // 
+            // label12
+            // 
+            this.label12.Location = new System.Drawing.Point(6, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 20);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "Purpose:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Purpose
+            // 
+            this.Purpose.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.Purpose.Location = new System.Drawing.Point(72, 17);
+            this.Purpose.Name = "Purpose";
+            this.Purpose.Size = new System.Drawing.Size(98, 20);
+            this.Purpose.TabIndex = 1;
+            // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(6, 21);
+            this.label2.Location = new System.Drawing.Point(6, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 20);
             this.label2.TabIndex = 4;
@@ -326,7 +348,7 @@
             // IssuedOn
             // 
             this.IssuedOn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.IssuedOn.Location = new System.Drawing.Point(72, 19);
+            this.IssuedOn.Location = new System.Drawing.Point(72, 43);
             this.IssuedOn.Name = "IssuedOn";
             this.IssuedOn.Size = new System.Drawing.Size(98, 20);
             this.IssuedOn.TabIndex = 2;
@@ -455,31 +477,31 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // groupBox4
+            // label13
             // 
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.textBox1);
-            this.groupBox4.Location = new System.Drawing.Point(12, 379);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(176, 52);
-            this.groupBox4.TabIndex = 6;
-            this.groupBox4.TabStop = false;
-            // 
-            // label12
-            // 
-            this.label12.Location = new System.Drawing.Point(3, 19);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 20);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Conforme:";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label13.Location = new System.Drawing.Point(6, 77);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(60, 20);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "Conforme:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(72, 19);
+            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.textBox1.Location = new System.Drawing.Point(72, 78);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(98, 20);
-            this.textBox1.TabIndex = 6;
+            this.textBox1.TabIndex = 1;
+            // 
+            // label14
+            // 
+            this.label14.Location = new System.Drawing.Point(6, 139);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(60, 20);
+            this.label14.TabIndex = 28;
+            this.label14.Text = "Purpose:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // BarangayCertificateforNonGovernmentOrganization
             // 
@@ -495,12 +517,11 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.IdGroup.ResumeLayout(false);
             this.IdGroup.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -530,10 +551,12 @@
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.TextBox middleName;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox Purpose;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker IssuedOn;
         private System.Windows.Forms.Button ResetBtn;
