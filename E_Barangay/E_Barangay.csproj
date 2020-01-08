@@ -277,6 +277,12 @@
     <Compile Include="Documents\CertificationforScholarship3.Designer.cs">
       <DependentUpon>CertificationforScholarship3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\CertificationforVoucherProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificationforVoucherProgram.Designer.cs">
+      <DependentUpon>CertificationforVoucherProgram.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\CertificationforWaiverforFranchise.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -470,6 +476,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertificationforScholarship3.resx">
       <DependentUpon>CertificationforScholarship3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertificationforVoucherProgram.resx">
+      <DependentUpon>CertificationforVoucherProgram.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertificationforWaiverforFranchise.resx">
       <DependentUpon>CertificationforWaiverforFranchise.cs</DependentUpon>
