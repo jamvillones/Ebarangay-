@@ -277,6 +277,12 @@
     <Compile Include="Documents\CertificationforWaiverforFranchise.Designer.cs">
       <DependentUpon>CertificationforWaiverforFranchise.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\CertificationofBHW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificationofBHW.Designer.cs">
+      <DependentUpon>CertificationofBHW.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ebarangaymodel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -458,6 +464,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertificationforWaiverforFranchise.resx">
       <DependentUpon>CertificationforWaiverforFranchise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertificationofBHW.resx">
+      <DependentUpon>CertificationofBHW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CaptureImageForm.resx">
       <DependentUpon>CaptureImageForm.cs</DependentUpon>
