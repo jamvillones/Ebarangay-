@@ -112,6 +112,27 @@
     <Compile Include="Documents\BarangayCertificateforGuardian.Designer.cs">
       <DependentUpon>BarangayCertificateforGuardian.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\BarangayCertificateforNewIndigent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BarangayCertificateforNewIndigent.Designer.cs">
+      <DependentUpon>BarangayCertificateforNewIndigent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\BarangayCertificatefornoIncome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BarangayCertificatefornoIncome.Designer.cs">
+      <DependentUpon>BarangayCertificatefornoIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\BarangayCertificateforNonGovernmentOrganization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BarangayCertificateforUnemployement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BarangayCertificateforUnemployement.Designer.cs">
+      <DependentUpon>BarangayCertificateforUnemployement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\BarangayCertificateIndigency.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +144,24 @@
     </Compile>
     <Compile Include="Documents\BarangayCertificateMKWD.Designer.cs">
       <DependentUpon>BarangayCertificateMKWD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\BarangayCertificateofIndigentMedical Assistance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BarangayCertificateofIndigentMedical Assistance.Designer.cs">
+      <DependentUpon>BarangayCertificateofIndigentMedical Assistance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\BarangayCertification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BarangayCertification.Designer.cs">
+      <DependentUpon>BarangayCertification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\BarangayCertificationforAnimalBite.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BarangayCertificationforAnimalBite.Designer.cs">
+      <DependentUpon>BarangayCertificationforAnimalBite.cs</DependentUpon>
     </Compile>
     <Compile Include="Documents\BarangayCertificationforDeath1.cs">
       <SubType>Form</SubType>
@@ -142,6 +181,24 @@
     <Compile Include="Documents\BarangayCertificationforFinancialSupport.Designer.cs">
       <DependentUpon>BarangayCertificationforFinancialSupport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\BarangayCertificationforLegalToETC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BarangayCertificationforLegalToETC.Designer.cs">
+      <DependentUpon>BarangayCertificationforLegalToETC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\BarangayCertificationforLegalToPAO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BarangayCertificationforLegalToPAO.Designer.cs">
+      <DependentUpon>BarangayCertificationforLegalToPAO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\BarangayCertificationforResidency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BarangayCertificationforResidency.Designer.cs">
+      <DependentUpon>BarangayCertificationforResidency.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\BarangayCertificationofDeath.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +210,90 @@
     </Compile>
     <Compile Include="Documents\BarangayClearanceForm.Designer.cs">
       <DependentUpon>BarangayClearanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\CertificateCaptNavaro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificateCaptNavaro.Designer.cs">
+      <DependentUpon>CertificateCaptNavaro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\CertificateforResidencyID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificateforResidencyID.Designer.cs">
+      <DependentUpon>CertificateforResidencyID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\CertificateforTranferBusinessName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificateforTranferBusinessName.Designer.cs">
+      <DependentUpon>CertificateforTranferBusinessName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\CertificateofAppearance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificateofAppearance.Designer.cs">
+      <DependentUpon>CertificateofAppearance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\CertificateofDOST reeq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificateofDOST reeq.Designer.cs">
+      <DependentUpon>CertificateofDOST reeq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\CertificateofEducationalAssistance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificateofEducationalAssistance.Designer.cs">
+      <DependentUpon>CertificateofEducationalAssistance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\CertificateofIndigentBurialAssistance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificateofIndigentBurialAssistance.Designer.cs">
+      <DependentUpon>CertificateofIndigentBurialAssistance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\CertificateofPAO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificateofPAO.Designer.cs">
+      <DependentUpon>CertificateofPAO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\CertificationforPVAO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificationforPVAO.Designer.cs">
+      <DependentUpon>CertificationforPVAO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\CertificationforScholarship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificationforScholarship.Designer.cs">
+      <DependentUpon>CertificationforScholarship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\CertificationforScholarship3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificationforScholarship3.Designer.cs">
+      <DependentUpon>CertificationforScholarship3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\CertificationforVoucherProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificationforVoucherProgram.Designer.cs">
+      <DependentUpon>CertificationforVoucherProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\CertificationforWaiverforFranchise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificationforWaiverforFranchise.Designer.cs">
+      <DependentUpon>CertificationforWaiverforFranchise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\CertificationofBHW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificationofBHW.Designer.cs">
+      <DependentUpon>CertificationofBHW.cs</DependentUpon>
     </Compile>
     <Compile Include="Ebarangaymodel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -252,11 +393,32 @@
     <EmbeddedResource Include="Documents\BarangayCertificateforGuardian.resx">
       <DependentUpon>BarangayCertificateforGuardian.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BarangayCertificateforNewIndigent.resx">
+      <DependentUpon>BarangayCertificateforNewIndigent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BarangayCertificatefornoIncome.resx">
+      <DependentUpon>BarangayCertificatefornoIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BarangayCertificateforNonGovernmentOrganization.resx">
+      <DependentUpon>BarangayCertificateforNonGovernmentOrganization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BarangayCertificateforUnemployement.resx">
+      <DependentUpon>BarangayCertificateforUnemployement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Documents\BarangayCertificateIndigency.resx">
       <DependentUpon>BarangayCertificateIndigency.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BarangayCertificateMKWD.resx">
       <DependentUpon>BarangayCertificateMKWD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BarangayCertificateofIndigentMedical Assistance.resx">
+      <DependentUpon>BarangayCertificateofIndigentMedical Assistance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BarangayCertification.resx">
+      <DependentUpon>BarangayCertification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BarangayCertificationforAnimalBite.resx">
+      <DependentUpon>BarangayCertificationforAnimalBite.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BarangayCertificationforDeath1.resx">
       <DependentUpon>BarangayCertificationforDeath1.cs</DependentUpon>
@@ -267,11 +429,62 @@
     <EmbeddedResource Include="Documents\BarangayCertificationforFinancialSupport.resx">
       <DependentUpon>BarangayCertificationforFinancialSupport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BarangayCertificationforLegalToETC.resx">
+      <DependentUpon>BarangayCertificationforLegalToETC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BarangayCertificationforLegalToPAO.resx">
+      <DependentUpon>BarangayCertificationforLegalToPAO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BarangayCertificationforResidency.resx">
+      <DependentUpon>BarangayCertificationforResidency.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Documents\BarangayCertificationofDeath.resx">
       <DependentUpon>BarangayCertificationofDeath.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BarangayClearanceForm.resx">
       <DependentUpon>BarangayClearanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertificateCaptNavaro.resx">
+      <DependentUpon>CertificateCaptNavaro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertificateforResidencyID.resx">
+      <DependentUpon>CertificateforResidencyID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertificateforTranferBusinessName.resx">
+      <DependentUpon>CertificateforTranferBusinessName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertificateofAppearance.resx">
+      <DependentUpon>CertificateofAppearance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertificateofDOST reeq.resx">
+      <DependentUpon>CertificateofDOST reeq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertificateofEducationalAssistance.resx">
+      <DependentUpon>CertificateofEducationalAssistance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertificateofIndigentBurialAssistance.resx">
+      <DependentUpon>CertificateofIndigentBurialAssistance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertificateofPAO.resx">
+      <DependentUpon>CertificateofPAO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertificationforPVAO.resx">
+      <DependentUpon>CertificationforPVAO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertificationforScholarship.resx">
+      <DependentUpon>CertificationforScholarship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertificationforScholarship3.resx">
+      <DependentUpon>CertificationforScholarship3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertificationforVoucherProgram.resx">
+      <DependentUpon>CertificationforVoucherProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertificationforWaiverforFranchise.resx">
+      <DependentUpon>CertificationforWaiverforFranchise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertificationofBHW.resx">
+      <DependentUpon>CertificationofBHW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CaptureImageForm.resx">
       <DependentUpon>CaptureImageForm.cs</DependentUpon>
