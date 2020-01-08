@@ -36,6 +36,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Group = new System.Windows.Forms.GroupBox();
+            this.IDField = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.SaveBtn = new System.Windows.Forms.Button();
             this.CivilStatusOption = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -63,8 +65,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.IDField = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageBox)).BeginInit();
             this.Group.SuspendLayout();
@@ -186,6 +186,26 @@
             this.Group.Size = new System.Drawing.Size(750, 393);
             this.Group.TabIndex = 18;
             this.Group.TabStop = false;
+            // 
+            // IDField
+            // 
+            this.IDField.BackColor = System.Drawing.Color.Silver;
+            this.IDField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.IDField.Location = new System.Drawing.Point(203, 19);
+            this.IDField.Name = "IDField";
+            this.IDField.ReadOnly = true;
+            this.IDField.Size = new System.Drawing.Size(534, 25);
+            this.IDField.TabIndex = 56;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(134, 24);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 15);
+            this.label12.TabIndex = 55;
+            this.label12.Text = "Citizen ID";
             // 
             // SaveBtn
             // 
@@ -499,26 +519,6 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Contact ";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(134, 24);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(63, 15);
-            this.label12.TabIndex = 55;
-            this.label12.Text = "Citizen ID";
-            // 
-            // IDField
-            // 
-            this.IDField.BackColor = System.Drawing.Color.Silver;
-            this.IDField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.IDField.Location = new System.Drawing.Point(203, 19);
-            this.IDField.Name = "IDField";
-            this.IDField.ReadOnly = true;
-            this.IDField.Size = new System.Drawing.Size(534, 25);
-            this.IDField.TabIndex = 56;
-            // 
             // Preview
             // 
             this.AcceptButton = this.OkayBtn;
@@ -532,6 +532,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Preview";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Preview";
             this.Load += new System.EventHandler(this.Preview_Load);
