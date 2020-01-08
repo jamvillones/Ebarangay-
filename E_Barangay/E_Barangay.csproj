@@ -127,6 +127,9 @@
     <Compile Include="Documents\BarangayCertificateforNonGovernmentOrganization.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Documents\BarangayCertificateforNonGovernmentOrganization.designer.cs">
+      <DependentUpon>BarangayCertificateforNonGovernmentOrganization.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\BarangayCertificateforUnemployement.cs">
       <SubType>Form</SubType>
     </Compile>
