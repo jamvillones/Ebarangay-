@@ -40,6 +40,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.LoginBtn = new System.Windows.Forms.Button();
             this.ExitBtn = new System.Windows.Forms.Button();
+            this.RevealBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -56,7 +57,6 @@
             this.UsernameTxt.Name = "UsernameTxt";
             this.UsernameTxt.Size = new System.Drawing.Size(240, 22);
             this.UsernameTxt.TabIndex = 0;
-            this.UsernameTxt.Text = "Username";
             this.UsernameTxt.TextChanged += new System.EventHandler(this.UsernameTxt_TextChanged);
             // 
             // PasswordTxt
@@ -67,9 +67,9 @@
             this.PasswordTxt.ForeColor = System.Drawing.SystemColors.Info;
             this.PasswordTxt.Location = new System.Drawing.Point(68, 97);
             this.PasswordTxt.Name = "PasswordTxt";
-            this.PasswordTxt.Size = new System.Drawing.Size(240, 22);
+            this.PasswordTxt.PasswordChar = '*';
+            this.PasswordTxt.Size = new System.Drawing.Size(214, 22);
             this.PasswordTxt.TabIndex = 1;
-            this.PasswordTxt.Text = "Password";
             this.PasswordTxt.TextChanged += new System.EventHandler(this.PasswordTxt_TextChanged);
             this.PasswordTxt.Enter += new System.EventHandler(this.PasswordTxt_Enter);
             this.PasswordTxt.Leave += new System.EventHandler(this.PasswordTxt_Leave);
@@ -110,6 +110,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.RevealBtn);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.panel2);
@@ -173,6 +174,18 @@
             this.ExitBtn.UseVisualStyleBackColor = false;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
+            // RevealBtn
+            // 
+            this.RevealBtn.FlatAppearance.BorderSize = 0;
+            this.RevealBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RevealBtn.Image = ((System.Drawing.Image)(resources.GetObject("RevealBtn.Image")));
+            this.RevealBtn.Location = new System.Drawing.Point(293, 104);
+            this.RevealBtn.Name = "RevealBtn";
+            this.RevealBtn.Size = new System.Drawing.Size(15, 15);
+            this.RevealBtn.TabIndex = 7;
+            this.RevealBtn.UseVisualStyleBackColor = true;
+            this.RevealBtn.Click += new System.EventHandler(this.Reveal_Click);
+            // 
             // Login
             // 
             this.AcceptButton = this.LoginBtn;
@@ -212,5 +225,6 @@
         private System.Windows.Forms.Button LoginBtn;
         private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button RevealBtn;
     }
 }
