@@ -11,11 +11,11 @@ using System.IO;
 
 namespace E_Barangay.Forms
 {
-    public partial class RegisterControl : UserControl, Interface.IRecordAcceptor, Interface.IImageAcceptor, Interface.IAccept
+    public partial class RegisterPage : Form, Interface.IRecordAcceptor, Interface.IImageAcceptor, Interface.IAccept
     {
         List<Record> records = new List<Record>();
         List<Control> requiredControls = new List<Control>();
-        public RegisterControl()
+        public RegisterPage()
         {
             InitializeComponent();
             InitRequiredFields();

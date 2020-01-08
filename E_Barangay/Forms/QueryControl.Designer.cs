@@ -43,6 +43,7 @@
             this.SearchBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.ResultTxt = new System.Windows.Forms.Label();
+            this.CreateBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +62,6 @@
             // 
             this.DeleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.DeleteBtn.BackColor = System.Drawing.Color.LightGray;
-            this.DeleteBtn.Enabled = false;
             this.DeleteBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.DeleteBtn.FlatAppearance.BorderSize = 2;
             this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -81,7 +81,6 @@
             // 
             this.ModifyBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ModifyBtn.BackColor = System.Drawing.Color.LightGray;
-            this.ModifyBtn.Enabled = false;
             this.ModifyBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.ModifyBtn.FlatAppearance.BorderSize = 2;
             this.ModifyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -218,7 +217,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 23);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Total Result:";
+            this.label1.Text = "Entries:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ResultTxt
@@ -233,11 +232,31 @@
             this.ResultTxt.TabIndex = 9;
             this.ResultTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // CreateBtn
+            // 
+            this.CreateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.CreateBtn.BackColor = System.Drawing.Color.LightGray;
+            this.CreateBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.CreateBtn.FlatAppearance.BorderSize = 2;
+            this.CreateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CreateBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateBtn.ForeColor = System.Drawing.Color.Black;
+            this.CreateBtn.Image = ((System.Drawing.Image)(resources.GetObject("CreateBtn.Image")));
+            this.CreateBtn.Location = new System.Drawing.Point(179, 498);
+            this.CreateBtn.Name = "CreateBtn";
+            this.CreateBtn.Size = new System.Drawing.Size(80, 35);
+            this.CreateBtn.TabIndex = 10;
+            this.CreateBtn.Text = "Create";
+            this.CreateBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.CreateBtn.UseVisualStyleBackColor = false;
+            this.CreateBtn.Click += new System.EventHandler(this.CreateBtn_Click);
+            // 
             // QueryControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Controls.Add(this.CreateBtn);
             this.Controls.Add(this.ResultTxt);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SearchBtn);
@@ -269,5 +288,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label ResultTxt;
+        private System.Windows.Forms.Button CreateBtn;
     }
 }

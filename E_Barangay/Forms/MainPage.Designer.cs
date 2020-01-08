@@ -30,29 +30,27 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SelectionPanel = new System.Windows.Forms.Panel();
             this.DashBtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.RegisterBtn = new System.Windows.Forms.Button();
             this.QueryBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.DashControl = new E_Barangay.Forms.Dashboard();
+            this.QueryPage = new E_Barangay.Forms.QueryControl();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.UserWelcomeTxt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.MaximizeBtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ExitBtn = new System.Windows.Forms.Button();
-            this.UserWelcomeTxt = new System.Windows.Forms.Label();
-            this.DashControl = new E_Barangay.Forms.Dashboard();
-            this.QueryPage = new E_Barangay.Forms.QueryControl();
-            this.RegisterPage = new E_Barangay.Forms.RegisterControl();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -62,13 +60,32 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.SelectionPanel);
             this.panel1.Controls.Add(this.DashBtn);
-            this.panel1.Controls.Add(this.RegisterBtn);
             this.panel1.Controls.Add(this.QueryBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(168, 597);
             this.panel1.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel4.Controls.Add(this.pictureBox1);
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(168, 97);
+            this.panel4.TabIndex = 5;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(40, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(87, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // button1
             // 
@@ -80,7 +97,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(3, 297);
+            this.button1.Location = new System.Drawing.Point(3, 263);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(165, 34);
             this.button1.TabIndex = 4;
@@ -116,43 +133,11 @@
             this.DashBtn.Size = new System.Drawing.Size(165, 34);
             this.DashBtn.TabIndex = 3;
             this.DashBtn.TabStop = false;
-            this.DashBtn.Text = "statistics";
+            this.DashBtn.Text = "Home";
             this.DashBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DashBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.DashBtn.UseVisualStyleBackColor = true;
             this.DashBtn.Click += new System.EventHandler(this.DashBtn_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(40, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(87, 90);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // RegisterBtn
-            // 
-            this.RegisterBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.RegisterBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.RegisterBtn.FlatAppearance.BorderSize = 0;
-            this.RegisterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegisterBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterBtn.ForeColor = System.Drawing.Color.White;
-            this.RegisterBtn.Image = ((System.Drawing.Image)(resources.GetObject("RegisterBtn.Image")));
-            this.RegisterBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RegisterBtn.Location = new System.Drawing.Point(3, 263);
-            this.RegisterBtn.Name = "RegisterBtn";
-            this.RegisterBtn.Size = new System.Drawing.Size(165, 34);
-            this.RegisterBtn.TabIndex = 2;
-            this.RegisterBtn.TabStop = false;
-            this.RegisterBtn.Text = "REGISTER";
-            this.RegisterBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.RegisterBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.RegisterBtn.UseVisualStyleBackColor = true;
-            this.RegisterBtn.Click += new System.EventHandler(this.RegisterBtn_Click);
             // 
             // QueryBtn
             // 
@@ -170,7 +155,7 @@
             this.QueryBtn.Size = new System.Drawing.Size(165, 34);
             this.QueryBtn.TabIndex = 1;
             this.QueryBtn.TabStop = false;
-            this.QueryBtn.Text = "QUERY";
+            this.QueryBtn.Text = "Records";
             this.QueryBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.QueryBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.QueryBtn.UseVisualStyleBackColor = true;
@@ -183,11 +168,29 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.DashControl);
             this.panel3.Controls.Add(this.QueryPage);
-            this.panel3.Controls.Add(this.RegisterPage);
             this.panel3.Location = new System.Drawing.Point(168, 37);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(813, 548);
             this.panel3.TabIndex = 3;
+            // 
+            // DashControl
+            // 
+            this.DashControl.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DashControl.Location = new System.Drawing.Point(0, 0);
+            this.DashControl.Name = "DashControl";
+            this.DashControl.Size = new System.Drawing.Size(813, 548);
+            this.DashControl.TabIndex = 3;
+            // 
+            // QueryPage
+            // 
+            this.QueryPage.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueryPage.Location = new System.Drawing.Point(0, 0);
+            this.QueryPage.Name = "QueryPage";
+            this.QueryPage.Size = new System.Drawing.Size(813, 548);
+            this.QueryPage.TabIndex = 0;
+            this.QueryPage.Load += new System.EventHandler(this.QueryPage_Load);
             // 
             // panel2
             // 
@@ -202,6 +205,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(825, 38);
             this.panel2.TabIndex = 4;
+            // 
+            // UserWelcomeTxt
+            // 
+            this.UserWelcomeTxt.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserWelcomeTxt.ForeColor = System.Drawing.Color.White;
+            this.UserWelcomeTxt.Location = new System.Drawing.Point(235, 8);
+            this.UserWelcomeTxt.Name = "UserWelcomeTxt";
+            this.UserWelcomeTxt.Size = new System.Drawing.Size(355, 23);
+            this.UserWelcomeTxt.TabIndex = 2;
+            this.UserWelcomeTxt.Text = "Welcome:";
+            this.UserWelcomeTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -258,55 +272,6 @@
             this.ExitBtn.UseVisualStyleBackColor = false;
             this.ExitBtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // UserWelcomeTxt
-            // 
-            this.UserWelcomeTxt.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserWelcomeTxt.ForeColor = System.Drawing.Color.White;
-            this.UserWelcomeTxt.Location = new System.Drawing.Point(235, 8);
-            this.UserWelcomeTxt.Name = "UserWelcomeTxt";
-            this.UserWelcomeTxt.Size = new System.Drawing.Size(355, 23);
-            this.UserWelcomeTxt.TabIndex = 2;
-            this.UserWelcomeTxt.Text = "Welcome:";
-            this.UserWelcomeTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // DashControl
-            // 
-            this.DashControl.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DashControl.Location = new System.Drawing.Point(0, 0);
-            this.DashControl.Name = "DashControl";
-            this.DashControl.Size = new System.Drawing.Size(813, 548);
-            this.DashControl.TabIndex = 3;
-            // 
-            // QueryPage
-            // 
-            this.QueryPage.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QueryPage.Location = new System.Drawing.Point(0, 0);
-            this.QueryPage.Name = "QueryPage";
-            this.QueryPage.Size = new System.Drawing.Size(813, 548);
-            this.QueryPage.TabIndex = 0;
-            this.QueryPage.Load += new System.EventHandler(this.QueryPage_Load);
-            // 
-            // RegisterPage
-            // 
-            this.RegisterPage.BackColor = System.Drawing.Color.Silver;
-            this.RegisterPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RegisterPage.Enabled = false;
-            this.RegisterPage.Location = new System.Drawing.Point(0, 0);
-            this.RegisterPage.Name = "RegisterPage";
-            this.RegisterPage.Size = new System.Drawing.Size(813, 548);
-            this.RegisterPage.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel4.Controls.Add(this.pictureBox1);
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(168, 97);
-            this.panel4.TabIndex = 5;
-            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,11 +289,11 @@
             this.Text = "E Barangay";
             this.Load += new System.EventHandler(this.MainPage_Load);
             this.panel1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -336,11 +301,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button RegisterBtn;
         private System.Windows.Forms.Button QueryBtn;
         private System.Windows.Forms.Panel panel3;
         private QueryControl QueryPage;
-        private RegisterControl RegisterPage;
         private System.Windows.Forms.Panel SelectionPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;

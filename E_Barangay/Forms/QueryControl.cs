@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using E_Barangay.Class;
 
 namespace E_Barangay.Forms
 {
@@ -136,7 +137,10 @@ namespace E_Barangay.Forms
 
         private void QueryControl_Load(object sender, EventArgs e)
         {
-
+            User u = UserManager.instance.currentUser;
+            CreateBtn.Enabled = u.canRegister ? true : false;
+            ModifyBtn.Enabled = u.canEdit ? true : false;
+            DeleteBtn.Enabled = u.canDelete ? true : false;
             //SearchFilter.SelectedIndex = 0;
         }
 
@@ -244,6 +248,26 @@ namespace E_Barangay.Forms
                 SearchBox.SelectionStart = 0;
                 SearchBox.SelectionLength = SearchBox.Text.Length;
             }
+        }
+
+        RegisterPage reg;
+        private void CreateBtn_Click(object sender, EventArgs e)
+        {
+            if (reg == null)
+            {
+                reg = new RegisterPage();
+                reg.FormClosed += Reg_FormClosed;
+                reg.LoadValues();
+                reg.Show();
+                return;
+            }
+            reg.BringToFront();
+        }
+
+        private void Reg_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //throw new NotImplementedException();
+            reg = null;
         }
     }
 }

@@ -67,6 +67,8 @@
           <Property Name="Password" Type="nvarchar" MaxLength="50" />
           <Property Name="canEdit" Type="bit" Nullable="false" />
           <Property Name="canDelete" Type="bit" Nullable="false" />
+          <Property Name="canRegister" Type="bit" Nullable="false" />
+          <Property Name="canAddUser" Type="bit" Nullable="false" />
         </EntityType>
         <Association Name="FK_Citizen_Area">
           <End Role="Area" Type="Self.Area" Multiplicity="0..1" />
@@ -218,6 +220,8 @@
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="canEdit" Type="Boolean" Nullable="false" />
           <Property Name="canDelete" Type="Boolean" Nullable="false" />
+          <Property Name="canRegister" Type="Boolean" Nullable="false" />
+          <Property Name="canAddUser" Type="Boolean" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -286,6 +290,8 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="EBarangayModel.User">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="canAddUser" ColumnName="canAddUser" />
+                <ScalarProperty Name="canRegister" ColumnName="canRegister" />
                 <ScalarProperty Name="canDelete" ColumnName="canDelete" />
                 <ScalarProperty Name="canEdit" ColumnName="canEdit" />
                 <ScalarProperty Name="Password" ColumnName="Password" />

@@ -70,14 +70,7 @@ namespace E_Barangay.Forms
         }
 
 
-        private void RegisterBtn_Click(object sender, EventArgs e)
-        {
-            //currentAccept = RegisterPage;
-            SwitchAccept(RegisterPage);
-            SwitchPage(RegisterPage);
-            RegisterPage.BringToFront();
-            SetSelectionPanel(RegisterBtn);
-        }
+      
 
         private void MainPage_Load(object sender, EventArgs e)
         {
@@ -89,7 +82,7 @@ namespace E_Barangay.Forms
             {
                 DashControl.ShowStats();
                 QueryPage.showData();
-                RegisterPage.LoadValues();
+               // RegisterPage.LoadValues();
             }
             catch
             {
@@ -97,18 +90,18 @@ namespace E_Barangay.Forms
             }
 
             QueryPage.Enabled = false;
-            RegisterPage.Enabled = false;
+           // RegisterPage.Enabled = false;
 
             QueryPage.IDEmptySearch += QueryPage_IDEmptySearch;
         }
 
         private void QueryPage_IDEmptySearch(object sender, string e)
         {
-            SwitchAccept(RegisterPage);
-            SwitchPage(RegisterPage);
-            RegisterPage.BringToFront();
-            SetSelectionPanel(RegisterBtn);
-            RegisterPage.AcceptNewUser(sender, e);
+            //SwitchAccept(RegisterPage);
+           // SwitchPage(RegisterPage);
+           // RegisterPage.BringToFront();
+            //SetSelectionPanel(RegisterBtn);
+           // RegisterPage.AcceptNewUser(sender, e);
         }
 
         private void SelectionPanel_Paint(object sender, PaintEventArgs e)
