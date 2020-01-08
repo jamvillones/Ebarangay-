@@ -151,6 +151,12 @@
     <Compile Include="Documents\BarangayCertificateofIndigentMedical Assistance.Designer.cs">
       <DependentUpon>BarangayCertificateofIndigentMedical Assistance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\BarangayCertification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BarangayCertification.Designer.cs">
+      <DependentUpon>BarangayCertification.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\BarangayCertificationforAnimalBite.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -401,6 +407,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BarangayCertificateofIndigentMedical Assistance.resx">
       <DependentUpon>BarangayCertificateofIndigentMedical Assistance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BarangayCertification.resx">
+      <DependentUpon>BarangayCertification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BarangayCertificationforAnimalBite.resx">
       <DependentUpon>BarangayCertificationforAnimalBite.cs</DependentUpon>
