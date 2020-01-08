@@ -68,7 +68,7 @@ namespace E_Barangay.Forms
 
         private void PasswordTxt_TextChanged(object sender, EventArgs e)
         {
-            PasswordTxt.PasswordChar = '*';
+            // PasswordTxt.PasswordChar = '*';
             // PasswordLabel.Text = string.Empty;
         }
 
@@ -91,6 +91,14 @@ namespace E_Barangay.Forms
                 // PasswordTxt.PasswordChar = Convert.ToChar("");
                 // PasswordTxt.Text = "Password";
             }
+        }
+        bool hidden = true;
+
+        private void Reveal_Click(object sender, EventArgs e)
+        {
+            hidden = !hidden;
+            PasswordTxt.PasswordChar = hidden ? '*' : '\0';
+            RevealBtn.Image = hidden ? Properties.Resources.eye_10px : Properties.Resources.invisible_10px;
         }
     }
 }
