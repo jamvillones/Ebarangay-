@@ -84,8 +84,10 @@ namespace E_Barangay.Forms
             else
                 SpouseTxt.Text = target.SpouseName;
 
-            AgeTxt.Text = (DateTime.Today.Year - target.Birthday.Year).ToString();
-
+            Class.Date date = new Class.Date();
+            Class.DateTimeExtension.ToAgeString(target.Birthday, ref date);
+            // AgeTxt.Text = (DateTime.Today.Year - target.Birthday.Year).ToString();
+            AgeTxt.Text = date.years.ToString();
             IsIndigent.Checked = target.Indigent ? true : false;
             IsStudent.Checked = target.Student ? true : false;
             IsSenior.Checked = target.SeniorCitizen ? true : false;

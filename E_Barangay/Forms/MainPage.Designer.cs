@@ -40,11 +40,10 @@
             this.DashControl = new E_Barangay.Forms.Dashboard();
             this.QueryPage = new E_Barangay.Forms.QueryControl();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.AddNewLoginBtn = new System.Windows.Forms.Button();
             this.UserWelcomeTxt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.MaximizeBtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.ExitBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -195,16 +194,34 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.AddNewLoginBtn);
             this.panel2.Controls.Add(this.UserWelcomeTxt);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.MaximizeBtn);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.ExitBtn);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(168, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(825, 38);
             this.panel2.TabIndex = 4;
+            // 
+            // AddNewLoginBtn
+            // 
+            this.AddNewLoginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddNewLoginBtn.FlatAppearance.BorderSize = 0;
+            this.AddNewLoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddNewLoginBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddNewLoginBtn.ForeColor = System.Drawing.Color.White;
+            this.AddNewLoginBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddNewLoginBtn.Image")));
+            this.AddNewLoginBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddNewLoginBtn.Location = new System.Drawing.Point(733, 8);
+            this.AddNewLoginBtn.Name = "AddNewLoginBtn";
+            this.AddNewLoginBtn.Size = new System.Drawing.Size(80, 23);
+            this.AddNewLoginBtn.TabIndex = 3;
+            this.AddNewLoginBtn.Text = "ADD NEW LOGIN";
+            this.AddNewLoginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddNewLoginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AddNewLoginBtn.UseVisualStyleBackColor = true;
+            this.AddNewLoginBtn.Click += new System.EventHandler(this.button2_Click);
             // 
             // UserWelcomeTxt
             // 
@@ -212,7 +229,7 @@
             this.UserWelcomeTxt.ForeColor = System.Drawing.Color.White;
             this.UserWelcomeTxt.Location = new System.Drawing.Point(235, 8);
             this.UserWelcomeTxt.Name = "UserWelcomeTxt";
-            this.UserWelcomeTxt.Size = new System.Drawing.Size(355, 23);
+            this.UserWelcomeTxt.Size = new System.Drawing.Size(215, 23);
             this.UserWelcomeTxt.TabIndex = 2;
             this.UserWelcomeTxt.Text = "Welcome:";
             this.UserWelcomeTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -228,23 +245,6 @@
             this.label1.Text = "E Barangay";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // MaximizeBtn
-            // 
-            this.MaximizeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MaximizeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.MaximizeBtn.FlatAppearance.BorderSize = 0;
-            this.MaximizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MaximizeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaximizeBtn.ForeColor = System.Drawing.Color.White;
-            this.MaximizeBtn.Image = ((System.Drawing.Image)(resources.GetObject("MaximizeBtn.Image")));
-            this.MaximizeBtn.Location = new System.Drawing.Point(760, 3);
-            this.MaximizeBtn.Name = "MaximizeBtn";
-            this.MaximizeBtn.Size = new System.Drawing.Size(28, 28);
-            this.MaximizeBtn.TabIndex = 1;
-            this.MaximizeBtn.TabStop = false;
-            this.MaximizeBtn.UseVisualStyleBackColor = false;
-            this.MaximizeBtn.Click += new System.EventHandler(this.MaximizeBtn_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -255,23 +255,6 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // ExitBtn
-            // 
-            this.ExitBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ExitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ExitBtn.FlatAppearance.BorderSize = 0;
-            this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExitBtn.ForeColor = System.Drawing.Color.White;
-            this.ExitBtn.Image = ((System.Drawing.Image)(resources.GetObject("ExitBtn.Image")));
-            this.ExitBtn.Location = new System.Drawing.Point(794, 3);
-            this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(28, 28);
-            this.ExitBtn.TabIndex = 0;
-            this.ExitBtn.TabStop = false;
-            this.ExitBtn.UseVisualStyleBackColor = false;
-            this.ExitBtn.Click += new System.EventHandler(this.button1_Click);
-            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -281,7 +264,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(900, 536);
             this.Name = "MainPage";
@@ -307,8 +289,6 @@
         private System.Windows.Forms.Panel SelectionPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button ExitBtn;
-        private System.Windows.Forms.Button MaximizeBtn;
         private Dashboard DashControl;
         private System.Windows.Forms.Button DashBtn;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -316,5 +296,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label UserWelcomeTxt;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button AddNewLoginBtn;
     }
 }

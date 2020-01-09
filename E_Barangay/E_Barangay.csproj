@@ -80,6 +80,7 @@
     <Compile Include="Citizen.cs">
       <DependentUpon>Ebarangaymodel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Class\DateTimeExtension.cs" />
     <Compile Include="Class\Statistics.cs" />
     <Compile Include="Class\UserManager.cs" />
     <Compile Include="Documents\BarangaCertificationforBusiness.cs">
@@ -319,6 +320,12 @@
     <Compile Include="Forms\CaptureImageForm.Designer.cs">
       <DependentUpon>CaptureImageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CreateLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateLogin.Designer.cs">
+      <DependentUpon>CreateLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EditCitizenInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -491,6 +498,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CaptureImageForm.resx">
       <DependentUpon>CaptureImageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateLogin.resx">
+      <DependentUpon>CreateLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditCitizenInfoForm.resx">
       <DependentUpon>EditCitizenInfoForm.cs</DependentUpon>
