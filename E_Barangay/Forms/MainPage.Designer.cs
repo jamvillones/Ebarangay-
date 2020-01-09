@@ -44,6 +44,7 @@
             this.UserWelcomeTxt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,6 +56,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.SelectionPanel);
@@ -68,7 +70,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
@@ -174,7 +176,7 @@
             // 
             // DashControl
             // 
-            this.DashControl.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.DashControl.BackColor = System.Drawing.Color.Silver;
             this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DashControl.Location = new System.Drawing.Point(0, 0);
             this.DashControl.Name = "DashControl";
@@ -255,6 +257,14 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(9, 104);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(150, 3);
+            this.panel5.TabIndex = 6;
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -297,5 +307,6 @@
         private System.Windows.Forms.Label UserWelcomeTxt;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button AddNewLoginBtn;
+        private System.Windows.Forms.Panel panel5;
     }
 }
