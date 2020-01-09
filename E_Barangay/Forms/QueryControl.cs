@@ -17,8 +17,17 @@ namespace E_Barangay.Forms
         public QueryControl()
         {
             InitializeComponent();
-            //AcceptButton = SearchBtn;
 
+
+        }
+        public void setUser()
+        {
+            if (UserManager.instance.currentUser == null)
+                return;
+            User u = UserManager.instance.currentUser;
+            CreateBtn.Enabled = u.canRegister ? true : false;
+            ModifyBtn.Enabled = u.canEdit ? true : false;
+            DeleteBtn.Enabled = u.canDelete ? true : false;
         }
         public Button getAcceptButton()
         {
@@ -137,10 +146,7 @@ namespace E_Barangay.Forms
 
         private void QueryControl_Load(object sender, EventArgs e)
         {
-            User u = UserManager.instance.currentUser;
-            CreateBtn.Enabled = u.canRegister ? true : false;
-            ModifyBtn.Enabled = u.canEdit ? true : false;
-            DeleteBtn.Enabled = u.canDelete ? true : false;
+
             //SearchFilter.SelectedIndex = 0;
         }
 

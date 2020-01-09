@@ -81,6 +81,7 @@ namespace E_Barangay.Forms
             try
             {
                 DashControl.ShowStats();
+                QueryPage.setUser();
                 QueryPage.showData();
                // RegisterPage.LoadValues();
             }
