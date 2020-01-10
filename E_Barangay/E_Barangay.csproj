@@ -203,6 +203,12 @@
     <Compile Include="Documents\BarangayCertificationforResidency.Designer.cs">
       <DependentUpon>BarangayCertificationforResidency.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\BarangayCertificationforResidency321312.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BarangayCertificationforResidency321312.Designer.cs">
+      <DependentUpon>BarangayCertificationforResidency321312.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\BarangayCertificationofDeath.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -453,6 +459,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BarangayCertificationforResidency.resx">
       <DependentUpon>BarangayCertificationforResidency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BarangayCertificationforResidency321312.resx">
+      <DependentUpon>BarangayCertificationforResidency321312.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BarangayCertificationofDeath.resx">
       <DependentUpon>BarangayCertificationofDeath.cs</DependentUpon>
