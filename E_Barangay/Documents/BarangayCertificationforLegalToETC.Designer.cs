@@ -446,6 +446,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "BarangayCertificationforLegalToETC";
+            this.Text = "Certificate for Legal to etc.";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
