@@ -81,6 +81,12 @@
       <DependentUpon>Ebarangaymodel.tt</DependentUpon>
     </Compile>
     <Compile Include="Class\DateTimeExtension.cs" />
+    <Compile Include="Forms\EditPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditPage.designer.cs">
+      <DependentUpon>EditPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class\Statistics.cs" />
     <Compile Include="Class\UserManager.cs" />
     <Compile Include="Documents\BarangaCertificationforBusiness.cs">
@@ -400,6 +406,9 @@
     <Compile Include="User.cs">
       <DependentUpon>Ebarangaymodel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\EditPage.resx">
+      <DependentUpon>EditPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Documents\BarangaCertificationforBusiness.resx">
       <DependentUpon>BarangaCertificationforBusiness.cs</DependentUpon>
     </EmbeddedResource>
