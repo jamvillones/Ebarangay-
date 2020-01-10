@@ -15,17 +15,22 @@ namespace E_Barangay.Forms
 {
     public partial class CaptureImageForm : Form
     {
-        Interface.IImageAcceptor acceptor;
+        public event EventHandler<Image> OnSave;
+
+        //Interface.IImageAcceptor acceptor;
         FilterInfoCollection fic;
         VideoCaptureDevice vcd;
-        public void GetAcceptor(Interface.IImageAcceptor i)
-        {
-            acceptor = i;
-        }
+        //public void GetAcceptor(Interface.IImageAcceptor i)
+        //{
+        //    acceptor = i;
+        //}
         public CaptureImageForm()
         {
             InitializeComponent();
+
         }
+
+       
 
         private void CaptureImageForm_Load(object sender, EventArgs e)
         {
@@ -47,7 +52,6 @@ namespace E_Barangay.Forms
             vcd.Start();
             this.FormClosing += CaptureImageForm_FormClosing;
             Application.ApplicationExit += Application_ApplicationExit;
-            //this.FormClosing += Form1_FormClosing;
         }
 
         private void Application_ApplicationExit(object sender, EventArgs e)
@@ -81,9 +85,7 @@ namespace E_Barangay.Forms
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            if (CaptureImage.Image == null)
-                return;
-            acceptor.AcceptImage((Bitmap)CaptureImage.Image.Clone());
+            OnSave?.Invoke(this, (Bitmap)CaptureImage.Image.Clone());
             this.Close();
         }
     }

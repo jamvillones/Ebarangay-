@@ -11,7 +11,7 @@ using System.IO;
 
 namespace E_Barangay.Forms
 {
-    public partial class RegisterPage : Form, Interface.IRecordAcceptor, Interface.IImageAcceptor, Interface.IAccept
+    public partial class RegisterPage : Form, Interface.IRecordAcceptor
     {
         List<Record> records = new List<Record>();
         List<Control> requiredControls = new List<Control>();
@@ -57,11 +57,11 @@ namespace E_Barangay.Forms
                                            select areas.Name;
                 InitializeDropdown(names.ToArray(), 1, ref AreaOption);
             }
-            ResidenceTypeOption.SelectedIndex = SexOption.SelectedIndex = CivilStatusOption.SelectedIndex = 0;
+            SexOption.SelectedIndex = CivilStatusOption.SelectedIndex = 0;
         }
         private void RegisterControl_Load(object sender, EventArgs e)
         {
-            
+
 
         }
 
@@ -77,7 +77,7 @@ namespace E_Barangay.Forms
 
             Citizen temp = new Citizen();
             temp.ID = IDField.Text == string.Empty ? Guid.NewGuid().ToString() : IDField.Text;
-            
+
             temp.Name = FirstNameField.Text + " " + MiddleNameField.Text + " " + LastNameField.Text;
             temp.Gender = SexOption.Text;
 
@@ -134,7 +134,7 @@ namespace E_Barangay.Forms
         }
         bool CanSave()
         {
-            using(var c = new EBarangayEntities())
+            using (var c = new EBarangayEntities())
             {
                 if (c.Citizens.Find(IDField.Text) != null)
                     return false;
@@ -247,18 +247,34 @@ namespace E_Barangay.Forms
         private void AddImage_Click(object sender, EventArgs e)
         {
             captureForm = new CaptureImageForm();
-            captureForm.GetAcceptor(this);
+            this.Enabled = false;
+            captureForm.OnSave += CaptureForm_OnSave;
+            captureForm.FormClosed += CaptureForm_FormClosed;
+           
             captureForm.Show();
         }
 
-        public void AcceptImage(Image image)
+        private void CaptureForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            ImageBox.Image = image;
+            this.Enabled = true;
+            //throw new NotImplementedException();
         }
-        public void SetImage(Image image)
-        {
 
+        private void CaptureForm_OnSave(object sender, Image e)
+        {
+            this.Enabled = true;
+            ImageBox.Image = e;
+            
         }
+
+        //public void AcceptImage(Image image)
+        //{
+        //    ImageBox.Image = image;
+        //}
+        //public void SetImage(Image image)
+        //{
+
+        //}
 
         public byte[] imageToByteArray(System.Drawing.Image imageIn)
         {
@@ -275,10 +291,7 @@ namespace E_Barangay.Forms
             VoterIDField.Enabled = PrecinctNumField.Enabled = VoterCheckbox.Checked ? true : false;
 
         }
-        public Button getAcceptButton()
-        {
-            return RegisterBtn;
-        }
+       
 
         //private void Dummybtn_Click(object sender, EventArgs e)
         //{
@@ -293,7 +306,7 @@ namespace E_Barangay.Forms
             {
                 foreach (var c in requiredControls)
                     c.Text = "test_dummy";
-                IDField.Text =  Guid.NewGuid().ToString();
+                IDField.Text = Guid.NewGuid().ToString();
             }
         }
     }
