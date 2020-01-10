@@ -479,7 +479,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "BarangaCertificationforBusiness";
-            this.Text = "BarangaCertificationforBusiness";
+            this.Text = "Certificate for Business";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);

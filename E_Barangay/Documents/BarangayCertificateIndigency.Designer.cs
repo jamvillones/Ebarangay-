@@ -48,6 +48,9 @@
             this.ResetBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.Purpose = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.IssuedOn = new System.Windows.Forms.DateTimePicker();
             this.IdGroup = new System.Windows.Forms.GroupBox();
             this.AssignBtn = new System.Windows.Forms.Button();
@@ -59,9 +62,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Address = new System.Windows.Forms.TextBox();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.Purpose = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -256,6 +256,32 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "MISC";
             // 
+            // label12
+            // 
+            this.label12.Location = new System.Drawing.Point(6, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(60, 20);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "Purpose:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Purpose
+            // 
+            this.Purpose.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.Purpose.Location = new System.Drawing.Point(72, 17);
+            this.Purpose.Name = "Purpose";
+            this.Purpose.Size = new System.Drawing.Size(98, 20);
+            this.Purpose.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(6, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Issued On:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // IssuedOn
             // 
             this.IssuedOn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -370,32 +396,6 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(6, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Issued On:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label12
-            // 
-            this.label12.Location = new System.Drawing.Point(6, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 20);
-            this.label12.TabIndex = 28;
-            this.label12.Text = "Purpose:";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Purpose
-            // 
-            this.Purpose.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.Purpose.Location = new System.Drawing.Point(72, 17);
-            this.Purpose.Name = "Purpose";
-            this.Purpose.Size = new System.Drawing.Size(98, 20);
-            this.Purpose.TabIndex = 1;
-            // 
             // BarangayCertificateIndigency
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,7 +404,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "BarangayCertificateIndigency";
-            this.Text = "BarangayCertificateIndigency";
+            this.Text = "Certificate for Indigency";
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

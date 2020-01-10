@@ -52,13 +52,13 @@
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.middleName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.IssuedOn = new System.Windows.Forms.DateTimePicker();
             this.ResetBtn = new System.Windows.Forms.Button();
             this.IdGroup = new System.Windows.Forms.GroupBox();
             this.AssignBtn = new System.Windows.Forms.Button();
             this.IDField = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.IssuedOn = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.firstName = new System.Windows.Forms.TextBox();
@@ -295,23 +295,6 @@
             this.panel1.Size = new System.Drawing.Size(200, 659);
             this.panel1.TabIndex = 2;
             // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(6, 203);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Issued On:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // IssuedOn
-            // 
-            this.IssuedOn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.IssuedOn.Location = new System.Drawing.Point(72, 201);
-            this.IssuedOn.Name = "IssuedOn";
-            this.IssuedOn.Size = new System.Drawing.Size(98, 20);
-            this.IssuedOn.TabIndex = 2;
-            // 
             // ResetBtn
             // 
             this.ResetBtn.Location = new System.Drawing.Point(12, 594);
@@ -373,6 +356,23 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DETAILS";
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(6, 203);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Issued On:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // IssuedOn
+            // 
+            this.IssuedOn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.IssuedOn.Location = new System.Drawing.Point(72, 201);
+            this.IssuedOn.Name = "IssuedOn";
+            this.IssuedOn.Size = new System.Drawing.Size(98, 20);
+            this.IssuedOn.TabIndex = 2;
             // 
             // label1
             // 
@@ -446,7 +446,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "BarangayCertificationforLegalToETC";
-            this.Text = "BarangayCertificationforLegalToETC";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);

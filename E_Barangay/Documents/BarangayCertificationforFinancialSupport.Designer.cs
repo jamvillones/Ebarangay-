@@ -46,8 +46,12 @@
             this.middleName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.Purpose = new System.Windows.Forms.TextBox();
+            this.OrNo = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.IssuedOn = new System.Windows.Forms.DateTimePicker();
             this.ResetBtn = new System.Windows.Forms.Button();
@@ -62,10 +66,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Address = new System.Windows.Forms.TextBox();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.label5 = new System.Windows.Forms.Label();
-            this.OrNo = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -246,6 +246,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Misc";
             // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(6, 109);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 20);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Relation";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // label12
             // 
             this.label12.Location = new System.Drawing.Point(6, 16);
@@ -255,6 +264,14 @@
             this.label12.Text = "Purpose:";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(72, 109);
+            this.textBox1.MaxLength = 13;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(98, 20);
+            this.textBox1.TabIndex = 1;
+            // 
             // Purpose
             // 
             this.Purpose.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -262,6 +279,23 @@
             this.Purpose.Name = "Purpose";
             this.Purpose.Size = new System.Drawing.Size(98, 20);
             this.Purpose.TabIndex = 1;
+            // 
+            // OrNo
+            // 
+            this.OrNo.Location = new System.Drawing.Point(72, 83);
+            this.OrNo.MaxLength = 13;
+            this.OrNo.Name = "OrNo";
+            this.OrNo.Size = new System.Drawing.Size(98, 20);
+            this.OrNo.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(6, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Beneficiary:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
@@ -404,40 +438,6 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(6, 82);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 20);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Beneficiary:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // OrNo
-            // 
-            this.OrNo.Location = new System.Drawing.Point(72, 83);
-            this.OrNo.MaxLength = 13;
-            this.OrNo.Name = "OrNo";
-            this.OrNo.Size = new System.Drawing.Size(98, 20);
-            this.OrNo.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.Location = new System.Drawing.Point(6, 109);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 20);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Relation";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(72, 109);
-            this.textBox1.MaxLength = 13;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(98, 20);
-            this.textBox1.TabIndex = 1;
-            // 
             // BarangayCertificationforFinancialSupport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -446,7 +446,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "BarangayCertificationforFinancialSupport";
-            this.Text = "BarangayCertificationforFinancialSupport";
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

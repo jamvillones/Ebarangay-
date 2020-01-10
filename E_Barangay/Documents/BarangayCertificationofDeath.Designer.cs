@@ -36,6 +36,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.UpdateBtn = new System.Windows.Forms.Button();
+            this.PrintBtn = new System.Windows.Forms.Button();
+            this.PrintPreviewBtn = new System.Windows.Forms.Button();
             this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.lastName = new System.Windows.Forms.TextBox();
@@ -59,9 +62,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Address = new System.Windows.Forms.TextBox();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.UpdateBtn = new System.Windows.Forms.Button();
-            this.PrintBtn = new System.Windows.Forms.Button();
-            this.PrintPreviewBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -137,6 +137,47 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(423, 881);
             this.panel2.TabIndex = 3;
+            // 
+            // UpdateBtn
+            // 
+            this.UpdateBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.UpdateBtn.FlatAppearance.BorderSize = 0;
+            this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UpdateBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateBtn.Image = ((System.Drawing.Image)(resources.GetObject("UpdateBtn.Image")));
+            this.UpdateBtn.Location = new System.Drawing.Point(3, 8);
+            this.UpdateBtn.Name = "UpdateBtn";
+            this.UpdateBtn.Size = new System.Drawing.Size(35, 30);
+            this.UpdateBtn.TabIndex = 5;
+            this.UpdateBtn.TabStop = false;
+            this.UpdateBtn.UseVisualStyleBackColor = false;
+            // 
+            // PrintBtn
+            // 
+            this.PrintBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PrintBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.PrintBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrintBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrintBtn.Image = ((System.Drawing.Image)(resources.GetObject("PrintBtn.Image")));
+            this.PrintBtn.Location = new System.Drawing.Point(385, 8);
+            this.PrintBtn.Name = "PrintBtn";
+            this.PrintBtn.Size = new System.Drawing.Size(35, 30);
+            this.PrintBtn.TabIndex = 4;
+            this.PrintBtn.TabStop = false;
+            this.PrintBtn.UseVisualStyleBackColor = false;
+            // 
+            // PrintPreviewBtn
+            // 
+            this.PrintPreviewBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.PrintPreviewBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrintPreviewBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrintPreviewBtn.Image = ((System.Drawing.Image)(resources.GetObject("PrintPreviewBtn.Image")));
+            this.PrintPreviewBtn.Location = new System.Drawing.Point(44, 8);
+            this.PrintPreviewBtn.Name = "PrintPreviewBtn";
+            this.PrintPreviewBtn.Size = new System.Drawing.Size(35, 30);
+            this.PrintPreviewBtn.TabIndex = 1;
+            this.PrintPreviewBtn.TabStop = false;
+            this.PrintPreviewBtn.UseVisualStyleBackColor = false;
             // 
             // printPreviewControl1
             // 
@@ -355,47 +396,6 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // UpdateBtn
-            // 
-            this.UpdateBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.UpdateBtn.FlatAppearance.BorderSize = 0;
-            this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UpdateBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateBtn.Image = ((System.Drawing.Image)(resources.GetObject("UpdateBtn.Image")));
-            this.UpdateBtn.Location = new System.Drawing.Point(3, 8);
-            this.UpdateBtn.Name = "UpdateBtn";
-            this.UpdateBtn.Size = new System.Drawing.Size(35, 30);
-            this.UpdateBtn.TabIndex = 5;
-            this.UpdateBtn.TabStop = false;
-            this.UpdateBtn.UseVisualStyleBackColor = false;
-            // 
-            // PrintBtn
-            // 
-            this.PrintBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PrintBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.PrintBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrintBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrintBtn.Image = ((System.Drawing.Image)(resources.GetObject("PrintBtn.Image")));
-            this.PrintBtn.Location = new System.Drawing.Point(385, 8);
-            this.PrintBtn.Name = "PrintBtn";
-            this.PrintBtn.Size = new System.Drawing.Size(35, 30);
-            this.PrintBtn.TabIndex = 4;
-            this.PrintBtn.TabStop = false;
-            this.PrintBtn.UseVisualStyleBackColor = false;
-            // 
-            // PrintPreviewBtn
-            // 
-            this.PrintPreviewBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.PrintPreviewBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrintPreviewBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrintPreviewBtn.Image = ((System.Drawing.Image)(resources.GetObject("PrintPreviewBtn.Image")));
-            this.PrintPreviewBtn.Location = new System.Drawing.Point(44, 8);
-            this.PrintPreviewBtn.Name = "PrintPreviewBtn";
-            this.PrintPreviewBtn.Size = new System.Drawing.Size(35, 30);
-            this.PrintPreviewBtn.TabIndex = 1;
-            this.PrintPreviewBtn.TabStop = false;
-            this.PrintPreviewBtn.UseVisualStyleBackColor = false;
-            // 
             // BarangayCertificationofDeath
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,7 +404,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "BarangayCertificationofDeath";
-            this.Text = "BarangayCertificationofDeath";
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
