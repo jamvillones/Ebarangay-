@@ -19,5 +19,7 @@ namespace E_Barangay
         public string Password { get; set; }
         public bool canEdit { get; set; }
         public bool canDelete { get; set; }
+        public bool canRegister { get; set; }
+        public bool canAddUser { get; set; }
     }
 }

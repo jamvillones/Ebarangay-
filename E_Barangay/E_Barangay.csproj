@@ -80,6 +80,7 @@
     <Compile Include="Citizen.cs">
       <DependentUpon>Ebarangaymodel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Class\DateTimeExtension.cs" />
     <Compile Include="Class\Statistics.cs" />
     <Compile Include="Class\UserManager.cs" />
     <Compile Include="Documents\BarangaCertificationforBusiness.cs">
@@ -126,6 +127,9 @@
     </Compile>
     <Compile Include="Documents\BarangayCertificateforNonGovernmentOrganization.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BarangayCertificateforNonGovernmentOrganization.designer.cs">
+      <DependentUpon>BarangayCertificateforNonGovernmentOrganization.cs</DependentUpon>
     </Compile>
     <Compile Include="Documents\BarangayCertificateforUnemployement.cs">
       <SubType>Form</SubType>
@@ -322,6 +326,12 @@
     <Compile Include="Forms\CaptureImageForm.Designer.cs">
       <DependentUpon>CaptureImageForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\CreateLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateLogin.Designer.cs">
+      <DependentUpon>CreateLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EditCitizenInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -358,11 +368,11 @@
     <Compile Include="Forms\RecordForm.Designer.cs">
       <DependentUpon>RecordForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RegisterControl.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Forms\RegisterPage.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\RegisterControl.Designer.cs">
-      <DependentUpon>RegisterControl.cs</DependentUpon>
+    <Compile Include="Forms\RegisterPage.Designer.cs">
+      <DependentUpon>RegisterPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dashboard.cs">
       <SubType>UserControl</SubType>
@@ -498,6 +508,9 @@
     <EmbeddedResource Include="Forms\CaptureImageForm.resx">
       <DependentUpon>CaptureImageForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateLogin.resx">
+      <DependentUpon>CreateLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditCitizenInfoForm.resx">
       <DependentUpon>EditCitizenInfoForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -516,8 +529,8 @@
     <EmbeddedResource Include="Forms\RecordForm.resx">
       <DependentUpon>RecordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\RegisterControl.resx">
-      <DependentUpon>RegisterControl.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\RegisterPage.resx">
+      <DependentUpon>RegisterPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>

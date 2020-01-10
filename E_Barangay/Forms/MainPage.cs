@@ -38,7 +38,7 @@ namespace E_Barangay.Forms
             Current = next;
             Current.Enabled = true;
             Current.Visible = true;
-            
+
         }
         void SwitchAccept(Interface.IAccept accept)
         {
@@ -56,7 +56,7 @@ namespace E_Barangay.Forms
             DashControl.BringToFront();
             DashControl.ShowStats();
         }
-       
+
 
         private void QueryBtn_Click(object sender, EventArgs e)
         {
@@ -70,26 +70,23 @@ namespace E_Barangay.Forms
         }
 
 
-        private void RegisterBtn_Click(object sender, EventArgs e)
-        {
-            //currentAccept = RegisterPage;
-            SwitchAccept(RegisterPage);
-            SwitchPage(RegisterPage);
-            RegisterPage.BringToFront();
-            SetSelectionPanel(RegisterBtn);
-        }
+
 
         private void MainPage_Load(object sender, EventArgs e)
         {
-            UserWelcomeTxt.Text = "Welcome: "+ UserManager.instance.currentUser.Username;
+            User curr = UserManager.instance.currentUser;
+            UserWelcomeTxt.Text = "Welcome: " + curr.Username;
+            //if(curr.canAddUser)
+            AddNewLoginBtn.Enabled = curr.canAddUser ? true : false;
             // Class.UserManager.instance = new Class.UserManager();
             Current = DashControl;
             currentAccept = DashControl;
             try
             {
                 DashControl.ShowStats();
+                QueryPage.setUser();
                 QueryPage.showData();
-                RegisterPage.LoadValues();
+                // RegisterPage.LoadValues();
             }
             catch
             {
@@ -97,18 +94,18 @@ namespace E_Barangay.Forms
             }
 
             QueryPage.Enabled = false;
-            RegisterPage.Enabled = false;
+            // RegisterPage.Enabled = false;
 
             QueryPage.IDEmptySearch += QueryPage_IDEmptySearch;
         }
 
         private void QueryPage_IDEmptySearch(object sender, string e)
         {
-            SwitchAccept(RegisterPage);
-            SwitchPage(RegisterPage);
-            RegisterPage.BringToFront();
-            SetSelectionPanel(RegisterBtn);
-            RegisterPage.AcceptNewUser(sender, e);
+            //SwitchAccept(RegisterPage);
+            // SwitchPage(RegisterPage);
+            // RegisterPage.BringToFront();
+            //SetSelectionPanel(RegisterBtn);
+            // RegisterPage.AcceptNewUser(sender, e);
         }
 
         private void SelectionPanel_Paint(object sender, PaintEventArgs e)
@@ -123,13 +120,13 @@ namespace E_Barangay.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-           this.Close();
+            this.Close();
         }
 
         private void MaximizeBtn_Click(object sender, EventArgs e)
         {
             this.WindowState = this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
-           /// MaximizeBtn.Text = this.WindowState == FormWindowState.Maximized ? "Minimize" : "Maximize";
+            /// MaximizeBtn.Text = this.WindowState == FormWindowState.Maximized ? "Minimize" : "Maximize";
         }
 
         private void dashboard1_Load(object sender, EventArgs e)
@@ -155,6 +152,27 @@ namespace E_Barangay.Forms
         {
             this.Enabled = true;
             //throw new NotImplementedException();
+        }
+        CreateLogin cl;
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (cl == null)
+            {
+                cl = new CreateLogin();
+                cl.FormClosed += Cl_FormClosed;
+                cl.Show();
+                this.Enabled = false;
+                return;
+            }
+            //cl.BringToFront();
+
+        }
+
+        private void Cl_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            cl = null;
+            this.Enabled = true;
+            // throw new NotImplementedException();
         }
     }
 }

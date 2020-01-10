@@ -1,6 +1,6 @@
 ﻿namespace E_Barangay.Forms
 {
-    partial class RegisterControl
+    partial class RegisterPage
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterPage));
             this.FirstNameField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -237,7 +237,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(391, 20);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(414, 126);
+            this.groupBox1.Size = new System.Drawing.Size(410, 126);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Address";
@@ -256,7 +256,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MunicipalityField.Location = new System.Drawing.Point(251, 40);
             this.MunicipalityField.Name = "MunicipalityField";
-            this.MunicipalityField.Size = new System.Drawing.Size(151, 20);
+            this.MunicipalityField.Size = new System.Drawing.Size(147, 20);
             this.MunicipalityField.TabIndex = 7;
             // 
             // ResidenceTypeOption
@@ -271,7 +271,7 @@
             "Transient"});
             this.ResidenceTypeOption.Location = new System.Drawing.Point(251, 66);
             this.ResidenceTypeOption.Name = "ResidenceTypeOption";
-            this.ResidenceTypeOption.Size = new System.Drawing.Size(151, 21);
+            this.ResidenceTypeOption.Size = new System.Drawing.Size(147, 21);
             this.ResidenceTypeOption.TabIndex = 9;
             // 
             // label18
@@ -359,7 +359,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BarangayField.Location = new System.Drawing.Point(251, 14);
             this.BarangayField.Name = "BarangayField";
-            this.BarangayField.Size = new System.Drawing.Size(151, 20);
+            this.BarangayField.Size = new System.Drawing.Size(147, 20);
             this.BarangayField.TabIndex = 6;
             // 
             // groupBox2
@@ -370,7 +370,7 @@
             this.groupBox2.Controls.Add(this.IsPwd);
             this.groupBox2.Controls.Add(this.IsSenior);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(526, 296);
+            this.groupBox2.Location = new System.Drawing.Point(522, 296);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(279, 155);
             this.groupBox2.TabIndex = 4;
@@ -380,7 +380,7 @@
             // IsStudent
             // 
             this.IsStudent.AutoSize = true;
-            this.IsStudent.Location = new System.Drawing.Point(135, 19);
+            this.IsStudent.Location = new System.Drawing.Point(6, 88);
             this.IsStudent.Name = "IsStudent";
             this.IsStudent.Size = new System.Drawing.Size(67, 17);
             this.IsStudent.TabIndex = 12;
@@ -419,7 +419,7 @@
             this.RecordsTable.RowHeadersVisible = false;
             this.RecordsTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.RecordsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.RecordsTable.Size = new System.Drawing.Size(502, 143);
+            this.RecordsTable.Size = new System.Drawing.Size(498, 144);
             this.RecordsTable.TabIndex = 21;
             this.RecordsTable.TabStop = false;
             // 
@@ -454,7 +454,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(9, 296);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(511, 202);
+            this.groupBox3.Size = new System.Drawing.Size(507, 203);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Records";
@@ -467,7 +467,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(73, 173);
+            this.button4.Location = new System.Drawing.Point(73, 174);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(93, 23);
             this.button4.TabIndex = 23;
@@ -484,7 +484,7 @@
             this.AddRecordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddRecordBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddRecordBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddRecordBtn.Location = new System.Drawing.Point(3, 173);
+            this.AddRecordBtn.Location = new System.Drawing.Point(3, 174);
             this.AddRecordBtn.Name = "AddRecordBtn";
             this.AddRecordBtn.Size = new System.Drawing.Size(70, 23);
             this.AddRecordBtn.TabIndex = 22;
@@ -502,9 +502,9 @@
             this.RegisterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegisterBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterBtn.Image = ((System.Drawing.Image)(resources.GetObject("RegisterBtn.Image")));
-            this.RegisterBtn.Location = new System.Drawing.Point(526, 457);
+            this.RegisterBtn.Location = new System.Drawing.Point(521, 457);
             this.RegisterBtn.Name = "RegisterBtn";
-            this.RegisterBtn.Size = new System.Drawing.Size(111, 41);
+            this.RegisterBtn.Size = new System.Drawing.Size(111, 42);
             this.RegisterBtn.TabIndex = 6;
             this.RegisterBtn.Text = "Register";
             this.RegisterBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -519,7 +519,7 @@
             this.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelBtn.Image = ((System.Drawing.Image)(resources.GetObject("CancelBtn.Image")));
-            this.CancelBtn.Location = new System.Drawing.Point(642, 456);
+            this.CancelBtn.Location = new System.Drawing.Point(637, 457);
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(95, 42);
             this.CancelBtn.TabIndex = 7;
@@ -556,7 +556,7 @@
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(9, 152);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(796, 138);
+            this.groupBox4.Size = new System.Drawing.Size(792, 138);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Basic Info";
@@ -578,7 +578,7 @@
             this.PrecinctNumField.Enabled = false;
             this.PrecinctNumField.Location = new System.Drawing.Point(396, 94);
             this.PrecinctNumField.Name = "PrecinctNumField";
-            this.PrecinctNumField.Size = new System.Drawing.Size(388, 20);
+            this.PrecinctNumField.Size = new System.Drawing.Size(384, 20);
             this.PrecinctNumField.TabIndex = 22;
             // 
             // label16
@@ -656,7 +656,7 @@
             this.SpouseField.Location = new System.Drawing.Point(397, 66);
             this.SpouseField.MaxLength = 100;
             this.SpouseField.Name = "SpouseField";
-            this.SpouseField.Size = new System.Drawing.Size(387, 20);
+            this.SpouseField.Size = new System.Drawing.Size(383, 20);
             this.SpouseField.TabIndex = 19;
             // 
             // label13
@@ -701,7 +701,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MotherField.Location = new System.Drawing.Point(396, 40);
             this.MotherField.Name = "MotherField";
-            this.MotherField.Size = new System.Drawing.Size(388, 20);
+            this.MotherField.Size = new System.Drawing.Size(384, 20);
             this.MotherField.TabIndex = 16;
             // 
             // FatherField
@@ -710,7 +710,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FatherField.Location = new System.Drawing.Point(397, 14);
             this.FatherField.Name = "FatherField";
-            this.FatherField.Size = new System.Drawing.Size(387, 20);
+            this.FatherField.Size = new System.Drawing.Size(383, 20);
             this.FatherField.TabIndex = 15;
             // 
             // BdayPicker
@@ -844,9 +844,12 @@
             // 
             // RegisterControl
             // 
+            this.AcceptButton = this.RegisterBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
+            this.CancelButton = this.CancelBtn;
+            this.ClientSize = new System.Drawing.Size(799, 511);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox4);
@@ -855,8 +858,13 @@
             this.Controls.Add(this.RegisterBtn);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "RegisterControl";
-            this.Size = new System.Drawing.Size(819, 501);
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Register";
             this.Load += new System.EventHandler(this.RegisterControl_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
