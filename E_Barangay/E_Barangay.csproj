@@ -398,6 +398,9 @@
     <Compile Include="Municipality.cs">
       <DependentUpon>Ebarangaymodel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Official.cs">
+      <DependentUpon>Ebarangaymodel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Record.cs">
