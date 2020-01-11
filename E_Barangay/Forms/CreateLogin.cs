@@ -48,6 +48,9 @@ namespace E_Barangay.Forms
             MessageBox.Show("Successfully added");
             this.Close();
         }
+        /// <summary>
+        /// checks if the password match
+        /// </summary>
         bool SamePassword
         {
             get
@@ -55,6 +58,7 @@ namespace E_Barangay.Forms
                 return PasswordTxt.Text == ConfirmPassTxt.Text;
             }
         }
+
         private void PasswordTxt_TextChanged(object sender, EventArgs e)
         {
             if (PasswordTxt.Text == string.Empty) return;
