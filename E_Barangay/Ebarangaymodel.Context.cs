@@ -31,5 +31,6 @@ namespace E_Barangay
         public virtual DbSet<Record> Records { get; set; }
         public virtual DbSet<Area> Areas { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Official> Officials { get; set; }
     }
 }

@@ -48,6 +48,14 @@
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="Zip" Type="nchar" MaxLength="10" />
         </EntityType>
+        <EntityType Name="Officials">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Position" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="Records">
           <Key>
             <PropertyRef Name="ID" />
@@ -99,6 +107,7 @@
           <EntitySet Name="Barangay" EntityType="Self.Barangay" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Citizen" EntityType="Self.Citizen" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Municipality" EntityType="Self.Municipality" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Officials" EntityType="Self.Officials" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Records" EntityType="Self.Records" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Citizen_Area" Association="Self.FK_Citizen_Area">
@@ -190,6 +199,7 @@
             <End Role="Citizen" EntitySet="Citizens" />
           </AssociationSet>
           <EntitySet Name="Users" EntityType="EBarangayModel.User" />
+          <EntitySet Name="Officials" EntityType="EBarangayModel.Official" />
         </EntityContainer>
         <EntityType Name="Area">
           <Key>
@@ -222,6 +232,14 @@
           <Property Name="canDelete" Type="Boolean" Nullable="false" />
           <Property Name="canRegister" Type="Boolean" Nullable="false" />
           <Property Name="canAddUser" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Official">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Position" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -296,6 +314,15 @@
                 <ScalarProperty Name="canEdit" ColumnName="canEdit" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Officials">
+            <EntityTypeMapping TypeName="EBarangayModel.Official">
+              <MappingFragment StoreEntitySet="Officials">
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

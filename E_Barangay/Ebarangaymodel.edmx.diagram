@@ -13,6 +13,7 @@
         <EntityTypeShape EntityType="EBarangayModel.Area" Width="1.5" PointX="5.625" PointY="4" />
         <AssociationConnector Association="EBarangayModel.FK_Citizen_Area" />
         <EntityTypeShape EntityType="EBarangayModel.User" Width="1.5" PointX="5.375" PointY="6.75" />
+        <EntityTypeShape EntityType="EBarangayModel.Official" Width="1.5" PointX="7.375" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
