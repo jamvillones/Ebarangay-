@@ -41,6 +41,8 @@
             this.IsPwd = new System.Windows.Forms.CheckBox();
             this.IsSenior = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.AreaOption = new System.Windows.Forms.ComboBox();
             this.MunicipalityField = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -90,8 +92,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RecordsTable)).BeginInit();
@@ -240,10 +240,30 @@
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(391, 20);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(447, 126);
+            this.groupBox1.Size = new System.Drawing.Size(448, 126);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Address";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(91, 14);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(351, 20);
+            this.textBox4.TabIndex = 23;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(6, 17);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(79, 14);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "Current Address";
             // 
             // AreaOption
             // 
@@ -259,7 +279,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MunicipalityField.Location = new System.Drawing.Point(251, 66);
             this.MunicipalityField.Name = "MunicipalityField";
-            this.MunicipalityField.Size = new System.Drawing.Size(184, 20);
+            this.MunicipalityField.Size = new System.Drawing.Size(191, 20);
             this.MunicipalityField.TabIndex = 7;
             // 
             // label8
@@ -278,7 +298,7 @@
             // 
             this.ProvinceField.Location = new System.Drawing.Point(61, 92);
             this.ProvinceField.Name = "ProvinceField";
-            this.ProvinceField.Size = new System.Drawing.Size(374, 20);
+            this.ProvinceField.Size = new System.Drawing.Size(381, 20);
             this.ProvinceField.TabIndex = 8;
             // 
             // label7
@@ -335,7 +355,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BarangayField.Location = new System.Drawing.Point(251, 40);
             this.BarangayField.Name = "BarangayField";
-            this.BarangayField.Size = new System.Drawing.Size(184, 20);
+            this.BarangayField.Size = new System.Drawing.Size(191, 20);
             this.BarangayField.TabIndex = 6;
             // 
             // groupBox2
@@ -346,7 +366,7 @@
             this.groupBox2.Controls.Add(this.IsPwd);
             this.groupBox2.Controls.Add(this.IsSenior);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(385, 296);
+            this.groupBox2.Location = new System.Drawing.Point(398, 296);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(133, 155);
             this.groupBox2.TabIndex = 4;
@@ -395,7 +415,7 @@
             this.RecordsTable.RowHeadersVisible = false;
             this.RecordsTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.RecordsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.RecordsTable.Size = new System.Drawing.Size(361, 144);
+            this.RecordsTable.Size = new System.Drawing.Size(374, 144);
             this.RecordsTable.TabIndex = 21;
             this.RecordsTable.TabStop = false;
             // 
@@ -430,7 +450,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(9, 296);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(370, 203);
+            this.groupBox3.Size = new System.Drawing.Size(383, 203);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Records";
@@ -478,14 +498,14 @@
             this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveBtn.Image = ((System.Drawing.Image)(resources.GetObject("SaveBtn.Image")));
-            this.SaveBtn.Location = new System.Drawing.Point(715, 459);
+            this.SaveBtn.Location = new System.Drawing.Point(728, 459);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(111, 42);
             this.SaveBtn.TabIndex = 6;
             this.SaveBtn.Text = "Save";
             this.SaveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.SaveBtn.UseVisualStyleBackColor = false;
-            this.SaveBtn.Click += new System.EventHandler(this.RegisterBtn_Click);
+            this.SaveBtn.Click += new System.EventHandler(this.SaveCallback);
             // 
             // groupBox4
             // 
@@ -515,7 +535,7 @@
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(9, 152);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(829, 138);
+            this.groupBox4.Size = new System.Drawing.Size(830, 138);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Basic Info";
@@ -537,7 +557,7 @@
             this.PrecinctNumField.Enabled = false;
             this.PrecinctNumField.Location = new System.Drawing.Point(396, 94);
             this.PrecinctNumField.Name = "PrecinctNumField";
-            this.PrecinctNumField.Size = new System.Drawing.Size(171, 20);
+            this.PrecinctNumField.Size = new System.Drawing.Size(172, 20);
             this.PrecinctNumField.TabIndex = 22;
             // 
             // label16
@@ -615,7 +635,7 @@
             this.SpouseField.Location = new System.Drawing.Point(397, 66);
             this.SpouseField.MaxLength = 100;
             this.SpouseField.Name = "SpouseField";
-            this.SpouseField.Size = new System.Drawing.Size(420, 20);
+            this.SpouseField.Size = new System.Drawing.Size(427, 20);
             this.SpouseField.TabIndex = 19;
             // 
             // label13
@@ -660,7 +680,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MotherField.Location = new System.Drawing.Point(396, 40);
             this.MotherField.Name = "MotherField";
-            this.MotherField.Size = new System.Drawing.Size(421, 20);
+            this.MotherField.Size = new System.Drawing.Size(428, 20);
             this.MotherField.TabIndex = 16;
             // 
             // FatherField
@@ -669,7 +689,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FatherField.Location = new System.Drawing.Point(397, 14);
             this.FatherField.Name = "FatherField";
-            this.FatherField.Size = new System.Drawing.Size(420, 20);
+            this.FatherField.Size = new System.Drawing.Size(427, 20);
             this.FatherField.TabIndex = 15;
             // 
             // BdayPicker
@@ -768,9 +788,9 @@
             this.groupBox6.Controls.Add(this.textBox2);
             this.groupBox6.Controls.Add(this.textBox1);
             this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(524, 296);
+            this.groupBox6.Location = new System.Drawing.Point(537, 296);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(314, 155);
+            this.groupBox6.Size = new System.Drawing.Size(302, 155);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "ID\'s";
@@ -806,42 +826,22 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(49, 125);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(251, 20);
+            this.textBox3.Size = new System.Drawing.Size(247, 20);
             this.textBox3.TabIndex = 2;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(49, 80);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(251, 20);
+            this.textBox2.Size = new System.Drawing.Size(247, 20);
             this.textBox2.TabIndex = 1;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(49, 35);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(251, 20);
+            this.textBox1.Size = new System.Drawing.Size(247, 20);
             this.textBox1.TabIndex = 0;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 17);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(79, 14);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "Current Address";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(91, 14);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(342, 20);
-            this.textBox4.TabIndex = 23;
             // 
             // EditPage
             // 
@@ -849,7 +849,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(836, 511);
+            this.ClientSize = new System.Drawing.Size(849, 511);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.panel1);
@@ -865,7 +865,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Record";
-            this.Load += new System.EventHandler(this.RegisterControl_Load);
+            this.Load += new System.EventHandler(this.Edit_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

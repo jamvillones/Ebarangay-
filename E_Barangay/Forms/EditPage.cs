@@ -15,20 +15,44 @@ namespace E_Barangay.Forms
     {
         List<Record> records = new List<Record>();
         List<Control> requiredControls = new List<Control>();
+
+        #region citizen assignment
+        Citizen citizen { get; set; }
+        /// <summary>
+        /// used to get the citizen to be edited
+        /// </summary>
+        /// <param name="c"></param>
+        public void AssignCitizen(Citizen c)
+        {
+            citizen = c;
+            SetFieldValues();
+        }
+        /// <summary>
+        /// will assign values to controls with respect to current citizen
+        /// </summary>
+        void SetFieldValues()
+        {
+            if (citizen == null) return;
+        }
+        #endregion
+
         public EditPage()
         {
             InitializeComponent();
-            InitRequiredFields();
+            SetRequiredControls();
         }
-        public void AcceptNewUser(object sender, string id)
-        {
-            IDField.Text = id;
-        }
-        void InitRequiredFields()
+        //public void AcceptNewUser(object sender, string id)
+        //{
+        //    IDField.Text = id;
+        //}
+        /// <summary>
+        /// adds all the required control to a single list for automation
+        /// </summary>
+        void SetRequiredControls()
         {
             requiredControls.Add(FirstNameField);
-           // requiredControls.Add(MiddleNameField);
-           // requiredControls.Add(LastNameField);
+            // requiredControls.Add(MiddleNameField);
+            // requiredControls.Add(LastNameField);
             requiredControls.Add(BarangayField);
             requiredControls.Add(AreaOption);
             requiredControls.Add(ProvinceField);
@@ -42,6 +66,12 @@ namespace E_Barangay.Forms
         {
             records.Add(c);
         }
+        /// <summary>
+        /// initilalizes a dropdown with given values
+        /// </summary>
+        /// <param name="values"></param>
+        /// <param name="startIndex"></param>
+        /// <param name="comboBox"></param>
         void InitializeDropdown(string[] values, int startIndex, ref ComboBox comboBox)
         {
             for (int i = startIndex; i < values.Length; i++)
@@ -49,7 +79,10 @@ namespace E_Barangay.Forms
                 comboBox.Items.Add(values[i]);
             }
         }
-        public void LoadValues()
+        /// <summary>
+        /// initializes all dropdowns
+        /// </summary>
+        public void InitializeDropdowns()
         {
             using (var eBarangay = new EBarangayEntities())
             {
@@ -59,13 +92,14 @@ namespace E_Barangay.Forms
             }
             SexOption.SelectedIndex = CivilStatusOption.SelectedIndex = 0;
         }
-        private void RegisterControl_Load(object sender, EventArgs e)
+
+        private void Edit_Load(object sender, EventArgs e)
         {
 
 
         }
 
-        private void RegisterBtn_Click(object sender, EventArgs e)
+        private void SaveCallback(object sender, EventArgs e)
         {
             #region not needed
             // ///checking if valid for registration
@@ -130,17 +164,21 @@ namespace E_Barangay.Forms
             #endregion
 
         }
+        /// <summary>
+        /// checks if fields are suitable for changes
+        /// </summary>
+        /// <param name="t"></param>
+        /// <returns></returns>
         public bool FieldEmpty(TextBox t)
         {
             return t.Text == string.Empty || t.Text == "required";
         }
+        /// <summary>
+        /// determines if no required fields are empty
+        /// </summary>
+        /// <returns></returns>
         bool CanSave()
         {
-            using (var c = new EBarangayEntities())
-            {
-                if (c.Citizens.Find(IDField.Text) != null)
-                    return false;
-            }
             foreach (var c in requiredControls)
             {
                 if (c.Text == "") return false;
@@ -160,14 +198,14 @@ namespace E_Barangay.Forms
             foreach (var c in requiredControls)
                 c.BackColor = Color.White;
         }
+        /// <summary>
+        /// empties all required fields
+        /// </summary>
         void CleanFields()
         {
 
             IDField.Clear();
             FirstNameField.Clear();
-            //MiddleNameField.Clear();
-            //LastNameField.Clear();
-
             FatherField.Clear();
             MotherField.Clear();
             SpouseField.Clear();
@@ -193,12 +231,11 @@ namespace E_Barangay.Forms
             IsPwd.Checked = isIndigent.Checked = IsSenior.Checked = false;
         }
 
-        //private void CancelBtn_Click(object sender, EventArgs e)
-        //{
-        //    ChangeNormalColors();
-        //    CleanFields();
-        //}
-
+        /// <summary>
+        /// basically alters spouse field depending on civil status option
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CivilStatusOption_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (CivilStatusOption.SelectedIndex == 0)
@@ -215,6 +252,8 @@ namespace E_Barangay.Forms
             var age = today.Year - BdayPicker.Value.Year;
             AgeField.Text = age.ToString();
         }
+
+        #region recordprompt
         RecordForm record;
         private void button3_Click(object sender, EventArgs e)
         {
@@ -234,6 +273,7 @@ namespace E_Barangay.Forms
             record = null;
             ShowRecords();
         }
+
         void ShowRecords()
         {
             RecordsTable.Rows.Clear();
@@ -245,6 +285,9 @@ namespace E_Barangay.Forms
                 RecordsTable.Rows[i].Cells[2].Value = records[i].Details;
             }
         }
+        #endregion
+
+        #region captureprompt
         CaptureImageForm captureForm;
         private void AddImage_Click(object sender, EventArgs e)
         {
@@ -252,7 +295,7 @@ namespace E_Barangay.Forms
             this.Enabled = false;
             captureForm.OnSave += CaptureForm_OnSave;
             captureForm.FormClosed += CaptureForm_FormClosed;
-           
+
             captureForm.Show();
         }
 
@@ -266,18 +309,11 @@ namespace E_Barangay.Forms
         {
             this.Enabled = true;
             ImageBox.Image = e;
-            
+
         }
+        #endregion
 
-        //public void AcceptImage(Image image)
-        //{
-        //    ImageBox.Image = image;
-        //}
-        //public void SetImage(Image image)
-        //{
-
-        //}
-
+        #region imageConversion
         public byte[] imageToByteArray(System.Drawing.Image imageIn)
         {
             if (imageIn == null)
@@ -293,14 +329,7 @@ namespace E_Barangay.Forms
             VoterIDField.Enabled = PrecinctNumField.Enabled = VoterCheckbox.Checked ? true : false;
 
         }
-       
-
-        //private void Dummybtn_Click(object sender, EventArgs e)
-        //{
-        //    foreach (var c in requiredControls)
-        //        c.Text = "test_dummy";
-
-        //}
+        #endregion  
 
         private void RegisterControl_KeyDown(object sender, KeyEventArgs e)
         {

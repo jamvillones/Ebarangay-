@@ -24,6 +24,11 @@ namespace E_Barangay.Forms
                 MessageBox.Show("fields must not be empty!");
                 return;
             }
+            if(!SamePassword)
+            {
+                MessageBox.Show("Password does not match");
+                return;
+            }
             using (var a = new EBarangayEntities())
             {
                 var user = new User();
@@ -39,6 +44,22 @@ namespace E_Barangay.Forms
             }
             MessageBox.Show("Successfully added");
             this.Close();
+        }
+        bool SamePassword
+        {
+            get
+            {
+                return PasswordTxt.Text == ConfirmPassTxt.Text;
+            }
+        }
+        private void PasswordTxt_TextChanged(object sender, EventArgs e)
+        {
+            checkImage.Visible = SamePassword ? true : false;
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            checkImage.Visible = SamePassword ? true : false;
         }
     }
 }

@@ -35,30 +35,16 @@ namespace E_Barangay.Forms
             this.Close();
         }
 
+        EditPage epage;
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            NameTxt.ReadOnly = false;
-            NameTxt.BackColor = Color.SkyBlue;
-            ContactTxt.ReadOnly = false;
-            ContactTxt.BackColor = Color.SkyBlue;
-            AddressTxt.ReadOnly = false;
-            AddressTxt.BackColor = Color.SkyBlue;
-            CivilStatusOption.Enabled = true;
-            CivilStatusOption.BackColor = Color.SkyBlue;
-            SpouseTxt.ReadOnly = false;
-            SpouseTxt.BackColor = Color.SkyBlue;
-            IsIndigent.AutoCheck = true;
-            IsIndigent.BackColor = Color.SkyBlue;
-            IsSenior.AutoCheck = true;
-            IsSenior.BackColor = Color.SkyBlue;
-            IsStudent.AutoCheck = true;
-            IsStudent.BackColor = Color.SkyBlue;
-            IsPwd.AutoCheck = true;
-            IsPwd.BackColor = Color.SkyBlue;
-
-            SaveBtn.Enabled = true;
-            OkayBtn.Enabled = false;
-
+            if(epage == null)
+            {
+                epage = new EditPage();
+                epage.AssignCitizen(new Citizen());
+                epage.Show();
+            }
+            this.Close();
         }
 
         void AssignValuesToText()
@@ -75,7 +61,7 @@ namespace E_Barangay.Forms
             SexTxt.Text = target.Gender;
             ContactTxt.Text = target.ContactInfo;
 
-            CivilStatusOption.Text = target.CivilStatus;
+            CivilStatusTxt.Text = target.CivilStatus;
 
             MotherTxt.Text = target.MothersName;
             FatherTxt.Text = target.FathersName;
@@ -148,25 +134,25 @@ namespace E_Barangay.Forms
 
         }
 
-        private void SaveBtn_Click(object sender, EventArgs e)
-        {
-            using (var c = new EBarangayEntities())
-            {
-                Citizen citizen = c.Citizens.Find(target.ID);
-                citizen.Name = NameTxt.Text;
-                citizen.ContactInfo = ContactTxt.Text;
-                citizen.CivilStatus = CivilStatusOption.Text;
-                citizen.SpouseName = SpouseTxt.Text;
+        //private void SaveBtn_Click(object sender, EventArgs e)
+        //{
+        //    using (var c = new EBarangayEntities())
+        //    {
+        //        Citizen citizen = c.Citizens.Find(target.ID);
+        //        citizen.Name = NameTxt.Text;
+        //        citizen.ContactInfo = ContactTxt.Text;
+        //        citizen.CivilStatus = CivilStatusTxt.Text;
+        //        citizen.SpouseName = SpouseTxt.Text;
 
-                citizen.PWD = IsPwd.Checked;
-                citizen.Student = IsStudent.Checked;
-                citizen.SeniorCitizen = IsSenior.Checked;
-                citizen.Indigent = IsIndigent.Checked;
+        //        citizen.PWD = IsPwd.Checked;
+        //        citizen.Student = IsStudent.Checked;
+        //        citizen.SeniorCitizen = IsSenior.Checked;
+        //        citizen.Indigent = IsIndigent.Checked;
 
-                c.SaveChanges();
-            }
+        //        c.SaveChanges();
+        //    }
 
-            OkayBtn.Enabled = true;
-        }
+        //    OkayBtn.Enabled = true;
+        //}
     }
 }

@@ -36,10 +36,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Group = new System.Windows.Forms.GroupBox();
+            this.CivilStatusTxt = new System.Windows.Forms.TextBox();
             this.IDField = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.SaveBtn = new System.Windows.Forms.Button();
-            this.CivilStatusOption = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.FatherTxt = new System.Windows.Forms.TextBox();
             this.EditBtn = new System.Windows.Forms.Button();
@@ -149,10 +148,9 @@
             this.Group.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.Group.Controls.Add(this.CivilStatusTxt);
             this.Group.Controls.Add(this.IDField);
             this.Group.Controls.Add(this.label12);
-            this.Group.Controls.Add(this.SaveBtn);
-            this.Group.Controls.Add(this.CivilStatusOption);
             this.Group.Controls.Add(this.label9);
             this.Group.Controls.Add(this.FatherTxt);
             this.Group.Controls.Add(this.EditBtn);
@@ -187,6 +185,18 @@
             this.Group.TabIndex = 18;
             this.Group.TabStop = false;
             // 
+            // CivilStatusTxt
+            // 
+            this.CivilStatusTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CivilStatusTxt.BackColor = System.Drawing.Color.Silver;
+            this.CivilStatusTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CivilStatusTxt.Location = new System.Drawing.Point(481, 82);
+            this.CivilStatusTxt.Name = "CivilStatusTxt";
+            this.CivilStatusTxt.ReadOnly = true;
+            this.CivilStatusTxt.Size = new System.Drawing.Size(256, 25);
+            this.CivilStatusTxt.TabIndex = 57;
+            // 
             // IDField
             // 
             this.IDField.BackColor = System.Drawing.Color.Silver;
@@ -206,41 +216,6 @@
             this.label12.Size = new System.Drawing.Size(63, 15);
             this.label12.TabIndex = 55;
             this.label12.Text = "Citizen ID";
-            // 
-            // SaveBtn
-            // 
-            this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.SaveBtn.BackColor = System.Drawing.SystemColors.Control;
-            this.SaveBtn.Enabled = false;
-            this.SaveBtn.FlatAppearance.BorderSize = 0;
-            this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveBtn.Location = new System.Drawing.Point(6, 364);
-            this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(74, 23);
-            this.SaveBtn.TabIndex = 54;
-            this.SaveBtn.Text = "Save Info";
-            this.SaveBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SaveBtn.UseVisualStyleBackColor = false;
-            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
-            // 
-            // CivilStatusOption
-            // 
-            this.CivilStatusOption.AutoCompleteCustomSource.AddRange(new string[] {
-            "Single",
-            "Married"});
-            this.CivilStatusOption.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.CivilStatusOption.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.CivilStatusOption.BackColor = System.Drawing.Color.Silver;
-            this.CivilStatusOption.Enabled = false;
-            this.CivilStatusOption.FormattingEnabled = true;
-            this.CivilStatusOption.Items.AddRange(new object[] {
-            "Single",
-            "Married"});
-            this.CivilStatusOption.Location = new System.Drawing.Point(481, 81);
-            this.CivilStatusOption.Name = "CivilStatusOption";
-            this.CivilStatusOption.Size = new System.Drawing.Size(256, 25);
-            this.CivilStatusOption.TabIndex = 53;
             // 
             // label9
             // 
@@ -271,7 +246,7 @@
             this.EditBtn.FlatAppearance.BorderSize = 0;
             this.EditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditBtn.Location = new System.Drawing.Point(5, 335);
+            this.EditBtn.Location = new System.Drawing.Point(11, 364);
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.Size = new System.Drawing.Size(74, 23);
             this.EditBtn.TabIndex = 27;
@@ -581,9 +556,8 @@
         private System.Windows.Forms.TextBox NameTxt;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox CivilStatusOption;
-        private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.TextBox IDField;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox CivilStatusTxt;
     }
 }
