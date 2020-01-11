@@ -19,14 +19,17 @@ namespace E_Barangay.Forms
 
         private void ConfirmBtn_Click(object sender, EventArgs e)
         {
-            if(UsernameTxt.Text == string.Empty || PasswordTxt.Text == string.Empty)
+            if (UsernameTxt.Text == string.Empty || PasswordTxt.Text == string.Empty)
             {
                 MessageBox.Show("fields must not be empty!");
                 return;
             }
-            if(!SamePassword)
+            if (!SamePassword)
             {
+                ActiveControl = PasswordTxt;
                 MessageBox.Show("Password does not match");
+                PasswordTxt.Clear();
+                ConfirmPassTxt.Clear();
                 return;
             }
             using (var a = new EBarangayEntities())
@@ -54,11 +57,13 @@ namespace E_Barangay.Forms
         }
         private void PasswordTxt_TextChanged(object sender, EventArgs e)
         {
+            if (PasswordTxt.Text == string.Empty) return;
             checkImage.Visible = SamePassword ? true : false;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            if (ConfirmPassTxt.Text == string.Empty) return;
             checkImage.Visible = SamePassword ? true : false;
         }
     }
