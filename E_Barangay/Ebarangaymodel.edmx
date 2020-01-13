@@ -39,6 +39,11 @@
           <Property Name="Student" Type="bit" Nullable="false" />
           <Property Name="Picture" Type="image" />
           <Property Name="AreaID" Type="nvarchar" MaxLength="50" />
+          <Property Name="VoterID" Type="nvarchar" MaxLength="50" />
+          <Property Name="PrecinctNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Philhealth" Type="nvarchar" MaxLength="50" />
+          <Property Name="SSS" Type="nvarchar" MaxLength="50" />
+          <Property Name="PagIbig" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Municipality">
           <Key>
@@ -152,6 +157,11 @@
           <NavigationProperty Name="Records" Relationship="Self.FK_Records_Citizen" FromRole="Citizen" ToRole="Records" />
           <Property Name="AreaID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Area" Relationship="EBarangayModel.FK_Citizen_Area" FromRole="Citizen" ToRole="Area" />
+          <Property Name="VoterID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PrecinctNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Philhealth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SSS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PagIbig" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Municipality">
           <Key>
@@ -258,6 +268,11 @@
           <EntitySetMapping Name="Citizens">
             <EntityTypeMapping TypeName="EBarangayModel.Citizen">
               <MappingFragment StoreEntitySet="Citizen">
+                <ScalarProperty Name="PagIbig" ColumnName="PagIbig" />
+                <ScalarProperty Name="SSS" ColumnName="SSS" />
+                <ScalarProperty Name="Philhealth" ColumnName="Philhealth" />
+                <ScalarProperty Name="PrecinctNumber" ColumnName="PrecinctNumber" />
+                <ScalarProperty Name="VoterID" ColumnName="VoterID" />
                 <ScalarProperty Name="AreaID" ColumnName="AreaID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />

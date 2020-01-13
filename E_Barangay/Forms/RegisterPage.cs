@@ -15,6 +15,11 @@ namespace E_Barangay.Forms
     {
         List<Record> records = new List<Record>();
         List<Control> requiredControls = new List<Control>();
+        public void SetId(string id)
+        {
+            IDField.Text = id;
+            IDField.ReadOnly = id == string.Empty ? false : true;
+        }
         public RegisterPage()
         {
             InitializeComponent();

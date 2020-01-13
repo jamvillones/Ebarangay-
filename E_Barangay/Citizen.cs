@@ -36,6 +36,11 @@ namespace E_Barangay
         public bool Student { get; set; }
         public byte[] Picture { get; set; }
         public string AreaID { get; set; }
+        public string VoterID { get; set; }
+        public string PrecinctNumber { get; set; }
+        public string Philhealth { get; set; }
+        public string SSS { get; set; }
+        public string PagIbig { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Record> Records { get; set; }

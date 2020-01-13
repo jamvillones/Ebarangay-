@@ -146,7 +146,7 @@ namespace E_Barangay.Forms
 
         private void QueryControl_Load(object sender, EventArgs e)
         {
-
+            IDEmptySearch += OpenReg;
             //SearchFilter.SelectedIndex = 0;
         }
 
@@ -259,10 +259,15 @@ namespace E_Barangay.Forms
         RegisterPage reg;
         private void CreateBtn_Click(object sender, EventArgs e)
         {
+            OpenReg(this,"");
+        }
+        void OpenReg(object o,string id)
+        {
             if (reg == null)
             {
                 reg = new RegisterPage();
                 reg.FormClosed += Reg_FormClosed;
+                reg.SetId(id);
                 reg.LoadValues();
                 reg.Show();
                 return;
