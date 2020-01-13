@@ -54,7 +54,7 @@ namespace E_Barangay.Forms
                 MessageBox.Show("Citizen Instance not assigned");
                 return;
             }
-            IDField.Text = target.ID;
+            IDTxt.Text = target.ID;
             NameTxt.Text = target.Name;
             AddressTxt.Text = target.Address;
             BdayTxt.Text = target.Birthday.ToShortDateString();
@@ -65,10 +65,18 @@ namespace E_Barangay.Forms
 
             MotherTxt.Text = target.MothersName;
             FatherTxt.Text = target.FathersName;
-            if (target.SpouseName == null || target.SpouseName == "")
-                SpouseTxt.Text = "NONE";
-            else
-                SpouseTxt.Text = target.SpouseName;
+
+            SpouseTxt.Text = string.IsNullOrEmpty(target.SpouseName) ? "NONE" : target.SpouseName;
+            VotersID.Text = target.VoterID;
+            PrecinctNumber.Text = target.PrecinctNumber;
+
+            SSS.Text = target.SSS;
+            PagIbig.Text = target.PagIbig;
+            Philhealth.Text = target.Philhealth;
+            //if (string.IsNullOrEmpty(target.SpouseName))
+            //    SpouseTxt.Text = "NONE";
+            //else
+            //    SpouseTxt.Text = target.SpouseName;
 
             Class.Date date = new Class.Date();
             Class.DateTimeExtension.ToAgeString(target.Birthday, ref date);

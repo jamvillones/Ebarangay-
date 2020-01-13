@@ -105,13 +105,21 @@ namespace E_Barangay.Forms
             temp.FathersName = FatherField.Text;
             temp.MothersName = MotherField.Text;
             temp.CivilStatus = CivilStatusOption.Text;
-            temp.SpouseName = SpouseField.Text;
+
+            temp.SpouseName = SpouseField.Text == string.Empty? null: SpouseField.Text;
 
             temp.Indigent = isIndigent.Checked;
             temp.PWD = IsPwd.Checked;
             temp.SeniorCitizen = IsSenior.Checked;
             temp.Student = IsStudent.Checked;
             temp.Picture = imageToByteArray(ImageBox.Image);
+
+            temp.VoterID = VoterIDField.Text == string.Empty ? null : VoterIDField.Text;
+            temp.PrecinctNumber = PrecinctNumField.Text == string.Empty ? null : PrecinctNumField.Text;
+
+            temp.SSS = SSSField.Text == string.Empty ? null : SSSField.Text;
+            temp.PagIbig = PIField.Text == string.Empty ? null : PIField.Text;
+            temp.Philhealth = PHField.Text == string.Empty ? null : PHField.Text;
 
             using (var ent = new EBarangayEntities())
             {
@@ -192,8 +200,14 @@ namespace E_Barangay.Forms
 
             RecordsTable.Rows.Clear();
             ImageBox.Image = null;
-
+            VoterIDField.Clear();
+            PrecinctNumField.Clear();
+            SSSField.Clear();
+            PIField.Clear();
+            PHField.Clear();
+            SSSField.Clear();
             IsPwd.Checked = isIndigent.Checked = IsSenior.Checked = false;
+            
         }
 
         private void CancelBtn_Click(object sender, EventArgs e)
@@ -255,7 +269,7 @@ namespace E_Barangay.Forms
             this.Enabled = false;
             captureForm.OnSave += CaptureForm_OnSave;
             captureForm.FormClosed += CaptureForm_FormClosed;
-           
+
             captureForm.Show();
         }
 
@@ -269,7 +283,7 @@ namespace E_Barangay.Forms
         {
             this.Enabled = true;
             ImageBox.Image = e;
-            
+
         }
 
         //public void AcceptImage(Image image)
@@ -296,7 +310,7 @@ namespace E_Barangay.Forms
             VoterIDField.Enabled = PrecinctNumField.Enabled = VoterCheckbox.Checked ? true : false;
 
         }
-       
+
 
         //private void Dummybtn_Click(object sender, EventArgs e)
         //{

@@ -27,8 +27,8 @@
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Birthday" Type="date" Nullable="false" />
           <Property Name="Gender" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Address" Type="nvarchar" MaxLength="50" />
-          <Property Name="CivilStatus" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CivilStatus" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="SpouseName" Type="nvarchar" MaxLength="50" />
           <Property Name="FathersName" Type="nvarchar" MaxLength="50" />
           <Property Name="MothersName" Type="nvarchar" MaxLength="50" />
@@ -143,8 +143,8 @@
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Birthday" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CivilStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CivilStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="SpouseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="FathersName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MothersName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />

@@ -89,12 +89,12 @@
             this.label19 = new System.Windows.Forms.Label();
             this.IDField = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.PIField = new System.Windows.Forms.TextBox();
+            this.SSSField = new System.Windows.Forms.TextBox();
+            this.PHField = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RecordsTable)).BeginInit();
@@ -826,9 +826,9 @@
             this.groupBox6.Controls.Add(this.label22);
             this.groupBox6.Controls.Add(this.label21);
             this.groupBox6.Controls.Add(this.label20);
-            this.groupBox6.Controls.Add(this.textBox3);
-            this.groupBox6.Controls.Add(this.textBox2);
-            this.groupBox6.Controls.Add(this.textBox1);
+            this.groupBox6.Controls.Add(this.PIField);
+            this.groupBox6.Controls.Add(this.SSSField);
+            this.groupBox6.Controls.Add(this.PHField);
             this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(524, 296);
             this.groupBox6.Name = "groupBox6";
@@ -837,35 +837,14 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "ID\'s";
             // 
-            // textBox1
+            // label22
             // 
-            this.textBox1.Location = new System.Drawing.Point(49, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(251, 20);
-            this.textBox1.TabIndex = 0;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(49, 80);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(251, 20);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(49, 125);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(251, 20);
-            this.textBox3.TabIndex = 2;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(6, 16);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(108, 13);
-            this.label20.TabIndex = 3;
-            this.label20.Text = "Philhealth Number";
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(6, 106);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(94, 13);
+            this.label22.TabIndex = 5;
+            this.label22.Text = "Pag ibig Number";
             // 
             // label21
             // 
@@ -876,14 +855,35 @@
             this.label21.TabIndex = 4;
             this.label21.Text = "SSS Number";
             // 
-            // label22
+            // label20
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 106);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(94, 13);
-            this.label22.TabIndex = 5;
-            this.label22.Text = "Pag ibig Number";
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(6, 16);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(108, 13);
+            this.label20.TabIndex = 3;
+            this.label20.Text = "Philhealth Number";
+            // 
+            // PIField
+            // 
+            this.PIField.Location = new System.Drawing.Point(49, 125);
+            this.PIField.Name = "PIField";
+            this.PIField.Size = new System.Drawing.Size(251, 20);
+            this.PIField.TabIndex = 2;
+            // 
+            // SSSField
+            // 
+            this.SSSField.Location = new System.Drawing.Point(49, 80);
+            this.SSSField.Name = "SSSField";
+            this.SSSField.Size = new System.Drawing.Size(251, 20);
+            this.SSSField.TabIndex = 1;
+            // 
+            // PHField
+            // 
+            this.PHField.Location = new System.Drawing.Point(49, 35);
+            this.PHField.Name = "PHField";
+            this.PHField.Size = new System.Drawing.Size(251, 20);
+            this.PHField.TabIndex = 0;
             // 
             // RegisterPage
             // 
@@ -992,8 +992,8 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox PIField;
+        private System.Windows.Forms.TextBox SSSField;
+        private System.Windows.Forms.TextBox PHField;
     }
 }
