@@ -36,61 +36,61 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Group = new System.Windows.Forms.GroupBox();
-            this.CivilStatusTxt = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.FatherTxt = new System.Windows.Forms.TextBox();
-            this.EditBtn = new System.Windows.Forms.Button();
-            this.SpouseTxt = new System.Windows.Forms.TextBox();
-            this.RecordsTable = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AddressTxt = new System.Windows.Forms.TextBox();
-            this.MotherTxt = new System.Windows.Forms.TextBox();
-            this.AgeTxt = new System.Windows.Forms.TextBox();
-            this.BdayTxt = new System.Windows.Forms.TextBox();
-            this.SexTxt = new System.Windows.Forms.TextBox();
-            this.NameTxt = new System.Windows.Forms.TextBox();
-            this.IsStudent = new System.Windows.Forms.CheckBox();
-            this.IsSenior = new System.Windows.Forms.CheckBox();
-            this.IsPwd = new System.Windows.Forms.CheckBox();
-            this.IsIndigent = new System.Windows.Forms.CheckBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.IDTxt = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.DeleteBtn = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.PagIbig = new System.Windows.Forms.TextBox();
+            this.SSS = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.Philhealth = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.VotersID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.PrecinctNumber = new System.Windows.Forms.TextBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.SSS = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.Philhealth = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.PagIbig = new System.Windows.Forms.TextBox();
-            this.DeleteBtn = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.RecordsTable = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.CivilStatusTxt = new System.Windows.Forms.TextBox();
+            this.MotherTxt = new System.Windows.Forms.TextBox();
+            this.SpouseTxt = new System.Windows.Forms.TextBox();
+            this.FatherTxt = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.ContactTxt = new System.Windows.Forms.TextBox();
+            this.NameTxt = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.SexTxt = new System.Windows.Forms.TextBox();
+            this.BdayTxt = new System.Windows.Forms.TextBox();
+            this.AgeTxt = new System.Windows.Forms.TextBox();
+            this.AddressTxt = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.IsIndigent = new System.Windows.Forms.CheckBox();
+            this.IsPwd = new System.Windows.Forms.CheckBox();
+            this.IsSenior = new System.Windows.Forms.CheckBox();
+            this.IsStudent = new System.Windows.Forms.CheckBox();
+            this.IDTxt = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.EditBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageBox)).BeginInit();
             this.Group.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RecordsTable)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RecordsTable)).BeginInit();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // OkayBtn
@@ -124,7 +124,6 @@
             this.ImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImageBox.TabIndex = 0;
             this.ImageBox.TabStop = false;
-            this.ImageBox.Click += new System.EventHandler(this.ImageBox_Click);
             // 
             // label1
             // 
@@ -189,359 +188,100 @@
             this.Group.TabIndex = 18;
             this.Group.TabStop = false;
             // 
-            // CivilStatusTxt
+            // DeleteBtn
             // 
-            this.CivilStatusTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.DeleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DeleteBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.DeleteBtn.FlatAppearance.BorderSize = 0;
+            this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteBtn.Location = new System.Drawing.Point(6, 468);
+            this.DeleteBtn.Name = "DeleteBtn";
+            this.DeleteBtn.Size = new System.Drawing.Size(74, 23);
+            this.DeleteBtn.TabIndex = 69;
+            this.DeleteBtn.Text = "Delete";
+            this.DeleteBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DeleteBtn.UseVisualStyleBackColor = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel7.Controls.Add(this.label16);
+            this.panel7.Controls.Add(this.PagIbig);
+            this.panel7.Controls.Add(this.SSS);
+            this.panel7.Controls.Add(this.label14);
+            this.panel7.Controls.Add(this.label15);
+            this.panel7.Controls.Add(this.Philhealth);
+            this.panel7.Location = new System.Drawing.Point(122, 381);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(309, 102);
+            this.panel7.TabIndex = 68;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(7, 74);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(52, 15);
+            this.label16.TabIndex = 57;
+            this.label16.Text = "Pag Ibig";
+            // 
+            // PagIbig
+            // 
+            this.PagIbig.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CivilStatusTxt.BackColor = System.Drawing.Color.Silver;
-            this.CivilStatusTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CivilStatusTxt.Location = new System.Drawing.Point(86, 8);
-            this.CivilStatusTxt.Name = "CivilStatusTxt";
-            this.CivilStatusTxt.ReadOnly = true;
-            this.CivilStatusTxt.Size = new System.Drawing.Size(216, 25);
-            this.CivilStatusTxt.TabIndex = 57;
+            this.PagIbig.BackColor = System.Drawing.Color.Silver;
+            this.PagIbig.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PagIbig.Location = new System.Drawing.Point(86, 70);
+            this.PagIbig.Name = "PagIbig";
+            this.PagIbig.ReadOnly = true;
+            this.PagIbig.Size = new System.Drawing.Size(216, 25);
+            this.PagIbig.TabIndex = 58;
             // 
-            // label12
+            // SSS
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(121, 20);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(75, 17);
-            this.label12.TabIndex = 55;
-            this.label12.Text = "Citizen ID";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 6);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 15);
-            this.label9.TabIndex = 52;
-            this.label9.Text = "Records";
-            // 
-            // FatherTxt
-            // 
-            this.FatherTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.SSS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.FatherTxt.BackColor = System.Drawing.Color.Silver;
-            this.FatherTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.FatherTxt.Location = new System.Drawing.Point(65, 70);
-            this.FatherTxt.Name = "FatherTxt";
-            this.FatherTxt.ReadOnly = true;
-            this.FatherTxt.Size = new System.Drawing.Size(237, 25);
-            this.FatherTxt.TabIndex = 51;
+            this.SSS.BackColor = System.Drawing.Color.Silver;
+            this.SSS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SSS.Location = new System.Drawing.Point(86, 8);
+            this.SSS.Name = "SSS";
+            this.SSS.ReadOnly = true;
+            this.SSS.Size = new System.Drawing.Size(216, 25);
+            this.SSS.TabIndex = 53;
             // 
-            // EditBtn
+            // label14
             // 
-            this.EditBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.EditBtn.BackColor = System.Drawing.SystemColors.Control;
-            this.EditBtn.FlatAppearance.BorderSize = 0;
-            this.EditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EditBtn.Location = new System.Drawing.Point(6, 439);
-            this.EditBtn.Name = "EditBtn";
-            this.EditBtn.Size = new System.Drawing.Size(74, 23);
-            this.EditBtn.TabIndex = 27;
-            this.EditBtn.Text = "Edit Info";
-            this.EditBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.EditBtn.UseVisualStyleBackColor = false;
-            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(7, 12);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(31, 15);
+            this.label14.TabIndex = 49;
+            this.label14.Text = "SSS";
             // 
-            // SpouseTxt
+            // label15
             // 
-            this.SpouseTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(7, 43);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(64, 15);
+            this.label15.TabIndex = 51;
+            this.label15.Text = "Philhealth";
+            // 
+            // Philhealth
+            // 
+            this.Philhealth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.SpouseTxt.BackColor = System.Drawing.Color.Silver;
-            this.SpouseTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SpouseTxt.Location = new System.Drawing.Point(65, 102);
-            this.SpouseTxt.Name = "SpouseTxt";
-            this.SpouseTxt.ReadOnly = true;
-            this.SpouseTxt.Size = new System.Drawing.Size(237, 25);
-            this.SpouseTxt.TabIndex = 50;
-            // 
-            // RecordsTable
-            // 
-            this.RecordsTable.AllowUserToAddRows = false;
-            this.RecordsTable.AllowUserToDeleteRows = false;
-            this.RecordsTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RecordsTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.RecordsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RecordsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
-            this.RecordsTable.EnableHeadersVisualStyles = false;
-            this.RecordsTable.Location = new System.Drawing.Point(6, 26);
-            this.RecordsTable.Name = "RecordsTable";
-            this.RecordsTable.ReadOnly = true;
-            this.RecordsTable.RowHeadersVisible = false;
-            this.RecordsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.RecordsTable.Size = new System.Drawing.Size(354, 333);
-            this.RecordsTable.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Date";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Title";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Details";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // AddressTxt
-            // 
-            this.AddressTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddressTxt.BackColor = System.Drawing.Color.Silver;
-            this.AddressTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AddressTxt.Location = new System.Drawing.Point(64, 133);
-            this.AddressTxt.Name = "AddressTxt";
-            this.AddressTxt.ReadOnly = true;
-            this.AddressTxt.Size = new System.Drawing.Size(238, 25);
-            this.AddressTxt.TabIndex = 48;
-            // 
-            // MotherTxt
-            // 
-            this.MotherTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MotherTxt.BackColor = System.Drawing.Color.Silver;
-            this.MotherTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MotherTxt.Location = new System.Drawing.Point(65, 39);
-            this.MotherTxt.Name = "MotherTxt";
-            this.MotherTxt.ReadOnly = true;
-            this.MotherTxt.Size = new System.Drawing.Size(237, 25);
-            this.MotherTxt.TabIndex = 47;
-            // 
-            // AgeTxt
-            // 
-            this.AgeTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.AgeTxt.BackColor = System.Drawing.Color.Silver;
-            this.AgeTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AgeTxt.Location = new System.Drawing.Point(64, 71);
-            this.AgeTxt.Name = "AgeTxt";
-            this.AgeTxt.ReadOnly = true;
-            this.AgeTxt.Size = new System.Drawing.Size(238, 25);
-            this.AgeTxt.TabIndex = 45;
-            // 
-            // BdayTxt
-            // 
-            this.BdayTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BdayTxt.BackColor = System.Drawing.Color.Silver;
-            this.BdayTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.BdayTxt.Location = new System.Drawing.Point(64, 40);
-            this.BdayTxt.Name = "BdayTxt";
-            this.BdayTxt.ReadOnly = true;
-            this.BdayTxt.Size = new System.Drawing.Size(238, 25);
-            this.BdayTxt.TabIndex = 44;
-            // 
-            // SexTxt
-            // 
-            this.SexTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SexTxt.BackColor = System.Drawing.Color.Silver;
-            this.SexTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SexTxt.Location = new System.Drawing.Point(64, 102);
-            this.SexTxt.Name = "SexTxt";
-            this.SexTxt.ReadOnly = true;
-            this.SexTxt.Size = new System.Drawing.Size(238, 25);
-            this.SexTxt.TabIndex = 43;
-            // 
-            // NameTxt
-            // 
-            this.NameTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.NameTxt.BackColor = System.Drawing.Color.Silver;
-            this.NameTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NameTxt.Location = new System.Drawing.Point(64, 9);
-            this.NameTxt.Name = "NameTxt";
-            this.NameTxt.ReadOnly = true;
-            this.NameTxt.Size = new System.Drawing.Size(238, 25);
-            this.NameTxt.TabIndex = 20;
-            // 
-            // IsStudent
-            // 
-            this.IsStudent.AutoCheck = false;
-            this.IsStudent.AutoSize = true;
-            this.IsStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IsStudent.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IsStudent.Location = new System.Drawing.Point(3, 84);
-            this.IsStudent.Name = "IsStudent";
-            this.IsStudent.Size = new System.Drawing.Size(74, 21);
-            this.IsStudent.TabIndex = 31;
-            this.IsStudent.Text = "Student";
-            this.IsStudent.UseVisualStyleBackColor = true;
-            // 
-            // IsSenior
-            // 
-            this.IsSenior.AutoCheck = false;
-            this.IsSenior.AutoSize = true;
-            this.IsSenior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IsSenior.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IsSenior.Location = new System.Drawing.Point(3, 57);
-            this.IsSenior.Name = "IsSenior";
-            this.IsSenior.Size = new System.Drawing.Size(66, 21);
-            this.IsSenior.TabIndex = 30;
-            this.IsSenior.Text = "Senior";
-            this.IsSenior.UseVisualStyleBackColor = true;
-            // 
-            // IsPwd
-            // 
-            this.IsPwd.AutoCheck = false;
-            this.IsPwd.AutoSize = true;
-            this.IsPwd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IsPwd.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IsPwd.Location = new System.Drawing.Point(3, 31);
-            this.IsPwd.Name = "IsPwd";
-            this.IsPwd.Size = new System.Drawing.Size(58, 21);
-            this.IsPwd.TabIndex = 29;
-            this.IsPwd.Text = "PWD";
-            this.IsPwd.UseVisualStyleBackColor = true;
-            // 
-            // IsIndigent
-            // 
-            this.IsIndigent.AutoCheck = false;
-            this.IsIndigent.AutoSize = true;
-            this.IsIndigent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IsIndigent.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IsIndigent.Location = new System.Drawing.Point(3, 3);
-            this.IsIndigent.Name = "IsIndigent";
-            this.IsIndigent.Size = new System.Drawing.Size(79, 21);
-            this.IsIndigent.TabIndex = 28;
-            this.IsIndigent.Text = "Indigent";
-            this.IsIndigent.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(33, 106);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(27, 15);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Sex";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(9, 105);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 15);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Spouse";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(9, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 15);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Civil Status";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(9, 73);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(43, 15);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Father";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(9, 42);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 15);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Mother";
-            // 
-            // IDTxt
-            // 
-            this.IDTxt.AutoSize = true;
-            this.IDTxt.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDTxt.Location = new System.Drawing.Point(215, 21);
-            this.IDTxt.Name = "IDTxt";
-            this.IDTxt.Size = new System.Drawing.Size(0, 17);
-            this.IDTxt.TabIndex = 58;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel2.Controls.Add(this.IsIndigent);
-            this.panel2.Controls.Add(this.IsPwd);
-            this.panel2.Controls.Add(this.IsSenior);
-            this.panel2.Controls.Add(this.IsStudent);
-            this.panel2.Location = new System.Drawing.Point(6, 147);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(110, 201);
-            this.panel2.TabIndex = 63;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel3.Controls.Add(this.label17);
-            this.panel3.Controls.Add(this.ContactTxt);
-            this.panel3.Controls.Add(this.NameTxt);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.SexTxt);
-            this.panel3.Controls.Add(this.BdayTxt);
-            this.panel3.Controls.Add(this.AgeTxt);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.AddressTxt);
-            this.panel3.Location = new System.Drawing.Point(122, 41);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(309, 195);
-            this.panel3.TabIndex = 64;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.CivilStatusTxt);
-            this.panel4.Controls.Add(this.MotherTxt);
-            this.panel4.Controls.Add(this.SpouseTxt);
-            this.panel4.Controls.Add(this.FatherTxt);
-            this.panel4.Location = new System.Drawing.Point(122, 242);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(309, 133);
-            this.panel4.TabIndex = 65;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel5.Controls.Add(this.label9);
-            this.panel5.Controls.Add(this.RecordsTable);
-            this.panel5.Location = new System.Drawing.Point(437, 119);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(363, 364);
-            this.panel5.TabIndex = 66;
+            this.Philhealth.BackColor = System.Drawing.Color.Silver;
+            this.Philhealth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Philhealth.Location = new System.Drawing.Point(86, 39);
+            this.Philhealth.Name = "Philhealth";
+            this.Philhealth.ReadOnly = true;
+            this.Philhealth.Size = new System.Drawing.Size(216, 25);
+            this.Philhealth.TabIndex = 56;
             // 
             // panel6
             // 
@@ -599,100 +339,190 @@
             this.PrecinctNumber.Size = new System.Drawing.Size(244, 25);
             this.PrecinctNumber.TabIndex = 56;
             // 
-            // panel7
+            // panel5
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel7.Controls.Add(this.label16);
-            this.panel7.Controls.Add(this.PagIbig);
-            this.panel7.Controls.Add(this.SSS);
-            this.panel7.Controls.Add(this.label14);
-            this.panel7.Controls.Add(this.label15);
-            this.panel7.Controls.Add(this.Philhealth);
-            this.panel7.Location = new System.Drawing.Point(122, 381);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(309, 102);
-            this.panel7.TabIndex = 68;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel5.Controls.Add(this.label9);
+            this.panel5.Controls.Add(this.RecordsTable);
+            this.panel5.Location = new System.Drawing.Point(437, 119);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(363, 364);
+            this.panel5.TabIndex = 66;
             // 
-            // SSS
+            // label9
             // 
-            this.SSS.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(3, 6);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 15);
+            this.label9.TabIndex = 52;
+            this.label9.Text = "Records";
+            // 
+            // RecordsTable
+            // 
+            this.RecordsTable.AllowUserToAddRows = false;
+            this.RecordsTable.AllowUserToDeleteRows = false;
+            this.RecordsTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.SSS.BackColor = System.Drawing.Color.Silver;
-            this.SSS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SSS.Location = new System.Drawing.Point(86, 8);
-            this.SSS.Name = "SSS";
-            this.SSS.ReadOnly = true;
-            this.SSS.Size = new System.Drawing.Size(216, 25);
-            this.SSS.TabIndex = 53;
+            this.RecordsTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.RecordsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RecordsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.RecordsTable.EnableHeadersVisualStyles = false;
+            this.RecordsTable.Location = new System.Drawing.Point(6, 26);
+            this.RecordsTable.Name = "RecordsTable";
+            this.RecordsTable.ReadOnly = true;
+            this.RecordsTable.RowHeadersVisible = false;
+            this.RecordsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.RecordsTable.Size = new System.Drawing.Size(354, 333);
+            this.RecordsTable.TabIndex = 0;
             // 
-            // label14
+            // Column1
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(7, 12);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(31, 15);
-            this.label14.TabIndex = 49;
-            this.label14.Text = "SSS";
+            this.Column1.HeaderText = "Date";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
-            // label15
+            // Column2
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(7, 43);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(64, 15);
-            this.label15.TabIndex = 51;
-            this.label15.Text = "Philhealth";
+            this.Column2.HeaderText = "Title";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
-            // Philhealth
+            // Column3
             // 
-            this.Philhealth.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "Details";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.CivilStatusTxt);
+            this.panel4.Controls.Add(this.MotherTxt);
+            this.panel4.Controls.Add(this.SpouseTxt);
+            this.panel4.Controls.Add(this.FatherTxt);
+            this.panel4.Location = new System.Drawing.Point(122, 242);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(309, 133);
+            this.panel4.TabIndex = 65;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(9, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 15);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Civil Status";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(9, 42);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(47, 15);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Mother";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(9, 73);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(43, 15);
+            this.label11.TabIndex = 18;
+            this.label11.Text = "Father";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(9, 105);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(46, 15);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Spouse";
+            // 
+            // CivilStatusTxt
+            // 
+            this.CivilStatusTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Philhealth.BackColor = System.Drawing.Color.Silver;
-            this.Philhealth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Philhealth.Location = new System.Drawing.Point(86, 39);
-            this.Philhealth.Name = "Philhealth";
-            this.Philhealth.ReadOnly = true;
-            this.Philhealth.Size = new System.Drawing.Size(216, 25);
-            this.Philhealth.TabIndex = 56;
+            this.CivilStatusTxt.BackColor = System.Drawing.Color.Silver;
+            this.CivilStatusTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CivilStatusTxt.Location = new System.Drawing.Point(86, 8);
+            this.CivilStatusTxt.Name = "CivilStatusTxt";
+            this.CivilStatusTxt.ReadOnly = true;
+            this.CivilStatusTxt.Size = new System.Drawing.Size(216, 25);
+            this.CivilStatusTxt.TabIndex = 57;
             // 
-            // label16
+            // MotherTxt
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(7, 74);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(52, 15);
-            this.label16.TabIndex = 57;
-            this.label16.Text = "Pag Ibig";
-            // 
-            // PagIbig
-            // 
-            this.PagIbig.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.MotherTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PagIbig.BackColor = System.Drawing.Color.Silver;
-            this.PagIbig.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PagIbig.Location = new System.Drawing.Point(86, 70);
-            this.PagIbig.Name = "PagIbig";
-            this.PagIbig.ReadOnly = true;
-            this.PagIbig.Size = new System.Drawing.Size(216, 25);
-            this.PagIbig.TabIndex = 58;
+            this.MotherTxt.BackColor = System.Drawing.Color.Silver;
+            this.MotherTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MotherTxt.Location = new System.Drawing.Point(65, 39);
+            this.MotherTxt.Name = "MotherTxt";
+            this.MotherTxt.ReadOnly = true;
+            this.MotherTxt.Size = new System.Drawing.Size(237, 25);
+            this.MotherTxt.TabIndex = 47;
             // 
-            // DeleteBtn
+            // SpouseTxt
             // 
-            this.DeleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DeleteBtn.BackColor = System.Drawing.SystemColors.Control;
-            this.DeleteBtn.FlatAppearance.BorderSize = 0;
-            this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteBtn.Location = new System.Drawing.Point(6, 468);
-            this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(74, 23);
-            this.DeleteBtn.TabIndex = 69;
-            this.DeleteBtn.Text = "Delete";
-            this.DeleteBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteBtn.UseVisualStyleBackColor = false;
+            this.SpouseTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SpouseTxt.BackColor = System.Drawing.Color.Silver;
+            this.SpouseTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SpouseTxt.Location = new System.Drawing.Point(65, 102);
+            this.SpouseTxt.Name = "SpouseTxt";
+            this.SpouseTxt.ReadOnly = true;
+            this.SpouseTxt.Size = new System.Drawing.Size(237, 25);
+            this.SpouseTxt.TabIndex = 50;
+            // 
+            // FatherTxt
+            // 
+            this.FatherTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FatherTxt.BackColor = System.Drawing.Color.Silver;
+            this.FatherTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FatherTxt.Location = new System.Drawing.Point(65, 70);
+            this.FatherTxt.Name = "FatherTxt";
+            this.FatherTxt.ReadOnly = true;
+            this.FatherTxt.Size = new System.Drawing.Size(237, 25);
+            this.FatherTxt.TabIndex = 51;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Controls.Add(this.label17);
+            this.panel3.Controls.Add(this.ContactTxt);
+            this.panel3.Controls.Add(this.NameTxt);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.SexTxt);
+            this.panel3.Controls.Add(this.BdayTxt);
+            this.panel3.Controls.Add(this.AgeTxt);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.AddressTxt);
+            this.panel3.Location = new System.Drawing.Point(122, 41);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(309, 195);
+            this.panel3.TabIndex = 64;
             // 
             // label17
             // 
@@ -716,6 +546,175 @@
             this.ContactTxt.Size = new System.Drawing.Size(238, 25);
             this.ContactTxt.TabIndex = 50;
             // 
+            // NameTxt
+            // 
+            this.NameTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NameTxt.BackColor = System.Drawing.Color.Silver;
+            this.NameTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NameTxt.Location = new System.Drawing.Point(64, 9);
+            this.NameTxt.Name = "NameTxt";
+            this.NameTxt.ReadOnly = true;
+            this.NameTxt.Size = new System.Drawing.Size(238, 25);
+            this.NameTxt.TabIndex = 20;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(33, 106);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(27, 15);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Sex";
+            // 
+            // SexTxt
+            // 
+            this.SexTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SexTxt.BackColor = System.Drawing.Color.Silver;
+            this.SexTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SexTxt.Location = new System.Drawing.Point(64, 102);
+            this.SexTxt.Name = "SexTxt";
+            this.SexTxt.ReadOnly = true;
+            this.SexTxt.Size = new System.Drawing.Size(238, 25);
+            this.SexTxt.TabIndex = 43;
+            // 
+            // BdayTxt
+            // 
+            this.BdayTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BdayTxt.BackColor = System.Drawing.Color.Silver;
+            this.BdayTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.BdayTxt.Location = new System.Drawing.Point(64, 40);
+            this.BdayTxt.Name = "BdayTxt";
+            this.BdayTxt.ReadOnly = true;
+            this.BdayTxt.Size = new System.Drawing.Size(238, 25);
+            this.BdayTxt.TabIndex = 44;
+            // 
+            // AgeTxt
+            // 
+            this.AgeTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.AgeTxt.BackColor = System.Drawing.Color.Silver;
+            this.AgeTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AgeTxt.Location = new System.Drawing.Point(64, 71);
+            this.AgeTxt.Name = "AgeTxt";
+            this.AgeTxt.ReadOnly = true;
+            this.AgeTxt.Size = new System.Drawing.Size(238, 25);
+            this.AgeTxt.TabIndex = 45;
+            // 
+            // AddressTxt
+            // 
+            this.AddressTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddressTxt.BackColor = System.Drawing.Color.Silver;
+            this.AddressTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AddressTxt.Location = new System.Drawing.Point(64, 133);
+            this.AddressTxt.Name = "AddressTxt";
+            this.AddressTxt.ReadOnly = true;
+            this.AddressTxt.Size = new System.Drawing.Size(238, 25);
+            this.AddressTxt.TabIndex = 48;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.IsIndigent);
+            this.panel2.Controls.Add(this.IsPwd);
+            this.panel2.Controls.Add(this.IsSenior);
+            this.panel2.Controls.Add(this.IsStudent);
+            this.panel2.Location = new System.Drawing.Point(6, 147);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(110, 201);
+            this.panel2.TabIndex = 63;
+            // 
+            // IsIndigent
+            // 
+            this.IsIndigent.AutoCheck = false;
+            this.IsIndigent.AutoSize = true;
+            this.IsIndigent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IsIndigent.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IsIndigent.Location = new System.Drawing.Point(3, 3);
+            this.IsIndigent.Name = "IsIndigent";
+            this.IsIndigent.Size = new System.Drawing.Size(79, 21);
+            this.IsIndigent.TabIndex = 28;
+            this.IsIndigent.Text = "Indigent";
+            this.IsIndigent.UseVisualStyleBackColor = true;
+            // 
+            // IsPwd
+            // 
+            this.IsPwd.AutoCheck = false;
+            this.IsPwd.AutoSize = true;
+            this.IsPwd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IsPwd.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IsPwd.Location = new System.Drawing.Point(3, 31);
+            this.IsPwd.Name = "IsPwd";
+            this.IsPwd.Size = new System.Drawing.Size(58, 21);
+            this.IsPwd.TabIndex = 29;
+            this.IsPwd.Text = "PWD";
+            this.IsPwd.UseVisualStyleBackColor = true;
+            // 
+            // IsSenior
+            // 
+            this.IsSenior.AutoCheck = false;
+            this.IsSenior.AutoSize = true;
+            this.IsSenior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IsSenior.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IsSenior.Location = new System.Drawing.Point(3, 57);
+            this.IsSenior.Name = "IsSenior";
+            this.IsSenior.Size = new System.Drawing.Size(66, 21);
+            this.IsSenior.TabIndex = 30;
+            this.IsSenior.Text = "Senior";
+            this.IsSenior.UseVisualStyleBackColor = true;
+            // 
+            // IsStudent
+            // 
+            this.IsStudent.AutoCheck = false;
+            this.IsStudent.AutoSize = true;
+            this.IsStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IsStudent.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IsStudent.Location = new System.Drawing.Point(3, 84);
+            this.IsStudent.Name = "IsStudent";
+            this.IsStudent.Size = new System.Drawing.Size(74, 21);
+            this.IsStudent.TabIndex = 31;
+            this.IsStudent.Text = "Student";
+            this.IsStudent.UseVisualStyleBackColor = true;
+            // 
+            // IDTxt
+            // 
+            this.IDTxt.AutoSize = true;
+            this.IDTxt.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IDTxt.Location = new System.Drawing.Point(215, 21);
+            this.IDTxt.Name = "IDTxt";
+            this.IDTxt.Size = new System.Drawing.Size(0, 17);
+            this.IDTxt.TabIndex = 58;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(121, 20);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(75, 17);
+            this.label12.TabIndex = 55;
+            this.label12.Text = "Citizen ID";
+            // 
+            // EditBtn
+            // 
+            this.EditBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.EditBtn.BackColor = System.Drawing.SystemColors.Control;
+            this.EditBtn.FlatAppearance.BorderSize = 0;
+            this.EditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditBtn.Location = new System.Drawing.Point(6, 439);
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.Size = new System.Drawing.Size(74, 23);
+            this.EditBtn.TabIndex = 27;
+            this.EditBtn.Text = "Edit Info";
+            this.EditBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.EditBtn.UseVisualStyleBackColor = false;
+            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
+            // 
             // Preview
             // 
             this.AcceptButton = this.OkayBtn;
@@ -737,19 +736,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.ImageBox)).EndInit();
             this.Group.ResumeLayout(false);
             this.Group.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RecordsTable)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RecordsTable)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }

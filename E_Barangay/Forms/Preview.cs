@@ -22,7 +22,9 @@ namespace E_Barangay.Forms
         }
         private void Preview_Load(object sender, EventArgs e)
         {
-
+            User user = Class.UserManager.instance.currentUser;
+            EditBtn.Enabled = user.canEdit ? true : false;
+            DeleteBtn.Enabled = user.canDelete ? true : false;
         }
         public void AcceptDetails(Citizen c)
         {
@@ -133,11 +135,6 @@ namespace E_Barangay.Forms
         }
 
         public void AcceptRecord(Record r)
-        {
-
-        }
-
-        private void ImageBox_Click(object sender, EventArgs e)
         {
 
         }
