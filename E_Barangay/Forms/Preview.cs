@@ -16,6 +16,7 @@ namespace E_Barangay.Forms
     {
 
         Citizen target;
+        public event EventHandler OnRecordDeleted;
         public Preview()
         {
             InitializeComponent();
@@ -137,6 +138,40 @@ namespace E_Barangay.Forms
         public void AcceptRecord(Record r)
         {
 
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+            YesOrNoPrompt yesOrNo = new YesOrNoPrompt("Are you sure you want to delete this item?");
+            yesOrNo.onBtnClick += YesOrNo_onBtnClick;
+           // yesOrNo.FormClosed += YesOrNo_FormClosed;
+            yesOrNo.Show();
+            this.Enabled = false;
+
+        }
+
+        //private void YesOrNo_FormClosed(object sender, FormClosedEventArgs e)
+        //{
+        //    //throw new NotImplementedException();
+        //    this.Enabled = true;
+        //}
+
+        private void YesOrNo_onBtnClick(object sender, bool e)
+        {
+            this.Enabled = true;
+            if (e)
+            {
+                using(var eb = new EBarangayEntities())
+                {
+                    var c = eb.Citizens.Find(IDTxt.Text);
+                    eb.Citizens.Remove(c);
+                    eb.SaveChanges();
+                    MessageBox.Show("successfully deleted record with id(" + IDTxt.Text + ")");
+                    OnRecordDeleted?.Invoke(this,new EventArgs());
+                    this.Close();
+                }
+            }
+            ///throw new NotImplementedException();
         }
 
         //private void SaveBtn_Click(object sender, EventArgs e)

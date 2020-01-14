@@ -215,6 +215,7 @@ namespace E_Barangay.Forms
                 preview = new Preview();
                 preview.AcceptDetails(citizen);
                 preview.FormClosing += Preview_FormClosing;
+                preview.OnRecordDeleted += Preview_OnRecordDeleted;
                 preview.Show();
             }
             else
@@ -222,6 +223,13 @@ namespace E_Barangay.Forms
                 preview.AcceptDetails(citizen);
                 preview.BringToFront();
             }
+        }
+
+        private void Preview_OnRecordDeleted(object sender, EventArgs e)
+        {
+            /// throw new NotImplementedException();
+            //PopulateTable();
+            showData();
         }
 
         private void Preview_FormClosing(object sender, FormClosingEventArgs e)

@@ -202,6 +202,7 @@
             this.DeleteBtn.Text = "Delete";
             this.DeleteBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DeleteBtn.UseVisualStyleBackColor = false;
+            this.DeleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // panel7
             // 

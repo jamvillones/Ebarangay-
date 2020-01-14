@@ -392,6 +392,12 @@
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\YesOrNoPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\YesOrNoPrompt.Designer.cs">
+      <DependentUpon>YesOrNoPrompt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interface\IAccept.cs" />
     <Compile Include="Interface\IImageAcceptor.cs" />
     <Compile Include="Interface\IRecordAcceptor.cs" />
@@ -555,6 +561,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\YesOrNoPrompt.resx">
+      <DependentUpon>YesOrNoPrompt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
