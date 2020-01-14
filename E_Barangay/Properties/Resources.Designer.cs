@@ -83,6 +83,16 @@ namespace E_Barangay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap image_50px {
+            get {
+                object obj = ResourceManager.GetObject("image_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap invisible_10px {
             get {
                 object obj = ResourceManager.GetObject("invisible_10px", resourceCulture);

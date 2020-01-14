@@ -206,7 +206,32 @@ namespace E_Barangay.Forms
 
             }
         }
+        #region Modify
+        EditPage edit;
+        void OpenEditPage(Citizen c)
+        {
+            if (edit == null)
+            {
+                edit = new EditPage();
+                edit.FormClosed += Edit_FormClosed;
+                edit.Show();
+                edit.AssignCitizen(c);
+                edit.Show();
+            }
+            else
+            {
+                edit.AssignCitizen(c);
+                edit.BringToFront();
+            }
+        }
 
+        private void Edit_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            edit = null;
+            ///throw new NotImplementedException();
+        }
+        #endregion
+        #region previewshow
         Preview preview;
         void OpenPreview(Citizen citizen)
         {
@@ -227,8 +252,6 @@ namespace E_Barangay.Forms
 
         private void Preview_OnRecordDeleted(object sender, EventArgs e)
         {
-            /// throw new NotImplementedException();
-            //PopulateTable();
             showData();
         }
 
@@ -237,6 +260,7 @@ namespace E_Barangay.Forms
             preview.FormClosing -= Preview_FormClosing;
             preview = null;
         }
+        #endregion
 
         private void SearchBox_Click(object sender, EventArgs e)
         {
@@ -267,9 +291,9 @@ namespace E_Barangay.Forms
         RegisterPage reg;
         private void CreateBtn_Click(object sender, EventArgs e)
         {
-            OpenReg(this,"");
+            OpenReg(this, "");
         }
-        void OpenReg(object o,string id)
+        void OpenReg(object o, string id)
         {
             if (reg == null)
             {
@@ -287,6 +311,15 @@ namespace E_Barangay.Forms
         {
             //throw new NotImplementedException();
             reg = null;
+        }
+
+        private void ModifyBtn_Click(object sender, EventArgs e)
+        {
+            if(DataTable.Rows.Count == 0)
+            {
+                return;
+            }
+            OpenEditPage(getCitizenByIndex);
         }
     }
 }

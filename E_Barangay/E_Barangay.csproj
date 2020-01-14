@@ -81,6 +81,7 @@
       <DependentUpon>Ebarangaymodel.tt</DependentUpon>
     </Compile>
     <Compile Include="Class\DateTimeExtension.cs" />
+    <Compile Include="Class\ImageConverter.cs" />
     <Compile Include="Forms\EditPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -613,6 +614,7 @@
       <LastGenOutput>Ebarangaymodel.cs</LastGenOutput>
     </Content>
     <Content Include="favicon.ico" />
+    <None Include="Resources\image_50px.png" />
     <None Include="Resources\invisible_10px.png" />
     <None Include="Resources\eye_10px.png" />
     <None Include="Resources\Barangay Clearance.png" />

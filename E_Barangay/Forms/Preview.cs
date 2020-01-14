@@ -41,10 +41,10 @@ namespace E_Barangay.Forms
         EditPage epage;
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            if(epage == null)
+            if (epage == null)
             {
                 epage = new EditPage();
-                epage.AssignCitizen(new Citizen());
+                epage.AssignCitizen(target);
                 epage.Show();
             }
             this.Close();
@@ -94,8 +94,11 @@ namespace E_Barangay.Forms
             using (var con = new EBarangayEntities())
             {
                 var t = con.Citizens.FirstOrDefault(r => r.ID == target.ID);
-                if (t.Picture != null)
-                    ImageBox.Image = byteArrayToImage(t.Picture);
+                ImageBox.Image = t.Picture == null ? Properties.Resources.image_50px : Class.ImageConverter.byteArrayToImage(t.Picture);
+                //if (t.Picture != null)
+                //    ImageBox.Image = Class.ImageConverter.byteArrayToImage(t.Picture);
+                //else
+                //    image
 
                 List<Record> rec = t.Records.ToList<Record>();
                 for (int i = 0; i < rec.Count; i++)
@@ -128,12 +131,7 @@ namespace E_Barangay.Forms
             recform.FormClosed -= Recform_FormClosed;
             recform = null;
         }
-        public Image byteArrayToImage(byte[] byteArrayIn)
-        {
-            MemoryStream ms = new MemoryStream(byteArrayIn);
-            Image returnImage = Image.FromStream(ms);
-            return returnImage;
-        }
+
 
         public void AcceptRecord(Record r)
         {
@@ -144,55 +142,28 @@ namespace E_Barangay.Forms
         {
             YesOrNoPrompt yesOrNo = new YesOrNoPrompt("Are you sure you want to delete this item?");
             yesOrNo.onBtnClick += YesOrNo_onBtnClick;
-           // yesOrNo.FormClosed += YesOrNo_FormClosed;
             yesOrNo.Show();
             this.Enabled = false;
 
         }
-
-        //private void YesOrNo_FormClosed(object sender, FormClosedEventArgs e)
-        //{
-        //    //throw new NotImplementedException();
-        //    this.Enabled = true;
-        //}
 
         private void YesOrNo_onBtnClick(object sender, bool e)
         {
             this.Enabled = true;
             if (e)
             {
-                using(var eb = new EBarangayEntities())
+                using (var eb = new EBarangayEntities())
                 {
                     var c = eb.Citizens.Find(IDTxt.Text);
                     eb.Citizens.Remove(c);
                     eb.SaveChanges();
                     MessageBox.Show("successfully deleted record with id(" + IDTxt.Text + ")");
-                    OnRecordDeleted?.Invoke(this,new EventArgs());
+                    OnRecordDeleted?.Invoke(this, new EventArgs());
                     this.Close();
                 }
             }
             ///throw new NotImplementedException();
         }
 
-        //private void SaveBtn_Click(object sender, EventArgs e)
-        //{
-        //    using (var c = new EBarangayEntities())
-        //    {
-        //        Citizen citizen = c.Citizens.Find(target.ID);
-        //        citizen.Name = NameTxt.Text;
-        //        citizen.ContactInfo = ContactTxt.Text;
-        //        citizen.CivilStatus = CivilStatusTxt.Text;
-        //        citizen.SpouseName = SpouseTxt.Text;
-
-        //        citizen.PWD = IsPwd.Checked;
-        //        citizen.Student = IsStudent.Checked;
-        //        citizen.SeniorCitizen = IsSenior.Checked;
-        //        citizen.Indigent = IsIndigent.Checked;
-
-        //        c.SaveChanges();
-        //    }
-
-        //    OkayBtn.Enabled = true;
-        //}
     }
 }

@@ -106,13 +106,13 @@ namespace E_Barangay.Forms
             temp.MothersName = MotherField.Text;
             temp.CivilStatus = CivilStatusOption.Text;
 
-            temp.SpouseName = SpouseField.Text == string.Empty? null: SpouseField.Text;
+            temp.SpouseName = SpouseField.Text == string.Empty ? null : SpouseField.Text;
 
             temp.Indigent = isIndigent.Checked;
             temp.PWD = IsPwd.Checked;
             temp.SeniorCitizen = IsSenior.Checked;
             temp.Student = IsStudent.Checked;
-            temp.Picture = imageToByteArray(ImageBox.Image);
+            temp.Picture = Class.ImageConverter.imageToByteArray(ImageBox.Image);
 
             temp.VoterID = VoterIDField.Text == string.Empty ? null : VoterIDField.Text;
             temp.PrecinctNumber = PrecinctNumField.Text == string.Empty ? null : PrecinctNumField.Text;
@@ -207,7 +207,7 @@ namespace E_Barangay.Forms
             PHField.Clear();
             SSSField.Clear();
             IsPwd.Checked = isIndigent.Checked = IsSenior.Checked = false;
-            
+
         }
 
         private void CancelBtn_Click(object sender, EventArgs e)
@@ -276,7 +276,6 @@ namespace E_Barangay.Forms
         private void CaptureForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Enabled = true;
-            //throw new NotImplementedException();
         }
 
         private void CaptureForm_OnSave(object sender, Image e)
@@ -286,23 +285,6 @@ namespace E_Barangay.Forms
 
         }
 
-        //public void AcceptImage(Image image)
-        //{
-        //    ImageBox.Image = image;
-        //}
-        //public void SetImage(Image image)
-        //{
-
-        //}
-
-        public byte[] imageToByteArray(System.Drawing.Image imageIn)
-        {
-            if (imageIn == null)
-                return null;
-            MemoryStream ms = new MemoryStream();
-            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
-            return ms.ToArray();
-        }
 
         private void VoterCheckbox_CheckedChanged(object sender, EventArgs e)
         {
@@ -310,14 +292,6 @@ namespace E_Barangay.Forms
             VoterIDField.Enabled = PrecinctNumField.Enabled = VoterCheckbox.Checked ? true : false;
 
         }
-
-
-        //private void Dummybtn_Click(object sender, EventArgs e)
-        //{
-        //    foreach (var c in requiredControls)
-        //        c.Text = "test_dummy";
-
-        //}
 
         private void RegisterControl_KeyDown(object sender, KeyEventArgs e)
         {

@@ -33,6 +33,16 @@ namespace E_Barangay.Forms
         void SetFieldValues()
         {
             if (citizen == null) return;
+            using (var con = new EBarangayEntities())
+            {
+                var t = con.Citizens.FirstOrDefault(r => r.ID == citizen.ID);
+                ImageBox.Image = t.Picture == null ? Properties.Resources.image_50px : Class.ImageConverter.byteArrayToImage(t.Picture);
+
+            }
+            //ImageBox.Image = Class.ImageConverter.byteArrayToImage(citizen.Picture);
+            IDField.Text = citizen.ID;
+            FirstNameField.Text = citizen.Name;
+
         }
         #endregion
 
