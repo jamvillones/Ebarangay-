@@ -214,19 +214,20 @@ namespace E_Barangay.Forms
             {
                 edit = new EditPage();
                 edit.FormClosed += Edit_FormClosed;
-                edit.Show();
+                //edit.Show();
                 edit.AssignCitizen(c);
                 edit.Show();
             }
-            else
-            {
-                edit.AssignCitizen(c);
-                edit.BringToFront();
-            }
+            //else
+            //{
+            //    edit.AssignCitizen(c);
+            //    edit.BringToFront();
+            //}
         }
 
         private void Edit_FormClosed(object sender, FormClosedEventArgs e)
         {
+            Console.WriteLine("H");
             edit = null;
             ///throw new NotImplementedException();
         }
@@ -312,14 +313,16 @@ namespace E_Barangay.Forms
             //throw new NotImplementedException();
             reg = null;
         }
-
+        //PasswordForm passwordForm;
         private void ModifyBtn_Click(object sender, EventArgs e)
         {
-            if(DataTable.Rows.Count == 0)
+            if (DataTable.Rows.Count == 0)
             {
                 return;
             }
+
             OpenEditPage(getCitizenByIndex);
+
         }
     }
 }

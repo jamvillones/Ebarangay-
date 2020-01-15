@@ -39,6 +39,7 @@ namespace E_Barangay.Forms
         }
 
         EditPage epage;
+       // PasswordForm passwordForm;
         private void EditBtn_Click(object sender, EventArgs e)
         {
             if (epage == null)
@@ -48,7 +49,39 @@ namespace E_Barangay.Forms
                 epage.Show();
             }
             this.Close();
+            //if (passwordForm == null)
+            //{
+            //    passwordForm = new PasswordForm(Class.UserManager.instance.currentUser.Username);
+            //    passwordForm.OnCorrectPassword += PasswordForm_OnCorrectPassword;
+            //    passwordForm.FormClosed += PasswordForm_FormClosed;
+            //    this.FormClosing += passwordForm.CallerCloseCallback;
+            //    passwordForm.Show();
+            //}
+            //else
+            //{
+            //    passwordForm.BringToFront();
+            //}
         }
+
+        //private void PasswordForm_FormClosed(object sender, FormClosedEventArgs e)
+        //{
+        //    // throw new NotImplementedException();
+        //    this.FormClosing -= passwordForm.CallerCloseCallback;
+        //    passwordForm = null;
+        //}
+
+        //private void PasswordForm_OnCorrectPassword(object sender, bool e)
+        //{
+        //    if (!e)
+        //        return;
+        //    if (epage == null)
+        //    {
+        //        epage = new EditPage();
+        //        epage.AssignCitizen(target);
+        //        epage.Show();
+        //    }
+        //    this.Close();
+        //}
 
         void AssignValuesToText()
         {
@@ -150,14 +183,25 @@ namespace E_Barangay.Forms
         private void YesOrNo_onBtnClick(object sender, bool e)
         {
             this.Enabled = true;
+            Form f = (Form)sender;
+            
+            //this.Close();
             if (e)
             {
                 using (var eb = new EBarangayEntities())
                 {
                     var c = eb.Citizens.Find(IDTxt.Text);
+
+                    foreach (var rec in c.Records.ToArray())
+                        eb.Records.Remove(rec);
+
                     eb.Citizens.Remove(c);
+
                     eb.SaveChanges();
-                    MessageBox.Show("successfully deleted record with id(" + IDTxt.Text + ")");
+
+                    f.Close();
+
+                    MessageBox.Show("successfully deleted Entry with id(" + IDTxt.Text + ")");
                     OnRecordDeleted?.Invoke(this, new EventArgs());
                     this.Close();
                 }

@@ -27,6 +27,7 @@ namespace E_Barangay.Forms
             citizen = c;
             SetFieldValues();
         }
+        string noneString = "-NONE-";
         /// <summary>
         /// will assign values to controls with respect to current citizen
         /// </summary>
@@ -42,15 +43,60 @@ namespace E_Barangay.Forms
             //ImageBox.Image = Class.ImageConverter.byteArrayToImage(citizen.Picture);
             IDField.Text = citizen.ID;
             FirstNameField.Text = citizen.Name;
+            CurrentAdd.Text = citizen.Address;
+
+            BdayPicker.Value = citizen.Birthday;
+
+            ContactField.Text = citizen.ContactInfo;
+            SexOption.Text = citizen.Gender;
+            CivilStatusOption.Text = citizen.CivilStatus;
+            FatherField.Text = citizen.FathersName;
+            MotherField.Text = citizen.MothersName;
+
+            SpouseField.Text = citizen.SpouseName ?? noneString;
+            VoterIDField.Text = citizen.VoterID ?? noneString;
+            PrecinctNumField.Text = citizen.PrecinctNumber ?? noneString;
+
+            PIField.Text = citizen.PagIbig ?? noneString;
+            PHField.Text = citizen.Philhealth ?? noneString;
+            SSSField.Text = citizen.SSS ?? noneString;
+
+            IsStudent.Checked = citizen.Student;
+            IsPwd.Checked = citizen.PWD;
+            IsSenior.Checked = citizen.SeniorCitizen;
+            isIndigent.Checked = citizen.Indigent;
 
         }
         #endregion
 
+        PasswordForm password;
         public EditPage()
         {
             InitializeComponent();
             SetRequiredControls();
+            //password = new PasswordForm(Class.UserManager.instance.currentUser.Username);
+            //password.OnCorrectPassword += Password_OnCorrectPassword;
+            //password.Show();
         }
+
+        private void Password_OnCorrectPassword(object sender, bool e)
+        {
+            if (e)
+            {
+                this.Show();
+            }
+            else
+            {
+                //this.Show();
+                // MessageBox.Show("Sorry wrong Password");
+                //Close();
+                Console.WriteLine("wrong");
+                this.Close();
+                this.Dispose();
+            }
+            //throw new NotImplementedException();
+        }
+
         //public void AcceptNewUser(object sender, string id)
         //{
         //    IDField.Text = id;
@@ -233,7 +279,7 @@ namespace E_Barangay.Forms
             ProvinceField.Clear();
             ContactField.Clear();
 
-            Birthday.ResetText();
+            BirthdayLabel.ResetText();
 
             RecordsTable.Rows.Clear();
             ImageBox.Image = null;

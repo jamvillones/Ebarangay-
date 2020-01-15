@@ -32,7 +32,7 @@
             this.FirstNameField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Birthday = new System.Windows.Forms.Label();
+            this.BirthdayLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.ContactField = new System.Windows.Forms.TextBox();
             this.NumberField = new System.Windows.Forms.TextBox();
@@ -41,7 +41,7 @@
             this.IsPwd = new System.Windows.Forms.CheckBox();
             this.IsSenior = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.CurrentAdd = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.AreaOption = new System.Windows.Forms.ComboBox();
             this.MunicipalityField = new System.Windows.Forms.TextBox();
@@ -89,9 +89,9 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.PIField = new System.Windows.Forms.TextBox();
+            this.SSSField = new System.Windows.Forms.TextBox();
+            this.PHField = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RecordsTable)).BeginInit();
@@ -137,17 +137,17 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Sex";
             // 
-            // Birthday
+            // BirthdayLabel
             // 
-            this.Birthday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.BirthdayLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.Birthday.AutoSize = true;
-            this.Birthday.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Birthday.Location = new System.Drawing.Point(6, 17);
-            this.Birthday.Name = "Birthday";
-            this.Birthday.Size = new System.Drawing.Size(56, 14);
-            this.Birthday.TabIndex = 6;
-            this.Birthday.Text = "Birth Date";
+            this.BirthdayLabel.AutoSize = true;
+            this.BirthdayLabel.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BirthdayLabel.Location = new System.Drawing.Point(6, 17);
+            this.BirthdayLabel.Name = "BirthdayLabel";
+            this.BirthdayLabel.Size = new System.Drawing.Size(56, 14);
+            this.BirthdayLabel.TabIndex = 6;
+            this.BirthdayLabel.Text = "Birth Date";
             // 
             // label3
             // 
@@ -176,7 +176,7 @@
             this.NumberField.Location = new System.Drawing.Point(91, 40);
             this.NumberField.Name = "NumberField";
             this.NumberField.Size = new System.Drawing.Size(82, 20);
-            this.NumberField.TabIndex = 4;
+            this.NumberField.TabIndex = 3;
             // 
             // SexOption
             // 
@@ -225,7 +225,7 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.CurrentAdd);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.AreaOption);
             this.groupBox1.Controls.Add(this.MunicipalityField);
@@ -245,13 +245,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Address";
             // 
-            // textBox4
+            // CurrentAdd
             // 
-            this.textBox4.Location = new System.Drawing.Point(91, 14);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(351, 20);
-            this.textBox4.TabIndex = 23;
+            this.CurrentAdd.Location = new System.Drawing.Point(91, 14);
+            this.CurrentAdd.Name = "CurrentAdd";
+            this.CurrentAdd.ReadOnly = true;
+            this.CurrentAdd.Size = new System.Drawing.Size(351, 20);
+            this.CurrentAdd.TabIndex = 23;
+            this.CurrentAdd.TabStop = false;
             // 
             // label9
             // 
@@ -271,7 +272,7 @@
             this.AreaOption.Location = new System.Drawing.Point(61, 66);
             this.AreaOption.Name = "AreaOption";
             this.AreaOption.Size = new System.Drawing.Size(98, 21);
-            this.AreaOption.TabIndex = 19;
+            this.AreaOption.TabIndex = 5;
             // 
             // MunicipalityField
             // 
@@ -280,7 +281,7 @@
             this.MunicipalityField.Location = new System.Drawing.Point(251, 66);
             this.MunicipalityField.Name = "MunicipalityField";
             this.MunicipalityField.Size = new System.Drawing.Size(191, 20);
-            this.MunicipalityField.TabIndex = 7;
+            this.MunicipalityField.TabIndex = 6;
             // 
             // label8
             // 
@@ -299,7 +300,7 @@
             this.ProvinceField.Location = new System.Drawing.Point(61, 92);
             this.ProvinceField.Name = "ProvinceField";
             this.ProvinceField.Size = new System.Drawing.Size(381, 20);
-            this.ProvinceField.TabIndex = 8;
+            this.ProvinceField.TabIndex = 7;
             // 
             // label7
             // 
@@ -356,7 +357,7 @@
             this.BarangayField.Location = new System.Drawing.Point(251, 40);
             this.BarangayField.Name = "BarangayField";
             this.BarangayField.Size = new System.Drawing.Size(191, 20);
-            this.BarangayField.TabIndex = 6;
+            this.BarangayField.TabIndex = 4;
             // 
             // groupBox2
             // 
@@ -529,7 +530,7 @@
             this.groupBox4.Controls.Add(this.BdayPicker);
             this.groupBox4.Controls.Add(this.SexOption);
             this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Controls.Add(this.Birthday);
+            this.groupBox4.Controls.Add(this.BirthdayLabel);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.ContactField);
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -784,9 +785,9 @@
             this.groupBox6.Controls.Add(this.label22);
             this.groupBox6.Controls.Add(this.label21);
             this.groupBox6.Controls.Add(this.label20);
-            this.groupBox6.Controls.Add(this.textBox3);
-            this.groupBox6.Controls.Add(this.textBox2);
-            this.groupBox6.Controls.Add(this.textBox1);
+            this.groupBox6.Controls.Add(this.PIField);
+            this.groupBox6.Controls.Add(this.SSSField);
+            this.groupBox6.Controls.Add(this.PHField);
             this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(537, 296);
             this.groupBox6.Name = "groupBox6";
@@ -822,26 +823,26 @@
             this.label20.TabIndex = 3;
             this.label20.Text = "Philhealth Number";
             // 
-            // textBox3
+            // PIField
             // 
-            this.textBox3.Location = new System.Drawing.Point(49, 125);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(247, 20);
-            this.textBox3.TabIndex = 2;
+            this.PIField.Location = new System.Drawing.Point(49, 125);
+            this.PIField.Name = "PIField";
+            this.PIField.Size = new System.Drawing.Size(247, 20);
+            this.PIField.TabIndex = 2;
             // 
-            // textBox2
+            // SSSField
             // 
-            this.textBox2.Location = new System.Drawing.Point(49, 80);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(247, 20);
-            this.textBox2.TabIndex = 1;
+            this.SSSField.Location = new System.Drawing.Point(49, 80);
+            this.SSSField.Name = "SSSField";
+            this.SSSField.Size = new System.Drawing.Size(247, 20);
+            this.SSSField.TabIndex = 1;
             // 
-            // textBox1
+            // PHField
             // 
-            this.textBox1.Location = new System.Drawing.Point(49, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(247, 20);
-            this.textBox1.TabIndex = 0;
+            this.PHField.Location = new System.Drawing.Point(49, 35);
+            this.PHField.Name = "PHField";
+            this.PHField.Size = new System.Drawing.Size(247, 20);
+            this.PHField.TabIndex = 0;
             // 
             // EditPage
             // 
@@ -888,7 +889,7 @@
         private System.Windows.Forms.TextBox FirstNameField;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label Birthday;
+        private System.Windows.Forms.Label BirthdayLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox ContactField;
         private System.Windows.Forms.TextBox NumberField;
@@ -943,10 +944,10 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox PIField;
+        private System.Windows.Forms.TextBox SSSField;
+        private System.Windows.Forms.TextBox PHField;
+        private System.Windows.Forms.TextBox CurrentAdd;
         private System.Windows.Forms.Label label9;
     }
 }
