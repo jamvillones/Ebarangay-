@@ -11,7 +11,7 @@ using System.IO;
 
 namespace E_Barangay.Forms
 {
-    public partial class EditPage : Form, Interface.IRecordAcceptor
+    public partial class EditPage : Form
     {
         List<Record> records = new List<Record>();
         List<Control> requiredControls = new List<Control>();
@@ -39,6 +39,15 @@ namespace E_Barangay.Forms
                 var t = con.Citizens.FirstOrDefault(r => r.ID == citizen.ID);
                 ImageBox.Image = t.Picture == null ? Properties.Resources.image_50px : Class.ImageConverter.byteArrayToImage(t.Picture);
 
+
+                List<Record> rec = t.Records.ToList<Record>();
+                for (int i = 0; i < rec.Count; i++)
+                {
+                    RecordsTable.Rows.Add();
+                    RecordsTable.Rows[i].Cells[0].Value = rec[i].DateIssued;
+                    RecordsTable.Rows[i].Cells[1].Value = rec[i].Name;
+                    RecordsTable.Rows[i].Cells[2].Value = rec[i].Details;
+                }
             }
             //ImageBox.Image = Class.ImageConverter.byteArrayToImage(citizen.Picture);
             IDField.Text = citizen.ID;
@@ -46,6 +55,7 @@ namespace E_Barangay.Forms
             CurrentAdd.Text = citizen.Address;
 
             BdayPicker.Value = citizen.Birthday;
+            //AreaOption.SelectedText = 
 
             ContactField.Text = citizen.ContactInfo;
             SexOption.Text = citizen.Gender;
@@ -69,7 +79,7 @@ namespace E_Barangay.Forms
         }
         #endregion
 
-        PasswordForm password;
+        //PasswordForm password;
         public EditPage()
         {
             InitializeComponent();
@@ -118,10 +128,10 @@ namespace E_Barangay.Forms
             requiredControls.Add(MotherField);
             requiredControls.Add(IDField);
         }
-        public void AcceptRecord(Record c)
-        {
-            records.Add(c);
-        }
+        //public void AcceptRecord(Record c)
+        //{
+        //    records.Add(c);
+        //}
         /// <summary>
         /// initilalizes a dropdown with given values
         /// </summary>
@@ -152,9 +162,15 @@ namespace E_Barangay.Forms
         private void Edit_Load(object sender, EventArgs e)
         {
 
-
+            InitializeDropdowns();
         }
-
+        bool validAddress
+        {
+            get
+            {
+                return AreaOption.Text != string.Empty && BarangayField.Text != string.Empty && MunicipalityField.Text != string.Empty && ProvinceField.Text != string.Empty;
+            }
+        }
         private void SaveCallback(object sender, EventArgs e)
         {
             #region not needed
@@ -218,6 +234,55 @@ namespace E_Barangay.Forms
             // this.ActiveControl = FirstNameField;
             // CleanFields();
             #endregion
+            using (var entity = new EBarangayEntities())
+            {
+                var _citizen_ = entity.Citizens.FirstOrDefault(c => c.ID == citizen.ID);
+                _citizen_.Picture = Class.ImageConverter.imageToByteArray(ImageBox.Image);
+                _citizen_.Name = FirstNameField.Text;
+                _citizen_.Birthday = BdayPicker.Value;
+                _citizen_.ContactInfo = ContactField.Text;
+                _citizen_.Gender = SexOption.Text == string.Empty ? _citizen_.Gender : SexOption.Text;
+                _citizen_.CivilStatus = CivilStatusOption.Text == string.Empty ? _citizen_.CivilStatus : CivilStatusOption.Text;
+
+                _citizen_.SpouseName = SpouseField.Text == noneString ? null : SpouseField.Text;
+                _citizen_.VoterID = VoterIDField.Text == noneString ? null : VoterIDField.Text;
+                _citizen_.PrecinctNumber = PrecinctNumField.Text == noneString ? null : PrecinctNumField.Text;
+                _citizen_.SSS = SSSField.Text == noneString ? null : SSSField.Text;
+                _citizen_.PagIbig = PIField.Text == noneString ? null : PIField.Text;
+                _citizen_.Philhealth = PHField.Text == noneString ? null : PHField.Text;
+
+                string address = AreaOption.Text + ", " + BarangayField.Text + ", " + MunicipalityField.Text + ", " + ProvinceField.Text;
+
+                ///check if the addreass is valid to be changed if not dont save address
+                if (validAddress)
+                {
+                    if (NumberField.Text == string.Empty)
+                    {
+                        _citizen_.Address = address;
+                    }
+                    else
+                    {
+                        _citizen_.Address = NumberField.Text + ", " + address;
+                    }
+                    _citizen_.Area = AreaOption.Items.Contains(AreaOption.Text) ? entity.Areas.FirstOrDefault(r => r.Name == AreaOption.Text) : entity.Areas.First();
+                }
+                ///endif
+
+                _citizen_.FathersName = FatherField.Text;
+                _citizen_.MothersName = MotherField.Text;
+
+                ///checkboxes
+                _citizen_.Student = IsStudent.Checked;
+                _citizen_.PWD = IsPwd.Checked;
+                _citizen_.SeniorCitizen = IsStudent.Checked;
+                _citizen_.Indigent = isIndigent.Checked;
+                ///endif
+
+
+                entity.SaveChanges();
+                MessageBox.Show("Saved Successfully");
+                this.Close();
+            }
 
         }
         /// <summary>
@@ -297,9 +362,11 @@ namespace E_Barangay.Forms
             if (CivilStatusOption.SelectedIndex == 0)
             {
                 SpouseField.Enabled = false;
+                SpouseField.Text = noneString;
                 return;
             }
             SpouseField.Enabled = true;
+            SpouseField.Text = citizen.SpouseName ?? string.Empty;
         }
 
         private void BdayPicker_ValueChanged(object sender, EventArgs e)
@@ -310,24 +377,32 @@ namespace E_Barangay.Forms
         }
 
         #region recordprompt
-        RecordForm record;
+        RecordForm recForm;
         private void button3_Click(object sender, EventArgs e)
         {
-            if (record == null)
+            if (recForm == null)
             {
-                record = new RecordForm();
-                record.FormClosed += Record_FormClosed;
-                record.GetRef(this);
-                record.Show();
+                recForm = new RecordForm();
+                recForm.FormClosed += Record_FormClosed;
+                recForm.OnSave += Record_OnSave;
+                // record.GetRef(this);
+                recForm.Show();
                 return;
             }
-            record.BringToFront();
+            recForm.BringToFront();
+        }
+
+        private void Record_OnSave(object sender, Record e)
+        {
+            records.Add(e);
+            RecordsTable.Rows.Add(e.DateIssued, e.Name, e.Details);
+            ///throw new NotImplementedException();
         }
 
         private void Record_FormClosed(object sender, FormClosedEventArgs e)
         {
-            record = null;
-            ShowRecords();
+            recForm = null;
+            // ShowRecords();
         }
 
         void ShowRecords()

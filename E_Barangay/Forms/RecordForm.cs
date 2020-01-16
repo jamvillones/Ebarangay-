@@ -12,11 +12,13 @@ namespace E_Barangay.Forms
 {
     public partial class RecordForm : Form
     {
-        Interface.IRecordAcceptor Regref;
-        public void GetRef(Interface.IRecordAcceptor r)
-        {
-            Regref = r;
-        }
+       // Interface.IRecordAcceptor Regref;
+
+        public event EventHandler<Record> OnSave;
+        //public void GetRef(Interface.IRecordAcceptor r)
+        //{
+        //    Regref = r;
+        //}
       
         public RecordForm()
         {
@@ -30,7 +32,8 @@ namespace E_Barangay.Forms
             r.Name = TitleField.Text;
             r.Details = DetailsField.Text;
             r.DateIssued = DatePicker.Value;
-            Regref.AcceptRecord(r);
+            // Regref.AcceptRecord(r);
+            OnSave?.Invoke(this, r);
             MessageBox.Show("Successfully Saved");
             ClearValues();
         }

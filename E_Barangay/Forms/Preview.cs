@@ -12,7 +12,7 @@ using System.IO;
 
 namespace E_Barangay.Forms
 {
-    public partial class Preview : Form, Interface.IRecordAcceptor
+    public partial class Preview : Form
     {
 
         Citizen target;
@@ -149,31 +149,31 @@ namespace E_Barangay.Forms
 
         }
 
-        RecordForm recform;
-        private void AddRecordBtn_Click(object sender, EventArgs e)
-        {
-            if (recform == null)
-            {
-                recform = new RecordForm();
-                recform.FormClosed += Recform_FormClosed;
-                recform.GetRef(this);
-                recform.Show();
-                return;
-            }
-            recform.BringToFront();
-        }
+        //RecordForm recform;
+        //private void AddRecordBtn_Click(object sender, EventArgs e)
+        //{
+        //    if (recform == null)
+        //    {
+        //        recform = new RecordForm();
+        //        recform.FormClosed += Recform_FormClosed;
+        //        //recform.GetRef(this);
+        //        recform.Show();
+        //        return;
+        //    }
+        //    recform.BringToFront();
+        //}
 
-        private void Recform_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            recform.FormClosed -= Recform_FormClosed;
-            recform = null;
-        }
+        //private void Recform_FormClosed(object sender, FormClosedEventArgs e)
+        //{
+        //    recform.FormClosed -= Recform_FormClosed;
+        //    recform = null;
+        //}
 
 
-        public void AcceptRecord(Record r)
-        {
+        //public void AcceptRecord(Record r)
+        //{
 
-        }
+        //}
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {

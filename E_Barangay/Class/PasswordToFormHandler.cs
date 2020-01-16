@@ -24,8 +24,15 @@ namespace E_Barangay.Class
             form.FormClosed += Form_FormClosed;
 
             passwordForm = new PasswordForm("Please re enter your password to continue");
+            passwordForm.FormClosing += PasswordForm_FormClosing;
             passwordForm.OnCorrectPassword += PasswordForm_OnCorrectPassword;
             passwordForm.Show();
+        }
+
+        private void PasswordForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //throw new NotImplementedException();
+            OnExit?.Invoke(this, new EventArgs());
         }
 
         private void PasswordForm_OnCorrectPassword(object sender, bool e)

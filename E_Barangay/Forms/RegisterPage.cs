@@ -11,7 +11,7 @@ using System.IO;
 
 namespace E_Barangay.Forms
 {
-    public partial class RegisterPage : Form, Interface.IRecordAcceptor
+    public partial class RegisterPage : Form
     {
         List<Record> records = new List<Record>();
         List<Control> requiredControls = new List<Control>();
@@ -43,10 +43,10 @@ namespace E_Barangay.Forms
             requiredControls.Add(MotherField);
             requiredControls.Add(IDField);
         }
-        public void AcceptRecord(Record c)
-        {
-            records.Add(c);
-        }
+        //public void AcceptRecord(Record c)
+        //{
+        //    records.Add(c);
+        //}
         void InitializeDropdown(string[] values, int startIndex, ref ComboBox comboBox)
         {
             for (int i = startIndex; i < values.Length; i++)
@@ -239,17 +239,25 @@ namespace E_Barangay.Forms
             {
                 record = new RecordForm();
                 record.FormClosed += Record_FormClosed;
-                record.GetRef(this);
+                record.OnSave += Record_OnSave;
+                //record.GetRef(this);
                 record.Show();
                 return;
             }
             record.BringToFront();
         }
 
+        private void Record_OnSave(object sender, Record e)
+        {
+            records.Add(e);
+            RecordsTable.Rows.Add(e.DateIssued, e.Name, e.Details);
+            // throw new NotImplementedException();
+        }
+
         private void Record_FormClosed(object sender, FormClosedEventArgs e)
         {
             record = null;
-            ShowRecords();
+           // ShowRecords();
         }
         void ShowRecords()
         {
@@ -301,6 +309,11 @@ namespace E_Barangay.Forms
                     c.Text = "test_dummy";
                 IDField.Text = Guid.NewGuid().ToString();
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

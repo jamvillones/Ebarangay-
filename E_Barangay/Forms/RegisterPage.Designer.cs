@@ -54,11 +54,8 @@
             this.IsStudent = new System.Windows.Forms.CheckBox();
             this.VoterCheckbox = new System.Windows.Forms.CheckBox();
             this.RecordsTable = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.DeleteRecordBtn = new System.Windows.Forms.Button();
             this.AddRecordBtn = new System.Windows.Forms.Button();
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.CancelBtn = new System.Windows.Forms.Button();
@@ -95,6 +92,9 @@
             this.PIField = new System.Windows.Forms.TextBox();
             this.SSSField = new System.Windows.Forms.TextBox();
             this.PHField = new System.Windows.Forms.TextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RecordsTable)).BeginInit();
@@ -400,32 +400,12 @@
             this.RecordsTable.TabIndex = 21;
             this.RecordsTable.TabStop = false;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Date";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Title";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 200;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Details";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.DeleteRecordBtn);
             this.groupBox3.Controls.Add(this.AddRecordBtn);
             this.groupBox3.Controls.Add(this.RecordsTable);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -436,22 +416,23 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Records";
             // 
-            // button4
+            // DeleteRecordBtn
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button4.BackColor = System.Drawing.Color.Silver;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(73, 174);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 23);
-            this.button4.TabIndex = 23;
-            this.button4.TabStop = false;
-            this.button4.Text = "Delete Record";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
+            this.DeleteRecordBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DeleteRecordBtn.BackColor = System.Drawing.Color.Silver;
+            this.DeleteRecordBtn.FlatAppearance.BorderSize = 0;
+            this.DeleteRecordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteRecordBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteRecordBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DeleteRecordBtn.Location = new System.Drawing.Point(73, 174);
+            this.DeleteRecordBtn.Name = "DeleteRecordBtn";
+            this.DeleteRecordBtn.Size = new System.Drawing.Size(93, 23);
+            this.DeleteRecordBtn.TabIndex = 23;
+            this.DeleteRecordBtn.TabStop = false;
+            this.DeleteRecordBtn.Text = "Delete Record";
+            this.DeleteRecordBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.DeleteRecordBtn.UseVisualStyleBackColor = false;
+            this.DeleteRecordBtn.Click += new System.EventHandler(this.button4_Click);
             // 
             // AddRecordBtn
             // 
@@ -885,6 +866,25 @@
             this.PHField.Size = new System.Drawing.Size(251, 20);
             this.PHField.TabIndex = 0;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Date";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Title";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "Details";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
             // RegisterPage
             // 
             this.AcceptButton = this.RegisterBtn;
@@ -960,7 +960,7 @@
         private System.Windows.Forms.TextBox MiddleNameField;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button DeleteRecordBtn;
         private System.Windows.Forms.Button AddRecordBtn;
         private System.Windows.Forms.CheckBox IsStudent;
         private System.Windows.Forms.Label label12;
@@ -975,9 +975,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox CivilStatusOption;
         private System.Windows.Forms.PictureBox ImageBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Button AddImage;
         private System.Windows.Forms.TextBox PrecinctNumField;
         private System.Windows.Forms.TextBox VoterIDField;
@@ -995,5 +992,8 @@
         private System.Windows.Forms.TextBox PIField;
         private System.Windows.Forms.TextBox SSSField;
         private System.Windows.Forms.TextBox PHField;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

@@ -176,7 +176,7 @@
             this.NumberField.Location = new System.Drawing.Point(91, 40);
             this.NumberField.Name = "NumberField";
             this.NumberField.Size = new System.Drawing.Size(82, 20);
-            this.NumberField.TabIndex = 3;
+            this.NumberField.TabIndex = 1;
             // 
             // SexOption
             // 
@@ -272,7 +272,7 @@
             this.AreaOption.Location = new System.Drawing.Point(61, 66);
             this.AreaOption.Name = "AreaOption";
             this.AreaOption.Size = new System.Drawing.Size(98, 21);
-            this.AreaOption.TabIndex = 5;
+            this.AreaOption.TabIndex = 2;
             // 
             // MunicipalityField
             // 
@@ -281,7 +281,7 @@
             this.MunicipalityField.Location = new System.Drawing.Point(251, 66);
             this.MunicipalityField.Name = "MunicipalityField";
             this.MunicipalityField.Size = new System.Drawing.Size(191, 20);
-            this.MunicipalityField.TabIndex = 6;
+            this.MunicipalityField.TabIndex = 4;
             // 
             // label8
             // 
@@ -300,7 +300,7 @@
             this.ProvinceField.Location = new System.Drawing.Point(61, 92);
             this.ProvinceField.Name = "ProvinceField";
             this.ProvinceField.Size = new System.Drawing.Size(381, 20);
-            this.ProvinceField.TabIndex = 7;
+            this.ProvinceField.TabIndex = 5;
             // 
             // label7
             // 
@@ -357,7 +357,7 @@
             this.BarangayField.Location = new System.Drawing.Point(251, 40);
             this.BarangayField.Name = "BarangayField";
             this.BarangayField.Size = new System.Drawing.Size(191, 20);
-            this.BarangayField.TabIndex = 4;
+            this.BarangayField.TabIndex = 3;
             // 
             // groupBox2
             // 
@@ -778,6 +778,7 @@
             this.IDField.ReadOnly = true;
             this.IDField.Size = new System.Drawing.Size(215, 20);
             this.IDField.TabIndex = 1;
+            this.IDField.TabStop = false;
             // 
             // groupBox6
             // 
