@@ -82,6 +82,7 @@
     </Compile>
     <Compile Include="Class\DateTimeExtension.cs" />
     <Compile Include="Class\ImageConverter.cs" />
+    <Compile Include="Class\PasswordToFormHandler.cs" />
     <Compile Include="Forms\EditPage.cs">
       <SubType>Form</SubType>
     </Compile>

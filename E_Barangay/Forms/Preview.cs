@@ -38,16 +38,20 @@ namespace E_Barangay.Forms
             this.Close();
         }
 
-        EditPage epage;
-       // PasswordForm passwordForm;
+        /// EditPage epage;
+        // PasswordForm passwordForm;
+        Class.PasswordToFormHandler<EditPage> passwordToFormHandler;
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            if (epage == null)
-            {
-                epage = new EditPage();
-                epage.AssignCitizen(target);
-                epage.Show();
-            }
+            //if (epage == null)
+            //{
+            //    epage = new EditPage();
+            //    epage.AssignCitizen(target);
+            //    epage.Show();
+            //}
+            passwordToFormHandler = new Class.PasswordToFormHandler<EditPage>();
+            EditPage ep = passwordToFormHandler.form;
+            ep.AssignCitizen(target);
             this.Close();
             //if (passwordForm == null)
             //{
@@ -184,7 +188,7 @@ namespace E_Barangay.Forms
         {
             this.Enabled = true;
             Form f = (Form)sender;
-            
+
             //this.Close();
             if (e)
             {

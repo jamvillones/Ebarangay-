@@ -147,7 +147,6 @@ namespace E_Barangay.Forms
         private void QueryControl_Load(object sender, EventArgs e)
         {
             IDEmptySearch += OpenReg;
-            //SearchFilter.SelectedIndex = 0;
         }
 
         private void SearchBox_KeyDown(object sender, KeyEventArgs e)
@@ -206,32 +205,31 @@ namespace E_Barangay.Forms
 
             }
         }
+
         #region Modify
-        EditPage edit;
+        PasswordToFormHandler<EditPage> edithandler;
         void OpenEditPage(Citizen c)
         {
-            if (edit == null)
+            if (edithandler == null)
             {
-                edit = new EditPage();
-                edit.FormClosed += Edit_FormClosed;
-                //edit.Show();
-                edit.AssignCitizen(c);
-                edit.Show();
+                edithandler = new PasswordToFormHandler<EditPage>();
+                edithandler.OnExit += Edithandler_OnExit;
+                /// disable modify button
+                ModifyBtn.Enabled = false;
+                /// set details to be edited
+                EditPage editPage = edithandler.form;
+                editPage.AssignCitizen(c);
             }
-            //else
-            //{
-            //    edit.AssignCitizen(c);
-            //    edit.BringToFront();
-            //}
+
         }
 
-        private void Edit_FormClosed(object sender, FormClosedEventArgs e)
+        private void Edithandler_OnExit(object sender, EventArgs e)
         {
-            Console.WriteLine("H");
-            edit = null;
-            ///throw new NotImplementedException();
+            edithandler = null;
+            ModifyBtn.Enabled = true;
         }
         #endregion
+
         #region previewshow
         Preview preview;
         void OpenPreview(Citizen citizen)
