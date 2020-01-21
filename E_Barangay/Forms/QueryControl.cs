@@ -32,7 +32,7 @@ namespace E_Barangay.Forms
         public Button getAcceptButton()
         {
 
-            return SearchBtn;
+            return null;
         }
 
         System.Linq.IQueryable<Citizen> SearchedElements;

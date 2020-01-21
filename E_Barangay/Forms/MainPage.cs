@@ -153,6 +153,7 @@ namespace E_Barangay.Forms
             this.Enabled = true;
             //throw new NotImplementedException();
         }
+
         CreateLogin cl;
         private void button2_Click(object sender, EventArgs e)
         {
@@ -174,5 +175,16 @@ namespace E_Barangay.Forms
             this.Enabled = true;
             // throw new NotImplementedException();
         }
+
+        BarangayBussClearance bussincessClearance;
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            bussincessClearance = new BarangayBussClearance();
+            bussincessClearance.FormClosing += (s, en) => { this.Enabled = true; };
+            bussincessClearance.Show();
+            this.Enabled = false;
+        }
+
+      
     }
 }

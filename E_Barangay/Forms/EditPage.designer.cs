@@ -28,7 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.GroupBox groupBox2;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditPage));
+            this.IsStudent = new System.Windows.Forms.CheckBox();
+            this.isIndigent = new System.Windows.Forms.CheckBox();
+            this.IsPwd = new System.Windows.Forms.CheckBox();
+            this.IsSenior = new System.Windows.Forms.CheckBox();
             this.FirstNameField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -37,9 +43,6 @@
             this.ContactField = new System.Windows.Forms.TextBox();
             this.NumberField = new System.Windows.Forms.TextBox();
             this.SexOption = new System.Windows.Forms.ComboBox();
-            this.isIndigent = new System.Windows.Forms.CheckBox();
-            this.IsPwd = new System.Windows.Forms.CheckBox();
-            this.IsSenior = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CurrentAdd = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -52,8 +55,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.BarangayField = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.IsStudent = new System.Windows.Forms.CheckBox();
             this.VoterCheckbox = new System.Windows.Forms.CheckBox();
             this.RecordsTable = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,8 +93,9 @@
             this.PIField = new System.Windows.Forms.TextBox();
             this.SSSField = new System.Windows.Forms.TextBox();
             this.PHField = new System.Windows.Forms.TextBox();
+            groupBox2 = new System.Windows.Forms.GroupBox();
+            groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RecordsTable)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -102,6 +104,61 @@
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // groupBox2
+            // 
+            groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            groupBox2.Controls.Add(this.IsStudent);
+            groupBox2.Controls.Add(this.isIndigent);
+            groupBox2.Controls.Add(this.IsPwd);
+            groupBox2.Controls.Add(this.IsSenior);
+            groupBox2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            groupBox2.Location = new System.Drawing.Point(398, 296);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new System.Drawing.Size(133, 155);
+            groupBox2.TabIndex = 4;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Status";
+            // 
+            // IsStudent
+            // 
+            this.IsStudent.AutoSize = true;
+            this.IsStudent.Location = new System.Drawing.Point(6, 88);
+            this.IsStudent.Name = "IsStudent";
+            this.IsStudent.Size = new System.Drawing.Size(60, 18);
+            this.IsStudent.TabIndex = 12;
+            this.IsStudent.Text = "Student";
+            this.IsStudent.UseVisualStyleBackColor = true;
+            // 
+            // isIndigent
+            // 
+            this.isIndigent.AutoSize = true;
+            this.isIndigent.Location = new System.Drawing.Point(6, 19);
+            this.isIndigent.Name = "isIndigent";
+            this.isIndigent.Size = new System.Drawing.Size(64, 18);
+            this.isIndigent.TabIndex = 9;
+            this.isIndigent.Text = "Indigent";
+            this.isIndigent.UseVisualStyleBackColor = true;
+            // 
+            // IsPwd
+            // 
+            this.IsPwd.AutoSize = true;
+            this.IsPwd.Location = new System.Drawing.Point(6, 42);
+            this.IsPwd.Name = "IsPwd";
+            this.IsPwd.Size = new System.Drawing.Size(52, 18);
+            this.IsPwd.TabIndex = 10;
+            this.IsPwd.Text = "PWD";
+            this.IsPwd.UseVisualStyleBackColor = true;
+            // 
+            // IsSenior
+            // 
+            this.IsSenior.AutoSize = true;
+            this.IsSenior.Location = new System.Drawing.Point(6, 65);
+            this.IsSenior.Name = "IsSenior";
+            this.IsSenior.Size = new System.Drawing.Size(91, 18);
+            this.IsSenior.TabIndex = 11;
+            this.IsSenior.Text = "Senior Citizen";
+            this.IsSenior.UseVisualStyleBackColor = true;
             // 
             // FirstNameField
             // 
@@ -188,38 +245,8 @@
             "Female"});
             this.SexOption.Location = new System.Drawing.Point(68, 67);
             this.SexOption.Name = "SexOption";
-            this.SexOption.Size = new System.Drawing.Size(93, 21);
+            this.SexOption.Size = new System.Drawing.Size(93, 22);
             this.SexOption.TabIndex = 17;
-            // 
-            // isIndigent
-            // 
-            this.isIndigent.AutoSize = true;
-            this.isIndigent.Location = new System.Drawing.Point(6, 19);
-            this.isIndigent.Name = "isIndigent";
-            this.isIndigent.Size = new System.Drawing.Size(70, 17);
-            this.isIndigent.TabIndex = 9;
-            this.isIndigent.Text = "Indigent";
-            this.isIndigent.UseVisualStyleBackColor = true;
-            // 
-            // IsPwd
-            // 
-            this.IsPwd.AutoSize = true;
-            this.IsPwd.Location = new System.Drawing.Point(6, 42);
-            this.IsPwd.Name = "IsPwd";
-            this.IsPwd.Size = new System.Drawing.Size(53, 17);
-            this.IsPwd.TabIndex = 10;
-            this.IsPwd.Text = "PWD";
-            this.IsPwd.UseVisualStyleBackColor = true;
-            // 
-            // IsSenior
-            // 
-            this.IsSenior.AutoSize = true;
-            this.IsSenior.Location = new System.Drawing.Point(6, 65);
-            this.IsSenior.Name = "IsSenior";
-            this.IsSenior.Size = new System.Drawing.Size(104, 17);
-            this.IsSenior.TabIndex = 11;
-            this.IsSenior.Text = "Senior Citizen";
-            this.IsSenior.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -237,7 +264,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.BarangayField);
             this.groupBox1.Controls.Add(this.NumberField);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(391, 20);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(448, 126);
@@ -271,7 +298,7 @@
             this.AreaOption.FormattingEnabled = true;
             this.AreaOption.Location = new System.Drawing.Point(61, 66);
             this.AreaOption.Name = "AreaOption";
-            this.AreaOption.Size = new System.Drawing.Size(98, 21);
+            this.AreaOption.Size = new System.Drawing.Size(98, 22);
             this.AreaOption.TabIndex = 2;
             // 
             // MunicipalityField
@@ -359,37 +386,12 @@
             this.BarangayField.Size = new System.Drawing.Size(191, 20);
             this.BarangayField.TabIndex = 3;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.IsStudent);
-            this.groupBox2.Controls.Add(this.isIndigent);
-            this.groupBox2.Controls.Add(this.IsPwd);
-            this.groupBox2.Controls.Add(this.IsSenior);
-            this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(398, 296);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(133, 155);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Status";
-            // 
-            // IsStudent
-            // 
-            this.IsStudent.AutoSize = true;
-            this.IsStudent.Location = new System.Drawing.Point(6, 88);
-            this.IsStudent.Name = "IsStudent";
-            this.IsStudent.Size = new System.Drawing.Size(67, 17);
-            this.IsStudent.TabIndex = 12;
-            this.IsStudent.Text = "Student";
-            this.IsStudent.UseVisualStyleBackColor = true;
-            // 
             // VoterCheckbox
             // 
             this.VoterCheckbox.AutoSize = true;
             this.VoterCheckbox.Location = new System.Drawing.Point(9, 94);
             this.VoterCheckbox.Name = "VoterCheckbox";
-            this.VoterCheckbox.Size = new System.Drawing.Size(54, 17);
+            this.VoterCheckbox.Size = new System.Drawing.Size(51, 18);
             this.VoterCheckbox.TabIndex = 20;
             this.VoterCheckbox.Text = "Voter";
             this.VoterCheckbox.UseVisualStyleBackColor = true;
@@ -399,6 +401,8 @@
             // 
             this.RecordsTable.AllowUserToAddRows = false;
             this.RecordsTable.AllowUserToDeleteRows = false;
+            this.RecordsTable.AllowUserToResizeColumns = false;
+            this.RecordsTable.AllowUserToResizeRows = false;
             this.RecordsTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -408,7 +412,15 @@
             this.Column1,
             this.Column3,
             this.Column2});
-            this.RecordsTable.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.RecordsTable.DefaultCellStyle = dataGridViewCellStyle2;
+            this.RecordsTable.GridColor = System.Drawing.Color.Silver;
             this.RecordsTable.Location = new System.Drawing.Point(3, 24);
             this.RecordsTable.MultiSelect = false;
             this.RecordsTable.Name = "RecordsTable";
@@ -431,7 +443,6 @@
             this.Column3.HeaderText = "Title";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 200;
             // 
             // Column2
             // 
@@ -448,7 +459,7 @@
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.AddRecordBtn);
             this.groupBox3.Controls.Add(this.RecordsTable);
-            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(9, 296);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(383, 203);
@@ -459,7 +470,6 @@
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button4.BackColor = System.Drawing.Color.Silver;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -476,7 +486,6 @@
             // AddRecordBtn
             // 
             this.AddRecordBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.AddRecordBtn.BackColor = System.Drawing.Color.Silver;
             this.AddRecordBtn.FlatAppearance.BorderSize = 0;
             this.AddRecordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddRecordBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -495,13 +504,12 @@
             // 
             this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.SaveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.SaveBtn.FlatAppearance.BorderSize = 2;
             this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveBtn.Image = ((System.Drawing.Image)(resources.GetObject("SaveBtn.Image")));
-            this.SaveBtn.Location = new System.Drawing.Point(728, 459);
+            this.SaveBtn.Location = new System.Drawing.Point(728, 460);
             this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(111, 42);
+            this.SaveBtn.Size = new System.Drawing.Size(111, 40);
             this.SaveBtn.TabIndex = 6;
             this.SaveBtn.Text = "Save";
             this.SaveBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -533,7 +541,7 @@
             this.groupBox4.Controls.Add(this.BirthdayLabel);
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.ContactField);
-            this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(9, 152);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(830, 138);
@@ -589,7 +597,7 @@
             "Married"});
             this.CivilStatusOption.Location = new System.Drawing.Point(232, 66);
             this.CivilStatusOption.Name = "CivilStatusOption";
-            this.CivilStatusOption.Size = new System.Drawing.Size(67, 21);
+            this.CivilStatusOption.Size = new System.Drawing.Size(67, 22);
             this.CivilStatusOption.TabIndex = 18;
             this.CivilStatusOption.SelectedIndexChanged += new System.EventHandler(this.CivilStatusOption_SelectedIndexChanged);
             // 
@@ -748,7 +756,7 @@
             this.groupBox5.Controls.Add(this.IDField);
             this.groupBox5.Controls.Add(this.label1);
             this.groupBox5.Controls.Add(this.FirstNameField);
-            this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(118, 20);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(267, 126);
@@ -789,7 +797,7 @@
             this.groupBox6.Controls.Add(this.PIField);
             this.groupBox6.Controls.Add(this.SSSField);
             this.groupBox6.Controls.Add(this.PHField);
-            this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(537, 296);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(302, 155);
@@ -802,7 +810,7 @@
             this.label22.AutoSize = true;
             this.label22.Location = new System.Drawing.Point(6, 106);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(94, 13);
+            this.label22.Size = new System.Drawing.Size(82, 14);
             this.label22.TabIndex = 5;
             this.label22.Text = "Pag ibig Number";
             // 
@@ -811,7 +819,7 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(6, 61);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(73, 13);
+            this.label21.Size = new System.Drawing.Size(61, 14);
             this.label21.TabIndex = 4;
             this.label21.Text = "SSS Number";
             // 
@@ -820,7 +828,7 @@
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(6, 16);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(108, 13);
+            this.label20.Size = new System.Drawing.Size(94, 14);
             this.label20.TabIndex = 3;
             this.label20.Text = "Philhealth Number";
             // 
@@ -850,7 +858,7 @@
             this.AcceptButton = this.SaveBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ClientSize = new System.Drawing.Size(849, 511);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
@@ -859,7 +867,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.SaveBtn);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -868,10 +876,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Record";
             this.Load += new System.EventHandler(this.Edit_Load);
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RecordsTable)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
@@ -904,7 +912,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox BarangayField;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView RecordsTable;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button SaveBtn;
@@ -928,9 +935,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox CivilStatusOption;
         private System.Windows.Forms.PictureBox ImageBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Button AddImage;
         private System.Windows.Forms.TextBox PrecinctNumField;
         private System.Windows.Forms.TextBox VoterIDField;
@@ -950,5 +954,8 @@
         private System.Windows.Forms.TextBox PHField;
         private System.Windows.Forms.TextBox CurrentAdd;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

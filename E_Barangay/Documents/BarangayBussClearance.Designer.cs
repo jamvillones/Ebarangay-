@@ -1,6 +1,6 @@
 ﻿namespace E_Barangay.Forms
 {
-    partial class BarangaCertificationforBusiness
+    partial class BarangayBussClearance
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BarangaCertificationforBusiness));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ORIssueDate = new System.Windows.Forms.DateTimePicker();
             this.OrValidityDate = new System.Windows.Forms.DateTimePicker();
@@ -42,14 +41,7 @@
             this.Age = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.UpdateBtn = new System.Windows.Forms.Button();
-            this.PrintBtn = new System.Windows.Forms.Button();
-            this.PrintPreviewBtn = new System.Windows.Forms.Button();
-            this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.lastName = new System.Windows.Forms.TextBox();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.middleName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -68,9 +60,8 @@
             this.CStatusOption = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Address = new System.Windows.Forms.TextBox();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printing = new E_Barangay.Forms.Printing();
             this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.IdGroup.SuspendLayout();
@@ -199,72 +190,6 @@
             this.label9.Text = "Middle Initial:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Teal;
-            this.panel2.Controls.Add(this.UpdateBtn);
-            this.panel2.Controls.Add(this.PrintBtn);
-            this.panel2.Controls.Add(this.PrintPreviewBtn);
-            this.panel2.Controls.Add(this.printPreviewControl1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(200, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(423, 881);
-            this.panel2.TabIndex = 3;
-            // 
-            // UpdateBtn
-            // 
-            this.UpdateBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.UpdateBtn.FlatAppearance.BorderSize = 0;
-            this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UpdateBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateBtn.Image = ((System.Drawing.Image)(resources.GetObject("UpdateBtn.Image")));
-            this.UpdateBtn.Location = new System.Drawing.Point(3, 8);
-            this.UpdateBtn.Name = "UpdateBtn";
-            this.UpdateBtn.Size = new System.Drawing.Size(35, 30);
-            this.UpdateBtn.TabIndex = 5;
-            this.UpdateBtn.TabStop = false;
-            this.UpdateBtn.UseVisualStyleBackColor = false;
-            // 
-            // PrintBtn
-            // 
-            this.PrintBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PrintBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.PrintBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrintBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrintBtn.Image = ((System.Drawing.Image)(resources.GetObject("PrintBtn.Image")));
-            this.PrintBtn.Location = new System.Drawing.Point(385, 8);
-            this.PrintBtn.Name = "PrintBtn";
-            this.PrintBtn.Size = new System.Drawing.Size(35, 30);
-            this.PrintBtn.TabIndex = 4;
-            this.PrintBtn.TabStop = false;
-            this.PrintBtn.UseVisualStyleBackColor = false;
-            // 
-            // PrintPreviewBtn
-            // 
-            this.PrintPreviewBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.PrintPreviewBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrintPreviewBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrintPreviewBtn.Image = ((System.Drawing.Image)(resources.GetObject("PrintPreviewBtn.Image")));
-            this.PrintPreviewBtn.Location = new System.Drawing.Point(44, 8);
-            this.PrintPreviewBtn.Name = "PrintPreviewBtn";
-            this.PrintPreviewBtn.Size = new System.Drawing.Size(35, 30);
-            this.PrintPreviewBtn.TabIndex = 1;
-            this.PrintPreviewBtn.TabStop = false;
-            this.PrintPreviewBtn.UseVisualStyleBackColor = false;
-            // 
-            // printPreviewControl1
-            // 
-            this.printPreviewControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.printPreviewControl1.AutoZoom = false;
-            this.printPreviewControl1.Location = new System.Drawing.Point(3, 44);
-            this.printPreviewControl1.Name = "printPreviewControl1";
-            this.printPreviewControl1.Size = new System.Drawing.Size(417, 834);
-            this.printPreviewControl1.TabIndex = 0;
-            this.printPreviewControl1.Zoom = 0.5D;
-            // 
             // lastName
             // 
             this.lastName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -272,10 +197,6 @@
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(87, 20);
             this.lastName.TabIndex = 3;
-            // 
-            // printDialog1
-            // 
-            this.printDialog1.UseEXDialog = true;
             // 
             // middleName
             // 
@@ -297,7 +218,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 881);
+            this.panel1.Size = new System.Drawing.Size(200, 690);
             this.panel1.TabIndex = 2;
             // 
             // groupBox2
@@ -461,28 +382,33 @@
             this.Address.Size = new System.Drawing.Size(98, 20);
             this.Address.TabIndex = 6;
             // 
-            // printPreviewDialog1
+            // printing
             // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
+            this.printing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.printing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.printing.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.printing.Location = new System.Drawing.Point(200, 0);
+            this.printing.Name = "printing";
+            this.printing.Size = new System.Drawing.Size(568, 690);
+            this.printing.TabIndex = 3;
             // 
-            // BarangaCertificationforBusiness
+            // BarangayBussClearance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 881);
-            this.Controls.Add(this.panel2);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(768, 690);
+            this.Controls.Add(this.printing);
             this.Controls.Add(this.panel1);
-            this.Name = "BarangaCertificationforBusiness";
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "BarangayBussClearance";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Certificate for Business";
+            this.Load += new System.EventHandler(this.BarangaCertificationforBusiness_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -509,14 +435,7 @@
         private System.Windows.Forms.TextBox Age;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button UpdateBtn;
-        private System.Windows.Forms.Button PrintBtn;
-        private System.Windows.Forms.Button PrintPreviewBtn;
-        private System.Windows.Forms.PrintPreviewControl printPreviewControl1;
-        private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.TextBox lastName;
-        private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.TextBox middleName;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -535,6 +454,6 @@
         private System.Windows.Forms.ComboBox CStatusOption;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Address;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private Printing printing;
     }
 }

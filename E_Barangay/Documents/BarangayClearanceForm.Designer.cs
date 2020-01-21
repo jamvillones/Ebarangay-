@@ -40,6 +40,8 @@
             this.AssignBtn = new System.Windows.Forms.Button();
             this.IDField = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.SexOption = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.Age = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -60,15 +62,13 @@
             this.OrNo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.UpdateBtn = new System.Windows.Forms.Button();
-            this.PrintBtn = new System.Windows.Forms.Button();
-            this.PrintPreviewBtn = new System.Windows.Forms.Button();
             this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.label6 = new System.Windows.Forms.Label();
-            this.SexOption = new System.Windows.Forms.ComboBox();
+            this.UpdateBtn = new System.Windows.Forms.Button();
+            this.PrintBtn = new System.Windows.Forms.Button();
+            this.PrintPreviewBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.IdGroup.SuspendLayout();
@@ -201,6 +201,27 @@
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DETAILS";
+            // 
+            // SexOption
+            // 
+            this.SexOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SexOption.FormattingEnabled = true;
+            this.SexOption.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.SexOption.Location = new System.Drawing.Point(72, 147);
+            this.SexOption.Name = "SexOption";
+            this.SexOption.Size = new System.Drawing.Size(98, 21);
+            this.SexOption.TabIndex = 7;
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(6, 147);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 20);
+            this.label6.TabIndex = 28;
+            this.label6.Text = "Sex";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label11
             // 
@@ -396,6 +417,36 @@
             this.panel2.Size = new System.Drawing.Size(519, 655);
             this.panel2.TabIndex = 1;
             // 
+            // printPreviewControl1
+            // 
+            this.printPreviewControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.printPreviewControl1.AutoZoom = false;
+            this.printPreviewControl1.Location = new System.Drawing.Point(3, 44);
+            this.printPreviewControl1.Name = "printPreviewControl1";
+            this.printPreviewControl1.Size = new System.Drawing.Size(513, 608);
+            this.printPreviewControl1.TabIndex = 0;
+            this.printPreviewControl1.Zoom = 0.5D;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
+            // 
             // UpdateBtn
             // 
             this.UpdateBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -440,57 +491,6 @@
             this.PrintPreviewBtn.UseVisualStyleBackColor = false;
             this.PrintPreviewBtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // printPreviewControl1
-            // 
-            this.printPreviewControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.printPreviewControl1.AutoZoom = false;
-            this.printPreviewControl1.Location = new System.Drawing.Point(3, 44);
-            this.printPreviewControl1.Name = "printPreviewControl1";
-            this.printPreviewControl1.Size = new System.Drawing.Size(513, 608);
-            this.printPreviewControl1.TabIndex = 0;
-            this.printPreviewControl1.Zoom = 0.5D;
-            // 
-            // printDocument1
-            // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
-            // 
-            // printDialog1
-            // 
-            this.printDialog1.UseEXDialog = true;
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(6, 147);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 20);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "Sex";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // SexOption
-            // 
-            this.SexOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SexOption.FormattingEnabled = true;
-            this.SexOption.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.SexOption.Location = new System.Drawing.Point(72, 147);
-            this.SexOption.Name = "SexOption";
-            this.SexOption.Size = new System.Drawing.Size(98, 21);
-            this.SexOption.TabIndex = 7;
-            // 
             // BarangayClearanceForm
             // 
             this.AcceptButton = this.UpdateBtn;
@@ -529,7 +529,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PrintPreviewControl printPreviewControl1;
         private System.Drawing.Printing.PrintDocument printDocument1;
-        private System.Windows.Forms.Button PrintPreviewBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.DateTimePicker IssuedOn;
@@ -555,9 +554,7 @@
         private System.Windows.Forms.TextBox Purpose;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker ORIssueDate;
-        private System.Windows.Forms.Button PrintBtn;
         private System.Windows.Forms.PrintDialog printDialog1;
-        private System.Windows.Forms.Button UpdateBtn;
         private System.Windows.Forms.GroupBox IdGroup;
         private System.Windows.Forms.Button AssignBtn;
         private System.Windows.Forms.TextBox IDField;
@@ -565,5 +562,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox SexOption;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button UpdateBtn;
+        private System.Windows.Forms.Button PrintBtn;
+        private System.Windows.Forms.Button PrintPreviewBtn;
     }
 }

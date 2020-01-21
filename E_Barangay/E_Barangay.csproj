@@ -91,11 +91,11 @@
     </Compile>
     <Compile Include="Class\Statistics.cs" />
     <Compile Include="Class\UserManager.cs" />
-    <Compile Include="Documents\BarangaCertificationforBusiness.cs">
+    <Compile Include="Documents\BarangayBussClearance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Documents\BarangaCertificationforBusiness.Designer.cs">
-      <DependentUpon>BarangaCertificationforBusiness.cs</DependentUpon>
+    <Compile Include="Documents\BarangayBussClearance.Designer.cs">
+      <DependentUpon>BarangayBussClearance.cs</DependentUpon>
     </Compile>
     <Compile Include="Documents\BarangayCerificateIndigencyAkbayan.cs">
       <SubType>Form</SubType>
@@ -376,6 +376,12 @@
     <Compile Include="Forms\Preview.Designer.cs">
       <DependentUpon>Preview.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Printing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Printing.Designer.cs">
+      <DependentUpon>Printing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\QueryControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -426,8 +432,8 @@
     <EmbeddedResource Include="Forms\EditPage.resx">
       <DependentUpon>EditPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Documents\BarangaCertificationforBusiness.resx">
-      <DependentUpon>BarangaCertificationforBusiness.cs</DependentUpon>
+    <EmbeddedResource Include="Documents\BarangayBussClearance.resx">
+      <DependentUpon>BarangayBussClearance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BarangayCerificateIndigencyAkbayan.resx">
       <DependentUpon>BarangayCerificateIndigencyAkbayan.cs</DependentUpon>
@@ -561,6 +567,9 @@
     <EmbeddedResource Include="Forms\Preview.resx">
       <DependentUpon>Preview.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Printing.resx">
+      <DependentUpon>Printing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\QueryControl.resx">
       <DependentUpon>QueryControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -624,9 +633,10 @@
       <LastGenOutput>Ebarangaymodel.cs</LastGenOutput>
     </Content>
     <Content Include="favicon.ico" />
+    <None Include="Resources\BussinessClearance.png" />
+    <None Include="Resources\invisible_20px.png" />
+    <None Include="Resources\eye_20px.png" />
     <None Include="Resources\image_50px.png" />
-    <None Include="Resources\invisible_10px.png" />
-    <None Include="Resources\eye_10px.png" />
     <None Include="Resources\Barangay Clearance.png" />
   </ItemGroup>
   <ItemGroup />

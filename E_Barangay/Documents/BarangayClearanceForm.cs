@@ -21,13 +21,13 @@ namespace E_Barangay.Forms
 
         string Indention = "        ";
         string LineSpace = "\n\n\n";
-        string GenderToProperPronoun(string s)
+        string MrOrMrs(string sex)
         {
-            if (s == "")
+            if (sex == "")
             {
                 return "(BLANK)";
             }
-            return s == "Male" ? "Mr." : "Ms.";
+            return sex == "Male" ? "Mr." : "Ms.";
         }
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
@@ -38,7 +38,7 @@ namespace E_Barangay.Forms
 
             RectangleF rect = new RectangleF(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3, 548, 300);
             string text = Indention + "This is to certify that as per record of this Barangay " + TextBoxFormat(firstName) + " " + TextBoxFormat(middleName) + ". " + TextBoxFormat(lastName) + ", " + TextBoxFormat(Age) + " years old, " + TextBoxFormat(CStatusOption) + ", Filipino and a resident of " + TextBoxFormat(Address) + ", whose signature appears below has no criminal, civil or administrative charges before this office and has good moral standing in the community." + LineSpace
-                          + Indention + "This certification is issued upon the request of " + GenderToProperPronoun(SexOption.Text) + " " + TextBoxFormat(lastName) + " for the purpose of " + (SexOption.Text == "" ? "(BLANK)" : (SexOption.Text == "Male" ? "his" : "her")) + " " + TextBoxFormat(Purpose) + "." + LineSpace
+                          + Indention + "This certification is issued upon the request of " + MrOrMrs(SexOption.Text) + " " + TextBoxFormat(lastName) + " for the purpose of " + (SexOption.Text == "" ? "(BLANK)" : (SexOption.Text == "Male" ? "his" : "her")) + " " + TextBoxFormat(Purpose) + "." + LineSpace
                           + "WITNESS MY HAND SEAL, this " + IssuedOn.Value.Day + "th  day of " + IssuedOn.Value.ToString("MMMM") + ", " + IssuedOn.Value.Year + " at Barangay Poblacion, Kalibo, Aklan, Philippines.";
 
             e.Graphics.DrawString(text, font, Brushes.Black, rect);
@@ -51,6 +51,7 @@ namespace E_Barangay.Forms
 
             e.Graphics.DrawString(orTxt, font, Brushes.Black, rectangleTest);
         }
+
         string TextBoxFormat(Control c)
         {
             if (c.Text == "")

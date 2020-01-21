@@ -13,7 +13,9 @@ namespace E_Barangay.Forms
 {
     public partial class EditPage : Form
     {
-        List<Record> records = new List<Record>();
+        // List<Record> records = new List<Record>();
+        //ICollection<Record> records;
+        List<Record> tobeAdded = new List<Record>();
         List<Control> requiredControls = new List<Control>();
 
         #region citizen assignment
@@ -38,7 +40,6 @@ namespace E_Barangay.Forms
             {
                 var t = con.Citizens.FirstOrDefault(r => r.ID == citizen.ID);
                 ImageBox.Image = t.Picture == null ? Properties.Resources.image_50px : Class.ImageConverter.byteArrayToImage(t.Picture);
-
 
                 List<Record> rec = t.Records.ToList<Record>();
                 for (int i = 0; i < rec.Count; i++)
@@ -171,6 +172,10 @@ namespace E_Barangay.Forms
                 return AreaOption.Text != string.Empty && BarangayField.Text != string.Empty && MunicipalityField.Text != string.Empty && ProvinceField.Text != string.Empty;
             }
         }
+        bool fieldisempty(Control control)
+        {
+            return control.Text == noneString || control.Text == string.Empty;
+        }
         private void SaveCallback(object sender, EventArgs e)
         {
             #region not needed
@@ -244,12 +249,15 @@ namespace E_Barangay.Forms
                 _citizen_.Gender = SexOption.Text == string.Empty ? _citizen_.Gender : SexOption.Text;
                 _citizen_.CivilStatus = CivilStatusOption.Text == string.Empty ? _citizen_.CivilStatus : CivilStatusOption.Text;
 
-                _citizen_.SpouseName = SpouseField.Text == noneString ? null : SpouseField.Text;
-                _citizen_.VoterID = VoterIDField.Text == noneString ? null : VoterIDField.Text;
-                _citizen_.PrecinctNumber = PrecinctNumField.Text == noneString ? null : PrecinctNumField.Text;
-                _citizen_.SSS = SSSField.Text == noneString ? null : SSSField.Text;
-                _citizen_.PagIbig = PIField.Text == noneString ? null : PIField.Text;
-                _citizen_.Philhealth = PHField.Text == noneString ? null : PHField.Text;
+                _citizen_.SpouseName = fieldisempty(SpouseField) ? null : SpouseField.Text;
+                _citizen_.VoterID = fieldisempty(VoterIDField) ? null : VoterIDField.Text;
+                _citizen_.PrecinctNumber = fieldisempty(PrecinctNumField) ? null : PrecinctNumField.Text;
+                _citizen_.SSS = fieldisempty(SSSField) ? null : SSSField.Text;
+                _citizen_.PagIbig = fieldisempty(PIField) ? null : PIField.Text;
+                _citizen_.Philhealth = fieldisempty(PHField) ? null : PHField.Text;
+
+                foreach (var r in tobeAdded)
+                    _citizen_.Records.Add(r);
 
                 string address = AreaOption.Text + ", " + BarangayField.Text + ", " + MunicipalityField.Text + ", " + ProvinceField.Text;
 
@@ -274,9 +282,10 @@ namespace E_Barangay.Forms
                 ///checkboxes
                 _citizen_.Student = IsStudent.Checked;
                 _citizen_.PWD = IsPwd.Checked;
-                _citizen_.SeniorCitizen = IsStudent.Checked;
+                _citizen_.SeniorCitizen = IsSenior.Checked;
                 _citizen_.Indigent = isIndigent.Checked;
                 ///endif
+
 
 
                 entity.SaveChanges();
@@ -394,7 +403,10 @@ namespace E_Barangay.Forms
 
         private void Record_OnSave(object sender, Record e)
         {
-            records.Add(e);
+            // records.Add(e);
+            e.CitizenID = citizen.ID;
+            // records.Add(e);
+            tobeAdded.Add(e);
             RecordsTable.Rows.Add(e.DateIssued, e.Name, e.Details);
             ///throw new NotImplementedException();
         }
@@ -405,17 +417,20 @@ namespace E_Barangay.Forms
             // ShowRecords();
         }
 
-        void ShowRecords()
-        {
-            RecordsTable.Rows.Clear();
-            for (int i = 0; i < records.Count; i++)
-            {
-                RecordsTable.Rows.Add();
-                RecordsTable.Rows[i].Cells[0].Value = records[i].DateIssued;
-                RecordsTable.Rows[i].Cells[1].Value = records[i].Name;
-                RecordsTable.Rows[i].Cells[2].Value = records[i].Details;
-            }
-        }
+        //void ShowRecords()
+        //{
+        //    RecordsTable.Rows.Clear();
+        //    Record[] rec = records.ToArray();
+        //    for (int i = 0; i < records.Count; i++)
+        //    {
+        //        RecordsTable.Rows.Add();
+        //        RecordsTable.Rows[i].Cells[0].Value = rec[i].DateIssued;
+        //        RecordsTable.Rows[i].Cells[1].Value = rec[i].Name;
+        //        RecordsTable.Rows[i].Cells[2].Value = rec[i].Details;
+        //    }
+
+
+        //}
         #endregion
 
         #region captureprompt

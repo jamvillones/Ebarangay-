@@ -86,7 +86,7 @@ namespace E_Barangay.Forms
         //    }
         //    this.Close();
         //}
-
+        string emptyField = "--";
         void AssignValuesToText()
         {
             if (target == null)
@@ -106,13 +106,13 @@ namespace E_Barangay.Forms
             MotherTxt.Text = target.MothersName;
             FatherTxt.Text = target.FathersName;
 
-            SpouseTxt.Text = string.IsNullOrEmpty(target.SpouseName) ? "NONE" : target.SpouseName;
-            VotersID.Text = target.VoterID;
-            PrecinctNumber.Text = target.PrecinctNumber;
+            SpouseTxt.Text = target.SpouseName ?? emptyField;
+            VotersID.Text = target.VoterID ?? emptyField;
+            PrecinctNumber.Text = target.PrecinctNumber ?? emptyField;
 
-            SSS.Text = target.SSS;
-            PagIbig.Text = target.PagIbig;
-            Philhealth.Text = target.Philhealth;
+            SSS.Text = target.SSS ?? emptyField;
+            PagIbig.Text = target.PagIbig ?? emptyField;
+            Philhealth.Text = target.Philhealth ?? emptyField;
             //if (string.IsNullOrEmpty(target.SpouseName))
             //    SpouseTxt.Text = "NONE";
             //else
@@ -212,6 +212,5 @@ namespace E_Barangay.Forms
             }
             ///throw new NotImplementedException();
         }
-
     }
 }

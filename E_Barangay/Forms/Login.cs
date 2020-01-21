@@ -98,7 +98,7 @@ namespace E_Barangay.Forms
         {
             hidden = !hidden;
             PasswordTxt.PasswordChar = hidden ? '*' : '\0';
-            RevealBtn.Image = hidden ? Properties.Resources.eye_10px : Properties.Resources.invisible_10px;
+            RevealBtn.Image = hidden ? Properties.Resources.eye_20px : Properties.Resources.invisible_20px;
         }
     }
 }

@@ -35,6 +35,8 @@
             // 
             // MessageLabel
             // 
+            this.MessageLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.MessageLabel.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MessageLabel.Location = new System.Drawing.Point(12, 13);
             this.MessageLabel.Name = "MessageLabel";
             this.MessageLabel.Size = new System.Drawing.Size(254, 23);
@@ -44,18 +46,22 @@
             // 
             // PasswordTxt
             // 
+            this.PasswordTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PasswordTxt.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTxt.Location = new System.Drawing.Point(12, 39);
             this.PasswordTxt.Name = "PasswordTxt";
             this.PasswordTxt.PasswordChar = '*';
-            this.PasswordTxt.Size = new System.Drawing.Size(254, 20);
+            this.PasswordTxt.Size = new System.Drawing.Size(254, 25);
             this.PasswordTxt.TabIndex = 1;
             // 
             // SubmitButton
             // 
+            this.SubmitButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.SubmitButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.SubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubmitButton.Font = new System.Drawing.Font("Bebas Neue Regular", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SubmitButton.Location = new System.Drawing.Point(85, 66);
+            this.SubmitButton.Location = new System.Drawing.Point(85, 78);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(108, 23);
             this.SubmitButton.TabIndex = 2;
@@ -68,7 +74,7 @@
             this.AcceptButton = this.SubmitButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 98);
+            this.ClientSize = new System.Drawing.Size(279, 113);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.PasswordTxt);
             this.Controls.Add(this.MessageLabel);
