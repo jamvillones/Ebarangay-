@@ -14,7 +14,10 @@ namespace E_Barangay.Forms
     public partial class Printing : UserControl
     {
         private PrintDocument document { get { return printDocument; } }
-
+        public Button getUpdateBtn
+        {
+            get { return UpdateBtn; }
+        }
         public event PrintPageEventHandler PrintPage
         {
             add { document.PrintPage += value; }
@@ -34,6 +37,9 @@ namespace E_Barangay.Forms
 
         }
 
+        public static Pen pen = new Pen(Color.Black);
+        public static Font font = new Font("Arial Narrow", 12, FontStyle.Regular);
+        public static Font fontBold = new Font("Arial Narrow", 12, FontStyle.Bold);
         public static string Indention = "        ";
         public static string LineSpace = "\n\n\n";
         public static string MrOrMrs(string sex)
@@ -47,6 +53,13 @@ namespace E_Barangay.Forms
         public static string HisOrHer(string sex)
         {
             return sex == string.Empty ? "BLANK" : (sex == "Male" ? "his" : "her");
+        }
+
+        public static string IfControlEmpty(Control c)
+        {
+            if (c.Text == "")
+                return "(BLANK)";
+            return c.Text;
         }
 
         #region Edit

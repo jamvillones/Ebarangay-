@@ -412,6 +412,7 @@
     <Compile Include="Forms\YesOrNoPrompt.Designer.cs">
       <DependentUpon>YesOrNoPrompt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interface\ICitizenAcceptor.cs" />
     <Compile Include="Interface\IAccept.cs" />
     <Compile Include="Interface\IImageAcceptor.cs" />
     <Compile Include="Interface\IRecordAcceptor.cs" />

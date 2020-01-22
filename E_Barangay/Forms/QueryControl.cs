@@ -27,7 +27,7 @@ namespace E_Barangay.Forms
             User u = UserManager.instance.currentUser;
             CreateBtn.Enabled = u.canRegister ? true : false;
             ModifyBtn.Enabled = u.canEdit ? true : false;
-            DeleteBtn.Enabled = u.canDelete ? true : false;
+            //DeleteBtn.Enabled = u.canDelete ? true : false;
         }
         public Button getAcceptButton()
         {
