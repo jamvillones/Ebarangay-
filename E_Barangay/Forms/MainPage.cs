@@ -74,6 +74,7 @@ namespace E_Barangay.Forms
 
         private void MainPage_Load(object sender, EventArgs e)
         {
+            mainPage = this;
             User curr = UserManager.instance.currentUser;
             UserWelcomeTxt.Text = "Welcome: " + curr.Username;
             //if(curr.canAddUser)
@@ -138,20 +139,21 @@ namespace E_Barangay.Forms
         {
 
         }
-        BarangayClearanceForm printing;
+        public static MainPage mainPage{ get; private set; }
+
         private void button1_Click_1(object sender, EventArgs e)
         {
-            printing = new BarangayClearanceForm();
-            printing.FormClosing += Printing_FormClosing;
-            printing.Show();
-            this.Enabled = false;
-            //printing.BringToFront();
-        }
+            SwitchAccept(printingFiles);
 
-        private void Printing_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            this.Enabled = true;
-            //throw new NotImplementedException();
+            SwitchPage(printingFiles);
+            printingFiles.BringToFront();
+            SetSelectionPanel(IssueBtn);
+
+            //printing = new BarangayClearanceForm();
+            //printing.FormClosing += Printing_FormClosing;
+            //printing.Show();
+            //this.Enabled = false;
+            //printing.BringToFront();
         }
 
         CreateLogin cl;

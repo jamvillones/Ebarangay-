@@ -382,6 +382,12 @@
     <Compile Include="Forms\Printing.Designer.cs">
       <DependentUpon>Printing.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PrintingDocument.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\PrintingDocument.Designer.cs">
+      <DependentUpon>PrintingDocument.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\QueryControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -570,6 +576,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Printing.resx">
       <DependentUpon>Printing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrintingDocument.resx">
+      <DependentUpon>PrintingDocument.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\QueryControl.resx">
       <DependentUpon>QueryControl.cs</DependentUpon>
