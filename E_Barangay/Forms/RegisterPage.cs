@@ -76,7 +76,7 @@ namespace E_Barangay.Forms
             if (!CanSave())
             {
                 ReddenRequiredFields();
-                MessageBox.Show("Cannot Save. Fill out required fields or the id is already taken!");
+                //MessageBox.Show("Cannot Save. Fill out required fields or the id is already taken!");
                 return;
             }
 
@@ -150,11 +150,20 @@ namespace E_Barangay.Forms
             using (var c = new EBarangayEntities())
             {
                 if (c.Citizens.Find(IDField.Text) != null)
+                {
+                    MessageBox.Show("ID is already taken");
                     return false;
+                }
             }
             foreach (var c in requiredControls)
             {
-                if (c.Text == "") return false;
+
+                if (c.Text == "")
+                {
+                    MessageBox.Show("Please fill out required fields");
+                    return false;
+                }
+
             }
             return true;
         }
@@ -257,7 +266,7 @@ namespace E_Barangay.Forms
         private void Record_FormClosed(object sender, FormClosedEventArgs e)
         {
             record = null;
-           // ShowRecords();
+            // ShowRecords();
         }
         void ShowRecords()
         {
