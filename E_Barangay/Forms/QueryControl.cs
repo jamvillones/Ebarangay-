@@ -8,10 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using E_Barangay.Class;
+using System.Threading;
 
 namespace E_Barangay.Forms
 {
-    public partial class QueryControl : UserControl, E_Barangay.Interface.IAccept
+    public partial class QueryControl : UserControl
     {
         public event EventHandler<string> IDEmptySearch;
         public QueryControl()
@@ -29,11 +30,7 @@ namespace E_Barangay.Forms
             ModifyBtn.Enabled = u.canEdit ? true : false;
             //DeleteBtn.Enabled = u.canDelete ? true : false;
         }
-        public Button getAcceptButton()
-        {
-
-            return null;
-        }
+       
 
         System.Linq.IQueryable<Citizen> SearchedElements;
         public void PerformQuery()
@@ -137,9 +134,17 @@ namespace E_Barangay.Forms
 
         public void showData()
         {
+            ///DataGrid();
+            //Thread thread = new Thread(SetDataGrid);
+
+            //thread.Start();
             using (var e = new EBarangayEntities())
                 PopulateTable(e.Citizens.ToArray());
-
+        }
+        void SetDataGrid()
+        {
+            using (var e = new EBarangayEntities())
+                PopulateTable(e.Citizens.ToArray());
         }
 
         private void SearchBtn_Click(object sender, EventArgs e) => PerformQuery();

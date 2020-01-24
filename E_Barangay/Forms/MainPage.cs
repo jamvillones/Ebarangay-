@@ -14,11 +14,47 @@ namespace E_Barangay.Forms
     public partial class MainPage : Form
     {
         UserControl Current;
-        Interface.IAccept currentAccept;
+       //nterface.IAccept currentAccept;
         public MainPage()
         {
             InitializeComponent();
         }
+
+        private void QueryBtn_Click(object sender, EventArgs e)
+        {
+            //currentAccept = QueryPage;
+            SetSelectionPanel(QueryBtn);
+           //witchAccept(QueryPage);
+            SwitchPage(QueryPage);
+            QueryPage.BringToFront();
+            //is.ActiveControl = QueryPage.getDesiredControl;
+        }
+        private void DashBtn_Click(object sender, EventArgs e)
+        {
+            if (Current == DashControl)
+                return;
+
+            //itchAccept(DashControl);
+            SwitchPage(DashControl);
+            SetSelectionPanel(DashBtn);
+            DashControl.BringToFront();
+            DashControl.ShowStats();
+        }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            SwitchAccept(printingFiles);
+
+            SwitchPage(printingFiles);
+            printingFiles.BringToFront();
+            SetSelectionPanel(IssueBtn);
+
+            //printing = new BarangayClearanceForm();
+            //printing.FormClosing += Printing_FormClosing;
+            //printing.Show();
+            //this.Enabled = false;
+            //printing.BringToFront();
+        }
+
         /// <summary>
         /// sets selection bar position according to button feed
         /// </summary>
@@ -40,34 +76,15 @@ namespace E_Barangay.Forms
             Current.Visible = true;
 
         }
+
         void SwitchAccept(Interface.IAccept accept)
         {
-            currentAccept = accept;
-            this.AcceptButton = currentAccept.getAcceptButton();
-        }
-        private void DashBtn_Click(object sender, EventArgs e)
-        {
-            if (Current == DashControl)
-                return;
-
-            SwitchAccept(DashControl);
-            SwitchPage(DashControl);
-            SetSelectionPanel(DashBtn);
-            DashControl.BringToFront();
-            DashControl.ShowStats();
+            //currentAccept = accept;
+            //this.AcceptButton = currentAccept.getAcceptButton();
         }
 
 
-        private void QueryBtn_Click(object sender, EventArgs e)
-        {
-            //currentAccept = QueryPage;
-            SwitchAccept(QueryPage);
 
-            SwitchPage(QueryPage);
-            QueryPage.BringToFront();
-            SetSelectionPanel(QueryBtn);
-            this.ActiveControl = QueryPage.getDesiredControl;
-        }
 
 
 
@@ -81,7 +98,7 @@ namespace E_Barangay.Forms
             AddNewLoginBtn.Enabled = curr.canAddUser ? true : false;
             // Class.UserManager.instance = new Class.UserManager();
             Current = DashControl;
-            currentAccept = DashControl;
+            ///rentAccept = DashControl;
             try
             {
                 DashControl.ShowStats();
@@ -139,22 +156,9 @@ namespace E_Barangay.Forms
         {
 
         }
-        public static MainPage mainPage{ get; private set; }
+        public static MainPage mainPage { get; private set; }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            SwitchAccept(printingFiles);
 
-            SwitchPage(printingFiles);
-            printingFiles.BringToFront();
-            SetSelectionPanel(IssueBtn);
-
-            //printing = new BarangayClearanceForm();
-            //printing.FormClosing += Printing_FormClosing;
-            //printing.Show();
-            //this.Enabled = false;
-            //printing.BringToFront();
-        }
 
         CreateLogin cl;
         private void button2_Click(object sender, EventArgs e)
@@ -187,6 +191,6 @@ namespace E_Barangay.Forms
             this.Enabled = false;
         }
 
-      
+
     }
 }

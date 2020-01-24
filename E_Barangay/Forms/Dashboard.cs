@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace E_Barangay.Forms
 {
-    public partial class Dashboard : UserControl,Interface.IAccept
+    public partial class Dashboard : UserControl
     {
         E_Barangay.Class.Statistics s;
         public Dashboard()
@@ -40,11 +40,6 @@ namespace E_Barangay.Forms
                 IndigentTxt.Text = s.indigent.ToString() + "(" + s.getPercentage(s.indigent).ToString() + "%)";
                 SeniorTxt.Text = s.senior.ToString() + "(" + s.getPercentage(s.senior).ToString() + "%)";
             }
-        }
-
-        public Button getAcceptButton()
-        {
-            return null;
         }
     }
 }

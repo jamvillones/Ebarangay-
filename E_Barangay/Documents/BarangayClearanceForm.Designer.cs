@@ -62,13 +62,13 @@
             this.OrNo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.UpdateBtn = new System.Windows.Forms.Button();
+            this.PrintBtn = new System.Windows.Forms.Button();
+            this.PrintPreviewBtn = new System.Windows.Forms.Button();
             this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.UpdateBtn = new System.Windows.Forms.Button();
-            this.PrintBtn = new System.Windows.Forms.Button();
-            this.PrintPreviewBtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.IdGroup.SuspendLayout();
@@ -406,7 +406,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Teal;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel2.Controls.Add(this.UpdateBtn);
             this.panel2.Controls.Add(this.PrintBtn);
             this.panel2.Controls.Add(this.PrintPreviewBtn);
@@ -416,36 +416,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(519, 655);
             this.panel2.TabIndex = 1;
-            // 
-            // printPreviewControl1
-            // 
-            this.printPreviewControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.printPreviewControl1.AutoZoom = false;
-            this.printPreviewControl1.Location = new System.Drawing.Point(3, 44);
-            this.printPreviewControl1.Name = "printPreviewControl1";
-            this.printPreviewControl1.Size = new System.Drawing.Size(513, 608);
-            this.printPreviewControl1.TabIndex = 0;
-            this.printPreviewControl1.Zoom = 0.5D;
-            // 
-            // printDocument1
-            // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
-            // 
-            // printDialog1
-            // 
-            this.printDialog1.UseEXDialog = true;
             // 
             // UpdateBtn
             // 
@@ -490,6 +460,36 @@
             this.PrintPreviewBtn.TabStop = false;
             this.PrintPreviewBtn.UseVisualStyleBackColor = false;
             this.PrintPreviewBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // printPreviewControl1
+            // 
+            this.printPreviewControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.printPreviewControl1.AutoZoom = false;
+            this.printPreviewControl1.Location = new System.Drawing.Point(3, 44);
+            this.printPreviewControl1.Name = "printPreviewControl1";
+            this.printPreviewControl1.Size = new System.Drawing.Size(513, 608);
+            this.printPreviewControl1.TabIndex = 0;
+            this.printPreviewControl1.Zoom = 0.5D;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // printDialog1
+            // 
+            this.printDialog1.UseEXDialog = true;
             // 
             // BarangayClearanceForm
             // 

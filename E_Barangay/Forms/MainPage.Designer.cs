@@ -43,9 +43,9 @@
             this.UserWelcomeTxt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
             this.DashControl = new E_Barangay.Forms.Dashboard();
             this.QueryPage = new E_Barangay.Forms.QueryControl();
+            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,10 +59,10 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.IssueBtn);
             this.panel1.Controls.Add(this.SelectionPanel);
             this.panel1.Controls.Add(this.DashBtn);
             this.panel1.Controls.Add(this.QueryBtn);
+            this.panel1.Controls.Add(this.IssueBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -248,16 +248,6 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // printingFiles
-            // 
-            this.printingFiles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.printingFiles.Enabled = false;
-            this.printingFiles.Location = new System.Drawing.Point(0, 0);
-            this.printingFiles.Name = "printingFiles";
-            this.printingFiles.Size = new System.Drawing.Size(813, 548);
-            this.printingFiles.TabIndex = 4;
-            // 
             // DashControl
             // 
             this.DashControl.BackColor = System.Drawing.Color.Silver;
@@ -276,6 +266,16 @@
             this.QueryPage.Size = new System.Drawing.Size(813, 548);
             this.QueryPage.TabIndex = 0;
             this.QueryPage.Load += new System.EventHandler(this.QueryPage_Load);
+            // 
+            // printingFiles
+            // 
+            this.printingFiles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.printingFiles.Enabled = false;
+            this.printingFiles.Location = new System.Drawing.Point(0, 0);
+            this.printingFiles.Name = "printingFiles";
+            this.printingFiles.Size = new System.Drawing.Size(813, 548);
+            this.printingFiles.TabIndex = 4;
             // 
             // MainPage
             // 
