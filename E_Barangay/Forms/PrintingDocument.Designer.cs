@@ -50,7 +50,7 @@
             // 
             // BClearanceBtn
             // 
-            this.BClearanceBtn.BackColor = System.Drawing.Color.Teal;
+            this.BClearanceBtn.BackColor = System.Drawing.Color.SlateGray;
             this.BClearanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BClearanceBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BClearanceBtn.ForeColor = System.Drawing.Color.White;
@@ -64,7 +64,7 @@
             // 
             // BussClearanceBtn
             // 
-            this.BussClearanceBtn.BackColor = System.Drawing.Color.Teal;
+            this.BussClearanceBtn.BackColor = System.Drawing.Color.SlateGray;
             this.BussClearanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BussClearanceBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BussClearanceBtn.ForeColor = System.Drawing.Color.White;
@@ -90,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.Color.DarkCyan;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Name = "PrintingDocument";

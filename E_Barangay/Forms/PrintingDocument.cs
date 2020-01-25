@@ -99,9 +99,10 @@ namespace E_Barangay.Forms
         {
             if (form == null)
             {
-                MainPage.mainPage.Enabled = false;
+               // MainPage.mainPage.Enabled = false;
                 form = new T();
                 form.FormClosed += Form_FormClosed;
+                form.TopMost = true;
 
                 form.Show();
             }
@@ -124,7 +125,8 @@ namespace E_Barangay.Forms
         private void Form_FormClosed(object sender, FormClosedEventArgs e)
         {
             form = null;
-            MainPage.mainPage.Enabled = true;
+           // MainPage.mainPage.Enabled = true;
+           //MainPage.OnOff
         }
     }
 }

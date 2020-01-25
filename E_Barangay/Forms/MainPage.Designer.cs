@@ -33,18 +33,18 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.IssueBtn = new System.Windows.Forms.Button();
             this.SelectionPanel = new System.Windows.Forms.Panel();
             this.DashBtn = new System.Windows.Forms.Button();
             this.QueryBtn = new System.Windows.Forms.Button();
+            this.IssueBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.DashControl = new E_Barangay.Forms.Dashboard();
+            this.QueryPage = new E_Barangay.Forms.QueryControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.AddNewLoginBtn = new System.Windows.Forms.Button();
             this.UserWelcomeTxt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.DashControl = new E_Barangay.Forms.Dashboard();
-            this.QueryPage = new E_Barangay.Forms.QueryControl();
             this.printingFiles = new E_Barangay.Forms.PrintingDocument();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -96,27 +96,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // IssueBtn
-            // 
-            this.IssueBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.IssueBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.IssueBtn.FlatAppearance.BorderSize = 0;
-            this.IssueBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IssueBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IssueBtn.ForeColor = System.Drawing.Color.White;
-            this.IssueBtn.Image = ((System.Drawing.Image)(resources.GetObject("IssueBtn.Image")));
-            this.IssueBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IssueBtn.Location = new System.Drawing.Point(3, 263);
-            this.IssueBtn.Name = "IssueBtn";
-            this.IssueBtn.Size = new System.Drawing.Size(165, 34);
-            this.IssueBtn.TabIndex = 4;
-            this.IssueBtn.TabStop = false;
-            this.IssueBtn.Text = "Issue Document";
-            this.IssueBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IssueBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.IssueBtn.UseVisualStyleBackColor = true;
-            this.IssueBtn.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // SelectionPanel
             // 
@@ -171,6 +150,27 @@
             this.QueryBtn.UseVisualStyleBackColor = true;
             this.QueryBtn.Click += new System.EventHandler(this.QueryBtn_Click);
             // 
+            // IssueBtn
+            // 
+            this.IssueBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.IssueBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.IssueBtn.FlatAppearance.BorderSize = 0;
+            this.IssueBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IssueBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IssueBtn.ForeColor = System.Drawing.Color.White;
+            this.IssueBtn.Image = ((System.Drawing.Image)(resources.GetObject("IssueBtn.Image")));
+            this.IssueBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IssueBtn.Location = new System.Drawing.Point(3, 263);
+            this.IssueBtn.Name = "IssueBtn";
+            this.IssueBtn.Size = new System.Drawing.Size(165, 34);
+            this.IssueBtn.TabIndex = 4;
+            this.IssueBtn.TabStop = false;
+            this.IssueBtn.Text = "Issue Document";
+            this.IssueBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.IssueBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IssueBtn.UseVisualStyleBackColor = true;
+            this.IssueBtn.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // panel3
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -183,6 +183,26 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(813, 548);
             this.panel3.TabIndex = 3;
+            // 
+            // DashControl
+            // 
+            this.DashControl.BackColor = System.Drawing.Color.Silver;
+            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DashControl.Location = new System.Drawing.Point(0, 0);
+            this.DashControl.Name = "DashControl";
+            this.DashControl.Size = new System.Drawing.Size(813, 548);
+            this.DashControl.TabIndex = 3;
+            this.DashControl.TabStop = false;
+            // 
+            // QueryPage
+            // 
+            this.QueryPage.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueryPage.Location = new System.Drawing.Point(0, 0);
+            this.QueryPage.Name = "QueryPage";
+            this.QueryPage.Size = new System.Drawing.Size(813, 548);
+            this.QueryPage.TabIndex = 0;
+            this.QueryPage.Load += new System.EventHandler(this.QueryPage_Load);
             // 
             // panel2
             // 
@@ -248,30 +268,10 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // DashControl
-            // 
-            this.DashControl.BackColor = System.Drawing.Color.Silver;
-            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DashControl.Location = new System.Drawing.Point(0, 0);
-            this.DashControl.Name = "DashControl";
-            this.DashControl.Size = new System.Drawing.Size(813, 548);
-            this.DashControl.TabIndex = 3;
-            // 
-            // QueryPage
-            // 
-            this.QueryPage.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QueryPage.Location = new System.Drawing.Point(0, 0);
-            this.QueryPage.Name = "QueryPage";
-            this.QueryPage.Size = new System.Drawing.Size(813, 548);
-            this.QueryPage.TabIndex = 0;
-            this.QueryPage.Load += new System.EventHandler(this.QueryPage_Load);
-            // 
             // printingFiles
             // 
-            this.printingFiles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.printingFiles.BackColor = System.Drawing.Color.DarkCyan;
             this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.printingFiles.Enabled = false;
             this.printingFiles.Location = new System.Drawing.Point(0, 0);
             this.printingFiles.Name = "printingFiles";
             this.printingFiles.Size = new System.Drawing.Size(813, 548);

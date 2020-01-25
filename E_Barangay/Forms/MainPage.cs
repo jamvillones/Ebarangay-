@@ -11,13 +11,16 @@ using System.Windows.Forms;
 
 namespace E_Barangay.Forms
 {
+   
     public partial class MainPage : Form
     {
         UserControl Current;
+        
        //nterface.IAccept currentAccept;
         public MainPage()
         {
             InitializeComponent();
+            
         }
 
         private void QueryBtn_Click(object sender, EventArgs e)
@@ -38,15 +41,15 @@ namespace E_Barangay.Forms
             SwitchPage(DashControl);
             SetSelectionPanel(DashBtn);
             DashControl.BringToFront();
-            DashControl.ShowStats();
+            //DashControl.ShowStats();
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-            SwitchAccept(printingFiles);
+          
 
             SwitchPage(printingFiles);
-            printingFiles.BringToFront();
             SetSelectionPanel(IssueBtn);
+            printingFiles.BringToFront();
 
             //printing = new BarangayClearanceForm();
             //printing.FormClosing += Printing_FormClosing;
@@ -69,11 +72,13 @@ namespace E_Barangay.Forms
         {
             if (Current == next)
                 return;
-            Current.Enabled = false;
-            Current.Visible = false;
+            //Current.Enabled = false;
+            // Current.Visible = false;
+            //Current.TabStop = false;
             Current = next;
-            Current.Enabled = true;
-            Current.Visible = true;
+            //Current.TabStop = true;
+           // Current.Enabled = true;
+            //Current.Visible = true;
 
         }
 
@@ -91,7 +96,7 @@ namespace E_Barangay.Forms
 
         private void MainPage_Load(object sender, EventArgs e)
         {
-            mainPage = this;
+            //mainPage = this;
             User curr = UserManager.instance.currentUser;
             UserWelcomeTxt.Text = "Welcome: " + curr.Username;
             //if(curr.canAddUser)
@@ -103,16 +108,13 @@ namespace E_Barangay.Forms
             {
                 DashControl.ShowStats();
                 QueryPage.setUser();
-                QueryPage.showData();
+                //QueryPage.showData();
                 // RegisterPage.LoadValues();
             }
             catch
             {
 
             }
-
-            QueryPage.Enabled = false;
-            // RegisterPage.Enabled = false;
 
             QueryPage.IDEmptySearch += QueryPage_IDEmptySearch;
         }
@@ -156,7 +158,7 @@ namespace E_Barangay.Forms
         {
 
         }
-        public static MainPage mainPage { get; private set; }
+        //public static MainPage mainPage { get; private set; }
 
 
 
