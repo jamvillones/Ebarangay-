@@ -33,17 +33,25 @@ namespace E_Barangay.Forms
                 MessageBox.Show("Invalid Login");
                 return;
             }
-            using (var t = new EBarangayEntities())
+            try
             {
-                var u = from user in t.Users
-                        where user.Username == UsernameTxt.Text && user.Password == PasswordTxt.Text
-                        select user;
-                if (u.Count() == 0)
+                using (var t = new EBarangayEntities())
                 {
-                    MessageBox.Show("User Not Found");
-                    return;
+                    var u = from user in t.Users
+                            where user.Username == UsernameTxt.Text && user.Password == PasswordTxt.Text
+                            select user;
+                    if (u.Count() == 0)
+                    {
+                        MessageBox.Show("User Not Found");
+                        return;
+                    }
+                    UserManager.instance.currentUser = u.First();
                 }
-                UserManager.instance.currentUser = u.First();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+                Application.Exit();
             }
 
             UserSuccessfullyAuthenticated = true;
