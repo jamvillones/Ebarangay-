@@ -23,35 +23,44 @@ namespace E_Barangay.Forms
         private void Login_Load(object sender, EventArgs e)
         {
 
+
         }
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
+            #region connectiontest
+            try
+            {
+                using (var context = new EBarangayEntities())
+                {
+                    context.Database.Connection.Open();
+                    context.Database.Connection.Close();
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+                return;
+            }
+            #endregion
 
             if (!canLogin())
             {
                 MessageBox.Show("Invalid Login");
                 return;
             }
-            try
+
+            using (var t = new EBarangayEntities())
             {
-                using (var t = new EBarangayEntities())
+                var u = from user in t.Users
+                        where user.Username == UsernameTxt.Text && user.Password == PasswordTxt.Text
+                        select user;
+                if (u.Count() == 0)
                 {
-                    var u = from user in t.Users
-                            where user.Username == UsernameTxt.Text && user.Password == PasswordTxt.Text
-                            select user;
-                    if (u.Count() == 0)
-                    {
-                        MessageBox.Show("User Not Found");
-                        return;
-                    }
-                    UserManager.instance.currentUser = u.First();
+                    MessageBox.Show("User Not Found");
+                    return;
                 }
-            }
-            catch (Exception exception)
-            {
-                MessageBox.Show(exception.Message);
-                Application.Exit();
+                UserManager.instance.currentUser = u.First();
             }
 
             UserSuccessfullyAuthenticated = true;
