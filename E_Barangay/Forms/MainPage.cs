@@ -162,12 +162,12 @@ namespace E_Barangay.Forms
 
 
 
-        CreateLogin cl;
+        Form cl;
         private void button2_Click(object sender, EventArgs e)
         {
             if (cl == null)
             {
-                cl = new CreateLogin();
+                cl = new SettingsForm();
                 cl.FormClosed += Cl_FormClosed;
                 cl.Show();
                 this.Enabled = false;

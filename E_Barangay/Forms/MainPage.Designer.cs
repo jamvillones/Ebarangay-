@@ -40,12 +40,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.DashControl = new E_Barangay.Forms.Dashboard();
             this.QueryPage = new E_Barangay.Forms.QueryControl();
+            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
             this.panel2 = new System.Windows.Forms.Panel();
             this.AddNewLoginBtn = new System.Windows.Forms.Button();
             this.UserWelcomeTxt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -204,6 +204,15 @@
             this.QueryPage.TabIndex = 0;
             this.QueryPage.Load += new System.EventHandler(this.QueryPage_Load);
             // 
+            // printingFiles
+            // 
+            this.printingFiles.BackColor = System.Drawing.Color.DarkCyan;
+            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.printingFiles.Location = new System.Drawing.Point(0, 0);
+            this.printingFiles.Name = "printingFiles";
+            this.printingFiles.Size = new System.Drawing.Size(813, 548);
+            this.printingFiles.TabIndex = 4;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -226,11 +235,11 @@
             this.AddNewLoginBtn.ForeColor = System.Drawing.Color.White;
             this.AddNewLoginBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddNewLoginBtn.Image")));
             this.AddNewLoginBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddNewLoginBtn.Location = new System.Drawing.Point(733, 8);
+            this.AddNewLoginBtn.Location = new System.Drawing.Point(746, 8);
             this.AddNewLoginBtn.Name = "AddNewLoginBtn";
-            this.AddNewLoginBtn.Size = new System.Drawing.Size(80, 23);
+            this.AddNewLoginBtn.Size = new System.Drawing.Size(67, 23);
             this.AddNewLoginBtn.TabIndex = 3;
-            this.AddNewLoginBtn.Text = "ADD NEW LOGIN";
+            this.AddNewLoginBtn.Text = "Settings";
             this.AddNewLoginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.AddNewLoginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddNewLoginBtn.UseVisualStyleBackColor = true;
@@ -267,15 +276,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            // 
-            // printingFiles
-            // 
-            this.printingFiles.BackColor = System.Drawing.Color.DarkCyan;
-            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.printingFiles.Location = new System.Drawing.Point(0, 0);
-            this.printingFiles.Name = "printingFiles";
-            this.printingFiles.Size = new System.Drawing.Size(813, 548);
-            this.printingFiles.TabIndex = 4;
             // 
             // MainPage
             // 

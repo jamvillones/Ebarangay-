@@ -1647,10 +1647,12 @@
   </data>
   <data name="AddNewLoginBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABGdBTUEAALGPC/xhBQAAAJ5JREFUKFNt
-        jTsKwkAURcUmTXrXYGNlk2VYWFi7BsEFZAsqEj8g2Fi7ByvXERQECyGN8DzvExDHA4dh7r3DdL4RkS4W
-        OIjoPwyOqLyxjDiF8mUz5xFxCuXdN8Yt4hTKyjfGOuIUytw3sscxHnCOWUxsNMQV1jhCZRvnrh0t/G6c
-        cYNL7OEEn+1QvziFJc5QmcZ5seEvFBnq4wavItL/AK0iz6cW4rxBAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAOhJREFUOE+t
+        kTFOAgEQRbeBSkhM5Dpq0ARawgXwFoRLGFsbT4CdlR7BI0AloaSTCljen/kmK9ksDS952cz8mWxmt7g4
+        ZVm28QO//Ww7Og/DQ6wycFQPA2N8wxfcYpVffEblY68kNHq4wT02oVxzN16N5SclsPNzgbd4jXe4RPGX
+        T7wayy38inZy7yig7mc7+MSWo4TGLKLkyu2AupPtYOp2QuP0zX1HAfVjtoP/b6Y4vfkHdbP+t25eoai9
+        uYtrPChpQLnmOl5NaIzwFZv+s/KRV+phoHqjeHB0HoZ16zvq48xVO7oURXEEjfvAuA+j8ZIAAAAASUVO
+        RK5CYII=
 </value>
   </data>
   <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
