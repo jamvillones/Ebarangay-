@@ -96,7 +96,7 @@
             this.SaveBtn.BackColor = System.Drawing.SystemColors.Highlight;
             this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveBtn.Location = new System.Drawing.Point(674, 354);
+            this.SaveBtn.Location = new System.Drawing.Point(674, 373);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(96, 23);
             this.SaveBtn.TabIndex = 1;
@@ -122,7 +122,7 @@
             this.OfficialPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OfficialPanel.Location = new System.Drawing.Point(0, 24);
             this.OfficialPanel.Name = "OfficialPanel";
-            this.OfficialPanel.Size = new System.Drawing.Size(805, 387);
+            this.OfficialPanel.Size = new System.Drawing.Size(805, 406);
             this.OfficialPanel.TabIndex = 1;
             // 
             // panel22
@@ -143,7 +143,6 @@
             // 
             // panel13
             // 
-            this.panel13.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel13.Controls.Add(this.panel14);
             this.panel13.Controls.Add(this.treasTxt);
             this.panel13.Controls.Add(this.label7);
@@ -190,7 +189,6 @@
             // 
             // panelsec
             // 
-            this.panelsec.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panelsec.Controls.Add(this.panel12);
             this.panelsec.Controls.Add(this.secTxt);
             this.panelsec.Controls.Add(this.label6);
@@ -237,7 +235,6 @@
             // 
             // panel15
             // 
-            this.panel15.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel15.Controls.Add(this.panel16);
             this.panel15.Controls.Add(this.sbTxt5);
             this.panel15.Controls.Add(this.label8);
@@ -284,7 +281,6 @@
             // 
             // panel9
             // 
-            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Controls.Add(this.sbTxt6);
             this.panel9.Controls.Add(this.label5);
@@ -331,7 +327,6 @@
             // 
             // panel17
             // 
-            this.panel17.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel17.Controls.Add(this.panel18);
             this.panel17.Controls.Add(this.sbTxt3);
             this.panel17.Controls.Add(this.label9);
@@ -378,7 +373,6 @@
             // 
             // panel7
             // 
-            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.sbTxt4);
             this.panel7.Controls.Add(this.label4);
@@ -425,7 +419,6 @@
             // 
             // panel19
             // 
-            this.panel19.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel19.Controls.Add(this.panel20);
             this.panel19.Controls.Add(this.sbTxt1);
             this.panel19.Controls.Add(this.label10);
@@ -472,7 +465,6 @@
             // 
             // panel5
             // 
-            this.panel5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.sbTxt2);
             this.panel5.Controls.Add(this.label3);
@@ -519,7 +511,6 @@
             // 
             // panel3
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.sbTxt0);
             this.panel3.Controls.Add(this.label2);
@@ -566,7 +557,6 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.captainTxt);
             this.panel1.Controls.Add(this.label1);
@@ -645,7 +635,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(805, 411);
+            this.ClientSize = new System.Drawing.Size(805, 430);
             this.Controls.Add(this.OfficialPanel);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
