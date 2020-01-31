@@ -243,9 +243,9 @@ namespace E_Barangay.Forms
             {
                 var _citizen_ = entity.Citizens.FirstOrDefault(c => c.ID == citizen.ID);
                 _citizen_.Picture = Class.ImageConverter.imageToByteArray(ImageBox.Image);
-                _citizen_.Name = FirstNameField.Text;
+                _citizen_.Name = FirstNameField.Text == string.Empty ? _citizen_.Name : FirstNameField.Text;
                 _citizen_.Birthday = BdayPicker.Value;
-                _citizen_.ContactInfo = ContactField.Text;
+                _citizen_.ContactInfo = fieldisempty(ContactField)? _citizen_.ContactInfo : ContactField.Text;
                 _citizen_.Gender = SexOption.Text == string.Empty ? _citizen_.Gender : SexOption.Text;
                 _citizen_.CivilStatus = CivilStatusOption.Text == string.Empty ? _citizen_.CivilStatus : CivilStatusOption.Text;
 
