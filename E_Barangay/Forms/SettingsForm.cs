@@ -25,22 +25,20 @@ namespace E_Barangay.Forms
         {
             using(var eb = new EBarangayEntities())
             {
-                var punongBarangay = eb.Officials.Find("Punong_Barangay");
-                OfficialTable.Rows.Add(punongBarangay.Position, punongBarangay.Name);
+                captainTxt.Text = eb.Officials.Find("Punong_Barangay").Name;
 
-                var sb = from sbMem in eb.Officials
-                         where sbMem.Position == "Sangguniang Barangay Member"
-                         select sbMem;
+                LoadSB(eb.Officials.ToList(), sbTxt0, sbTxt1, sbTxt2, sbTxt3, sbTxt4, sbTxt5, sbTxt6);
 
-                foreach(var member in sb)
-                {
-                    OfficialTable.Rows.Add(member.Position, member.Name);
-                }
+                secTxt.Text = eb.Officials.FirstOrDefault(o => o.Position == "Barangay Secretary").Name;
+                treasTxt.Text = eb.Officials.FirstOrDefault(o => o.Position == "Barangay Treasurer").Name;
 
-                var secretary = eb.Officials.Find("Barangay_Secretary");
-                OfficialTable.Rows.Add(secretary.Position, secretary.Name);
-                var treasurer = eb.Officials.Find("Barangay_Treasurer");
-                OfficialTable.Rows.Add(treasurer.Position, treasurer.Name);            
+            }
+        }
+        void LoadSB(List<Official> o, params Control[] txt)
+        {
+            for(int i = 0; i < txt.Length; i++)
+            {
+                txt[i].Text = o[i].Name;
             }
         }
 
