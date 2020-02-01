@@ -16,6 +16,9 @@ namespace E_Barangay.Forms
         // List<Record> records = new List<Record>();
         //ICollection<Record> records;
         List<Record> tobeAdded = new List<Record>();
+        List<Record> toBeRemoved = new List<Record>();
+        List<Record> recordList = new List<Record>();
+
         List<Control> requiredControls = new List<Control>();
 
         #region citizen assignment
@@ -41,13 +44,13 @@ namespace E_Barangay.Forms
                 var t = con.Citizens.FirstOrDefault(r => r.ID == citizen.ID);
                 ImageBox.Image = t.Picture == null ? Properties.Resources.image_50px : Class.ImageConverter.byteArrayToImage(t.Picture);
 
-                List<Record> rec = t.Records.ToList<Record>();
-                for (int i = 0; i < rec.Count; i++)
+                recordList = t.Records.ToList<Record>();
+                for (int i = 0; i < recordList.Count; i++)
                 {
                     RecordsTable.Rows.Add();
-                    RecordsTable.Rows[i].Cells[0].Value = rec[i].DateIssued;
-                    RecordsTable.Rows[i].Cells[1].Value = rec[i].Name;
-                    RecordsTable.Rows[i].Cells[2].Value = rec[i].Details;
+                    RecordsTable.Rows[i].Cells[0].Value = recordList[i].DateIssued;
+                    RecordsTable.Rows[i].Cells[1].Value = recordList[i].Name;
+                    RecordsTable.Rows[i].Cells[2].Value = recordList[i].Details;
                 }
             }
             //ImageBox.Image = Class.ImageConverter.byteArrayToImage(citizen.Picture);
@@ -245,7 +248,7 @@ namespace E_Barangay.Forms
                 _citizen_.Picture = Class.ImageConverter.imageToByteArray(ImageBox.Image);
                 _citizen_.Name = FirstNameField.Text == string.Empty ? _citizen_.Name : FirstNameField.Text;
                 _citizen_.Birthday = BdayPicker.Value;
-                _citizen_.ContactInfo = fieldisempty(ContactField)? _citizen_.ContactInfo : ContactField.Text;
+                _citizen_.ContactInfo = fieldisempty(ContactField) ? _citizen_.ContactInfo : ContactField.Text;
                 _citizen_.Gender = SexOption.Text == string.Empty ? _citizen_.Gender : SexOption.Text;
                 _citizen_.CivilStatus = CivilStatusOption.Text == string.Empty ? _citizen_.CivilStatus : CivilStatusOption.Text;
 
@@ -256,8 +259,8 @@ namespace E_Barangay.Forms
                 _citizen_.PagIbig = fieldisempty(PIField) ? null : PIField.Text;
                 _citizen_.Philhealth = fieldisempty(PHField) ? null : PHField.Text;
 
-                foreach (var r in tobeAdded)
-                    _citizen_.Records.Add(r);
+                //foreach (var r in tobeAdded)
+                //    _citizen_.Records.Add(r);
 
                 string address = AreaOption.Text + ", " + BarangayField.Text + ", " + MunicipalityField.Text + ", " + ProvinceField.Text;
 
@@ -403,11 +406,19 @@ namespace E_Barangay.Forms
 
         private void Record_OnSave(object sender, Record e)
         {
+            var r = e;
+
             // records.Add(e);
-            e.CitizenID = citizen.ID;
+            r.CitizenID = citizen.ID;
             // records.Add(e);
-            tobeAdded.Add(e);
-            RecordsTable.Rows.Add(e.DateIssued, e.Name, e.Details);
+            //tobeAdded.Add(e);
+            recordList.Add(r);
+            RecordsTable.Rows.Add(r.DateIssued, r.Name, r.Details);
+            using (var eb = new EBarangayEntities())
+            {
+                eb.Records.Add(r);
+                eb.SaveChanges();
+            }
             ///throw new NotImplementedException();
         }
 
@@ -484,6 +495,43 @@ namespace E_Barangay.Forms
                 foreach (var c in requiredControls)
                     c.Text = "test_dummy";
                 IDField.Text = Guid.NewGuid().ToString();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            var yesOrNo = new YesOrNoPrompt("Are you sure you want to delete this record");
+            yesOrNo.onBtnClick += (s,ee) =>
+            {
+                if (ee) removeByDataIndex();
+                this.Enabled = true;
+
+            };
+            yesOrNo.Show();
+
+        }
+
+        //private void YesOrNo_onBtnClick(object sender, bool e)
+        //{
+        //    if (e)
+        //        removeByDataIndex();
+        //    this.Enabled = true;
+        //}
+
+        void removeByDataIndex()
+        {
+            int index = RecordsTable.CurrentCell.RowIndex;
+            var r = recordList[index];
+
+
+            RecordsTable.Rows.RemoveAt(index);
+
+            using (var eb = new EBarangayEntities())
+            {
+                var tbr = eb.Records.Find(r.ID);
+                eb.Records.Remove(tbr);
+                eb.SaveChanges();
             }
         }
     }

@@ -13,10 +13,7 @@ namespace E_Barangay.Forms
     public partial class YesOrNoPrompt : Form
     {
         public event EventHandler<bool> onBtnClick;
-        public YesOrNoPrompt()
-        {
-            InitializeComponent();
-        }
+        
         public YesOrNoPrompt(string Message)
         {
             InitializeComponent();
