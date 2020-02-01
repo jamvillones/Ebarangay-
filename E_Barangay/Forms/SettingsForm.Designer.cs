@@ -30,8 +30,6 @@
         {
             this.SaveBtn = new System.Windows.Forms.Button();
             this.OfficialPanel = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.panel21 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.treasTxt = new System.Windows.Forms.TextBox();
@@ -76,6 +74,7 @@
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.areaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeBtn = new System.Windows.Forms.Button();
             this.OfficialPanel.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panelsec.SuspendLayout();
@@ -106,8 +105,6 @@
             // OfficialPanel
             // 
             this.OfficialPanel.BackColor = System.Drawing.Color.CadetBlue;
-            this.OfficialPanel.Controls.Add(this.panel22);
-            this.OfficialPanel.Controls.Add(this.panel21);
             this.OfficialPanel.Controls.Add(this.panel13);
             this.OfficialPanel.Controls.Add(this.panelsec);
             this.OfficialPanel.Controls.Add(this.panel15);
@@ -124,22 +121,6 @@
             this.OfficialPanel.Name = "OfficialPanel";
             this.OfficialPanel.Size = new System.Drawing.Size(805, 406);
             this.OfficialPanel.TabIndex = 1;
-            // 
-            // panel22
-            // 
-            this.panel22.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel22.Location = new System.Drawing.Point(18, 292);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(768, 2);
-            this.panel22.TabIndex = 12;
-            // 
-            // panel21
-            // 
-            this.panel21.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel21.Location = new System.Drawing.Point(18, 82);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(768, 2);
-            this.panel21.TabIndex = 11;
             // 
             // panel13
             // 
@@ -167,7 +148,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.treasTxt.BackColor = System.Drawing.Color.CadetBlue;
             this.treasTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.treasTxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.treasTxt.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.treasTxt.ForeColor = System.Drawing.Color.White;
             this.treasTxt.Location = new System.Drawing.Point(70, 8);
             this.treasTxt.Name = "treasTxt";
             this.treasTxt.Size = new System.Drawing.Size(288, 15);
@@ -213,7 +196,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.secTxt.BackColor = System.Drawing.Color.CadetBlue;
             this.secTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.secTxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.secTxt.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.secTxt.ForeColor = System.Drawing.Color.White;
             this.secTxt.Location = new System.Drawing.Point(70, 8);
             this.secTxt.Name = "secTxt";
             this.secTxt.Size = new System.Drawing.Size(288, 15);
@@ -259,7 +244,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sbTxt5.BackColor = System.Drawing.Color.CadetBlue;
             this.sbTxt5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sbTxt5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.sbTxt5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbTxt5.ForeColor = System.Drawing.Color.White;
             this.sbTxt5.Location = new System.Drawing.Point(70, 8);
             this.sbTxt5.Name = "sbTxt5";
             this.sbTxt5.Size = new System.Drawing.Size(288, 15);
@@ -305,7 +292,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sbTxt6.BackColor = System.Drawing.Color.CadetBlue;
             this.sbTxt6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sbTxt6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.sbTxt6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbTxt6.ForeColor = System.Drawing.Color.White;
             this.sbTxt6.Location = new System.Drawing.Point(70, 8);
             this.sbTxt6.Name = "sbTxt6";
             this.sbTxt6.Size = new System.Drawing.Size(288, 15);
@@ -351,7 +340,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sbTxt3.BackColor = System.Drawing.Color.CadetBlue;
             this.sbTxt3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sbTxt3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.sbTxt3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbTxt3.ForeColor = System.Drawing.Color.White;
             this.sbTxt3.Location = new System.Drawing.Point(70, 8);
             this.sbTxt3.Name = "sbTxt3";
             this.sbTxt3.Size = new System.Drawing.Size(288, 15);
@@ -397,7 +388,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sbTxt4.BackColor = System.Drawing.Color.CadetBlue;
             this.sbTxt4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sbTxt4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.sbTxt4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbTxt4.ForeColor = System.Drawing.Color.White;
             this.sbTxt4.Location = new System.Drawing.Point(70, 8);
             this.sbTxt4.Name = "sbTxt4";
             this.sbTxt4.Size = new System.Drawing.Size(288, 15);
@@ -443,7 +436,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sbTxt1.BackColor = System.Drawing.Color.CadetBlue;
             this.sbTxt1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sbTxt1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.sbTxt1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbTxt1.ForeColor = System.Drawing.Color.White;
             this.sbTxt1.Location = new System.Drawing.Point(70, 8);
             this.sbTxt1.Name = "sbTxt1";
             this.sbTxt1.Size = new System.Drawing.Size(288, 15);
@@ -489,7 +484,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sbTxt2.BackColor = System.Drawing.Color.CadetBlue;
             this.sbTxt2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sbTxt2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.sbTxt2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbTxt2.ForeColor = System.Drawing.Color.White;
             this.sbTxt2.Location = new System.Drawing.Point(70, 8);
             this.sbTxt2.Name = "sbTxt2";
             this.sbTxt2.Size = new System.Drawing.Size(288, 15);
@@ -535,7 +532,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sbTxt0.BackColor = System.Drawing.Color.CadetBlue;
             this.sbTxt0.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sbTxt0.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.sbTxt0.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sbTxt0.ForeColor = System.Drawing.Color.White;
             this.sbTxt0.Location = new System.Drawing.Point(70, 8);
             this.sbTxt0.Name = "sbTxt0";
             this.sbTxt0.Size = new System.Drawing.Size(288, 15);
@@ -581,7 +580,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.captainTxt.BackColor = System.Drawing.Color.CadetBlue;
             this.captainTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.captainTxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.captainTxt.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.captainTxt.ForeColor = System.Drawing.Color.White;
             this.captainTxt.Location = new System.Drawing.Point(99, 8);
             this.captainTxt.Name = "captainTxt";
             this.captainTxt.Size = new System.Drawing.Size(288, 15);
@@ -601,6 +602,8 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Teal;
+            this.menuStrip1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -614,31 +617,46 @@
             this.addToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.areaToolStripMenuItem,
             this.loginToolStripMenuItem});
+            this.addToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.addToolStripMenuItem.Name = "addToolStripMenuItem";
-            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.addToolStripMenuItem.Text = "Add";
             // 
             // areaToolStripMenuItem
             // 
             this.areaToolStripMenuItem.Name = "areaToolStripMenuItem";
-            this.areaToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.areaToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.areaToolStripMenuItem.Text = "Area";
             // 
             // loginToolStripMenuItem
             // 
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
+            // 
+            // closeBtn
+            // 
+            this.closeBtn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.closeBtn.FlatAppearance.BorderSize = 0;
+            this.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeBtn.Location = new System.Drawing.Point(783, 2);
+            this.closeBtn.Name = "closeBtn";
+            this.closeBtn.Size = new System.Drawing.Size(20, 20);
+            this.closeBtn.TabIndex = 3;
+            this.closeBtn.Text = "X";
+            this.closeBtn.UseVisualStyleBackColor = false;
+            this.closeBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 430);
+            this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.OfficialPanel);
             this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -683,8 +701,6 @@
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem areaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
-        private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Panel panel21;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.TextBox treasTxt;
@@ -725,5 +741,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox captainTxt;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button closeBtn;
     }
 }
