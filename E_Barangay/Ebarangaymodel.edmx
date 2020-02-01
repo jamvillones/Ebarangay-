@@ -69,7 +69,9 @@
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="CitizenID" Type="nvarchar" MaxLength="50" />
           <Property Name="Details" Type="nvarchar" MaxLength="500" />
-          <Property Name="DateIssued" Type="date" />
+          <Property Name="DateIssued" Type="datetime" />
+          <Property Name="DateHappened" Type="datetime" />
+          <Property Name="Location" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -179,8 +181,10 @@
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CitizenID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Details" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="DateIssued" Type="DateTime" Precision="0" />
+          <Property Name="DateIssued" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Citizen" Relationship="Self.FK_Records_Citizen" FromRole="Records" ToRole="Citizen" />
+          <Property Name="DateHappened" Type="DateTime" Precision="3" />
+          <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_Records_Citizen">
           <End Role="Citizen" Type="Self.Citizen" Multiplicity="0..1" />
@@ -304,6 +308,8 @@
           <EntitySetMapping Name="Records">
             <EntityTypeMapping TypeName="EBarangayModel.Record">
               <MappingFragment StoreEntitySet="Records">
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="DateHappened" ColumnName="DateHappened" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="CitizenID" ColumnName="CitizenID" />

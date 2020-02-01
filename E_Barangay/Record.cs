@@ -19,6 +19,8 @@ namespace E_Barangay
         public string CitizenID { get; set; }
         public string Details { get; set; }
         public Nullable<System.DateTime> DateIssued { get; set; }
+        public Nullable<System.DateTime> DateHappened { get; set; }
+        public string Location { get; set; }
     
         public virtual Citizen Citizen { get; set; }
     }

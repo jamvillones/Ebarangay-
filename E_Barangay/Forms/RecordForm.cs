@@ -31,7 +31,9 @@ namespace E_Barangay.Forms
             r.ID = Guid.NewGuid().ToString();
             r.Name = TitleField.Text;
             r.Details = DetailsField.Text;
-            r.DateIssued = DatePicker.Value;
+            r.DateIssued = happenedDuring.Value;
+            r.DateHappened = recordedOn.Value;
+            r.Location = locationTxt.Text;
             // Regref.AcceptRecord(r);
             OnSave?.Invoke(this, r);
             MessageBox.Show("Successfully Saved");
