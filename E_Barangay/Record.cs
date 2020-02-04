@@ -21,6 +21,8 @@ namespace E_Barangay
         public Nullable<System.DateTime> DateIssued { get; set; }
         public Nullable<System.DateTime> DateHappened { get; set; }
         public string Location { get; set; }
+        public string Status { get; set; }
+        public Nullable<System.DateTime> SettlementDate { get; set; }
     
         public virtual Citizen Citizen { get; set; }
     }

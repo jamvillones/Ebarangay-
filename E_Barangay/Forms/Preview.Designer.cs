@@ -309,7 +309,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.RecordsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.RecordsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RecordsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.RecordsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
@@ -328,6 +328,7 @@
             this.RecordsTable.Name = "RecordsTable";
             this.RecordsTable.ReadOnly = true;
             this.RecordsTable.RowHeadersVisible = false;
+            this.RecordsTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.RecordsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.RecordsTable.Size = new System.Drawing.Size(342, 324);
             this.RecordsTable.TabIndex = 0;
@@ -721,7 +722,7 @@
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Date";
+            this.Column1.HeaderText = "Date Occurred";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -735,7 +736,7 @@
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Details";
+            this.Column3.HeaderText = "Status";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 

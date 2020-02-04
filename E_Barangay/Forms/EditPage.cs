@@ -399,6 +399,7 @@ namespace E_Barangay.Forms
                 recForm.OnSave += Record_OnSave;
                 // record.GetRef(this);
                 recForm.Show();
+                this.Enabled = false;
                 return;
             }
             recForm.BringToFront();
@@ -425,6 +426,7 @@ namespace E_Barangay.Forms
         private void Record_FormClosed(object sender, FormClosedEventArgs e)
         {
             recForm = null;
+            this.Enabled = true;
             // ShowRecords();
         }
 

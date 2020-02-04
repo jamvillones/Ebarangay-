@@ -40,6 +40,8 @@
             this.recordedOn = new System.Windows.Forms.DateTimePicker();
             this.locationTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.settlementSched = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TitleField
@@ -65,7 +67,7 @@
             this.DetailsField.Multiline = true;
             this.DetailsField.Name = "DetailsField";
             this.DetailsField.Size = new System.Drawing.Size(751, 302);
-            this.DetailsField.TabIndex = 4;
+            this.DetailsField.TabIndex = 5;
             this.DetailsField.TextChanged += new System.EventHandler(this.DetailsField_TextChanged);
             // 
             // label1
@@ -87,7 +89,7 @@
             this.happenedDuring.Location = new System.Drawing.Point(109, 38);
             this.happenedDuring.Name = "happenedDuring";
             this.happenedDuring.Size = new System.Drawing.Size(262, 20);
-            this.happenedDuring.TabIndex = 1;
+            this.happenedDuring.TabIndex = 2;
             // 
             // label2
             // 
@@ -158,27 +160,48 @@
             this.recordedOn.Location = new System.Drawing.Point(109, 64);
             this.recordedOn.Name = "recordedOn";
             this.recordedOn.Size = new System.Drawing.Size(262, 20);
-            this.recordedOn.TabIndex = 2;
+            this.recordedOn.TabIndex = 4;
             // 
             // locationTxt
             // 
             this.locationTxt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.locationTxt.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationTxt.Location = new System.Drawing.Point(109, 90);
+            this.locationTxt.Location = new System.Drawing.Point(493, 12);
             this.locationTxt.MaxLength = 50;
             this.locationTxt.Name = "locationTxt";
-            this.locationTxt.Size = new System.Drawing.Size(262, 20);
-            this.locationTxt.TabIndex = 3;
+            this.locationTxt.Size = new System.Drawing.Size(274, 20);
+            this.locationTxt.TabIndex = 1;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 93);
+            this.label5.Location = new System.Drawing.Point(397, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 14);
             this.label5.TabIndex = 11;
             this.label5.Text = "Incident Location";
+            // 
+            // settlementSched
+            // 
+            this.settlementSched.CalendarFont = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settlementSched.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            this.settlementSched.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.settlementSched.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.settlementSched.Location = new System.Drawing.Point(493, 38);
+            this.settlementSched.Name = "settlementSched";
+            this.settlementSched.Size = new System.Drawing.Size(274, 20);
+            this.settlementSched.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(388, 43);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(99, 14);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Settlement Schedule";
             // 
             // RecordForm
             // 
@@ -188,6 +211,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.CancelButton = this.CancelBtn;
             this.ClientSize = new System.Drawing.Size(781, 485);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.settlementSched);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.locationTxt);
             this.Controls.Add(this.recordedOn);
@@ -227,5 +252,7 @@
         private System.Windows.Forms.DateTimePicker recordedOn;
         private System.Windows.Forms.TextBox locationTxt;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker settlementSched;
+        private System.Windows.Forms.Label label6;
     }
 }

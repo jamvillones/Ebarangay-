@@ -140,10 +140,10 @@ namespace E_Barangay.Forms
                 List<Record> rec = t.Records.ToList<Record>();
                 for (int i = 0; i < rec.Count; i++)
                 {
-                    RecordsTable.Rows.Add();
-                    RecordsTable.Rows[i].Cells[0].Value = rec[i].DateIssued;
-                    RecordsTable.Rows[i].Cells[1].Value = rec[i].Name;
-                    RecordsTable.Rows[i].Cells[2].Value = rec[i].Details;
+                    RecordsTable.Rows.Add(rec[i].DateHappened,rec[i].Name,rec[i].Status);
+                    //RecordsTable.Rows[i].Cells[0].Value = rec[i].DateIssued;
+                    //RecordsTable.Rows[i].Cells[1].Value = rec[i].Name;
+                    //RecordsTable.Rows[i].Cells[2].Value = rec[i].Details;
                 }
             }
 

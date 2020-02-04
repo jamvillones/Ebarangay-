@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace E_Barangay.Forms
 {
+    enum BlotterStatus { Pending, Settled }
     public partial class RecordForm : Form
     {
        // Interface.IRecordAcceptor Regref;
@@ -27,6 +28,19 @@ namespace E_Barangay.Forms
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
+            var yesOrNo = new YesOrNoPrompt("Are you sure you want to save?");
+            yesOrNo.onBtnClick += YesOrNo_onBtnClick;
+            yesOrNo.Show();
+            this.Enabled = false;
+           
+        }
+
+        private void YesOrNo_onBtnClick(object sender, bool e)
+        {
+            this.Enabled = true;
+            if (!e)
+                return;
+
             Record r = new Record();
             r.ID = Guid.NewGuid().ToString();
             r.Name = TitleField.Text;
@@ -34,15 +48,19 @@ namespace E_Barangay.Forms
             r.DateIssued = happenedDuring.Value;
             r.DateHappened = recordedOn.Value;
             r.Location = locationTxt.Text;
+            r.SettlementDate = settlementSched.Value;
+            r.Status = BlotterStatus.Pending.ToString();
             // Regref.AcceptRecord(r);
             OnSave?.Invoke(this, r);
             MessageBox.Show("Successfully Saved");
             ClearValues();
         }
+
         void ClearValues()
         {
             DetailsField.Clear();
             TitleField.Clear();
+            locationTxt.Clear();
             this.ActiveControl = TitleField;
         }
 
