@@ -65,7 +65,7 @@
             this.DetailsField.Multiline = true;
             this.DetailsField.Name = "DetailsField";
             this.DetailsField.Size = new System.Drawing.Size(751, 302);
-            this.DetailsField.TabIndex = 14;
+            this.DetailsField.TabIndex = 4;
             this.DetailsField.TextChanged += new System.EventHandler(this.DetailsField_TextChanged);
             // 
             // label1
@@ -108,6 +108,7 @@
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(75, 23);
             this.SaveBtn.TabIndex = 5;
+            this.SaveBtn.TabStop = false;
             this.SaveBtn.Text = "Save";
             this.SaveBtn.UseVisualStyleBackColor = false;
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
@@ -123,6 +124,7 @@
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(75, 23);
             this.CancelBtn.TabIndex = 6;
+            this.CancelBtn.TabStop = false;
             this.CancelBtn.Text = "Cancel";
             this.CancelBtn.UseVisualStyleBackColor = false;
             this.CancelBtn.Click += new System.EventHandler(this.CancelBtn_Click);
