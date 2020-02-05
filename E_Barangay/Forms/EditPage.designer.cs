@@ -431,6 +431,7 @@
             this.RecordsTable.Size = new System.Drawing.Size(374, 144);
             this.RecordsTable.TabIndex = 21;
             this.RecordsTable.TabStop = false;
+            this.RecordsTable.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.RecordsTable_CellMouseDoubleClick);
             // 
             // Column1
             // 

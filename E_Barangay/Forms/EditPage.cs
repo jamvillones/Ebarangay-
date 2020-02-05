@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using E_Barangay.Class;
 
 namespace E_Barangay.Forms
 {
@@ -167,6 +168,7 @@ namespace E_Barangay.Forms
         {
 
             InitializeDropdowns();
+            recDeleteBtn.Enabled = UserManager.instance.currentUser.canDelete;
         }
         bool validAddress
         {
@@ -504,7 +506,7 @@ namespace E_Barangay.Forms
         {
             this.Enabled = false;
             var yesOrNo = new YesOrNoPrompt("Are you sure you want to delete this record");
-            yesOrNo.onBtnClick += (s,ee) =>
+            yesOrNo.onBtnClick += (s, ee) =>
             {
                 if (ee) removeByDataIndex();
                 this.Enabled = true;
@@ -521,20 +523,50 @@ namespace E_Barangay.Forms
         //    this.Enabled = true;
         //}
 
+        int index
+        {
+            get
+            {
+                return RecordsTable.CurrentCell.RowIndex;
+            }
+        }
+        Record recordByIndex
+        {
+            get
+            {
+                return recordList[index];
+            }
+        }
         void removeByDataIndex()
         {
-            int index = RecordsTable.CurrentCell.RowIndex;
-            var r = recordList[index];
+
+            //var r = recordList[index];
 
 
             RecordsTable.Rows.RemoveAt(index);
 
             using (var eb = new EBarangayEntities())
             {
-                var tbr = eb.Records.Find(r.ID);
+                var tbr = eb.Records.Find(recordByIndex.ID);
                 eb.Records.Remove(tbr);
                 eb.SaveChanges();
             }
+        }
+
+        //private void RecordsTable_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        //{
+        //    var view = new RecordView(recordByIndex);
+        //    view.Show();
+
+        //}
+
+        private void RecordsTable_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            var view = new RecordView(recordByIndex);
+            view.FormClosed += (ee, ss) => { this.Enabled = true; };
+            this.Enabled = false;
+            view.Show();
+
         }
     }
 }
