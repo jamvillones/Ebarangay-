@@ -36,8 +36,6 @@
             this.SaveBtn = new System.Windows.Forms.Button();
             this.CancelBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.recordedOn = new System.Windows.Forms.DateTimePicker();
             this.locationTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.settlementSched = new System.Windows.Forms.DateTimePicker();
@@ -83,7 +81,7 @@
             // happenedDuring
             // 
             this.happenedDuring.CalendarFont = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.happenedDuring.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            this.happenedDuring.CustomFormat = "MM/dd/yyyy hh:mm";
             this.happenedDuring.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.happenedDuring.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.happenedDuring.Location = new System.Drawing.Point(109, 38);
@@ -141,27 +139,6 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Narrative";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(34, 69);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 14);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Recorded On:";
-            // 
-            // recordedOn
-            // 
-            this.recordedOn.CalendarFont = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.recordedOn.CustomFormat = "MM/dd/yyyy hh:mm:ss";
-            this.recordedOn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.recordedOn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.recordedOn.Location = new System.Drawing.Point(109, 64);
-            this.recordedOn.Name = "recordedOn";
-            this.recordedOn.Size = new System.Drawing.Size(262, 20);
-            this.recordedOn.TabIndex = 4;
-            // 
             // locationTxt
             // 
             this.locationTxt.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -185,7 +162,7 @@
             // settlementSched
             // 
             this.settlementSched.CalendarFont = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settlementSched.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            this.settlementSched.CustomFormat = "MM/dd/yyyy hh:mm";
             this.settlementSched.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.settlementSched.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.settlementSched.Location = new System.Drawing.Point(493, 38);
@@ -215,8 +192,6 @@
             this.Controls.Add(this.settlementSched);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.locationTxt);
-            this.Controls.Add(this.recordedOn);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.SaveBtn);
@@ -248,8 +223,6 @@
         private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker recordedOn;
         private System.Windows.Forms.TextBox locationTxt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker settlementSched;

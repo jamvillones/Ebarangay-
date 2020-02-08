@@ -527,7 +527,7 @@ namespace E_Barangay.Forms
         {
             get
             {
-                return RecordsTable.CurrentCell.RowIndex;
+                return RecordsTable.SelectedCells[0].RowIndex;
             }
         }
         Record recordByIndex
@@ -539,18 +539,22 @@ namespace E_Barangay.Forms
         }
         void removeByDataIndex()
         {
-
-            //var r = recordList[index];
-
-
-            RecordsTable.Rows.RemoveAt(index);
-
+            if (RecordsTable.Rows.Count == 0)
+                return;
+          
+            ///remove it from database first to avoid error
             using (var eb = new EBarangayEntities())
             {
                 var tbr = eb.Records.Find(recordByIndex.ID);
                 eb.Records.Remove(tbr);
                 eb.SaveChanges();
             }
+
+            RecordsTable.Rows.RemoveAt(index);
+
+
+            //RecordsTable.Rows.RemoveAt(index);
+
         }
 
         //private void RecordsTable_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)

@@ -45,8 +45,10 @@ namespace E_Barangay.Forms
             r.ID = Guid.NewGuid().ToString();
             r.Name = TitleField.Text;
             r.Details = DetailsField.Text;
-            r.DateIssued = happenedDuring.Value;
-            r.DateHappened = recordedOn.Value;
+           
+           
+            r.DateIssued = DateTime.Now;
+            r.DateHappened = happenedDuring.Value;
             r.Location = locationTxt.Text;
             r.SettlementDate = settlementSched.Value;
             r.Status = BlotterStatus.Pending.ToString();

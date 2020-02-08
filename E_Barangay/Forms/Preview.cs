@@ -86,7 +86,7 @@ namespace E_Barangay.Forms
         //    }
         //    this.Close();
         //}
-        string emptyField = "--";
+        string emptyField = string.Empty;
         void AssignValuesToText()
         {
             if (target == null)
