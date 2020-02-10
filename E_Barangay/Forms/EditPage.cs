@@ -31,7 +31,7 @@ namespace E_Barangay.Forms
         public void AssignCitizen(Citizen c)
         {
             citizen = c;
-            SetFieldValues();
+           
         }
         string noneString = "-NONE-";
         /// <summary>
@@ -59,9 +59,8 @@ namespace E_Barangay.Forms
             IDField.Text = citizen.ID;
             FirstNameField.Text = citizen.Name;
             CurrentAdd.Text = citizen.Address;
-
             BdayPicker.Value = citizen.Birthday;
-            Console.WriteLine(citizen.Birthday.ToString());
+
             //AreaOption.SelectedText = 
 
             ContactField.Text = citizen.ContactInfo;
@@ -168,9 +167,12 @@ namespace E_Barangay.Forms
 
         private void Edit_Load(object sender, EventArgs e)
         {
-
             InitializeDropdowns();
             recDeleteBtn.Enabled = UserManager.instance.currentUser.canDelete;
+            Console.WriteLine(citizen.Birthday.ToString());
+            SetFieldValues();
+           
+
         }
         bool validAddress
         {
