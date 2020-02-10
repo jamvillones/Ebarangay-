@@ -242,7 +242,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(391, 20);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(456, 126);
+            this.groupBox1.Size = new System.Drawing.Size(481, 126);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Address";
@@ -251,7 +251,7 @@
             // 
             this.AreaOption.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.AreaOption.FormattingEnabled = true;
-            this.AreaOption.Location = new System.Drawing.Point(295, 13);
+            this.AreaOption.Location = new System.Drawing.Point(320, 13);
             this.AreaOption.Name = "AreaOption";
             this.AreaOption.Size = new System.Drawing.Size(155, 21);
             this.AreaOption.TabIndex = 2;
@@ -259,7 +259,7 @@
             // MunicipalityField
             // 
             this.MunicipalityField.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.MunicipalityField.Location = new System.Drawing.Point(295, 40);
+            this.MunicipalityField.Location = new System.Drawing.Point(320, 40);
             this.MunicipalityField.Name = "MunicipalityField";
             this.MunicipalityField.Size = new System.Drawing.Size(155, 20);
             this.MunicipalityField.TabIndex = 4;
@@ -279,7 +279,7 @@
             // ProvinceField
             // 
             this.ProvinceField.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.ProvinceField.Location = new System.Drawing.Point(61, 66);
+            this.ProvinceField.Location = new System.Drawing.Point(86, 66);
             this.ProvinceField.Name = "ProvinceField";
             this.ProvinceField.Size = new System.Drawing.Size(389, 20);
             this.ProvinceField.TabIndex = 5;
@@ -290,7 +290,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(223, 43);
+            this.label7.Location = new System.Drawing.Point(248, 43);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 14);
             this.label7.TabIndex = 19;
@@ -314,7 +314,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(260, 16);
+            this.label5.Location = new System.Drawing.Point(285, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 14);
             this.label5.TabIndex = 17;
@@ -334,11 +334,9 @@
             // 
             // BarangayField
             // 
-            this.BarangayField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.BarangayField.Location = new System.Drawing.Point(61, 40);
             this.BarangayField.Name = "BarangayField";
-            this.BarangayField.Size = new System.Drawing.Size(165, 20);
+            this.BarangayField.Size = new System.Drawing.Size(156, 20);
             this.BarangayField.TabIndex = 3;
             // 
             // groupBox2
@@ -349,7 +347,7 @@
             this.groupBox2.Controls.Add(this.IsPwd);
             this.groupBox2.Controls.Add(this.IsSenior);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(408, 296);
+            this.groupBox2.Location = new System.Drawing.Point(433, 296);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(133, 127);
             this.groupBox2.TabIndex = 4;
@@ -409,7 +407,7 @@
             this.RecordsTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.RecordsTable.RowTemplate.DividerHeight = 1;
             this.RecordsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.RecordsTable.Size = new System.Drawing.Size(384, 120);
+            this.RecordsTable.Size = new System.Drawing.Size(409, 120);
             this.RecordsTable.TabIndex = 21;
             this.RecordsTable.TabStop = false;
             // 
@@ -443,7 +441,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(9, 296);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(393, 179);
+            this.groupBox3.Size = new System.Drawing.Size(418, 179);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Records";
@@ -491,7 +489,7 @@
             this.RegisterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegisterBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterBtn.Image = ((System.Drawing.Image)(resources.GetObject("RegisterBtn.Image")));
-            this.RegisterBtn.Location = new System.Drawing.Point(636, 433);
+            this.RegisterBtn.Location = new System.Drawing.Point(661, 433);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(100, 40);
             this.RegisterBtn.TabIndex = 6;
@@ -509,7 +507,7 @@
             this.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelBtn.Image = ((System.Drawing.Image)(resources.GetObject("CancelBtn.Image")));
-            this.CancelBtn.Location = new System.Drawing.Point(742, 433);
+            this.CancelBtn.Location = new System.Drawing.Point(767, 433);
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(100, 40);
             this.CancelBtn.TabIndex = 7;
@@ -547,7 +545,7 @@
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(9, 152);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(838, 138);
+            this.groupBox4.Size = new System.Drawing.Size(863, 138);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Basic Info";
@@ -569,7 +567,7 @@
             this.PrecinctNumField.Enabled = false;
             this.PrecinctNumField.Location = new System.Drawing.Point(396, 94);
             this.PrecinctNumField.Name = "PrecinctNumField";
-            this.PrecinctNumField.Size = new System.Drawing.Size(180, 20);
+            this.PrecinctNumField.Size = new System.Drawing.Size(205, 20);
             this.PrecinctNumField.TabIndex = 22;
             // 
             // label16
@@ -643,7 +641,7 @@
             // 
             this.SpouseField.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.SpouseField.Enabled = false;
-            this.SpouseField.Location = new System.Drawing.Point(397, 66);
+            this.SpouseField.Location = new System.Drawing.Point(422, 66);
             this.SpouseField.MaxLength = 100;
             this.SpouseField.Name = "SpouseField";
             this.SpouseField.Size = new System.Drawing.Size(435, 20);
@@ -688,7 +686,7 @@
             // MotherField
             // 
             this.MotherField.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.MotherField.Location = new System.Drawing.Point(396, 40);
+            this.MotherField.Location = new System.Drawing.Point(421, 40);
             this.MotherField.Name = "MotherField";
             this.MotherField.Size = new System.Drawing.Size(436, 20);
             this.MotherField.TabIndex = 16;
@@ -696,7 +694,7 @@
             // FatherField
             // 
             this.FatherField.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.FatherField.Location = new System.Drawing.Point(397, 14);
+            this.FatherField.Location = new System.Drawing.Point(422, 14);
             this.FatherField.Name = "FatherField";
             this.FatherField.Size = new System.Drawing.Size(435, 20);
             this.FatherField.TabIndex = 15;
@@ -840,7 +838,7 @@
             this.groupBox6.Controls.Add(this.SSSField);
             this.groupBox6.Controls.Add(this.PHField);
             this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(547, 296);
+            this.groupBox6.Location = new System.Drawing.Point(572, 296);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(300, 127);
             this.groupBox6.TabIndex = 5;
@@ -904,7 +902,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(859, 487);
+            this.ClientSize = new System.Drawing.Size(884, 487);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.panel1);

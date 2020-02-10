@@ -59,6 +59,7 @@
             this.DataTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.DataTable.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.DataTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DataTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -136,7 +137,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(501, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 23);
@@ -147,9 +148,9 @@
             // ResultTxt
             // 
             this.ResultTxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ResultTxt.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ResultTxt.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ResultTxt.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResultTxt.ForeColor = System.Drawing.Color.White;
+            this.ResultTxt.ForeColor = System.Drawing.Color.Black;
             this.ResultTxt.Location = new System.Drawing.Point(552, 15);
             this.ResultTxt.Name = "ResultTxt";
             this.ResultTxt.Size = new System.Drawing.Size(142, 23);
@@ -216,10 +217,10 @@
             // SearchBox
             // 
             this.SearchBox.AcceptsReturn = true;
-            this.SearchBox.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SearchBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.SearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SearchBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBox.ForeColor = System.Drawing.Color.White;
+            this.SearchBox.ForeColor = System.Drawing.Color.Black;
             this.SearchBox.Location = new System.Drawing.Point(12, 15);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(306, 22);
@@ -257,7 +258,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.CreateBtn);
             this.Controls.Add(this.ResultTxt);

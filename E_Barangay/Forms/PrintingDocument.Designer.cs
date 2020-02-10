@@ -40,7 +40,7 @@
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.flowLayoutPanel1.Controls.Add(this.BClearanceBtn);
             this.flowLayoutPanel1.Controls.Add(this.BussClearanceBtn);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 35);
@@ -50,7 +50,7 @@
             // 
             // BClearanceBtn
             // 
-            this.BClearanceBtn.BackColor = System.Drawing.Color.SlateGray;
+            this.BClearanceBtn.BackColor = System.Drawing.Color.DarkSlateGray;
             this.BClearanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BClearanceBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BClearanceBtn.ForeColor = System.Drawing.Color.White;
@@ -58,13 +58,14 @@
             this.BClearanceBtn.Name = "BClearanceBtn";
             this.BClearanceBtn.Size = new System.Drawing.Size(143, 41);
             this.BClearanceBtn.TabIndex = 0;
+            this.BClearanceBtn.TabStop = false;
             this.BClearanceBtn.Text = "Barangay Clearance";
             this.BClearanceBtn.UseVisualStyleBackColor = false;
             this.BClearanceBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // BussClearanceBtn
             // 
-            this.BussClearanceBtn.BackColor = System.Drawing.Color.SlateGray;
+            this.BussClearanceBtn.BackColor = System.Drawing.Color.DarkSlateGray;
             this.BussClearanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BussClearanceBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BussClearanceBtn.ForeColor = System.Drawing.Color.White;
@@ -72,6 +73,7 @@
             this.BussClearanceBtn.Name = "BussClearanceBtn";
             this.BussClearanceBtn.Size = new System.Drawing.Size(143, 41);
             this.BussClearanceBtn.TabIndex = 1;
+            this.BussClearanceBtn.TabStop = false;
             this.BussClearanceBtn.Text = "Bussiness Clearance";
             this.BussClearanceBtn.UseVisualStyleBackColor = false;
             this.BussClearanceBtn.Click += new System.EventHandler(this.BussClearanceBtn_Click);
@@ -90,7 +92,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkCyan;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Name = "PrintingDocument";

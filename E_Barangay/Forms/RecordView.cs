@@ -31,6 +31,7 @@ namespace E_Barangay.Forms
         {
             Person.Text = currRec.Citizen.Name;
             Status.Text = currRec.Status;
+            Status.ForeColor = currRec.Status == "Pending" ? Color.Red : Color.Green;
             TitleField.Text = currRec.Name;
             locationTxt.Text = currRec.Location;
             During.Text = currRec.DateHappened.ToString();

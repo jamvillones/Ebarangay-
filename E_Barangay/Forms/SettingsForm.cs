@@ -27,7 +27,11 @@ namespace E_Barangay.Forms
             {
                 captainTxt.Text = eb.Officials.Find("Punong_Barangay").Name;
 
-                LoadSB(eb.Officials.ToList(), sbTxt0, sbTxt1, sbTxt2, sbTxt3, sbTxt4, sbTxt5, sbTxt6);
+                var sb = from sbmemb in eb.Officials
+                         where sbmemb.Position == "Sangguniang Barangay Member"
+                         select sbmemb;
+
+                LoadSB(sb.ToList(), sbTxt0, sbTxt1, sbTxt2, sbTxt3, sbTxt4, sbTxt5, sbTxt6);
 
                 secTxt.Text = eb.Officials.FirstOrDefault(o => o.Position == "Barangay Secretary").Name;
                 treasTxt.Text = eb.Officials.FirstOrDefault(o => o.Position == "Barangay Treasurer").Name;

@@ -12,33 +12,63 @@ namespace E_Barangay.Forms
 {
     public partial class Dashboard : UserControl
     {
-        E_Barangay.Class.Statistics s;
+        //E_Barangay.Class.Statistics s;
         public Dashboard()
         {
             InitializeComponent();
-           
+
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            //ShowStats();
         }
 
-        public void ShowStats()
+        public void InitValues()
         {
-            s = new Class.Statistics();
             using (var eb = new EBarangayEntities())
             {
-                s.Initialize(eb.Citizens.ToArray());
-                TotalPopTxt.Text = s.totalPopulation.ToString();
-                MaleTxt.Text = s.male.ToString()+"("+s.getPercentage(s.male).ToString()+"%)";
-                FemaleTxt.Text = s.female.ToString() + "(" + s.getPercentage(s.female).ToString() + "%)";
-                SingleTxt.Text = s.single.ToString() + "(" + s.getPercentage(s.single).ToString() + "%)";
-                MarriedTxt.Text = s.married.ToString() + "(" + s.getPercentage(s.married).ToString() + "%)";
-                StudentTxt.Text = s.student.ToString() + "(" + s.getPercentage(s.student).ToString() + "%)";
-                PwdTxt.Text = s.pwd.ToString() + "(" + s.getPercentage(s.pwd).ToString() + "%)";
-                IndigentTxt.Text = s.indigent.ToString() + "(" + s.getPercentage(s.indigent).ToString() + "%)";
-                SeniorTxt.Text = s.senior.ToString() + "(" + s.getPercentage(s.senior).ToString() + "%)";
+                captainTxt.Text = eb.Officials.Find("Punong_Barangay").Name;
+
+                var sb = from sbmemb in eb.Officials
+                         where sbmemb.Position == "Sangguniang Barangay Member"
+                         select sbmemb;
+
+                LoadSB(sb.ToList(), sbTxt0, sbTxt1, sbTxt2, sbTxt3, sbTxt4, sbTxt5, sbTxt6);
+
+                secTxt.Text = eb.Officials.FirstOrDefault(o => o.Position == "Barangay Secretary").Name;
+                treasTxt.Text = eb.Officials.FirstOrDefault(o => o.Position == "Barangay Treasurer").Name;
+
+                PopulationTxt.Text = eb.Citizens.Count().ToString();
+
+                var area = eb.Areas;
+                areaList.Items.Clear();
+
+                //var areaGroup = from g in eb.Citizens
+                //                group g by g.Area;
+
+                //foreach(var group in areaGroup)
+                //{
+                //    areaList.Items.Add(group.Key.ToString());
+                //}
+
+                foreach (var a in area)
+                {
+                    string s = "(" + a.Citizens.Count() + ")" + a.Name;
+                    string v = a.Name;
+
+                    areaList.Items.Add(v);
+                    //ListViewItem item = new ListViewItem(s);
+
+                    //areaList.Items.Add(item);
+
+                }
+            }
+        }
+        void LoadSB(List<Official> o, params Control[] txt)
+        {
+            for (int i = 0; i < txt.Length; i++)
+            {
+                txt[i].Text = o[i].Name;
             }
         }
     }

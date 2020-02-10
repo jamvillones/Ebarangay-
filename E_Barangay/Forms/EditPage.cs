@@ -53,6 +53,7 @@ namespace E_Barangay.Forms
                     RecordsTable.Rows[i].Cells[1].Value = recordList[i].Name;
                     RecordsTable.Rows[i].Cells[2].Value = recordList[i].Details;
                 }
+
             }
             //ImageBox.Image = Class.ImageConverter.byteArrayToImage(citizen.Picture);
             IDField.Text = citizen.ID;
@@ -60,6 +61,7 @@ namespace E_Barangay.Forms
             CurrentAdd.Text = citizen.Address;
 
             BdayPicker.Value = citizen.Birthday;
+            Console.WriteLine(citizen.Birthday.ToString());
             //AreaOption.SelectedText = 
 
             ContactField.Text = citizen.ContactInfo;
@@ -183,67 +185,6 @@ namespace E_Barangay.Forms
         }
         private void SaveCallback(object sender, EventArgs e)
         {
-            #region not needed
-            // ///checking if valid for registration
-            // if (!CanSave())
-            // {
-            //     ReddenRequiredFields();
-            //     MessageBox.Show("Cannot Save. Fill out required fields or the id is already taken!");
-            //     return;
-            // }
-
-            // Citizen temp = new Citizen();
-            //// temp.ID = IDField.Text == string.Empty ? Guid.NewGuid().ToString() : IDField.Text;
-            // temp.Name = FirstNameField.Text;
-            //// temp.Name = FirstNameField.Text + " " + MiddleNameField.Text + " " + LastNameField.Text;
-            // temp.Gender = SexOption.Text;
-
-            // if (NumberField.Text == "")
-            // {
-            //     temp.Address = AreaOption.Text + ", " +
-            //                    BarangayField.Text + ", " +
-            //                    MunicipalityField.Text + ", " +
-            //                    ProvinceField.Text;
-            // }
-            // else
-            // {
-            //     temp.Address = NumberField.Text + ", " + AreaOption.Text + ", " + BarangayField.Text + ", " + MunicipalityField.Text + ", " + ProvinceField.Text;
-            // }
-
-
-            // temp.Birthday = BdayPicker.Value;
-            // temp.ContactInfo = ContactField.Text;
-
-            // temp.FathersName = FatherField.Text;
-            // temp.MothersName = MotherField.Text;
-            // temp.CivilStatus = CivilStatusOption.Text;
-            // temp.SpouseName = SpouseField.Text;
-
-            // temp.Indigent = isIndigent.Checked;
-            // temp.PWD = IsPwd.Checked;
-            // temp.SeniorCitizen = IsSenior.Checked;
-            // temp.Student = IsStudent.Checked;
-            // temp.Picture = imageToByteArray(ImageBox.Image);
-
-            // using (var ent = new EBarangayEntities())
-            // {
-
-            //     temp.Area = AreaOption.Items.Contains(AreaOption.Text) ? ent.Areas.FirstOrDefault(r => r.Name == AreaOption.Text) : ent.Areas.First();
-            //     ent.Citizens.Add(temp);
-
-            //     for (int i = 0; i < records.Count; i++)
-            //     {
-            //         records[i].CitizenID = temp.ID;
-            //         ent.Records.Add(records[i]);
-            //     }
-            //     ent.SaveChanges();
-            //     records.Clear();
-            // }
-            // MessageBox.Show("successfully saved!");
-            // ChangeNormalColors();
-            // this.ActiveControl = FirstNameField;
-            // CleanFields();
-            #endregion
             using (var entity = new EBarangayEntities())
             {
                 var _citizen_ = entity.Citizens.FirstOrDefault(c => c.ID == citizen.ID);
@@ -261,8 +202,7 @@ namespace E_Barangay.Forms
                 _citizen_.PagIbig = fieldisempty(PIField) ? null : PIField.Text;
                 _citizen_.Philhealth = fieldisempty(PHField) ? null : PHField.Text;
 
-                //foreach (var r in tobeAdded)
-                //    _citizen_.Records.Add(r);
+
 
                 string address = AreaOption.Text + ", " + BarangayField.Text + ", " + MunicipalityField.Text + ", " + ProvinceField.Text;
 
@@ -474,15 +414,6 @@ namespace E_Barangay.Forms
         }
         #endregion
 
-        #region imageConversion
-        public byte[] imageToByteArray(System.Drawing.Image imageIn)
-        {
-            if (imageIn == null)
-                return null;
-            MemoryStream ms = new MemoryStream();
-            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
-            return ms.ToArray();
-        }
 
         private void VoterCheckbox_CheckedChanged(object sender, EventArgs e)
         {
@@ -490,7 +421,7 @@ namespace E_Barangay.Forms
             VoterIDField.Enabled = PrecinctNumField.Enabled = VoterCheckbox.Checked ? true : false;
 
         }
-        #endregion  
+
 
         private void RegisterControl_KeyDown(object sender, KeyEventArgs e)
         {
@@ -516,13 +447,6 @@ namespace E_Barangay.Forms
 
         }
 
-        //private void YesOrNo_onBtnClick(object sender, bool e)
-        //{
-        //    if (e)
-        //        removeByDataIndex();
-        //    this.Enabled = true;
-        //}
-
         int index
         {
             get
@@ -530,6 +454,7 @@ namespace E_Barangay.Forms
                 return RecordsTable.SelectedCells[0].RowIndex;
             }
         }
+
         Record recordByIndex
         {
             get
@@ -541,7 +466,7 @@ namespace E_Barangay.Forms
         {
             if (RecordsTable.Rows.Count == 0)
                 return;
-          
+
             ///remove it from database first to avoid error
             using (var eb = new EBarangayEntities())
             {

@@ -45,13 +45,15 @@
             this.During = new System.Windows.Forms.TextBox();
             this.RecordedOn = new System.Windows.Forms.TextBox();
             this.settleSched = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(420, 70);
+            this.label6.Location = new System.Drawing.Point(420, 78);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 14);
             this.label6.TabIndex = 25;
@@ -61,7 +63,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(429, 42);
+            this.label5.Location = new System.Drawing.Point(429, 35);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 14);
             this.label5.TabIndex = 24;
@@ -72,7 +74,7 @@
             this.locationTxt.BackColor = System.Drawing.SystemColors.Control;
             this.locationTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.locationTxt.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.locationTxt.Location = new System.Drawing.Point(525, 41);
+            this.locationTxt.Location = new System.Drawing.Point(525, 34);
             this.locationTxt.MaxLength = 50;
             this.locationTxt.Name = "locationTxt";
             this.locationTxt.ReadOnly = true;
@@ -84,7 +86,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(33, 96);
+            this.label4.Location = new System.Drawing.Point(33, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(69, 14);
             this.label4.TabIndex = 23;
@@ -94,7 +96,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 137);
+            this.label3.Location = new System.Drawing.Point(12, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 14);
             this.label3.TabIndex = 22;
@@ -104,7 +106,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(69, 42);
+            this.label2.Location = new System.Drawing.Point(69, 35);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 14);
             this.label2.TabIndex = 20;
@@ -114,7 +116,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 70);
+            this.label1.Location = new System.Drawing.Point(12, 78);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 14);
             this.label1.TabIndex = 17;
@@ -126,9 +128,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DetailsField.BackColor = System.Drawing.SystemColors.Control;
-            this.DetailsField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DetailsField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DetailsField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DetailsField.Location = new System.Drawing.Point(15, 154);
+            this.DetailsField.Location = new System.Drawing.Point(15, 162);
             this.DetailsField.MaxLength = 500;
             this.DetailsField.Multiline = true;
             this.DetailsField.Name = "DetailsField";
@@ -141,8 +143,9 @@
             // 
             this.TitleField.BackColor = System.Drawing.SystemColors.Control;
             this.TitleField.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TitleField.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleField.Location = new System.Drawing.Point(108, 41);
+            this.TitleField.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TitleField.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleField.Location = new System.Drawing.Point(108, 34);
             this.TitleField.MaxLength = 50;
             this.TitleField.Name = "TitleField";
             this.TitleField.ReadOnly = true;
@@ -154,7 +157,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(16, 16);
+            this.label7.Location = new System.Drawing.Point(16, 9);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 14);
             this.label7.TabIndex = 27;
@@ -165,7 +168,7 @@
             this.Person.BackColor = System.Drawing.SystemColors.Control;
             this.Person.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Person.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Person.Location = new System.Drawing.Point(108, 15);
+            this.Person.Location = new System.Drawing.Point(108, 8);
             this.Person.MaxLength = 50;
             this.Person.Name = "Person";
             this.Person.ReadOnly = true;
@@ -177,7 +180,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(485, 16);
+            this.label8.Location = new System.Drawing.Point(485, 9);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 14);
             this.label8.TabIndex = 29;
@@ -188,7 +191,7 @@
             this.Status.BackColor = System.Drawing.SystemColors.Control;
             this.Status.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Status.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Status.Location = new System.Drawing.Point(525, 15);
+            this.Status.Location = new System.Drawing.Point(525, 8);
             this.Status.MaxLength = 50;
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
@@ -213,7 +216,7 @@
             this.During.BackColor = System.Drawing.SystemColors.Control;
             this.During.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.During.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.During.Location = new System.Drawing.Point(108, 69);
+            this.During.Location = new System.Drawing.Point(108, 77);
             this.During.MaxLength = 50;
             this.During.Name = "During";
             this.During.ReadOnly = true;
@@ -226,7 +229,7 @@
             this.RecordedOn.BackColor = System.Drawing.SystemColors.Control;
             this.RecordedOn.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.RecordedOn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RecordedOn.Location = new System.Drawing.Point(108, 95);
+            this.RecordedOn.Location = new System.Drawing.Point(108, 103);
             this.RecordedOn.MaxLength = 50;
             this.RecordedOn.Name = "RecordedOn";
             this.RecordedOn.ReadOnly = true;
@@ -239,7 +242,7 @@
             this.settleSched.BackColor = System.Drawing.SystemColors.Control;
             this.settleSched.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.settleSched.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settleSched.Location = new System.Drawing.Point(525, 69);
+            this.settleSched.Location = new System.Drawing.Point(525, 77);
             this.settleSched.MaxLength = 50;
             this.settleSched.Name = "settleSched";
             this.settleSched.ReadOnly = true;
@@ -247,11 +250,29 @@
             this.settleSched.TabIndex = 33;
             this.settleSched.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Location = new System.Drawing.Point(12, 134);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(761, 1);
+            this.panel1.TabIndex = 34;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(15, 62);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(761, 1);
+            this.panel2.TabIndex = 35;
+            // 
             // RecordView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 481);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.settleSched);
             this.Controls.Add(this.RecordedOn);
             this.Controls.Add(this.During);
@@ -300,5 +321,7 @@
         private System.Windows.Forms.TextBox During;
         private System.Windows.Forms.TextBox RecordedOn;
         private System.Windows.Forms.TextBox settleSched;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

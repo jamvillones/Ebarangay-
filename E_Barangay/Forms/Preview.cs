@@ -43,49 +43,13 @@ namespace E_Barangay.Forms
         Class.PasswordToFormHandler<EditPage> passwordToFormHandler;
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            //if (epage == null)
-            //{
-            //    epage = new EditPage();
-            //    epage.AssignCitizen(target);
-            //    epage.Show();
-            //}
             passwordToFormHandler = new Class.PasswordToFormHandler<EditPage>();
             EditPage ep = passwordToFormHandler.form;
             ep.AssignCitizen(target);
             this.Close();
-            //if (passwordForm == null)
-            //{
-            //    passwordForm = new PasswordForm(Class.UserManager.instance.currentUser.Username);
-            //    passwordForm.OnCorrectPassword += PasswordForm_OnCorrectPassword;
-            //    passwordForm.FormClosed += PasswordForm_FormClosed;
-            //    this.FormClosing += passwordForm.CallerCloseCallback;
-            //    passwordForm.Show();
-            //}
-            //else
-            //{
-            //    passwordForm.BringToFront();
-            //}
+
         }
 
-        //private void PasswordForm_FormClosed(object sender, FormClosedEventArgs e)
-        //{
-        //    // throw new NotImplementedException();
-        //    this.FormClosing -= passwordForm.CallerCloseCallback;
-        //    passwordForm = null;
-        //}
-
-        //private void PasswordForm_OnCorrectPassword(object sender, bool e)
-        //{
-        //    if (!e)
-        //        return;
-        //    if (epage == null)
-        //    {
-        //        epage = new EditPage();
-        //        epage.AssignCitizen(target);
-        //        epage.Show();
-        //    }
-        //    this.Close();
-        //}
         string emptyField = string.Empty;
         void AssignValuesToText()
         {
@@ -113,14 +77,10 @@ namespace E_Barangay.Forms
             SSS.Text = target.SSS ?? emptyField;
             PagIbig.Text = target.PagIbig ?? emptyField;
             Philhealth.Text = target.Philhealth ?? emptyField;
-            //if (string.IsNullOrEmpty(target.SpouseName))
-            //    SpouseTxt.Text = "NONE";
-            //else
-            //    SpouseTxt.Text = target.SpouseName;
 
             Class.Date date = new Class.Date();
             Class.DateTimeExtension.ToAgeString(target.Birthday, ref date);
-            // AgeTxt.Text = (DateTime.Today.Year - target.Birthday.Year).ToString();
+
             AgeTxt.Text = date.years.ToString();
             IsIndigent.Checked = target.Indigent ? true : false;
             IsStudent.Checked = target.Student ? true : false;
@@ -132,48 +92,15 @@ namespace E_Barangay.Forms
             {
                 var t = con.Citizens.FirstOrDefault(r => r.ID == target.ID);
                 ImageBox.Image = t.Picture == null ? Properties.Resources.image_50px : Class.ImageConverter.byteArrayToImage(t.Picture);
-                //if (t.Picture != null)
-                //    ImageBox.Image = Class.ImageConverter.byteArrayToImage(t.Picture);
-                //else
-                //    image
 
                 List<Record> rec = t.Records.ToList<Record>();
                 for (int i = 0; i < rec.Count; i++)
                 {
-                    RecordsTable.Rows.Add(rec[i].DateHappened,rec[i].Name,rec[i].Status);
-                    //RecordsTable.Rows[i].Cells[0].Value = rec[i].DateIssued;
-                    //RecordsTable.Rows[i].Cells[1].Value = rec[i].Name;
-                    //RecordsTable.Rows[i].Cells[2].Value = rec[i].Details;
+                    RecordsTable.Rows.Add(rec[i].DateHappened, rec[i].Name, rec[i].Status);
                 }
             }
 
         }
-
-        //RecordForm recform;
-        //private void AddRecordBtn_Click(object sender, EventArgs e)
-        //{
-        //    if (recform == null)
-        //    {
-        //        recform = new RecordForm();
-        //        recform.FormClosed += Recform_FormClosed;
-        //        //recform.GetRef(this);
-        //        recform.Show();
-        //        return;
-        //    }
-        //    recform.BringToFront();
-        //}
-
-        //private void Recform_FormClosed(object sender, FormClosedEventArgs e)
-        //{
-        //    recform.FormClosed -= Recform_FormClosed;
-        //    recform = null;
-        //}
-
-
-        //public void AcceptRecord(Record r)
-        //{
-
-        //}
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {

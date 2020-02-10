@@ -106,7 +106,7 @@ namespace E_Barangay.Forms
             ///rentAccept = DashControl;
             try
             {
-                DashControl.ShowStats();
+                DashControl.InitValues();
                 QueryPage.setUser();
                 //QueryPage.showData();
                 // RegisterPage.LoadValues();

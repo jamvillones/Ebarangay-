@@ -38,12 +38,12 @@
             this.QueryBtn = new System.Windows.Forms.Button();
             this.IssueBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
             this.DashControl = new E_Barangay.Forms.Dashboard();
             this.QueryPage = new E_Barangay.Forms.QueryControl();
-            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.AddNewLoginBtn = new System.Windows.Forms.Button();
             this.UserWelcomeTxt = new System.Windows.Forms.Label();
+            this.AddNewLoginBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -184,6 +184,15 @@
             this.panel3.Size = new System.Drawing.Size(813, 548);
             this.panel3.TabIndex = 3;
             // 
+            // printingFiles
+            // 
+            this.printingFiles.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.printingFiles.Location = new System.Drawing.Point(0, 0);
+            this.printingFiles.Name = "printingFiles";
+            this.printingFiles.Size = new System.Drawing.Size(813, 548);
+            this.printingFiles.TabIndex = 4;
+            // 
             // DashControl
             // 
             this.DashControl.BackColor = System.Drawing.Color.Silver;
@@ -196,28 +205,18 @@
             // 
             // QueryPage
             // 
-            this.QueryPage.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.QueryPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.QueryPage.Location = new System.Drawing.Point(0, 0);
             this.QueryPage.Name = "QueryPage";
             this.QueryPage.Size = new System.Drawing.Size(813, 548);
-            this.QueryPage.TabIndex = 0;
-            this.QueryPage.Load += new System.EventHandler(this.QueryPage_Load);
-            // 
-            // printingFiles
-            // 
-            this.printingFiles.BackColor = System.Drawing.Color.DarkCyan;
-            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.printingFiles.Location = new System.Drawing.Point(0, 0);
-            this.printingFiles.Name = "printingFiles";
-            this.printingFiles.Size = new System.Drawing.Size(813, 548);
-            this.printingFiles.TabIndex = 4;
+            this.QueryPage.TabIndex = 5;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel2.Controls.Add(this.AddNewLoginBtn);
             this.panel2.Controls.Add(this.UserWelcomeTxt);
+            this.panel2.Controls.Add(this.AddNewLoginBtn);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -225,6 +224,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(825, 38);
             this.panel2.TabIndex = 4;
+            // 
+            // UserWelcomeTxt
+            // 
+            this.UserWelcomeTxt.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserWelcomeTxt.ForeColor = System.Drawing.Color.White;
+            this.UserWelcomeTxt.Location = new System.Drawing.Point(235, 8);
+            this.UserWelcomeTxt.Name = "UserWelcomeTxt";
+            this.UserWelcomeTxt.Size = new System.Drawing.Size(215, 23);
+            this.UserWelcomeTxt.TabIndex = 2;
+            this.UserWelcomeTxt.Text = "Welcome:";
+            this.UserWelcomeTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // AddNewLoginBtn
             // 
@@ -244,17 +254,6 @@
             this.AddNewLoginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddNewLoginBtn.UseVisualStyleBackColor = true;
             this.AddNewLoginBtn.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // UserWelcomeTxt
-            // 
-            this.UserWelcomeTxt.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserWelcomeTxt.ForeColor = System.Drawing.Color.White;
-            this.UserWelcomeTxt.Location = new System.Drawing.Point(235, 8);
-            this.UserWelcomeTxt.Name = "UserWelcomeTxt";
-            this.UserWelcomeTxt.Size = new System.Drawing.Size(215, 23);
-            this.UserWelcomeTxt.TabIndex = 2;
-            this.UserWelcomeTxt.Text = "Welcome:";
-            this.UserWelcomeTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -308,7 +307,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button QueryBtn;
         private System.Windows.Forms.Panel panel3;
-        private QueryControl QueryPage;
         private System.Windows.Forms.Panel SelectionPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
@@ -322,5 +320,6 @@
         private System.Windows.Forms.Button AddNewLoginBtn;
         private System.Windows.Forms.Panel panel5;
         private PrintingDocument printingFiles;
+        private QueryControl QueryPage;
     }
 }
