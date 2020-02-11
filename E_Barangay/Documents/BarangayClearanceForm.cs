@@ -59,12 +59,12 @@ namespace E_Barangay.Forms
             return c.Text;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ToggleEdit();
-            printPreviewDialog1.Document = printDocument1;
-            printPreviewDialog1.ShowDialog();
-        }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    //ToggleEdit();
+        //    //printPreviewDialog1.Document = printDocument1;
+        //    //printPreviewDialog1.ShowDialog();
+        //}
 
         private void IssuePage_Load(object sender, EventArgs e)
         {

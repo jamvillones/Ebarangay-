@@ -64,7 +64,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.UpdateBtn = new System.Windows.Forms.Button();
             this.PrintBtn = new System.Windows.Forms.Button();
-            this.PrintPreviewBtn = new System.Windows.Forms.Button();
             this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
@@ -409,7 +408,6 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel2.Controls.Add(this.UpdateBtn);
             this.panel2.Controls.Add(this.PrintBtn);
-            this.panel2.Controls.Add(this.PrintPreviewBtn);
             this.panel2.Controls.Add(this.printPreviewControl1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(200, 0);
@@ -446,20 +444,6 @@
             this.PrintBtn.TabStop = false;
             this.PrintBtn.UseVisualStyleBackColor = false;
             this.PrintBtn.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // PrintPreviewBtn
-            // 
-            this.PrintPreviewBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.PrintPreviewBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrintPreviewBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrintPreviewBtn.Image = ((System.Drawing.Image)(resources.GetObject("PrintPreviewBtn.Image")));
-            this.PrintPreviewBtn.Location = new System.Drawing.Point(44, 8);
-            this.PrintPreviewBtn.Name = "PrintPreviewBtn";
-            this.PrintPreviewBtn.Size = new System.Drawing.Size(35, 30);
-            this.PrintPreviewBtn.TabIndex = 1;
-            this.PrintPreviewBtn.TabStop = false;
-            this.PrintPreviewBtn.UseVisualStyleBackColor = false;
-            this.PrintPreviewBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // printPreviewControl1
             // 
@@ -564,6 +548,5 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button UpdateBtn;
         private System.Windows.Forms.Button PrintBtn;
-        private System.Windows.Forms.Button PrintPreviewBtn;
     }
 }

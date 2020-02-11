@@ -31,7 +31,7 @@ namespace E_Barangay.Forms
         public void AssignCitizen(Citizen c)
         {
             citizen = c;
-           
+
         }
         string noneString = "-NONE-";
         /// <summary>
@@ -49,7 +49,7 @@ namespace E_Barangay.Forms
                 for (int i = 0; i < recordList.Count; i++)
                 {
                     RecordsTable.Rows.Add();
-                    RecordsTable.Rows[i].Cells[0].Value = recordList[i].DateIssued;
+                    RecordsTable.Rows[i].Cells[0].Value = recordList[i].ID;
                     RecordsTable.Rows[i].Cells[1].Value = recordList[i].Name;
                     RecordsTable.Rows[i].Cells[2].Value = recordList[i].Details;
                 }
@@ -103,9 +103,7 @@ namespace E_Barangay.Forms
             }
             else
             {
-                //this.Show();
-                // MessageBox.Show("Sorry wrong Password");
-                //Close();
+
                 Console.WriteLine("wrong");
                 this.Close();
                 this.Dispose();
@@ -169,9 +167,8 @@ namespace E_Barangay.Forms
         {
             InitializeDropdowns();
             recDeleteBtn.Enabled = UserManager.instance.currentUser.canDelete;
-            Console.WriteLine(citizen.Birthday.ToString());
             SetFieldValues();
-           
+
 
         }
         bool validAddress
@@ -353,10 +350,8 @@ namespace E_Barangay.Forms
         {
             var r = e;
 
-            // records.Add(e);
             r.CitizenID = citizen.ID;
-            // records.Add(e);
-            //tobeAdded.Add(e);
+
             recordList.Add(r);
             RecordsTable.Rows.Add(r.DateIssued, r.Name, r.Details);
             using (var eb = new EBarangayEntities())
@@ -374,20 +369,7 @@ namespace E_Barangay.Forms
             // ShowRecords();
         }
 
-        //void ShowRecords()
-        //{
-        //    RecordsTable.Rows.Clear();
-        //    Record[] rec = records.ToArray();
-        //    for (int i = 0; i < records.Count; i++)
-        //    {
-        //        RecordsTable.Rows.Add();
-        //        RecordsTable.Rows[i].Cells[0].Value = rec[i].DateIssued;
-        //        RecordsTable.Rows[i].Cells[1].Value = rec[i].Name;
-        //        RecordsTable.Rows[i].Cells[2].Value = rec[i].Details;
-        //    }
 
-
-        //}
         #endregion
 
         #region captureprompt
@@ -469,19 +451,17 @@ namespace E_Barangay.Forms
             if (RecordsTable.Rows.Count == 0)
                 return;
 
+            int i = index;
+            var r = recordByIndex;
             ///remove it from database first to avoid error
             using (var eb = new EBarangayEntities())
             {
-                var tbr = eb.Records.Find(recordByIndex.ID);
+                var tbr = eb.Records.Find(r.ID);
                 eb.Records.Remove(tbr);
                 eb.SaveChanges();
+                recordList.RemoveAt(i);
+                RecordsTable.Rows.RemoveAt(i);
             }
-
-            RecordsTable.Rows.RemoveAt(index);
-
-
-            //RecordsTable.Rows.RemoveAt(index);
-
         }
 
         //private void RecordsTable_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -498,6 +478,11 @@ namespace E_Barangay.Forms
             this.Enabled = false;
             view.Show();
 
+        }
+
+        private void RecordsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Console.WriteLine(recordByIndex.Name);
         }
     }
 }

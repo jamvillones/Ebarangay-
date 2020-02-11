@@ -34,10 +34,12 @@ namespace E_Barangay.Forms
             Status.ForeColor = currRec.Status == "Pending" ? Color.Red : Color.Green;
             TitleField.Text = currRec.Name;
             locationTxt.Text = currRec.Location;
-            During.Text = currRec.DateHappened.ToString();
-            RecordedOn.Text = currRec.DateIssued.ToString();
+
             DetailsField.Text = currRec.Details;
-            settleSched.Text = currRec.SettlementDate.ToString();
+
+            During.Text = currRec.DateHappened.Value.ToString("MMMM dd, yyyy hh:mm tt");
+            RecordedOn.Text = currRec.DateIssued.Value.ToString("MMMM dd, yyyy hh:mm tt");
+            settleSched.Text = currRec.SettlementDate.Value.ToString("MMMM dd, yyyy hh:mm tt");
 
         }
 
@@ -56,7 +58,8 @@ namespace E_Barangay.Forms
                  {
                      markAsDone();
                      Status.Text = "Settled";
-
+                     Status.ForeColor = Color.Green;
+                     DoneBtn.Enabled = false;
                  }
              };
             this.Enabled = false;

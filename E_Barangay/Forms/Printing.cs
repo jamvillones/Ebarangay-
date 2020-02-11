@@ -104,12 +104,12 @@ namespace E_Barangay.Forms
         {
             ToggleEdit();
         }
-        private void PrintPreviewBtn_Click(object sender, EventArgs e)
-        {
-            ToggleEdit();
-            printPreviewDialog.Document = document;
-            printPreviewDialog.ShowDialog();
-        }
+        //private void PrintPreviewBtn_Click(object sender, EventArgs e)
+        //{
+        //    ToggleEdit();
+        //    printPreviewDialog.Document = document;
+        //    printPreviewDialog.ShowDialog();
+        //}
 
         private void PrintBtn_Click(object sender, EventArgs e)
         {

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.GroupBox groupBox2;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditPage));
             this.IsStudent = new System.Windows.Forms.CheckBox();
             this.isIndigent = new System.Windows.Forms.CheckBox();
@@ -57,9 +57,6 @@
             this.BarangayField = new System.Windows.Forms.TextBox();
             this.VoterCheckbox = new System.Windows.Forms.CheckBox();
             this.RecordsTable = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.recDeleteBtn = new System.Windows.Forms.Button();
             this.AddRecordBtn = new System.Windows.Forms.Button();
@@ -93,6 +90,9 @@
             this.PIField = new System.Windows.Forms.TextBox();
             this.SSSField = new System.Windows.Forms.TextBox();
             this.PHField = new System.Windows.Forms.TextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             groupBox2 = new System.Windows.Forms.GroupBox();
             groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -412,14 +412,14 @@
             this.Column1,
             this.Column3,
             this.Column2});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.RecordsTable.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.RecordsTable.DefaultCellStyle = dataGridViewCellStyle1;
             this.RecordsTable.GridColor = System.Drawing.Color.Silver;
             this.RecordsTable.Location = new System.Drawing.Point(3, 24);
             this.RecordsTable.MultiSelect = false;
@@ -431,26 +431,8 @@
             this.RecordsTable.Size = new System.Drawing.Size(374, 144);
             this.RecordsTable.TabIndex = 21;
             this.RecordsTable.TabStop = false;
+            this.RecordsTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RecordsTable_CellContentClick);
             this.RecordsTable.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.RecordsTable_CellMouseDoubleClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Date";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Title";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Details";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // groupBox3
             // 
@@ -854,6 +836,25 @@
             this.PHField.Name = "PHField";
             this.PHField.Size = new System.Drawing.Size(247, 20);
             this.PHField.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Control Number";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Title";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "Details";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // EditPage
             // 

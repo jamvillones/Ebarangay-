@@ -30,10 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Printing));
             this.printPreviewControl = new System.Windows.Forms.PrintPreviewControl();
+            this.printDocument = new System.Drawing.Printing.PrintDocument();
             this.UpdateBtn = new System.Windows.Forms.Button();
             this.PrintBtn = new System.Windows.Forms.Button();
-            this.PrintPreviewBtn = new System.Windows.Forms.Button();
-            this.printDocument = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog = new System.Windows.Forms.PrintDialog();
             this.SuspendLayout();
@@ -81,20 +80,6 @@
             this.PrintBtn.UseVisualStyleBackColor = false;
             this.PrintBtn.Click += new System.EventHandler(this.PrintBtn_Click);
             // 
-            // PrintPreviewBtn
-            // 
-            this.PrintPreviewBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.PrintPreviewBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrintPreviewBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrintPreviewBtn.Image = ((System.Drawing.Image)(resources.GetObject("PrintPreviewBtn.Image")));
-            this.PrintPreviewBtn.Location = new System.Drawing.Point(45, 3);
-            this.PrintPreviewBtn.Name = "PrintPreviewBtn";
-            this.PrintPreviewBtn.Size = new System.Drawing.Size(35, 30);
-            this.PrintPreviewBtn.TabIndex = 6;
-            this.PrintPreviewBtn.TabStop = false;
-            this.PrintPreviewBtn.UseVisualStyleBackColor = false;
-            this.PrintPreviewBtn.Click += new System.EventHandler(this.PrintPreviewBtn_Click);
-            // 
             // printPreviewDialog
             // 
             this.printPreviewDialog.AutoScrollMargin = new System.Drawing.Size(0, 0);
@@ -119,7 +104,6 @@
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.UpdateBtn);
             this.Controls.Add(this.PrintBtn);
-            this.Controls.Add(this.PrintPreviewBtn);
             this.Controls.Add(this.printPreviewControl);
             this.Name = "Printing";
             this.Size = new System.Drawing.Size(597, 556);
@@ -133,7 +117,6 @@
         private System.Windows.Forms.PrintPreviewControl printPreviewControl;
         private System.Windows.Forms.Button UpdateBtn;
         private System.Windows.Forms.Button PrintBtn;
-        private System.Windows.Forms.Button PrintPreviewBtn;
         private System.Drawing.Printing.PrintDocument printDocument;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog;
         private System.Windows.Forms.PrintDialog printDialog;

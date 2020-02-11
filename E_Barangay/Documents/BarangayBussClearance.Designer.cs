@@ -346,7 +346,6 @@
             this.ClientSize = new System.Drawing.Size(768, 690);
             this.Controls.Add(this.printing);
             this.Controls.Add(this.panel1);
-            this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "BarangayBussClearance";
             this.ShowIcon = false;

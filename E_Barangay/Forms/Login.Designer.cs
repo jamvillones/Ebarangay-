@@ -57,7 +57,6 @@
             this.UsernameTxt.Name = "UsernameTxt";
             this.UsernameTxt.Size = new System.Drawing.Size(240, 22);
             this.UsernameTxt.TabIndex = 0;
-            this.UsernameTxt.TextChanged += new System.EventHandler(this.UsernameTxt_TextChanged);
             // 
             // PasswordTxt
             // 
@@ -70,9 +69,6 @@
             this.PasswordTxt.PasswordChar = '*';
             this.PasswordTxt.Size = new System.Drawing.Size(214, 22);
             this.PasswordTxt.TabIndex = 1;
-            this.PasswordTxt.TextChanged += new System.EventHandler(this.PasswordTxt_TextChanged);
-            this.PasswordTxt.Enter += new System.EventHandler(this.PasswordTxt_Enter);
-            this.PasswordTxt.Leave += new System.EventHandler(this.PasswordTxt_Leave);
             // 
             // panel1
             // 
@@ -116,7 +112,8 @@
             this.RevealBtn.TabIndex = 7;
             this.RevealBtn.TabStop = false;
             this.RevealBtn.UseVisualStyleBackColor = true;
-            this.RevealBtn.Click += new System.EventHandler(this.Reveal_Click);
+            this.RevealBtn.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RevealBtn_MouseDown);
+            this.RevealBtn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.RevealBtn_MouseUp);
             // 
             // label1
             // 

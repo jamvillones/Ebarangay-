@@ -83,39 +83,14 @@ namespace E_Barangay.Forms
 
         }
 
-        private void PasswordTxt_TextChanged(object sender, EventArgs e)
+        private void RevealBtn_MouseDown(object sender, MouseEventArgs e)
         {
-            // PasswordTxt.PasswordChar = '*';
-            // PasswordLabel.Text = string.Empty;
+            PasswordTxt.PasswordChar = '\0';
         }
 
-        private void UsernameTxt_TextChanged(object sender, EventArgs e)
+        private void RevealBtn_MouseUp(object sender, MouseEventArgs e)
         {
-            //UsernameLabel.Text = string.Empty;
-        }
-
-        private void PasswordTxt_Enter(object sender, EventArgs e)
-        {
-            Console.WriteLine("hey");
-            //PasswordTxt.Clear();
-            //PasswordTxt.SelectAll();
-        }
-
-        private void PasswordTxt_Leave(object sender, EventArgs e)
-        {
-            if (PasswordTxt.Text == string.Empty)
-            {
-                // PasswordTxt.PasswordChar = Convert.ToChar("");
-                // PasswordTxt.Text = "Password";
-            }
-        }
-        bool hidden = true;
-
-        private void Reveal_Click(object sender, EventArgs e)
-        {
-            hidden = !hidden;
-            PasswordTxt.PasswordChar = hidden ? '*' : '\0';
-            RevealBtn.Image = hidden ? Properties.Resources.eye_20px : Properties.Resources.invisible_20px;
+            PasswordTxt.PasswordChar = '*';
         }
     }
 }
