@@ -16,11 +16,6 @@ namespace E_Barangay.Forms
         public Dashboard()
         {
             InitializeComponent();
-
-        }
-
-        private void Dashboard_Load(object sender, EventArgs e)
-        {
         }
 
         public void InitValues()
@@ -43,25 +38,14 @@ namespace E_Barangay.Forms
                 var area = eb.Areas;
                 areaList.Items.Clear();
 
-                //var areaGroup = from g in eb.Citizens
-                //                group g by g.Area;
-
-                //foreach(var group in areaGroup)
-                //{
-                //    areaList.Items.Add(group.Key.ToString());
-                //}
-
                 foreach (var a in area)
                 {
                     string s = "(" + a.Citizens.Count() + ")" + a.Name;
                     areaList.Items.Add(s);
-                    //ListViewItem item = new ListViewItem(s);
-
-                    //areaList.Items.Add(item);
-
                 }
             }
         }
+
         void LoadSB(List<Official> o, params Control[] txt)
         {
             for (int i = 0; i < txt.Length; i++)
