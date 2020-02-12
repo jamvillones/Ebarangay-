@@ -1,4 +1,6 @@
-﻿namespace E_Barangay.Forms
+﻿using E_Barangay.Class;
+
+namespace E_Barangay.Forms
 {
     partial class QueryControl
     {
@@ -33,7 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QueryControl));
-            this.DataTable = new System.Windows.Forms.DataGridView();
+            this.DataTable = new CustomDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -280,7 +282,8 @@
 
         #endregion
         private System.Windows.Forms.Button ModifyBtn;
-        private System.Windows.Forms.DataGridView DataTable;
+        CustomDataGridView DataTable;
+        //private System.Windows.Forms.DataGridView DataTable;
         private System.Windows.Forms.Button InspectBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label ResultTxt;

@@ -111,6 +111,9 @@
     <Compile Include="Citizen.cs">
       <DependentUpon>Ebarangaymodel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Class\CustomDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Class\DateTimeExtension.cs" />
     <Compile Include="Class\ImageConverter.cs" />
     <Compile Include="Class\PasswordToFormHandler.cs" />
