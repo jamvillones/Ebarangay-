@@ -77,8 +77,6 @@
             this.PopulationTxt = new System.Windows.Forms.Label();
             this.panel25 = new System.Windows.Forms.Panel();
             this.areaList = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel24 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -708,9 +706,6 @@
             // 
             this.areaList.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.areaList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.areaList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
             this.areaList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.areaList.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.areaList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
@@ -723,15 +718,6 @@
             this.areaList.TabStop = false;
             this.areaList.UseCompatibleStateImageBehavior = false;
             this.areaList.View = System.Windows.Forms.View.List;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "Name";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Population";
-            this.columnHeader2.Width = 222;
             // 
             // panel24
             // 
@@ -853,7 +839,5 @@
         private System.Windows.Forms.ListView areaList;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }

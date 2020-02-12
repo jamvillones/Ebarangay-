@@ -54,9 +54,7 @@ namespace E_Barangay.Forms
                 foreach (var a in area)
                 {
                     string s = "(" + a.Citizens.Count() + ")" + a.Name;
-                    string v = a.Name;
-
-                    areaList.Items.Add(v);
+                    areaList.Items.Add(s);
                     //ListViewItem item = new ListViewItem(s);
 
                     //areaList.Items.Add(item);

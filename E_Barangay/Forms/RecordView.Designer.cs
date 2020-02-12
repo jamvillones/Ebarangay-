@@ -131,10 +131,11 @@
             this.DetailsField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DetailsField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DetailsField.Location = new System.Drawing.Point(15, 162);
-            this.DetailsField.MaxLength = 500;
+            this.DetailsField.MaxLength = 0;
             this.DetailsField.Multiline = true;
             this.DetailsField.Name = "DetailsField";
             this.DetailsField.ReadOnly = true;
+            this.DetailsField.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DetailsField.Size = new System.Drawing.Size(758, 263);
             this.DetailsField.TabIndex = 21;
             this.DetailsField.TabStop = false;

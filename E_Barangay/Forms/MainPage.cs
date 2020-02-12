@@ -76,6 +76,7 @@ namespace E_Barangay.Forms
             // Current.Visible = false;
             //Current.TabStop = false;
             Current = next;
+            ActiveControl = Current;
             //Current.TabStop = true;
            // Current.Enabled = true;
             //Current.Visible = true;
@@ -100,7 +101,7 @@ namespace E_Barangay.Forms
             User curr = UserManager.instance.currentUser;
             UserWelcomeTxt.Text = "Welcome: " + curr.Username;
             //if(curr.canAddUser)
-            AddNewLoginBtn.Enabled = curr.canAddUser ? true : false;
+            //AddNewLoginBtn.Enabled = curr.canAddUser ? true : false;
             // Class.UserManager.instance = new Class.UserManager();
             Current = DashControl;
             ///rentAccept = DashControl;
@@ -193,6 +194,16 @@ namespace E_Barangay.Forms
             this.Enabled = false;
         }
 
-
+        private void MainPage_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.F1)
+            {
+                this.Enabled = false;
+                CreateLogin createLogin = new CreateLogin();
+                createLogin.FormClosed += (s, eventdetails) => { Enabled = true; };
+                createLogin.Show();
+            }
+           
+        }
     }
 }

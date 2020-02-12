@@ -30,7 +30,7 @@ namespace E_Barangay.Forms
             ModifyBtn.Enabled = u.canEdit ? true : false;
             //DeleteBtn.Enabled = u.canDelete ? true : false;
         }
-       
+
 
         System.Linq.IQueryable<Citizen> SearchedElements;
         public void PerformQuery()
@@ -282,14 +282,25 @@ namespace E_Barangay.Forms
             }
         }
 
-
+        bool GridEmpty
+        {
+            get
+            {
+                return DataTable.Rows.Count == 0;
+            }
+        }
         private void QueryControl_Enter(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(SearchBox.Text))
+            if (GridEmpty)
             {
-                SearchBox.SelectionStart = 0;
-                SearchBox.SelectionLength = SearchBox.Text.Length;
+                showData();
             }
+            //if (!String.IsNullOrEmpty(SearchBox.Text))
+            //{
+            //    SearchBox.SelectionStart = 0;
+            //    SearchBox.SelectionLength = SearchBox.Text.Length;
+            //    Console.WriteLine("lol");
+            //}
         }
 
         RegisterPage reg;

@@ -68,7 +68,7 @@
           <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" />
           <Property Name="CitizenID" Type="nvarchar" MaxLength="50" />
-          <Property Name="Details" Type="nvarchar" MaxLength="500" />
+          <Property Name="Details" Type="nvarchar" MaxLength="3000" />
           <Property Name="DateIssued" Type="datetime" />
           <Property Name="DateHappened" Type="datetime" />
           <Property Name="Location" Type="nvarchar" MaxLength="50" />
@@ -182,7 +182,7 @@
           <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CitizenID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Details" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Details" Type="String" MaxLength="3000" FixedLength="false" Unicode="true" />
           <Property Name="DateIssued" Type="DateTime" Precision="3" />
           <NavigationProperty Name="Citizen" Relationship="Self.FK_Records_Citizen" FromRole="Records" ToRole="Citizen" />
           <Property Name="DateHappened" Type="DateTime" Precision="3" />

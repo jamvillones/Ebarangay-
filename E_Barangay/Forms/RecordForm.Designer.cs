@@ -61,7 +61,7 @@
             this.DetailsField.BackColor = System.Drawing.SystemColors.Control;
             this.DetailsField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DetailsField.Location = new System.Drawing.Point(16, 142);
-            this.DetailsField.MaxLength = 500;
+            this.DetailsField.MaxLength = 3000;
             this.DetailsField.Multiline = true;
             this.DetailsField.Name = "DetailsField";
             this.DetailsField.Size = new System.Drawing.Size(751, 302);

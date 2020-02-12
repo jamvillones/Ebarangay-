@@ -38,14 +38,13 @@
             this.QueryBtn = new System.Windows.Forms.Button();
             this.IssueBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
-            this.DashControl = new E_Barangay.Forms.Dashboard();
-            this.QueryPage = new E_Barangay.Forms.QueryControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.UserWelcomeTxt = new System.Windows.Forms.Label();
-            this.AddNewLoginBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.DashControl = new E_Barangay.Forms.Dashboard();
+            this.QueryPage = new E_Barangay.Forms.QueryControl();
+            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -184,39 +183,10 @@
             this.panel3.Size = new System.Drawing.Size(813, 548);
             this.panel3.TabIndex = 3;
             // 
-            // printingFiles
-            // 
-            this.printingFiles.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.printingFiles.Location = new System.Drawing.Point(0, 0);
-            this.printingFiles.Name = "printingFiles";
-            this.printingFiles.Size = new System.Drawing.Size(813, 548);
-            this.printingFiles.TabIndex = 4;
-            // 
-            // DashControl
-            // 
-            this.DashControl.BackColor = System.Drawing.Color.Silver;
-            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DashControl.Location = new System.Drawing.Point(0, 0);
-            this.DashControl.Name = "DashControl";
-            this.DashControl.Size = new System.Drawing.Size(813, 548);
-            this.DashControl.TabIndex = 3;
-            this.DashControl.TabStop = false;
-            // 
-            // QueryPage
-            // 
-            this.QueryPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QueryPage.Location = new System.Drawing.Point(0, 0);
-            this.QueryPage.Name = "QueryPage";
-            this.QueryPage.Size = new System.Drawing.Size(813, 548);
-            this.QueryPage.TabIndex = 5;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel2.Controls.Add(this.UserWelcomeTxt);
-            this.panel2.Controls.Add(this.AddNewLoginBtn);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -235,25 +205,6 @@
             this.UserWelcomeTxt.TabIndex = 2;
             this.UserWelcomeTxt.Text = "Welcome:";
             this.UserWelcomeTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // AddNewLoginBtn
-            // 
-            this.AddNewLoginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddNewLoginBtn.FlatAppearance.BorderSize = 0;
-            this.AddNewLoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddNewLoginBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddNewLoginBtn.ForeColor = System.Drawing.Color.White;
-            this.AddNewLoginBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddNewLoginBtn.Image")));
-            this.AddNewLoginBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddNewLoginBtn.Location = new System.Drawing.Point(746, 8);
-            this.AddNewLoginBtn.Name = "AddNewLoginBtn";
-            this.AddNewLoginBtn.Size = new System.Drawing.Size(67, 23);
-            this.AddNewLoginBtn.TabIndex = 3;
-            this.AddNewLoginBtn.Text = "Settings";
-            this.AddNewLoginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddNewLoginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.AddNewLoginBtn.UseVisualStyleBackColor = true;
-            this.AddNewLoginBtn.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -276,6 +227,35 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // DashControl
+            // 
+            this.DashControl.BackColor = System.Drawing.Color.Silver;
+            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DashControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashControl.Location = new System.Drawing.Point(0, 0);
+            this.DashControl.Name = "DashControl";
+            this.DashControl.Size = new System.Drawing.Size(813, 548);
+            this.DashControl.TabIndex = 3;
+            this.DashControl.TabStop = false;
+            // 
+            // QueryPage
+            // 
+            this.QueryPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueryPage.Location = new System.Drawing.Point(0, 0);
+            this.QueryPage.Name = "QueryPage";
+            this.QueryPage.Size = new System.Drawing.Size(813, 548);
+            this.QueryPage.TabIndex = 5;
+            // 
+            // printingFiles
+            // 
+            this.printingFiles.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.printingFiles.Location = new System.Drawing.Point(0, 0);
+            this.printingFiles.Name = "printingFiles";
+            this.printingFiles.Size = new System.Drawing.Size(813, 548);
+            this.printingFiles.TabIndex = 4;
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -286,12 +266,14 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MinimumSize = new System.Drawing.Size(900, 536);
             this.Name = "MainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "E Barangay";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainPage_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainPage_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -317,7 +299,6 @@
         private System.Windows.Forms.Button IssueBtn;
         private System.Windows.Forms.Label UserWelcomeTxt;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button AddNewLoginBtn;
         private System.Windows.Forms.Panel panel5;
         private PrintingDocument printingFiles;
         private QueryControl QueryPage;
