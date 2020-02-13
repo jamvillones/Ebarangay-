@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace E_Barangay.Class
 {
+    class Area
+    {
+        public string Name;
+        public int PopulationCount;
+    }
     class Statistics
     {
-        Citizen[] citizen;
+       
 
         public int totalPopulation;
 
@@ -27,61 +32,28 @@ namespace E_Barangay.Class
         public int single { get; private set; }
         public int married { get; private set; }
 
+        public List<Area> areas = new List<Area>();
+
         public float getPercentage(int num)
         {
             return ((float)num / (float)totalPopulation) * 100.0f;
         }
         public Statistics() { }
 
-        public void Initialize(Citizen[] c)
+        public void Initialize()
         {
-            citizen = c;
-            totalPopulation = citizen.Length;
-
-            var citizenByGender = from citizen in c
-                                  group citizen by citizen.Gender;
-
-            foreach (var group in citizenByGender)
+            
+            using (var ent = new EBarangayEntities())
             {
-                if (group.Key == "Male")
-                    male = group.Count();
-                else
-                    female = group.Count();
+                totalPopulation = ent.Citizens.Count();
+
+                foreach(var t in ent.Areas)
+                {
+                    var area = new Area { Name = t.Name, PopulationCount = t.Citizens.Count };
+                    areas.Add(area);
+                }
             }
-            var citizenByCStatus = from citizen in c
-                                   group citizen by citizen.CivilStatus;
-
-            foreach (var group in citizenByCStatus)
-            {
-                if (group.Key == "Single")
-                    single = group.Count();
-                else
-                    married = group.Count();
-            }
-
-
         }
-
-        //foreach (var i in citizen)
-        //{
-        //    ///male of female
-        //    if (i.Gender == "Male")
-        //        male++;
-        //    else
-        //        female++;
-
-        //    ///indigent, pwd, student, senior
-        //    if (i.Indigent) indigent++;
-        //    if (i.Student) student++;
-        //    if (i.PWD) pwd++;
-        //    if (i.SeniorCitizen) senior++;
-
-        //    ///single,married
-        //    if (i.CivilStatus == "Single")
-        //        single++;
-        //    else
-        //        married++;
-        //}
     }
 }
 

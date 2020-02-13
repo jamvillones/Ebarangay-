@@ -203,6 +203,13 @@ namespace E_Barangay.Forms
                 createLogin.FormClosed += (s, eventdetails) => { Enabled = true; };
                 createLogin.Show();
             }
+            if(e.KeyCode == Keys.F2)
+            {
+                this.Enabled = false;
+                StatForm statForm = new StatForm();
+                statForm.FormClosed +=(a,b) => { Enabled = true; };
+                statForm.Show();
+            }
            
         }
     }
