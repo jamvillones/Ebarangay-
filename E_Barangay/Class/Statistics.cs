@@ -24,7 +24,6 @@ namespace E_Barangay.Class
 
 
         public int student { get; private set; }
-
         public int pwd { get; private set; }
         public int senior { get; private set; }
         public int indigent { get; private set; }
@@ -51,6 +50,25 @@ namespace E_Barangay.Class
                 {
                     var area = new Area { Name = t.Name, PopulationCount = t.Citizens.Count };
                     areas.Add(area);
+
+                   
+                    var stnt = from c in ent.Citizens
+                               where c.Student
+                               select c;
+                    student = stnt.Count();
+
+                    var p = from c in ent.Citizens
+                              where c.PWD
+                              select c;
+                    pwd = p.Count();
+
+                    var ind = from c in ent.Citizens where c.Indigent select c;               
+                    indigent = ind.Count();
+
+                    var sen = from c in ent.Citizens where c.SeniorCitizen select c;
+                    senior = sen.Count();
+
+            
                 }
             }
         }

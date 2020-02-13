@@ -38,6 +38,11 @@ namespace E_Barangay.Forms
                 point.LegendText = statistics.areas[i].Name + "(" + area.PopulationCount + ")";
             }
 
+            TypeChart.Series[0].Points[0].YValues[0] = statistics.student;
+            TypeChart.Series[0].Points[1].YValues[0] = statistics.pwd;
+            TypeChart.Series[0].Points[2].YValues[0] = statistics.senior;
+            TypeChart.Series[0].Points[3].YValues[0] = statistics.indigent;
+
         }
     }
 }
