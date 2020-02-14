@@ -10,6 +10,12 @@ namespace E_Barangay.Class
     {
         public string Name { get; set; }
         public int PopulationCount { get; set; }
+
+        public double GetPercentage(int totalPop)
+        {
+            var f = (float)PopulationCount / (float)totalPop * 100;
+            return Math.Round(f, 2);
+        }
     }
     class CivilStatus
     {
@@ -18,8 +24,6 @@ namespace E_Barangay.Class
     }
     class Statistics
     {
-
-
         public int totalPopulation;
 
         public int male { get; private set; }
