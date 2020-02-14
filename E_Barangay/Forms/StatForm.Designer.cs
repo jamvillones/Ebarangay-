@@ -44,15 +44,31 @@
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 60D);
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 2D);
             System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 1D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 1D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint13 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 2D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint14 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 1D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint15 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 1D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint16 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 1D);
             this.TypeChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.AreaChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.genderChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.cStatusChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.TypeChart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AreaChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderChart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cStatusChart)).BeginInit();
             this.SuspendLayout();
             // 
             // TypeChart
             // 
-            this.TypeChart.BorderlineColor = System.Drawing.Color.Silver;
+            this.TypeChart.BorderlineColor = System.Drawing.Color.Black;
+            this.TypeChart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.TypeChart.BorderSkin.BorderWidth = 2;
             chartArea1.AxisX.IsLabelAutoFit = false;
             chartArea1.AxisX.IsMarginVisible = false;
@@ -66,9 +82,11 @@
             chartArea1.AxisX2.MajorGrid.Enabled = false;
             chartArea1.AxisY.IsLabelAutoFit = false;
             chartArea1.AxisY.LabelStyle.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Gainsboro;
             chartArea1.AxisY.MajorTickMark.Enabled = false;
             chartArea1.AxisY.TitleFont = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea1.AxisY2.MajorGrid.Enabled = false;
+            chartArea1.BackColor = System.Drawing.SystemColors.ButtonFace;
             chartArea1.Name = "ChartArea1";
             this.TypeChart.ChartAreas.Add(chartArea1);
             this.TypeChart.Location = new System.Drawing.Point(12, 12);
@@ -112,26 +130,34 @@
             // 
             // AreaChart
             // 
-            this.AreaChart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.AreaChart.BorderlineColor = System.Drawing.Color.Black;
+            this.AreaChart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             chartArea2.Name = "ChartArea1";
             this.AreaChart.ChartAreas.Add(chartArea2);
             legend1.Name = "Legend1";
             this.AreaChart.Legends.Add(legend1);
-            this.AreaChart.Location = new System.Drawing.Point(501, 12);
+            this.AreaChart.Location = new System.Drawing.Point(12, 318);
             this.AreaChart.Name = "AreaChart";
-            this.AreaChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
+            this.AreaChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
+            series2.BorderColor = System.Drawing.Color.Black;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Color = System.Drawing.Color.White;
             series2.Legend = "Legend1";
             series2.Name = "Series1";
+            dataPoint5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             dataPoint5.LegendText = "Other Areas";
+            dataPoint6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             dataPoint6.LegendText = "Purok_0";
+            dataPoint7.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             dataPoint7.LegendText = "Purok_1";
+            dataPoint8.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             dataPoint8.LegendText = "Purok_2";
+            dataPoint9.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             dataPoint9.LegendText = "Looban";
+            dataPoint10.Color = System.Drawing.Color.Blue;
             dataPoint10.LegendText = "Ilaya";
+            dataPoint11.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             dataPoint11.LegendText = "Ilawod";
             series2.Points.Add(dataPoint5);
             series2.Points.Add(dataPoint6);
@@ -141,16 +167,88 @@
             series2.Points.Add(dataPoint10);
             series2.Points.Add(dataPoint11);
             this.AreaChart.Series.Add(series2);
-            this.AreaChart.Size = new System.Drawing.Size(491, 300);
+            this.AreaChart.Size = new System.Drawing.Size(483, 300);
             this.AreaChart.TabIndex = 1;
             this.AreaChart.Text = "chart2";
+            // 
+            // genderChart
+            // 
+            this.genderChart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.genderChart.BorderlineColor = System.Drawing.Color.Black;
+            this.genderChart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea3.Name = "ChartArea1";
+            this.genderChart.ChartAreas.Add(chartArea3);
+            legend2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend2.IsTextAutoFit = false;
+            legend2.Name = "Legend1";
+            this.genderChart.Legends.Add(legend2);
+            this.genderChart.Location = new System.Drawing.Point(501, 12);
+            this.genderChart.Name = "genderChart";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            dataPoint12.AxisLabel = "";
+            dataPoint12.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataPoint12.Label = "";
+            dataPoint12.LegendText = "Male";
+            dataPoint13.AxisLabel = "";
+            dataPoint13.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataPoint13.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataPoint13.LegendText = "Female";
+            series3.Points.Add(dataPoint12);
+            series3.Points.Add(dataPoint13);
+            this.genderChart.Series.Add(series3);
+            this.genderChart.Size = new System.Drawing.Size(379, 300);
+            this.genderChart.TabIndex = 2;
+            this.genderChart.Text = "chart1";
+            // 
+            // cStatusChart
+            // 
+            this.cStatusChart.BorderlineColor = System.Drawing.Color.Black;
+            this.cStatusChart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea4.Name = "ChartArea1";
+            this.cStatusChart.ChartAreas.Add(chartArea4);
+            legend3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.IsTextAutoFit = false;
+            legend3.Name = "Legend1";
+            this.cStatusChart.Legends.Add(legend3);
+            this.cStatusChart.Location = new System.Drawing.Point(501, 318);
+            this.cStatusChart.Name = "cStatusChart";
+            this.cStatusChart.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.Red,
+        System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))))};
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            dataPoint14.AxisLabel = "";
+            dataPoint14.Label = "90%";
+            dataPoint14.LegendText = "Single";
+            dataPoint15.AxisLabel = "90%";
+            dataPoint15.Label = "80%";
+            dataPoint15.LegendText = "Married";
+            dataPoint16.Label = "90%";
+            dataPoint16.LegendText = "Widowed";
+            series4.Points.Add(dataPoint14);
+            series4.Points.Add(dataPoint15);
+            series4.Points.Add(dataPoint16);
+            this.cStatusChart.Series.Add(series4);
+            this.cStatusChart.Size = new System.Drawing.Size(379, 300);
+            this.cStatusChart.TabIndex = 3;
+            this.cStatusChart.Text = "chart2";
             // 
             // StatForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(1004, 527);
+            this.ClientSize = new System.Drawing.Size(892, 632);
+            this.Controls.Add(this.cStatusChart);
+            this.Controls.Add(this.genderChart);
             this.Controls.Add(this.AreaChart);
             this.Controls.Add(this.TypeChart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -163,6 +261,8 @@
             this.Load += new System.EventHandler(this.StatForm__Load);
             ((System.ComponentModel.ISupportInitialize)(this.TypeChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AreaChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderChart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cStatusChart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -171,5 +271,7 @@
 
         private System.Windows.Forms.DataVisualization.Charting.Chart TypeChart;
         private System.Windows.Forms.DataVisualization.Charting.Chart AreaChart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart genderChart;
+        private System.Windows.Forms.DataVisualization.Charting.Chart cStatusChart;
     }
 }

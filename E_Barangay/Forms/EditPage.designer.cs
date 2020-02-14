@@ -57,6 +57,9 @@
             this.BarangayField = new System.Windows.Forms.TextBox();
             this.VoterCheckbox = new System.Windows.Forms.CheckBox();
             this.RecordsTable = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.recDeleteBtn = new System.Windows.Forms.Button();
             this.AddRecordBtn = new System.Windows.Forms.Button();
@@ -90,9 +93,6 @@
             this.PIField = new System.Windows.Forms.TextBox();
             this.SSSField = new System.Windows.Forms.TextBox();
             this.PHField = new System.Windows.Forms.TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             groupBox2 = new System.Windows.Forms.GroupBox();
             groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -434,6 +434,25 @@
             this.RecordsTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RecordsTable_CellContentClick);
             this.RecordsTable.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.RecordsTable_CellMouseDoubleClick);
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Control Number";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Title";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "Details";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -578,7 +597,8 @@
             this.CivilStatusOption.FormattingEnabled = true;
             this.CivilStatusOption.Items.AddRange(new object[] {
             "Single",
-            "Married"});
+            "Married",
+            "Widowed"});
             this.CivilStatusOption.Location = new System.Drawing.Point(232, 66);
             this.CivilStatusOption.Name = "CivilStatusOption";
             this.CivilStatusOption.Size = new System.Drawing.Size(67, 22);
@@ -836,25 +856,6 @@
             this.PHField.Name = "PHField";
             this.PHField.Size = new System.Drawing.Size(247, 20);
             this.PHField.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Control Number";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Title";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Details";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // EditPage
             // 
