@@ -198,19 +198,37 @@ namespace E_Barangay.Forms
         {
             if(e.KeyCode == Keys.F1)
             {
-                this.Enabled = false;
-                CreateLogin createLogin = new CreateLogin();
-                createLogin.FormClosed += (s, eventdetails) => { Enabled = true; };
-                createLogin.Show();
+                OpenCreateLogin();
             }
             if(e.KeyCode == Keys.F2)
             {
-                this.Enabled = false;
-                StatForm statForm = new StatForm();
-                statForm.FormClosed +=(a,b) => { Enabled = true; };
-                statForm.Show();
+                OpenStats();
             }
            
+        }
+        void OpenCreateLogin()
+        {
+            this.Enabled = false;
+            CreateLogin createLogin = new CreateLogin();
+            createLogin.FormClosed += (s, eventdetails) => { Enabled = true; };
+            createLogin.Show();
+        }
+        void OpenStats()
+        {
+            this.Enabled = false;
+            StatForm statForm = new StatForm();
+            statForm.FormClosed += (a, b) => { Enabled = true; };
+            statForm.Show();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            OpenStats();
+        }
+
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            OpenCreateLogin();
         }
     }
 }
