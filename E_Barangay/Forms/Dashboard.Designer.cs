@@ -123,7 +123,7 @@
             // 
             this.captainTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.captainTxt.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.captainTxt.BackColor = System.Drawing.Color.WhiteSmoke;
             this.captainTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.captainTxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.captainTxt.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -173,7 +173,7 @@
             // 
             this.sbTxt0.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbTxt0.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.sbTxt0.BackColor = System.Drawing.Color.WhiteSmoke;
             this.sbTxt0.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sbTxt0.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.sbTxt0.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -223,7 +223,7 @@
             // 
             this.sbTxt1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbTxt1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.sbTxt1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.sbTxt1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sbTxt1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.sbTxt1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -273,7 +273,7 @@
             // 
             this.sbTxt2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbTxt2.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.sbTxt2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.sbTxt2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sbTxt2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.sbTxt2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -323,7 +323,7 @@
             // 
             this.sbTxt3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbTxt3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.sbTxt3.BackColor = System.Drawing.Color.WhiteSmoke;
             this.sbTxt3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sbTxt3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.sbTxt3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -373,7 +373,7 @@
             // 
             this.sbTxt4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbTxt4.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.sbTxt4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.sbTxt4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sbTxt4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.sbTxt4.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -423,7 +423,7 @@
             // 
             this.sbTxt5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbTxt5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.sbTxt5.BackColor = System.Drawing.Color.WhiteSmoke;
             this.sbTxt5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sbTxt5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.sbTxt5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -473,7 +473,7 @@
             // 
             this.sbTxt6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sbTxt6.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.sbTxt6.BackColor = System.Drawing.Color.WhiteSmoke;
             this.sbTxt6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sbTxt6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.sbTxt6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -523,7 +523,7 @@
             // 
             this.treasTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.treasTxt.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.treasTxt.BackColor = System.Drawing.Color.WhiteSmoke;
             this.treasTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.treasTxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.treasTxt.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -575,7 +575,7 @@
             // 
             this.secTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.secTxt.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.secTxt.BackColor = System.Drawing.Color.WhiteSmoke;
             this.secTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.secTxt.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.secTxt.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -606,7 +606,7 @@
             this.panel20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel20.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel20.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel20.Controls.Add(this.panel1);
             this.panel20.Controls.Add(this.panel17);
@@ -649,7 +649,7 @@
             // panel22
             // 
             this.panel22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel22.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel22.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel22.Controls.Add(this.panel23);
@@ -704,7 +704,7 @@
             // 
             // areaList
             // 
-            this.areaList.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.areaList.BackColor = System.Drawing.Color.WhiteSmoke;
             this.areaList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.areaList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.areaList.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -744,7 +744,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.Controls.Add(this.panel24);
             this.Controls.Add(this.panel25);
             this.Controls.Add(this.panel22);
