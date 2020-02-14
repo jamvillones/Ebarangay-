@@ -30,7 +30,7 @@ namespace E_Barangay.Class
 
 
         public int female { get; private set; }
-
+        public int votersCount { get; private set; }
 
         public int student { get; private set; }
         public int pwd { get; private set; }
@@ -43,47 +43,45 @@ namespace E_Barangay.Class
         public List<Area> areas = new List<Area>();
         public List<CivilStatus> cstatuses = new List<CivilStatus>();
 
-        static public float getPercentage(int num, int tP)
+        static public double getPercentage(int num, int tP)
         {
-            return (num / tP) * 100;
+            var f = (float)num / (float)tP * 100f;
+            return Math.Round(f, 2);
 
         }
         public Statistics() { }
-
+        public int notVotersCount
+        {
+            get
+            {
+                return totalPopulation - votersCount;
+            }
+        }
         public void Initialize()
         {
 
             using (var ent = new EBarangayEntities())
             {
                 totalPopulation = ent.Citizens.Count();
+
                 #region types
-                var stnt = from c in ent.Citizens
-                           where c.Student
-                           select c;
-                student = stnt.Count();
-
-                var p = from c in ent.Citizens
-                        where c.PWD
-                        select c;
-                pwd = p.Count();
-
-                var ind = from c in ent.Citizens where c.Indigent select c;
-                indigent = ind.Count();
-
-                var sen = from c in ent.Citizens where c.SeniorCitizen select c;
-                senior = sen.Count();
+                student = ent.Citizens.Where(x => x.Student).Count();
+                pwd = ent.Citizens.Where(x => x.PWD).Count();
+                indigent = ent.Citizens.Where(x => x.Indigent).Count();
+                senior = ent.Citizens.Where(x => x.SeniorCitizen).Count();
                 #endregion
+                #region areas
                 foreach (var t in ent.Areas)
                 {
                     var area = new Area { Name = t.Name, PopulationCount = t.Citizens.Count };
                     areas.Add(area);
                 }
-                var males = from c in ent.Citizens
-                             where c.Gender == "Male"
-                             select c;
-                male = males.Count();
-                female = totalPopulation - males.Count();
-
+                #endregion
+                #region genders
+                male = ent.Citizens.Where(x => x.Gender == "Male").Count();
+                female = totalPopulation - male;
+                #endregion
+                #region civilStats
                 var civilStatGroup = from g in ent.Citizens
                                      group g by g.CivilStatus;
                 foreach (var g in civilStatGroup)
@@ -92,8 +90,10 @@ namespace E_Barangay.Class
                     cstatuses.Add(status);
 
                 }
-                foreach (var c in cstatuses)
-                    Console.WriteLine(c.Name + c.Count);
+                #endregion
+
+                votersCount = ent.Citizens.Where(x => !string.IsNullOrEmpty(x.VoterID)).Count();
+
 
             }
         }

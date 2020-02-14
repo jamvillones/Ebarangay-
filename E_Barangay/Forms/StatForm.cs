@@ -29,23 +29,28 @@ namespace E_Barangay.Forms
             Statistics statistics = new Statistics();
             statistics.Initialize();
 
-            TypeChart.ChartAreas[0].AxisY.Minimum = 0;
-            TypeChart.ChartAreas[0].AxisY.Maximum = statistics.totalPopulation;
-
             for (int i = 0; i < statistics.areas.Count; i++)
             {
                 var point = AreaChart.Series[0].Points[i];
                 var area = statistics.areas[i];
 
                 point.YValues[0] = statistics.areas[i].PopulationCount;
-                point.Label = statistics.areas[i].GetPercentage(statistics.totalPopulation).ToString()+"%";
+                point.Label = statistics.areas[i].GetPercentage(statistics.totalPopulation).ToString() + "%";
                 point.LegendText = statistics.areas[i].Name + "(" + area.PopulationCount + ")";
             }
+
+            TypeChart.ChartAreas[0].AxisY.Minimum = 0;
+            TypeChart.ChartAreas[0].AxisY.Maximum = statistics.totalPopulation;
 
             TypeChart.Series[0].Points[0].YValues[0] = statistics.student;
             TypeChart.Series[0].Points[1].YValues[0] = statistics.pwd;
             TypeChart.Series[0].Points[2].YValues[0] = statistics.senior;
             TypeChart.Series[0].Points[3].YValues[0] = statistics.indigent;
+
+            TypeChart.Series[0].Points[0].Label = statistics.student + "(" + Statistics.getPercentage(statistics.student, statistics.totalPopulation).ToString() + "%)";
+            TypeChart.Series[0].Points[1].Label = statistics.pwd + "(" + Statistics.getPercentage(statistics.pwd, statistics.totalPopulation).ToString() + "%)";
+            TypeChart.Series[0].Points[2].Label = statistics.senior + "(" + Statistics.getPercentage(statistics.senior, statistics.totalPopulation).ToString() + "%)";
+            TypeChart.Series[0].Points[3].Label = statistics.indigent + "(" + Statistics.getPercentage(statistics.indigent, statistics.totalPopulation).ToString() + "%)";
 
             genderChart.Series[0].Points[0].YValues[0] = statistics.male;
             genderChart.Series[0].Points[0].LegendText = "Male" + "(" + statistics.male + ")";
@@ -67,6 +72,13 @@ namespace E_Barangay.Forms
 
                 cStatusChart.Series[0].Points.Add(point);
             }
+            voterChart.Series[0].Points[0].YValues[0] = statistics.votersCount;
+            voterChart.Series[0].Points[0].LegendText = "Voters" + "(" + statistics.votersCount + ")";
+            voterChart.Series[0].Points[0].Label = Statistics.getPercentage(statistics.votersCount, statistics.totalPopulation).ToString();
+
+            voterChart.Series[0].Points[1].YValues[0] = statistics.notVotersCount;
+            voterChart.Series[0].Points[1].LegendText = "Not Voters" + "(" + statistics.notVotersCount + ")";
+            voterChart.Series[0].Points[1].Label = Statistics.getPercentage(statistics.notVotersCount, statistics.totalPopulation).ToString();
 
         }
     }
