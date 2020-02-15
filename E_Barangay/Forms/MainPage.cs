@@ -72,14 +72,11 @@ namespace E_Barangay.Forms
         {
             if (Current == next)
                 return;
-            //Current.Enabled = false;
-            // Current.Visible = false;
-            //Current.TabStop = false;
+            
             Current = next;
+            ///this is lazy load
             ActiveControl = Current;
-            //Current.TabStop = true;
-           // Current.Enabled = true;
-            //Current.Visible = true;
+           
 
         }
 
