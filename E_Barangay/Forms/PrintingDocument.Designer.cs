@@ -32,6 +32,7 @@
             this.BClearanceBtn = new System.Windows.Forms.Button();
             this.BussClearanceBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.deathCertBtn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,6 +44,7 @@
             this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.flowLayoutPanel1.Controls.Add(this.BClearanceBtn);
             this.flowLayoutPanel1.Controls.Add(this.BussClearanceBtn);
+            this.flowLayoutPanel1.Controls.Add(this.deathCertBtn);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 35);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(743, 348);
@@ -88,6 +90,21 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Please choose a Document";
             // 
+            // deathCertBtn
+            // 
+            this.deathCertBtn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.deathCertBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deathCertBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deathCertBtn.ForeColor = System.Drawing.Color.White;
+            this.deathCertBtn.Location = new System.Drawing.Point(301, 3);
+            this.deathCertBtn.Name = "deathCertBtn";
+            this.deathCertBtn.Size = new System.Drawing.Size(143, 41);
+            this.deathCertBtn.TabIndex = 2;
+            this.deathCertBtn.TabStop = false;
+            this.deathCertBtn.Text = "Death Certificate";
+            this.deathCertBtn.UseVisualStyleBackColor = false;
+            this.deathCertBtn.Click += new System.EventHandler(this.deathCertBtn_Click);
+            // 
             // PrintingDocument
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -110,5 +127,6 @@
         private System.Windows.Forms.Button BClearanceBtn;
         private System.Windows.Forms.Button BussClearanceBtn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button deathCertBtn;
     }
 }

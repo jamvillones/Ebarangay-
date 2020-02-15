@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BarangayClearanceForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -61,19 +60,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.OrNo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.UpdateBtn = new System.Windows.Forms.Button();
-            this.PrintBtn = new System.Windows.Forms.Button();
-            this.printPreviewControl1 = new System.Windows.Forms.PrintPreviewControl();
-            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
-            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
-            this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.printing = new E_Barangay.Forms.Printing();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.IdGroup.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,10 +76,10 @@
             this.panel1.Controls.Add(this.IdGroup);
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 655);
+            this.panel1.Size = new System.Drawing.Size(352, 690);
             this.panel1.TabIndex = 0;
             // 
             // groupBox2
@@ -96,9 +88,9 @@
             this.groupBox2.Controls.Add(this.Purpose);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.IssuedOn);
-            this.groupBox2.Location = new System.Drawing.Point(12, 382);
+            this.groupBox2.Location = new System.Drawing.Point(12, 308);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(176, 76);
+            this.groupBox2.Size = new System.Drawing.Size(330, 76);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "MISC";
@@ -114,12 +106,13 @@
             // 
             // Purpose
             // 
+            this.Purpose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Purpose.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.Purpose.Location = new System.Drawing.Point(72, 17);
+            this.Purpose.Location = new System.Drawing.Point(83, 17);
             this.Purpose.Name = "Purpose";
-            this.Purpose.Size = new System.Drawing.Size(98, 20);
+            this.Purpose.Size = new System.Drawing.Size(241, 20);
             this.Purpose.TabIndex = 1;
-            this.Purpose.TextChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // label2
             // 
@@ -132,18 +125,19 @@
             // 
             // IssuedOn
             // 
+            this.IssuedOn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.IssuedOn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.IssuedOn.Location = new System.Drawing.Point(72, 43);
+            this.IssuedOn.Location = new System.Drawing.Point(83, 43);
             this.IssuedOn.Name = "IssuedOn";
-            this.IssuedOn.Size = new System.Drawing.Size(98, 20);
+            this.IssuedOn.Size = new System.Drawing.Size(241, 20);
             this.IssuedOn.TabIndex = 2;
-            this.IssuedOn.ValueChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // ResetBtn
             // 
-            this.ResetBtn.Location = new System.Drawing.Point(12, 594);
+            this.ResetBtn.Location = new System.Drawing.Point(126, 653);
             this.ResetBtn.Name = "ResetBtn";
-            this.ResetBtn.Size = new System.Drawing.Size(176, 23);
+            this.ResetBtn.Size = new System.Drawing.Size(100, 25);
             this.ResetBtn.TabIndex = 5;
             this.ResetBtn.Text = "Reset";
             this.ResetBtn.UseVisualStyleBackColor = true;
@@ -155,14 +149,15 @@
             this.IdGroup.Controls.Add(this.IDField);
             this.IdGroup.Location = new System.Drawing.Point(12, 12);
             this.IdGroup.Name = "IdGroup";
-            this.IdGroup.Size = new System.Drawing.Size(176, 77);
+            this.IdGroup.Size = new System.Drawing.Size(330, 77);
             this.IdGroup.TabIndex = 4;
             this.IdGroup.TabStop = false;
             this.IdGroup.Text = "User ID";
             // 
             // AssignBtn
             // 
-            this.AssignBtn.Location = new System.Drawing.Point(51, 45);
+            this.AssignBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.AssignBtn.Location = new System.Drawing.Point(128, 45);
             this.AssignBtn.Name = "AssignBtn";
             this.AssignBtn.Size = new System.Drawing.Size(75, 23);
             this.AssignBtn.TabIndex = 4;
@@ -172,10 +167,12 @@
             // 
             // IDField
             // 
+            this.IDField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.IDField.Location = new System.Drawing.Point(6, 19);
             this.IDField.MaxLength = 10;
             this.IDField.Name = "IDField";
-            this.IDField.Size = new System.Drawing.Size(164, 20);
+            this.IDField.Size = new System.Drawing.Size(318, 20);
             this.IDField.TabIndex = 3;
             // 
             // groupBox3
@@ -196,21 +193,23 @@
             this.groupBox3.Controls.Add(this.Address);
             this.groupBox3.Location = new System.Drawing.Point(12, 95);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(176, 207);
+            this.groupBox3.Size = new System.Drawing.Size(330, 207);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DETAILS";
             // 
             // SexOption
             // 
+            this.SexOption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.SexOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SexOption.FormattingEnabled = true;
             this.SexOption.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.SexOption.Location = new System.Drawing.Point(72, 147);
+            this.SexOption.Location = new System.Drawing.Point(83, 147);
             this.SexOption.Name = "SexOption";
-            this.SexOption.Size = new System.Drawing.Size(98, 21);
+            this.SexOption.Size = new System.Drawing.Size(241, 21);
             this.SexOption.TabIndex = 7;
             // 
             // label6
@@ -233,12 +232,13 @@
             // 
             // Age
             // 
+            this.Age.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Age.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Age.Location = new System.Drawing.Point(83, 95);
             this.Age.Name = "Age";
-            this.Age.Size = new System.Drawing.Size(87, 20);
+            this.Age.Size = new System.Drawing.Size(241, 20);
             this.Age.TabIndex = 4;
-            this.Age.TextChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // label10
             // 
@@ -260,22 +260,24 @@
             // 
             // lastName
             // 
+            this.lastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lastName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lastName.Location = new System.Drawing.Point(83, 69);
             this.lastName.Name = "lastName";
-            this.lastName.Size = new System.Drawing.Size(87, 20);
+            this.lastName.Size = new System.Drawing.Size(241, 20);
             this.lastName.TabIndex = 3;
-            this.lastName.TextChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // middleName
             // 
+            this.middleName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.middleName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.middleName.Location = new System.Drawing.Point(83, 43);
             this.middleName.MaxLength = 1;
             this.middleName.Name = "middleName";
-            this.middleName.Size = new System.Drawing.Size(87, 20);
+            this.middleName.Size = new System.Drawing.Size(241, 20);
             this.middleName.TabIndex = 2;
-            this.middleName.TextChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // label1
             // 
@@ -297,25 +299,27 @@
             // 
             // firstName
             // 
+            this.firstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.firstName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.firstName.Location = new System.Drawing.Point(83, 17);
             this.firstName.Name = "firstName";
-            this.firstName.Size = new System.Drawing.Size(87, 20);
+            this.firstName.Size = new System.Drawing.Size(241, 20);
             this.firstName.TabIndex = 1;
-            this.firstName.TextChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // CStatusOption
             // 
+            this.CStatusOption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CStatusOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CStatusOption.FormattingEnabled = true;
             this.CStatusOption.Items.AddRange(new object[] {
             "Single",
             "Married"});
-            this.CStatusOption.Location = new System.Drawing.Point(72, 174);
+            this.CStatusOption.Location = new System.Drawing.Point(83, 174);
             this.CStatusOption.Name = "CStatusOption";
-            this.CStatusOption.Size = new System.Drawing.Size(98, 21);
+            this.CStatusOption.Size = new System.Drawing.Size(241, 21);
             this.CStatusOption.TabIndex = 8;
-            this.CStatusOption.SelectedIndexChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // label3
             // 
@@ -328,11 +332,12 @@
             // 
             // Address
             // 
-            this.Address.Location = new System.Drawing.Point(72, 121);
+            this.Address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Address.Location = new System.Drawing.Point(83, 121);
             this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(98, 20);
+            this.Address.Size = new System.Drawing.Size(241, 20);
             this.Address.TabIndex = 6;
-            this.Address.TextChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // groupBox1
             // 
@@ -342,30 +347,32 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.OrNo);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(12, 464);
+            this.groupBox1.Location = new System.Drawing.Point(12, 390);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(176, 124);
+            this.groupBox1.Size = new System.Drawing.Size(330, 103);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "OR";
             // 
             // ORIssueDate
             // 
+            this.ORIssueDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ORIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.ORIssueDate.Location = new System.Drawing.Point(72, 43);
+            this.ORIssueDate.Location = new System.Drawing.Point(83, 43);
             this.ORIssueDate.Name = "ORIssueDate";
-            this.ORIssueDate.Size = new System.Drawing.Size(98, 20);
+            this.ORIssueDate.Size = new System.Drawing.Size(241, 20);
             this.ORIssueDate.TabIndex = 2;
-            this.ORIssueDate.ValueChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // OrValidityDate
             // 
+            this.OrValidityDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.OrValidityDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.OrValidityDate.Location = new System.Drawing.Point(72, 69);
+            this.OrValidityDate.Location = new System.Drawing.Point(83, 69);
             this.OrValidityDate.Name = "OrValidityDate";
-            this.OrValidityDate.Size = new System.Drawing.Size(98, 20);
+            this.OrValidityDate.Size = new System.Drawing.Size(241, 20);
             this.OrValidityDate.TabIndex = 3;
-            this.OrValidityDate.ValueChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // label8
             // 
@@ -387,12 +394,13 @@
             // 
             // OrNo
             // 
-            this.OrNo.Location = new System.Drawing.Point(72, 17);
+            this.OrNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.OrNo.Location = new System.Drawing.Point(83, 17);
             this.OrNo.MaxLength = 13;
             this.OrNo.Name = "OrNo";
-            this.OrNo.Size = new System.Drawing.Size(98, 20);
+            this.OrNo.Size = new System.Drawing.Size(241, 20);
             this.OrNo.TabIndex = 1;
-            this.OrNo.TextChanged += new System.EventHandler(this.MadeChangesCallback);
             // 
             // label5
             // 
@@ -403,87 +411,25 @@
             this.label5.Text = "ORNO:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel2
+            // printing
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel2.Controls.Add(this.UpdateBtn);
-            this.panel2.Controls.Add(this.PrintBtn);
-            this.panel2.Controls.Add(this.printPreviewControl1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(200, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(519, 655);
-            this.panel2.TabIndex = 1;
-            // 
-            // UpdateBtn
-            // 
-            this.UpdateBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.UpdateBtn.FlatAppearance.BorderSize = 0;
-            this.UpdateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UpdateBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateBtn.Image = ((System.Drawing.Image)(resources.GetObject("UpdateBtn.Image")));
-            this.UpdateBtn.Location = new System.Drawing.Point(3, 8);
-            this.UpdateBtn.Name = "UpdateBtn";
-            this.UpdateBtn.Size = new System.Drawing.Size(35, 30);
-            this.UpdateBtn.TabIndex = 5;
-            this.UpdateBtn.TabStop = false;
-            this.UpdateBtn.UseVisualStyleBackColor = false;
-            this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click_1);
-            // 
-            // PrintBtn
-            // 
-            this.PrintBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PrintBtn.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.PrintBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PrintBtn.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrintBtn.Image = ((System.Drawing.Image)(resources.GetObject("PrintBtn.Image")));
-            this.PrintBtn.Location = new System.Drawing.Point(481, 8);
-            this.PrintBtn.Name = "PrintBtn";
-            this.PrintBtn.Size = new System.Drawing.Size(35, 30);
-            this.PrintBtn.TabIndex = 4;
-            this.PrintBtn.TabStop = false;
-            this.PrintBtn.UseVisualStyleBackColor = false;
-            this.PrintBtn.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // printPreviewControl1
-            // 
-            this.printPreviewControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.printPreviewControl1.AutoZoom = false;
-            this.printPreviewControl1.Location = new System.Drawing.Point(3, 44);
-            this.printPreviewControl1.Name = "printPreviewControl1";
-            this.printPreviewControl1.Size = new System.Drawing.Size(513, 608);
-            this.printPreviewControl1.TabIndex = 0;
-            this.printPreviewControl1.Zoom = 0.5D;
-            // 
-            // printDocument1
-            // 
-            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
-            // 
-            // printPreviewDialog1
-            // 
-            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
-            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
-            this.printPreviewDialog1.Enabled = true;
-            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
-            this.printPreviewDialog1.Name = "printPreviewDialog1";
-            this.printPreviewDialog1.Visible = false;
-            // 
-            // printDialog1
-            // 
-            this.printDialog1.UseEXDialog = true;
+            this.printing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.printing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.printing.Dock = System.Windows.Forms.DockStyle.Right;
+            this.printing.Location = new System.Drawing.Point(352, 0);
+            this.printing.Name = "printing";
+            this.printing.Size = new System.Drawing.Size(562, 690);
+            this.printing.TabIndex = 0;
             // 
             // BarangayClearanceForm
             // 
-            this.AcceptButton = this.UpdateBtn;
+            this.AcceptButton = this.AssignBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(719, 655);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(914, 690);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.printing);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
@@ -492,7 +438,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Barangay Clearcance";
-            this.Load += new System.EventHandler(this.IssuePage_Load);
+            this.Load += new System.EventHandler(this.BarangayClearanceForm_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -502,7 +448,6 @@
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -510,11 +455,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PrintPreviewControl printPreviewControl1;
-        private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Windows.Forms.DateTimePicker IssuedOn;
         private System.Windows.Forms.TextBox Address;
         private System.Windows.Forms.Label label3;
@@ -538,7 +479,6 @@
         private System.Windows.Forms.TextBox Purpose;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker ORIssueDate;
-        private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.GroupBox IdGroup;
         private System.Windows.Forms.Button AssignBtn;
         private System.Windows.Forms.TextBox IDField;
@@ -546,7 +486,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox SexOption;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button UpdateBtn;
-        private System.Windows.Forms.Button PrintBtn;
+        private Printing printing;
     }
 }

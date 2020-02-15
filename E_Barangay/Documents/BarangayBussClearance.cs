@@ -13,50 +13,27 @@ namespace E_Barangay.Forms
 {
     public partial class BarangayBussClearance : Form, Interface.ICitizenAcceptor
     {
+        List<Control> controls = new List<Control>();
         public BarangayBussClearance()
         {
             InitializeComponent();
-        }
 
-        public void AcceptCitizen(Citizen citizen)
-        {
-
-            if (citizen == null)
-            {
-                MessageBox.Show("Not found");
-                IDField.SelectAll();
-                this.ActiveControl = IDField;
-                return;
-            }
-            List<string> nameList = new List<string>();
-            string word = "";
-            string name = citizen.Name;
-            for (int i = 0; i < name.Length; i++)
-            {
-                if (name[i] == ' ' || i == name.Length - 1)
-                {
-                    if (i == name.Length - 1)
-                        word += name[i];
-                    nameList.Add(word);
-                    word = "";
-                }
-                else
-                {
-                    word += name[i];
-                }
-            }
-            firstName.Text = nameList[0];
-            middleName.Text = nameList[1][0].ToString();
-            lastName.Text = nameList[2];
-
-            Address.Text = citizen.Address;
+            controls.Add(firstName);
+            controls.Add(middleName);
+            controls.Add(lastName);
+            controls.Add(Address);
+            controls.Add(OrNo);
+            controls.Add(OrAmount);
+            controls.Add(IssuedOn);
+            controls.Add(ORIssueDate);
+            controls.Add(Establishment);
+            controls.Add(BussAdress);
         }
 
         private void BarangaCertificationforBusiness_Load(object sender, EventArgs e)
         {
-            printing.PrintPage += Printing_PrintPage;
-            printing.SubscribeToFields(firstName, middleName, lastName, Address);
-            this.AcceptButton = printing.getUpdateBtn;
+            printing.PrintPage += Printing_PrintPage;           
+            printing.SubscribeToFields(controls.ToArray());            
         }
 
         private void Printing_PrintPage(object sender, PrintPageEventArgs e)
@@ -124,6 +101,7 @@ namespace E_Barangay.Forms
             #endregion
 
         }
+
         bool debug = false;
         void DrawDebugRecs(Rectangle rec, PrintPageEventArgs e)
         {
@@ -133,6 +111,7 @@ namespace E_Barangay.Forms
             }
         }
 
+        #region Assigning
         private void AssignBtn_Click(object sender, EventArgs e)
         {
             using (var entity = new EBarangayEntities())
@@ -141,5 +120,54 @@ namespace E_Barangay.Forms
                 AcceptCitizen(citizen);
             }
         }
+
+        public void AcceptCitizen(Citizen citizen)
+        {
+            if (citizen == null)
+            {
+                MessageBox.Show("User Not found");
+                IDField.SelectAll();
+                this.ActiveControl = IDField;
+                return;
+            }
+            List<string> nameList = new List<string>();
+            string word = "";
+            string name = citizen.Name;
+            for (int i = 0; i < name.Length; i++)
+            {
+                if (name[i] == ' ' || i == name.Length - 1)
+                {
+                    if (i == name.Length - 1)
+                        word += name[i];
+                    nameList.Add(word);
+                    word = "";
+                }
+                else
+                {
+                    word += name[i];
+                }
+            }
+            firstName.Text = nameList[0];
+            middleName.Text = nameList[1][0].ToString();
+            lastName.Text = nameList[2];
+
+            Address.Text = citizen.Address;
+        }
+        #endregion
+
+        #region Clearing
+        private void ResetBtn_Click(object sender, EventArgs e)
+        {
+            clearFields(controls.ToArray());
+        }
+        void clearFields(params Control[] controls)
+        {
+            foreach (Control c in controls)
+            {
+                c.ResetText();
+            }
+        }
+        #endregion
+
     }
 }

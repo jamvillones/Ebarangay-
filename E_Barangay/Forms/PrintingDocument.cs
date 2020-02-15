@@ -112,6 +112,10 @@ namespace E_Barangay.Forms
             }
 
         }
+        private void Form_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form = null;           
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -121,12 +125,9 @@ namespace E_Barangay.Forms
         {
             CreateForm<BarangayBussClearance>();
         }
-
-        private void Form_FormClosed(object sender, FormClosedEventArgs e)
+        private void deathCertBtn_Click(object sender, EventArgs e)
         {
-            form = null;
-           // MainPage.mainPage.Enabled = true;
-           //MainPage.OnOff
+            CreateForm<DeathCertificate>();
         }
     }
 }

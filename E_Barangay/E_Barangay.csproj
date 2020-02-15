@@ -209,11 +209,11 @@
     <Compile Include="Documents\BarangayCertificationforAnimalBite.Designer.cs">
       <DependentUpon>BarangayCertificationforAnimalBite.cs</DependentUpon>
     </Compile>
-    <Compile Include="Documents\BarangayCertificationforDeath1.cs">
+    <Compile Include="Documents\DeathCertificate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Documents\BarangayCertificationforDeath1.Designer.cs">
-      <DependentUpon>BarangayCertificationforDeath1.cs</DependentUpon>
+    <Compile Include="Documents\DeathCertificate.Designer.cs">
+      <DependentUpon>DeathCertificate.cs</DependentUpon>
     </Compile>
     <Compile Include="Documents\BarangayCertificationforDeath3.cs">
       <SubType>Form</SubType>
@@ -533,8 +533,8 @@
     <EmbeddedResource Include="Documents\BarangayCertificationforAnimalBite.resx">
       <DependentUpon>BarangayCertificationforAnimalBite.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Documents\BarangayCertificationforDeath1.resx">
-      <DependentUpon>BarangayCertificationforDeath1.cs</DependentUpon>
+    <EmbeddedResource Include="Documents\DeathCertificate.resx">
+      <DependentUpon>DeathCertificate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BarangayCertificationforDeath3.resx">
       <DependentUpon>BarangayCertificationforDeath3.cs</DependentUpon>
@@ -705,6 +705,7 @@
       <LastGenOutput>Ebarangaymodel.cs</LastGenOutput>
     </Content>
     <Content Include="favicon.ico" />
+    <None Include="Resources\Death Cert.png" />
     <None Include="Resources\BussinessClearance.png" />
     <None Include="Resources\invisible_20px.png" />
     <None Include="Resources\eye_20px.png" />

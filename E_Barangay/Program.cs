@@ -18,15 +18,14 @@ namespace E_Barangay
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            // Application.Run(new BarangayBussClearance());
             UserManager.instance = new UserManager();
             Login login = new Login();
             Application.Run(login);
 
             if (login.UserSuccessfullyAuthenticated)
-            {
                 Application.Run(new MainPage());
-            }
+            
+            //Application.Run(new DeathCertificate());
         }
     }
 }

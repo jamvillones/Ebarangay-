@@ -40,14 +40,14 @@ namespace E_Barangay.Forms
         public static Pen pen = new Pen(Color.Black);
         public static Font font = new Font("Arial Narrow", 12, FontStyle.Regular);
         public static Font fontBold = new Font("Arial Narrow", 12, FontStyle.Bold);
-        public static string Indention = "        ";
-        public static string LineSpace = "\n\n\n";
+        public static string Indention { get { return "        "; } }
+        public static string LineSpace { get { return "\n\n\n"; } }
+
         public static string MrOrMrs(string sex)
         {
             if (sex == "")
-            {
                 return "(BLANK)";
-            }
+
             return sex == "Male" ? "Mr." : "Ms.";
         }
         public static string HisOrHer(string sex)
@@ -57,9 +57,7 @@ namespace E_Barangay.Forms
 
         public static string IfControlEmpty(Control c)
         {
-            if (c.Text == "")
-                return "(BLANK)";
-            return c.Text;
+            return string.IsNullOrEmpty(c.Text) ? "(BLANK)" : c.Text;
         }
 
         #region Edit
@@ -68,14 +66,16 @@ namespace E_Barangay.Forms
         {
             if (editMade)
             {
-                /// update the document preview by resetting it
-                printPreviewControl.Document = document;
-                /// disable update button 
-                UpdateBtn.Enabled = false;
-                /// set editmade to false
-                editMade = false;
-
+                UpdateDocument();
             }
+        }
+        public void UpdateDocument()
+        {
+            printPreviewControl.Document = document;
+            /// disable update button 
+            UpdateBtn.Enabled = false;
+            /// set editmade to false
+            editMade = false;
         }
         /// <summary>
         /// callback for when fields are changed
