@@ -31,8 +31,9 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.BClearanceBtn = new System.Windows.Forms.Button();
             this.BussClearanceBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.deathCertBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buildingPermitBtn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +46,7 @@
             this.flowLayoutPanel1.Controls.Add(this.BClearanceBtn);
             this.flowLayoutPanel1.Controls.Add(this.BussClearanceBtn);
             this.flowLayoutPanel1.Controls.Add(this.deathCertBtn);
+            this.flowLayoutPanel1.Controls.Add(this.buildingPermitBtn);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 35);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(743, 348);
@@ -54,11 +56,11 @@
             // 
             this.BClearanceBtn.BackColor = System.Drawing.Color.DarkSlateGray;
             this.BClearanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BClearanceBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BClearanceBtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BClearanceBtn.ForeColor = System.Drawing.Color.White;
             this.BClearanceBtn.Location = new System.Drawing.Point(3, 3);
             this.BClearanceBtn.Name = "BClearanceBtn";
-            this.BClearanceBtn.Size = new System.Drawing.Size(143, 41);
+            this.BClearanceBtn.Size = new System.Drawing.Size(135, 41);
             this.BClearanceBtn.TabIndex = 0;
             this.BClearanceBtn.TabStop = false;
             this.BClearanceBtn.Text = "Barangay Clearance";
@@ -69,16 +71,31 @@
             // 
             this.BussClearanceBtn.BackColor = System.Drawing.Color.DarkSlateGray;
             this.BussClearanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BussClearanceBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BussClearanceBtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BussClearanceBtn.ForeColor = System.Drawing.Color.White;
-            this.BussClearanceBtn.Location = new System.Drawing.Point(152, 3);
+            this.BussClearanceBtn.Location = new System.Drawing.Point(144, 3);
             this.BussClearanceBtn.Name = "BussClearanceBtn";
-            this.BussClearanceBtn.Size = new System.Drawing.Size(143, 41);
+            this.BussClearanceBtn.Size = new System.Drawing.Size(135, 41);
             this.BussClearanceBtn.TabIndex = 1;
             this.BussClearanceBtn.TabStop = false;
             this.BussClearanceBtn.Text = "Bussiness Clearance";
             this.BussClearanceBtn.UseVisualStyleBackColor = false;
             this.BussClearanceBtn.Click += new System.EventHandler(this.BussClearanceBtn_Click);
+            // 
+            // deathCertBtn
+            // 
+            this.deathCertBtn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.deathCertBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deathCertBtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deathCertBtn.ForeColor = System.Drawing.Color.White;
+            this.deathCertBtn.Location = new System.Drawing.Point(285, 3);
+            this.deathCertBtn.Name = "deathCertBtn";
+            this.deathCertBtn.Size = new System.Drawing.Size(135, 41);
+            this.deathCertBtn.TabIndex = 2;
+            this.deathCertBtn.TabStop = false;
+            this.deathCertBtn.Text = "Death Certificate";
+            this.deathCertBtn.UseVisualStyleBackColor = false;
+            this.deathCertBtn.Click += new System.EventHandler(this.deathCertBtn_Click);
             // 
             // label1
             // 
@@ -90,20 +107,20 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Please choose a Document";
             // 
-            // deathCertBtn
+            // buildingPermitBtn
             // 
-            this.deathCertBtn.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.deathCertBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deathCertBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deathCertBtn.ForeColor = System.Drawing.Color.White;
-            this.deathCertBtn.Location = new System.Drawing.Point(301, 3);
-            this.deathCertBtn.Name = "deathCertBtn";
-            this.deathCertBtn.Size = new System.Drawing.Size(143, 41);
-            this.deathCertBtn.TabIndex = 2;
-            this.deathCertBtn.TabStop = false;
-            this.deathCertBtn.Text = "Death Certificate";
-            this.deathCertBtn.UseVisualStyleBackColor = false;
-            this.deathCertBtn.Click += new System.EventHandler(this.deathCertBtn_Click);
+            this.buildingPermitBtn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.buildingPermitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buildingPermitBtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buildingPermitBtn.ForeColor = System.Drawing.Color.White;
+            this.buildingPermitBtn.Location = new System.Drawing.Point(426, 3);
+            this.buildingPermitBtn.Name = "buildingPermitBtn";
+            this.buildingPermitBtn.Size = new System.Drawing.Size(135, 41);
+            this.buildingPermitBtn.TabIndex = 3;
+            this.buildingPermitBtn.TabStop = false;
+            this.buildingPermitBtn.Text = "Building Permit";
+            this.buildingPermitBtn.UseVisualStyleBackColor = false;
+            this.buildingPermitBtn.Click += new System.EventHandler(this.buildingPermitBtn_Click);
             // 
             // PrintingDocument
             // 
@@ -128,5 +145,6 @@
         private System.Windows.Forms.Button BussClearanceBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button deathCertBtn;
+        private System.Windows.Forms.Button buildingPermitBtn;
     }
 }

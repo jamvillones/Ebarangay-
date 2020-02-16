@@ -129,5 +129,10 @@ namespace E_Barangay.Forms
         {
             CreateForm<DeathCertificate>();
         }
+
+        private void buildingPermitBtn_Click(object sender, EventArgs e)
+        {
+            CreateForm<BuildingPermit>();
+        }
     }
 }
