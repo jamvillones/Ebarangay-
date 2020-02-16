@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.OkayBtn = new System.Windows.Forms.Button();
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -99,7 +99,7 @@
             this.OkayBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.OkayBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.OkayBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OkayBtn.Location = new System.Drawing.Point(351, 520);
+            this.OkayBtn.Location = new System.Drawing.Point(424, 520);
             this.OkayBtn.Name = "OkayBtn";
             this.OkayBtn.Size = new System.Drawing.Size(130, 28);
             this.OkayBtn.TabIndex = 0;
@@ -125,6 +125,8 @@
             // 
             // panel7
             // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BackColor = System.Drawing.SystemColors.Control;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.label16);
@@ -135,7 +137,7 @@
             this.panel7.Controls.Add(this.Philhealth);
             this.panel7.Location = new System.Drawing.Point(136, 400);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(356, 102);
+            this.panel7.Size = new System.Drawing.Size(499, 102);
             this.panel7.TabIndex = 79;
             // 
             // label16
@@ -158,7 +160,7 @@
             this.PagIbig.Location = new System.Drawing.Point(85, 76);
             this.PagIbig.Name = "PagIbig";
             this.PagIbig.ReadOnly = true;
-            this.PagIbig.Size = new System.Drawing.Size(261, 13);
+            this.PagIbig.Size = new System.Drawing.Size(404, 13);
             this.PagIbig.TabIndex = 58;
             // 
             // SSS
@@ -171,7 +173,7 @@
             this.SSS.Location = new System.Drawing.Point(85, 14);
             this.SSS.Name = "SSS";
             this.SSS.ReadOnly = true;
-            this.SSS.Size = new System.Drawing.Size(261, 13);
+            this.SSS.Size = new System.Drawing.Size(404, 13);
             this.SSS.TabIndex = 53;
             // 
             // label14
@@ -204,18 +206,19 @@
             this.Philhealth.Location = new System.Drawing.Point(85, 45);
             this.Philhealth.Name = "Philhealth";
             this.Philhealth.ReadOnly = true;
-            this.Philhealth.Size = new System.Drawing.Size(261, 13);
+            this.Philhealth.Size = new System.Drawing.Size(404, 13);
             this.Philhealth.TabIndex = 56;
             // 
             // panel6
             // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.SystemColors.Control;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.VotersID);
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.label13);
             this.panel6.Controls.Add(this.PrecinctNumber);
-            this.panel6.Location = new System.Drawing.Point(498, 60);
+            this.panel6.Location = new System.Drawing.Point(641, 60);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(322, 72);
             this.panel6.TabIndex = 78;
@@ -268,11 +271,12 @@
             // 
             // panel5
             // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.SystemColors.Control;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.RecordsTable);
-            this.panel5.Location = new System.Drawing.Point(498, 138);
+            this.panel5.Location = new System.Drawing.Point(641, 138);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(322, 364);
             this.panel5.TabIndex = 77;
@@ -293,35 +297,35 @@
             this.RecordsTable.AllowUserToDeleteRows = false;
             this.RecordsTable.AllowUserToResizeColumns = false;
             this.RecordsTable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.RecordsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.RecordsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.RecordsTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RecordsTable.BackgroundColor = System.Drawing.SystemColors.Control;
             this.RecordsTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.RecordsTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RecordsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RecordsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.RecordsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.RecordsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.RecordsTable.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.RecordsTable.DefaultCellStyle = dataGridViewCellStyle12;
             this.RecordsTable.EnableHeadersVisualStyles = false;
             this.RecordsTable.GridColor = System.Drawing.Color.DarkGray;
             this.RecordsTable.Location = new System.Drawing.Point(13, 31);
@@ -355,6 +359,8 @@
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BackColor = System.Drawing.SystemColors.Control;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label6);
@@ -367,7 +373,7 @@
             this.panel4.Controls.Add(this.FatherTxt);
             this.panel4.Location = new System.Drawing.Point(136, 261);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(356, 133);
+            this.panel4.Size = new System.Drawing.Size(499, 133);
             this.panel4.TabIndex = 76;
             // 
             // label6
@@ -420,7 +426,7 @@
             this.CivilStatusTxt.Location = new System.Drawing.Point(85, 13);
             this.CivilStatusTxt.Name = "CivilStatusTxt";
             this.CivilStatusTxt.ReadOnly = true;
-            this.CivilStatusTxt.Size = new System.Drawing.Size(261, 13);
+            this.CivilStatusTxt.Size = new System.Drawing.Size(404, 13);
             this.CivilStatusTxt.TabIndex = 57;
             // 
             // MotherTxt
@@ -433,7 +439,7 @@
             this.MotherTxt.Location = new System.Drawing.Point(85, 44);
             this.MotherTxt.Name = "MotherTxt";
             this.MotherTxt.ReadOnly = true;
-            this.MotherTxt.Size = new System.Drawing.Size(261, 13);
+            this.MotherTxt.Size = new System.Drawing.Size(404, 13);
             this.MotherTxt.TabIndex = 47;
             // 
             // SpouseTxt
@@ -446,7 +452,7 @@
             this.SpouseTxt.Location = new System.Drawing.Point(85, 107);
             this.SpouseTxt.Name = "SpouseTxt";
             this.SpouseTxt.ReadOnly = true;
-            this.SpouseTxt.Size = new System.Drawing.Size(261, 13);
+            this.SpouseTxt.Size = new System.Drawing.Size(404, 13);
             this.SpouseTxt.TabIndex = 50;
             // 
             // FatherTxt
@@ -459,11 +465,13 @@
             this.FatherTxt.Location = new System.Drawing.Point(85, 75);
             this.FatherTxt.Name = "FatherTxt";
             this.FatherTxt.ReadOnly = true;
-            this.FatherTxt.Size = new System.Drawing.Size(261, 13);
+            this.FatherTxt.Size = new System.Drawing.Size(404, 13);
             this.FatherTxt.TabIndex = 51;
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.SystemColors.Control;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label17);
@@ -480,7 +488,7 @@
             this.panel3.Controls.Add(this.AddressTxt);
             this.panel3.Location = new System.Drawing.Point(136, 60);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(356, 195);
+            this.panel3.Size = new System.Drawing.Size(499, 195);
             this.panel3.TabIndex = 75;
             // 
             // label17
@@ -503,7 +511,7 @@
             this.ContactTxt.Location = new System.Drawing.Point(85, 169);
             this.ContactTxt.Name = "ContactTxt";
             this.ContactTxt.ReadOnly = true;
-            this.ContactTxt.Size = new System.Drawing.Size(261, 13);
+            this.ContactTxt.Size = new System.Drawing.Size(404, 13);
             this.ContactTxt.TabIndex = 50;
             // 
             // NameTxt
@@ -516,7 +524,7 @@
             this.NameTxt.Location = new System.Drawing.Point(85, 15);
             this.NameTxt.Name = "NameTxt";
             this.NameTxt.ReadOnly = true;
-            this.NameTxt.Size = new System.Drawing.Size(261, 13);
+            this.NameTxt.Size = new System.Drawing.Size(404, 13);
             this.NameTxt.TabIndex = 20;
             // 
             // label1
@@ -569,7 +577,7 @@
             this.SexTxt.Location = new System.Drawing.Point(85, 108);
             this.SexTxt.Name = "SexTxt";
             this.SexTxt.ReadOnly = true;
-            this.SexTxt.Size = new System.Drawing.Size(261, 13);
+            this.SexTxt.Size = new System.Drawing.Size(404, 13);
             this.SexTxt.TabIndex = 43;
             // 
             // BdayTxt
@@ -582,7 +590,7 @@
             this.BdayTxt.Location = new System.Drawing.Point(85, 46);
             this.BdayTxt.Name = "BdayTxt";
             this.BdayTxt.ReadOnly = true;
-            this.BdayTxt.Size = new System.Drawing.Size(261, 13);
+            this.BdayTxt.Size = new System.Drawing.Size(404, 13);
             this.BdayTxt.TabIndex = 44;
             // 
             // AgeTxt
@@ -595,7 +603,7 @@
             this.AgeTxt.Location = new System.Drawing.Point(85, 77);
             this.AgeTxt.Name = "AgeTxt";
             this.AgeTxt.ReadOnly = true;
-            this.AgeTxt.Size = new System.Drawing.Size(261, 13);
+            this.AgeTxt.Size = new System.Drawing.Size(404, 13);
             this.AgeTxt.TabIndex = 45;
             // 
             // label2
@@ -618,7 +626,7 @@
             this.AddressTxt.Location = new System.Drawing.Point(85, 138);
             this.AddressTxt.Name = "AddressTxt";
             this.AddressTxt.ReadOnly = true;
-            this.AddressTxt.Size = new System.Drawing.Size(261, 13);
+            this.AddressTxt.Size = new System.Drawing.Size(404, 13);
             this.AddressTxt.TabIndex = 48;
             // 
             // panel2
@@ -689,8 +697,8 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Times New Roman", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(136, 12);
+            this.label12.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(139, 15);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(75, 17);
             this.label12.TabIndex = 72;
@@ -736,7 +744,7 @@
             this.IDTxt.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.IDTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.IDTxt.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IDTxt.Location = new System.Drawing.Point(217, 15);
+            this.IDTxt.Location = new System.Drawing.Point(220, 17);
             this.IDTxt.Name = "IDTxt";
             this.IDTxt.ReadOnly = true;
             this.IDTxt.Size = new System.Drawing.Size(228, 14);
@@ -748,7 +756,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(832, 560);
+            this.ClientSize = new System.Drawing.Size(979, 560);
             this.Controls.Add(this.IDTxt);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.panel7);

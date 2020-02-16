@@ -43,6 +43,12 @@ namespace E_Barangay.Forms
                     string s = "(" + a.Citizens.Count() + ")" + a.Name;
                     areaList.Items.Add(s);
                 }
+
+                settlementTable.Rows.Clear();
+                foreach (var r in eb.Records.Where(x=>x.Status == "Pending").OrderBy(x=>x.SettlementDate))
+                {
+                        settlementTable.Rows.Add((r.SettlementDate.Value < DateTime.Today? "Yes":"No"),r.SettlementDate.Value.ToString("MM/dd/yyyy hh:mm tt"), r.Citizen.Name, r.Name);
+                }
             }
         }
 

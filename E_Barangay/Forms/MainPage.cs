@@ -11,23 +11,23 @@ using System.Windows.Forms;
 
 namespace E_Barangay.Forms
 {
-   
+
     public partial class MainPage : Form
     {
         UserControl Current;
-        
-       //nterface.IAccept currentAccept;
+
+        //nterface.IAccept currentAccept;
         public MainPage()
         {
             InitializeComponent();
-            
+
         }
 
         private void QueryBtn_Click(object sender, EventArgs e)
         {
             //currentAccept = QueryPage;
             SetSelectionPanel(QueryBtn);
-           //witchAccept(QueryPage);
+            //witchAccept(QueryPage);
             SwitchPage(QueryPage);
             QueryPage.BringToFront();
             //is.ActiveControl = QueryPage.getDesiredControl;
@@ -45,7 +45,7 @@ namespace E_Barangay.Forms
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-          
+
 
             SwitchPage(printingFiles);
             SetSelectionPanel(IssueBtn);
@@ -72,60 +72,33 @@ namespace E_Barangay.Forms
         {
             if (Current == next)
                 return;
-            
+
             Current = next;
             ///this is lazy load
             ActiveControl = Current;
-           
-
         }
 
         void SwitchAccept(Interface.IAccept accept)
         {
-            //currentAccept = accept;
-            //this.AcceptButton = currentAccept.getAcceptButton();
+
         }
-
-
-
-
-
-
 
         private void MainPage_Load(object sender, EventArgs e)
         {
-            //mainPage = this;
             User curr = UserManager.instance.currentUser;
             UserWelcomeTxt.Text = "Welcome: " + curr.Username;
-            //if(curr.canAddUser)
-            //AddNewLoginBtn.Enabled = curr.canAddUser ? true : false;
-            // Class.UserManager.instance = new Class.UserManager();
             Current = DashControl;
-            ///rentAccept = DashControl;
+
             try
             {
                 DashControl.InitValues();
                 QueryPage.setUser();
-                //QueryPage.showData();
-                // RegisterPage.LoadValues();
             }
             catch
             {
 
             }
-
-            QueryPage.IDEmptySearch += QueryPage_IDEmptySearch;
         }
-
-        private void QueryPage_IDEmptySearch(object sender, string e)
-        {
-            //SwitchAccept(RegisterPage);
-            // SwitchPage(RegisterPage);
-            // RegisterPage.BringToFront();
-            //SetSelectionPanel(RegisterBtn);
-            // RegisterPage.AcceptNewUser(sender, e);
-        }
-
         private void SelectionPanel_Paint(object sender, PaintEventArgs e)
         {
 
@@ -156,9 +129,6 @@ namespace E_Barangay.Forms
         {
 
         }
-        //public static MainPage mainPage { get; private set; }
-
-
 
         Form cl;
         private void button2_Click(object sender, EventArgs e)
@@ -171,8 +141,6 @@ namespace E_Barangay.Forms
                 this.Enabled = false;
                 return;
             }
-            //cl.BringToFront();
-
         }
 
         private void Cl_FormClosed(object sender, FormClosedEventArgs e)
@@ -193,15 +161,27 @@ namespace E_Barangay.Forms
 
         private void MainPage_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.F1)
+            if (e.KeyCode == Keys.F1)
             {
                 OpenCreateLogin();
             }
-            if(e.KeyCode == Keys.F2)
+            if (e.KeyCode == Keys.F2)
             {
                 OpenStats();
             }
-           
+            if (e.KeyCode == Keys.F3)
+                this.WindowState = WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
+            if(e.KeyCode == Keys.F5)
+            {
+                refresh();
+            }
+            if (e.KeyCode == Keys.F4)            
+                this.FormBorderStyle = this.FormBorderStyle == FormBorderStyle.None ? FormBorderStyle.Sizable : FormBorderStyle.None;
+        }
+        void refresh()
+        {
+            DashControl.InitValues();
+            QueryPage.showData();
         }
         void OpenCreateLogin()
         {

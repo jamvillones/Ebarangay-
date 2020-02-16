@@ -266,14 +266,10 @@ namespace E_Barangay.Forms
         }
         #endregion
 
-        private void SearchBox_Click(object sender, EventArgs e)
-        {
-            if (!String.IsNullOrEmpty(SearchBox.Text))
-            {
-                SearchBox.SelectionStart = 0;
-                SearchBox.SelectionLength = SearchBox.Text.Length;
-            }
-        }
+        //private void SearchBox_Click(object sender, EventArgs e)
+        //{
+
+        //}
         public Control getDesiredControl
         {
             get

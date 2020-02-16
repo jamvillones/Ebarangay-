@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.LoginBtn = new System.Windows.Forms.Button();
+            this.StatBtn = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -38,16 +41,13 @@
             this.QueryBtn = new System.Windows.Forms.Button();
             this.IssueBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.DashControl = new E_Barangay.Forms.Dashboard();
+            this.QueryPage = new E_Barangay.Forms.QueryControl();
+            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
             this.panel2 = new System.Windows.Forms.Panel();
             this.UserWelcomeTxt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.StatBtn = new System.Windows.Forms.Button();
-            this.LoginBtn = new System.Windows.Forms.Button();
-            this.DashControl = new E_Barangay.Forms.Dashboard();
-            this.QueryPage = new E_Barangay.Forms.QueryControl();
-            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -73,6 +73,59 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(168, 597);
             this.panel1.TabIndex = 0;
+            // 
+            // LoginBtn
+            // 
+            this.LoginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.LoginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.LoginBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.LoginBtn.FlatAppearance.BorderSize = 0;
+            this.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LoginBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 9.749999F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginBtn.ForeColor = System.Drawing.Color.White;
+            this.LoginBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LoginBtn.Location = new System.Drawing.Point(40, 544);
+            this.LoginBtn.Name = "LoginBtn";
+            this.LoginBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LoginBtn.Size = new System.Drawing.Size(88, 25);
+            this.LoginBtn.TabIndex = 9;
+            this.LoginBtn.TabStop = false;
+            this.LoginBtn.Text = "(f1) Add New Log in";
+            this.LoginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LoginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.LoginBtn.UseVisualStyleBackColor = true;
+            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
+            // 
+            // StatBtn
+            // 
+            this.StatBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.StatBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.StatBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.StatBtn.FlatAppearance.BorderSize = 0;
+            this.StatBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StatBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 9.749999F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatBtn.ForeColor = System.Drawing.Color.White;
+            this.StatBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.StatBtn.Location = new System.Drawing.Point(40, 569);
+            this.StatBtn.Name = "StatBtn";
+            this.StatBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StatBtn.Size = new System.Drawing.Size(88, 25);
+            this.StatBtn.TabIndex = 8;
+            this.StatBtn.TabStop = false;
+            this.StatBtn.Text = "(f2) Statistics";
+            this.StatBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.StatBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.StatBtn.UseVisualStyleBackColor = true;
+            this.StatBtn.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel6.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel6.Location = new System.Drawing.Point(9, 533);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(150, 3);
+            this.panel6.TabIndex = 7;
             // 
             // panel5
             // 
@@ -105,7 +158,7 @@
             // SelectionPanel
             // 
             this.SelectionPanel.BackColor = System.Drawing.Color.White;
-            this.SelectionPanel.Location = new System.Drawing.Point(0, 195);
+            this.SelectionPanel.Location = new System.Drawing.Point(0, 113);
             this.SelectionPanel.Name = "SelectionPanel";
             this.SelectionPanel.Size = new System.Drawing.Size(5, 34);
             this.SelectionPanel.TabIndex = 2;
@@ -121,7 +174,7 @@
             this.DashBtn.ForeColor = System.Drawing.Color.White;
             this.DashBtn.Image = ((System.Drawing.Image)(resources.GetObject("DashBtn.Image")));
             this.DashBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DashBtn.Location = new System.Drawing.Point(3, 195);
+            this.DashBtn.Location = new System.Drawing.Point(3, 113);
             this.DashBtn.Name = "DashBtn";
             this.DashBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.DashBtn.Size = new System.Drawing.Size(165, 34);
@@ -143,7 +196,7 @@
             this.QueryBtn.ForeColor = System.Drawing.Color.White;
             this.QueryBtn.Image = ((System.Drawing.Image)(resources.GetObject("QueryBtn.Image")));
             this.QueryBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.QueryBtn.Location = new System.Drawing.Point(3, 229);
+            this.QueryBtn.Location = new System.Drawing.Point(3, 147);
             this.QueryBtn.Name = "QueryBtn";
             this.QueryBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.QueryBtn.Size = new System.Drawing.Size(165, 34);
@@ -165,7 +218,7 @@
             this.IssueBtn.ForeColor = System.Drawing.Color.White;
             this.IssueBtn.Image = ((System.Drawing.Image)(resources.GetObject("IssueBtn.Image")));
             this.IssueBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IssueBtn.Location = new System.Drawing.Point(3, 263);
+            this.IssueBtn.Location = new System.Drawing.Point(3, 181);
             this.IssueBtn.Name = "IssueBtn";
             this.IssueBtn.Size = new System.Drawing.Size(165, 34);
             this.IssueBtn.TabIndex = 4;
@@ -188,6 +241,35 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(813, 548);
             this.panel3.TabIndex = 3;
+            // 
+            // DashControl
+            // 
+            this.DashControl.BackColor = System.Drawing.Color.Silver;
+            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DashControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashControl.Location = new System.Drawing.Point(0, 0);
+            this.DashControl.Name = "DashControl";
+            this.DashControl.Size = new System.Drawing.Size(813, 548);
+            this.DashControl.TabIndex = 3;
+            this.DashControl.TabStop = false;
+            // 
+            // QueryPage
+            // 
+            this.QueryPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueryPage.Location = new System.Drawing.Point(0, 0);
+            this.QueryPage.Name = "QueryPage";
+            this.QueryPage.Size = new System.Drawing.Size(813, 548);
+            this.QueryPage.TabIndex = 5;
+            // 
+            // printingFiles
+            // 
+            this.printingFiles.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.printingFiles.Location = new System.Drawing.Point(0, 0);
+            this.printingFiles.Name = "printingFiles";
+            this.printingFiles.Size = new System.Drawing.Size(813, 548);
+            this.printingFiles.TabIndex = 4;
             // 
             // panel2
             // 
@@ -233,88 +315,6 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // panel6
-            // 
-            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.panel6.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel6.Location = new System.Drawing.Point(9, 533);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(150, 3);
-            this.panel6.TabIndex = 7;
-            // 
-            // StatBtn
-            // 
-            this.StatBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.StatBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.StatBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.StatBtn.FlatAppearance.BorderSize = 0;
-            this.StatBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StatBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 9.749999F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StatBtn.ForeColor = System.Drawing.Color.White;
-            this.StatBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.StatBtn.Location = new System.Drawing.Point(40, 569);
-            this.StatBtn.Name = "StatBtn";
-            this.StatBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.StatBtn.Size = new System.Drawing.Size(88, 25);
-            this.StatBtn.TabIndex = 8;
-            this.StatBtn.TabStop = false;
-            this.StatBtn.Text = "(f2) Statistics";
-            this.StatBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.StatBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.StatBtn.UseVisualStyleBackColor = true;
-            this.StatBtn.Click += new System.EventHandler(this.button1_Click_2);
-            // 
-            // LoginBtn
-            // 
-            this.LoginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LoginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.LoginBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.LoginBtn.FlatAppearance.BorderSize = 0;
-            this.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoginBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 9.749999F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginBtn.ForeColor = System.Drawing.Color.White;
-            this.LoginBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LoginBtn.Location = new System.Drawing.Point(40, 544);
-            this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LoginBtn.Size = new System.Drawing.Size(88, 25);
-            this.LoginBtn.TabIndex = 9;
-            this.LoginBtn.TabStop = false;
-            this.LoginBtn.Text = "(f1) Add New Log in";
-            this.LoginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LoginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.LoginBtn.UseVisualStyleBackColor = true;
-            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
-            // 
-            // DashControl
-            // 
-            this.DashControl.BackColor = System.Drawing.Color.Silver;
-            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DashControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashControl.Location = new System.Drawing.Point(0, 0);
-            this.DashControl.Name = "DashControl";
-            this.DashControl.Size = new System.Drawing.Size(813, 548);
-            this.DashControl.TabIndex = 3;
-            this.DashControl.TabStop = false;
-            // 
-            // QueryPage
-            // 
-            this.QueryPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QueryPage.Location = new System.Drawing.Point(0, 0);
-            this.QueryPage.Name = "QueryPage";
-            this.QueryPage.Size = new System.Drawing.Size(813, 548);
-            this.QueryPage.TabIndex = 5;
-            // 
-            // printingFiles
-            // 
-            this.printingFiles.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.printingFiles.Location = new System.Drawing.Point(0, 0);
-            this.printingFiles.Name = "printingFiles";
-            this.printingFiles.Size = new System.Drawing.Size(813, 548);
-            this.printingFiles.TabIndex = 4;
-            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -324,6 +324,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MinimumSize = new System.Drawing.Size(900, 536);

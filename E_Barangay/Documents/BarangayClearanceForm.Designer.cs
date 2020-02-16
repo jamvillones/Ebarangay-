@@ -91,7 +91,7 @@
             this.groupBox2.Location = new System.Drawing.Point(12, 308);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(330, 76);
-            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "MISC";
             // 
@@ -138,7 +138,7 @@
             this.ResetBtn.Location = new System.Drawing.Point(126, 653);
             this.ResetBtn.Name = "ResetBtn";
             this.ResetBtn.Size = new System.Drawing.Size(100, 25);
-            this.ResetBtn.TabIndex = 5;
+            this.ResetBtn.TabIndex = 6;
             this.ResetBtn.Text = "Reset";
             this.ResetBtn.UseVisualStyleBackColor = true;
             this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
@@ -150,7 +150,7 @@
             this.IdGroup.Location = new System.Drawing.Point(12, 12);
             this.IdGroup.Name = "IdGroup";
             this.IdGroup.Size = new System.Drawing.Size(330, 77);
-            this.IdGroup.TabIndex = 4;
+            this.IdGroup.TabIndex = 1;
             this.IdGroup.TabStop = false;
             this.IdGroup.Text = "User ID";
             // 
@@ -194,7 +194,7 @@
             this.groupBox3.Location = new System.Drawing.Point(12, 95);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(330, 207);
-            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DETAILS";
             // 
@@ -350,7 +350,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 390);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(330, 103);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "OR";
             // 
