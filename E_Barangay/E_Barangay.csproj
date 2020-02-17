@@ -386,12 +386,6 @@
     <Compile Include="Forms\CreateLogin.Designer.cs">
       <DependentUpon>CreateLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Home.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -619,9 +613,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateLogin.resx">
       <DependentUpon>CreateLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

@@ -46,7 +46,7 @@
             this.printPreviewControl.Document = this.printDocument;
             this.printPreviewControl.Location = new System.Drawing.Point(4, 39);
             this.printPreviewControl.Name = "printPreviewControl";
-            this.printPreviewControl.Size = new System.Drawing.Size(590, 514);
+            this.printPreviewControl.Size = new System.Drawing.Size(590, 757);
             this.printPreviewControl.TabIndex = 0;
             this.printPreviewControl.Zoom = 0.6D;
             // 
@@ -106,7 +106,7 @@
             this.Controls.Add(this.PrintBtn);
             this.Controls.Add(this.printPreviewControl);
             this.Name = "Printing";
-            this.Size = new System.Drawing.Size(597, 556);
+            this.Size = new System.Drawing.Size(597, 799);
             this.Load += new System.EventHandler(this.Printing_Load);
             this.ResumeLayout(false);
 

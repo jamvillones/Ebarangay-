@@ -33,7 +33,7 @@ namespace E_Barangay.Forms
 
         private void Printing_Load(object sender, EventArgs e)
         {
-
+           // printPreviewControl.Document = printDocument;
 
         }
 

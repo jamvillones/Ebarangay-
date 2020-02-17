@@ -44,8 +44,6 @@
             this.NumberField = new System.Windows.Forms.TextBox();
             this.SexOption = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.CurrentAdd = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.AreaOption = new System.Windows.Forms.ComboBox();
             this.MunicipalityField = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -113,9 +111,9 @@
             groupBox2.Controls.Add(this.IsPwd);
             groupBox2.Controls.Add(this.IsSenior);
             groupBox2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            groupBox2.Location = new System.Drawing.Point(398, 296);
+            groupBox2.Location = new System.Drawing.Point(398, 270);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new System.Drawing.Size(133, 155);
+            groupBox2.Size = new System.Drawing.Size(133, 121);
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
             groupBox2.Text = "Status";
@@ -230,9 +228,9 @@
             // 
             // NumberField
             // 
-            this.NumberField.Location = new System.Drawing.Point(91, 40);
+            this.NumberField.Location = new System.Drawing.Point(91, 14);
             this.NumberField.Name = "NumberField";
-            this.NumberField.Size = new System.Drawing.Size(82, 20);
+            this.NumberField.Size = new System.Drawing.Size(118, 20);
             this.NumberField.TabIndex = 1;
             // 
             // SexOption
@@ -252,8 +250,6 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.CurrentAdd);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.AreaOption);
             this.groupBox1.Controls.Add(this.MunicipalityField);
             this.groupBox1.Controls.Add(this.label8);
@@ -267,47 +263,26 @@
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(391, 20);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(448, 126);
+            this.groupBox1.Size = new System.Drawing.Size(448, 100);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Address";
             // 
-            // CurrentAdd
-            // 
-            this.CurrentAdd.Location = new System.Drawing.Point(91, 14);
-            this.CurrentAdd.Name = "CurrentAdd";
-            this.CurrentAdd.ReadOnly = true;
-            this.CurrentAdd.Size = new System.Drawing.Size(351, 20);
-            this.CurrentAdd.TabIndex = 23;
-            this.CurrentAdd.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(6, 17);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(79, 14);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "Current Address";
-            // 
             // AreaOption
             // 
             this.AreaOption.FormattingEnabled = true;
-            this.AreaOption.Location = new System.Drawing.Point(61, 66);
+            this.AreaOption.Location = new System.Drawing.Point(61, 40);
             this.AreaOption.Name = "AreaOption";
-            this.AreaOption.Size = new System.Drawing.Size(98, 22);
+            this.AreaOption.Size = new System.Drawing.Size(148, 22);
             this.AreaOption.TabIndex = 2;
             // 
             // MunicipalityField
             // 
             this.MunicipalityField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.MunicipalityField.Location = new System.Drawing.Point(251, 66);
+            this.MunicipalityField.Location = new System.Drawing.Point(287, 40);
             this.MunicipalityField.Name = "MunicipalityField";
-            this.MunicipalityField.Size = new System.Drawing.Size(191, 20);
+            this.MunicipalityField.Size = new System.Drawing.Size(155, 20);
             this.MunicipalityField.TabIndex = 4;
             // 
             // label8
@@ -316,7 +291,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 95);
+            this.label8.Location = new System.Drawing.Point(6, 69);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 14);
             this.label8.TabIndex = 21;
@@ -324,7 +299,7 @@
             // 
             // ProvinceField
             // 
-            this.ProvinceField.Location = new System.Drawing.Point(61, 92);
+            this.ProvinceField.Location = new System.Drawing.Point(61, 66);
             this.ProvinceField.Name = "ProvinceField";
             this.ProvinceField.Size = new System.Drawing.Size(381, 20);
             this.ProvinceField.TabIndex = 5;
@@ -335,7 +310,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(179, 69);
+            this.label7.Location = new System.Drawing.Point(215, 43);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 14);
             this.label7.TabIndex = 19;
@@ -347,7 +322,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(179, 43);
+            this.label6.Location = new System.Drawing.Point(215, 17);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 14);
             this.label6.TabIndex = 18;
@@ -359,7 +334,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 69);
+            this.label5.Location = new System.Drawing.Point(6, 43);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 14);
             this.label5.TabIndex = 17;
@@ -371,7 +346,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 43);
+            this.label4.Location = new System.Drawing.Point(6, 17);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 14);
             this.label4.TabIndex = 16;
@@ -381,9 +356,9 @@
             // 
             this.BarangayField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BarangayField.Location = new System.Drawing.Point(251, 40);
+            this.BarangayField.Location = new System.Drawing.Point(287, 14);
             this.BarangayField.Name = "BarangayField";
-            this.BarangayField.Size = new System.Drawing.Size(191, 20);
+            this.BarangayField.Size = new System.Drawing.Size(155, 20);
             this.BarangayField.TabIndex = 3;
             // 
             // VoterCheckbox
@@ -462,7 +437,7 @@
             this.groupBox3.Controls.Add(this.AddRecordBtn);
             this.groupBox3.Controls.Add(this.RecordsTable);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(9, 296);
+            this.groupBox3.Location = new System.Drawing.Point(9, 270);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(383, 203);
             this.groupBox3.TabIndex = 6;
@@ -545,7 +520,7 @@
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.ContactField);
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(9, 152);
+            this.groupBox4.Location = new System.Drawing.Point(9, 126);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(830, 138);
             this.groupBox4.TabIndex = 3;
@@ -607,12 +582,14 @@
             // 
             // AgeField
             // 
-            this.AgeField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AgeField.Location = new System.Drawing.Point(263, 15);
+            this.AgeField.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.AgeField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AgeField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AgeField.Location = new System.Drawing.Point(263, 19);
             this.AgeField.MaxLength = 11;
             this.AgeField.Name = "AgeField";
             this.AgeField.ReadOnly = true;
-            this.AgeField.Size = new System.Drawing.Size(36, 20);
+            this.AgeField.Size = new System.Drawing.Size(36, 13);
             this.AgeField.TabIndex = 14;
             this.AgeField.TabStop = false;
             // 
@@ -763,7 +740,7 @@
             this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(118, 20);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(267, 126);
+            this.groupBox5.Size = new System.Drawing.Size(267, 100);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Name";
@@ -802,9 +779,9 @@
             this.groupBox6.Controls.Add(this.SSSField);
             this.groupBox6.Controls.Add(this.PHField);
             this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(537, 296);
+            this.groupBox6.Location = new System.Drawing.Point(537, 270);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(302, 155);
+            this.groupBox6.Size = new System.Drawing.Size(302, 121);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "ID\'s";
@@ -812,49 +789,49 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(6, 106);
+            this.label22.Location = new System.Drawing.Point(6, 68);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(82, 14);
+            this.label22.Size = new System.Drawing.Size(43, 14);
             this.label22.TabIndex = 5;
-            this.label22.Text = "Pag ibig Number";
+            this.label22.Text = "Pag ibig";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(6, 61);
+            this.label21.Location = new System.Drawing.Point(6, 42);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(61, 14);
+            this.label21.Size = new System.Drawing.Size(22, 14);
             this.label21.TabIndex = 4;
-            this.label21.Text = "SSS Number";
+            this.label21.Text = "SSS";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(6, 16);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(94, 14);
+            this.label20.Size = new System.Drawing.Size(55, 14);
             this.label20.TabIndex = 3;
-            this.label20.Text = "Philhealth Number";
+            this.label20.Text = "Philhealth";
             // 
             // PIField
             // 
-            this.PIField.Location = new System.Drawing.Point(49, 125);
+            this.PIField.Location = new System.Drawing.Point(67, 65);
             this.PIField.Name = "PIField";
-            this.PIField.Size = new System.Drawing.Size(247, 20);
+            this.PIField.Size = new System.Drawing.Size(229, 20);
             this.PIField.TabIndex = 2;
             // 
             // SSSField
             // 
-            this.SSSField.Location = new System.Drawing.Point(49, 80);
+            this.SSSField.Location = new System.Drawing.Point(67, 39);
             this.SSSField.Name = "SSSField";
-            this.SSSField.Size = new System.Drawing.Size(247, 20);
+            this.SSSField.Size = new System.Drawing.Size(229, 20);
             this.SSSField.TabIndex = 1;
             // 
             // PHField
             // 
-            this.PHField.Location = new System.Drawing.Point(49, 35);
+            this.PHField.Location = new System.Drawing.Point(67, 13);
             this.PHField.Name = "PHField";
-            this.PHField.Size = new System.Drawing.Size(247, 20);
+            this.PHField.Size = new System.Drawing.Size(229, 20);
             this.PHField.TabIndex = 0;
             // 
             // EditPage
@@ -956,8 +933,6 @@
         private System.Windows.Forms.TextBox PIField;
         private System.Windows.Forms.TextBox SSSField;
         private System.Windows.Forms.TextBox PHField;
-        private System.Windows.Forms.TextBox CurrentAdd;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

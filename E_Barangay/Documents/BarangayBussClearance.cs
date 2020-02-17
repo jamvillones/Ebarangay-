@@ -32,8 +32,8 @@ namespace E_Barangay.Forms
 
         private void BarangaCertificationforBusiness_Load(object sender, EventArgs e)
         {
-            printing.PrintPage += Printing_PrintPage;           
-            printing.SubscribeToFields(controls.ToArray());            
+            printing.PrintPage += Printing_PrintPage;
+            printing.SubscribeToFields(controls.ToArray());
         }
 
         private void Printing_PrintPage(object sender, PrintPageEventArgs e)

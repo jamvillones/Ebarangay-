@@ -79,7 +79,6 @@ namespace E_Barangay.Forms
             this.CreateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CreateBtn.BackColor = System.Drawing.Color.LightGray;
             this.CreateBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.CreateBtn.FlatAppearance.BorderSize = 2;
             this.CreateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateBtn.ForeColor = System.Drawing.Color.Black;
@@ -87,7 +86,7 @@ namespace E_Barangay.Forms
             this.CreateBtn.Location = new System.Drawing.Point(769, 6);
             this.CreateBtn.Name = "CreateBtn";
             this.CreateBtn.Size = new System.Drawing.Size(80, 35);
-            this.CreateBtn.TabIndex = 10;
+            this.CreateBtn.TabIndex = 5;
             this.CreateBtn.Text = "Create";
             this.CreateBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.CreateBtn.UseVisualStyleBackColor = false;
@@ -98,7 +97,6 @@ namespace E_Barangay.Forms
             this.InspectBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.InspectBtn.BackColor = System.Drawing.Color.LightGray;
             this.InspectBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.InspectBtn.FlatAppearance.BorderSize = 2;
             this.InspectBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.InspectBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InspectBtn.ForeColor = System.Drawing.Color.Black;
@@ -106,7 +104,7 @@ namespace E_Barangay.Forms
             this.InspectBtn.Location = new System.Drawing.Point(606, 6);
             this.InspectBtn.Name = "InspectBtn";
             this.InspectBtn.Size = new System.Drawing.Size(83, 35);
-            this.InspectBtn.TabIndex = 6;
+            this.InspectBtn.TabIndex = 3;
             this.InspectBtn.Text = "Inspect";
             this.InspectBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.InspectBtn.UseVisualStyleBackColor = false;
@@ -117,7 +115,6 @@ namespace E_Barangay.Forms
             this.ModifyBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ModifyBtn.BackColor = System.Drawing.Color.LightGray;
             this.ModifyBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.ModifyBtn.FlatAppearance.BorderSize = 2;
             this.ModifyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ModifyBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModifyBtn.ForeColor = System.Drawing.Color.Black;
@@ -157,7 +154,7 @@ namespace E_Barangay.Forms
             this.SearchBtn.Location = new System.Drawing.Point(325, 9);
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.Size = new System.Drawing.Size(23, 28);
-            this.SearchBtn.TabIndex = 7;
+            this.SearchBtn.TabIndex = 1;
             this.SearchBtn.TabStop = false;
             this.SearchBtn.UseVisualStyleBackColor = false;
             this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
@@ -223,7 +220,8 @@ namespace E_Barangay.Forms
             this.DataTable.RowHeadersVisible = false;
             this.DataTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataTable.Size = new System.Drawing.Size(841, 480);
-            this.DataTable.TabIndex = 5;
+            this.DataTable.StandardTab = true;
+            this.DataTable.TabIndex = 2;
             this.DataTable.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataTable_CellMouseDoubleClick);
             // 
             // Column1

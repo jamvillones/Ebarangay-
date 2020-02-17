@@ -39,6 +39,9 @@
             this.lastName = new System.Windows.Forms.TextBox();
             this.middleName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.IdGroup = new System.Windows.Forms.GroupBox();
+            this.AssignBtn = new System.Windows.Forms.Button();
+            this.IDField = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.BussAdress = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -48,9 +51,6 @@
             this.OrAmount = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.ResetBtn = new System.Windows.Forms.Button();
-            this.IdGroup = new System.Windows.Forms.GroupBox();
-            this.AssignBtn = new System.Windows.Forms.Button();
-            this.IDField = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.IssuedOn = new System.Windows.Forms.DateTimePicker();
@@ -60,9 +60,9 @@
             this.Address = new System.Windows.Forms.TextBox();
             this.printing = new E_Barangay.Forms.Printing();
             this.panel1.SuspendLayout();
+            this.IdGroup.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.IdGroup.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -176,6 +176,40 @@
             this.panel1.Size = new System.Drawing.Size(352, 690);
             this.panel1.TabIndex = 0;
             // 
+            // IdGroup
+            // 
+            this.IdGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IdGroup.Controls.Add(this.AssignBtn);
+            this.IdGroup.Controls.Add(this.IDField);
+            this.IdGroup.Location = new System.Drawing.Point(12, 12);
+            this.IdGroup.Name = "IdGroup";
+            this.IdGroup.Size = new System.Drawing.Size(329, 77);
+            this.IdGroup.TabIndex = 1;
+            this.IdGroup.TabStop = false;
+            this.IdGroup.Text = "User ID";
+            // 
+            // AssignBtn
+            // 
+            this.AssignBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.AssignBtn.Location = new System.Drawing.Point(127, 45);
+            this.AssignBtn.Name = "AssignBtn";
+            this.AssignBtn.Size = new System.Drawing.Size(75, 23);
+            this.AssignBtn.TabIndex = 4;
+            this.AssignBtn.Text = "Assign";
+            this.AssignBtn.UseVisualStyleBackColor = true;
+            this.AssignBtn.Click += new System.EventHandler(this.AssignBtn_Click);
+            // 
+            // IDField
+            // 
+            this.IDField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IDField.Location = new System.Drawing.Point(6, 19);
+            this.IDField.MaxLength = 10;
+            this.IDField.Name = "IDField";
+            this.IDField.Size = new System.Drawing.Size(317, 20);
+            this.IDField.TabIndex = 3;
+            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -276,40 +310,6 @@
             this.ResetBtn.Text = "Reset";
             this.ResetBtn.UseVisualStyleBackColor = true;
             this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
-            // 
-            // IdGroup
-            // 
-            this.IdGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IdGroup.Controls.Add(this.AssignBtn);
-            this.IdGroup.Controls.Add(this.IDField);
-            this.IdGroup.Location = new System.Drawing.Point(12, 12);
-            this.IdGroup.Name = "IdGroup";
-            this.IdGroup.Size = new System.Drawing.Size(329, 77);
-            this.IdGroup.TabIndex = 1;
-            this.IdGroup.TabStop = false;
-            this.IdGroup.Text = "User ID";
-            // 
-            // AssignBtn
-            // 
-            this.AssignBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AssignBtn.Location = new System.Drawing.Point(127, 45);
-            this.AssignBtn.Name = "AssignBtn";
-            this.AssignBtn.Size = new System.Drawing.Size(75, 23);
-            this.AssignBtn.TabIndex = 4;
-            this.AssignBtn.Text = "Assign";
-            this.AssignBtn.UseVisualStyleBackColor = true;
-            this.AssignBtn.Click += new System.EventHandler(this.AssignBtn_Click);
-            // 
-            // IDField
-            // 
-            this.IDField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IDField.Location = new System.Drawing.Point(6, 19);
-            this.IDField.MaxLength = 10;
-            this.IDField.Name = "IDField";
-            this.IDField.Size = new System.Drawing.Size(317, 20);
-            this.IDField.TabIndex = 3;
             // 
             // groupBox3
             // 
@@ -416,12 +416,12 @@
             this.Text = "Certificate for Business";
             this.Load += new System.EventHandler(this.BarangaCertificationforBusiness_Load);
             this.panel1.ResumeLayout(false);
+            this.IdGroup.ResumeLayout(false);
+            this.IdGroup.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.IdGroup.ResumeLayout(false);
-            this.IdGroup.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);

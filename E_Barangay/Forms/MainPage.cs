@@ -16,46 +16,31 @@ namespace E_Barangay.Forms
     {
         UserControl Current;
 
-        //nterface.IAccept currentAccept;
         public MainPage()
         {
             InitializeComponent();
-
         }
 
         private void QueryBtn_Click(object sender, EventArgs e)
         {
-            //currentAccept = QueryPage;
             SetSelectionPanel(QueryBtn);
-            //witchAccept(QueryPage);
             SwitchPage(QueryPage);
             QueryPage.BringToFront();
-            //is.ActiveControl = QueryPage.getDesiredControl;
         }
         private void DashBtn_Click(object sender, EventArgs e)
         {
             if (Current == DashControl)
                 return;
 
-            //itchAccept(DashControl);
             SwitchPage(DashControl);
             SetSelectionPanel(DashBtn);
             DashControl.BringToFront();
-            //DashControl.ShowStats();
         }
         private void button1_Click_1(object sender, EventArgs e)
         {
-
-
             SwitchPage(printingFiles);
             SetSelectionPanel(IssueBtn);
             printingFiles.BringToFront();
-
-            //printing = new BarangayClearanceForm();
-            //printing.FormClosing += Printing_FormClosing;
-            //printing.Show();
-            //this.Enabled = false;
-            //printing.BringToFront();
         }
 
         /// <summary>
@@ -72,8 +57,9 @@ namespace E_Barangay.Forms
         {
             if (Current == next)
                 return;
-
+            Current.TabStop = false;
             Current = next;
+            Current.TabStop = true;
             ///this is lazy load
             ActiveControl = Current;
         }
@@ -88,7 +74,7 @@ namespace E_Barangay.Forms
             User curr = UserManager.instance.currentUser;
             UserWelcomeTxt.Text = "Welcome: " + curr.Username;
             Current = DashControl;
-
+            printingFiles.OpeningForm += (x, y) => { Enabled = !y; };
             try
             {
                 DashControl.InitValues();
@@ -171,11 +157,11 @@ namespace E_Barangay.Forms
             }
             if (e.KeyCode == Keys.F3)
                 this.WindowState = WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
-            if(e.KeyCode == Keys.F5)
+            if (e.KeyCode == Keys.F5)
             {
                 refresh();
             }
-            if (e.KeyCode == Keys.F4)            
+            if (e.KeyCode == Keys.F4)
                 this.FormBorderStyle = this.FormBorderStyle == FormBorderStyle.None ? FormBorderStyle.Sizable : FormBorderStyle.None;
         }
         void refresh()

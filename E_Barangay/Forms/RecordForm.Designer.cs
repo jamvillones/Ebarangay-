@@ -60,11 +60,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DetailsField.BackColor = System.Drawing.SystemColors.Control;
             this.DetailsField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DetailsField.Location = new System.Drawing.Point(16, 142);
+            this.DetailsField.Location = new System.Drawing.Point(16, 95);
             this.DetailsField.MaxLength = 3000;
             this.DetailsField.Multiline = true;
             this.DetailsField.Name = "DetailsField";
-            this.DetailsField.Size = new System.Drawing.Size(751, 302);
+            this.DetailsField.Size = new System.Drawing.Size(751, 349);
             this.DetailsField.TabIndex = 5;
             this.DetailsField.TextChanged += new System.EventHandler(this.DetailsField_TextChanged);
             // 
@@ -102,11 +102,11 @@
             // SaveBtn
             // 
             this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.SaveBtn.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.SaveBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveBtn.Location = new System.Drawing.Point(14, 450);
+            this.SaveBtn.Location = new System.Drawing.Point(268, 450);
             this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(75, 23);
+            this.SaveBtn.Size = new System.Drawing.Size(119, 23);
             this.SaveBtn.TabIndex = 5;
             this.SaveBtn.TabStop = false;
             this.SaveBtn.Text = "Save";
@@ -116,13 +116,13 @@
             // CancelBtn
             // 
             this.CancelBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.CancelBtn.BackColor = System.Drawing.Color.Gray;
+            this.CancelBtn.BackColor = System.Drawing.Color.Silver;
             this.CancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CancelBtn.ForeColor = System.Drawing.Color.Black;
-            this.CancelBtn.Location = new System.Drawing.Point(95, 450);
+            this.CancelBtn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.CancelBtn.Location = new System.Drawing.Point(393, 450);
             this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(75, 23);
+            this.CancelBtn.Size = new System.Drawing.Size(119, 23);
             this.CancelBtn.TabIndex = 6;
             this.CancelBtn.TabStop = false;
             this.CancelBtn.Text = "Cancel";
@@ -133,7 +133,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 125);
+            this.label3.Location = new System.Drawing.Point(13, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 14);
             this.label3.TabIndex = 7;
@@ -182,7 +182,6 @@
             // 
             // RecordForm
             // 
-            this.AcceptButton = this.SaveBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -201,6 +200,7 @@
             this.Controls.Add(this.DetailsField);
             this.Controls.Add(this.TitleField);
             this.Font = new System.Drawing.Font("Georgia", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RecordForm";

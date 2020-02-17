@@ -46,32 +46,6 @@ namespace E_Barangay.Forms
 
             using (var context = new EBarangayEntities())
             {
-                //switch (SearchFilter.Text)
-                //{
-                //    case "ID":
-                //        SearchedElements = from Citizen in context.Citizens
-                //                           where Citizen.ID.Contains(SearchBox.Text)
-                //                           select Citizen;
-                //        if (SearchedElements.Count() == 0)
-                //        {
-                //            IDEmptySearch.Invoke(this, SearchBox.Text);
-                //            return;
-                //        }
-                //        break;
-                //    case "Name":
-                //        SearchedElements = from Citizen in context.Citizens
-                //                           where Citizen.Name.Contains(SearchBox.Text)
-                //                           select Citizen;
-                //        break;
-                //    case "Address":
-                //        SearchedElements = from Citizen in context.Citizens
-                //                           where Citizen.Address.Contains(SearchBox.Text)
-                //                           select Citizen;
-                //        break;
-                //    default:
-                //        break;
-                //}
-
                 /// search for id
                 SearchedElements = from Citizen in context.Citizens
                                    where Citizen.Name.Contains(SearchBox.Text)
@@ -291,12 +265,6 @@ namespace E_Barangay.Forms
             {
                 showData();
             }
-            //if (!String.IsNullOrEmpty(SearchBox.Text))
-            //{
-            //    SearchBox.SelectionStart = 0;
-            //    SearchBox.SelectionLength = SearchBox.Text.Length;
-            //    Console.WriteLine("lol");
-            //}
         }
 
         RegisterPage reg;

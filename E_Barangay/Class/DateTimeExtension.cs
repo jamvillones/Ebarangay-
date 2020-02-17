@@ -44,5 +44,30 @@ namespace E_Barangay.Class
                                  months, (months == 1) ? "" : "s",
                                  days, (days == 1) ? "" : "s");
         }
+        public static Date ToAge(this DateTime dob)
+        {
+            DateTime today = DateTime.Today;
+            Date date = new Date();
+            int months = today.Month - dob.Month;
+            int years = today.Year - dob.Year;
+
+            if (today.Day < dob.Day)
+            {
+                months--;
+            }
+
+            if (months < 0)
+            {
+                years--;
+                months += 12;
+            }
+
+            int days = (today - dob.AddMonths((years * 12) + months)).Days;
+
+            date.years = years;
+            date.months = months;
+            date.days = days;
+            return date;
+        }
     }
 }

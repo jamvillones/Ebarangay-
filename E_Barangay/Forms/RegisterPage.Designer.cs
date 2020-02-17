@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterPage));
             this.FirstNameField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -179,7 +179,7 @@
             // 
             this.NumberField.Location = new System.Drawing.Point(86, 14);
             this.NumberField.Name = "NumberField";
-            this.NumberField.Size = new System.Drawing.Size(131, 20);
+            this.NumberField.Size = new System.Drawing.Size(156, 20);
             this.NumberField.TabIndex = 1;
             // 
             // SexOption
@@ -246,6 +246,7 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Address";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // AreaOption
             // 
@@ -334,7 +335,7 @@
             // 
             // BarangayField
             // 
-            this.BarangayField.Location = new System.Drawing.Point(61, 40);
+            this.BarangayField.Location = new System.Drawing.Point(86, 40);
             this.BarangayField.Name = "BarangayField";
             this.BarangayField.Size = new System.Drawing.Size(156, 20);
             this.BarangayField.TabIndex = 3;
@@ -390,14 +391,14 @@
             this.Column1,
             this.Column3,
             this.Column2});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.RecordsTable.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.RecordsTable.DefaultCellStyle = dataGridViewCellStyle10;
             this.RecordsTable.GridColor = System.Drawing.Color.Silver;
             this.RecordsTable.Location = new System.Drawing.Point(3, 24);
             this.RecordsTable.MultiSelect = false;
@@ -549,12 +550,13 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Basic Info";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(305, 97);
+            this.label17.Location = new System.Drawing.Point(306, 97);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(85, 14);
             this.label17.TabIndex = 1;
@@ -605,7 +607,9 @@
             // 
             // AgeField
             // 
+            this.AgeField.BackColor = System.Drawing.Color.Silver;
             this.AgeField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AgeField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AgeField.Location = new System.Drawing.Point(263, 17);
             this.AgeField.MaxLength = 11;
             this.AgeField.Name = "AgeField";
@@ -613,6 +617,7 @@
             this.AgeField.Size = new System.Drawing.Size(36, 13);
             this.AgeField.TabIndex = 14;
             this.AgeField.TabStop = false;
+            this.AgeField.TextChanged += new System.EventHandler(this.AgeField_TextChanged);
             // 
             // label14
             // 
@@ -642,10 +647,10 @@
             // 
             this.SpouseField.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.SpouseField.Enabled = false;
-            this.SpouseField.Location = new System.Drawing.Point(422, 66);
+            this.SpouseField.Location = new System.Drawing.Point(396, 66);
             this.SpouseField.MaxLength = 100;
             this.SpouseField.Name = "SpouseField";
-            this.SpouseField.Size = new System.Drawing.Size(435, 20);
+            this.SpouseField.Size = new System.Drawing.Size(461, 20);
             this.SpouseField.TabIndex = 19;
             // 
             // label13
@@ -687,17 +692,17 @@
             // MotherField
             // 
             this.MotherField.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.MotherField.Location = new System.Drawing.Point(421, 40);
+            this.MotherField.Location = new System.Drawing.Point(396, 40);
             this.MotherField.Name = "MotherField";
-            this.MotherField.Size = new System.Drawing.Size(436, 20);
+            this.MotherField.Size = new System.Drawing.Size(461, 20);
             this.MotherField.TabIndex = 16;
             // 
             // FatherField
             // 
             this.FatherField.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.FatherField.Location = new System.Drawing.Point(422, 14);
+            this.FatherField.Location = new System.Drawing.Point(396, 14);
             this.FatherField.Name = "FatherField";
-            this.FatherField.Size = new System.Drawing.Size(435, 20);
+            this.FatherField.Size = new System.Drawing.Size(461, 20);
             this.FatherField.TabIndex = 15;
             // 
             // BdayPicker
@@ -706,6 +711,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.BdayPicker.Checked = false;
             this.BdayPicker.CustomFormat = "";
+            this.BdayPicker.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BdayPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.BdayPicker.Location = new System.Drawing.Point(68, 14);
             this.BdayPicker.Name = "BdayPicker";

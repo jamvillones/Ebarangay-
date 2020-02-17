@@ -239,7 +239,7 @@
             this.panel3.Controls.Add(this.printingFiles);
             this.panel3.Location = new System.Drawing.Point(168, 37);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(813, 548);
+            this.panel3.Size = new System.Drawing.Size(920, 548);
             this.panel3.TabIndex = 3;
             // 
             // DashControl
@@ -249,9 +249,8 @@
             this.DashControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DashControl.Location = new System.Drawing.Point(0, 0);
             this.DashControl.Name = "DashControl";
-            this.DashControl.Size = new System.Drawing.Size(813, 548);
+            this.DashControl.Size = new System.Drawing.Size(920, 548);
             this.DashControl.TabIndex = 3;
-            this.DashControl.TabStop = false;
             // 
             // QueryPage
             // 
@@ -259,7 +258,7 @@
             this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.QueryPage.Location = new System.Drawing.Point(0, 0);
             this.QueryPage.Name = "QueryPage";
-            this.QueryPage.Size = new System.Drawing.Size(813, 548);
+            this.QueryPage.Size = new System.Drawing.Size(920, 548);
             this.QueryPage.TabIndex = 5;
             // 
             // printingFiles
@@ -268,8 +267,9 @@
             this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.printingFiles.Location = new System.Drawing.Point(0, 0);
             this.printingFiles.Name = "printingFiles";
-            this.printingFiles.Size = new System.Drawing.Size(813, 548);
+            this.printingFiles.Size = new System.Drawing.Size(920, 548);
             this.printingFiles.TabIndex = 4;
+            this.printingFiles.TabStop = false;
             // 
             // panel2
             // 
@@ -280,7 +280,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(168, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(825, 38);
+            this.panel2.Size = new System.Drawing.Size(932, 38);
             this.panel2.TabIndex = 4;
             // 
             // UserWelcomeTxt
@@ -320,14 +320,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(993, 597);
+            this.ClientSize = new System.Drawing.Size(1100, 597);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.MinimumSize = new System.Drawing.Size(900, 536);
+            this.MinimumSize = new System.Drawing.Size(1050, 536);
             this.Name = "MainPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "E Barangay";

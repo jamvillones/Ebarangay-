@@ -205,7 +205,7 @@ namespace E_Barangay.Forms
             ProvinceField.Clear();
             ContactField.Clear();
 
-            Birthday.ResetText();
+            //Birthday.ResetText();
 
             RecordsTable.Rows.Clear();
             ImageBox.Image = null;
@@ -237,9 +237,9 @@ namespace E_Barangay.Forms
 
         private void BdayPicker_ValueChanged(object sender, EventArgs e)
         {
-            var today = DateTime.Today;
-            var age = today.Year - BdayPicker.Value.Year;
-            AgeField.Text = age.ToString();
+            //var today = DateTime.Today;
+            //var age = today.Year - BdayPicker.Value.Year;
+            AgeField.Text = Class.DateTimeExtension.ToAge(BdayPicker.Value.Date).years.ToString(); ;
         }
         RecordForm record;
         private void button3_Click(object sender, EventArgs e)
@@ -321,6 +321,21 @@ namespace E_Barangay.Forms
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AgeField_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
         {
 
         }

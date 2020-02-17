@@ -14,11 +14,13 @@ namespace E_Barangay.Forms
 {
     public partial class EditPage : Form
     {
-        // List<Record> records = new List<Record>();
-        //ICollection<Record> records;
         List<Record> tobeAdded = new List<Record>();
         List<Record> toBeRemoved = new List<Record>();
         List<Record> recordList = new List<Record>();
+
+        List<Control> address = new List<Control>();
+
+        Control[] addressArray = new Control[5];
 
         List<Control> requiredControls = new List<Control>();
 
@@ -43,7 +45,8 @@ namespace E_Barangay.Forms
             using (var con = new EBarangayEntities())
             {
                 var t = con.Citizens.FirstOrDefault(r => r.ID == citizen.ID);
-                ImageBox.Image = t.Picture == null ? Properties.Resources.image_50px : Class.ImageConverter.byteArrayToImage(t.Picture);
+               // ImageBox.Image = t.Picture == null ? Properties.Resources.image_50px : Class.ImageConverter.byteArrayToImage(t.Picture);
+                ImageBox.Image = Class.ImageConverter.byteArrayToImage(t.Picture);
 
                 recordList = t.Records.ToList<Record>();
                 for (int i = 0; i < recordList.Count; i++)
@@ -58,10 +61,16 @@ namespace E_Barangay.Forms
             //ImageBox.Image = Class.ImageConverter.byteArrayToImage(citizen.Picture);
             IDField.Text = citizen.ID;
             FirstNameField.Text = citizen.Name;
-            CurrentAdd.Text = citizen.Address;
-            BdayPicker.Value = citizen.Birthday;
 
-            //AreaOption.SelectedText = 
+            //CurrentAdd.Text = citizen.Address;
+            var address = separateString(citizen.Address);
+            //Console.WriteLine(addressArray.Length + "..." + address.Count);
+            for (int i = 1; i <= address.Count; i++)
+            {
+                addressArray[addressArray.Length - i].Text = address[address.Count - i];
+            }
+
+            BdayPicker.Value = citizen.Birthday;
 
             ContactField.Text = citizen.ContactInfo;
             SexOption.Text = citizen.Gender;
@@ -83,6 +92,30 @@ namespace E_Barangay.Forms
             isIndigent.Checked = citizen.Indigent;
 
         }
+
+        List<string> separateString(string s)
+        {
+            List<string> ss = new List<string>();
+            string tmp = string.Empty;
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (s[i] == ',')
+                {
+                    ss.Add(tmp.Trim(' '));
+                    tmp = string.Empty;
+                }
+                else
+                {
+                    tmp += s[i];
+                    if (i == s.Length - 1)
+                    {
+                        ss.Add(tmp.Trim(' '));
+                        tmp = string.Empty;
+                    }
+                }
+            }
+            return ss;
+        }
         #endregion
 
         //PasswordForm password;
@@ -90,9 +123,12 @@ namespace E_Barangay.Forms
         {
             InitializeComponent();
             SetRequiredControls();
-            //password = new PasswordForm(Class.UserManager.instance.currentUser.Username);
-            //password.OnCorrectPassword += Password_OnCorrectPassword;
-            //password.Show();
+            address.Add(NumberField);
+            addressArray[0] = NumberField;
+            addressArray[1] = AreaOption;
+            addressArray[2] = BarangayField;
+            addressArray[3] = MunicipalityField;
+            addressArray[4] = ProvinceField;
         }
 
         private void Password_OnCorrectPassword(object sender, bool e)
@@ -110,19 +146,12 @@ namespace E_Barangay.Forms
             }
             //throw new NotImplementedException();
         }
-
-        //public void AcceptNewUser(object sender, string id)
-        //{
-        //    IDField.Text = id;
-        //}
         /// <summary>
         /// adds all the required control to a single list for automation
         /// </summary>
         void SetRequiredControls()
         {
             requiredControls.Add(FirstNameField);
-            // requiredControls.Add(MiddleNameField);
-            // requiredControls.Add(LastNameField);
             requiredControls.Add(BarangayField);
             requiredControls.Add(AreaOption);
             requiredControls.Add(ProvinceField);
@@ -132,10 +161,6 @@ namespace E_Barangay.Forms
             requiredControls.Add(MotherField);
             requiredControls.Add(IDField);
         }
-        //public void AcceptRecord(Record c)
-        //{
-        //    records.Add(c);
-        //}
         /// <summary>
         /// initilalizes a dropdown with given values
         /// </summary>
@@ -236,7 +261,6 @@ namespace E_Barangay.Forms
                 MessageBox.Show("Saved Successfully");
                 this.Close();
             }
-
         }
         /// <summary>
         /// checks if fields are suitable for changes
@@ -324,9 +348,7 @@ namespace E_Barangay.Forms
 
         private void BdayPicker_ValueChanged(object sender, EventArgs e)
         {
-            var today = DateTime.Today;
-            var age = today.Year - BdayPicker.Value.Year;
-            AgeField.Text = age.ToString();
+            AgeField.Text = Class.DateTimeExtension.ToAge(BdayPicker.Value).years.ToString();
         }
 
         #region recordprompt
@@ -338,7 +360,6 @@ namespace E_Barangay.Forms
                 recForm = new RecordForm();
                 recForm.FormClosed += Record_FormClosed;
                 recForm.OnSave += Record_OnSave;
-                // record.GetRef(this);
                 recForm.Show();
                 this.Enabled = false;
                 return;

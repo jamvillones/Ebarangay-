@@ -81,7 +81,7 @@ namespace E_Barangay.Forms
             Class.Date date = new Class.Date();
             Class.DateTimeExtension.ToAgeString(target.Birthday, ref date);
 
-            AgeTxt.Text = date.years.ToString();
+            AgeTxt.Text = Class.DateTimeExtension.ToAge(target.Birthday).years.ToString();
             IsIndigent.Checked = target.Indigent ? true : false;
             IsStudent.Checked = target.Student ? true : false;
             IsSenior.Checked = target.SeniorCitizen ? true : false;
