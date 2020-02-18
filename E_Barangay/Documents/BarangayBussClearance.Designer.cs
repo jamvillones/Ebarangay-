@@ -313,13 +313,13 @@
             this.label1.Text = "Full Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // nameField
+            // fullNameField
             // 
             this.fullNameField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fullNameField.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.fullNameField.Location = new System.Drawing.Point(83, 17);
-            this.fullNameField.Name = "nameField";
+            this.fullNameField.Name = "fullNameField";
             this.fullNameField.Size = new System.Drawing.Size(240, 20);
             this.fullNameField.TabIndex = 1;
             // 
@@ -366,7 +366,7 @@
             this.Name = "BarangayBussClearance";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Certificate for Business";
+            this.Text = "Certificate for Business Clearance";
             this.Load += new System.EventHandler(this.BarangaCertificationforBusiness_Load);
             this.panel1.ResumeLayout(false);
             this.IdGroup.ResumeLayout(false);
