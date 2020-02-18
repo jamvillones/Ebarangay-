@@ -32,17 +32,6 @@
             this.lastName = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.SexOption = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.Relation = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.By = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.DeathPlace = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.DeathDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.IssuedOn = new System.Windows.Forms.DateTimePicker();
@@ -51,16 +40,19 @@
             this.AssignBtn = new System.Windows.Forms.Button();
             this.IDField = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.SexOption = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.firstName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Address = new System.Windows.Forms.TextBox();
             this.printing = new E_Barangay.Forms.Printing();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tdNoField = new System.Windows.Forms.TextBox();
+            this.specField = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.IdGroup.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -89,7 +81,6 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel1.Controls.Add(this.groupBox4);
-            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.ResetBtn);
             this.panel1.Controls.Add(this.IdGroup);
@@ -104,131 +95,14 @@
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.SexOption);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.Relation);
-            this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Controls.Add(this.By);
+            this.groupBox4.Controls.Add(this.specField);
             this.groupBox4.Location = new System.Drawing.Point(12, 251);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(328, 100);
+            this.groupBox4.Size = new System.Drawing.Size(328, 55);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Request";
-            // 
-            // SexOption
-            // 
-            this.SexOption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SexOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SexOption.FormattingEnabled = true;
-            this.SexOption.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.SexOption.Location = new System.Drawing.Point(92, 42);
-            this.SexOption.Name = "SexOption";
-            this.SexOption.Size = new System.Drawing.Size(230, 21);
-            this.SexOption.TabIndex = 2;
-            // 
-            // label8
-            // 
-            this.label8.Location = new System.Drawing.Point(6, 68);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 20);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "Relationship";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Relation
-            // 
-            this.Relation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Relation.Location = new System.Drawing.Point(92, 69);
-            this.Relation.Name = "Relation";
-            this.Relation.Size = new System.Drawing.Size(230, 20);
-            this.Relation.TabIndex = 3;
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(6, 42);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 20);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "Gender";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(6, 16);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 20);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "By:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // By
-            // 
-            this.By.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.By.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.By.Location = new System.Drawing.Point(92, 17);
-            this.By.Name = "By";
-            this.By.Size = new System.Drawing.Size(230, 20);
-            this.By.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.DeathPlace);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.DeathDate);
-            this.groupBox1.Location = new System.Drawing.Point(12, 357);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(328, 76);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Death Details";
-            // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(6, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 20);
-            this.label5.TabIndex = 28;
-            this.label5.Text = "Place:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // DeathPlace
-            // 
-            this.DeathPlace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DeathPlace.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.DeathPlace.Location = new System.Drawing.Point(92, 17);
-            this.DeathPlace.Name = "DeathPlace";
-            this.DeathPlace.Size = new System.Drawing.Size(230, 20);
-            this.DeathPlace.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.Location = new System.Drawing.Point(6, 45);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 20);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Date";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // DeathDate
-            // 
-            this.DeathDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DeathDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DeathDate.Location = new System.Drawing.Point(92, 43);
-            this.DeathDate.Name = "DeathDate";
-            this.DeathDate.Size = new System.Drawing.Size(230, 20);
-            this.DeathDate.TabIndex = 2;
+            this.groupBox4.Text = "Building";
             // 
             // groupBox2
             // 
@@ -236,7 +110,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.IssuedOn);
-            this.groupBox2.Location = new System.Drawing.Point(12, 439);
+            this.groupBox2.Location = new System.Drawing.Point(12, 312);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(328, 47);
             this.groupBox2.TabIndex = 5;
@@ -310,7 +184,9 @@
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.tdNoField);
+            this.groupBox3.Controls.Add(this.SexOption);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.lastName);
@@ -320,10 +196,33 @@
             this.groupBox3.Controls.Add(this.Address);
             this.groupBox3.Location = new System.Drawing.Point(12, 95);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(328, 128);
+            this.groupBox3.Size = new System.Drawing.Size(328, 150);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DETAILS";
+            // 
+            // SexOption
+            // 
+            this.SexOption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SexOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SexOption.FormattingEnabled = true;
+            this.SexOption.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.SexOption.Location = new System.Drawing.Point(92, 95);
+            this.SexOption.Name = "SexOption";
+            this.SexOption.Size = new System.Drawing.Size(230, 21);
+            this.SexOption.TabIndex = 29;
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(8, 95);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(56, 20);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "Sex";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -372,28 +271,41 @@
             this.printing.Size = new System.Drawing.Size(562, 690);
             this.printing.TabIndex = 0;
             // 
-            // comboBox1
+            // label11
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label11.Location = new System.Drawing.Point(6, 122);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 20);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "TD No.:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tdNoField
+            // 
+            this.tdNoField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(92, 95);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(230, 21);
-            this.comboBox1.TabIndex = 29;
+            this.tdNoField.Location = new System.Drawing.Point(92, 122);
+            this.tdNoField.Name = "tdNoField";
+            this.tdNoField.Size = new System.Drawing.Size(230, 20);
+            this.tdNoField.TabIndex = 32;
             // 
-            // label9
+            // specField
             // 
-            this.label9.Location = new System.Drawing.Point(8, 95);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 20);
-            this.label9.TabIndex = 30;
-            this.label9.Text = "Sex";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.specField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.specField.Location = new System.Drawing.Point(92, 19);
+            this.specField.Name = "specField";
+            this.specField.Size = new System.Drawing.Size(230, 20);
+            this.specField.TabIndex = 33;
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(6, 18);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 20);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Specification";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // BuildingPermit
             // 
@@ -416,8 +328,6 @@
             this.panel1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.IdGroup.ResumeLayout(false);
             this.IdGroup.PerformLayout();
@@ -444,19 +354,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Address;
         private Printing printing;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox DeathPlace;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker DeathDate;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox Relation;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox By;
         private System.Windows.Forms.ComboBox SexOption;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox tdNoField;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox specField;
     }
 }

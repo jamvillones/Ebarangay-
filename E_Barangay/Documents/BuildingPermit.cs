@@ -21,16 +21,16 @@ namespace E_Barangay.Forms
         private void DeathCertificate_Load(object sender, EventArgs e)
         {
             printing.PrintPage += Printing_PrintPage;
-            printing.SubscribeToFields(firstName, lastName, Address, DeathPlace, DeathDate, IssuedOn, By, SexOption, Relation);
+            printing.SubscribeToFields(firstName, lastName, Address, IssuedOn, SexOption);
         }
 
         private void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(Properties.Resources.BuildingPermit, new PointF(0, 0));
             Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 + 50, 550, 380);
-            //string name = Printing.IfControlEmpty(firstName) + " " + Printing.IfControlEmpty(middleName) + " " + Printing.IfControlEmpty(lastName);
-            string first = Printing.Indention + "This certification is issued to AQUILINO BUYOC, of legal age, Filipino and a residing at Cor. Oyo Torong Street Poblacion, Kalibo, Aklan, per TD No.17-01-001-00819/ 17-01-001-00820 in support of her application for 3 storey’s Residential Commercial/Building permit with the Local Government Unit (LGU) Kalibo." + Printing.LineSpace +
-                           Printing.Indention + "Issued this 7th day of October, 2019 at Barangay Poblacion, Kalibo, Aklan.";
+            string name = Printing.IfControlEmpty(firstName) + " " + Printing.IfControlEmpty(lastName);
+            string first = Printing.Indention + "This certification is issued to " + name + ", of legal age, Filipino and a residing at Cor. Oyo Torong Street Poblacion, Kalibo, Aklan, per TD No." + Printing.IfControlEmpty(tdNoField) + " in support of " + Printing.IfControlEmpty(SexOption) + " application for " + Printing.IfControlEmpty(specField) + " permit with the Local Government Unit (LGU) Kalibo." + Printing.LineSpace +
+                           Printing.Indention + "Issued this " + IssuedOn.Value.Day + "th day of " + IssuedOn.Value.ToString("MMMM, yyyy") + " at Barangay Poblacion, Kalibo, Aklan.";
 
             e.Graphics.DrawString(first, Printing.font, Brushes.Black, rect);
             DrawDebugRecs(rect, e);
@@ -75,8 +75,8 @@ namespace E_Barangay.Forms
             firstName.Text = nameList[0];
 
             lastName.Text = nameList[2];
-            int age = DateTime.Today.Year - c.Birthday.Year;
-
+            //int age = Class.DateTimeExtension.ToAge(c.Birthday).years;
+            SexOption.Text = c.Gender;
             Address.Text = c.Address;
         }
         private void AssignBtn_Click(object sender, EventArgs e)
@@ -92,7 +92,7 @@ namespace E_Barangay.Forms
         #region Clearing
         private void ResetBtn_Click(object sender, EventArgs e)
         {
-            clearFields(firstName, lastName, Address, DeathPlace, DeathDate, IssuedOn, By, SexOption, Relation);
+            clearFields(firstName, lastName, Address, IssuedOn, SexOption);
         }
         void clearFields(params Control[] controls)
         {
