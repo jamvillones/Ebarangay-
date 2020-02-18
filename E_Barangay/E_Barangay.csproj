@@ -117,6 +117,12 @@
     <Compile Include="Class\DateTimeExtension.cs" />
     <Compile Include="Class\ImageConverter.cs" />
     <Compile Include="Class\PasswordToFormHandler.cs" />
+    <Compile Include="Documents\CertificateAppearance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificateAppearance.Designer.cs">
+      <DependentUpon>CertificateAppearance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\BuildingPermit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -488,6 +494,9 @@
     <Compile Include="User.cs">
       <DependentUpon>Ebarangaymodel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Documents\CertificateAppearance.resx">
+      <DependentUpon>CertificateAppearance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Documents\BuildingPermit.resx">
       <DependentUpon>BuildingPermit.cs</DependentUpon>
     </EmbeddedResource>
@@ -705,6 +714,7 @@
       <LastGenOutput>Ebarangaymodel.cs</LastGenOutput>
     </Content>
     <Content Include="favicon.ico" />
+    <None Include="Resources\CertAppearance.png" />
     <None Include="Resources\BuildingPermit.png" />
     <None Include="Resources\Death Cert.png" />
     <None Include="Resources\BussinessClearance.png" />

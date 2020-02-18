@@ -54,6 +54,10 @@ namespace E_Barangay.Forms
         {
             return sex == string.Empty ? "BLANK" : (sex == "Male" ? "his" : "her");
         }
+        public static string HimOrHer(string sex)
+        {
+            return sex == string.Empty ? "BLANK" : (sex == "Male" ? "him" : "her");
+        }
 
         public static string IfControlEmpty(Control c)
         {

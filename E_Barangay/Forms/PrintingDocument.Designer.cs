@@ -32,8 +32,9 @@
             this.BClearanceBtn = new System.Windows.Forms.Button();
             this.BussClearanceBtn = new System.Windows.Forms.Button();
             this.deathCertBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.buildingPermitBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.certAppearanceBtn = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +48,7 @@
             this.flowLayoutPanel1.Controls.Add(this.BussClearanceBtn);
             this.flowLayoutPanel1.Controls.Add(this.deathCertBtn);
             this.flowLayoutPanel1.Controls.Add(this.buildingPermitBtn);
+            this.flowLayoutPanel1.Controls.Add(this.certAppearanceBtn);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 35);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(743, 348);
@@ -97,16 +99,6 @@
             this.deathCertBtn.UseVisualStyleBackColor = false;
             this.deathCertBtn.Click += new System.EventHandler(this.deathCertBtn_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bebas Neue Regular", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Please choose a Document";
-            // 
             // buildingPermitBtn
             // 
             this.buildingPermitBtn.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -121,6 +113,31 @@
             this.buildingPermitBtn.Text = "Building Permit";
             this.buildingPermitBtn.UseVisualStyleBackColor = false;
             this.buildingPermitBtn.Click += new System.EventHandler(this.buildingPermitBtn_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bebas Neue Regular", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(9, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(158, 19);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Please choose a Document";
+            // 
+            // certAppearanceBtn
+            // 
+            this.certAppearanceBtn.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.certAppearanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.certAppearanceBtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.certAppearanceBtn.ForeColor = System.Drawing.Color.White;
+            this.certAppearanceBtn.Location = new System.Drawing.Point(567, 3);
+            this.certAppearanceBtn.Name = "certAppearanceBtn";
+            this.certAppearanceBtn.Size = new System.Drawing.Size(136, 41);
+            this.certAppearanceBtn.TabIndex = 4;
+            this.certAppearanceBtn.TabStop = false;
+            this.certAppearanceBtn.Text = "Certificate of Appearance";
+            this.certAppearanceBtn.UseVisualStyleBackColor = false;
+            this.certAppearanceBtn.Click += new System.EventHandler(this.certAppearanceBtn_Click);
             // 
             // PrintingDocument
             // 
@@ -146,5 +163,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button deathCertBtn;
         private System.Windows.Forms.Button buildingPermitBtn;
+        private System.Windows.Forms.Button certAppearanceBtn;
     }
 }
