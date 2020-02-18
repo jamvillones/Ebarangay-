@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace E_Barangay.Forms
 {
-    public partial class BarangayClearanceForm : Form
+    public partial class BarangayClearance : Form
     {
-        public BarangayClearanceForm()
+        public BarangayClearance()
         {
             InitializeComponent();
         }
@@ -31,8 +31,9 @@ namespace E_Barangay.Forms
             Font font = new Font("Arial Narrow", 12, FontStyle.Regular);
 
             RectangleF rect = new RectangleF(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3, 548, 300);
-            string text = Printing.Indention + "This is to certify that as per record of this Barangay " + Printing.IfControlEmpty(firstName) + " " + Printing.IfControlEmpty(middleName) + ". " + Printing.IfControlEmpty(lastName) + ", " + Printing.IfControlEmpty(Age) + " years old, " + Printing.IfControlEmpty(CStatusOption) + ", Filipino and a resident of " + Printing.IfControlEmpty(Address) + ", whose signature appears below has no criminal, civil or administrative charges before this office and has good moral standing in the community." + Printing.LineSpace
-                          + Printing.Indention + "This certification is issued upon the request of " + Printing.MrOrMrs(SexOption.Text) + " " + Printing.IfControlEmpty(lastName) + " for the purpose of " + Printing.HisOrHer(SexOption.Text) + " " + Printing.IfControlEmpty(Purpose) + "." + Printing.LineSpace
+            string name = Printing.IfControlEmpty(firstName) + " " + Printing.IfControlEmpty(middleName) + ". " + Printing.IfControlEmpty(lastName) + (extensionField.Text == string.Empty ? "" : " " + extensionField.Text);
+            string text = Printing.Indention + "This is to certify that as per record of this Barangay " + name + ", " + Printing.IfControlEmpty(Age) + " years old, " + Printing.IfControlEmpty(CStatusOption) + ", Filipino and a resident of " + Printing.IfControlEmpty(Address) + ", whose signature appears below has no criminal, civil or administrative charges before this office and has good moral standing in the community." + Printing.LineSpace
+                          + Printing.Indention + "This certification is issued upon the request of " + Printing.MrOrMrs(SexOption.Text) + " " + Printing.IfControlEmpty(lastName)+(extensionField.Text == string.Empty?"":" "+extensionField.Text) + " for the purpose of " + Printing.HisOrHer(SexOption.Text) + " " + Printing.IfControlEmpty(Purpose) + "." + Printing.LineSpace
                           + "WITNESS MY HAND SEAL, this " + IssuedOn.Value.Day + "th  day of " + IssuedOn.Value.ToString("MMMM") + ", " + IssuedOn.Value.Year + " at Barangay Poblacion, Kalibo, Aklan, Philippines.";
 
             e.Graphics.DrawString(text, font, Brushes.Black, rect);
@@ -56,26 +57,12 @@ namespace E_Barangay.Forms
                 this.ActiveControl = IDField;
                 return;
             }
-            List<string> nameList = new List<string>();
-            string word = "";
-            string name = c.Name;
-            for (int i = 0; i < name.Length; i++)
-            {
-                if (name[i] == ' ' || i == name.Length - 1)
-                {
-                    if (i == name.Length - 1)
-                        word += name[i];
-                    nameList.Add(word);
-                    word = "";
-                }
-                else
-                {
-                    word += name[i];
-                }
-            }
-            firstName.Text = nameList[0];
-            middleName.Text = nameList[1][0].ToString();
-            lastName.Text = nameList[2];
+            Class.NameSeparatingHelper helper = new Class.NameSeparatingHelper(c.Name);
+            firstName.Text = helper.First;
+            middleName.Text = helper.Middle;
+            lastName.Text = helper.Last;
+            extensionField.Text = helper.Extension;
+
             int age = DateTime.Today.Year - c.Birthday.Year;
             Age.Text = age > 0 ? age.ToString() : 1.ToString();
             Address.Text = c.Address;

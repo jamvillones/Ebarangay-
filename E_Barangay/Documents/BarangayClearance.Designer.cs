@@ -1,6 +1,6 @@
 ﻿namespace E_Barangay.Forms
 {
-    partial class BarangayClearanceForm
+    partial class BarangayClearance
     {
         /// <summary> 
         /// Required designer variable.
@@ -60,6 +60,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.OrNo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.extensionField = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.printing = new E_Barangay.Forms.Printing();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -88,7 +90,7 @@
             this.groupBox2.Controls.Add(this.Purpose);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.IssuedOn);
-            this.groupBox2.Location = new System.Drawing.Point(12, 308);
+            this.groupBox2.Location = new System.Drawing.Point(12, 331);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(330, 76);
             this.groupBox2.TabIndex = 3;
@@ -177,6 +179,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.extensionField);
             this.groupBox3.Controls.Add(this.SexOption);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label11);
@@ -193,7 +197,7 @@
             this.groupBox3.Controls.Add(this.Address);
             this.groupBox3.Location = new System.Drawing.Point(12, 95);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(330, 207);
+            this.groupBox3.Size = new System.Drawing.Size(330, 230);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DETAILS";
@@ -207,14 +211,14 @@
             this.SexOption.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.SexOption.Location = new System.Drawing.Point(83, 147);
+            this.SexOption.Location = new System.Drawing.Point(83, 173);
             this.SexOption.Name = "SexOption";
             this.SexOption.Size = new System.Drawing.Size(241, 21);
             this.SexOption.TabIndex = 7;
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(6, 147);
+            this.label6.Location = new System.Drawing.Point(6, 173);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 20);
             this.label6.TabIndex = 28;
@@ -223,7 +227,7 @@
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(6, 95);
+            this.label11.Location = new System.Drawing.Point(6, 121);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 20);
             this.label11.TabIndex = 26;
@@ -235,10 +239,10 @@
             this.Age.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Age.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.Age.Location = new System.Drawing.Point(83, 95);
+            this.Age.Location = new System.Drawing.Point(83, 121);
             this.Age.Name = "Age";
             this.Age.Size = new System.Drawing.Size(241, 20);
-            this.Age.TabIndex = 4;
+            this.Age.TabIndex = 5;
             // 
             // label10
             // 
@@ -290,7 +294,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(6, 173);
+            this.label4.Location = new System.Drawing.Point(6, 199);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 20);
             this.label4.TabIndex = 20;
@@ -316,14 +320,14 @@
             this.CStatusOption.Items.AddRange(new object[] {
             "Single",
             "Married"});
-            this.CStatusOption.Location = new System.Drawing.Point(83, 174);
+            this.CStatusOption.Location = new System.Drawing.Point(83, 200);
             this.CStatusOption.Name = "CStatusOption";
             this.CStatusOption.Size = new System.Drawing.Size(241, 21);
             this.CStatusOption.TabIndex = 8;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(6, 121);
+            this.label3.Location = new System.Drawing.Point(6, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 20);
             this.label3.TabIndex = 5;
@@ -334,7 +338,7 @@
             // 
             this.Address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Address.Location = new System.Drawing.Point(83, 121);
+            this.Address.Location = new System.Drawing.Point(83, 147);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(241, 20);
             this.Address.TabIndex = 6;
@@ -347,7 +351,7 @@
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.OrNo);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(12, 390);
+            this.groupBox1.Location = new System.Drawing.Point(12, 413);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(330, 103);
             this.groupBox1.TabIndex = 4;
@@ -411,6 +415,24 @@
             this.label5.Text = "ORNO:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // extensionField
+            // 
+            this.extensionField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.extensionField.Location = new System.Drawing.Point(83, 95);
+            this.extensionField.Name = "extensionField";
+            this.extensionField.Size = new System.Drawing.Size(241, 20);
+            this.extensionField.TabIndex = 4;
+            // 
+            // label13
+            // 
+            this.label13.Location = new System.Drawing.Point(6, 95);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(71, 20);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "Extension:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // printing
             // 
             this.printing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -421,7 +443,7 @@
             this.printing.Size = new System.Drawing.Size(562, 690);
             this.printing.TabIndex = 0;
             // 
-            // BarangayClearanceForm
+            // BarangayClearance
             // 
             this.AcceptButton = this.AssignBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -434,7 +456,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "BarangayClearanceForm";
+            this.Name = "BarangayClearance";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Barangay Clearcance";
@@ -487,5 +509,7 @@
         private System.Windows.Forms.ComboBox SexOption;
         private System.Windows.Forms.Label label6;
         private Printing printing;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox extensionField;
     }
 }

@@ -21,17 +21,18 @@ namespace E_Barangay.Forms
         private void DeathCertificate_Load(object sender, EventArgs e)
         {
             printing.PrintPage += Printing_PrintPage;
-            printing.SubscribeToFields(firstName, lastName, Address, IssuedOn, SexOption);
+            printing.SubscribeToFields(fullNameField, Address, IssuedOn, SexOption);
         }
 
         private void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(Properties.Resources.CertAppearance, new PointF(0, 0));
             Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 + 50, 550, 380);
-            string name = Printing.IfControlEmpty(firstName) + " " + Printing.IfControlEmpty(lastName);
-            string first = Printing.Indention + "This is to certify that "+Printing.MrOrMrs(SexOption.Text)+" "+name+" has appeared in my office."+ Printing.LineSpace +
-                           Printing.Indention + "This certification is issued to "+Printing.MrOrMrs(SexOption.Text)+" "+Printing.IfControlEmpty(lastName)+"  for whatever legal intent it may serve "+Printing.HimOrHer(SexOption.Text)+"."+Printing.LineSpace+
-                           Printing.Indention + "Issued this "+IssuedOn.Value.Day+"th day of "+IssuedOn.Value.ToString("MMMM, yyyy")+" Barangay Poblacion, Kalibo, Aklan.";
+            var helper = new Class.NameSeparatingHelper(fullNameField.Text);
+            string name = Printing.IfControlEmpty(fullNameField);
+            string first = Printing.Indention + "This is to certify that " + Printing.MrOrMrs(SexOption.Text) + " " + name + " has appeared in my office." + Printing.LineSpace +
+                           Printing.Indention + "This certification is issued to " + Printing.MrOrMrs(SexOption.Text) + " " +helper.Last+ (string.IsNullOrEmpty(helper.Extension)?"":" "+helper.Extension) + "  for whatever legal intent it may serve " + Printing.HimOrHer(SexOption.Text) + "." + Printing.LineSpace +
+                           Printing.Indention + "Issued this " + IssuedOn.Value.Day + "th day of " + IssuedOn.Value.ToString("MMMM, yyyy") + " Barangay Poblacion, Kalibo, Aklan.";
 
             e.Graphics.DrawString(first, Printing.font, Brushes.Black, rect);
             DrawDebugRecs(rect, e);
@@ -56,26 +57,7 @@ namespace E_Barangay.Forms
                 this.ActiveControl = IDField;
                 return;
             }
-            List<string> nameList = new List<string>();
-            string word = "";
-            string name = c.Name;
-            for (int i = 0; i < name.Length; i++)
-            {
-                if (name[i] == ' ' || i == name.Length - 1)
-                {
-                    if (i == name.Length - 1)
-                        word += name[i];
-                    nameList.Add(word);
-                    word = "";
-                }
-                else
-                {
-                    word += name[i];
-                }
-            }
-            firstName.Text = nameList[0];
-
-            lastName.Text = nameList[2];
+            fullNameField.Text = c.Name;
             //int age = Class.DateTimeExtension.ToAge(c.Birthday).years;
             SexOption.Text = c.Gender;
             Address.Text = c.Address;
@@ -93,7 +75,7 @@ namespace E_Barangay.Forms
         #region Clearing
         private void ResetBtn_Click(object sender, EventArgs e)
         {
-            clearFields(firstName, lastName, Address, IssuedOn, SexOption);
+            clearFields(fullNameField, Address, IssuedOn, SexOption);
         }
         void clearFields(params Control[] controls)
         {

@@ -18,9 +18,9 @@ namespace E_Barangay.Forms
         {
             InitializeComponent();
 
-            controls.Add(firstName);
-            controls.Add(middleName);
-            controls.Add(lastName);
+            controls.Add(fullNameField);
+            //controls.Add(middleName);
+            //controls.Add(lastName);
             controls.Add(Address);
             controls.Add(OrNo);
             controls.Add(OrAmount);
@@ -42,7 +42,8 @@ namespace E_Barangay.Forms
 
             #region firstbatch
             Rectangle firstRect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 - 10, 548, 50);
-            string FirstBatch = Printing.Indention + Printing.IfControlEmpty(firstName) + " " + Printing.IfControlEmpty(middleName) + ". " + Printing.IfControlEmpty(lastName) + " of legal age, Filipino and residing at " +
+            string name = Printing.IfControlEmpty(this.fullNameField);
+            string FirstBatch = Printing.Indention + name + " of legal age, Filipino and residing at " +
                                 Printing.IfControlEmpty(Address) + " to operate:";
             e.Graphics.DrawString(FirstBatch, Printing.font, Brushes.Black, firstRect);
             DrawDebugRecs(firstRect, e);
@@ -73,8 +74,8 @@ namespace E_Barangay.Forms
             #region Signature
             ///sign
             var SignRect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height + 10 - 290, 240, 30);
-            string Name = Printing.IfControlEmpty(firstName) + " " + Printing.IfControlEmpty(middleName) + ". " + Printing.IfControlEmpty(lastName);
-            e.Graphics.DrawString(Name, Printing.fontBold, Brushes.Black, SignRect);
+            //string Name = Printing.IfControlEmpty(this.nameField) + " " + Printing.IfControlEmpty(middleName) + ". " + Printing.IfControlEmpty(lastName);
+            e.Graphics.DrawString(name, Printing.fontBold, Brushes.Black, SignRect);
             //e.Graphics.DrawRectangle(Printing.pen, SignRect);
             DrawDebugRecs(SignRect, e);
             ///end
@@ -130,27 +131,9 @@ namespace E_Barangay.Forms
                 this.ActiveControl = IDField;
                 return;
             }
-            List<string> nameList = new List<string>();
-            string word = "";
-            string name = citizen.Name;
-            for (int i = 0; i < name.Length; i++)
-            {
-                if (name[i] == ' ' || i == name.Length - 1)
-                {
-                    if (i == name.Length - 1)
-                        word += name[i];
-                    nameList.Add(word);
-                    word = "";
-                }
-                else
-                {
-                    word += name[i];
-                }
-            }
-            firstName.Text = nameList[0];
-            middleName.Text = nameList[1][0].ToString();
-            lastName.Text = nameList[2];
-
+            //Class.NameSeparatingHelper helper = new Class.NameSeparatingHelper(citizen.Name);
+            //nameField.Text = helper.First + " " + helper.Middle + " " + helper.Last + " "+helper.Extension;
+            fullNameField.Text = citizen.Name;
             Address.Text = citizen.Address;
         }
         #endregion

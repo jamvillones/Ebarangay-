@@ -21,7 +21,7 @@ namespace E_Barangay.Forms
         private void DeathCertificate_Load(object sender, EventArgs e)
         {
             printing.PrintPage += Printing_PrintPage;
-            printing.SubscribeToFields(firstName, lastName, addressField, IssuedOn, SexOption);
+            printing.SubscribeToFields(fullNameField, addressField, IssuedOn, SexOption);
         }
 
         private void Printing_PrintPage(object sender, PrintPageEventArgs e)
@@ -29,9 +29,10 @@ namespace E_Barangay.Forms
             e.Graphics.DrawImage(Properties.Resources.CertificateOfIndigency, new PointF(0, 0));
             Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 + 20, 550, 300);
 
-            string name = Printing.IfControlEmpty(firstName) + " " + Printing.IfControlEmpty(middleInitialField) + " " + Printing.IfControlEmpty(lastName) + (extField.Text == string.Empty ? "" : " " + extField.Text);
-            string first = Printing.Indention + "This is to certify that " + name + " " + Printing.IfControlEmpty(ageField) + " years old, " + Printing.IfControlEmpty(SexOption) + ", " + Printing.IfControlEmpty(civilStatusOption) + ",    Filipino and a resident of " + Printing.IfControlEmpty(addressField) + ", belongs to an indigent family in this Barangay" + Printing.LineSpace +
-                           Printing.Indention + "This certification is issued to " + Printing.MrOrMrs(SexOption.Text) + " " + Printing.IfControlEmpty(lastName) + (extField.Text == string.Empty ? "" : " " + extField.Text) + "  for whatever legal purposes it may serve " + Printing.HimOrHer(SexOption.Text) + " best." + Printing.LineSpace +
+            string name = Printing.IfControlEmpty(fullNameField);
+            var helper = new Class.NameSeparatingHelper(name);
+            string first = Printing.Indention + "This is to certify that " + name + ", " + Printing.IfControlEmpty(ageField) + " years old, " + Printing.IfControlEmpty(SexOption) + ", " + Printing.IfControlEmpty(civilStatusOption) + ",    Filipino and a resident of " + Printing.IfControlEmpty(addressField) + ", belongs to an indigent family in this Barangay" + Printing.LineSpace +
+                           Printing.Indention + "This certification is issued to " + Printing.MrOrMrs(SexOption.Text) + " " + helper.Last + (string.IsNullOrEmpty(helper.Extension) ? "" : " " + helper.Extension) + "  for whatever legal purposes it may serve " + Printing.HimOrHer(SexOption.Text) + " best." + Printing.LineSpace +
                            Printing.Indention + "Issued this " + IssuedOn.Value.Day + "th day of " + IssuedOn.Value.ToString("MMMM, yyyy") + " Barangay Poblacion, Kalibo, Aklan.";
 
             e.Graphics.DrawString(first, Printing.font, Brushes.Black, rect);
@@ -57,13 +58,13 @@ namespace E_Barangay.Forms
                 this.ActiveControl = IDField;
                 return;
             }
-            Class.NameSeparatingHelper helper = new Class.NameSeparatingHelper(c.Name);
+            //Class.NameSeparatingHelper helper = new Class.NameSeparatingHelper(c.Name);
 
-            firstName.Text = helper.First;
-            middleInitialField.Text = helper.Middle;
-            lastName.Text = helper.Last;
-            extField.Text = helper.Extension;
-
+            //firstName.Text = helper.First;
+            //middleInitialField.Text = helper.Middle;
+            //lastName.Text = helper.Last;
+            //extField.Text = helper.Extension;
+            fullNameField.Text = c.Name;
             int age = Class.DateTimeExtension.ToAge(c.Birthday).years;
             ageField.Text = age.ToString();
             civilStatusOption.Text = c.CivilStatus;
@@ -83,7 +84,7 @@ namespace E_Barangay.Forms
         #region Clearing
         private void ResetBtn_Click(object sender, EventArgs e)
         {
-            clearFields(firstName, lastName, addressField, IssuedOn, SexOption);
+            clearFields(fullNameField, addressField, IssuedOn, SexOption);
         }
         void clearFields(params Control[] controls)
         {

@@ -270,11 +270,11 @@
     <Compile Include="Documents\BarangayCertificationofDeath.Designer.cs">
       <DependentUpon>BarangayCertificationofDeath.cs</DependentUpon>
     </Compile>
-    <Compile Include="Documents\BarangayClearanceForm.cs">
+    <Compile Include="Documents\BarangayClearance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Documents\BarangayClearanceForm.Designer.cs">
-      <DependentUpon>BarangayClearanceForm.cs</DependentUpon>
+    <Compile Include="Documents\BarangayClearance.Designer.cs">
+      <DependentUpon>BarangayClearance.cs</DependentUpon>
     </Compile>
     <Compile Include="Documents\CertificateCaptNavaro.cs">
       <SubType>Form</SubType>
@@ -570,8 +570,8 @@
     <EmbeddedResource Include="Documents\BarangayCertificationofDeath.resx">
       <DependentUpon>BarangayCertificationofDeath.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Documents\BarangayClearanceForm.resx">
-      <DependentUpon>BarangayClearanceForm.cs</DependentUpon>
+    <EmbeddedResource Include="Documents\BarangayClearance.resx">
+      <DependentUpon>BarangayClearance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertificateCaptNavaro.resx">
       <DependentUpon>CertificateCaptNavaro.cs</DependentUpon>

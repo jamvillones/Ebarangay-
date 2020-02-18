@@ -56,7 +56,7 @@ namespace E_Barangay.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CreateForm<BarangayClearanceForm>();
+            CreateForm<BarangayClearance>();
         }
         private void BussClearanceBtn_Click(object sender, EventArgs e)
         {

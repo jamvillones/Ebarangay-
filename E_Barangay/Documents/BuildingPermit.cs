@@ -21,15 +21,15 @@ namespace E_Barangay.Forms
         private void DeathCertificate_Load(object sender, EventArgs e)
         {
             printing.PrintPage += Printing_PrintPage;
-            printing.SubscribeToFields(firstName, lastName, Address, IssuedOn, SexOption);
+            printing.SubscribeToFields(fullNameField, Address,tdNoField, specField, IssuedOn, SexOption);
         }
 
         private void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(Properties.Resources.BuildingPermit, new PointF(0, 0));
             Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 + 50, 550, 380);
-            string name = Printing.IfControlEmpty(firstName) + " " + Printing.IfControlEmpty(lastName);
-            string first = Printing.Indention + "This certification is issued to " + name + ", of legal age, Filipino and a residing at Cor. Oyo Torong Street Poblacion, Kalibo, Aklan, per TD No." + Printing.IfControlEmpty(tdNoField) + " in support of " + Printing.IfControlEmpty(SexOption) + " application for " + Printing.IfControlEmpty(specField) + " permit with the Local Government Unit (LGU) Kalibo." + Printing.LineSpace +
+            string name = Printing.IfControlEmpty(fullNameField);
+            string first = Printing.Indention + "This certification is issued to " + name + ", of legal age, Filipino and a residing at "+Printing.IfControlEmpty(Address)+", per TD No." + Printing.IfControlEmpty(tdNoField) + " in support of " + Printing.HisOrHer(SexOption.Text) + " application for " + Printing.IfControlEmpty(specField) + " permit with the Local Government Unit (LGU) Kalibo." + Printing.LineSpace +
                            Printing.Indention + "Issued this " + IssuedOn.Value.Day + "th day of " + IssuedOn.Value.ToString("MMMM, yyyy") + " at Barangay Poblacion, Kalibo, Aklan.";
 
             e.Graphics.DrawString(first, Printing.font, Brushes.Black, rect);
@@ -55,26 +55,7 @@ namespace E_Barangay.Forms
                 this.ActiveControl = IDField;
                 return;
             }
-            List<string> nameList = new List<string>();
-            string word = "";
-            string name = c.Name;
-            for (int i = 0; i < name.Length; i++)
-            {
-                if (name[i] == ' ' || i == name.Length - 1)
-                {
-                    if (i == name.Length - 1)
-                        word += name[i];
-                    nameList.Add(word);
-                    word = "";
-                }
-                else
-                {
-                    word += name[i];
-                }
-            }
-            firstName.Text = nameList[0];
-
-            lastName.Text = nameList[2];
+            fullNameField.Text = c.Name;
             //int age = Class.DateTimeExtension.ToAge(c.Birthday).years;
             SexOption.Text = c.Gender;
             Address.Text = c.Address;
@@ -92,7 +73,7 @@ namespace E_Barangay.Forms
         #region Clearing
         private void ResetBtn_Click(object sender, EventArgs e)
         {
-            clearFields(firstName, lastName, Address, IssuedOn, SexOption);
+            clearFields(fullNameField, Address, tdNoField, specField, IssuedOn, SexOption);
         }
         void clearFields(params Control[] controls)
         {
