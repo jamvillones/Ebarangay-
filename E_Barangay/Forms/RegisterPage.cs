@@ -83,7 +83,7 @@ namespace E_Barangay.Forms
             Citizen temp = new Citizen();
             temp.ID = IDField.Text == string.Empty ? Guid.NewGuid().ToString() : IDField.Text;
 
-            temp.Name = FirstNameField.Text + " " + MiddleNameField.Text + " " + LastNameField.Text;
+            temp.Name = FirstNameField.Text + " " + MiddleNameField.Text + " " + LastNameField.Text+(extField.Text == string.Empty? "":" "+extField.Text);
             temp.Gender = SexOption.Text;
 
             if (NumberField.Text == "")
@@ -182,7 +182,7 @@ namespace E_Barangay.Forms
         }
         void CleanFields()
         {
-
+            extField.Clear();
             IDField.Clear();
             FirstNameField.Clear();
             MiddleNameField.Clear();
@@ -336,6 +336,11 @@ namespace E_Barangay.Forms
         }
 
         private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
         {
 
         }

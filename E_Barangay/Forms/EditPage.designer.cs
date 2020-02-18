@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.GroupBox groupBox2;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditPage));
             this.IsStudent = new System.Windows.Forms.CheckBox();
             this.isIndigent = new System.Windows.Forms.CheckBox();
@@ -83,7 +83,6 @@
             this.ImageBox = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.IDField = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -91,6 +90,7 @@
             this.PIField = new System.Windows.Forms.TextBox();
             this.SSSField = new System.Windows.Forms.TextBox();
             this.PHField = new System.Windows.Forms.TextBox();
+            this.IDField = new System.Windows.Forms.TextBox();
             groupBox2 = new System.Windows.Forms.GroupBox();
             groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -111,7 +111,7 @@
             groupBox2.Controls.Add(this.IsPwd);
             groupBox2.Controls.Add(this.IsSenior);
             groupBox2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            groupBox2.Location = new System.Drawing.Point(398, 270);
+            groupBox2.Location = new System.Drawing.Point(436, 270);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new System.Drawing.Size(133, 121);
             groupBox2.TabIndex = 4;
@@ -263,7 +263,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(391, 20);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(448, 100);
+            this.groupBox1.Size = new System.Drawing.Size(486, 100);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Address";
@@ -271,9 +271,9 @@
             // AreaOption
             // 
             this.AreaOption.FormattingEnabled = true;
-            this.AreaOption.Location = new System.Drawing.Point(61, 40);
+            this.AreaOption.Location = new System.Drawing.Point(91, 40);
             this.AreaOption.Name = "AreaOption";
-            this.AreaOption.Size = new System.Drawing.Size(148, 22);
+            this.AreaOption.Size = new System.Drawing.Size(118, 22);
             this.AreaOption.TabIndex = 2;
             // 
             // MunicipalityField
@@ -282,7 +282,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MunicipalityField.Location = new System.Drawing.Point(287, 40);
             this.MunicipalityField.Name = "MunicipalityField";
-            this.MunicipalityField.Size = new System.Drawing.Size(155, 20);
+            this.MunicipalityField.Size = new System.Drawing.Size(193, 20);
             this.MunicipalityField.TabIndex = 4;
             // 
             // label8
@@ -291,7 +291,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 69);
+            this.label8.Location = new System.Drawing.Point(12, 69);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 14);
             this.label8.TabIndex = 21;
@@ -299,9 +299,11 @@
             // 
             // ProvinceField
             // 
-            this.ProvinceField.Location = new System.Drawing.Point(61, 66);
+            this.ProvinceField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProvinceField.Location = new System.Drawing.Point(91, 66);
             this.ProvinceField.Name = "ProvinceField";
-            this.ProvinceField.Size = new System.Drawing.Size(381, 20);
+            this.ProvinceField.Size = new System.Drawing.Size(389, 20);
             this.ProvinceField.TabIndex = 5;
             // 
             // label7
@@ -334,7 +336,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 43);
+            this.label5.Location = new System.Drawing.Point(12, 43);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 14);
             this.label5.TabIndex = 17;
@@ -346,7 +348,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 17);
+            this.label4.Location = new System.Drawing.Point(12, 17);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 14);
             this.label4.TabIndex = 16;
@@ -358,7 +360,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.BarangayField.Location = new System.Drawing.Point(287, 14);
             this.BarangayField.Name = "BarangayField";
-            this.BarangayField.Size = new System.Drawing.Size(155, 20);
+            this.BarangayField.Size = new System.Drawing.Size(193, 20);
             this.BarangayField.TabIndex = 3;
             // 
             // VoterCheckbox
@@ -387,14 +389,14 @@
             this.Column1,
             this.Column3,
             this.Column2});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.RecordsTable.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.RecordsTable.DefaultCellStyle = dataGridViewCellStyle3;
             this.RecordsTable.GridColor = System.Drawing.Color.Silver;
             this.RecordsTable.Location = new System.Drawing.Point(3, 24);
             this.RecordsTable.MultiSelect = false;
@@ -403,7 +405,7 @@
             this.RecordsTable.RowHeadersVisible = false;
             this.RecordsTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.RecordsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.RecordsTable.Size = new System.Drawing.Size(374, 144);
+            this.RecordsTable.Size = new System.Drawing.Size(412, 144);
             this.RecordsTable.TabIndex = 21;
             this.RecordsTable.TabStop = false;
             this.RecordsTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RecordsTable_CellContentClick);
@@ -439,7 +441,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(9, 270);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(383, 203);
+            this.groupBox3.Size = new System.Drawing.Size(421, 203);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Records";
@@ -485,7 +487,7 @@
             this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveBtn.Image = ((System.Drawing.Image)(resources.GetObject("SaveBtn.Image")));
-            this.SaveBtn.Location = new System.Drawing.Point(728, 460);
+            this.SaveBtn.Location = new System.Drawing.Point(766, 460);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(111, 40);
             this.SaveBtn.TabIndex = 6;
@@ -522,7 +524,7 @@
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(9, 126);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(830, 138);
+            this.groupBox4.Size = new System.Drawing.Size(868, 138);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Basic Info";
@@ -544,7 +546,7 @@
             this.PrecinctNumField.Enabled = false;
             this.PrecinctNumField.Location = new System.Drawing.Point(396, 94);
             this.PrecinctNumField.Name = "PrecinctNumField";
-            this.PrecinctNumField.Size = new System.Drawing.Size(172, 20);
+            this.PrecinctNumField.Size = new System.Drawing.Size(210, 20);
             this.PrecinctNumField.TabIndex = 22;
             // 
             // label16
@@ -625,7 +627,7 @@
             this.SpouseField.Location = new System.Drawing.Point(397, 66);
             this.SpouseField.MaxLength = 100;
             this.SpouseField.Name = "SpouseField";
-            this.SpouseField.Size = new System.Drawing.Size(427, 20);
+            this.SpouseField.Size = new System.Drawing.Size(465, 20);
             this.SpouseField.TabIndex = 19;
             // 
             // label13
@@ -670,7 +672,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MotherField.Location = new System.Drawing.Point(396, 40);
             this.MotherField.Name = "MotherField";
-            this.MotherField.Size = new System.Drawing.Size(428, 20);
+            this.MotherField.Size = new System.Drawing.Size(466, 20);
             this.MotherField.TabIndex = 16;
             // 
             // FatherField
@@ -679,7 +681,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FatherField.Location = new System.Drawing.Point(397, 14);
             this.FatherField.Name = "FatherField";
-            this.FatherField.Size = new System.Drawing.Size(427, 20);
+            this.FatherField.Size = new System.Drawing.Size(465, 20);
             this.FatherField.TabIndex = 15;
             // 
             // BdayPicker
@@ -733,8 +735,8 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.label19);
             this.groupBox5.Controls.Add(this.IDField);
+            this.groupBox5.Controls.Add(this.label19);
             this.groupBox5.Controls.Add(this.label1);
             this.groupBox5.Controls.Add(this.FirstNameField);
             this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -757,18 +759,6 @@
             this.label19.TabIndex = 19;
             this.label19.Text = "ID";
             // 
-            // IDField
-            // 
-            this.IDField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.IDField.Location = new System.Drawing.Point(46, 14);
-            this.IDField.MaxLength = 10;
-            this.IDField.Name = "IDField";
-            this.IDField.ReadOnly = true;
-            this.IDField.Size = new System.Drawing.Size(215, 20);
-            this.IDField.TabIndex = 1;
-            this.IDField.TabStop = false;
-            // 
             // groupBox6
             // 
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -779,7 +769,7 @@
             this.groupBox6.Controls.Add(this.SSSField);
             this.groupBox6.Controls.Add(this.PHField);
             this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(537, 270);
+            this.groupBox6.Location = new System.Drawing.Point(575, 270);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(302, 121);
             this.groupBox6.TabIndex = 13;
@@ -834,13 +824,25 @@
             this.PHField.Size = new System.Drawing.Size(229, 20);
             this.PHField.TabIndex = 0;
             // 
+            // IDField
+            // 
+            this.IDField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.IDField.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.IDField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.IDField.Location = new System.Drawing.Point(46, 15);
+            this.IDField.Name = "IDField";
+            this.IDField.ReadOnly = true;
+            this.IDField.Size = new System.Drawing.Size(215, 20);
+            this.IDField.TabIndex = 20;
+            // 
             // EditPage
             // 
             this.AcceptButton = this.SaveBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(849, 511);
+            this.ClientSize = new System.Drawing.Size(887, 511);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.panel1);
@@ -925,7 +927,6 @@
         private System.Windows.Forms.TextBox MunicipalityField;
         private System.Windows.Forms.ComboBox AreaOption;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox IDField;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label21;
@@ -936,5 +937,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.TextBox IDField;
     }
 }

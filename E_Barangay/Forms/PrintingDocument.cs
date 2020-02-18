@@ -76,5 +76,10 @@ namespace E_Barangay.Forms
         {
             CreateForm<CertificateAppearance>();
         }
+
+        private void certIndigencyBtn_Click(object sender, EventArgs e)
+        {
+            CreateForm<CertificateOfIndigency>();
+        }
     }
 }

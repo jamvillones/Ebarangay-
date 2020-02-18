@@ -116,7 +116,14 @@
     </Compile>
     <Compile Include="Class\DateTimeExtension.cs" />
     <Compile Include="Class\ImageConverter.cs" />
+    <Compile Include="Class\NameSeparatingHelper.cs" />
     <Compile Include="Class\PasswordToFormHandler.cs" />
+    <Compile Include="Documents\CertificateOfIndigency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificateOfIndigency.Designer.cs">
+      <DependentUpon>CertificateOfIndigency.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\CertificateAppearance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,12 +197,6 @@
     </Compile>
     <Compile Include="Documents\BarangayCertificateforUnemployement.Designer.cs">
       <DependentUpon>BarangayCertificateforUnemployement.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Documents\BarangayCertificateIndigency.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Documents\BarangayCertificateIndigency.Designer.cs">
-      <DependentUpon>BarangayCertificateIndigency.cs</DependentUpon>
     </Compile>
     <Compile Include="Documents\BarangayCertificateMKWD.cs">
       <SubType>Form</SubType>
@@ -494,6 +495,9 @@
     <Compile Include="User.cs">
       <DependentUpon>Ebarangaymodel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Documents\CertificateOfIndigency.resx">
+      <DependentUpon>CertificateOfIndigency.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertificateAppearance.resx">
       <DependentUpon>CertificateAppearance.cs</DependentUpon>
     </EmbeddedResource>
@@ -529,9 +533,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BarangayCertificateforUnemployement.resx">
       <DependentUpon>BarangayCertificateforUnemployement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Documents\BarangayCertificateIndigency.resx">
-      <DependentUpon>BarangayCertificateIndigency.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BarangayCertificateMKWD.resx">
       <DependentUpon>BarangayCertificateMKWD.cs</DependentUpon>
@@ -714,6 +715,7 @@
       <LastGenOutput>Ebarangaymodel.cs</LastGenOutput>
     </Content>
     <Content Include="favicon.ico" />
+    <None Include="Resources\CertificateOfIndigency.png" />
     <None Include="Resources\CertAppearance.png" />
     <None Include="Resources\BuildingPermit.png" />
     <None Include="Resources\Death Cert.png" />

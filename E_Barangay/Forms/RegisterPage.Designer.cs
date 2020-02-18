@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterPage));
             this.FirstNameField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -96,6 +96,8 @@
             this.PIField = new System.Windows.Forms.TextBox();
             this.SSSField = new System.Windows.Forms.TextBox();
             this.PHField = new System.Windows.Forms.TextBox();
+            this.extField = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RecordsTable)).BeginInit();
@@ -109,11 +111,12 @@
             // 
             // FirstNameField
             // 
-            this.FirstNameField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.FirstNameField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.FirstNameField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNameField.Location = new System.Drawing.Point(81, 40);
             this.FirstNameField.Name = "FirstNameField";
-            this.FirstNameField.Size = new System.Drawing.Size(180, 20);
+            this.FirstNameField.Size = new System.Drawing.Size(222, 20);
             this.FirstNameField.TabIndex = 2;
             this.FirstNameField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegisterControl_KeyDown);
             // 
@@ -123,7 +126,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 43);
+            this.label1.Location = new System.Drawing.Point(7, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 14);
             this.label1.TabIndex = 4;
@@ -177,9 +180,13 @@
             // 
             // NumberField
             // 
+            this.NumberField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.NumberField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NumberField.Location = new System.Drawing.Point(86, 14);
+            this.NumberField.MaxLength = 10;
             this.NumberField.Name = "NumberField";
-            this.NumberField.Size = new System.Drawing.Size(156, 20);
+            this.NumberField.Size = new System.Drawing.Size(347, 20);
             this.NumberField.TabIndex = 1;
             // 
             // SexOption
@@ -232,17 +239,17 @@
             this.groupBox1.Controls.Add(this.AreaOption);
             this.groupBox1.Controls.Add(this.MunicipalityField);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.ProvinceField);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.NumberField);
             this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.ProvinceField);
+            this.groupBox1.Controls.Add(this.BarangayField);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.BarangayField);
-            this.groupBox1.Controls.Add(this.NumberField);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(391, 20);
+            this.groupBox1.Location = new System.Drawing.Point(433, 20);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(481, 126);
+            this.groupBox1.Size = new System.Drawing.Size(439, 145);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Address";
@@ -250,19 +257,26 @@
             // 
             // AreaOption
             // 
-            this.AreaOption.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.AreaOption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.AreaOption.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.AreaOption.Font = new System.Drawing.Font("Times New Roman", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AreaOption.FormattingEnabled = true;
-            this.AreaOption.Location = new System.Drawing.Point(320, 13);
+            this.AreaOption.Location = new System.Drawing.Point(86, 40);
+            this.AreaOption.MaxLength = 10;
             this.AreaOption.Name = "AreaOption";
-            this.AreaOption.Size = new System.Drawing.Size(155, 21);
-            this.AreaOption.TabIndex = 2;
+            this.AreaOption.Size = new System.Drawing.Size(347, 20);
+            this.AreaOption.TabIndex = 3;
             // 
             // MunicipalityField
             // 
-            this.MunicipalityField.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.MunicipalityField.Location = new System.Drawing.Point(320, 40);
+            this.MunicipalityField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MunicipalityField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MunicipalityField.Location = new System.Drawing.Point(86, 92);
+            this.MunicipalityField.MaxLength = 10;
             this.MunicipalityField.Name = "MunicipalityField";
-            this.MunicipalityField.Size = new System.Drawing.Size(155, 20);
+            this.MunicipalityField.Size = new System.Drawing.Size(347, 20);
             this.MunicipalityField.TabIndex = 4;
             // 
             // label8
@@ -271,18 +285,22 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 69);
+            this.label8.Location = new System.Drawing.Point(7, 121);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(49, 14);
             this.label8.TabIndex = 21;
             this.label8.Text = "Province";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // ProvinceField
             // 
-            this.ProvinceField.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.ProvinceField.Location = new System.Drawing.Point(86, 66);
+            this.ProvinceField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProvinceField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProvinceField.Location = new System.Drawing.Point(86, 118);
+            this.ProvinceField.MaxLength = 10;
             this.ProvinceField.Name = "ProvinceField";
-            this.ProvinceField.Size = new System.Drawing.Size(389, 20);
+            this.ProvinceField.Size = new System.Drawing.Size(347, 20);
             this.ProvinceField.TabIndex = 5;
             // 
             // label7
@@ -291,7 +309,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(248, 43);
+            this.label7.Location = new System.Drawing.Point(7, 95);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 14);
             this.label7.TabIndex = 19;
@@ -303,7 +321,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 43);
+            this.label6.Location = new System.Drawing.Point(7, 71);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 14);
             this.label6.TabIndex = 18;
@@ -315,7 +333,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(285, 16);
+            this.label5.Location = new System.Drawing.Point(7, 43);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 14);
             this.label5.TabIndex = 17;
@@ -327,7 +345,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 17);
+            this.label4.Location = new System.Drawing.Point(7, 17);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 14);
             this.label4.TabIndex = 16;
@@ -335,10 +353,14 @@
             // 
             // BarangayField
             // 
-            this.BarangayField.Location = new System.Drawing.Point(86, 40);
+            this.BarangayField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BarangayField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BarangayField.Location = new System.Drawing.Point(86, 66);
+            this.BarangayField.MaxLength = 10;
             this.BarangayField.Name = "BarangayField";
-            this.BarangayField.Size = new System.Drawing.Size(156, 20);
-            this.BarangayField.TabIndex = 3;
+            this.BarangayField.Size = new System.Drawing.Size(347, 20);
+            this.BarangayField.TabIndex = 2;
             // 
             // groupBox2
             // 
@@ -348,7 +370,7 @@
             this.groupBox2.Controls.Add(this.IsPwd);
             this.groupBox2.Controls.Add(this.IsSenior);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(433, 296);
+            this.groupBox2.Location = new System.Drawing.Point(433, 302);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(133, 127);
             this.groupBox2.TabIndex = 4;
@@ -391,14 +413,14 @@
             this.Column1,
             this.Column3,
             this.Column2});
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.RecordsTable.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.RecordsTable.DefaultCellStyle = dataGridViewCellStyle5;
             this.RecordsTable.GridColor = System.Drawing.Color.Silver;
             this.RecordsTable.Location = new System.Drawing.Point(3, 24);
             this.RecordsTable.MultiSelect = false;
@@ -408,7 +430,7 @@
             this.RecordsTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.RecordsTable.RowTemplate.DividerHeight = 1;
             this.RecordsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.RecordsTable.Size = new System.Drawing.Size(409, 120);
+            this.RecordsTable.Size = new System.Drawing.Size(409, 266);
             this.RecordsTable.TabIndex = 21;
             this.RecordsTable.TabStop = false;
             // 
@@ -440,9 +462,9 @@
             this.groupBox3.Controls.Add(this.AddRecordBtn);
             this.groupBox3.Controls.Add(this.RecordsTable);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(9, 296);
+            this.groupBox3.Location = new System.Drawing.Point(9, 302);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(418, 179);
+            this.groupBox3.Size = new System.Drawing.Size(418, 325);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Records";
@@ -455,7 +477,7 @@
             this.DeleteRecordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteRecordBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteRecordBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteRecordBtn.Location = new System.Drawing.Point(73, 150);
+            this.DeleteRecordBtn.Location = new System.Drawing.Point(73, 296);
             this.DeleteRecordBtn.Name = "DeleteRecordBtn";
             this.DeleteRecordBtn.Size = new System.Drawing.Size(93, 23);
             this.DeleteRecordBtn.TabIndex = 23;
@@ -473,7 +495,7 @@
             this.AddRecordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddRecordBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddRecordBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddRecordBtn.Location = new System.Drawing.Point(3, 150);
+            this.AddRecordBtn.Location = new System.Drawing.Point(3, 296);
             this.AddRecordBtn.Name = "AddRecordBtn";
             this.AddRecordBtn.Size = new System.Drawing.Size(70, 23);
             this.AddRecordBtn.TabIndex = 22;
@@ -490,7 +512,7 @@
             this.RegisterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegisterBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterBtn.Image = ((System.Drawing.Image)(resources.GetObject("RegisterBtn.Image")));
-            this.RegisterBtn.Location = new System.Drawing.Point(661, 433);
+            this.RegisterBtn.Location = new System.Drawing.Point(661, 585);
             this.RegisterBtn.Name = "RegisterBtn";
             this.RegisterBtn.Size = new System.Drawing.Size(100, 40);
             this.RegisterBtn.TabIndex = 6;
@@ -508,7 +530,7 @@
             this.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelBtn.Image = ((System.Drawing.Image)(resources.GetObject("CancelBtn.Image")));
-            this.CancelBtn.Location = new System.Drawing.Point(767, 433);
+            this.CancelBtn.Location = new System.Drawing.Point(767, 585);
             this.CancelBtn.Name = "CancelBtn";
             this.CancelBtn.Size = new System.Drawing.Size(100, 40);
             this.CancelBtn.TabIndex = 7;
@@ -544,9 +566,9 @@
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.ContactField);
             this.groupBox4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(9, 152);
+            this.groupBox4.Location = new System.Drawing.Point(9, 171);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(863, 138);
+            this.groupBox4.Size = new System.Drawing.Size(863, 125);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Basic Info";
@@ -564,8 +586,7 @@
             // 
             // PrecinctNumField
             // 
-            this.PrecinctNumField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PrecinctNumField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PrecinctNumField.Enabled = false;
             this.PrecinctNumField.Location = new System.Drawing.Point(396, 94);
             this.PrecinctNumField.Name = "PrecinctNumField";
@@ -645,7 +666,7 @@
             // 
             // SpouseField
             // 
-            this.SpouseField.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.SpouseField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SpouseField.Enabled = false;
             this.SpouseField.Location = new System.Drawing.Point(396, 66);
             this.SpouseField.MaxLength = 100;
@@ -691,7 +712,7 @@
             // 
             // MotherField
             // 
-            this.MotherField.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.MotherField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MotherField.Location = new System.Drawing.Point(396, 40);
             this.MotherField.Name = "MotherField";
             this.MotherField.Size = new System.Drawing.Size(461, 20);
@@ -699,7 +720,7 @@
             // 
             // FatherField
             // 
-            this.FatherField.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.FatherField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FatherField.Location = new System.Drawing.Point(396, 14);
             this.FatherField.Name = "FatherField";
             this.FatherField.Size = new System.Drawing.Size(461, 20);
@@ -734,18 +755,22 @@
             // 
             // LastNameField
             // 
-            this.LastNameField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.LastNameField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.LastNameField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNameField.Location = new System.Drawing.Point(81, 92);
             this.LastNameField.Name = "LastNameField";
-            this.LastNameField.Size = new System.Drawing.Size(180, 20);
+            this.LastNameField.Size = new System.Drawing.Size(222, 20);
             this.LastNameField.TabIndex = 4;
             // 
             // MiddleNameField
             // 
+            this.MiddleNameField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.MiddleNameField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MiddleNameField.Location = new System.Drawing.Point(81, 66);
             this.MiddleNameField.Name = "MiddleNameField";
-            this.MiddleNameField.Size = new System.Drawing.Size(180, 20);
+            this.MiddleNameField.Size = new System.Drawing.Size(222, 20);
             this.MiddleNameField.TabIndex = 3;
             // 
             // label9
@@ -797,6 +822,8 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.label18);
+            this.groupBox5.Controls.Add(this.extField);
             this.groupBox5.Controls.Add(this.label19);
             this.groupBox5.Controls.Add(this.IDField);
             this.groupBox5.Controls.Add(this.label1);
@@ -808,7 +835,7 @@
             this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(118, 20);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(267, 126);
+            this.groupBox5.Size = new System.Drawing.Size(309, 145);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Name";
@@ -819,7 +846,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(6, 17);
+            this.label19.Location = new System.Drawing.Point(7, 17);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(19, 14);
             this.label19.TabIndex = 19;
@@ -827,12 +854,13 @@
             // 
             // IDField
             // 
-            this.IDField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.IDField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.IDField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IDField.Location = new System.Drawing.Point(81, 14);
             this.IDField.MaxLength = 10;
             this.IDField.Name = "IDField";
-            this.IDField.Size = new System.Drawing.Size(180, 20);
+            this.IDField.Size = new System.Drawing.Size(222, 20);
             this.IDField.TabIndex = 1;
             // 
             // groupBox6
@@ -845,7 +873,7 @@
             this.groupBox6.Controls.Add(this.SSSField);
             this.groupBox6.Controls.Add(this.PHField);
             this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(572, 296);
+            this.groupBox6.Location = new System.Drawing.Point(572, 302);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(300, 127);
             this.groupBox6.TabIndex = 5;
@@ -903,13 +931,35 @@
             this.PHField.Size = new System.Drawing.Size(219, 20);
             this.PHField.TabIndex = 0;
             // 
+            // extField
+            // 
+            this.extField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.extField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.extField.Location = new System.Drawing.Point(81, 118);
+            this.extField.Name = "extField";
+            this.extField.Size = new System.Drawing.Size(222, 20);
+            this.extField.TabIndex = 5;
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(7, 121);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(54, 14);
+            this.label18.TabIndex = 21;
+            this.label18.Text = "Extension";
+            // 
             // RegisterPage
             // 
             this.AcceptButton = this.RegisterBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(884, 487);
+            this.ClientSize = new System.Drawing.Size(884, 639);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.panel1);
@@ -1012,5 +1062,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox extField;
     }
 }
