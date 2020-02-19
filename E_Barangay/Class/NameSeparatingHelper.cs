@@ -16,7 +16,7 @@ namespace E_Barangay.Class
             for (int i = 0; i < name.Length; i++)
             {
                 if (name[i] == ' ')
-                {                  
+                {
                     nameList.Add(word);
                     word = string.Empty;
                 }
@@ -48,7 +48,41 @@ namespace E_Barangay.Class
         string[] names = new string[4];
         public string First { get; private set; }
         public string Middle { get; private set; }
+        public string MiddleInitial
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Middle))
+                    return string.Empty;
+
+                return Middle.Substring(0, 1);
+            }
+        }
         public string Last { get; private set; }
         public string Extension { get; private set; }
+        public string FullName
+        {
+            get
+            {
+                string temp = string.Empty;
+                if (!string.IsNullOrEmpty(First)){
+                    temp += First + " ";
+                }
+                if (!string.IsNullOrEmpty(Middle))
+                {
+                    temp += Middle + " ";
+                }
+                if (!string.IsNullOrEmpty(Last))
+                {
+                    temp += Last;
+                }
+                if (!string.IsNullOrEmpty(Extension))
+                {
+                    temp +=" "+ Extension;
+                }
+
+                return temp;
+            }
+        }
     }
 }

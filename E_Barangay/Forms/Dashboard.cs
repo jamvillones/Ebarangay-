@@ -45,9 +45,9 @@ namespace E_Barangay.Forms
                 }
 
                 settlementTable.Rows.Clear();
-                foreach (var r in eb.Records.Where(x=>x.Status == "Pending").OrderBy(x=>x.SettlementDate))
+                foreach (var r in eb.Records.Where(x => x.Status == "Pending").OrderBy(x => x.SettlementDate))
                 {
-                        settlementTable.Rows.Add((r.SettlementDate.Value < DateTime.Today? "Yes":"No"),r.SettlementDate.Value.ToString("MM/dd/yyyy hh:mm tt"), r.Citizen.Name, r.Name);
+                    settlementTable.Rows.Add((r.SettlementDate.Value < DateTime.Today ? "Yes" : "No"), r.SettlementDate.Value.ToString("MM/dd/yyyy hh:mm tt"), r.Citizen.Name, r.Name);
                 }
             }
         }

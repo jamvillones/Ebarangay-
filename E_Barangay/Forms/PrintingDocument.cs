@@ -60,7 +60,7 @@ namespace E_Barangay.Forms
         }
         private void BussClearanceBtn_Click(object sender, EventArgs e)
         {
-            CreateForm<BarangayBussClearance>();
+            CreateForm<BussinessClearance>();
         }
         private void deathCertBtn_Click(object sender, EventArgs e)
         {
@@ -71,7 +71,7 @@ namespace E_Barangay.Forms
         {
             CreateForm<BuildingPermit>();
         }
-
+        
         private void certAppearanceBtn_Click(object sender, EventArgs e)
         {
             CreateForm<CertificateAppearance>();

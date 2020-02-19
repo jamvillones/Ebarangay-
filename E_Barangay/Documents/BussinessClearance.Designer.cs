@@ -1,6 +1,6 @@
 ﻿namespace E_Barangay.Forms
 {
-    partial class BarangayBussClearance
+    partial class BussinessClearance
     {
         /// <summary>
         /// Required designer variable.
@@ -175,10 +175,10 @@
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.Establishment);
-            this.groupBox2.Location = new System.Drawing.Point(12, 338);
+            this.groupBox2.Location = new System.Drawing.Point(12, 203);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(329, 75);
-            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bussiness";
             // 
@@ -230,10 +230,10 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.OrValidityDate);
             this.groupBox1.Controls.Add(this.ORIssueDate);
-            this.groupBox1.Location = new System.Drawing.Point(12, 203);
+            this.groupBox1.Location = new System.Drawing.Point(12, 284);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(329, 129);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "OR";
             // 
@@ -366,7 +366,7 @@
             this.Name = "BarangayBussClearance";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Certificate for Business Clearance";
+            this.Text = "Bussiness Clearance";
             this.Load += new System.EventHandler(this.BarangaCertificationforBusiness_Load);
             this.panel1.ResumeLayout(false);
             this.IdGroup.ResumeLayout(false);
