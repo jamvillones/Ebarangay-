@@ -13,6 +13,14 @@ namespace E_Barangay.Forms
     public partial class PrintingDocument : UserControl, Interface.IAccept
     {
         Form form;
+        string[] docNames = {
+            "Barangay Clearance",
+            "Business Clearance",
+            "Death Certificate",
+            "Building Permit",
+            "Certificate of Appearance",
+            "Certificate of Indigency"
+        };
         public PrintingDocument()
         {
             InitializeComponent();
@@ -23,11 +31,20 @@ namespace E_Barangay.Forms
             return null;
         }
 
-      
+
 
         private void PrintingDocument_Load(object sender, EventArgs e)
         {
-            //CreateMyListView();
+            setDataList();
+        }
+        void setDataList()
+        {
+            DocumentList.Rows.Clear();
+
+            foreach (var name in docNames)
+                DocumentList.Rows.Add("Open", name);
+            DocumentList.Sort(DocumentList.Columns[0], ListSortDirection.Ascending);
+
         }
         public event EventHandler<bool> OpeningForm;
 
@@ -35,9 +52,9 @@ namespace E_Barangay.Forms
         {
             if (form == null)
             {
-                OpeningForm?.Invoke(this,true);
+                OpeningForm?.Invoke(this, true);
                 form = new T();
-               // form.TopMost = true;
+                // form.TopMost = true;
                 form.FormClosed += Form_FormClosed;
                 form.Show();
                 //form.Activate();
@@ -54,32 +71,66 @@ namespace E_Barangay.Forms
             form = null;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            CreateForm<BarangayClearance>();
-        }
-        private void BussClearanceBtn_Click(object sender, EventArgs e)
-        {
-            CreateForm<BussinessClearance>();
-        }
-        private void deathCertBtn_Click(object sender, EventArgs e)
-        {
-            CreateForm<DeathCertificate>();
-        }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    CreateForm<BarangayClearance>();
+        //}
+        //private void BussClearanceBtn_Click(object sender, EventArgs e)
+        //{
+        //    CreateForm<BussinessClearance>();
+        //}
+        //private void deathCertBtn_Click(object sender, EventArgs e)
+        //{
+        //    CreateForm<DeathCertificate>();
+        //}
+        //private void buildingPermitBtn_Click(object sender, EventArgs e)
+        //{
+        //    CreateForm<BuildingPermit>();
+        //}
+        //private void certAppearanceBtn_Click(object sender, EventArgs e)
+        //{
+        //    CreateForm<CertificateAppearance>();
+        //}
+        //private void certIndigencyBtn_Click(object sender, EventArgs e)
+        //{
+        //    CreateForm<CertificateOfIndigency>();
+        //}
 
-        private void buildingPermitBtn_Click(object sender, EventArgs e)
+        private void DocumentList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            CreateForm<BuildingPermit>();
-        }
-        
-        private void certAppearanceBtn_Click(object sender, EventArgs e)
-        {
-            CreateForm<CertificateAppearance>();
-        }
+            var senderGrid = (DataGridView)sender;
 
-        private void certIndigencyBtn_Click(object sender, EventArgs e)
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {
+                OpenDocByName(senderGrid.SelectedCells[0].Value.ToString());
+            }
+        }
+        private void OpenDocByName(string name)
         {
-            CreateForm<CertificateOfIndigency>();
+            switch (name)
+            {
+                case "Barangay Clearance":
+                    CreateForm<BarangayClearance>();
+                    break;
+                case "Business Clearance":
+                    CreateForm<BussinessClearance>();
+                    break;
+                case "Death Certificate":
+                    CreateForm<DeathCertificate>();
+                    break;
+                case "Building Permit":
+                    CreateForm<BuildingPermit>();
+                    break;
+                case "Certificate of Appearance":
+                    CreateForm<DeathCertificate>();
+                    break;
+                case "Certificate of Indigency":
+                    CreateForm<DeathCertificate>();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

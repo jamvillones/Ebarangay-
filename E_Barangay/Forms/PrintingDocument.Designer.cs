@@ -28,159 +28,109 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.BClearanceBtn = new System.Windows.Forms.Button();
-            this.BussClearanceBtn = new System.Windows.Forms.Button();
-            this.deathCertBtn = new System.Windows.Forms.Button();
-            this.buildingPermitBtn = new System.Windows.Forms.Button();
-            this.certAppearanceBtn = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.certIndigencyBtn = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.DocumentList = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.DocumentList)).BeginInit();
             this.SuspendLayout();
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.flowLayoutPanel1.Controls.Add(this.BClearanceBtn);
-            this.flowLayoutPanel1.Controls.Add(this.BussClearanceBtn);
-            this.flowLayoutPanel1.Controls.Add(this.deathCertBtn);
-            this.flowLayoutPanel1.Controls.Add(this.buildingPermitBtn);
-            this.flowLayoutPanel1.Controls.Add(this.certAppearanceBtn);
-            this.flowLayoutPanel1.Controls.Add(this.certIndigencyBtn);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 35);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(743, 348);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // BClearanceBtn
-            // 
-            this.BClearanceBtn.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.BClearanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BClearanceBtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BClearanceBtn.ForeColor = System.Drawing.Color.White;
-            this.BClearanceBtn.Location = new System.Drawing.Point(3, 3);
-            this.BClearanceBtn.Name = "BClearanceBtn";
-            this.BClearanceBtn.Size = new System.Drawing.Size(135, 41);
-            this.BClearanceBtn.TabIndex = 0;
-            this.BClearanceBtn.TabStop = false;
-            this.BClearanceBtn.Text = "Barangay Clearance";
-            this.BClearanceBtn.UseVisualStyleBackColor = false;
-            this.BClearanceBtn.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // BussClearanceBtn
-            // 
-            this.BussClearanceBtn.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.BussClearanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BussClearanceBtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BussClearanceBtn.ForeColor = System.Drawing.Color.White;
-            this.BussClearanceBtn.Location = new System.Drawing.Point(144, 3);
-            this.BussClearanceBtn.Name = "BussClearanceBtn";
-            this.BussClearanceBtn.Size = new System.Drawing.Size(135, 41);
-            this.BussClearanceBtn.TabIndex = 1;
-            this.BussClearanceBtn.TabStop = false;
-            this.BussClearanceBtn.Text = "Bussiness Clearance";
-            this.BussClearanceBtn.UseVisualStyleBackColor = false;
-            this.BussClearanceBtn.Click += new System.EventHandler(this.BussClearanceBtn_Click);
-            // 
-            // deathCertBtn
-            // 
-            this.deathCertBtn.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.deathCertBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.deathCertBtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deathCertBtn.ForeColor = System.Drawing.Color.White;
-            this.deathCertBtn.Location = new System.Drawing.Point(285, 3);
-            this.deathCertBtn.Name = "deathCertBtn";
-            this.deathCertBtn.Size = new System.Drawing.Size(135, 41);
-            this.deathCertBtn.TabIndex = 2;
-            this.deathCertBtn.TabStop = false;
-            this.deathCertBtn.Text = "Death Certificate";
-            this.deathCertBtn.UseVisualStyleBackColor = false;
-            this.deathCertBtn.Click += new System.EventHandler(this.deathCertBtn_Click);
-            // 
-            // buildingPermitBtn
-            // 
-            this.buildingPermitBtn.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.buildingPermitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buildingPermitBtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buildingPermitBtn.ForeColor = System.Drawing.Color.White;
-            this.buildingPermitBtn.Location = new System.Drawing.Point(426, 3);
-            this.buildingPermitBtn.Name = "buildingPermitBtn";
-            this.buildingPermitBtn.Size = new System.Drawing.Size(135, 41);
-            this.buildingPermitBtn.TabIndex = 3;
-            this.buildingPermitBtn.TabStop = false;
-            this.buildingPermitBtn.Text = "Building Permit";
-            this.buildingPermitBtn.UseVisualStyleBackColor = false;
-            this.buildingPermitBtn.Click += new System.EventHandler(this.buildingPermitBtn_Click);
-            // 
-            // certAppearanceBtn
-            // 
-            this.certAppearanceBtn.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.certAppearanceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.certAppearanceBtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.certAppearanceBtn.ForeColor = System.Drawing.Color.White;
-            this.certAppearanceBtn.Location = new System.Drawing.Point(567, 3);
-            this.certAppearanceBtn.Name = "certAppearanceBtn";
-            this.certAppearanceBtn.Size = new System.Drawing.Size(136, 41);
-            this.certAppearanceBtn.TabIndex = 4;
-            this.certAppearanceBtn.TabStop = false;
-            this.certAppearanceBtn.Text = "Certificate of Appearance";
-            this.certAppearanceBtn.UseVisualStyleBackColor = false;
-            this.certAppearanceBtn.Click += new System.EventHandler(this.certAppearanceBtn_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Bebas Neue Regular", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 9);
+            this.label1.Location = new System.Drawing.Point(11, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Please choose a Document";
             // 
-            // certIndigencyBtn
+            // DocumentList
             // 
-            this.certIndigencyBtn.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.certIndigencyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.certIndigencyBtn.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.certIndigencyBtn.ForeColor = System.Drawing.Color.White;
-            this.certIndigencyBtn.Location = new System.Drawing.Point(3, 50);
-            this.certIndigencyBtn.Name = "certIndigencyBtn";
-            this.certIndigencyBtn.Size = new System.Drawing.Size(136, 41);
-            this.certIndigencyBtn.TabIndex = 5;
-            this.certIndigencyBtn.TabStop = false;
-            this.certIndigencyBtn.Text = "Certificate of Indigency";
-            this.certIndigencyBtn.UseVisualStyleBackColor = false;
-            this.certIndigencyBtn.Click += new System.EventHandler(this.certIndigencyBtn_Click);
+            this.DocumentList.AllowUserToAddRows = false;
+            this.DocumentList.AllowUserToDeleteRows = false;
+            this.DocumentList.AllowUserToOrderColumns = true;
+            this.DocumentList.AllowUserToResizeColumns = false;
+            this.DocumentList.AllowUserToResizeRows = false;
+            this.DocumentList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DocumentList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bebas Neue Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DocumentList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DocumentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DocumentList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2,
+            this.Column1});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DocumentList.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DocumentList.EnableHeadersVisualStyles = false;
+            this.DocumentList.GridColor = System.Drawing.Color.Black;
+            this.DocumentList.Location = new System.Drawing.Point(15, 31);
+            this.DocumentList.MultiSelect = false;
+            this.DocumentList.Name = "DocumentList";
+            this.DocumentList.ReadOnly = true;
+            this.DocumentList.RowHeadersVisible = false;
+            this.DocumentList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DocumentList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DocumentList.Size = new System.Drawing.Size(722, 340);
+            this.DocumentList.StandardTab = true;
+            this.DocumentList.TabIndex = 2;
+            this.DocumentList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DocumentList_CellContentClick);
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.DividerWidth = 2;
+            this.Column2.HeaderText = "Actions";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 56;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column1.HeaderText = "Document Name";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // PrintingDocument
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.DocumentList);
             this.Controls.Add(this.label1);
             this.Name = "PrintingDocument";
             this.Size = new System.Drawing.Size(749, 386);
             this.Load += new System.EventHandler(this.PrintingDocument_Load);
-            this.flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DocumentList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Button BClearanceBtn;
-        private System.Windows.Forms.Button BussClearanceBtn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button deathCertBtn;
-        private System.Windows.Forms.Button buildingPermitBtn;
-        private System.Windows.Forms.Button certAppearanceBtn;
-        private System.Windows.Forms.Button certIndigencyBtn;
+        private System.Windows.Forms.DataGridView DocumentList;
+        private System.Windows.Forms.DataGridViewButtonColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }
