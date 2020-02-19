@@ -103,7 +103,7 @@ namespace E_Barangay.Forms
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
                 e.RowIndex >= 0)
             {
-                OpenDocByName(senderGrid.SelectedCells[0].Value.ToString());
+                OpenDocByName(senderGrid.SelectedCells[1].Value.ToString());
             }
         }
         private void OpenDocByName(string name)

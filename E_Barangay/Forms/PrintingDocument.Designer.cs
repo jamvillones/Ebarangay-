@@ -34,7 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.DocumentList = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.docName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DocumentList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +70,7 @@
             this.DocumentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DocumentList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
-            this.Column1});
+            this.docName});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -80,7 +80,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DocumentList.DefaultCellStyle = dataGridViewCellStyle3;
             this.DocumentList.EnableHeadersVisualStyles = false;
-            this.DocumentList.GridColor = System.Drawing.Color.Black;
+            this.DocumentList.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.DocumentList.Location = new System.Drawing.Point(15, 31);
             this.DocumentList.MultiSelect = false;
             this.DocumentList.Name = "DocumentList";
@@ -96,20 +96,20 @@
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.DividerWidth = 2;
+            this.Column2.DividerWidth = 1;
             this.Column2.HeaderText = "Actions";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 56;
+            this.Column2.Width = 55;
             // 
-            // Column1
+            // docName
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.docName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column1.HeaderText = "Document Name";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.docName.DefaultCellStyle = dataGridViewCellStyle2;
+            this.docName.HeaderText = "Document Name";
+            this.docName.Name = "docName";
+            this.docName.ReadOnly = true;
             // 
             // PrintingDocument
             // 
@@ -131,6 +131,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView DocumentList;
         private System.Windows.Forms.DataGridViewButtonColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn docName;
     }
 }
