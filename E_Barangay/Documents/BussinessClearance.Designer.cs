@@ -66,7 +66,8 @@
             // 
             this.ORIssueDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ORIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ORIssueDate.CustomFormat = "MMMM dd, yyyy";
+            this.ORIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ORIssueDate.Location = new System.Drawing.Point(83, 69);
             this.ORIssueDate.Name = "ORIssueDate";
             this.ORIssueDate.Size = new System.Drawing.Size(240, 20);
@@ -76,7 +77,8 @@
             // 
             this.OrValidityDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrValidityDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.OrValidityDate.CustomFormat = "MMMM dd, yyyy";
+            this.OrValidityDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.OrValidityDate.Location = new System.Drawing.Point(83, 95);
             this.OrValidityDate.Name = "OrValidityDate";
             this.OrValidityDate.Size = new System.Drawing.Size(240, 20);
@@ -298,7 +300,8 @@
             // 
             this.IssuedOn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.IssuedOn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.IssuedOn.CustomFormat = "MMMM dd, yyyy";
+            this.IssuedOn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.IssuedOn.Location = new System.Drawing.Point(83, 69);
             this.IssuedOn.Name = "IssuedOn";
             this.IssuedOn.Size = new System.Drawing.Size(240, 20);
@@ -351,7 +354,7 @@
             this.printing.Size = new System.Drawing.Size(562, 690);
             this.printing.TabIndex = 1;
             // 
-            // BarangayBussClearance
+            // BussinessClearance
             // 
             this.AcceptButton = this.AssignBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,7 +366,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "BarangayBussClearance";
+            this.Name = "BussinessClearance";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bussiness Clearance";

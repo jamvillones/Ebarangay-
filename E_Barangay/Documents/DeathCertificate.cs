@@ -22,6 +22,7 @@ namespace E_Barangay.Forms
         {
             printing.PrintPage += Printing_PrintPage;
             printing.SubscribeToFields(fullName, Age, Address, DeathPlace, DeathDate, IssuedOn, By, SexOption, Relation);
+           
         }
 
         private void Printing_PrintPage(object sender, PrintPageEventArgs e)
@@ -31,7 +32,7 @@ namespace E_Barangay.Forms
             string name = Printing.IfControlEmpty(fullName);
             string first = Printing.Indention + "This is to certify that as per record of this Barangay, " + name + " " + Printing.IfControlEmpty(Age) + " years old, Filipino and a resident of " + Printing.IfControlEmpty(Address) + "." + Printing.LineSpace +
                            Printing.Indention + "This is to certify further that " + name + " died last " + DeathDate.Value.ToString("MMMM dd, yyyy") + " at " + Printing.IfControlEmpty(DeathPlace) + "." + Printing.LineSpace +
-                           Printing.Indention + "This certification is issued upon the request of " + Printing.HisOrHer(SexOption.Text) + " " + Relation.Text + " " + By.Text + " for whatever legal purpose it may serve her." + Printing.LineSpace +
+                           Printing.Indention + "This certification is issued upon the request of " + Printing.HisOrHer(SexOption.Text) + " " + Relation.Text + " " + By.Text + " for whatever legal purpose it may serve "+Printing.HimOrHer(SexOption.Text)+"." + Printing.LineSpace +
                            Printing.Indention + "Issued this " + IssuedOn.Value.Day + "th of " + IssuedOn.Value.ToString("MMMM yyyy") + " Barangay Poblacion, Kalibo, Aklan.";
             e.Graphics.DrawString(first, Printing.font, Brushes.Black, rect);
             DrawDebugRecs(rect, e);

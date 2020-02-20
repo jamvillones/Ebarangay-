@@ -222,7 +222,8 @@
             // 
             this.DeathDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DeathDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DeathDate.CustomFormat = "MMMM dd, yyyy";
+            this.DeathDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.DeathDate.Location = new System.Drawing.Point(92, 43);
             this.DeathDate.Name = "DeathDate";
             this.DeathDate.Size = new System.Drawing.Size(230, 20);
@@ -254,7 +255,8 @@
             // 
             this.IssuedOn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.IssuedOn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.IssuedOn.CustomFormat = "MMMM dd, yyyy";
+            this.IssuedOn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.IssuedOn.Location = new System.Drawing.Point(92, 14);
             this.IssuedOn.Name = "IssuedOn";
             this.IssuedOn.Size = new System.Drawing.Size(230, 20);
