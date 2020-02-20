@@ -312,7 +312,8 @@
             // 
             this.ORIssueDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ORIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ORIssueDate.CustomFormat = "MMMM dd, yyyy";
+            this.ORIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.ORIssueDate.Location = new System.Drawing.Point(83, 43);
             this.ORIssueDate.Name = "ORIssueDate";
             this.ORIssueDate.Size = new System.Drawing.Size(241, 20);
@@ -322,7 +323,8 @@
             // 
             this.OrValidityDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrValidityDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.OrValidityDate.CustomFormat = "MMMM dd, yyyy";
+            this.OrValidityDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.OrValidityDate.Location = new System.Drawing.Point(83, 69);
             this.OrValidityDate.Name = "OrValidityDate";
             this.OrValidityDate.Size = new System.Drawing.Size(241, 20);
