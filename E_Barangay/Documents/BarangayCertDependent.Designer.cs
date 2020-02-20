@@ -29,7 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.officerOption = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.sinceDate = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.supportAddressField = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,24 +47,19 @@
             this.AssignBtn = new System.Windows.Forms.Button();
             this.IDField = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.SexOption = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.fullName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Address = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.sinceDate = new System.Windows.Forms.DateTimePicker();
-            this.SexOption = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.officerOption = new System.Windows.Forms.ComboBox();
             this.printing = new E_Barangay.Forms.Printing();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.IdGroup.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -77,6 +77,38 @@
             this.panel1.Size = new System.Drawing.Size(352, 690);
             this.panel1.TabIndex = 2;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.officerOption);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Location = new System.Drawing.Point(12, 366);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(328, 55);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Signature";
+            // 
+            // officerOption
+            // 
+            this.officerOption.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.officerOption.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.officerOption.FormattingEnabled = true;
+            this.officerOption.Location = new System.Drawing.Point(107, 19);
+            this.officerOption.Name = "officerOption";
+            this.officerOption.Size = new System.Drawing.Size(215, 21);
+            this.officerOption.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(6, 18);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(94, 20);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Officer of the Day:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // groupBox4
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -93,6 +125,26 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Support";
+            // 
+            // sinceDate
+            // 
+            this.sinceDate.CustomFormat = "yyyy";
+            this.sinceDate.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sinceDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.sinceDate.Location = new System.Drawing.Point(92, 69);
+            this.sinceDate.Name = "sinceDate";
+            this.sinceDate.ShowUpDown = true;
+            this.sinceDate.Size = new System.Drawing.Size(64, 20);
+            this.sinceDate.TabIndex = 35;
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(6, 68);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 20);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Since";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label8
             // 
@@ -225,6 +277,29 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dependant";
             // 
+            // SexOption
+            // 
+            this.SexOption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SexOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SexOption.FormattingEnabled = true;
+            this.SexOption.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.SexOption.Location = new System.Drawing.Point(92, 69);
+            this.SexOption.Name = "SexOption";
+            this.SexOption.Size = new System.Drawing.Size(230, 21);
+            this.SexOption.TabIndex = 29;
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(6, 68);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 20);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "Sex";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // label1
             // 
             this.label1.Location = new System.Drawing.Point(6, 17);
@@ -262,81 +337,6 @@
             this.Address.Size = new System.Drawing.Size(230, 20);
             this.Address.TabIndex = 6;
             // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(6, 68);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 20);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Since";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // sinceDate
-            // 
-            this.sinceDate.CustomFormat = "yyyy";
-            this.sinceDate.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sinceDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.sinceDate.Location = new System.Drawing.Point(92, 69);
-            this.sinceDate.Name = "sinceDate";
-            this.sinceDate.ShowUpDown = true;
-            this.sinceDate.Size = new System.Drawing.Size(64, 20);
-            this.sinceDate.TabIndex = 35;
-            // 
-            // SexOption
-            // 
-            this.SexOption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SexOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SexOption.FormattingEnabled = true;
-            this.SexOption.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.SexOption.Location = new System.Drawing.Point(92, 69);
-            this.SexOption.Name = "SexOption";
-            this.SexOption.Size = new System.Drawing.Size(230, 21);
-            this.SexOption.TabIndex = 29;
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(6, 68);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 20);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "Sex";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.officerOption);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(12, 366);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(328, 55);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "MISC";
-            // 
-            // label7
-            // 
-            this.label7.Location = new System.Drawing.Point(6, 18);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 20);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Officer of the Day:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // officerOption
-            // 
-            this.officerOption.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.officerOption.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.officerOption.FormattingEnabled = true;
-            this.officerOption.Location = new System.Drawing.Point(107, 19);
-            this.officerOption.Name = "officerOption";
-            this.officerOption.Size = new System.Drawing.Size(215, 21);
-            this.officerOption.TabIndex = 5;
-            // 
             // printing
             // 
             this.printing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -366,6 +366,7 @@
             this.Load += new System.EventHandler(this.DeathCertificate_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DeathCertificate_KeyDown);
             this.panel1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -373,7 +374,6 @@
             this.IdGroup.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

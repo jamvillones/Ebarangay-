@@ -17,34 +17,21 @@ namespace E_Barangay.Forms
         {
             InitializeComponent();
         }
-        string captName = string.Empty;
+       
+        Class.OfficersForInfoForPrinting o;
         private void DeathCertificate_Load(object sender, EventArgs e)
         {
             printing.PrintPage += Printing_PrintPage;
             printing.SubscribeToFields(fullName, Address, IssuedOn, supportNameField, SexOption, supportAddressField, officerOption);
-            using (var ent = new EBarangayEntities())
+            
+            o = new Class.OfficersForInfoForPrinting();
+            foreach(var x in o.sbMemebers)
             {
-                var sb = ent.Officials.Where(x => x.Position == "Sangguniang Barangay Member");
-                foreach (var s in sb)
-                {
-                    officerOption.Items.Add(s.Name);
-                    officerOption.AutoCompleteCustomSource.Add(s.Name);
-
-                    captName = ent.Officials.FirstOrDefault(x => x.ID == "Punong_Barangay").Name;
-                }
-
-
+                officerOption.Items.Add(x);
+                officerOption.AutoCompleteCustomSource.Add(x);
             }
         }
 
-        string officerOfTheDay
-        {
-            get
-            {
-                return string.IsNullOrEmpty(officerOption.Text) ? "(BLANK)" : officerOption.Text.ToUpper();
-
-            }
-        }
         private void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(Properties.Resources.BarangayCertDEPENDENT, new PointF(0, 0));
@@ -52,7 +39,7 @@ namespace E_Barangay.Forms
             string name = Printing.IfControlEmpty(fullName);
             var h = new Class.NameSeparatingHelper(name);
             string first = Printing.Indention + "This is to certify that " + name + " of legal age, Filipino and a resident of " + Printing.IfControlEmpty(Address) + "." + Printing.LineSpace +
-                           Printing.Indention + "This is to certify further that " + name + " is the dependent of " + Printing.IfControlEmpty(supportNameField) + " who is presently staying at " + Printing.IfControlEmpty(supportAddressField) + " since" + sinceDate.Value.Year.ToString() + "." + Printing.LineSpace +
+                           Printing.Indention + "This is to certify further that " + name + " is the dependent of " + Printing.IfControlEmpty(supportNameField) + " who is presently staying at " + Printing.IfControlEmpty(supportAddressField) + " since " + sinceDate.Value.Year.ToString() + "." + Printing.LineSpace +
                            Printing.Indention + "This certification is issued upon the request of " + Printing.MrOrMrs(SexOption.Text) + " " + h.Last + " for whatever legal purpose it may serve " + Printing.HisOrHer(SexOption.Text) + "." + Printing.LineSpace +
                            Printing.Indention + "Issued this " + IssuedOn.Value.Day + "th of " + IssuedOn.Value.ToString("MMMM yyyy") + " Barangay Poblacion, Kalibo, Aklan.";
             e.Graphics.DrawString(first, Printing.font, Brushes.Black, rect);
@@ -62,15 +49,15 @@ namespace E_Barangay.Forms
             format.Alignment = StringAlignment.Center;
 
             Rectangle captRec = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, e.PageBounds.Height * 2 / 3 + 8, 270, 28);
-            e.Graphics.DrawString(captName.ToUpper(), Printing.fontBold, Brushes.Black, captRec, format);
+            e.Graphics.DrawString(o.captName.ToUpper(), Printing.fontBold, Brushes.Black, captRec, format);
             DrawDebugRecs(captRec, e);
 
             Rectangle sbRect = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, e.PageBounds.Height * 3 / 4 + 22, 270, 28);
-            e.Graphics.DrawString(officerOfTheDay, Printing.fontBold, Brushes.Black, sbRect, format);
+            e.Graphics.DrawString(Printing.IfControlEmpty(officerOption).ToUpper(), Printing.fontBold, Brushes.Black, sbRect, format);
             DrawDebugRecs(sbRect, e);
         }
 
-        bool debug = true;
+        bool debug = false;
         void DrawDebugRecs(Rectangle rec, PrintPageEventArgs e)
         {
             if (debug)

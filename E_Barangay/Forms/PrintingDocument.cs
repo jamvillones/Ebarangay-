@@ -44,7 +44,7 @@ namespace E_Barangay.Forms
 
             foreach (var name in docNames)
                 DocumentList.Rows.Add("Open", name);
-            DocumentList.Sort(DocumentList.Columns[0], ListSortDirection.Ascending);
+            DocumentList.Sort(DocumentList.Columns[1], ListSortDirection.Ascending);
 
         }
         public event EventHandler<bool> OpeningForm;
@@ -124,10 +124,10 @@ namespace E_Barangay.Forms
                     CreateForm<BuildingPermit>();
                     break;
                 case "Certificate of Appearance":
-                    CreateForm<DeathCertificate>();
+                    CreateForm<CertificateAppearance>();
                     break;
                 case "Certificate of Indigency":
-                    CreateForm<DeathCertificate>();
+                    CreateForm<CertificateOfIndigency>();
                     break;
                 case "Cert Dependent":
                     CreateForm<BarangayCertDependent>();

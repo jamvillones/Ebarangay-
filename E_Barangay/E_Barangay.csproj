@@ -117,6 +117,7 @@
     <Compile Include="Class\DateTimeExtension.cs" />
     <Compile Include="Class\ImageConverter.cs" />
     <Compile Include="Class\NameSeparatingHelper.cs" />
+    <Compile Include="Class\OfficersForInfoForPrinting.cs" />
     <Compile Include="Class\PasswordToFormHandler.cs" />
     <Compile Include="Documents\CertificateAppearance.cs">
       <SubType>Form</SubType>

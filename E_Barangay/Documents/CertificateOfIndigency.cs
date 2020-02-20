@@ -17,11 +17,18 @@ namespace E_Barangay.Forms
         {
             InitializeComponent();
         }
-
+        Class.OfficersForInfoForPrinting o;
         private void DeathCertificate_Load(object sender, EventArgs e)
         {
             printing.PrintPage += Printing_PrintPage;
-            printing.SubscribeToFields(fullNameField, addressField, IssuedOn, SexOption);
+            printing.SubscribeToFields(fullNameField, addressField, IssuedOn, SexOption, officerOption);
+            o = new Class.OfficersForInfoForPrinting();
+            foreach (var x in o.sbMemebers)
+            {
+                officerOption.Items.Add(x);
+                officerOption.AutoCompleteCustomSource.Add(x);
+            }
+
         }
 
         private void Printing_PrintPage(object sender, PrintPageEventArgs e)
@@ -37,6 +44,17 @@ namespace E_Barangay.Forms
 
             e.Graphics.DrawString(first, Printing.font, Brushes.Black, rect);
             DrawDebugRecs(rect, e);
+
+            StringFormat format = new StringFormat();
+            format.Alignment = StringAlignment.Center;
+
+            Rectangle captRec = new Rectangle(e.PageBounds.Width * 3 / 5, e.PageBounds.Height * 2 / 3 + 35, 270, 28);
+            e.Graphics.DrawString(o.captName.ToUpper(), Printing.fontBold, Brushes.Black, captRec, format);
+            DrawDebugRecs(captRec, e);
+
+            Rectangle sbRect = new Rectangle(e.PageBounds.Width * 3 / 5, e.PageBounds.Height * 3 / 4 + 28, 270, 28);
+            e.Graphics.DrawString(Printing.IfControlEmpty(officerOption).ToUpper(), Printing.fontBold, Brushes.Black, sbRect, format);
+            DrawDebugRecs(sbRect, e);
         }
 
         bool debug = false;
@@ -84,7 +102,7 @@ namespace E_Barangay.Forms
         #region Clearing
         private void ResetBtn_Click(object sender, EventArgs e)
         {
-            clearFields(fullNameField, addressField, IssuedOn, SexOption);
+            clearFields(fullNameField, addressField, IssuedOn, SexOption, officerOption);
         }
         void clearFields(params Control[] controls)
         {
