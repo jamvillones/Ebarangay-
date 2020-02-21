@@ -419,6 +419,7 @@
       <LastGenOutput>Ebarangaymodel.cs</LastGenOutput>
     </Content>
     <Content Include="favicon.ico" />
+    <None Include="Resources\BarangayClearance_tmp.png" />
     <None Include="Resources\BarangayCertDEPENDENT.png" />
     <None Include="Resources\CertificateOfIndigency.png" />
     <None Include="Resources\CertAppearance.png" />

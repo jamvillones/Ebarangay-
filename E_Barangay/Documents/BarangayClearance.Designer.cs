@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.officerOption = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.Purpose = new System.Windows.Forms.TextBox();
@@ -58,6 +61,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.printing = new E_Barangay.Forms.Printing();
             this.panel1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.IdGroup.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -67,6 +71,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.ResetBtn);
             this.panel1.Controls.Add(this.IdGroup);
@@ -77,6 +82,38 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(352, 690);
             this.panel1.TabIndex = 0;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.officerOption);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Location = new System.Drawing.Point(12, 449);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(330, 55);
+            this.groupBox4.TabIndex = 7;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Signature";
+            // 
+            // officerOption
+            // 
+            this.officerOption.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.officerOption.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.officerOption.FormattingEnabled = true;
+            this.officerOption.Location = new System.Drawing.Point(107, 19);
+            this.officerOption.Name = "officerOption";
+            this.officerOption.Size = new System.Drawing.Size(217, 21);
+            this.officerOption.TabIndex = 5;
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(6, 18);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 20);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Officer of the Day:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox2
             // 
@@ -388,6 +425,7 @@
             this.Controls.Add(this.printing);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "BarangayClearance";
@@ -395,7 +433,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Barangay Clearcance";
             this.Load += new System.EventHandler(this.BarangayClearanceForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BarangayClearance_KeyDown);
             this.panel1.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.IdGroup.ResumeLayout(false);
@@ -439,5 +479,8 @@
         private System.Windows.Forms.ComboBox SexOption;
         private System.Windows.Forms.Label label6;
         private Printing printing;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.ComboBox officerOption;
+        private System.Windows.Forms.Label label9;
     }
 }
