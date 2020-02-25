@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.complaintsBtn = new System.Windows.Forms.Button();
             this.LoginBtn = new System.Windows.Forms.Button();
             this.StatBtn = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -44,6 +45,7 @@
             this.DashControl = new E_Barangay.Forms.Dashboard();
             this.QueryPage = new E_Barangay.Forms.QueryControl();
             this.printingFiles = new E_Barangay.Forms.PrintingDocument();
+            this.complaintPage = new E_Barangay.Forms.ComplaintControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.UserWelcomeTxt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,11 +70,34 @@
             this.panel1.Controls.Add(this.DashBtn);
             this.panel1.Controls.Add(this.QueryBtn);
             this.panel1.Controls.Add(this.IssueBtn);
+            this.panel1.Controls.Add(this.complaintsBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(168, 597);
             this.panel1.TabIndex = 0;
+            // 
+            // complaintsBtn
+            // 
+            this.complaintsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.complaintsBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.complaintsBtn.FlatAppearance.BorderSize = 0;
+            this.complaintsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.complaintsBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.complaintsBtn.ForeColor = System.Drawing.Color.White;
+            this.complaintsBtn.Image = ((System.Drawing.Image)(resources.GetObject("complaintsBtn.Image")));
+            this.complaintsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.complaintsBtn.Location = new System.Drawing.Point(3, 181);
+            this.complaintsBtn.Name = "complaintsBtn";
+            this.complaintsBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.complaintsBtn.Size = new System.Drawing.Size(165, 34);
+            this.complaintsBtn.TabIndex = 10;
+            this.complaintsBtn.TabStop = false;
+            this.complaintsBtn.Text = "Complaints";
+            this.complaintsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.complaintsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.complaintsBtn.UseVisualStyleBackColor = true;
+            this.complaintsBtn.Click += new System.EventHandler(this.complaintsBtn_Click);
             // 
             // LoginBtn
             // 
@@ -218,7 +243,7 @@
             this.IssueBtn.ForeColor = System.Drawing.Color.White;
             this.IssueBtn.Image = ((System.Drawing.Image)(resources.GetObject("IssueBtn.Image")));
             this.IssueBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IssueBtn.Location = new System.Drawing.Point(3, 181);
+            this.IssueBtn.Location = new System.Drawing.Point(3, 215);
             this.IssueBtn.Name = "IssueBtn";
             this.IssueBtn.Size = new System.Drawing.Size(165, 34);
             this.IssueBtn.TabIndex = 4;
@@ -237,6 +262,7 @@
             this.panel3.Controls.Add(this.DashControl);
             this.panel3.Controls.Add(this.QueryPage);
             this.panel3.Controls.Add(this.printingFiles);
+            this.panel3.Controls.Add(this.complaintPage);
             this.panel3.Location = new System.Drawing.Point(168, 37);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(920, 548);
@@ -270,6 +296,15 @@
             this.printingFiles.Size = new System.Drawing.Size(920, 548);
             this.printingFiles.TabIndex = 4;
             this.printingFiles.TabStop = false;
+            // 
+            // complaintPage
+            // 
+            this.complaintPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.complaintPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.complaintPage.Location = new System.Drawing.Point(0, 0);
+            this.complaintPage.Name = "complaintPage";
+            this.complaintPage.Size = new System.Drawing.Size(920, 548);
+            this.complaintPage.TabIndex = 6;
             // 
             // panel2
             // 
@@ -365,5 +400,7 @@
         private System.Windows.Forms.Button StatBtn;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button LoginBtn;
+        private System.Windows.Forms.Button complaintsBtn;
+        private ComplaintControl complaintPage;
     }
 }

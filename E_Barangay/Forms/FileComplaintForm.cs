@@ -13,6 +13,7 @@ namespace E_Barangay.Forms
     public enum ComplaintStatus { Pending, LupongTagapamayapa, Settled }
     public partial class FileComplaintForm : Form
     {
+        public event EventHandler ComplaintAdded;
         public FileComplaintForm()
         {
             InitializeComponent();
@@ -46,6 +47,9 @@ namespace E_Barangay.Forms
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
+            if (!canSave())
+                return;
+
             YesOrNoPrompt yesOrNo = new YesOrNoPrompt("Are you sure you want to save a complaint?");
             yesOrNo.onBtnClick += SaveRecord;
             yesOrNo.FormClosed += (ss, eee) => { Enabled = true; };
@@ -53,12 +57,29 @@ namespace E_Barangay.Forms
             this.Enabled = false;
 
         }
-
+        bool canSave()
+        {
+            using (var ent = new EBarangayEntities())
+            {
+                if (ent.Records.Find(controlNumberField.Text) != null)
+                {
+                    MessageBox.Show("Control Number already taken.");
+                    return false;
+                }
+            }
+            if (dgvComplainants.RowCount <= 1 || dgvRespondents.RowCount <= 1 || string.IsNullOrEmpty(locationField.Text)||string.IsNullOrEmpty(narrativeField.Text))
+            {
+                MessageBox.Show("Location, Complainants, Respondents, and Narrative cannot be empty");
+                return false;
+            }
+            return true;
+        }
         private void SaveRecord(object sender, bool e)
         {
             if (!e)
                 return;
 
+           
             var rec = new Record();
 
             rec.ID = string.IsNullOrEmpty(controlNumberField.Text) ? Guid.NewGuid().ToString() : controlNumberField.Text;
@@ -98,6 +119,7 @@ namespace E_Barangay.Forms
                 ent.Records.Add(rec);
                 ent.SaveChanges();
             }
+            ComplaintAdded?.Invoke(this, new EventArgs());
             Cleanup();
         }
 
@@ -105,7 +127,7 @@ namespace E_Barangay.Forms
         {
             using (var ent = new EBarangayEntities())
             {
-                for (int i =0; i < dgv.RowCount;i++)
+                for (int i = 0; i < dgv.RowCount; i++)
                 {
                     if (dgv.Rows[i].Cells[0].Value != null)
                     {
@@ -158,6 +180,11 @@ namespace E_Barangay.Forms
             prev.FormClosed += (ss, ee) => { Enabled = true; };
             Enabled = false;
             prev.Show();
+
+        }
+
+        private void controlNumberField_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

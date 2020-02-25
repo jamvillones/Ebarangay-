@@ -17,23 +17,24 @@ namespace E_Barangay.Forms
         {
             InitializeComponent();
         }
-        public RecordView(Record rec)
+        public RecordView(string id)
         {
             InitializeComponent();
             using (var eb = new EBarangayEntities())
             {
-                currRec = eb.Records.Find(rec.ID);
+                currRec = eb.Records.FirstOrDefault(x=>x.ID == id);
                 initializeFields();
             }
 
         }
         void initializeFields()
         {
-           // Person.Text = currRec.Citizen.Name;
+            // Person.Text = currRec.Citizen.Name;
+            controlNumberField.Text = currRec.ID;
             Status.Text = currRec.Status;
             Status.ForeColor = currRec.Status == "Pending" ? Color.Red : Color.Green;
             locationTxt.Text = currRec.Location;
-
+            narrativeField.Text = currRec.Narrative;
             //TitleField.Text = currRec.Name;
             //DetailsField.Text = currRec.Details;
 
@@ -41,6 +42,13 @@ namespace E_Barangay.Forms
             RecordedOn.Text = currRec.DateIssued.Value.ToString("MMMM dd, yyyy hh:mm tt");
             settleSched.Text = currRec.SettlementDate.Value.ToString("MMMM dd, yyyy hh:mm tt");
 
+            var compNames = currRec.CompNames.Split(',');
+            foreach (var c in compNames)
+                lvComplainants.Items.Add(c);
+
+            var respNames = currRec.RespNames.Split(',');
+            foreach (var c in respNames)
+                lvRespondents.Items.Add(c);
         }
 
         private void RecordView_Load(object sender, EventArgs e)
@@ -80,6 +88,26 @@ namespace E_Barangay.Forms
                 eb.SaveChanges();
 
             }
+        }
+
+        private void controlNumberField_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void locationTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RecordedOn_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void During_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

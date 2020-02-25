@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.GroupBox groupBox2;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditPage));
             this.IsStudent = new System.Windows.Forms.CheckBox();
             this.isIndigent = new System.Windows.Forms.CheckBox();
@@ -54,13 +53,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.BarangayField = new System.Windows.Forms.TextBox();
             this.VoterCheckbox = new System.Windows.Forms.CheckBox();
-            this.RecordsTable = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.recDeleteBtn = new System.Windows.Forms.Button();
-            this.AddRecordBtn = new System.Windows.Forms.Button();
             this.SaveBtn = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -82,6 +74,7 @@
             this.AddImage = new System.Windows.Forms.Button();
             this.ImageBox = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.IDField = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
@@ -90,12 +83,9 @@
             this.PIField = new System.Windows.Forms.TextBox();
             this.SSSField = new System.Windows.Forms.TextBox();
             this.PHField = new System.Windows.Forms.TextBox();
-            this.IDField = new System.Windows.Forms.TextBox();
             groupBox2 = new System.Windows.Forms.GroupBox();
             groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RecordsTable)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageBox)).BeginInit();
@@ -111,9 +101,9 @@
             groupBox2.Controls.Add(this.IsPwd);
             groupBox2.Controls.Add(this.IsSenior);
             groupBox2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            groupBox2.Location = new System.Drawing.Point(436, 270);
+            groupBox2.Location = new System.Drawing.Point(584, 270);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new System.Drawing.Size(133, 121);
+            groupBox2.Size = new System.Drawing.Size(293, 121);
             groupBox2.TabIndex = 4;
             groupBox2.TabStop = false;
             groupBox2.Text = "Status";
@@ -121,7 +111,7 @@
             // IsStudent
             // 
             this.IsStudent.AutoSize = true;
-            this.IsStudent.Location = new System.Drawing.Point(6, 88);
+            this.IsStudent.Location = new System.Drawing.Point(115, 19);
             this.IsStudent.Name = "IsStudent";
             this.IsStudent.Size = new System.Drawing.Size(60, 18);
             this.IsStudent.TabIndex = 12;
@@ -374,120 +364,14 @@
             this.VoterCheckbox.UseVisualStyleBackColor = true;
             this.VoterCheckbox.CheckedChanged += new System.EventHandler(this.VoterCheckbox_CheckedChanged);
             // 
-            // RecordsTable
-            // 
-            this.RecordsTable.AllowUserToAddRows = false;
-            this.RecordsTable.AllowUserToDeleteRows = false;
-            this.RecordsTable.AllowUserToResizeColumns = false;
-            this.RecordsTable.AllowUserToResizeRows = false;
-            this.RecordsTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RecordsTable.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.RecordsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.RecordsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column3,
-            this.Column2});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.RecordsTable.DefaultCellStyle = dataGridViewCellStyle3;
-            this.RecordsTable.GridColor = System.Drawing.Color.Silver;
-            this.RecordsTable.Location = new System.Drawing.Point(3, 24);
-            this.RecordsTable.MultiSelect = false;
-            this.RecordsTable.Name = "RecordsTable";
-            this.RecordsTable.ReadOnly = true;
-            this.RecordsTable.RowHeadersVisible = false;
-            this.RecordsTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.RecordsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.RecordsTable.Size = new System.Drawing.Size(412, 144);
-            this.RecordsTable.TabIndex = 21;
-            this.RecordsTable.TabStop = false;
-            this.RecordsTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RecordsTable_CellContentClick);
-            this.RecordsTable.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.RecordsTable_CellMouseDoubleClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Control Number";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Title";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Details";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.recDeleteBtn);
-            this.groupBox3.Controls.Add(this.AddRecordBtn);
-            this.groupBox3.Controls.Add(this.RecordsTable);
-            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(9, 270);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(421, 203);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Records";
-            // 
-            // recDeleteBtn
-            // 
-            this.recDeleteBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.recDeleteBtn.FlatAppearance.BorderSize = 0;
-            this.recDeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.recDeleteBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.recDeleteBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.recDeleteBtn.Location = new System.Drawing.Point(73, 174);
-            this.recDeleteBtn.Name = "recDeleteBtn";
-            this.recDeleteBtn.Size = new System.Drawing.Size(93, 23);
-            this.recDeleteBtn.TabIndex = 23;
-            this.recDeleteBtn.TabStop = false;
-            this.recDeleteBtn.Text = "Delete Record";
-            this.recDeleteBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.recDeleteBtn.UseVisualStyleBackColor = false;
-            this.recDeleteBtn.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // AddRecordBtn
-            // 
-            this.AddRecordBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.AddRecordBtn.FlatAppearance.BorderSize = 0;
-            this.AddRecordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddRecordBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddRecordBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddRecordBtn.Location = new System.Drawing.Point(3, 174);
-            this.AddRecordBtn.Name = "AddRecordBtn";
-            this.AddRecordBtn.Size = new System.Drawing.Size(70, 23);
-            this.AddRecordBtn.TabIndex = 22;
-            this.AddRecordBtn.TabStop = false;
-            this.AddRecordBtn.Text = "Add Record";
-            this.AddRecordBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.AddRecordBtn.UseVisualStyleBackColor = false;
-            this.AddRecordBtn.Click += new System.EventHandler(this.button3_Click);
-            // 
             // SaveBtn
             // 
-            this.SaveBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.SaveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaveBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SaveBtn.Image = ((System.Drawing.Image)(resources.GetObject("SaveBtn.Image")));
-            this.SaveBtn.Location = new System.Drawing.Point(766, 460);
+            this.SaveBtn.Location = new System.Drawing.Point(388, 402);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(111, 40);
             this.SaveBtn.TabIndex = 6;
@@ -747,6 +631,18 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Name";
             // 
+            // IDField
+            // 
+            this.IDField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.IDField.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.IDField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.IDField.Location = new System.Drawing.Point(46, 15);
+            this.IDField.Name = "IDField";
+            this.IDField.ReadOnly = true;
+            this.IDField.Size = new System.Drawing.Size(215, 20);
+            this.IDField.TabIndex = 20;
+            // 
             // label19
             // 
             this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -769,9 +665,9 @@
             this.groupBox6.Controls.Add(this.SSSField);
             this.groupBox6.Controls.Add(this.PHField);
             this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(575, 270);
+            this.groupBox6.Location = new System.Drawing.Point(9, 270);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(302, 121);
+            this.groupBox6.Size = new System.Drawing.Size(569, 121);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "ID\'s";
@@ -805,36 +701,30 @@
             // 
             // PIField
             // 
+            this.PIField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PIField.Location = new System.Drawing.Point(67, 65);
             this.PIField.Name = "PIField";
-            this.PIField.Size = new System.Drawing.Size(229, 20);
+            this.PIField.Size = new System.Drawing.Size(496, 20);
             this.PIField.TabIndex = 2;
             // 
             // SSSField
             // 
+            this.SSSField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.SSSField.Location = new System.Drawing.Point(67, 39);
             this.SSSField.Name = "SSSField";
-            this.SSSField.Size = new System.Drawing.Size(229, 20);
+            this.SSSField.Size = new System.Drawing.Size(496, 20);
             this.SSSField.TabIndex = 1;
             // 
             // PHField
             // 
+            this.PHField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PHField.Location = new System.Drawing.Point(67, 13);
             this.PHField.Name = "PHField";
-            this.PHField.Size = new System.Drawing.Size(229, 20);
+            this.PHField.Size = new System.Drawing.Size(496, 20);
             this.PHField.TabIndex = 0;
-            // 
-            // IDField
-            // 
-            this.IDField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.IDField.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.IDField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.IDField.Location = new System.Drawing.Point(46, 15);
-            this.IDField.Name = "IDField";
-            this.IDField.ReadOnly = true;
-            this.IDField.Size = new System.Drawing.Size(215, 20);
-            this.IDField.TabIndex = 20;
             // 
             // EditPage
             // 
@@ -842,14 +732,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(887, 511);
+            this.ClientSize = new System.Drawing.Size(887, 453);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.SaveBtn);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
@@ -863,8 +752,6 @@
             groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RecordsTable)).EndInit();
-            this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -895,16 +782,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox BarangayField;
-        private System.Windows.Forms.DataGridView RecordsTable;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button SaveBtn;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DateTimePicker BdayPicker;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox ProvinceField;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button recDeleteBtn;
-        private System.Windows.Forms.Button AddRecordBtn;
         private System.Windows.Forms.CheckBox IsStudent;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -934,9 +817,6 @@
         private System.Windows.Forms.TextBox PIField;
         private System.Windows.Forms.TextBox SSSField;
         private System.Windows.Forms.TextBox PHField;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.TextBox IDField;
     }
 }

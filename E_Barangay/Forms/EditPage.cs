@@ -45,7 +45,7 @@ namespace E_Barangay.Forms
             using (var con = new EBarangayEntities())
             {
                 var t = con.Citizens.FirstOrDefault(r => r.ID == citizen.ID);
-               // ImageBox.Image = t.Picture == null ? Properties.Resources.image_50px : Class.ImageConverter.byteArrayToImage(t.Picture);
+                // ImageBox.Image = t.Picture == null ? Properties.Resources.image_50px : Class.ImageConverter.byteArrayToImage(t.Picture);
                 ImageBox.Image = Class.ImageConverter.byteArrayToImage(t.Picture);
 
                 //recordList = t.Records.ToList<Record>();
@@ -191,7 +191,7 @@ namespace E_Barangay.Forms
         private void Edit_Load(object sender, EventArgs e)
         {
             InitializeDropdowns();
-            recDeleteBtn.Enabled = UserManager.instance.currentUser.canDelete;
+
             SetFieldValues();
 
 
@@ -323,7 +323,7 @@ namespace E_Barangay.Forms
 
             BirthdayLabel.ResetText();
 
-            RecordsTable.Rows.Clear();
+
             ImageBox.Image = null;
 
             IsPwd.Checked = isIndigent.Checked = IsSenior.Checked = false;
@@ -355,16 +355,7 @@ namespace E_Barangay.Forms
         RecordForm recForm;
         private void button3_Click(object sender, EventArgs e)
         {
-            if (recForm == null)
-            {
-                recForm = new RecordForm();
-                recForm.FormClosed += Record_FormClosed;
-                recForm.OnSave += Record_OnSave;
-                recForm.Show();
-                this.Enabled = false;
-                return;
-            }
-            recForm.BringToFront();
+
         }
 
         private void Record_OnSave(object sender, Record e)
@@ -436,74 +427,6 @@ namespace E_Barangay.Forms
                     c.Text = "test_dummy";
                 IDField.Text = Guid.NewGuid().ToString();
             }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            this.Enabled = false;
-            var yesOrNo = new YesOrNoPrompt("Are you sure you want to delete this record");
-            yesOrNo.onBtnClick += (s, ee) =>
-            {
-                if (ee) removeByDataIndex();
-                this.Enabled = true;
-
-            };
-            yesOrNo.Show();
-
-        }
-
-        int index
-        {
-            get
-            {
-                return RecordsTable.SelectedCells[0].RowIndex;
-            }
-        }
-
-        Record recordByIndex
-        {
-            get
-            {
-                return recordList[index];
-            }
-        }
-        void removeByDataIndex()
-        {
-            if (RecordsTable.Rows.Count == 0)
-                return;
-
-            int i = index;
-            var r = recordByIndex;
-            ///remove it from database first to avoid error
-            using (var eb = new EBarangayEntities())
-            {
-                var tbr = eb.Records.Find(r.ID);
-                eb.Records.Remove(tbr);
-                eb.SaveChanges();
-                recordList.RemoveAt(i);
-                RecordsTable.Rows.RemoveAt(i);
-            }
-        }
-
-        //private void RecordsTable_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        //{
-        //    var view = new RecordView(recordByIndex);
-        //    view.Show();
-
-        //}
-
-        private void RecordsTable_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            var view = new RecordView(recordByIndex);
-            view.FormClosed += (ee, ss) => { this.Enabled = true; };
-            this.Enabled = false;
-            view.Show();
-
-        }
-
-        private void RecordsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //Console.WriteLine(recordByIndex.Name);
         }
     }
 }

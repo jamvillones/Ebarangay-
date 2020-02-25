@@ -92,18 +92,23 @@ namespace E_Barangay.Forms
             IsPwd.Checked = target.PWD ? true : false;
 
             RecordsTable.Rows.Clear();
-            using (var con = new EBarangayEntities())
+            using (var ent = new EBarangayEntities())
             {
-                var t = con.Citizens.FirstOrDefault(r => r.ID == target.ID);
+                var t = ent.Citizens.FirstOrDefault(r => r.ID == target.ID);
                 ImageBox.Image = t.Picture == null ? Properties.Resources.image_50px : Class.ImageConverter.byteArrayToImage(t.Picture);
 
-                //List<Record> rec = t.Records.ToList<Record>();
-                //for (int i = 0; i < rec.Count; i++)
-                //{
-                //    RecordsTable.Rows.Add(rec[i].DateHappened, rec[i].Name, rec[i].Status);
-                //}
+                if (string.IsNullOrEmpty(t.RefRecords))
+                {
+                    return;
+                }
+                var recs = t.RefRecords.Split(',');
+                foreach (var ids in recs)
+                {
+                    var complaint = ent.Records.FirstOrDefault(x => x.ID == ids);
+                    if (complaint != null)
+                        RecordsTable.Rows.Add(complaint.ID, complaint.SettlementDate.Value.ToString("MMMM dd, yyyy"), complaint.Status);
+                }
             }
-
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)
@@ -142,6 +147,19 @@ namespace E_Barangay.Forms
                 }
             }
             ///throw new NotImplementedException();
+        }
+
+        private void RecordsTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1)
+                return;
+            DataGridView v = (DataGridView)sender;
+            var x = v.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+            var view = new RecordView(x);
+            view.FormClosed += (ee, ss) => { this.Enabled = true; };
+            this.Enabled = false;
+            view.Show();
         }
     }
 }

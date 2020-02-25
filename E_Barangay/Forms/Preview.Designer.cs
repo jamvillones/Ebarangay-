@@ -99,7 +99,7 @@
             this.OkayBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.OkayBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.OkayBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.OkayBtn.Location = new System.Drawing.Point(424, 520);
+            this.OkayBtn.Location = new System.Drawing.Point(470, 520);
             this.OkayBtn.Name = "OkayBtn";
             this.OkayBtn.Size = new System.Drawing.Size(130, 28);
             this.OkayBtn.TabIndex = 0;
@@ -137,7 +137,7 @@
             this.panel7.Controls.Add(this.Philhealth);
             this.panel7.Location = new System.Drawing.Point(136, 400);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(499, 102);
+            this.panel7.Size = new System.Drawing.Size(478, 102);
             this.panel7.TabIndex = 79;
             // 
             // label16
@@ -160,7 +160,7 @@
             this.PagIbig.Location = new System.Drawing.Point(85, 76);
             this.PagIbig.Name = "PagIbig";
             this.PagIbig.ReadOnly = true;
-            this.PagIbig.Size = new System.Drawing.Size(404, 13);
+            this.PagIbig.Size = new System.Drawing.Size(383, 13);
             this.PagIbig.TabIndex = 58;
             // 
             // SSS
@@ -173,7 +173,7 @@
             this.SSS.Location = new System.Drawing.Point(85, 14);
             this.SSS.Name = "SSS";
             this.SSS.ReadOnly = true;
-            this.SSS.Size = new System.Drawing.Size(404, 13);
+            this.SSS.Size = new System.Drawing.Size(383, 13);
             this.SSS.TabIndex = 53;
             // 
             // label14
@@ -206,7 +206,7 @@
             this.Philhealth.Location = new System.Drawing.Point(85, 45);
             this.Philhealth.Name = "Philhealth";
             this.Philhealth.ReadOnly = true;
-            this.Philhealth.Size = new System.Drawing.Size(404, 13);
+            this.Philhealth.Size = new System.Drawing.Size(383, 13);
             this.Philhealth.TabIndex = 56;
             // 
             // panel6
@@ -218,9 +218,9 @@
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.label13);
             this.panel6.Controls.Add(this.PrecinctNumber);
-            this.panel6.Location = new System.Drawing.Point(641, 60);
+            this.panel6.Location = new System.Drawing.Point(620, 60);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(322, 72);
+            this.panel6.Size = new System.Drawing.Size(434, 72);
             this.panel6.TabIndex = 78;
             // 
             // VotersID
@@ -233,7 +233,7 @@
             this.VotersID.Location = new System.Drawing.Point(114, 14);
             this.VotersID.Name = "VotersID";
             this.VotersID.ReadOnly = true;
-            this.VotersID.Size = new System.Drawing.Size(199, 13);
+            this.VotersID.Size = new System.Drawing.Size(311, 13);
             this.VotersID.TabIndex = 53;
             // 
             // label3
@@ -266,7 +266,7 @@
             this.PrecinctNumber.Location = new System.Drawing.Point(114, 45);
             this.PrecinctNumber.Name = "PrecinctNumber";
             this.PrecinctNumber.ReadOnly = true;
-            this.PrecinctNumber.Size = new System.Drawing.Size(199, 13);
+            this.PrecinctNumber.Size = new System.Drawing.Size(311, 13);
             this.PrecinctNumber.TabIndex = 56;
             // 
             // panel5
@@ -276,16 +276,16 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.RecordsTable);
-            this.panel5.Location = new System.Drawing.Point(641, 138);
+            this.panel5.Location = new System.Drawing.Point(620, 138);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(322, 364);
+            this.panel5.Size = new System.Drawing.Size(434, 364);
             this.panel5.TabIndex = 77;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 6);
+            this.label9.Location = new System.Drawing.Point(7, 6);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(52, 15);
             this.label9.TabIndex = 52;
@@ -334,19 +334,22 @@
             this.RecordsTable.RowHeadersVisible = false;
             this.RecordsTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.RecordsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.RecordsTable.Size = new System.Drawing.Size(298, 324);
+            this.RecordsTable.Size = new System.Drawing.Size(410, 324);
             this.RecordsTable.TabIndex = 0;
+            this.RecordsTable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RecordsTable_CellDoubleClick);
             // 
             // Column1
             // 
-            this.Column1.HeaderText = "Date Occurred";
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.HeaderText = "Control Number";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.Width = 117;
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Title";
+            this.Column2.HeaderText = "Settlement Date";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
@@ -373,7 +376,7 @@
             this.panel4.Controls.Add(this.FatherTxt);
             this.panel4.Location = new System.Drawing.Point(136, 261);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(499, 133);
+            this.panel4.Size = new System.Drawing.Size(478, 133);
             this.panel4.TabIndex = 76;
             // 
             // label6
@@ -426,7 +429,7 @@
             this.CivilStatusTxt.Location = new System.Drawing.Point(85, 13);
             this.CivilStatusTxt.Name = "CivilStatusTxt";
             this.CivilStatusTxt.ReadOnly = true;
-            this.CivilStatusTxt.Size = new System.Drawing.Size(404, 13);
+            this.CivilStatusTxt.Size = new System.Drawing.Size(383, 13);
             this.CivilStatusTxt.TabIndex = 57;
             // 
             // MotherTxt
@@ -439,7 +442,7 @@
             this.MotherTxt.Location = new System.Drawing.Point(85, 44);
             this.MotherTxt.Name = "MotherTxt";
             this.MotherTxt.ReadOnly = true;
-            this.MotherTxt.Size = new System.Drawing.Size(404, 13);
+            this.MotherTxt.Size = new System.Drawing.Size(383, 13);
             this.MotherTxt.TabIndex = 47;
             // 
             // SpouseTxt
@@ -452,7 +455,7 @@
             this.SpouseTxt.Location = new System.Drawing.Point(85, 107);
             this.SpouseTxt.Name = "SpouseTxt";
             this.SpouseTxt.ReadOnly = true;
-            this.SpouseTxt.Size = new System.Drawing.Size(404, 13);
+            this.SpouseTxt.Size = new System.Drawing.Size(383, 13);
             this.SpouseTxt.TabIndex = 50;
             // 
             // FatherTxt
@@ -465,7 +468,7 @@
             this.FatherTxt.Location = new System.Drawing.Point(85, 75);
             this.FatherTxt.Name = "FatherTxt";
             this.FatherTxt.ReadOnly = true;
-            this.FatherTxt.Size = new System.Drawing.Size(404, 13);
+            this.FatherTxt.Size = new System.Drawing.Size(383, 13);
             this.FatherTxt.TabIndex = 51;
             // 
             // panel3
@@ -488,7 +491,7 @@
             this.panel3.Controls.Add(this.AddressTxt);
             this.panel3.Location = new System.Drawing.Point(136, 60);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(499, 195);
+            this.panel3.Size = new System.Drawing.Size(478, 195);
             this.panel3.TabIndex = 75;
             // 
             // label17
@@ -511,7 +514,7 @@
             this.ContactTxt.Location = new System.Drawing.Point(85, 169);
             this.ContactTxt.Name = "ContactTxt";
             this.ContactTxt.ReadOnly = true;
-            this.ContactTxt.Size = new System.Drawing.Size(404, 13);
+            this.ContactTxt.Size = new System.Drawing.Size(383, 13);
             this.ContactTxt.TabIndex = 50;
             // 
             // NameTxt
@@ -524,7 +527,7 @@
             this.NameTxt.Location = new System.Drawing.Point(85, 15);
             this.NameTxt.Name = "NameTxt";
             this.NameTxt.ReadOnly = true;
-            this.NameTxt.Size = new System.Drawing.Size(404, 13);
+            this.NameTxt.Size = new System.Drawing.Size(383, 13);
             this.NameTxt.TabIndex = 20;
             // 
             // label1
@@ -577,7 +580,7 @@
             this.SexTxt.Location = new System.Drawing.Point(85, 108);
             this.SexTxt.Name = "SexTxt";
             this.SexTxt.ReadOnly = true;
-            this.SexTxt.Size = new System.Drawing.Size(404, 13);
+            this.SexTxt.Size = new System.Drawing.Size(383, 13);
             this.SexTxt.TabIndex = 43;
             // 
             // BdayTxt
@@ -590,7 +593,7 @@
             this.BdayTxt.Location = new System.Drawing.Point(85, 46);
             this.BdayTxt.Name = "BdayTxt";
             this.BdayTxt.ReadOnly = true;
-            this.BdayTxt.Size = new System.Drawing.Size(404, 13);
+            this.BdayTxt.Size = new System.Drawing.Size(383, 13);
             this.BdayTxt.TabIndex = 44;
             // 
             // AgeTxt
@@ -603,7 +606,7 @@
             this.AgeTxt.Location = new System.Drawing.Point(85, 77);
             this.AgeTxt.Name = "AgeTxt";
             this.AgeTxt.ReadOnly = true;
-            this.AgeTxt.Size = new System.Drawing.Size(404, 13);
+            this.AgeTxt.Size = new System.Drawing.Size(383, 13);
             this.AgeTxt.TabIndex = 45;
             // 
             // label2
@@ -626,7 +629,7 @@
             this.AddressTxt.Location = new System.Drawing.Point(85, 138);
             this.AddressTxt.Name = "AddressTxt";
             this.AddressTxt.ReadOnly = true;
-            this.AddressTxt.Size = new System.Drawing.Size(404, 13);
+            this.AddressTxt.Size = new System.Drawing.Size(383, 13);
             this.AddressTxt.TabIndex = 48;
             // 
             // panel2
@@ -756,7 +759,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(979, 560);
+            this.ClientSize = new System.Drawing.Size(1070, 560);
             this.Controls.Add(this.IDTxt);
             this.Controls.Add(this.DeleteBtn);
             this.Controls.Add(this.panel7);

@@ -79,6 +79,7 @@ namespace E_Barangay.Forms
             {
                 DashControl.InitValues();
                 QueryPage.setUser();
+                complaintPage.LoadValues();
             }
             catch
             {
@@ -192,6 +193,13 @@ namespace E_Barangay.Forms
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             OpenCreateLogin();
+        }
+
+        private void complaintsBtn_Click(object sender, EventArgs e)
+        {
+            SetSelectionPanel(complaintsBtn);
+            SwitchPage(complaintPage);
+            complaintPage.BringToFront();
         }
     }
 }
