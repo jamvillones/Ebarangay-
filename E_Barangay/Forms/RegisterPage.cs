@@ -13,7 +13,7 @@ namespace E_Barangay.Forms
 {
     public partial class RegisterPage : Form
     {
-        List<Record> records = new List<Record>();
+        //List<Record> records = new List<Record>();
         List<Control> requiredControls = new List<Control>();
         public void SetId(string id)
         {
@@ -52,14 +52,14 @@ namespace E_Barangay.Forms
             for (int i = startIndex; i < values.Length; i++)
             {
                 comboBox.Items.Add(values[i]);
+                comboBox.AutoCompleteCustomSource.Add(values[i]);
             }
         }
         public void LoadValues()
         {
-            using (var eBarangay = new EBarangayEntities())
+            using (var ent = new EBarangayEntities())
             {
-                IQueryable<string> names = from areas in eBarangay.Areas
-                                           select areas.Name;
+                var names = ent.Areas.Select(x=>x.Name);
                 InitializeDropdown(names.ToArray(), 1, ref AreaOption);
             }
             SexOption.SelectedIndex = CivilStatusOption.SelectedIndex = 0;
@@ -69,8 +69,7 @@ namespace E_Barangay.Forms
 
 
         }
-
-        private void RegisterBtn_Click(object sender, EventArgs e)
+        void save()
         {
             ///checking if valid for registration
             if (!CanSave())
@@ -83,7 +82,7 @@ namespace E_Barangay.Forms
             Citizen temp = new Citizen();
             temp.ID = IDField.Text == string.Empty ? Guid.NewGuid().ToString() : IDField.Text;
 
-            temp.Name = FirstNameField.Text + " " + MiddleNameField.Text + " " + LastNameField.Text+(extField.Text == string.Empty? "":" "+extField.Text);
+            temp.Name = FirstNameField.Text + " " + MiddleNameField.Text + " " + LastNameField.Text + (extField.Text == string.Empty ? "" : " " + extField.Text);
             temp.Gender = SexOption.Text;
 
             if (NumberField.Text == "")
@@ -123,17 +122,9 @@ namespace E_Barangay.Forms
 
             using (var ent = new EBarangayEntities())
             {
-
                 temp.Area = AreaOption.Items.Contains(AreaOption.Text) ? ent.Areas.FirstOrDefault(r => r.Name == AreaOption.Text) : ent.Areas.First();
                 ent.Citizens.Add(temp);
-
-                for (int i = 0; i < records.Count; i++)
-                {
-                    records[i].CitizenID = temp.ID;
-                    ent.Records.Add(records[i]);
-                }
                 ent.SaveChanges();
-                records.Clear();
             }
             MessageBox.Show("successfully saved!");
             ChangeNormalColors();
@@ -141,6 +132,21 @@ namespace E_Barangay.Forms
             CleanFields();
 
         }
+        private void RegisterBtn_Click(object sender, EventArgs e)
+        {
+            var yesorno = new YesOrNoPrompt("Are you sure you want to save?");
+            yesorno.onBtnClick += Yesorno_onBtnClick;
+            yesorno.FormClosed += (ss, ee) => { Enabled = true; };
+            yesorno.Show();
+            Enabled = false;
+        }
+
+        private void Yesorno_onBtnClick(object sender, bool e)
+        {
+            if (e)
+                save();
+        }
+
         public bool FieldEmpty(TextBox t)
         {
             return t.Text == string.Empty || t.Text == "required";
@@ -205,9 +211,6 @@ namespace E_Barangay.Forms
             ProvinceField.Clear();
             ContactField.Clear();
 
-            //Birthday.ResetText();
-
-            RecordsTable.Rows.Clear();
             ImageBox.Image = null;
             VoterIDField.Clear();
             PrecinctNumField.Clear();
@@ -241,44 +244,44 @@ namespace E_Barangay.Forms
             //var age = today.Year - BdayPicker.Value.Year;
             AgeField.Text = Class.DateTimeExtension.ToAge(BdayPicker.Value.Date).years.ToString(); ;
         }
-        RecordForm record;
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (record == null)
-            {
-                record = new RecordForm();
-                record.FormClosed += Record_FormClosed;
-                record.OnSave += Record_OnSave;
-                //record.GetRef(this);
-                record.Show();
-                return;
-            }
-            record.BringToFront();
-        }
+        //RecordForm record;
+        //private void button3_Click(object sender, EventArgs e)
+        //{
+        //    if (record == null)
+        //    {
+        //        record = new RecordForm();
+        //        record.FormClosed += Record_FormClosed;
+        //        record.OnSave += Record_OnSave;
+        //        //record.GetRef(this);
+        //        record.Show();
+        //        return;
+        //    }
+        //    record.BringToFront();
+        //}
 
-        private void Record_OnSave(object sender, Record e)
-        {
-            records.Add(e);
-            RecordsTable.Rows.Add(e.DateIssued, e.Name, e.Details);
-            // throw new NotImplementedException();
-        }
+        //private void Record_OnSave(object sender, Record e)
+        //{
+        //    //records.Add(e);
+        //    //RecordsTable.Rows.Add(e.DateIssued, e.Name, e.Details);
+        //    //// throw new NotImplementedException();
+        //}
 
-        private void Record_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            record = null;
-            // ShowRecords();
-        }
-        void ShowRecords()
-        {
-            RecordsTable.Rows.Clear();
-            for (int i = 0; i < records.Count; i++)
-            {
-                RecordsTable.Rows.Add();
-                RecordsTable.Rows[i].Cells[0].Value = records[i].DateIssued;
-                RecordsTable.Rows[i].Cells[1].Value = records[i].Name;
-                RecordsTable.Rows[i].Cells[2].Value = records[i].Details;
-            }
-        }
+        //private void Record_FormClosed(object sender, FormClosedEventArgs e)
+        //{
+        //    record = null;
+        //    // ShowRecords();
+        //}
+        //void ShowRecords()
+        //{
+        //    //RecordsTable.Rows.Clear();
+        //    //for (int i = 0; i < records.Count; i++)
+        //    //{
+        //    //    RecordsTable.Rows.Add();
+        //    //    RecordsTable.Rows[i].Cells[0].Value = records[i].DateIssued;
+        //    //    RecordsTable.Rows[i].Cells[1].Value = records[i].Name;
+        //    //    RecordsTable.Rows[i].Cells[2].Value = records[i].Details;
+        //    //}
+        //}
         CaptureImageForm captureForm;
         private void AddImage_Click(object sender, EventArgs e)
         {

@@ -23,7 +23,11 @@ namespace E_Barangay.Forms
         }
         private void Preview_Load(object sender, EventArgs e)
         {
+            if (Class.UserManager.instance == null)
+                return;
             User user = Class.UserManager.instance.currentUser;
+            if (user == null)
+                return;
             EditBtn.Enabled = user.canEdit ? true : false;
             DeleteBtn.Enabled = user.canDelete ? true : false;
         }
@@ -93,11 +97,11 @@ namespace E_Barangay.Forms
                 var t = con.Citizens.FirstOrDefault(r => r.ID == target.ID);
                 ImageBox.Image = t.Picture == null ? Properties.Resources.image_50px : Class.ImageConverter.byteArrayToImage(t.Picture);
 
-                List<Record> rec = t.Records.ToList<Record>();
-                for (int i = 0; i < rec.Count; i++)
-                {
-                    RecordsTable.Rows.Add(rec[i].DateHappened, rec[i].Name, rec[i].Status);
-                }
+                //List<Record> rec = t.Records.ToList<Record>();
+                //for (int i = 0; i < rec.Count; i++)
+                //{
+                //    RecordsTable.Rows.Add(rec[i].DateHappened, rec[i].Name, rec[i].Status);
+                //}
             }
 
         }
@@ -123,8 +127,8 @@ namespace E_Barangay.Forms
                 {
                     var c = eb.Citizens.Find(IDTxt.Text);
 
-                    foreach (var rec in c.Records.ToArray())
-                        eb.Records.Remove(rec);
+                    //foreach (var rec in c.Records.ToArray())
+                    //    eb.Records.Remove(rec);
 
                     eb.Citizens.Remove(c);
 

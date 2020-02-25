@@ -25,12 +25,12 @@ namespace E_Barangay
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Area> Areas { get; set; }
         public virtual DbSet<Barangay> Barangays { get; set; }
         public virtual DbSet<Citizen> Citizens { get; set; }
         public virtual DbSet<Municipality> Municipalities { get; set; }
-        public virtual DbSet<Record> Records { get; set; }
-        public virtual DbSet<Area> Areas { get; set; }
-        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Official> Officials { get; set; }
+        public virtual DbSet<Record> Records { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterPage));
             this.FirstNameField = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,22 +44,15 @@
             this.AreaOption = new System.Windows.Forms.ComboBox();
             this.MunicipalityField = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.ProvinceField = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.ProvinceField = new System.Windows.Forms.TextBox();
+            this.BarangayField = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.BarangayField = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.IsStudent = new System.Windows.Forms.CheckBox();
             this.VoterCheckbox = new System.Windows.Forms.CheckBox();
-            this.RecordsTable = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.DeleteRecordBtn = new System.Windows.Forms.Button();
-            this.AddRecordBtn = new System.Windows.Forms.Button();
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.CancelBtn = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -87,6 +79,8 @@
             this.AddImage = new System.Windows.Forms.Button();
             this.ImageBox = new System.Windows.Forms.PictureBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.extField = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.IDField = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -96,12 +90,8 @@
             this.PIField = new System.Windows.Forms.TextBox();
             this.SSSField = new System.Windows.Forms.TextBox();
             this.PHField = new System.Windows.Forms.TextBox();
-            this.extField = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RecordsTable)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImageBox)).BeginInit();
@@ -259,6 +249,8 @@
             // 
             this.AreaOption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.AreaOption.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.AreaOption.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.AreaOption.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.AreaOption.Font = new System.Drawing.Font("Times New Roman", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AreaOption.FormattingEnabled = true;
@@ -266,7 +258,7 @@
             this.AreaOption.MaxLength = 10;
             this.AreaOption.Name = "AreaOption";
             this.AreaOption.Size = new System.Drawing.Size(347, 20);
-            this.AreaOption.TabIndex = 3;
+            this.AreaOption.TabIndex = 2;
             // 
             // MunicipalityField
             // 
@@ -292,16 +284,17 @@
             this.label8.Text = "Province";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // ProvinceField
+            // label4
             // 
-            this.ProvinceField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ProvinceField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProvinceField.Location = new System.Drawing.Point(86, 118);
-            this.ProvinceField.MaxLength = 10;
-            this.ProvinceField.Name = "ProvinceField";
-            this.ProvinceField.Size = new System.Drawing.Size(347, 20);
-            this.ProvinceField.TabIndex = 5;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(7, 17);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 14);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "House Number";
             // 
             // label7
             // 
@@ -314,6 +307,28 @@
             this.label7.Size = new System.Drawing.Size(66, 14);
             this.label7.TabIndex = 19;
             this.label7.Text = "Municipality";
+            // 
+            // ProvinceField
+            // 
+            this.ProvinceField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProvinceField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProvinceField.Location = new System.Drawing.Point(86, 118);
+            this.ProvinceField.MaxLength = 10;
+            this.ProvinceField.Name = "ProvinceField";
+            this.ProvinceField.Size = new System.Drawing.Size(347, 20);
+            this.ProvinceField.TabIndex = 5;
+            // 
+            // BarangayField
+            // 
+            this.BarangayField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BarangayField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BarangayField.Location = new System.Drawing.Point(86, 66);
+            this.BarangayField.MaxLength = 10;
+            this.BarangayField.Name = "BarangayField";
+            this.BarangayField.Size = new System.Drawing.Size(347, 20);
+            this.BarangayField.TabIndex = 3;
             // 
             // label6
             // 
@@ -339,29 +354,6 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "Area";
             // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 14);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "House Number";
-            // 
-            // BarangayField
-            // 
-            this.BarangayField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BarangayField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BarangayField.Location = new System.Drawing.Point(86, 66);
-            this.BarangayField.MaxLength = 10;
-            this.BarangayField.Name = "BarangayField";
-            this.BarangayField.Size = new System.Drawing.Size(347, 20);
-            this.BarangayField.TabIndex = 2;
-            // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -370,17 +362,17 @@
             this.groupBox2.Controls.Add(this.IsPwd);
             this.groupBox2.Controls.Add(this.IsSenior);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(433, 302);
+            this.groupBox2.Location = new System.Drawing.Point(616, 302);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(133, 127);
-            this.groupBox2.TabIndex = 4;
+            this.groupBox2.Size = new System.Drawing.Size(256, 93);
+            this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Status";
             // 
             // IsStudent
             // 
             this.IsStudent.AutoSize = true;
-            this.IsStudent.Location = new System.Drawing.Point(6, 88);
+            this.IsStudent.Location = new System.Drawing.Point(114, 19);
             this.IsStudent.Name = "IsStudent";
             this.IsStudent.Size = new System.Drawing.Size(60, 18);
             this.IsStudent.TabIndex = 12;
@@ -398,113 +390,6 @@
             this.VoterCheckbox.UseVisualStyleBackColor = true;
             this.VoterCheckbox.CheckedChanged += new System.EventHandler(this.VoterCheckbox_CheckedChanged);
             // 
-            // RecordsTable
-            // 
-            this.RecordsTable.AllowUserToAddRows = false;
-            this.RecordsTable.AllowUserToDeleteRows = false;
-            this.RecordsTable.AllowUserToResizeColumns = false;
-            this.RecordsTable.AllowUserToResizeRows = false;
-            this.RecordsTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.RecordsTable.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.RecordsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.RecordsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column3,
-            this.Column2});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.RecordsTable.DefaultCellStyle = dataGridViewCellStyle5;
-            this.RecordsTable.GridColor = System.Drawing.Color.Silver;
-            this.RecordsTable.Location = new System.Drawing.Point(3, 24);
-            this.RecordsTable.MultiSelect = false;
-            this.RecordsTable.Name = "RecordsTable";
-            this.RecordsTable.ReadOnly = true;
-            this.RecordsTable.RowHeadersVisible = false;
-            this.RecordsTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.RecordsTable.RowTemplate.DividerHeight = 1;
-            this.RecordsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.RecordsTable.Size = new System.Drawing.Size(409, 266);
-            this.RecordsTable.TabIndex = 21;
-            this.RecordsTable.TabStop = false;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Date";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Title";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "Details";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.DeleteRecordBtn);
-            this.groupBox3.Controls.Add(this.AddRecordBtn);
-            this.groupBox3.Controls.Add(this.RecordsTable);
-            this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(9, 302);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(418, 325);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Records";
-            // 
-            // DeleteRecordBtn
-            // 
-            this.DeleteRecordBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.DeleteRecordBtn.BackColor = System.Drawing.Color.Silver;
-            this.DeleteRecordBtn.FlatAppearance.BorderSize = 0;
-            this.DeleteRecordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteRecordBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteRecordBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteRecordBtn.Location = new System.Drawing.Point(73, 296);
-            this.DeleteRecordBtn.Name = "DeleteRecordBtn";
-            this.DeleteRecordBtn.Size = new System.Drawing.Size(93, 23);
-            this.DeleteRecordBtn.TabIndex = 23;
-            this.DeleteRecordBtn.TabStop = false;
-            this.DeleteRecordBtn.Text = "Delete Record";
-            this.DeleteRecordBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.DeleteRecordBtn.UseVisualStyleBackColor = false;
-            this.DeleteRecordBtn.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // AddRecordBtn
-            // 
-            this.AddRecordBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.AddRecordBtn.BackColor = System.Drawing.Color.Silver;
-            this.AddRecordBtn.FlatAppearance.BorderSize = 0;
-            this.AddRecordBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddRecordBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddRecordBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddRecordBtn.Location = new System.Drawing.Point(3, 296);
-            this.AddRecordBtn.Name = "AddRecordBtn";
-            this.AddRecordBtn.Size = new System.Drawing.Size(70, 23);
-            this.AddRecordBtn.TabIndex = 22;
-            this.AddRecordBtn.TabStop = false;
-            this.AddRecordBtn.Text = "Add Record";
-            this.AddRecordBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.AddRecordBtn.UseVisualStyleBackColor = false;
-            this.AddRecordBtn.Click += new System.EventHandler(this.button3_Click);
-            // 
             // RegisterBtn
             // 
             this.RegisterBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -512,9 +397,9 @@
             this.RegisterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegisterBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegisterBtn.Image = ((System.Drawing.Image)(resources.GetObject("RegisterBtn.Image")));
-            this.RegisterBtn.Location = new System.Drawing.Point(661, 585);
+            this.RegisterBtn.Location = new System.Drawing.Point(339, 409);
             this.RegisterBtn.Name = "RegisterBtn";
-            this.RegisterBtn.Size = new System.Drawing.Size(100, 40);
+            this.RegisterBtn.Size = new System.Drawing.Size(100, 35);
             this.RegisterBtn.TabIndex = 6;
             this.RegisterBtn.TabStop = false;
             this.RegisterBtn.Text = "Register";
@@ -530,9 +415,9 @@
             this.CancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CancelBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelBtn.Image = ((System.Drawing.Image)(resources.GetObject("CancelBtn.Image")));
-            this.CancelBtn.Location = new System.Drawing.Point(767, 585);
+            this.CancelBtn.Location = new System.Drawing.Point(445, 409);
             this.CancelBtn.Name = "CancelBtn";
-            this.CancelBtn.Size = new System.Drawing.Size(100, 40);
+            this.CancelBtn.Size = new System.Drawing.Size(100, 35);
             this.CancelBtn.TabIndex = 7;
             this.CancelBtn.TabStop = false;
             this.CancelBtn.Text = "Cancel";
@@ -840,6 +725,28 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Name";
             // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(7, 121);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(54, 14);
+            this.label18.TabIndex = 21;
+            this.label18.Text = "Extension";
+            // 
+            // extField
+            // 
+            this.extField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.extField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.extField.Location = new System.Drawing.Point(81, 118);
+            this.extField.Name = "extField";
+            this.extField.Size = new System.Drawing.Size(222, 20);
+            this.extField.TabIndex = 5;
+            // 
             // label19
             // 
             this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -873,10 +780,10 @@
             this.groupBox6.Controls.Add(this.SSSField);
             this.groupBox6.Controls.Add(this.PHField);
             this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(572, 302);
+            this.groupBox6.Location = new System.Drawing.Point(9, 302);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(300, 127);
-            this.groupBox6.TabIndex = 5;
+            this.groupBox6.Size = new System.Drawing.Size(601, 93);
+            this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "ID\'s";
             // 
@@ -909,49 +816,30 @@
             // 
             // PIField
             // 
-            this.PIField.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.PIField.Location = new System.Drawing.Point(75, 65);
+            this.PIField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PIField.Location = new System.Drawing.Point(68, 65);
             this.PIField.Name = "PIField";
-            this.PIField.Size = new System.Drawing.Size(219, 20);
+            this.PIField.Size = new System.Drawing.Size(527, 20);
             this.PIField.TabIndex = 2;
             // 
             // SSSField
             // 
-            this.SSSField.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.SSSField.Location = new System.Drawing.Point(75, 39);
+            this.SSSField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SSSField.Location = new System.Drawing.Point(68, 39);
             this.SSSField.Name = "SSSField";
-            this.SSSField.Size = new System.Drawing.Size(219, 20);
+            this.SSSField.Size = new System.Drawing.Size(527, 20);
             this.SSSField.TabIndex = 1;
             // 
             // PHField
             // 
-            this.PHField.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.PHField.Location = new System.Drawing.Point(75, 13);
-            this.PHField.Name = "PHField";
-            this.PHField.Size = new System.Drawing.Size(219, 20);
-            this.PHField.TabIndex = 0;
-            // 
-            // extField
-            // 
-            this.extField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.PHField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.extField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.extField.Location = new System.Drawing.Point(81, 118);
-            this.extField.Name = "extField";
-            this.extField.Size = new System.Drawing.Size(222, 20);
-            this.extField.TabIndex = 5;
-            // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(7, 121);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(54, 14);
-            this.label18.TabIndex = 21;
-            this.label18.Text = "Extension";
+            this.PHField.Location = new System.Drawing.Point(68, 13);
+            this.PHField.Name = "PHField";
+            this.PHField.Size = new System.Drawing.Size(527, 20);
+            this.PHField.TabIndex = 0;
             // 
             // RegisterPage
             // 
@@ -959,7 +847,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(884, 639);
+            this.ClientSize = new System.Drawing.Size(884, 456);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.panel1);
@@ -967,7 +855,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.CancelBtn);
             this.Controls.Add(this.RegisterBtn);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
@@ -981,8 +868,6 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RecordsTable)).EndInit();
-            this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -1014,8 +899,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox BarangayField;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView RecordsTable;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button RegisterBtn;
         private System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -1027,8 +910,6 @@
         private System.Windows.Forms.TextBox MiddleNameField;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button DeleteRecordBtn;
-        private System.Windows.Forms.Button AddRecordBtn;
         private System.Windows.Forms.CheckBox IsStudent;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
@@ -1059,9 +940,6 @@
         private System.Windows.Forms.TextBox PIField;
         private System.Windows.Forms.TextBox SSSField;
         private System.Windows.Forms.TextBox PHField;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox extField;
     }

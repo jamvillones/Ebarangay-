@@ -44,6 +44,7 @@
           <Property Name="Philhealth" Type="nvarchar" MaxLength="50" />
           <Property Name="SSS" Type="nvarchar" MaxLength="50" />
           <Property Name="PagIbig" Type="nvarchar" MaxLength="50" />
+          <Property Name="RefRecords" Type="nvarchar" MaxLength="1000" />
         </EntityType>
         <EntityType Name="Municipality">
           <Key>
@@ -66,14 +67,14 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="CitizenID" Type="nvarchar" MaxLength="50" />
-          <Property Name="Details" Type="nvarchar" MaxLength="3000" />
+          <Property Name="Narrative" Type="nvarchar" MaxLength="3000" />
           <Property Name="DateIssued" Type="datetime" />
           <Property Name="DateHappened" Type="datetime" />
           <Property Name="Location" Type="nvarchar" MaxLength="50" />
           <Property Name="Status" Type="nvarchar" MaxLength="50" />
           <Property Name="SettlementDate" Type="datetime" />
+          <Property Name="CompNames" Type="nvarchar" MaxLength="300" />
+          <Property Name="RespNames" Type="nvarchar" MaxLength="300" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -99,18 +100,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Records_Citizen">
-          <End Role="Citizen" Type="Self.Citizen" Multiplicity="0..1" />
-          <End Role="Records" Type="Self.Records" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Citizen">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Records">
-              <PropertyRef Name="CitizenID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="EBarangayModelStoreContainer">
           <EntitySet Name="Area" EntityType="Self.Area" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Barangay" EntityType="Self.Barangay" Schema="dbo" store:Type="Tables" />
@@ -123,15 +112,19 @@
             <End Role="Area" EntitySet="Area" />
             <End Role="Citizen" EntitySet="Citizen" />
           </AssociationSet>
-          <AssociationSet Name="FK_Records_Citizen" Association="Self.FK_Records_Citizen">
-            <End Role="Citizen" EntitySet="Citizen" />
-            <End Role="Records" EntitySet="Records" />
-          </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EBarangayModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Area">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Citizens" Relationship="Self.FK_Citizen_Area" FromRole="Area" ToRole="Citizen" />
+        </EntityType>
         <EntityType Name="Barangay">
           <Key>
             <PropertyRef Name="ID" />
@@ -158,14 +151,14 @@
           <Property Name="PWD" Type="Boolean" Nullable="false" />
           <Property Name="Student" Type="Boolean" Nullable="false" />
           <Property Name="Picture" Type="Binary" MaxLength="Max" FixedLength="false" />
-          <NavigationProperty Name="Records" Relationship="Self.FK_Records_Citizen" FromRole="Citizen" ToRole="Records" />
           <Property Name="AreaID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Area" Relationship="EBarangayModel.FK_Citizen_Area" FromRole="Citizen" ToRole="Area" />
           <Property Name="VoterID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="PrecinctNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Philhealth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SSS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="PagIbig" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="RefRecords" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Area" Relationship="Self.FK_Citizen_Area" FromRole="Citizen" ToRole="Area" />
         </EntityType>
         <EntityType Name="Municipality">
           <Key>
@@ -175,61 +168,43 @@
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Zip" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
         </EntityType>
+        <EntityType Name="Official">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
         <EntityType Name="Record">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CitizenID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Details" Type="String" MaxLength="3000" FixedLength="false" Unicode="true" />
+          <Property Name="Narrative" Type="String" MaxLength="3000" FixedLength="false" Unicode="true" />
           <Property Name="DateIssued" Type="DateTime" Precision="3" />
-          <NavigationProperty Name="Citizen" Relationship="Self.FK_Records_Citizen" FromRole="Records" ToRole="Citizen" />
           <Property Name="DateHappened" Type="DateTime" Precision="3" />
           <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SettlementDate" Type="DateTime" Precision="3" />
+          <Property Name="CompNames" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="RespNames" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
         </EntityType>
-        <Association Name="FK_Records_Citizen">
-          <End Role="Citizen" Type="Self.Citizen" Multiplicity="0..1" />
-          <End Role="Records" Type="Self.Record" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Citizen">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Records">
-              <PropertyRef Name="CitizenID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="EBarangayEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Barangays" EntityType="Self.Barangay" />
-          <EntitySet Name="Citizens" EntityType="Self.Citizen" />
-          <EntitySet Name="Municipalities" EntityType="Self.Municipality" />
-          <EntitySet Name="Records" EntityType="Self.Record" />
-          <AssociationSet Name="FK_Records_Citizen" Association="Self.FK_Records_Citizen">
-            <End Role="Citizen" EntitySet="Citizens" />
-            <End Role="Records" EntitySet="Records" />
-          </AssociationSet>
-          <EntitySet Name="Areas" EntityType="EBarangayModel.Area" />
-          <AssociationSet Name="FK_Citizen_Area" Association="EBarangayModel.FK_Citizen_Area">
-            <End Role="Area" EntitySet="Areas" />
-            <End Role="Citizen" EntitySet="Citizens" />
-          </AssociationSet>
-          <EntitySet Name="Users" EntityType="EBarangayModel.User" />
-          <EntitySet Name="Officials" EntityType="EBarangayModel.Official" />
-        </EntityContainer>
-        <EntityType Name="Area">
+        <EntityType Name="User">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Citizens" Relationship="EBarangayModel.FK_Citizen_Area" FromRole="Area" ToRole="Citizen" />
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="canEdit" Type="Boolean" Nullable="false" />
+          <Property Name="canDelete" Type="Boolean" Nullable="false" />
+          <Property Name="canRegister" Type="Boolean" Nullable="false" />
+          <Property Name="canAddUser" Type="Boolean" Nullable="false" />
         </EntityType>
         <Association Name="FK_Citizen_Area">
-          <End Type="EBarangayModel.Area" Role="Area" Multiplicity="0..1" />
-          <End Type="EBarangayModel.Citizen" Role="Citizen" Multiplicity="*" />
+          <End Role="Area" Type="Self.Area" Multiplicity="0..1" />
+          <End Role="Citizen" Type="Self.Citizen" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Area">
               <PropertyRef Name="ID" />
@@ -239,32 +214,33 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="User">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="canEdit" Type="Boolean" Nullable="false" />
-          <Property Name="canDelete" Type="Boolean" Nullable="false" />
-          <Property Name="canRegister" Type="Boolean" Nullable="false" />
-          <Property Name="canAddUser" Type="Boolean" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Official">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Position" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
+        <EntityContainer Name="EBarangayEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Areas" EntityType="Self.Area" />
+          <EntitySet Name="Barangays" EntityType="Self.Barangay" />
+          <EntitySet Name="Citizens" EntityType="Self.Citizen" />
+          <EntitySet Name="Municipalities" EntityType="Self.Municipality" />
+          <EntitySet Name="Officials" EntityType="Self.Official" />
+          <EntitySet Name="Records" EntityType="Self.Record" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK_Citizen_Area" Association="Self.FK_Citizen_Area">
+            <End Role="Area" EntitySet="Areas" />
+            <End Role="Citizen" EntitySet="Citizens" />
+          </AssociationSet>
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="EBarangayModelStoreContainer" CdmEntityContainer="EBarangayEntities">
+          <EntitySetMapping Name="Areas">
+            <EntityTypeMapping TypeName="EBarangayModel.Area">
+              <MappingFragment StoreEntitySet="Area">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Barangays">
             <EntityTypeMapping TypeName="EBarangayModel.Barangay">
               <MappingFragment StoreEntitySet="Barangay">
@@ -276,12 +252,6 @@
           <EntitySetMapping Name="Citizens">
             <EntityTypeMapping TypeName="EBarangayModel.Citizen">
               <MappingFragment StoreEntitySet="Citizen">
-                <ScalarProperty Name="PagIbig" ColumnName="PagIbig" />
-                <ScalarProperty Name="SSS" ColumnName="SSS" />
-                <ScalarProperty Name="Philhealth" ColumnName="Philhealth" />
-                <ScalarProperty Name="PrecinctNumber" ColumnName="PrecinctNumber" />
-                <ScalarProperty Name="VoterID" ColumnName="VoterID" />
-                <ScalarProperty Name="AreaID" ColumnName="AreaID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Birthday" ColumnName="Birthday" />
@@ -297,6 +267,13 @@
                 <ScalarProperty Name="PWD" ColumnName="PWD" />
                 <ScalarProperty Name="Student" ColumnName="Student" />
                 <ScalarProperty Name="Picture" ColumnName="Picture" />
+                <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+                <ScalarProperty Name="VoterID" ColumnName="VoterID" />
+                <ScalarProperty Name="PrecinctNumber" ColumnName="PrecinctNumber" />
+                <ScalarProperty Name="Philhealth" ColumnName="Philhealth" />
+                <ScalarProperty Name="SSS" ColumnName="SSS" />
+                <ScalarProperty Name="PagIbig" ColumnName="PagIbig" />
+                <ScalarProperty Name="RefRecords" ColumnName="RefRecords" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -309,48 +286,40 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Records">
-            <EntityTypeMapping TypeName="EBarangayModel.Record">
-              <MappingFragment StoreEntitySet="Records">
-                <ScalarProperty Name="SettlementDate" ColumnName="SettlementDate" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="Location" ColumnName="Location" />
-                <ScalarProperty Name="DateHappened" ColumnName="DateHappened" />
+          <EntitySetMapping Name="Officials">
+            <EntityTypeMapping TypeName="EBarangayModel.Official">
+              <MappingFragment StoreEntitySet="Officials">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="CitizenID" ColumnName="CitizenID" />
-                <ScalarProperty Name="Details" ColumnName="Details" />
-                <ScalarProperty Name="DateIssued" ColumnName="DateIssued" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Areas">
-            <EntityTypeMapping TypeName="EBarangayModel.Area">
-              <MappingFragment StoreEntitySet="Area">
-                <ScalarProperty Name="Name" ColumnName="Name" />
+          <EntitySetMapping Name="Records">
+            <EntityTypeMapping TypeName="EBarangayModel.Record">
+              <MappingFragment StoreEntitySet="Records">
                 <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Narrative" ColumnName="Narrative" />
+                <ScalarProperty Name="DateIssued" ColumnName="DateIssued" />
+                <ScalarProperty Name="DateHappened" ColumnName="DateHappened" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="SettlementDate" ColumnName="SettlementDate" />
+                <ScalarProperty Name="CompNames" ColumnName="CompNames" />
+                <ScalarProperty Name="RespNames" ColumnName="RespNames" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="EBarangayModel.User">
               <MappingFragment StoreEntitySet="Users">
-                <ScalarProperty Name="canAddUser" ColumnName="canAddUser" />
-                <ScalarProperty Name="canRegister" ColumnName="canRegister" />
-                <ScalarProperty Name="canDelete" ColumnName="canDelete" />
-                <ScalarProperty Name="canEdit" ColumnName="canEdit" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Officials">
-            <EntityTypeMapping TypeName="EBarangayModel.Official">
-              <MappingFragment StoreEntitySet="Officials">
-                <ScalarProperty Name="Position" ColumnName="Position" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="canEdit" ColumnName="canEdit" />
+                <ScalarProperty Name="canDelete" ColumnName="canDelete" />
+                <ScalarProperty Name="canRegister" ColumnName="canRegister" />
+                <ScalarProperty Name="canAddUser" ColumnName="canAddUser" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

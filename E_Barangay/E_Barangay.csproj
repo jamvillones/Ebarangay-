@@ -106,13 +106,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Area.cs">
-      <DependentUpon>Ebarangaymodel.tt</DependentUpon>
+      <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Barangay.cs">
-      <DependentUpon>Ebarangaymodel.tt</DependentUpon>
+      <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Citizen.cs">
-      <DependentUpon>Ebarangaymodel.tt</DependentUpon>
+      <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Class\CustomDataGridView.cs">
       <SubType>Component</SubType>
@@ -146,6 +146,21 @@
     <Compile Include="Documents\BarangayCertDependent.Designer.cs">
       <DependentUpon>BarangayCertDependent.cs</DependentUpon>
     </Compile>
+    <Compile Include="EBModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EBModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EBModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EBModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EBModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EditPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,21 +187,6 @@
     <Compile Include="Documents\BarangayClearance.Designer.cs">
       <DependentUpon>BarangayClearance.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ebarangaymodel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Ebarangaymodel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Ebarangaymodel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Ebarangaymodel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Ebarangaymodel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Ebarangaymodel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Forms\CaptureImageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +198,12 @@
     </Compile>
     <Compile Include="Forms\CreateLogin.Designer.cs">
       <DependentUpon>CreateLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FileComplaintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FileComplaintForm.Designer.cs">
+      <DependentUpon>FileComplaintForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
@@ -288,18 +294,18 @@
     <Compile Include="Interface\IImageAcceptor.cs" />
     <Compile Include="Interface\IRecordAcceptor.cs" />
     <Compile Include="Municipality.cs">
-      <DependentUpon>Ebarangaymodel.tt</DependentUpon>
+      <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Official.cs">
-      <DependentUpon>Ebarangaymodel.tt</DependentUpon>
+      <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Record.cs">
-      <DependentUpon>Ebarangaymodel.tt</DependentUpon>
+      <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>Ebarangaymodel.tt</DependentUpon>
+      <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Documents\CertificateAppearance.resx">
       <DependentUpon>CertificateAppearance.cs</DependentUpon>
@@ -330,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CreateLogin.resx">
       <DependentUpon>CreateLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FileComplaintForm.resx">
+      <DependentUpon>FileComplaintForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -383,12 +392,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="Ebarangaymodel.edmx">
+    <EntityDeploy Include="EBModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Ebarangaymodel.Designer.cs</LastGenOutput>
+      <LastGenOutput>EBModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Ebarangaymodel.edmx.diagram">
-      <DependentUpon>Ebarangaymodel.edmx</DependentUpon>
+    <None Include="EBModel.edmx.diagram">
+      <DependentUpon>EBModel.edmx</DependentUpon>
     </None>
     <None Include="E_Barangay_TemporaryKey.pfx" />
     <None Include="packages.config" />
@@ -411,15 +420,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Ebarangaymodel.Context.tt">
+    <Content Include="EBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Ebarangaymodel.edmx</DependentUpon>
-      <LastGenOutput>Ebarangaymodel.Context.cs</LastGenOutput>
+      <DependentUpon>EBModel.edmx</DependentUpon>
+      <LastGenOutput>EBModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Ebarangaymodel.tt">
+    <Content Include="EBModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Ebarangaymodel.edmx</DependentUpon>
-      <LastGenOutput>Ebarangaymodel.cs</LastGenOutput>
+      <DependentUpon>EBModel.edmx</DependentUpon>
+      <LastGenOutput>EBModel.cs</LastGenOutput>
     </Content>
     <Content Include="favicon.ico" />
     <None Include="Resources\BarangayClearance_tmp.png" />

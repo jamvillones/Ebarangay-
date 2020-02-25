@@ -10,27 +10,9 @@ namespace E_Barangay.Class
     {
         public NameSeparatingHelper(string fullName)
         {
-            List<string> nameList = new List<string>();
-            string word = "";
-            string name = fullName;
-            for (int i = 0; i < name.Length; i++)
-            {
-                if (name[i] == ' ')
-                {
-                    nameList.Add(word);
-                    word = string.Empty;
-                }
-                else
-                {
-                    word += name[i];
-                    if (i == name.Length - 1)
-                    {
-                        nameList.Add(word);
-                        word = string.Empty;
-                    }
-                }
-            }
-            for (int i = 0; i < nameList.Count; i++)
+            char[] chars = { ',', ' ', '?' };
+            var nameList = fullName.Split(chars);
+            for (int i = 0; i < nameList.Length; i++)
             {
                 names[i] = nameList[i];
             }
@@ -38,8 +20,6 @@ namespace E_Barangay.Class
             Middle = names[1];
             Last = names[2];
             Extension = names[3];
-
-
         }
         public string this[int i]
         {
@@ -65,7 +45,8 @@ namespace E_Barangay.Class
             get
             {
                 string temp = string.Empty;
-                if (!string.IsNullOrEmpty(First)){
+                if (!string.IsNullOrEmpty(First))
+                {
                     temp += First + " ";
                 }
                 if (!string.IsNullOrEmpty(Middle))
@@ -78,7 +59,7 @@ namespace E_Barangay.Class
                 }
                 if (!string.IsNullOrEmpty(Extension))
                 {
-                    temp +=" "+ Extension;
+                    temp += " " + Extension;
                 }
 
                 return temp;

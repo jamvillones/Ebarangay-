@@ -29,13 +29,13 @@ namespace E_Barangay.Forms
         }
         void initializeFields()
         {
-            Person.Text = currRec.Citizen.Name;
+           // Person.Text = currRec.Citizen.Name;
             Status.Text = currRec.Status;
             Status.ForeColor = currRec.Status == "Pending" ? Color.Red : Color.Green;
-            TitleField.Text = currRec.Name;
             locationTxt.Text = currRec.Location;
 
-            DetailsField.Text = currRec.Details;
+            //TitleField.Text = currRec.Name;
+            //DetailsField.Text = currRec.Details;
 
             During.Text = currRec.DateHappened.Value.ToString("MMMM dd, yyyy hh:mm tt");
             RecordedOn.Text = currRec.DateIssued.Value.ToString("MMMM dd, yyyy hh:mm tt");

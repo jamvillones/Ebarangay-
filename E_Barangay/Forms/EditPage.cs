@@ -48,14 +48,14 @@ namespace E_Barangay.Forms
                // ImageBox.Image = t.Picture == null ? Properties.Resources.image_50px : Class.ImageConverter.byteArrayToImage(t.Picture);
                 ImageBox.Image = Class.ImageConverter.byteArrayToImage(t.Picture);
 
-                recordList = t.Records.ToList<Record>();
-                for (int i = 0; i < recordList.Count; i++)
-                {
-                    RecordsTable.Rows.Add();
-                    RecordsTable.Rows[i].Cells[0].Value = recordList[i].ID;
-                    RecordsTable.Rows[i].Cells[1].Value = recordList[i].Name;
-                    RecordsTable.Rows[i].Cells[2].Value = recordList[i].Details;
-                }
+                //recordList = t.Records.ToList<Record>();
+                //for (int i = 0; i < recordList.Count; i++)
+                //{
+                //    RecordsTable.Rows.Add();
+                //    RecordsTable.Rows[i].Cells[0].Value = recordList[i].ID;
+                //    RecordsTable.Rows[i].Cells[1].Value = recordList[i].Name;
+                //    RecordsTable.Rows[i].Cells[2].Value = recordList[i].Details;
+                //}
 
             }
             //ImageBox.Image = Class.ImageConverter.byteArrayToImage(citizen.Picture);
@@ -369,18 +369,18 @@ namespace E_Barangay.Forms
 
         private void Record_OnSave(object sender, Record e)
         {
-            var r = e;
+            //var r = e;
 
-            r.CitizenID = citizen.ID;
+            ////r.CitizenID = citizen.ID;
 
-            recordList.Add(r);
-            RecordsTable.Rows.Add(r.DateIssued, r.Name, r.Details);
-            using (var eb = new EBarangayEntities())
-            {
-                eb.Records.Add(r);
-                eb.SaveChanges();
-            }
-            ///throw new NotImplementedException();
+            //recordList.Add(r);
+            ////RecordsTable.Rows.Add(r.DateIssued, r.Name, r.Details);
+            //using (var eb = new EBarangayEntities())
+            //{
+            //    eb.Records.Add(r);
+            //    eb.SaveChanges();
+            //}
+            /////throw new NotImplementedException();
         }
 
         private void Record_FormClosed(object sender, FormClosedEventArgs e)
@@ -503,7 +503,7 @@ namespace E_Barangay.Forms
 
         private void RecordsTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Console.WriteLine(recordByIndex.Name);
+            //Console.WriteLine(recordByIndex.Name);
         }
     }
 }

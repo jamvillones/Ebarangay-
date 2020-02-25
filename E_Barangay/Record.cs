@@ -15,15 +15,13 @@ namespace E_Barangay
     public partial class Record
     {
         public string ID { get; set; }
-        public string Name { get; set; }
-        public string CitizenID { get; set; }
-        public string Details { get; set; }
+        public string Narrative { get; set; }
         public Nullable<System.DateTime> DateIssued { get; set; }
         public Nullable<System.DateTime> DateHappened { get; set; }
         public string Location { get; set; }
         public string Status { get; set; }
         public Nullable<System.DateTime> SettlementDate { get; set; }
-    
-        public virtual Citizen Citizen { get; set; }
+        public string CompNames { get; set; }
+        public string RespNames { get; set; }
     }
 }

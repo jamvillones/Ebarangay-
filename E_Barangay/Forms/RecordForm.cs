@@ -43,8 +43,8 @@ namespace E_Barangay.Forms
 
             Record r = new Record();
             r.ID = Guid.NewGuid().ToString();
-            r.Name = TitleField.Text;
-            r.Details = DetailsField.Text;
+            //r.Name = TitleField.Text;
+            //r.Details = DetailsField.Text;
            
            
             r.DateIssued = DateTime.Now;
