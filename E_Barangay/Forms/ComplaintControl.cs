@@ -75,7 +75,8 @@ namespace E_Barangay.Forms
 
         private void Comp_ComplaintAdded(object sender, EventArgs e)
         {
-            forToday();
+            LoadValues();
+            forTodayBtn.PerformClick();
         }
 
         private void dgvRecords_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
