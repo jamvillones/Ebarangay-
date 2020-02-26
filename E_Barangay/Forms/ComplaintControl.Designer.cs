@@ -41,8 +41,10 @@ namespace E_Barangay.Forms
             this.addComplaintBtn = new System.Windows.Forms.Button();
             this.dgvRecords = new E_Barangay.Class.CustomDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marker = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,6 +62,7 @@ namespace E_Barangay.Forms
             this.pendingBtn.Text = "Pending";
             this.pendingBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.pendingBtn.UseVisualStyleBackColor = false;
+            this.pendingBtn.Click += new System.EventHandler(this.pendingBtn_Click);
             // 
             // forTodayBtn
             // 
@@ -75,6 +78,7 @@ namespace E_Barangay.Forms
             this.forTodayBtn.Text = "For Today";
             this.forTodayBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.forTodayBtn.UseVisualStyleBackColor = false;
+            this.forTodayBtn.Click += new System.EventHandler(this.forTodayBtn_Click);
             // 
             // overdueBtn
             // 
@@ -90,6 +94,7 @@ namespace E_Barangay.Forms
             this.overdueBtn.Text = "Overdue";
             this.overdueBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.overdueBtn.UseVisualStyleBackColor = false;
+            this.overdueBtn.Click += new System.EventHandler(this.overdueBtn_Click);
             // 
             // settledBtn
             // 
@@ -105,6 +110,7 @@ namespace E_Barangay.Forms
             this.settledBtn.Text = "Settled";
             this.settledBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.settledBtn.UseVisualStyleBackColor = false;
+            this.settledBtn.Click += new System.EventHandler(this.settledBtn_Click);
             // 
             // addComplaintBtn
             // 
@@ -149,6 +155,7 @@ namespace E_Barangay.Forms
             this.dgvRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRecords.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
+            this.Column4,
             this.Column2,
             this.Column3});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -182,12 +189,20 @@ namespace E_Barangay.Forms
             // 
             // Column1
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column1.HeaderText = "Control Number";
             this.Column1.MinimumWidth = 200;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.Width = 200;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.Column4.HeaderText = "Status";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column2
             // 
@@ -201,17 +216,25 @@ namespace E_Barangay.Forms
             // 
             // Column3
             // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Column3.HeaderText = "Date Happened";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 101;
+            // 
+            // Marker
+            // 
+            this.Marker.BackColor = System.Drawing.Color.Black;
+            this.Marker.Location = new System.Drawing.Point(8, 33);
+            this.Marker.Name = "Marker";
+            this.Marker.Size = new System.Drawing.Size(83, 5);
+            this.Marker.TabIndex = 8;
             // 
             // ComplaintControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Controls.Add(this.Marker);
             this.Controls.Add(this.addComplaintBtn);
             this.Controls.Add(this.settledBtn);
             this.Controls.Add(this.pendingBtn);
@@ -233,9 +256,11 @@ namespace E_Barangay.Forms
         private System.Windows.Forms.Button forTodayBtn;
         private System.Windows.Forms.Button pendingBtn;
         private System.Windows.Forms.Button settledBtn;
+        private System.Windows.Forms.Button addComplaintBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.Button addComplaintBtn;
+        private System.Windows.Forms.Panel Marker;
     }
 }

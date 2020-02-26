@@ -25,20 +25,39 @@ namespace E_Barangay.Forms
         }
         public void LoadValues()
         {
-
-            forToday();
-        }
-        void forToday()
-        {
             using (var ent = new EBarangayEntities())
                 recs = ent.Records.ToArray();
 
+            forToday();
+        }
+        void settled()
+        {
             dgvRecords.Rows.Clear();
-
+            var today = recs.Where(x => x.Status == ComplaintStatus.Settled.ToString());
+            fillDgv(today.ToArray());
+        }
+        void pending()
+        {
+            dgvRecords.Rows.Clear();
+            var today = recs.Where(x => x.Status == ComplaintStatus.Pending.ToString());
+            fillDgv(today.ToArray());
+        }
+        void overDue()
+        {
+            dgvRecords.Rows.Clear();
+            var today = recs.Where(x => x.SettlementDate.Value.Date < DateTime.Today && x.Status == ComplaintStatus.Pending.ToString());
+            fillDgv(today.ToArray());
+        }
+        void forToday()
+        {
+            dgvRecords.Rows.Clear();
             var today = recs.Where(x => x.SettlementDate.Value.Date == DateTime.Today);
-            foreach (var x in today)
-                dgvRecords.Rows.Add(x.ID, x.SettlementDate, x.DateHappened);
-
+            fillDgv(today.ToArray());
+        }
+        void fillDgv(Record[] recs)
+        {
+            foreach (var x in recs)
+                dgvRecords.Rows.Add(x.ID, x.Status, x.SettlementDate, x.DateHappened);
         }
         FileComplaintForm comp;
         private void addComplaintBtn_Click(object sender, EventArgs e)
@@ -70,6 +89,34 @@ namespace E_Barangay.Forms
             view.FormClosed += (ee, ss) => { this.Enabled = true; };
             this.Enabled = false;
             view.Show();
+        }
+        void setMarker(Button b)
+        {
+            Marker.Left = b.Left;
+            Marker.Width = b.Width;
+        }
+        private void forTodayBtn_Click(object sender, EventArgs e)
+        {
+            setMarker((Button)sender);
+            forToday();
+        }
+
+        private void overdueBtn_Click(object sender, EventArgs e)
+        {
+            setMarker((Button)sender);
+            overDue();
+        }
+
+        private void pendingBtn_Click(object sender, EventArgs e)
+        {
+            setMarker((Button)sender);
+            pending();
+        }
+
+        private void settledBtn_Click(object sender, EventArgs e)
+        {
+            setMarker((Button)sender);
+            settled();
         }
     }
 }
