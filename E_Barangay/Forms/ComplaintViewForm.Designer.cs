@@ -1,6 +1,6 @@
 ﻿namespace E_Barangay.Forms
 {
-    partial class RecordView
+    partial class ComplaintViewForm
     {
         /// <summary>
         /// Required designer variable.

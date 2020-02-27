@@ -257,11 +257,11 @@
     <Compile Include="Forms\QueryControl.Designer.cs">
       <DependentUpon>QueryControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RecordView.cs">
+    <Compile Include="Forms\ComplaintViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\RecordView.Designer.cs">
-      <DependentUpon>RecordView.cs</DependentUpon>
+    <Compile Include="Forms\ComplaintViewForm.Designer.cs">
+      <DependentUpon>ComplaintViewForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\RegisterPage.cs">
       <SubType>Form</SubType>
@@ -364,8 +364,8 @@
     <EmbeddedResource Include="Forms\QueryControl.resx">
       <DependentUpon>QueryControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\RecordView.resx">
-      <DependentUpon>RecordView.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ComplaintViewForm.resx">
+      <DependentUpon>ComplaintViewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegisterPage.resx">
       <DependentUpon>RegisterPage.cs</DependentUpon>

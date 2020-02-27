@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace E_Barangay.Forms
 {
-    public partial class RecordView : Form
+    public partial class ComplaintViewForm : Form
     {
         Complaint currRec;
-        public RecordView()
+        public ComplaintViewForm()
         {
             InitializeComponent();
         }
-        public RecordView(string id)
+        public ComplaintViewForm(string id)
         {
             InitializeComponent();
             using (var ent = new EBarangayEntities())

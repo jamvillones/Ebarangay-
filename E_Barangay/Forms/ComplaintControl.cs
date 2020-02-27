@@ -86,7 +86,7 @@ namespace E_Barangay.Forms
             DataGridView v = (DataGridView)sender;
             var x = v.Rows[e.RowIndex].Cells[0].Value.ToString();
 
-            var view = new RecordView(x);
+            var view = new ComplaintViewForm(x);
             view.FormClosed += (ee, ss) => { this.Enabled = true; };
             this.Enabled = false;
             view.Show();
