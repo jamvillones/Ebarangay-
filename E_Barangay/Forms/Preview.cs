@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using E_Barangay.Interface;
 using System.IO;
+using E_Barangay.Class;
 
 namespace E_Barangay.Forms
 {
@@ -63,7 +64,7 @@ namespace E_Barangay.Forms
                 return;
             }
             IDTxt.Text = target.ID;
-            NameTxt.Text = target.Name;
+            NameTxt.Text = target.getName();
             AddressTxt.Text = target.Address;
             BdayTxt.Text = target.Birthday.ToShortDateString();
             SexTxt.Text = target.Gender;
@@ -85,7 +86,8 @@ namespace E_Barangay.Forms
             Class.Date date = new Class.Date();
             Class.DateTimeExtension.ToAgeString(target.Birthday, ref date);
 
-            AgeTxt.Text = Class.DateTimeExtension.ToAge(target.Birthday).years.ToString();
+            AgeTxt.Text = target.getAGe().ToString();
+            //AgeTxt.Text = Class.DateTimeExtension.ToAge(target.Birthday).years.ToString();
             IsIndigent.Checked = target.Indigent ? true : false;
             IsStudent.Checked = target.Student ? true : false;
             IsSenior.Checked = target.SeniorCitizen ? true : false;
@@ -104,7 +106,7 @@ namespace E_Barangay.Forms
                 var recs = t.RefRecords.Split(',');
                 foreach (var ids in recs)
                 {
-                    var complaint = ent.Records.FirstOrDefault(x => x.ID == ids);
+                    var complaint = ent.Complaints.FirstOrDefault(x => x.ID == ids);
                     if (complaint != null)
                         RecordsTable.Rows.Add(complaint.ID, complaint.SettlementDate.Value.ToString("MMMM dd, yyyy"), complaint.Status);
                 }

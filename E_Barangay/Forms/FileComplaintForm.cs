@@ -61,7 +61,7 @@ namespace E_Barangay.Forms
         {
             using (var ent = new EBarangayEntities())
             {
-                if (ent.Records.Find(controlNumberField.Text) != null)
+                if (ent.Complaints.Find(controlNumberField.Text) != null)
                 {
                     MessageBox.Show("Control Number already taken.");
                     return false;
@@ -80,7 +80,7 @@ namespace E_Barangay.Forms
                 return;
 
            
-            var rec = new Record();
+            var rec = new Complaint();
 
             rec.ID = string.IsNullOrEmpty(controlNumberField.Text) ? Guid.NewGuid().ToString() : controlNumberField.Text;
             rec.Location = locationField.Text.TrimStart(' ').TrimEnd(' ');
@@ -116,7 +116,7 @@ namespace E_Barangay.Forms
             connectComplaintToCitizen(rec.ID, dgvRespondents);
             using (var ent = new EBarangayEntities())
             {
-                ent.Records.Add(rec);
+                ent.Complaints.Add(rec);
                 ent.SaveChanges();
             }
             ComplaintAdded?.Invoke(this, new EventArgs());

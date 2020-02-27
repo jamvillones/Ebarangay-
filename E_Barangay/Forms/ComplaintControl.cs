@@ -18,7 +18,7 @@ namespace E_Barangay.Forms
         {
             InitializeComponent();
         }
-        Record[] recs;
+        Complaint[] recs;
         private void ComplaintControl_Load(object sender, EventArgs e)
         {
 
@@ -26,7 +26,7 @@ namespace E_Barangay.Forms
         public void LoadValues()
         {
             using (var ent = new EBarangayEntities())
-                recs = ent.Records.ToArray();
+                recs = ent.Complaints.ToArray();
 
             forToday();
         }
@@ -54,7 +54,7 @@ namespace E_Barangay.Forms
             var today = recs.Where(x => x.SettlementDate.Value.Date == DateTime.Today);
             fillDgv(today.ToArray());
         }
-        void fillDgv(Record[] recs)
+        void fillDgv(Complaint[] recs)
         {
             foreach (var x in recs)
                 dgvRecords.Rows.Add(x.ID, x.Status, x.SettlementDate, x.DateHappened);

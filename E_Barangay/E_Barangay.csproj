@@ -114,6 +114,7 @@
     <Compile Include="Citizen.cs">
       <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Class\CitizenExtensions.cs" />
     <Compile Include="Class\CustomDataGridView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -122,6 +123,9 @@
     <Compile Include="Class\NameSeparatingHelper.cs" />
     <Compile Include="Class\OfficersForInfoForPrinting.cs" />
     <Compile Include="Class\PasswordToFormHandler.cs" />
+    <Compile Include="Complaint.cs">
+      <DependentUpon>EBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Documents\CertificateAppearance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,7 +302,6 @@
     <Compile Include="Interface\ICitizenAcceptor.cs" />
     <Compile Include="Interface\IAccept.cs" />
     <Compile Include="Interface\IImageAcceptor.cs" />
-    <Compile Include="Interface\IRecordAcceptor.cs" />
     <Compile Include="Municipality.cs">
       <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
@@ -307,9 +310,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Record.cs">
-      <DependentUpon>EBModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>

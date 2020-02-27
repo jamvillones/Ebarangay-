@@ -14,9 +14,9 @@ namespace E_Barangay.Forms
 {
     public partial class EditPage : Form
     {
-        List<Record> tobeAdded = new List<Record>();
-        List<Record> toBeRemoved = new List<Record>();
-        List<Record> recordList = new List<Record>();
+        List<Complaint> tobeAdded = new List<Complaint>();
+        List<Complaint> toBeRemoved = new List<Complaint>();
+        List<Complaint> recordList = new List<Complaint>();
 
         List<Control> address = new List<Control>();
 
@@ -352,13 +352,13 @@ namespace E_Barangay.Forms
         }
 
         #region recordprompt
-        RecordForm recForm;
+       
         private void button3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Record_OnSave(object sender, Record e)
+        private void Record_OnSave(object sender, Complaint e)
         {
             //var r = e;
 
@@ -376,7 +376,7 @@ namespace E_Barangay.Forms
 
         private void Record_FormClosed(object sender, FormClosedEventArgs e)
         {
-            recForm = null;
+           // recForm = null;
             this.Enabled = true;
             // ShowRecords();
         }

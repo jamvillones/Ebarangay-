@@ -100,7 +100,7 @@ namespace E_Barangay.Forms
             {
                 DataTable.Rows.Add();
                 DataTable.Rows[i].Cells[0].Value = c[i].ID;
-                DataTable.Rows[i].Cells[1].Value = c[i].Name;
+                DataTable.Rows[i].Cells[1].Value = c[i].getName();
                 DataTable.Rows[i].Cells[2].Value = c[i].Address;
 
             }

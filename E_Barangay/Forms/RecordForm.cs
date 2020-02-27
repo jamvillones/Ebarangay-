@@ -15,7 +15,7 @@ namespace E_Barangay.Forms
     {
        // Interface.IRecordAcceptor Regref;
 
-        public event EventHandler<Record> OnSave;
+        public event EventHandler<Complaint> OnSave;
         //public void GetRef(Interface.IRecordAcceptor r)
         //{
         //    Regref = r;
@@ -41,7 +41,7 @@ namespace E_Barangay.Forms
             if (!e)
                 return;
 
-            Record r = new Record();
+            Complaint r = new Complaint();
             r.ID = Guid.NewGuid().ToString();
             //r.Name = TitleField.Text;
             //r.Details = DetailsField.Text;

@@ -12,7 +12,7 @@ namespace E_Barangay
     using System;
     using System.Collections.Generic;
     
-    public partial class Record
+    public partial class Complaint
     {
         public string ID { get; set; }
         public string Narrative { get; set; }

@@ -12,7 +12,7 @@ namespace E_Barangay.Forms
 {
     public partial class RecordView : Form
     {
-        Record currRec;
+        Complaint currRec;
         public RecordView()
         {
             InitializeComponent();
@@ -20,9 +20,9 @@ namespace E_Barangay.Forms
         public RecordView(string id)
         {
             InitializeComponent();
-            using (var eb = new EBarangayEntities())
+            using (var ent = new EBarangayEntities())
             {
-                currRec = eb.Records.FirstOrDefault(x=>x.ID == id);
+                currRec = ent.Complaints.FirstOrDefault(x=>x.ID == id);
                 initializeFields();
             }
 
@@ -78,7 +78,7 @@ namespace E_Barangay.Forms
         {
             using (var eb = new EBarangayEntities())
             {
-                var rec = eb.Records.FirstOrDefault(r => r.ID == currRec.ID);
+                var rec = eb.Complaints.FirstOrDefault(r => r.ID == currRec.ID);
                 if (rec == null)
                 {
                     MessageBox.Show("error in changing");

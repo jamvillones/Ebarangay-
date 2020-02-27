@@ -105,6 +105,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FirstNameField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNameField.Location = new System.Drawing.Point(81, 40);
+            this.FirstNameField.MaxLength = 10;
             this.FirstNameField.Name = "FirstNameField";
             this.FirstNameField.Size = new System.Drawing.Size(222, 20);
             this.FirstNameField.TabIndex = 2;
@@ -474,6 +475,7 @@
             this.PrecinctNumField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PrecinctNumField.Enabled = false;
             this.PrecinctNumField.Location = new System.Drawing.Point(396, 94);
+            this.PrecinctNumField.MaxLength = 50;
             this.PrecinctNumField.Name = "PrecinctNumField";
             this.PrecinctNumField.Size = new System.Drawing.Size(205, 20);
             this.PrecinctNumField.TabIndex = 22;
@@ -492,6 +494,7 @@
             // 
             this.VoterIDField.Enabled = false;
             this.VoterIDField.Location = new System.Drawing.Point(128, 94);
+            this.VoterIDField.MaxLength = 50;
             this.VoterIDField.Name = "VoterIDField";
             this.VoterIDField.Size = new System.Drawing.Size(171, 20);
             this.VoterIDField.TabIndex = 21;
@@ -554,7 +557,7 @@
             this.SpouseField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.SpouseField.Enabled = false;
             this.SpouseField.Location = new System.Drawing.Point(396, 66);
-            this.SpouseField.MaxLength = 100;
+            this.SpouseField.MaxLength = 50;
             this.SpouseField.Name = "SpouseField";
             this.SpouseField.Size = new System.Drawing.Size(461, 20);
             this.SpouseField.TabIndex = 19;
@@ -599,6 +602,7 @@
             // 
             this.MotherField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.MotherField.Location = new System.Drawing.Point(396, 40);
+            this.MotherField.MaxLength = 50;
             this.MotherField.Name = "MotherField";
             this.MotherField.Size = new System.Drawing.Size(461, 20);
             this.MotherField.TabIndex = 16;
@@ -607,6 +611,7 @@
             // 
             this.FatherField.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.FatherField.Location = new System.Drawing.Point(396, 14);
+            this.FatherField.MaxLength = 50;
             this.FatherField.Name = "FatherField";
             this.FatherField.Size = new System.Drawing.Size(461, 20);
             this.FatherField.TabIndex = 15;
@@ -644,6 +649,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LastNameField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNameField.Location = new System.Drawing.Point(81, 92);
+            this.LastNameField.MaxLength = 10;
             this.LastNameField.Name = "LastNameField";
             this.LastNameField.Size = new System.Drawing.Size(222, 20);
             this.LastNameField.TabIndex = 4;
@@ -654,6 +660,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MiddleNameField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MiddleNameField.Location = new System.Drawing.Point(81, 66);
+            this.MiddleNameField.MaxLength = 10;
             this.MiddleNameField.Name = "MiddleNameField";
             this.MiddleNameField.Size = new System.Drawing.Size(222, 20);
             this.MiddleNameField.TabIndex = 3;
@@ -743,6 +750,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.extField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.extField.Location = new System.Drawing.Point(81, 118);
+            this.extField.MaxLength = 10;
             this.extField.Name = "extField";
             this.extField.Size = new System.Drawing.Size(222, 20);
             this.extField.TabIndex = 5;
@@ -819,6 +827,7 @@
             this.PIField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PIField.Location = new System.Drawing.Point(68, 65);
+            this.PIField.MaxLength = 50;
             this.PIField.Name = "PIField";
             this.PIField.Size = new System.Drawing.Size(527, 20);
             this.PIField.TabIndex = 2;
@@ -828,6 +837,7 @@
             this.SSSField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SSSField.Location = new System.Drawing.Point(68, 39);
+            this.SSSField.MaxLength = 50;
             this.SSSField.Name = "SSSField";
             this.SSSField.Size = new System.Drawing.Size(527, 20);
             this.SSSField.TabIndex = 1;
@@ -837,6 +847,7 @@
             this.PHField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PHField.Location = new System.Drawing.Point(68, 13);
+            this.PHField.MaxLength = 50;
             this.PHField.Name = "PHField";
             this.PHField.Size = new System.Drawing.Size(527, 20);
             this.PHField.TabIndex = 0;
