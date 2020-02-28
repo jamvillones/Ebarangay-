@@ -105,11 +105,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FirstNameField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNameField.Location = new System.Drawing.Point(81, 40);
-            this.FirstNameField.MaxLength = 10;
+            this.FirstNameField.MaxLength = 20;
             this.FirstNameField.Name = "FirstNameField";
             this.FirstNameField.Size = new System.Drawing.Size(222, 20);
             this.FirstNameField.TabIndex = 2;
-            this.FirstNameField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegisterControl_KeyDown);
             // 
             // label1
             // 
@@ -271,6 +270,7 @@
             this.MunicipalityField.Name = "MunicipalityField";
             this.MunicipalityField.Size = new System.Drawing.Size(347, 20);
             this.MunicipalityField.TabIndex = 4;
+            this.MunicipalityField.Text = "Kalibo";
             // 
             // label8
             // 
@@ -319,6 +319,7 @@
             this.ProvinceField.Name = "ProvinceField";
             this.ProvinceField.Size = new System.Drawing.Size(347, 20);
             this.ProvinceField.TabIndex = 5;
+            this.ProvinceField.Text = "Aklan";
             // 
             // BarangayField
             // 
@@ -330,6 +331,7 @@
             this.BarangayField.Name = "BarangayField";
             this.BarangayField.Size = new System.Drawing.Size(347, 20);
             this.BarangayField.TabIndex = 3;
+            this.BarangayField.Text = "Poblacion";
             // 
             // label6
             // 
@@ -649,7 +651,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.LastNameField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNameField.Location = new System.Drawing.Point(81, 92);
-            this.LastNameField.MaxLength = 10;
+            this.LastNameField.MaxLength = 20;
             this.LastNameField.Name = "LastNameField";
             this.LastNameField.Size = new System.Drawing.Size(222, 20);
             this.LastNameField.TabIndex = 4;
@@ -660,7 +662,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MiddleNameField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MiddleNameField.Location = new System.Drawing.Point(81, 66);
-            this.MiddleNameField.MaxLength = 10;
+            this.MiddleNameField.MaxLength = 20;
             this.MiddleNameField.Name = "MiddleNameField";
             this.MiddleNameField.Size = new System.Drawing.Size(222, 20);
             this.MiddleNameField.TabIndex = 3;
@@ -777,6 +779,7 @@
             this.IDField.Name = "IDField";
             this.IDField.Size = new System.Drawing.Size(222, 20);
             this.IDField.TabIndex = 1;
+            this.IDField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegisterControl_KeyDown);
             // 
             // groupBox6
             // 

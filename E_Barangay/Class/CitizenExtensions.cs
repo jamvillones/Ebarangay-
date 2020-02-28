@@ -33,10 +33,10 @@ namespace E_Barangay.Class
         {
             return c.FirstName + " " + c.MiddleName + " " + c.LastName + (string.IsNullOrEmpty(c.Extension) ? "" : " " + c.Extension);
         }
-        public static string getName(this Citizen c)
-        {
-            return c.FirstName + c.MiddleName + c.LastName + c.Extension;
-        }
+        //public static string getName(this Citizen c)
+        //{
+        //    return c.FirstName + c.MiddleName + c.LastName + c.Extension;
+        //}
         public static NameHelper getNameSeparated(this Citizen c)
         {
             NameHelper helper = new NameHelper(c.getNameWithSpace());
@@ -44,11 +44,11 @@ namespace E_Barangay.Class
         }
         public static bool CitizenFound(string fullName,out Citizen citizen)
         {
-           
-            string n = fullName.Replace(' ', '\0');
+
+            string n = fullName.Replace(' ','\0');
             using (var e = new EBarangayEntities())
             {
-                citizen = e.Citizens.ToArray().FirstOrDefault(x => x.getName() == n);
+                citizen = e.Citizens.FirstOrDefault(x => x.FirstName+x.MiddleName+x.LastName+x.Extension == n);
             }
             return citizen != null;
         }

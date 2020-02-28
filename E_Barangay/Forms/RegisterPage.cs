@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using E_Barangay.Class;
 
 namespace E_Barangay.Forms
 {
@@ -59,7 +60,7 @@ namespace E_Barangay.Forms
         {
             using (var ent = new EBarangayEntities())
             {
-                var names = ent.Areas.Select(x=>x.Name);
+                var names = ent.Areas.Select(x => x.Name);
                 InitializeDropdown(names.ToArray(), 1, ref AreaOption);
             }
             SexOption.SelectedIndex = CivilStatusOption.SelectedIndex = 0;
@@ -321,9 +322,30 @@ namespace E_Barangay.Forms
         {
             if (e.KeyCode == Keys.F12)
             {
-                foreach (var c in requiredControls)
-                    c.Text = "test_dummy";
-                IDField.Text = Guid.NewGuid().ToString();
+                //foreach (var c in requiredControls)
+                //    c.Text = "test_dummy";
+                //IDField.Text =string.IsNullOrEmpty(IDField.Text) ? Guid.NewGuid().ToString():IDField.Text;
+                IDField.Text = IDField.Text.NonBlankValueOf(Guid.NewGuid().ToString());
+
+                FirstNameField.Text = FirstNameField.Text.NonBlankValueOf("Test");
+                MiddleNameField.Text = MiddleNameField.Text.NonBlankValueOf("Test");
+                LastNameField.Text = LastNameField.Text.NonBlankValueOf("Test");
+                extField.Text = extField.Text.NonBlankValueOf("Test");
+
+                Random rnd = new Random();
+
+                NumberField.Text = NumberField.Text.NonBlankValueOf("0000");
+                AreaOption.SelectedIndex = rnd.Next(0, AreaOption.Items.Count);
+
+                //BarangayField.Text = BarangayField.Text.NonBlankValueOf("Poblacion");
+                //MunicipalityField.Text = MunicipalityField.Text.NonBlankValueOf("Kalibo");
+                //ProvinceField.Text = ProvinceField.Text.NonBlankValueOf("Aklan");
+
+                ContactField.Text = ContactField.Text.NonBlankValueOf("00000000000");
+                MotherField.Text = MotherField.Text.NonBlankValueOf("Blank");
+                FatherField.Text = FatherField.Text.NonBlankValueOf("Blank");
+
+                SexOption.SelectedIndex = rnd.Next(0, SexOption.Items.Count);
             }
         }
 

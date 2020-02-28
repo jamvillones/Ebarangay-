@@ -50,6 +50,7 @@ namespace E_Barangay.Forms
                 //SearchedElements = from Citizen in context.Citizens
                 //                   where Citizen.Name.Contains(SearchBox.Text)
                 //                   select Citizen;
+                SearchedElements = context.Citizens.Where(x => (x.FirstName + x.MiddleName + x.LastName + x.Extension).Contains(SearchBox.Text));
                 if (SearchedElements.Count() > 0)
                 {
                     PopulateTable(SearchedElements.ToArray());
@@ -57,9 +58,7 @@ namespace E_Barangay.Forms
                 }
                 else
                 {
-                    SearchedElements = from Citizen in context.Citizens
-                                       where Citizen.Address.Contains(SearchBox.Text)
-                                       select Citizen;
+                    SearchedElements = context.Citizens.Where(x =>x.Address.Contains(SearchBox.Text));
                     if (SearchedElements.Count() > 0)
                     {
                         PopulateTable(SearchedElements.ToArray());
@@ -68,25 +67,29 @@ namespace E_Barangay.Forms
 
                 }
 
-
-                SearchedElements = from Citizen in context.Citizens
-                                   where Citizen.ID.Contains(SearchBox.Text)
-                                   select Citizen;
-
-
-                if (int.TryParse(SearchBox.Text, out int n))
+                Citizen c = context.Citizens.FirstOrDefault(x => x.ID == SearchBox.Text);
+                if(c == null)
                 {
-                    if (SearchedElements.Count() == 0)
-                    {
-                        IDEmptySearch.Invoke(this, SearchBox.Text);
-                        return;
-                    }
-                    else if (SearchedElements.Count() == 1)
-                    {
-                        OpenPreview(SearchedElements.First());
-                        return;
-                    }
+                    IDEmptySearch?.Invoke(this,SearchBox.Text);
+                    return;
                 }
+                OpenPreview(c);
+                //SearchedElements = context.Citizens.Where(x=> x.ID == SearchBox.Text);
+
+
+                //if (int.TryParse(SearchBox.Text, out int n))
+                //{
+                //    if (SearchedElements.Count() == 0)
+                //    {
+                //        IDEmptySearch.Invoke(this, SearchBox.Text);
+                //        return;
+                //    }
+                //    else if (SearchedElements.Count() == 1)
+                //    {
+                //        OpenPreview(SearchedElements.First());
+                //        return;
+                //    }
+                //}
 
 
 

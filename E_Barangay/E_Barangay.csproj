@@ -44,6 +44,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>default</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -123,6 +124,7 @@
     <Compile Include="Class\NameSeparatingHelper.cs" />
     <Compile Include="Class\OfficersForInfoForPrinting.cs" />
     <Compile Include="Class\PasswordToFormHandler.cs" />
+    <Compile Include="Class\StringExtension.cs" />
     <Compile Include="Complaint.cs">
       <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>

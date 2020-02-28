@@ -33,25 +33,21 @@ namespace E_Barangay.Forms
         {
             DataGridView view = (DataGridView)sender;
             object value = view.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-
-            if (value == null || string.IsNullOrEmpty(value.ToString()))
+            if (value == null || string.IsNullOrEmpty(value.ToString().Trim(' ')))
             {
-                //view.Rows[e.RowIndex].Cells[1].Value = false;
+                /// in case someone deleted a row content
+                if (view.RowCount > 1)
+                    view.Rows.RemoveAt(e.RowIndex);
                 return;
             }
-            //string name =value.ToString();
-            var helper = new NameHelper(value.ToString());
-            using (var ent = new EBarangayEntities())
-            {
-                var citizen = ent.Citizens.FirstOrDefault(x => (x.FirstName + " " + x.MiddleName + " " + x.LastName) == value.ToString());
-                //var citizen = ent.Citizens.FirstOrDefault(x => CitizenExtensions.getName(x) == value.ToString());
-                //var citizen = ent.Citizens.Where(x => x.getName() == value.ToString()).First();
 
-                if (citizen != null)
-                {
-                    view.Rows[e.RowIndex].Cells[1].Value = true;
-                }
+            Citizen citizen;
+            if (CitizenExtensions.CitizenFound(value.ToString(), out citizen))
+            {
+                view.Rows[e.RowIndex].Cells[1].Value = citizen.ID;
+                return;
             }
+            view.Rows[e.RowIndex].Cells[1].Value = "Not Registered";
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
