@@ -46,10 +46,6 @@ namespace E_Barangay.Forms
 
             using (var context = new EBarangayEntities())
             {
-                /// search for id
-                //SearchedElements = from Citizen in context.Citizens
-                //                   where Citizen.Name.Contains(SearchBox.Text)
-                //                   select Citizen;
                 SearchedElements = context.Citizens.Where(x => (x.FirstName + x.MiddleName + x.LastName + x.Extension).Contains(SearchBox.Text));
                 if (SearchedElements.Count() > 0)
                 {
@@ -58,41 +54,21 @@ namespace E_Barangay.Forms
                 }
                 else
                 {
-                    SearchedElements = context.Citizens.Where(x =>x.Address.Contains(SearchBox.Text));
+                    SearchedElements = context.Citizens.Where(x => x.Address.Contains(SearchBox.Text));
                     if (SearchedElements.Count() > 0)
                     {
                         PopulateTable(SearchedElements.ToArray());
                         return;
                     }
-
                 }
 
                 Citizen c = context.Citizens.FirstOrDefault(x => x.ID == SearchBox.Text);
-                if(c == null)
+                if (c == null)
                 {
-                    IDEmptySearch?.Invoke(this,SearchBox.Text);
+                    IDEmptySearch?.Invoke(this, SearchBox.Text);
                     return;
                 }
                 OpenPreview(c);
-                //SearchedElements = context.Citizens.Where(x=> x.ID == SearchBox.Text);
-
-
-                //if (int.TryParse(SearchBox.Text, out int n))
-                //{
-                //    if (SearchedElements.Count() == 0)
-                //    {
-                //        IDEmptySearch.Invoke(this, SearchBox.Text);
-                //        return;
-                //    }
-                //    else if (SearchedElements.Count() == 1)
-                //    {
-                //        OpenPreview(SearchedElements.First());
-                //        return;
-                //    }
-                //}
-
-
-
             }
         }
         void PopulateTable(Citizen[] c)
