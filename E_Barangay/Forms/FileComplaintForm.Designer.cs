@@ -126,6 +126,7 @@
             this.dgvComplainants.TabIndex = 2;
             this.dgvComplainants.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellDoubleClick);
             this.dgvComplainants.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellEndEdit);
+            this.dgvComplainants.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgv_EditingControlShowing);
             // 
             // Column1
             // 
@@ -342,6 +343,7 @@
             this.dgvRespondents.TabIndex = 2;
             this.dgvRespondents.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellDoubleClick);
             this.dgvRespondents.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellEndEdit);
+            this.dgvRespondents.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dgv_EditingControlShowing);
             // 
             // dataGridViewTextBoxColumn1
             // 

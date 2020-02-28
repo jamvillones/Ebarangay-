@@ -47,9 +47,9 @@ namespace E_Barangay.Forms
             using (var context = new EBarangayEntities())
             {
                 /// search for id
-                SearchedElements = from Citizen in context.Citizens
-                                   where Citizen.Name.Contains(SearchBox.Text)
-                                   select Citizen;
+                //SearchedElements = from Citizen in context.Citizens
+                //                   where Citizen.Name.Contains(SearchBox.Text)
+                //                   select Citizen;
                 if (SearchedElements.Count() > 0)
                 {
                     PopulateTable(SearchedElements.ToArray());
@@ -100,7 +100,7 @@ namespace E_Barangay.Forms
             {
                 DataTable.Rows.Add();
                 DataTable.Rows[i].Cells[0].Value = c[i].ID;
-                DataTable.Rows[i].Cells[1].Value = c[i].getName();
+                DataTable.Rows[i].Cells[1].Value = c[i].getNameWithSpace();
                 DataTable.Rows[i].Cells[2].Value = c[i].Address;
 
             }

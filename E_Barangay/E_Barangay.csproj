@@ -287,6 +287,12 @@
     <Compile Include="Forms\StatForm.Designer.cs">
       <DependentUpon>StatForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\YesOrNoPrompt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +310,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="spCitizen_getFullName_Result.cs">
+      <DependentUpon>EBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
@@ -378,6 +387,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StatForm.resx">
       <DependentUpon>StatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\YesOrNoPrompt.resx">
       <DependentUpon>YesOrNoPrompt.cs</DependentUpon>

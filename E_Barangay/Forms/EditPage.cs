@@ -47,20 +47,15 @@ namespace E_Barangay.Forms
                 var t = con.Citizens.FirstOrDefault(r => r.ID == citizen.ID);
                 // ImageBox.Image = t.Picture == null ? Properties.Resources.image_50px : Class.ImageConverter.byteArrayToImage(t.Picture);
                 ImageBox.Image = Class.ImageConverter.byteArrayToImage(t.Picture);
-
-                //recordList = t.Records.ToList<Record>();
-                //for (int i = 0; i < recordList.Count; i++)
-                //{
-                //    RecordsTable.Rows.Add();
-                //    RecordsTable.Rows[i].Cells[0].Value = recordList[i].ID;
-                //    RecordsTable.Rows[i].Cells[1].Value = recordList[i].Name;
-                //    RecordsTable.Rows[i].Cells[2].Value = recordList[i].Details;
-                //}
-
             }
-            //ImageBox.Image = Class.ImageConverter.byteArrayToImage(citizen.Picture);
-            IDField.Text = citizen.ID;
-            FirstNameField.Text = citizen.Name;
+            //var h = citizen.getNameSeparated();
+
+            firstField.Text = citizen.FirstName;
+            middleField.Text = citizen.MiddleName;
+            lastField.Text = citizen.LastName;
+            extensionField.Text = citizen.Extension;
+
+            idField.Text = citizen.ID;
 
             //CurrentAdd.Text = citizen.Address;
             var address = separateString(citizen.Address);
@@ -77,7 +72,7 @@ namespace E_Barangay.Forms
             CivilStatusOption.Text = citizen.CivilStatus;
             FatherField.Text = citizen.FathersName;
             MotherField.Text = citizen.MothersName;
-
+            
             SpouseField.Text = citizen.SpouseName ?? noneString;
             VoterIDField.Text = citizen.VoterID ?? noneString;
             PrecinctNumField.Text = citizen.PrecinctNumber ?? noneString;
@@ -151,7 +146,7 @@ namespace E_Barangay.Forms
         /// </summary>
         void SetRequiredControls()
         {
-            requiredControls.Add(FirstNameField);
+            requiredControls.Add(firstField);
             requiredControls.Add(BarangayField);
             requiredControls.Add(AreaOption);
             requiredControls.Add(ProvinceField);
@@ -159,7 +154,7 @@ namespace E_Barangay.Forms
             requiredControls.Add(ContactField);
             requiredControls.Add(FatherField);
             requiredControls.Add(MotherField);
-            requiredControls.Add(IDField);
+            requiredControls.Add(idField);
         }
         /// <summary>
         /// initilalizes a dropdown with given values
@@ -213,7 +208,11 @@ namespace E_Barangay.Forms
             {
                 var _citizen_ = entity.Citizens.FirstOrDefault(c => c.ID == citizen.ID);
                 _citizen_.Picture = Class.ImageConverter.imageToByteArray(ImageBox.Image);
-                _citizen_.Name = FirstNameField.Text == string.Empty ? _citizen_.Name : FirstNameField.Text;
+                _citizen_.FirstName = firstField.Text == string.Empty ? _citizen_.FirstName : firstField.Text;
+                _citizen_.MiddleName = middleField.Text == string.Empty ? _citizen_.MiddleName : middleField.Text;
+                _citizen_.LastName = lastField.Text == string.Empty ? _citizen_.LastName : lastField.Text;
+                _citizen_.Extension = extensionField.Text == string.Empty ? _citizen_.Extension : extensionField.Text;
+
                 _citizen_.Birthday = BdayPicker.Value;
                 _citizen_.ContactInfo = fieldisempty(ContactField) ? _citizen_.ContactInfo : ContactField.Text;
                 _citizen_.Gender = SexOption.Text == string.Empty ? _citizen_.Gender : SexOption.Text;
@@ -302,8 +301,8 @@ namespace E_Barangay.Forms
         void CleanFields()
         {
 
-            IDField.Clear();
-            FirstNameField.Clear();
+            idField.Clear();
+            firstField.Clear();
             FatherField.Clear();
             MotherField.Clear();
             SpouseField.Clear();
@@ -352,7 +351,7 @@ namespace E_Barangay.Forms
         }
 
         #region recordprompt
-       
+
         private void button3_Click(object sender, EventArgs e)
         {
 
@@ -376,7 +375,7 @@ namespace E_Barangay.Forms
 
         private void Record_FormClosed(object sender, FormClosedEventArgs e)
         {
-           // recForm = null;
+            // recForm = null;
             this.Enabled = true;
             // ShowRecords();
         }
@@ -411,12 +410,12 @@ namespace E_Barangay.Forms
         #endregion
 
 
-        private void VoterCheckbox_CheckedChanged(object sender, EventArgs e)
-        {
+        //private void VoterCheckbox_CheckedChanged(object sender, EventArgs e)
+        //{
 
-            VoterIDField.Enabled = PrecinctNumField.Enabled = VoterCheckbox.Checked ? true : false;
+        //    VoterIDField.Enabled = PrecinctNumField.Enabled = VoterCheckbox.Checked ? true : false;
 
-        }
+        //}
 
 
         private void RegisterControl_KeyDown(object sender, KeyEventArgs e)
@@ -425,7 +424,7 @@ namespace E_Barangay.Forms
             {
                 foreach (var c in requiredControls)
                     c.Text = "test_dummy";
-                IDField.Text = Guid.NewGuid().ToString();
+                idField.Text = Guid.NewGuid().ToString();
             }
         }
     }

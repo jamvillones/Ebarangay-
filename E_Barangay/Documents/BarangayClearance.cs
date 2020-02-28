@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Printing;
+using E_Barangay.Class;
 
 namespace E_Barangay.Forms
 {
@@ -40,7 +41,7 @@ namespace E_Barangay.Forms
 
             Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3, 548, 300);
             string name = Printing.IfControlEmpty(fullNameField);
-            var h = new Class.NameSeparatingHelper(name);
+            var h = new Class.NameHelper(name);
             string text = Printing.Indention + "This is to certify that as per record of this Barangay " + name + ", " + Printing.IfControlEmpty(Age) + " years old, " + Printing.IfControlEmpty(CStatusOption) + ", Filipino and a resident of " + Printing.IfControlEmpty(Address) + ", whose signature appears below has no criminal, civil or administrative charges before this office and has good moral standing in the community." + Printing.LineSpace
                           + Printing.Indention + "This certification is issued upon the request of " + Printing.MrOrMrs(SexOption.Text) + " " + h.Last + (string.IsNullOrEmpty(h.Extension) ? "" : " " + h.Extension) + " for the purpose of " + Printing.HisOrHer(SexOption.Text) + " " + Printing.IfControlEmpty(Purpose) + "." + Printing.LineSpace
                           + "WITNESS MY HAND SEAL, this " + IssuedOn.Value.Day + "th  day of " + IssuedOn.Value.ToString("MMMM") + ", " + IssuedOn.Value.Year + " at Barangay Poblacion, Kalibo, Aklan, Philippines.";
@@ -91,7 +92,7 @@ namespace E_Barangay.Forms
                 this.ActiveControl = IDField;
                 return;
             }
-            fullNameField.Text = c.Name;
+            fullNameField.Text = c.getNameWithSpace();
 
             int age = DateTime.Today.Year - c.Birthday.Year;
             Age.Text = age > 0 ? age.ToString() : 1.ToString();

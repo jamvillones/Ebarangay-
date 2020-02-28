@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using E_Barangay.Class;
 
 namespace E_Barangay.Forms
 {
@@ -37,7 +38,7 @@ namespace E_Barangay.Forms
             e.Graphics.DrawImage(Properties.Resources.BarangayCertDEPENDENT, new PointF(0, 0));
             Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 + 50, 548, 320);
             string name = Printing.IfControlEmpty(fullName);
-            var h = new Class.NameSeparatingHelper(name);
+            var h = new Class.NameHelper(name);
             string first = Printing.Indention + "This is to certify that " + name + " of legal age, Filipino and a resident of " + Printing.IfControlEmpty(Address) + "." + Printing.LineSpace +
                            Printing.Indention + "This is to certify further that " + name + " is the dependent of " + Printing.IfControlEmpty(supportNameField) + " who is presently staying at " + Printing.IfControlEmpty(supportAddressField) + " since " + sinceDate.Value.Year.ToString() + "." + Printing.LineSpace +
                            Printing.Indention + "This certification is issued upon the request of " + Printing.MrOrMrs(SexOption.Text) + " " + h.Last + " for whatever legal purpose it may serve " + Printing.HisOrHer(SexOption.Text) + "." + Printing.LineSpace +
@@ -77,7 +78,7 @@ namespace E_Barangay.Forms
                 return;
             }
             //Class.NameSeparatingHelper helper = new Class.NameSeparatingHelper(c.Name);
-            fullName.Text = c.Name;
+            fullName.Text = c.getNameWithSpace();
             SexOption.Text = c.Gender;
             Address.Text = c.Address;
         }

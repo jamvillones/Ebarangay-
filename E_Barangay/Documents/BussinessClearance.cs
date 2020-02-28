@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Printing;
+using E_Barangay.Class;
 
 namespace E_Barangay.Forms
 {
@@ -38,7 +39,7 @@ namespace E_Barangay.Forms
         {
             e.Graphics.DrawImage(Properties.Resources.BussinessClearance, 0, 0);
             string name = Printing.IfControlEmpty(this.fullNameField);
-            var helper = new Class.NameSeparatingHelper(name);
+            var helper = new Class.NameHelper(name);
 
             #region firstbatch
             Rectangle firstRect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 - 10, 548, 50);
@@ -133,7 +134,7 @@ namespace E_Barangay.Forms
             }
             //Class.NameSeparatingHelper helper = new Class.NameSeparatingHelper(citizen.Name);
             //nameField.Text = helper.First + " " + helper.Middle + " " + helper.Last + " "+helper.Extension;
-            fullNameField.Text = citizen.Name;
+            fullNameField.Text = citizen.getNameWithSpace();
             Address.Text = citizen.Address;
         }
         #endregion

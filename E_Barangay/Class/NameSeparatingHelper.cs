@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace E_Barangay.Class
 {
-    public class NameSeparatingHelper
+    public class NameHelper
     {
-        public NameSeparatingHelper(string fullName)
+        public NameHelper(string fullName)
         {
-            char[] chars = { ',', ' ', '?' };
+            char[] chars = { ',' };
             var nameList = fullName.Split(chars);
             for (int i = 0; i < nameList.Length; i++)
             {
@@ -40,30 +40,6 @@ namespace E_Barangay.Class
         }
         public string Last { get; private set; }
         public string Extension { get; private set; }
-        public string FullName
-        {
-            get
-            {
-                string temp = string.Empty;
-                if (!string.IsNullOrEmpty(First))
-                {
-                    temp += First + " ";
-                }
-                if (!string.IsNullOrEmpty(Middle))
-                {
-                    temp += Middle + " ";
-                }
-                if (!string.IsNullOrEmpty(Last))
-                {
-                    temp += Last;
-                }
-                if (!string.IsNullOrEmpty(Extension))
-                {
-                    temp += " " + Extension;
-                }
 
-                return temp;
-            }
-        }
     }
 }

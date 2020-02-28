@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Barangay.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -76,7 +77,7 @@ namespace E_Barangay.Forms
                 return;
             }
             //Class.NameSeparatingHelper helper = new Class.NameSeparatingHelper(c.Name);
-            fullName.Text = c.Name;
+            fullName.Text = c.getNameWithSpace();
             int age = DateTime.Today.Year - c.Birthday.Year;
             Age.Text = age > 0 ? age.ToString() : 1.ToString();
             Address.Text = c.Address;

@@ -29,12 +29,29 @@ namespace E_Barangay.Class
             int days = (today - dob.AddMonths((years * 12) + months)).Days;
             return years;
         }
+        public static string getNameWithSpace(this Citizen c)
+        {
+            return c.FirstName + " " + c.MiddleName + " " + c.LastName + (string.IsNullOrEmpty(c.Extension) ? "" : " " + c.Extension);
+        }
         public static string getName(this Citizen c)
         {
-            string name;
-            name = c.Name.Replace(',', ' ');
-            return name;
+            return c.FirstName + c.MiddleName + c.LastName + c.Extension;
+        }
+        public static NameHelper getNameSeparated(this Citizen c)
+        {
+            NameHelper helper = new NameHelper(c.getNameWithSpace());
+            return helper;
+        }
+        public static bool CitizenFound(string fullName,out Citizen citizen)
+        {
+           
+            string n = fullName.Replace(' ', '\0');
+            using (var e = new EBarangayEntities())
+            {
+                citizen = e.Citizens.ToArray().FirstOrDefault(x => x.getName() == n);
+            }
+            return citizen != null;
         }
     }
-    
+
 }

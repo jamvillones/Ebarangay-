@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Barangay.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -37,7 +38,7 @@ namespace E_Barangay.Forms
             Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 + 20, 550, 300);
 
             string name = Printing.IfControlEmpty(fullNameField);
-            var helper = new Class.NameSeparatingHelper(name);
+            var helper = new Class.NameHelper(name);
             string first = Printing.Indention + "This is to certify that " + name + ", " + Printing.IfControlEmpty(ageField) + " years old, " + Printing.IfControlEmpty(SexOption) + ", " + Printing.IfControlEmpty(civilStatusOption) + ",    Filipino and a resident of " + Printing.IfControlEmpty(addressField) + ", belongs to an indigent family in this Barangay" + Printing.LineSpace +
                            Printing.Indention + "This certification is issued to " + Printing.MrOrMrs(SexOption.Text) + " " + helper.Last + (string.IsNullOrEmpty(helper.Extension) ? "" : " " + helper.Extension) + "  for whatever legal purposes it may serve " + Printing.HimOrHer(SexOption.Text) + " best." + Printing.LineSpace +
                            Printing.Indention + "Issued this " + IssuedOn.Value.Day + "th day of " + IssuedOn.Value.ToString("MMMM, yyyy") + " Barangay Poblacion, Kalibo, Aklan.";
@@ -82,7 +83,7 @@ namespace E_Barangay.Forms
             //middleInitialField.Text = helper.Middle;
             //lastName.Text = helper.Last;
             //extField.Text = helper.Extension;
-            fullNameField.Text = c.Name;
+            fullNameField.Text = c.getNameWithSpace();
             int age = Class.DateTimeExtension.ToAge(c.Birthday).years;
             ageField.Text = age.ToString();
             civilStatusOption.Text = c.CivilStatus;

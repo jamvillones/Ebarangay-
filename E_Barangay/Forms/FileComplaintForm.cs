@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using E_Barangay.Class;
 
 namespace E_Barangay.Forms
 {
@@ -21,7 +22,11 @@ namespace E_Barangay.Forms
 
         private void FileComplaintForm_Load(object sender, EventArgs e)
         {
-            wordCounter.Text = "0/" + narrativeField.MaxLength;
+            //wordCounter.Text = "0/" + narrativeField.MaxLength;
+            using (var ent = new EBarangayEntities())
+            {
+                citizenNames = ent.Citizens.Select(x => x.FirstName + " " + x.MiddleName + " " + x.LastName + (string.IsNullOrEmpty(x.Extension) ? "" : " " + x.Extension)).ToArray();
+            }
         }
 
         private void dataGrid_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -31,13 +36,17 @@ namespace E_Barangay.Forms
 
             if (value == null || string.IsNullOrEmpty(value.ToString()))
             {
-                view.Rows[e.RowIndex].Cells[1].Value = false;
+                //view.Rows[e.RowIndex].Cells[1].Value = false;
                 return;
             }
-            string name = view.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            //string name =value.ToString();
+            var helper = new NameHelper(value.ToString());
             using (var ent = new EBarangayEntities())
             {
-                var citizen = ent.Citizens.FirstOrDefault(x => x.Name == name);
+                var citizen = ent.Citizens.FirstOrDefault(x => (x.FirstName + " " + x.MiddleName + " " + x.LastName) == value.ToString());
+                //var citizen = ent.Citizens.FirstOrDefault(x => CitizenExtensions.getName(x) == value.ToString());
+                //var citizen = ent.Citizens.Where(x => x.getName() == value.ToString()).First();
+
                 if (citizen != null)
                 {
                     view.Rows[e.RowIndex].Cells[1].Value = true;
@@ -67,7 +76,7 @@ namespace E_Barangay.Forms
                     return false;
                 }
             }
-            if (dgvComplainants.RowCount <= 1 || dgvRespondents.RowCount <= 1 || string.IsNullOrEmpty(locationField.Text)||string.IsNullOrEmpty(narrativeField.Text))
+            if (dgvComplainants.RowCount <= 1 || dgvRespondents.RowCount <= 1 || string.IsNullOrEmpty(locationField.Text) || string.IsNullOrEmpty(narrativeField.Text))
             {
                 MessageBox.Show("Location, Complainants, Respondents, and Narrative cannot be empty");
                 return false;
@@ -79,7 +88,7 @@ namespace E_Barangay.Forms
             if (!e)
                 return;
 
-           
+
             var rec = new Complaint();
 
             rec.ID = string.IsNullOrEmpty(controlNumberField.Text) ? Guid.NewGuid().ToString() : controlNumberField.Text;
@@ -132,7 +141,7 @@ namespace E_Barangay.Forms
                     if (dgv.Rows[i].Cells[0].Value != null)
                     {
                         string name = dgv.Rows[i].Cells[0].Value.ToString();
-                        Citizen c = ent.Citizens.FirstOrDefault(x => x.Name == name);
+                        Citizen c = ent.Citizens.FirstOrDefault(x => x.FirstName == name);
                         if (c != null)
                             c.RefRecords += (string.IsNullOrEmpty(c.RefRecords)) ? controlNumber : "," + controlNumber;
                     }
@@ -165,18 +174,23 @@ namespace E_Barangay.Forms
             object val = dgv.Rows[e.RowIndex].Cells[0].Value;
             if (val == null || string.IsNullOrEmpty(val.ToString()))
                 return;
-            Citizen c;
+            Citizen citizen = null;
+            var helper = new NameHelper(val.ToString());
             using (var ent = new EBarangayEntities())
             {
-                c = ent.Citizens.FirstOrDefault(x => x.Name == val.ToString());
+                citizen = ent.Citizens.FirstOrDefault(x => x.FirstName == helper.First &&
+                                                             x.MiddleName == helper.Middle &&
+                                                             x.LastName == helper.Last &&
+                                                             x.Extension == helper.Extension);
             }
-            if (c == null)
+            if (citizen == null)
             {
                 MessageBox.Show("Person not registered.");
                 return;
             }
+
             Preview prev = new Preview();
-            prev.AcceptDetails(c);
+            prev.AcceptDetails(citizen);
             prev.FormClosed += (ss, ee) => { Enabled = true; };
             Enabled = false;
             prev.Show();
@@ -186,6 +200,26 @@ namespace E_Barangay.Forms
         private void controlNumberField_TextChanged(object sender, EventArgs e)
         {
 
+        }
+        string[] citizenNames;
+        private void dgv_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            var dgv = sender as DataGridView;
+            if (dgv.CurrentCell.ColumnIndex == 0)
+            {
+                TextBox a = e.Control as TextBox;
+                if (a != null)
+                {
+
+                    a.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                    a.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                    AutoCompleteStringCollection sc = new AutoCompleteStringCollection();
+                    sc.AddRange(citizenNames);
+                    //foreach (var i in citizenNames)
+                    //    sc.Add(i.Replace(',', ' '));
+                    a.AutoCompleteCustomSource = sc;
+                }
+            }
         }
     }
 }

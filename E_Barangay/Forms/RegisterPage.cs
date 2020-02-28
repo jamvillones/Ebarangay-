@@ -82,7 +82,11 @@ namespace E_Barangay.Forms
             Citizen temp = new Citizen();
             temp.ID = IDField.Text == string.Empty ? Guid.NewGuid().ToString() : IDField.Text;
 
-            temp.Name = FirstNameField.Text + "," + MiddleNameField.Text + "," + LastNameField.Text + (extField.Text == string.Empty ? "" : "," + extField.Text);
+            //temp.Name = FirstNameField.Text + "," + MiddleNameField.Text + "," + LastNameField.Text + (extField.Text == string.Empty ? "" : "," + extField.Text);
+            temp.FirstName = FirstNameField.Text.Trim(' ');
+            temp.MiddleName = MiddleNameField.Text.Trim(' ');
+            temp.LastName = LastNameField.Text.Trim(' ');
+
             temp.Gender = SexOption.Text;
 
             if (NumberField.Text == "")

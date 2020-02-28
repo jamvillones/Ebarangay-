@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Barangay.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -55,7 +56,7 @@ namespace E_Barangay.Forms
                 this.ActiveControl = IDField;
                 return;
             }
-            fullNameField.Text = c.Name;
+            fullNameField.Text = c.getNameWithSpace();
             //int age = Class.DateTimeExtension.ToAge(c.Birthday).years;
             SexOption.Text = c.Gender;
             Address.Text = c.Address;

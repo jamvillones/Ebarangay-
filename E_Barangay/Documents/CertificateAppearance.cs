@@ -1,4 +1,5 @@
-﻿using System;
+﻿using E_Barangay.Class;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,7 +29,7 @@ namespace E_Barangay.Forms
         {
             e.Graphics.DrawImage(Properties.Resources.CertAppearance, new PointF(0, 0));
             Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 + 50, 550, 380);
-            var helper = new Class.NameSeparatingHelper(fullNameField.Text);
+            var helper = new Class.NameHelper(fullNameField.Text);
             string name = Printing.IfControlEmpty(fullNameField);
             string first = Printing.Indention + "This is to certify that " + Printing.MrOrMrs(SexOption.Text) + " " + name + " has appeared in my office." + Printing.LineSpace +
                            Printing.Indention + "This certification is issued to " + Printing.MrOrMrs(SexOption.Text) + " " +helper.Last+ (string.IsNullOrEmpty(helper.Extension)?"":" "+helper.Extension) + "  for whatever legal intent it may serve " + Printing.HimOrHer(SexOption.Text) + "." + Printing.LineSpace +
@@ -57,7 +58,7 @@ namespace E_Barangay.Forms
                 this.ActiveControl = IDField;
                 return;
             }
-            fullNameField.Text = c.Name;
+            fullNameField.Text = c.getNameWithSpace();
             //int age = Class.DateTimeExtension.ToAge(c.Birthday).years;
             SexOption.Text = c.Gender;
             Address.Text = c.Address;
