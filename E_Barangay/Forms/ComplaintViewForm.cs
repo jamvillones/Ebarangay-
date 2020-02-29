@@ -13,6 +13,8 @@ namespace E_Barangay.Forms
 {
     public partial class ComplaintViewForm : Form
     {
+        public event EventHandler OnMarkedSettled;
+
         Complaint currRec;
         public ComplaintViewForm()
         {
@@ -99,8 +101,12 @@ namespace E_Barangay.Forms
                     MessageBox.Show("error in changing");
                     return;
                 }
+                if (rec.Status == ComplaintStatus.Settled.ToString())
+                    return;
+
                 rec.Status = "Settled";
                 eb.SaveChanges();
+                OnMarkedSettled?.Invoke(this, new EventArgs());
 
             }
         }

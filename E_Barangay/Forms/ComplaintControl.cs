@@ -87,10 +87,17 @@ namespace E_Barangay.Forms
             var x = v.Rows[e.RowIndex].Cells[0].Value.ToString();
 
             var view = new ComplaintViewForm(x);
+            view.OnMarkedSettled += View_OnMarkedSettled;
             view.FormClosed += (ee, ss) => { this.Enabled = true; };
             this.Enabled = false;
             view.Show();
         }
+
+        private void View_OnMarkedSettled(object sender, EventArgs e)
+        {
+            LoadValues();
+        }
+
         void setMarker(Button b)
         {
             Marker.Left = b.Left;
