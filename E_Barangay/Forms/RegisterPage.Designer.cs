@@ -268,6 +268,7 @@
             this.MunicipalityField.Location = new System.Drawing.Point(86, 92);
             this.MunicipalityField.MaxLength = 10;
             this.MunicipalityField.Name = "MunicipalityField";
+            this.MunicipalityField.ReadOnly = true;
             this.MunicipalityField.Size = new System.Drawing.Size(347, 20);
             this.MunicipalityField.TabIndex = 4;
             this.MunicipalityField.Text = "Kalibo";
@@ -317,6 +318,7 @@
             this.ProvinceField.Location = new System.Drawing.Point(86, 118);
             this.ProvinceField.MaxLength = 10;
             this.ProvinceField.Name = "ProvinceField";
+            this.ProvinceField.ReadOnly = true;
             this.ProvinceField.Size = new System.Drawing.Size(347, 20);
             this.ProvinceField.TabIndex = 5;
             this.ProvinceField.Text = "Aklan";
@@ -329,6 +331,7 @@
             this.BarangayField.Location = new System.Drawing.Point(86, 66);
             this.BarangayField.MaxLength = 10;
             this.BarangayField.Name = "BarangayField";
+            this.BarangayField.ReadOnly = true;
             this.BarangayField.Size = new System.Drawing.Size(347, 20);
             this.BarangayField.TabIndex = 3;
             this.BarangayField.Text = "Poblacion";

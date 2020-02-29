@@ -203,7 +203,6 @@ namespace E_Barangay.Forms
             MotherField.Clear();
             SpouseField.Clear();
 
-            MunicipalityField.ResetText();
             SexOption.ResetText();
             CivilStatusOption.ResetText();
             MunicipalityField.ResetText();
@@ -212,9 +211,10 @@ namespace E_Barangay.Forms
 
             NumberField.Clear();
             AreaOption.ResetText();
-            BarangayField.Clear();
-            ProvinceField.Clear();
-            ContactField.Clear();
+            //MunicipalityField.ResetText();
+            //BarangayField.Clear();
+            //ProvinceField.Clear();
+            //ContactField.Clear();
 
             ImageBox.Image = null;
             VoterIDField.Clear();
@@ -245,8 +245,6 @@ namespace E_Barangay.Forms
 
         private void BdayPicker_ValueChanged(object sender, EventArgs e)
         {
-            //var today = DateTime.Today;
-            //var age = today.Year - BdayPicker.Value.Year;
             AgeField.Text = Class.DateTimeExtension.ToAge(BdayPicker.Value.Date).years.ToString(); ;
         }
         //RecordForm record;
@@ -330,7 +328,7 @@ namespace E_Barangay.Forms
                 FirstNameField.Text = FirstNameField.Text.NonBlankValueOf("Test");
                 MiddleNameField.Text = MiddleNameField.Text.NonBlankValueOf("Test");
                 LastNameField.Text = LastNameField.Text.NonBlankValueOf("Test");
-                extField.Text = extField.Text.NonBlankValueOf("Test");
+                //extField.Text = extField.Text.NonBlankValueOf("Test");
 
                 Random rnd = new Random();
 
