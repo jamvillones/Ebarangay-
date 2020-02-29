@@ -31,6 +31,8 @@ namespace E_Barangay.Class
         }
         public static string getNameWithSpace(this Citizen c)
         {
+            if (c == null)
+                return null;
             return c.FirstName + " " + c.MiddleName + " " + c.LastName + (string.IsNullOrEmpty(c.Extension) ? "" : " " + c.Extension);
         }
         //public static string getName(this Citizen c)
@@ -39,6 +41,7 @@ namespace E_Barangay.Class
         //}
         public static NameHelper getNameSeparated(this Citizen c)
         {
+            
             NameHelper helper = new NameHelper(c.getNameWithSpace());
             return helper;
         }
@@ -49,6 +52,15 @@ namespace E_Barangay.Class
             using (var e = new EBarangayEntities())
             {
                 citizen = e.Citizens.FirstOrDefault(x => x.FirstName+x.MiddleName+x.LastName+x.Extension == n);
+            }
+            return citizen != null;
+        }
+        public static bool CitizenById(string id, out Citizen citizen)
+        {
+            string i = id.Trim(' ');
+            using(var e = new EBarangayEntities())
+            {
+                citizen = e.Citizens.FirstOrDefault(x => x.ID == i);
             }
             return citizen != null;
         }
