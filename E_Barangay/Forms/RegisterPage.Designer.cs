@@ -56,6 +56,7 @@
             this.RegisterBtn = new System.Windows.Forms.Button();
             this.CancelBtn = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dtBday = new System.Windows.Forms.DateTimePicker();
             this.label17 = new System.Windows.Forms.Label();
             this.PrecinctNumField = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -70,7 +71,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.MotherField = new System.Windows.Forms.TextBox();
             this.FatherField = new System.Windows.Forms.TextBox();
-            this.BdayPicker = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.LastNameField = new System.Windows.Forms.TextBox();
             this.MiddleNameField = new System.Windows.Forms.TextBox();
@@ -435,6 +435,7 @@
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.dtBday);
             this.groupBox4.Controls.Add(this.label17);
             this.groupBox4.Controls.Add(this.PrecinctNumField);
             this.groupBox4.Controls.Add(this.label16);
@@ -450,7 +451,6 @@
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Controls.Add(this.MotherField);
             this.groupBox4.Controls.Add(this.FatherField);
-            this.groupBox4.Controls.Add(this.BdayPicker);
             this.groupBox4.Controls.Add(this.SexOption);
             this.groupBox4.Controls.Add(this.label2);
             this.groupBox4.Controls.Add(this.Birthday);
@@ -464,6 +464,16 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Basic Info";
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
+            // 
+            // dtBday
+            // 
+            this.dtBday.CustomFormat = "MMMM dd, yyyy";
+            this.dtBday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtBday.Location = new System.Drawing.Point(68, 14);
+            this.dtBday.Name = "dtBday";
+            this.dtBday.Size = new System.Drawing.Size(158, 20);
+            this.dtBday.TabIndex = 28;
+            this.dtBday.Value = new System.DateTime(2020, 3, 1, 17, 41, 2, 0);
             // 
             // label17
             // 
@@ -620,21 +630,6 @@
             this.FatherField.Name = "FatherField";
             this.FatherField.Size = new System.Drawing.Size(461, 20);
             this.FatherField.TabIndex = 15;
-            // 
-            // BdayPicker
-            // 
-            this.BdayPicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.BdayPicker.Checked = false;
-            this.BdayPicker.CustomFormat = "";
-            this.BdayPicker.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BdayPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.BdayPicker.Location = new System.Drawing.Point(68, 14);
-            this.BdayPicker.Name = "BdayPicker";
-            this.BdayPicker.Size = new System.Drawing.Size(158, 20);
-            this.BdayPicker.TabIndex = 13;
-            this.BdayPicker.Value = new System.DateTime(2019, 11, 10, 0, 0, 0, 0);
-            this.BdayPicker.ValueChanged += new System.EventHandler(this.BdayPicker_ValueChanged);
             // 
             // label10
             // 
@@ -860,7 +855,6 @@
             // 
             // RegisterPage
             // 
-            this.AcceptButton = this.RegisterBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
@@ -919,7 +913,6 @@
         private System.Windows.Forms.Button RegisterBtn;
         private System.Windows.Forms.Button CancelBtn;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.DateTimePicker BdayPicker;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox ProvinceField;
         private System.Windows.Forms.Label label10;
@@ -959,5 +952,6 @@
         private System.Windows.Forms.TextBox PHField;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox extField;
+        private System.Windows.Forms.DateTimePicker dtBday;
     }
 }

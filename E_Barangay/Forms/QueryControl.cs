@@ -14,7 +14,7 @@ namespace E_Barangay.Forms
 {
     public partial class QueryControl : UserControl
     {
-        public event EventHandler<string> IDEmptySearch;
+        public event EventHandler IDEmptySearch;
         public QueryControl()
         {
             InitializeComponent();
@@ -65,7 +65,11 @@ namespace E_Barangay.Forms
                 Citizen c = context.Citizens.FirstOrDefault(x => x.ID == SearchBox.Text);
                 if (c == null)
                 {
-                    IDEmptySearch?.Invoke(this, SearchBox.Text);
+                    var yesorno = new YesOrNoPrompt("Entry Not found. Would you like to go register instead?");
+                    yesorno.FormClosed += (xx, yy) => { Enabled = true; };
+                    yesorno.onBtnClick += (xx, yy) => { if (yy) IDEmptySearch?.Invoke(this, new EventArgs()); };
+                    yesorno.Show();
+                    Enabled = false;
                     return;
                 }
                 OpenPreview(c);
@@ -249,15 +253,15 @@ namespace E_Barangay.Forms
         RegisterPage reg;
         private void CreateBtn_Click(object sender, EventArgs e)
         {
-            OpenReg(this, "");
+            OpenReg(this, new EventArgs());
         }
-        void OpenReg(object o, string id)
+        void OpenReg(object o, EventArgs e)
         {
             if (reg == null)
             {
                 reg = new RegisterPage();
                 reg.FormClosed += Reg_FormClosed;
-                reg.SetId(id);
+                //reg.SetId();
                 reg.LoadValues();
                 reg.Show();
                 return;

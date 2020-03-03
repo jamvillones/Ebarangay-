@@ -28,7 +28,8 @@ namespace E_Barangay.Forms
             using (var ent = new EBarangayEntities())
                 recs = ent.Complaints.ToArray();
 
-            forToday();
+            fillDgv(recs);
+            //forToday();
         }
         void settled()
         {
@@ -100,6 +101,7 @@ namespace E_Barangay.Forms
 
         void setMarker(Button b)
         {
+            Marker.Visible = true;
             Marker.Left = b.Left;
             Marker.Width = b.Width;
         }
@@ -125,6 +127,12 @@ namespace E_Barangay.Forms
         {
             setMarker((Button)sender);
             settled();
+        }
+
+        private void allBtn_Click(object sender, EventArgs e)
+        {
+            setMarker((Button)sender);
+            LoadValues();
         }
     }
 }

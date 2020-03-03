@@ -35,10 +35,10 @@ namespace E_Barangay.Forms
             requiredControls.Add(FirstNameField);
             requiredControls.Add(MiddleNameField);
             requiredControls.Add(LastNameField);
-            requiredControls.Add(BarangayField);
+           // requiredControls.Add(BarangayField);
             requiredControls.Add(AreaOption);
-            requiredControls.Add(ProvinceField);
-            requiredControls.Add(MunicipalityField);
+          //  requiredControls.Add(ProvinceField);
+           // requiredControls.Add(MunicipalityField);
             requiredControls.Add(ContactField);
             requiredControls.Add(FatherField);
             requiredControls.Add(MotherField);
@@ -103,7 +103,7 @@ namespace E_Barangay.Forms
             }
 
 
-            temp.Birthday = BdayPicker.Value;
+            temp.Birthday = dtBday.Value;
             temp.ContactInfo = ContactField.Text;
 
             temp.FathersName = FatherField.Text;
@@ -205,8 +205,6 @@ namespace E_Barangay.Forms
 
             SexOption.ResetText();
             CivilStatusOption.ResetText();
-            MunicipalityField.ResetText();
-
             SexOption.ResetText();
 
             NumberField.Clear();
@@ -245,7 +243,7 @@ namespace E_Barangay.Forms
 
         private void BdayPicker_ValueChanged(object sender, EventArgs e)
         {
-            AgeField.Text = Class.DateTimeExtension.ToAge(BdayPicker.Value.Date).years.ToString(); ;
+            AgeField.Text = Class.DateTimeExtension.ToAge(dtBday.Value.Date).years.ToString(); ;
         }
         //RecordForm record;
         //private void button3_Click(object sender, EventArgs e)
