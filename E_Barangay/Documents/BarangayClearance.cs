@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Drawing.Printing;
 using E_Barangay.Class;
 
+
 namespace E_Barangay.Forms
 {
     public partial class BarangayClearance : Form
@@ -22,7 +23,7 @@ namespace E_Barangay.Forms
         private void BarangayClearanceForm_Load(object sender, EventArgs e)
         {
             printing.PrintPage += Printing_PrintPage;
-            printing.SubscribeToFields(fullNameField, Age, Address, SexOption, CStatusOption, Purpose, IssuedOn, OrNo, ORIssueDate, OrValidityDate, officerOption);
+            printing.SubscribeToFields(firstText, Age, Address, SexOption, CStatusOption, Purpose, IssuedOn, OrNo, ORIssueDate, OrValidityDate, officerOption);
 
             o = new Class.OfficersForInfoForPrinting();
             foreach (var x in o.sbMemebers)
@@ -39,24 +40,23 @@ namespace E_Barangay.Forms
             Pen pen = new Pen(Color.Black);
             Font font = new Font("Arial Narrow", 12, FontStyle.Regular);
 
-            Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3, 548, 300);
-            string name = Printing.IfControlEmpty(fullNameField);
-            var h = new Class.NameHelper(name);
-            string text = Printing.Indention + "This is to certify that as per record of this Barangay " + name + ", " + Printing.IfControlEmpty(Age) + " years old, " + Printing.IfControlEmpty(CStatusOption) + ", Filipino and a resident of " + Printing.IfControlEmpty(Address) + ", whose signature appears below has no criminal, civil or administrative charges before this office and has good moral standing in the community." + Printing.LineSpace
-                          + Printing.Indention + "This certification is issued upon the request of " + Printing.MrOrMrs(SexOption.Text) + " " + h.Last + (string.IsNullOrEmpty(h.Extension) ? "" : " " + h.Extension) + " for the purpose of " + Printing.HisOrHer(SexOption.Text) + " " + Printing.IfControlEmpty(Purpose) + "." + Printing.LineSpace
+            Rectangle bodyRect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3, 548, 300);
+
+            string text = Printing.Indention + "This is to certify that as per record of this Barangay" + firstText.Text + " " + middleText.Text + " " + lastText.Text + " " + extText.Text + ", " + Printing.IfControlEmpty(Age) + " years old, " + Printing.IfControlEmpty(CStatusOption) + ", Filipino and a resident of " + Printing.IfControlEmpty(Address) + ", whose signature appears below has no criminal, civil or administrative charges before this office and has good moral standing in the community." + Printing.LineSpace
+                          + Printing.Indention + "This certification is issued upon the request of " + Printing.MrOrMrs(SexOption.Text) + " " + lastText.Text + (string.IsNullOrEmpty(extText.Text) ? "" : " " + extText.Text) + " for the purpose of " + Printing.HisOrHer(SexOption.Text) + " " + Printing.IfControlEmpty(Purpose) + "." + Printing.LineSpace
                           + "WITNESS MY HAND SEAL, this " + IssuedOn.Value.Day + "th  day of " + IssuedOn.Value.ToString("MMMM") + ", " + IssuedOn.Value.Year + " at Barangay Poblacion, Kalibo, Aklan, Philippines.";
 
-            e.Graphics.DrawString(text, font, Brushes.Black, rect);
-            DrawDebugRecs(rect, e);
+            e.Graphics.DrawString(text, font, Brushes.Black, bodyRect);
+            DrawDebugRecs(bodyRect, e);
 
-            var rectangleTest = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height - 300, 240, 100);
+            var orRect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height - 300, 240, 100);
 
             string orTxt = "Paid Under OR No: " + Printing.IfControlEmpty(OrNo) + "\n" +
                            "Issued On: " + ORIssueDate.Value.ToString("MMMM") + " " + ORIssueDate.Value.Day.ToString() + ", " + ORIssueDate.Value.Year.ToString() + "\n" +
                            "Note: Valid Until: " + OrValidityDate.Value.ToString("MMMM") + " " + OrValidityDate.Value.Day.ToString() + ", " + OrValidityDate.Value.Year.ToString();
 
-            e.Graphics.DrawString(orTxt, font, Brushes.Black, rectangleTest);
-            DrawDebugRecs(rectangleTest, e);
+            e.Graphics.DrawString(orTxt, font, Brushes.Black, orRect);
+            DrawDebugRecs(orRect, e);
 
             SizeF capBoxSize = e.Graphics.MeasureString(o.captName, Printing.fontBold);
             SizeF titleBoxSize = e.Graphics.MeasureString(o.captName, Printing.font);
@@ -92,7 +92,10 @@ namespace E_Barangay.Forms
                 this.ActiveControl = IDField;
                 return;
             }
-            fullNameField.Text = c.getNameWithSpace();
+            firstText.Text = c.FirstName;
+            middleText.Text = c.MiddleName;
+            lastText.Text = c.LastName;
+            extText.Text = c.Extension;
 
             int age = DateTime.Today.Year - c.Birthday.Year;
             Age.Text = age > 0 ? age.ToString() : 1.ToString();
@@ -113,7 +116,7 @@ namespace E_Barangay.Forms
         #region Clearing
         private void ResetBtn_Click(object sender, EventArgs e)
         {
-            clearFields(fullNameField, Age, Address, CStatusOption, SexOption, Purpose, OrNo, officerOption);
+            clearFields(firstText, Age, Address, CStatusOption, SexOption, Purpose, OrNo, officerOption);
         }
         void clearFields(params Control[] controls)
         {

@@ -40,6 +40,7 @@ namespace E_Barangay.Forms
         public static Pen pen = new Pen(Color.Black);
         public static Font font = new Font("Arial Narrow", 12, FontStyle.Regular);
         public static Font fontBold = new Font("Arial Narrow", 12, FontStyle.Bold);
+        public static Font fontBoldUnderline = new Font("Arial Narrow", 12, FontStyle.Bold | FontStyle.Underline);
         public static string Indention { get { return "        "; } }
         public static string LineSpace { get { return "\n\n\n"; } }
 

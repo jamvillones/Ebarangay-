@@ -124,6 +124,9 @@
     <Compile Include="Class\NameSeparatingHelper.cs" />
     <Compile Include="Class\OfficersForInfoForPrinting.cs" />
     <Compile Include="Class\PasswordToFormHandler.cs" />
+    <Compile Include="Class\RichTextBoxPrintControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Class\StringExtension.cs" />
     <Compile Include="Complaint.cs">
       <DependentUpon>EBModel.tt</DependentUpon>
