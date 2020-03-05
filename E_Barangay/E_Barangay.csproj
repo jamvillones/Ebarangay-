@@ -116,7 +116,7 @@
       <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Class\CitizenExtensions.cs" />
-    <Compile Include="Class\CustomDataGridView.cs">
+    <Compile Include="Controls\CustomDataGridView.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Class\DateTimeExtension.cs" />
@@ -124,12 +124,16 @@
     <Compile Include="Class\NameSeparatingHelper.cs" />
     <Compile Include="Class\OfficersForInfoForPrinting.cs" />
     <Compile Include="Class\PasswordToFormHandler.cs" />
-    <Compile Include="Class\RichTextBoxPrintControl.cs">
+    <Compile Include="Controls\RichTextBoxPrintControl.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Class\StringExtension.cs" />
+    <Compile Include="Class\TestingClass.cs" />
     <Compile Include="Complaint.cs">
       <DependentUpon>EBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RTPRint.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Documents\CertificateAppearance.cs">
       <SubType>Form</SubType>
