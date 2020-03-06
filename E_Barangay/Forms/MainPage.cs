@@ -72,7 +72,7 @@ namespace E_Barangay.Forms
         private void MainPage_Load(object sender, EventArgs e)
         {
             User curr = UserManager.instance.currentUser;
-            UserWelcomeTxt.Text = "Welcome: " + curr.Username;
+            UserWelcomeTxt.Text = "WELCOME " + curr.Username;
             Current = DashControl;
             printingFiles.OpeningForm += (x, y) => { Enabled = !y; };
             try

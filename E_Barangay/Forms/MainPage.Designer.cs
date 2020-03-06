@@ -42,14 +42,14 @@
             this.IssueBtn = new System.Windows.Forms.Button();
             this.complaintsBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.DashControl = new E_Barangay.Forms.Dashboard();
-            this.QueryPage = new E_Barangay.Forms.QueryControl();
-            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
-            this.complaintPage = new E_Barangay.Forms.ComplaintControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.UserWelcomeTxt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.DashControl = new E_Barangay.Forms.Dashboard();
+            this.QueryPage = new E_Barangay.Forms.QueryControl();
+            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
+            this.complaintPage = new E_Barangay.Forms.ComplaintControl();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -267,6 +267,50 @@
             this.panel3.Size = new System.Drawing.Size(920, 548);
             this.panel3.TabIndex = 3;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel2.Controls.Add(this.UserWelcomeTxt);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(168, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(932, 38);
+            this.panel2.TabIndex = 4;
+            // 
+            // UserWelcomeTxt
+            // 
+            this.UserWelcomeTxt.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserWelcomeTxt.ForeColor = System.Drawing.Color.White;
+            this.UserWelcomeTxt.Location = new System.Drawing.Point(235, 8);
+            this.UserWelcomeTxt.Name = "UserWelcomeTxt";
+            this.UserWelcomeTxt.Size = new System.Drawing.Size(215, 23);
+            this.UserWelcomeTxt.TabIndex = 2;
+            this.UserWelcomeTxt.Text = "Welcome";
+            this.UserWelcomeTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(43, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 38);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "E Barangay";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(6, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(37, 38);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // DashControl
             // 
             this.DashControl.BackColor = System.Drawing.Color.Silver;
@@ -304,50 +348,6 @@
             this.complaintPage.Name = "complaintPage";
             this.complaintPage.Size = new System.Drawing.Size(920, 548);
             this.complaintPage.TabIndex = 6;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel2.Controls.Add(this.UserWelcomeTxt);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(168, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(932, 38);
-            this.panel2.TabIndex = 4;
-            // 
-            // UserWelcomeTxt
-            // 
-            this.UserWelcomeTxt.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserWelcomeTxt.ForeColor = System.Drawing.Color.White;
-            this.UserWelcomeTxt.Location = new System.Drawing.Point(235, 8);
-            this.UserWelcomeTxt.Name = "UserWelcomeTxt";
-            this.UserWelcomeTxt.Size = new System.Drawing.Size(215, 23);
-            this.UserWelcomeTxt.TabIndex = 2;
-            this.UserWelcomeTxt.Text = "Welcome:";
-            this.UserWelcomeTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(43, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 38);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "E Barangay";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(6, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(37, 38);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
             // 
             // MainPage
             // 
