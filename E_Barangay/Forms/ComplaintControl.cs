@@ -57,6 +57,7 @@ namespace E_Barangay.Forms
         }
         void fillDgv(Complaint[] recs)
         {
+            dgvRecords.Rows.Clear();
             foreach (var x in recs)
                 dgvRecords.Rows.Add(x.ID, x.Status, x.SettlementDate, x.DateHappened);
         }

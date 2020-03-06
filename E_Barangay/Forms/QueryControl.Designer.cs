@@ -66,9 +66,9 @@ namespace E_Barangay.Forms
             this.ResultTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ResultTxt.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ResultTxt.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResultTxt.ForeColor = System.Drawing.Color.Black;
-            this.ResultTxt.Location = new System.Drawing.Point(439, 15);
+            this.ResultTxt.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResultTxt.ForeColor = System.Drawing.Color.White;
+            this.ResultTxt.Location = new System.Drawing.Point(445, 14);
             this.ResultTxt.Name = "ResultTxt";
             this.ResultTxt.Size = new System.Drawing.Size(128, 23);
             this.ResultTxt.TabIndex = 9;

@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.complaintsBtn = new System.Windows.Forms.Button();
             this.LoginBtn = new System.Windows.Forms.Button();
             this.StatBtn = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -41,6 +40,7 @@
             this.DashBtn = new System.Windows.Forms.Button();
             this.QueryBtn = new System.Windows.Forms.Button();
             this.IssueBtn = new System.Windows.Forms.Button();
+            this.complaintsBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.DashControl = new E_Barangay.Forms.Dashboard();
             this.QueryPage = new E_Barangay.Forms.QueryControl();
@@ -77,28 +77,6 @@
             this.panel1.Size = new System.Drawing.Size(168, 597);
             this.panel1.TabIndex = 0;
             // 
-            // complaintsBtn
-            // 
-            this.complaintsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.complaintsBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.complaintsBtn.FlatAppearance.BorderSize = 0;
-            this.complaintsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.complaintsBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.complaintsBtn.ForeColor = System.Drawing.Color.White;
-            this.complaintsBtn.Image = ((System.Drawing.Image)(resources.GetObject("complaintsBtn.Image")));
-            this.complaintsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.complaintsBtn.Location = new System.Drawing.Point(3, 181);
-            this.complaintsBtn.Name = "complaintsBtn";
-            this.complaintsBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.complaintsBtn.Size = new System.Drawing.Size(165, 34);
-            this.complaintsBtn.TabIndex = 10;
-            this.complaintsBtn.TabStop = false;
-            this.complaintsBtn.Text = "Complaints";
-            this.complaintsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.complaintsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.complaintsBtn.UseVisualStyleBackColor = true;
-            this.complaintsBtn.Click += new System.EventHandler(this.complaintsBtn_Click);
-            // 
             // LoginBtn
             // 
             this.LoginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -106,7 +84,7 @@
             this.LoginBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.LoginBtn.FlatAppearance.BorderSize = 0;
             this.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoginBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 9.749999F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginBtn.Font = new System.Drawing.Font("Arial Narrow", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.ForeColor = System.Drawing.Color.White;
             this.LoginBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LoginBtn.Location = new System.Drawing.Point(40, 544);
@@ -115,7 +93,7 @@
             this.LoginBtn.Size = new System.Drawing.Size(88, 25);
             this.LoginBtn.TabIndex = 9;
             this.LoginBtn.TabStop = false;
-            this.LoginBtn.Text = "(f1) Add New Log in";
+            this.LoginBtn.Text = "F1 ADD NEW LOGIN";
             this.LoginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.LoginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.LoginBtn.UseVisualStyleBackColor = true;
@@ -128,17 +106,16 @@
             this.StatBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.StatBtn.FlatAppearance.BorderSize = 0;
             this.StatBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StatBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 9.749999F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatBtn.Font = new System.Drawing.Font("Arial Narrow", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatBtn.ForeColor = System.Drawing.Color.White;
             this.StatBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.StatBtn.Location = new System.Drawing.Point(40, 569);
+            this.StatBtn.Location = new System.Drawing.Point(31, 569);
             this.StatBtn.Name = "StatBtn";
             this.StatBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.StatBtn.Size = new System.Drawing.Size(88, 25);
+            this.StatBtn.Size = new System.Drawing.Size(107, 25);
             this.StatBtn.TabIndex = 8;
             this.StatBtn.TabStop = false;
-            this.StatBtn.Text = "(f2) Statistics";
-            this.StatBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.StatBtn.Text = "F2 STATISTICS";
             this.StatBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.StatBtn.UseVisualStyleBackColor = true;
             this.StatBtn.Click += new System.EventHandler(this.button1_Click_2);
@@ -253,6 +230,28 @@
             this.IssueBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.IssueBtn.UseVisualStyleBackColor = true;
             this.IssueBtn.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // complaintsBtn
+            // 
+            this.complaintsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.complaintsBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.complaintsBtn.FlatAppearance.BorderSize = 0;
+            this.complaintsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.complaintsBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.complaintsBtn.ForeColor = System.Drawing.Color.White;
+            this.complaintsBtn.Image = ((System.Drawing.Image)(resources.GetObject("complaintsBtn.Image")));
+            this.complaintsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.complaintsBtn.Location = new System.Drawing.Point(3, 181);
+            this.complaintsBtn.Name = "complaintsBtn";
+            this.complaintsBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.complaintsBtn.Size = new System.Drawing.Size(165, 34);
+            this.complaintsBtn.TabIndex = 10;
+            this.complaintsBtn.TabStop = false;
+            this.complaintsBtn.Text = "Complaints";
+            this.complaintsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.complaintsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.complaintsBtn.UseVisualStyleBackColor = true;
+            this.complaintsBtn.Click += new System.EventHandler(this.complaintsBtn_Click);
             // 
             // panel3
             // 

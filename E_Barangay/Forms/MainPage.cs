@@ -187,7 +187,15 @@ namespace E_Barangay.Forms
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-            OpenStats();
+            using (var ent = new EBarangayEntities())
+            {
+                if (ent.Citizens.Count() == 0)
+                {
+                    MessageBox.Show("Empty Record");
+                    return;
+                }
+            }
+                OpenStats();
         }
 
         private void LoginBtn_Click(object sender, EventArgs e)

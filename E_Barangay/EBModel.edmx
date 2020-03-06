@@ -47,7 +47,7 @@
           <Property Name="Philhealth" Type="nvarchar" MaxLength="50" />
           <Property Name="SSS" Type="nvarchar" MaxLength="50" />
           <Property Name="PagIbig" Type="nvarchar" MaxLength="50" />
-          <Property Name="RefRecords" Type="nvarchar" MaxLength="1000" />
+          <Property Name="RefRecords" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Complaints">
           <Key>
@@ -60,8 +60,8 @@
           <Property Name="Location" Type="nvarchar" MaxLength="50" />
           <Property Name="Status" Type="nvarchar" MaxLength="50" />
           <Property Name="SettlementDate" Type="datetime" />
-          <Property Name="CompNames" Type="nvarchar" MaxLength="300" />
-          <Property Name="RespNames" Type="nvarchar" MaxLength="300" />
+          <Property Name="CompNames" Type="nvarchar(max)" />
+          <Property Name="RespNames" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="Municipality">
           <Key>
@@ -147,8 +147,8 @@
           <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SettlementDate" Type="DateTime" Precision="3" />
-          <Property Name="CompNames" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-          <Property Name="RespNames" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="CompNames" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RespNames" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Municipality">
           <Key>
@@ -220,7 +220,7 @@
           <Property Name="Philhealth" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="SSS" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="PagIbig" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="RefRecords" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="RefRecords" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Area" Relationship="EBarangayModel.FK_Citizen_Area" FromRole="Citizen" ToRole="Area" />
         </EntityType>
         <Association Name="FK_Citizen_Area">

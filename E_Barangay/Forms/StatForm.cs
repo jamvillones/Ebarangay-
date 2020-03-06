@@ -29,6 +29,7 @@ namespace E_Barangay.Forms
             Statistics statistics = new Statistics();
             statistics.Initialize();
 
+
             for (int i = 0; i < statistics.areas.Count; i++)
             {
                 var point = AreaChart.Series[0].Points[i];
@@ -74,11 +75,11 @@ namespace E_Barangay.Forms
             }
             voterChart.Series[0].Points[0].YValues[0] = statistics.votersCount;
             voterChart.Series[0].Points[0].LegendText = "Voters" + "(" + statistics.votersCount + ")";
-            voterChart.Series[0].Points[0].Label = Statistics.getPercentage(statistics.votersCount, statistics.totalPopulation).ToString()+"%";
+            voterChart.Series[0].Points[0].Label = Statistics.getPercentage(statistics.votersCount, statistics.totalPopulation).ToString() + "%";
 
             voterChart.Series[0].Points[1].YValues[0] = statistics.notVotersCount;
             voterChart.Series[0].Points[1].LegendText = "Not Voters" + "(" + statistics.notVotersCount + ")";
-            voterChart.Series[0].Points[1].Label = Statistics.getPercentage(statistics.notVotersCount, statistics.totalPopulation).ToString()+"%";
+            voterChart.Series[0].Points[1].Label = Statistics.getPercentage(statistics.notVotersCount, statistics.totalPopulation).ToString() + "%";
 
         }
     }

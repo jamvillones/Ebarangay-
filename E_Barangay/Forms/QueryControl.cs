@@ -67,7 +67,15 @@ namespace E_Barangay.Forms
                 {
                     var yesorno = new YesOrNoPrompt("Entry Not found. Would you like to go register instead?");
                     yesorno.FormClosed += (xx, yy) => { Enabled = true; };
-                    yesorno.onBtnClick += (xx, yy) => { if (yy) IDEmptySearch?.Invoke(this, new EventArgs()); };
+                    yesorno.onBtnClick += (xx, yy) =>
+                    {
+                        if (yy)
+                        {
+                            IDEmptySearch?.Invoke(this, new EventArgs());
+                            return;
+                        }
+                        ResultTxt.Text = 0.ToString();
+                    };
                     yesorno.Show();
                     Enabled = false;
                     return;
@@ -96,7 +104,7 @@ namespace E_Barangay.Forms
 
             //thread.Start();
             using (var e = new EBarangayEntities())
-                PopulateTable(e.Citizens.ToArray());
+                PopulateTable(e.Citizens.OrderBy(x => x.FirstName).ToArray());
         }
         void SetDataGrid()
         {
