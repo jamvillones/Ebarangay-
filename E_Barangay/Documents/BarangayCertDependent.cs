@@ -18,15 +18,15 @@ namespace E_Barangay.Forms
         {
             InitializeComponent();
         }
-       
+
         Class.OfficersForInfoForPrinting o;
         private void DeathCertificate_Load(object sender, EventArgs e)
         {
             printing.PrintPage += Printing_PrintPage;
-            printing.SubscribeToFields(fullName, Address, IssuedOn, supportNameField, SexOption, supportAddressField, officerOption);
-            
+            printing.SubscribeToFields(firstName, middleName, lastName, extension, address, IssuedOn, supportNameField, sexOption, supportAddressField, officerOption);
+
             o = new Class.OfficersForInfoForPrinting();
-            foreach(var x in o.sbMemebers)
+            foreach (var x in o.sbMemebers)
             {
                 officerOption.Items.Add(x);
                 officerOption.AutoCompleteCustomSource.Add(x);
@@ -37,11 +37,11 @@ namespace E_Barangay.Forms
         {
             e.Graphics.DrawImage(Properties.Resources.BarangayCertDEPENDENT, new PointF(0, 0));
             Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 + 50, 548, 320);
-            string name = Printing.IfControlEmpty(fullName);
+            string name = Printing.IfControlEmpty(firstName);
             var h = new Class.NameHelper(name);
-            string first = Printing.Indention + "This is to certify that " + name + " of legal age, Filipino and a resident of " + Printing.IfControlEmpty(Address) + "." + Printing.LineSpace +
+            string first = Printing.Indention + "This is to certify that " + Printing.GetFullName(firstName,middleName,lastName,extension)+ " of legal age, Filipino and a resident of " + Printing.IfControlEmpty(address) + "." + Printing.LineSpace +
                            Printing.Indention + "This is to certify further that " + name + " is the dependent of " + Printing.IfControlEmpty(supportNameField) + " who is presently staying at " + Printing.IfControlEmpty(supportAddressField) + " since " + sinceDate.Value.Year.ToString() + "." + Printing.LineSpace +
-                           Printing.Indention + "This certification is issued upon the request of " + Printing.MrOrMrs(SexOption.Text) + " " + h.Last + " for whatever legal purpose it may serve " + Printing.HisOrHer(SexOption.Text) + "." + Printing.LineSpace +
+                           Printing.Indention + "This certification is issued upon the request of " + Printing.MrOrMrs(sexOption.Text) + " " + h.Last + " for whatever legal purpose it may serve " + Printing.HisOrHer(sexOption.Text) + "." + Printing.LineSpace +
                            Printing.Indention + "Issued this " + IssuedOn.Value.Day + "th of " + IssuedOn.Value.ToString("MMMM yyyy") + " Barangay Poblacion, Kalibo, Aklan.";
             e.Graphics.DrawString(first, Printing.font, Brushes.Black, rect);
             DrawDebugRecs(rect, e);
@@ -78,9 +78,13 @@ namespace E_Barangay.Forms
                 return;
             }
             //Class.NameSeparatingHelper helper = new Class.NameSeparatingHelper(c.Name);
-            fullName.Text = c.getNameWithSpace();
-            SexOption.Text = c.Gender;
-            Address.Text = c.Address;
+            firstName.Text = c.FirstName;
+            middleName.Text = c.MiddleName;
+            lastName.Text = c.LastName;
+            extension.Text = c.Extension;
+
+            sexOption.Text = c.Gender;
+            address.Text = c.Address;
         }
         private void AssignBtn_Click(object sender, EventArgs e)
         {
@@ -95,7 +99,7 @@ namespace E_Barangay.Forms
         #region Clearing
         private void ResetBtn_Click(object sender, EventArgs e)
         {
-            clearFields(fullName, Address, IssuedOn, supportNameField, SexOption, supportAddressField);
+            clearFields(firstName, address, IssuedOn, supportNameField, sexOption, supportAddressField);
         }
         void clearFields(params Control[] controls)
         {

@@ -36,7 +36,10 @@ namespace E_Barangay.Forms
            // printPreviewControl.Document = printDocument;
 
         }
-
+        public static string GetFullName(Control f, Control m,Control l, Control e)
+        {
+            return f.Text + " " + m.Text + " " + l.Text + " " + (string.IsNullOrEmpty(e.Text)?"":" "+e.Text);
+        }
         public static Pen pen = new Pen(Color.Black);
         public static Font font = new Font("Arial Narrow", 12, FontStyle.Regular);
         public static Font fontBold = new Font("Arial Narrow", 12, FontStyle.Bold);

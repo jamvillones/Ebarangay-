@@ -22,15 +22,15 @@ namespace E_Barangay.Forms
         private void DeathCertificate_Load(object sender, EventArgs e)
         {
             printing.PrintPage += Printing_PrintPage;
-            printing.SubscribeToFields(fullNameField, Address,tdNoField, specField, IssuedOn, SexOption);
+            printing.SubscribeToFields(firstName, Address, tdNoField, specField, IssuedOn, SexOption);
         }
 
         private void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(Properties.Resources.BuildingPermit, new PointF(0, 0));
             Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 + 50, 550, 380);
-            string name = Printing.IfControlEmpty(fullNameField);
-            string first = Printing.Indention + "This certification is issued to " + name + ", of legal age, Filipino and a residing at "+Printing.IfControlEmpty(Address)+", per TD No." + Printing.IfControlEmpty(tdNoField) + " in support of " + Printing.HisOrHer(SexOption.Text) + " application for " + Printing.IfControlEmpty(specField) + " permit with the Local Government Unit (LGU) Kalibo." + Printing.LineSpace +
+            string name = Printing.IfControlEmpty(firstName);
+            string first = Printing.Indention + "This certification is issued to " + Printing.GetFullName(firstName, middleName, lastName, extension) + ", of legal age, Filipino and a residing at " + Printing.IfControlEmpty(Address) + ", per TD No." + Printing.IfControlEmpty(tdNoField) + " in support of " + Printing.HisOrHer(SexOption.Text) + " application for " + Printing.IfControlEmpty(specField) + " permit with the Local Government Unit (LGU) Kalibo." + Printing.LineSpace +
                            Printing.Indention + "Issued this " + IssuedOn.Value.Day + "th day of " + IssuedOn.Value.ToString("MMMM, yyyy") + " at Barangay Poblacion, Kalibo, Aklan.";
 
             e.Graphics.DrawString(first, Printing.font, Brushes.Black, rect);
@@ -56,7 +56,10 @@ namespace E_Barangay.Forms
                 this.ActiveControl = IDField;
                 return;
             }
-            fullNameField.Text = c.getNameWithSpace();
+            firstName.Text = c.FirstName;
+            middleName.Text = c.MiddleName;
+            lastName.Text = c.LastName;
+            extension.Text = c.Extension;
             //int age = Class.DateTimeExtension.ToAge(c.Birthday).years;
             SexOption.Text = c.Gender;
             Address.Text = c.Address;
@@ -74,7 +77,7 @@ namespace E_Barangay.Forms
         #region Clearing
         private void ResetBtn_Click(object sender, EventArgs e)
         {
-            clearFields(fullNameField, Address, tdNoField, specField, IssuedOn, SexOption);
+            clearFields(firstName, Address, tdNoField, specField, IssuedOn, SexOption);
         }
         void clearFields(params Control[] controls)
         {

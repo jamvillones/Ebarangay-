@@ -45,10 +45,16 @@
             this.SexOption = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.fullNameField = new System.Windows.Forms.TextBox();
+            this.firstName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Address = new System.Windows.Forms.TextBox();
             this.printing = new E_Barangay.Forms.Printing();
+            this.middleName = new System.Windows.Forms.TextBox();
+            this.lastName = new System.Windows.Forms.TextBox();
+            this.extension = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -76,7 +82,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.specField);
-            this.groupBox4.Location = new System.Drawing.Point(12, 228);
+            this.groupBox4.Location = new System.Drawing.Point(12, 305);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(328, 55);
             this.groupBox4.TabIndex = 3;
@@ -107,7 +113,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.IssuedOn);
-            this.groupBox2.Location = new System.Drawing.Point(12, 289);
+            this.groupBox2.Location = new System.Drawing.Point(12, 366);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(328, 47);
             this.groupBox2.TabIndex = 5;
@@ -182,24 +188,30 @@
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.extension);
+            this.groupBox3.Controls.Add(this.lastName);
+            this.groupBox3.Controls.Add(this.middleName);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.tdNoField);
             this.groupBox3.Controls.Add(this.SexOption);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.fullNameField);
+            this.groupBox3.Controls.Add(this.firstName);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.Address);
             this.groupBox3.Location = new System.Drawing.Point(12, 95);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(328, 127);
+            this.groupBox3.Size = new System.Drawing.Size(328, 204);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DETAILS";
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(6, 96);
+            this.label11.Location = new System.Drawing.Point(6, 174);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(60, 20);
             this.label11.TabIndex = 31;
@@ -210,7 +222,7 @@
             // 
             this.tdNoField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tdNoField.Location = new System.Drawing.Point(92, 96);
+            this.tdNoField.Location = new System.Drawing.Point(92, 174);
             this.tdNoField.Name = "tdNoField";
             this.tdNoField.Size = new System.Drawing.Size(230, 20);
             this.tdNoField.TabIndex = 32;
@@ -224,14 +236,14 @@
             this.SexOption.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.SexOption.Location = new System.Drawing.Point(92, 69);
+            this.SexOption.Location = new System.Drawing.Point(92, 147);
             this.SexOption.Name = "SexOption";
             this.SexOption.Size = new System.Drawing.Size(230, 21);
             this.SexOption.TabIndex = 29;
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(8, 69);
+            this.label9.Location = new System.Drawing.Point(8, 147);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 20);
             this.label9.TabIndex = 30;
@@ -242,24 +254,24 @@
             // 
             this.label1.Location = new System.Drawing.Point(6, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 20);
+            this.label1.Size = new System.Drawing.Size(80, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Full Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // fullNameField
+            // firstName
             // 
-            this.fullNameField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.firstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.fullNameField.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.fullNameField.Location = new System.Drawing.Point(92, 17);
-            this.fullNameField.Name = "fullNameField";
-            this.fullNameField.Size = new System.Drawing.Size(230, 20);
-            this.fullNameField.TabIndex = 1;
+            this.firstName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.firstName.Location = new System.Drawing.Point(92, 17);
+            this.firstName.Name = "firstName";
+            this.firstName.Size = new System.Drawing.Size(230, 20);
+            this.firstName.TabIndex = 1;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(6, 43);
+            this.label3.Location = new System.Drawing.Point(6, 121);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 20);
             this.label3.TabIndex = 5;
@@ -270,7 +282,7 @@
             // 
             this.Address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Address.Location = new System.Drawing.Point(92, 43);
+            this.Address.Location = new System.Drawing.Point(92, 121);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(230, 20);
             this.Address.TabIndex = 6;
@@ -284,6 +296,63 @@
             this.printing.Name = "printing";
             this.printing.Size = new System.Drawing.Size(562, 690);
             this.printing.TabIndex = 0;
+            // 
+            // middleName
+            // 
+            this.middleName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.middleName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.middleName.Location = new System.Drawing.Point(92, 43);
+            this.middleName.Name = "middleName";
+            this.middleName.Size = new System.Drawing.Size(230, 20);
+            this.middleName.TabIndex = 33;
+            // 
+            // lastName
+            // 
+            this.lastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lastName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.lastName.Location = new System.Drawing.Point(92, 69);
+            this.lastName.Name = "lastName";
+            this.lastName.Size = new System.Drawing.Size(230, 20);
+            this.lastName.TabIndex = 34;
+            // 
+            // extension
+            // 
+            this.extension.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.extension.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.extension.Location = new System.Drawing.Point(92, 95);
+            this.extension.Name = "extension";
+            this.extension.Size = new System.Drawing.Size(230, 20);
+            this.extension.TabIndex = 35;
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(6, 43);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 20);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "Middle Name:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(6, 69);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 20);
+            this.label6.TabIndex = 37;
+            this.label6.Text = "Last Name:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(6, 95);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 20);
+            this.label7.TabIndex = 38;
+            this.label7.Text = "Extension:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // BuildingPermit
             // 
@@ -326,7 +395,7 @@
         private System.Windows.Forms.TextBox IDField;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox fullNameField;
+        private System.Windows.Forms.TextBox firstName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Address;
         private Printing printing;
@@ -337,5 +406,11 @@
         private System.Windows.Forms.TextBox tdNoField;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox specField;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox extension;
+        private System.Windows.Forms.TextBox lastName;
+        private System.Windows.Forms.TextBox middleName;
     }
 }

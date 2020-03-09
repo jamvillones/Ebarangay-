@@ -19,7 +19,7 @@ namespace E_Barangay.Forms
         {
             InitializeComponent();
 
-            controls.Add(fullNameField);            
+            controls.Add(firstName);
             controls.Add(Address);
             controls.Add(OrNo);
             controls.Add(OrAmount);
@@ -38,12 +38,12 @@ namespace E_Barangay.Forms
         private void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(Properties.Resources.BussinessClearance, 0, 0);
-            string name = Printing.IfControlEmpty(this.fullNameField);
-            var helper = new Class.NameHelper(name);
+            string name = Printing.IfControlEmpty(this.firstName);
+            //var helper = new Class.NameHelper(name);
 
             #region firstbatch
             Rectangle firstRect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 - 10, 548, 50);
-            string FirstBatch = Printing.Indention + name + " of legal age, Filipino and residing at " +
+            string FirstBatch = Printing.Indention + Printing.GetFullName(firstName, middleName, lastName, extension) + " of legal age, Filipino and residing at " +
                                 Printing.IfControlEmpty(Address) + " to operate:";
             e.Graphics.DrawString(FirstBatch, Printing.font, Brushes.Black, firstRect);
             DrawDebugRecs(firstRect, e);
@@ -72,7 +72,8 @@ namespace E_Barangay.Forms
             #endregion
 
             #region Signature
-            string signName = helper.First + " " +helper.MiddleInitial + ". " + helper.Last + (string.IsNullOrEmpty(helper.Extension) ? "" : " " + helper.Extension); 
+            string s =(string.IsNullOrEmpty(middleName.Text)?string.Empty: middleName.Text[0].ToString());
+            string signName = firstName.Text + " " + s + ". " + lastName.Text + (string.IsNullOrEmpty(extension.Text) ? "" : " " + extension.Text);
             ///sign
             var SignRect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height + 10 - 290, 240, 30);
             //string Name = Printing.IfControlEmpty(this.nameField) + " " + Printing.IfControlEmpty(middleName) + ". " + Printing.IfControlEmpty(lastName);
@@ -132,9 +133,10 @@ namespace E_Barangay.Forms
                 this.ActiveControl = IDField;
                 return;
             }
-            //Class.NameSeparatingHelper helper = new Class.NameSeparatingHelper(citizen.Name);
-            //nameField.Text = helper.First + " " + helper.Middle + " " + helper.Last + " "+helper.Extension;
-            fullNameField.Text = citizen.getNameWithSpace();
+            firstName.Text = citizen.FirstName;
+            middleName.Text = citizen.MiddleName;
+            lastName.Text = citizen.LastName;
+            extension.Text = citizen.Extension;
             Address.Text = citizen.Address;
         }
         #endregion
