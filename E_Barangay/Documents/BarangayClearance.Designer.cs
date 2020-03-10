@@ -98,7 +98,7 @@
             this.groupBox4.Location = new System.Drawing.Point(12, 525);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(330, 55);
-            this.groupBox4.TabIndex = 7;
+            this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Signature";
             // 

@@ -31,6 +31,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.Age = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.officerOption = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.SexOption = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,25 +55,28 @@
             this.IDField = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.fullName = new System.Windows.Forms.TextBox();
+            this.firstName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.Address = new System.Windows.Forms.TextBox();
             this.printing = new E_Barangay.Forms.Printing();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.officerOption = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.middleName = new System.Windows.Forms.TextBox();
+            this.lastName = new System.Windows.Forms.TextBox();
+            this.ext = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.IdGroup.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(6, 43);
+            this.label11.Location = new System.Drawing.Point(6, 121);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(36, 20);
             this.label11.TabIndex = 26;
@@ -82,10 +88,10 @@
             this.Age.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Age.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.Age.Location = new System.Drawing.Point(92, 43);
+            this.Age.Location = new System.Drawing.Point(92, 121);
             this.Age.Name = "Age";
             this.Age.Size = new System.Drawing.Size(230, 20);
-            this.Age.TabIndex = 4;
+            this.Age.TabIndex = 5;
             // 
             // panel1
             // 
@@ -103,6 +109,38 @@
             this.panel1.Size = new System.Drawing.Size(352, 690);
             this.panel1.TabIndex = 2;
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.officerOption);
+            this.groupBox5.Controls.Add(this.label9);
+            this.groupBox5.Location = new System.Drawing.Point(12, 520);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(328, 55);
+            this.groupBox5.TabIndex = 6;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Signature";
+            // 
+            // officerOption
+            // 
+            this.officerOption.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.officerOption.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.officerOption.FormattingEnabled = true;
+            this.officerOption.Location = new System.Drawing.Point(107, 19);
+            this.officerOption.Name = "officerOption";
+            this.officerOption.Size = new System.Drawing.Size(215, 21);
+            this.officerOption.TabIndex = 5;
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(6, 18);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 20);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Officer of the Day:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // groupBox4
             // 
             this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -113,7 +151,7 @@
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.By);
-            this.groupBox4.Location = new System.Drawing.Point(12, 201);
+            this.groupBox4.Location = new System.Drawing.Point(12, 279);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(328, 100);
             this.groupBox4.TabIndex = 3;
@@ -188,7 +226,7 @@
             this.groupBox1.Controls.Add(this.DeathPlace);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.DeathDate);
-            this.groupBox1.Location = new System.Drawing.Point(12, 307);
+            this.groupBox1.Location = new System.Drawing.Point(12, 385);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(328, 76);
             this.groupBox1.TabIndex = 4;
@@ -240,7 +278,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.IssuedOn);
-            this.groupBox2.Location = new System.Drawing.Point(12, 389);
+            this.groupBox2.Location = new System.Drawing.Point(12, 467);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(328, 47);
             this.groupBox2.TabIndex = 5;
@@ -273,7 +311,7 @@
             this.ResetBtn.Location = new System.Drawing.Point(126, 653);
             this.ResetBtn.Name = "ResetBtn";
             this.ResetBtn.Size = new System.Drawing.Size(100, 25);
-            this.ResetBtn.TabIndex = 6;
+            this.ResetBtn.TabIndex = 7;
             this.ResetBtn.Text = "Reset";
             this.ResetBtn.UseVisualStyleBackColor = true;
             // 
@@ -315,15 +353,21 @@
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.ext);
+            this.groupBox3.Controls.Add(this.lastName);
+            this.groupBox3.Controls.Add(this.middleName);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.Age);
             this.groupBox3.Controls.Add(this.label1);
-            this.groupBox3.Controls.Add(this.fullName);
+            this.groupBox3.Controls.Add(this.firstName);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.Address);
             this.groupBox3.Location = new System.Drawing.Point(12, 95);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(328, 100);
+            this.groupBox3.Size = new System.Drawing.Size(328, 178);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DETAILS";
@@ -332,24 +376,24 @@
             // 
             this.label1.Location = new System.Drawing.Point(6, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 20);
+            this.label1.Size = new System.Drawing.Size(80, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Full Name:";
+            this.label1.Text = "First Name:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // fullName
+            // firstName
             // 
-            this.fullName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.firstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.fullName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.fullName.Location = new System.Drawing.Point(92, 17);
-            this.fullName.Name = "fullName";
-            this.fullName.Size = new System.Drawing.Size(230, 20);
-            this.fullName.TabIndex = 1;
+            this.firstName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.firstName.Location = new System.Drawing.Point(92, 17);
+            this.firstName.Name = "firstName";
+            this.firstName.Size = new System.Drawing.Size(230, 20);
+            this.firstName.TabIndex = 1;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(6, 69);
+            this.label3.Location = new System.Drawing.Point(6, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 20);
             this.label3.TabIndex = 5;
@@ -360,7 +404,7 @@
             // 
             this.Address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Address.Location = new System.Drawing.Point(92, 69);
+            this.Address.Location = new System.Drawing.Point(92, 147);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(230, 20);
             this.Address.TabIndex = 6;
@@ -375,37 +419,62 @@
             this.printing.Size = new System.Drawing.Size(562, 690);
             this.printing.TabIndex = 0;
             // 
-            // groupBox5
+            // middleName
             // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.middleName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Controls.Add(this.officerOption);
-            this.groupBox5.Controls.Add(this.label9);
-            this.groupBox5.Location = new System.Drawing.Point(12, 442);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(328, 55);
-            this.groupBox5.TabIndex = 7;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Signature";
+            this.middleName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.middleName.Location = new System.Drawing.Point(92, 43);
+            this.middleName.Name = "middleName";
+            this.middleName.Size = new System.Drawing.Size(230, 20);
+            this.middleName.TabIndex = 2;
             // 
-            // officerOption
+            // lastName
             // 
-            this.officerOption.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.officerOption.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.officerOption.FormattingEnabled = true;
-            this.officerOption.Location = new System.Drawing.Point(107, 19);
-            this.officerOption.Name = "officerOption";
-            this.officerOption.Size = new System.Drawing.Size(215, 21);
-            this.officerOption.TabIndex = 5;
+            this.lastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lastName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.lastName.Location = new System.Drawing.Point(92, 69);
+            this.lastName.Name = "lastName";
+            this.lastName.Size = new System.Drawing.Size(230, 20);
+            this.lastName.TabIndex = 3;
             // 
-            // label9
+            // ext
             // 
-            this.label9.Location = new System.Drawing.Point(6, 18);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 20);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Officer of the Day:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ext.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ext.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.ext.Location = new System.Drawing.Point(92, 95);
+            this.ext.Name = "ext";
+            this.ext.Size = new System.Drawing.Size(230, 20);
+            this.ext.TabIndex = 4;
+            // 
+            // label10
+            // 
+            this.label10.Location = new System.Drawing.Point(6, 43);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 20);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Middle Name:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label12
+            // 
+            this.label12.Location = new System.Drawing.Point(6, 69);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(80, 20);
+            this.label12.TabIndex = 28;
+            this.label12.Text = "Last Name:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label13
+            // 
+            this.label13.Location = new System.Drawing.Point(6, 95);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(80, 20);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "Extension:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // DeathCertificate
             // 
@@ -426,6 +495,7 @@
             this.Load += new System.EventHandler(this.DeathCertificate_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DeathCertificate_KeyDown);
             this.panel1.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -435,7 +505,6 @@
             this.IdGroup.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -453,7 +522,7 @@
         private System.Windows.Forms.TextBox IDField;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox fullName;
+        private System.Windows.Forms.TextBox firstName;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Address;
         private Printing printing;
@@ -472,5 +541,11 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.ComboBox officerOption;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox ext;
+        private System.Windows.Forms.TextBox lastName;
+        private System.Windows.Forms.TextBox middleName;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label10;
     }
 }

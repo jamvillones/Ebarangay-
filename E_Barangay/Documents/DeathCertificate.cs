@@ -22,7 +22,7 @@ namespace E_Barangay.Forms
         private void DeathCertificate_Load(object sender, EventArgs e)
         {
             printing.PrintPage += Printing_PrintPage;
-            printing.SubscribeToFields(fullName, Age, Address, DeathPlace, DeathDate, IssuedOn, By, SexOption, Relation,officerOption);
+            printing.SubscribeToFields(firstName, Age, Address, DeathPlace, DeathDate, IssuedOn, By, SexOption, Relation,officerOption);
 
             o = new Class.OfficersForInfoForPrinting();
             foreach (var x in o.sbMemebers)
@@ -37,7 +37,7 @@ namespace E_Barangay.Forms
         {
             e.Graphics.DrawImage(Properties.Resources.DeathCertificate, new PointF(0, 0));
             Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 + 50, 550, 380);
-            string name = Printing.IfControlEmpty(fullName);
+            string name = Printing.GetFullName(firstName,middleName,lastName,ext);
             string first = Printing.Indention + "This is to certify that as per record of this Barangay, " + name + " " + Printing.IfControlEmpty(Age) + " years old, Filipino and a resident of " + Printing.IfControlEmpty(Address) + "." + Printing.LineSpace +
                            Printing.Indention + "This is to certify further that " + name + " died last " + DeathDate.Value.ToString("MMMM dd, yyyy") + " at " + Printing.IfControlEmpty(DeathPlace) + "." + Printing.LineSpace +
                            Printing.Indention + "This certification is issued upon the request of " + Printing.HisOrHer(SexOption.Text) + " " + Relation.Text + " " + By.Text + " for whatever legal purpose it may serve "+Printing.HimOrHer(SexOption.Text)+"." + Printing.LineSpace +
@@ -77,7 +77,11 @@ namespace E_Barangay.Forms
                 return;
             }
             //Class.NameSeparatingHelper helper = new Class.NameSeparatingHelper(c.Name);
-            fullName.Text = c.getNameWithSpace();
+            firstName.Text = c.FirstName;
+            middleName.Text = c.MiddleName;
+            lastName.Text = c.LastName;
+            ext.Text = c.Extension;
+
             int age = DateTime.Today.Year - c.Birthday.Year;
             Age.Text = age > 0 ? age.ToString() : 1.ToString();
             Address.Text = c.Address;
@@ -95,7 +99,7 @@ namespace E_Barangay.Forms
         #region Clearing
         private void ResetBtn_Click(object sender, EventArgs e)
         {
-            clearFields(fullName, Age, Address, DeathPlace, DeathDate, IssuedOn, By, SexOption, Relation);
+            clearFields(firstName, Age, Address, DeathPlace, DeathDate, IssuedOn, By, SexOption, Relation);
         }
         void clearFields(params Control[] controls)
         {
