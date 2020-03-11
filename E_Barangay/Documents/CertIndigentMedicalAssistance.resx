@@ -117,41 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="BARANGAY_CLEARANCE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Barangay Clearance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BuildingPermit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BuildingPermit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BussinessClearance" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BussinessClearance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CertAppearance" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CertAppearance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DeathCertificate" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Death Cert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="eye_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eye_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="invisible_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\invisible_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CertificateOfIndigency" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CertificateOfIndigency.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BarangayCertDEPENDENT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BarangayCertDEPENDENT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BarangayClearance_tmp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BarangayClearance_tmp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BrgyCertificationforBurial" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BrgyCertificationforBurial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

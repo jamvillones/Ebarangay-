@@ -23,7 +23,7 @@ namespace E_Barangay.Forms
         private void DeathCertificate_Load(object sender, EventArgs e)
         {
             printing.PrintPage += Printing_PrintPage;
-            printing.SubscribeToFields(firstName, middleName, lastName, extension, address, IssuedOn, supportNameField, sexOption, supportAddressField, officerOption);
+            printing.SubscribeToFields(sinceDate,IDField,firstName, middleName, lastName, extension, address, IssuedOn, supportNameField, sexOption, supportAddressField, officerOption);
 
             o = new Class.OfficersForInfoForPrinting();
             foreach (var x in o.sbMemebers)
@@ -46,16 +46,26 @@ namespace E_Barangay.Forms
             e.Graphics.DrawString(first, Printing.font, Brushes.Black, rect);
             DrawDebugRecs(rect, e);
 
+            SizeF capBoxSize = e.Graphics.MeasureString(o.captName, Printing.fontBold);
+            SizeF titleBoxSize = e.Graphics.MeasureString(o.captName, Printing.font);
             StringFormat format = new StringFormat();
             format.Alignment = StringAlignment.Center;
 
-            Rectangle captRec = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, e.PageBounds.Height * 2 / 3 + 8, 270, 28);
+            Rectangle captRec = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, e.PageBounds.Height * 2 / 3 + 40, 270, (int)capBoxSize.Height);
             e.Graphics.DrawString(o.captName.ToUpper(), Printing.fontBold, Brushes.Black, captRec, format);
             DrawDebugRecs(captRec, e);
 
-            Rectangle sbRect = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, e.PageBounds.Height * 3 / 4 + 22, 270, 28);
+            Rectangle capRecTitle = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, captRec.Top + (int)capBoxSize.Height, 270, (int)titleBoxSize.Height * 2);
+            e.Graphics.DrawString("Punong Barangay", Printing.font, Brushes.Black, capRecTitle, format);
+            DrawDebugRecs(capRecTitle, e);
+
+            Rectangle sbRect = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, capRecTitle.Bottom + 30, 270, (int)capBoxSize.Height);
             e.Graphics.DrawString(Printing.IfControlEmpty(officerOption).ToUpper(), Printing.fontBold, Brushes.Black, sbRect, format);
             DrawDebugRecs(sbRect, e);
+
+            Rectangle sbRectTitle = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, sbRect.Top + (int)capBoxSize.Height, 270, (int)titleBoxSize.Height * 2);
+            e.Graphics.DrawString("Sangguniang Barangay Member Officer of the Day", Printing.font, Brushes.Black, sbRectTitle, format);
+            DrawDebugRecs(sbRectTitle, e);
         }
 
         bool debug = false;
@@ -99,7 +109,7 @@ namespace E_Barangay.Forms
         #region Clearing
         private void ResetBtn_Click(object sender, EventArgs e)
         {
-            clearFields(firstName, address, IssuedOn, supportNameField, sexOption, supportAddressField);
+            clearFields(firstName,middleName,lastName,extension,IDField, address, IssuedOn, supportNameField, sexOption, supportAddressField);
         }
         void clearFields(params Control[] controls)
         {

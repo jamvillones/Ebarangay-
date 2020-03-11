@@ -159,6 +159,18 @@
     <Compile Include="Documents\BarangayCertDependent.Designer.cs">
       <DependentUpon>BarangayCertDependent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\BrgyCertificationforBurial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BrgyCertificationforBurial.Designer.cs">
+      <DependentUpon>BrgyCertificationforBurial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\CertIndigentMedicalAssistance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertIndigentMedicalAssistance.Designer.cs">
+      <DependentUpon>CertIndigentMedicalAssistance.cs</DependentUpon>
+    </Compile>
     <Compile Include="EBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -337,6 +349,12 @@
     <EmbeddedResource Include="Documents\CertificateOfIndigency.resx">
       <DependentUpon>CertificateOfIndigency.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BrgyCertificationforBurial.resx">
+      <DependentUpon>BrgyCertificationforBurial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertIndigentMedicalAssistance.resx">
+      <DependentUpon>CertIndigentMedicalAssistance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditPage.resx">
       <DependentUpon>EditPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -452,6 +470,7 @@
       <LastGenOutput>EBModel.cs</LastGenOutput>
     </Content>
     <Content Include="favicon.ico" />
+    <None Include="Resources\BrgyCertificationforBurial.png" />
     <None Include="Resources\BarangayClearance_tmp.png" />
     <None Include="Resources\BarangayCertDEPENDENT.png" />
     <None Include="Resources\CertificateOfIndigency.png" />

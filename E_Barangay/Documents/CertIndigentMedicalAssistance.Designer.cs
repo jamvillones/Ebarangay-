@@ -1,6 +1,6 @@
 ﻿namespace E_Barangay.Forms
 {
-    partial class DeathCertificate
+    partial class CertIndigentMedicalAssistance
     {
         /// <summary>
         /// Required designer variable.
@@ -41,11 +41,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.By = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.DeathPlace = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.DeathDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.IssuedOn = new System.Windows.Forms.DateTimePicker();
@@ -68,7 +65,6 @@
             this.panel1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.IdGroup.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -98,7 +94,6 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel1.Controls.Add(this.groupBox5);
             this.panel1.Controls.Add(this.groupBox4);
-            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.ResetBtn);
             this.panel1.Controls.Add(this.IdGroup);
@@ -115,7 +110,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.officerOption);
             this.groupBox5.Controls.Add(this.label9);
-            this.groupBox5.Location = new System.Drawing.Point(12, 520);
+            this.groupBox5.Location = new System.Drawing.Point(12, 465);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(328, 55);
             this.groupBox5.TabIndex = 6;
@@ -218,28 +213,13 @@
             this.By.Size = new System.Drawing.Size(230, 20);
             this.By.TabIndex = 1;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.DeathPlace);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.DeathDate);
-            this.groupBox1.Location = new System.Drawing.Point(12, 385);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(328, 76);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Death Details";
-            // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(6, 16);
+            this.label5.Location = new System.Drawing.Point(6, 18);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 20);
+            this.label5.Size = new System.Drawing.Size(94, 20);
             this.label5.TabIndex = 28;
-            this.label5.Text = "Place:";
+            this.label5.Text = "Requested from:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // DeathPlace
@@ -247,47 +227,29 @@
             this.DeathPlace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DeathPlace.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.DeathPlace.Location = new System.Drawing.Point(92, 17);
+            this.DeathPlace.Location = new System.Drawing.Point(106, 19);
             this.DeathPlace.Name = "DeathPlace";
-            this.DeathPlace.Size = new System.Drawing.Size(230, 20);
+            this.DeathPlace.Size = new System.Drawing.Size(216, 20);
             this.DeathPlace.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.Location = new System.Drawing.Point(6, 45);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 20);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Date";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // DeathDate
-            // 
-            this.DeathDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DeathDate.CustomFormat = "MMMM dd, yyyy";
-            this.DeathDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DeathDate.Location = new System.Drawing.Point(92, 43);
-            this.DeathDate.Name = "DeathDate";
-            this.DeathDate.Size = new System.Drawing.Size(230, 20);
-            this.DeathDate.TabIndex = 2;
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.DeathPlace);
             this.groupBox2.Controls.Add(this.IssuedOn);
-            this.groupBox2.Location = new System.Drawing.Point(12, 467);
+            this.groupBox2.Location = new System.Drawing.Point(12, 385);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(328, 47);
+            this.groupBox2.Size = new System.Drawing.Size(328, 74);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "MISC";
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(6, 16);
+            this.label2.Location = new System.Drawing.Point(6, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 20);
             this.label2.TabIndex = 4;
@@ -300,9 +262,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.IssuedOn.CustomFormat = "MMMM dd, yyyy";
             this.IssuedOn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.IssuedOn.Location = new System.Drawing.Point(92, 14);
+            this.IssuedOn.Location = new System.Drawing.Point(107, 45);
             this.IssuedOn.Name = "IssuedOn";
-            this.IssuedOn.Size = new System.Drawing.Size(230, 20);
+            this.IssuedOn.Size = new System.Drawing.Size(215, 20);
             this.IssuedOn.TabIndex = 2;
             // 
             // ResetBtn
@@ -314,7 +276,6 @@
             this.ResetBtn.TabIndex = 7;
             this.ResetBtn.Text = "Reset";
             this.ResetBtn.UseVisualStyleBackColor = true;
-            this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
             // 
             // IdGroup
             // 
@@ -477,7 +438,7 @@
             this.printing.Size = new System.Drawing.Size(562, 690);
             this.printing.TabIndex = 0;
             // 
-            // DeathCertificate
+            // CertIndigentMedicalAssistance
             // 
             this.AcceptButton = this.AssignBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,19 +450,18 @@
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "DeathCertificate";
+            this.Name = "CertIndigentMedicalAssistance";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Death Certificate";
+            this.Text = "CertIndigent - Medical Assistance";
             this.Load += new System.EventHandler(this.DeathCertificate_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DeathCertificate_KeyDown);
             this.panel1.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.IdGroup.ResumeLayout(false);
             this.IdGroup.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -527,11 +487,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox Address;
         private Printing printing;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox DeathPlace;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker DeathDate;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox Relation;

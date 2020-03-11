@@ -20,7 +20,8 @@ namespace E_Barangay.Forms
             "Building Permit",
             "Certificate of Appearance",
             "Certificate of Indigency",
-            "Cert Dependent"
+            "Cert Dependent",
+            "Brgy Certificate for Burial"
         };
         public PrintingDocument()
         {
@@ -131,6 +132,9 @@ namespace E_Barangay.Forms
                     break;
                 case "Cert Dependent":
                     CreateForm<BarangayCertDependent>();
+                    break;
+                case "Brgy Certificate for Burial":
+                    CreateForm<BrgyCertificationforBurial>();
                     break;
                 default:
                     break;

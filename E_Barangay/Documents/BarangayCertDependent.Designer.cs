@@ -47,6 +47,12 @@
             this.AssignBtn = new System.Windows.Forms.Button();
             this.IDField = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.extension = new System.Windows.Forms.TextBox();
+            this.lastName = new System.Windows.Forms.TextBox();
+            this.middleName = new System.Windows.Forms.TextBox();
             this.sexOption = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,12 +60,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.address = new System.Windows.Forms.TextBox();
             this.printing = new E_Barangay.Forms.Printing();
-            this.middleName = new System.Windows.Forms.TextBox();
-            this.lastName = new System.Windows.Forms.TextBox();
-            this.extension = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -289,6 +289,63 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dependant";
             // 
+            // label11
+            // 
+            this.label11.Location = new System.Drawing.Point(6, 95);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(60, 20);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "Extension:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label10
+            // 
+            this.label10.Location = new System.Drawing.Point(6, 69);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(80, 20);
+            this.label10.TabIndex = 35;
+            this.label10.Text = "Last Name:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(6, 43);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 20);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "Middle Name:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // extension
+            // 
+            this.extension.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.extension.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.extension.Location = new System.Drawing.Point(92, 95);
+            this.extension.Name = "extension";
+            this.extension.Size = new System.Drawing.Size(230, 20);
+            this.extension.TabIndex = 4;
+            // 
+            // lastName
+            // 
+            this.lastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lastName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.lastName.Location = new System.Drawing.Point(92, 69);
+            this.lastName.Name = "lastName";
+            this.lastName.Size = new System.Drawing.Size(230, 20);
+            this.lastName.TabIndex = 3;
+            // 
+            // middleName
+            // 
+            this.middleName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.middleName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.middleName.Location = new System.Drawing.Point(92, 43);
+            this.middleName.Name = "middleName";
+            this.middleName.Size = new System.Drawing.Size(230, 20);
+            this.middleName.TabIndex = 2;
+            // 
             // sexOption
             // 
             this.sexOption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -301,7 +358,7 @@
             this.sexOption.Location = new System.Drawing.Point(92, 147);
             this.sexOption.Name = "sexOption";
             this.sexOption.Size = new System.Drawing.Size(230, 21);
-            this.sexOption.TabIndex = 29;
+            this.sexOption.TabIndex = 6;
             // 
             // label6
             // 
@@ -347,7 +404,7 @@
             this.address.Location = new System.Drawing.Point(92, 121);
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(230, 20);
-            this.address.TabIndex = 6;
+            this.address.TabIndex = 5;
             // 
             // printing
             // 
@@ -358,63 +415,6 @@
             this.printing.Name = "printing";
             this.printing.Size = new System.Drawing.Size(562, 690);
             this.printing.TabIndex = 0;
-            // 
-            // middleName
-            // 
-            this.middleName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.middleName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.middleName.Location = new System.Drawing.Point(92, 43);
-            this.middleName.Name = "middleName";
-            this.middleName.Size = new System.Drawing.Size(230, 20);
-            this.middleName.TabIndex = 31;
-            // 
-            // lastName
-            // 
-            this.lastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lastName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.lastName.Location = new System.Drawing.Point(92, 69);
-            this.lastName.Name = "lastName";
-            this.lastName.Size = new System.Drawing.Size(230, 20);
-            this.lastName.TabIndex = 32;
-            // 
-            // extension
-            // 
-            this.extension.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.extension.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.extension.Location = new System.Drawing.Point(92, 95);
-            this.extension.Name = "extension";
-            this.extension.Size = new System.Drawing.Size(230, 20);
-            this.extension.TabIndex = 33;
-            // 
-            // label9
-            // 
-            this.label9.Location = new System.Drawing.Point(6, 43);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 20);
-            this.label9.TabIndex = 34;
-            this.label9.Text = "Middle Name:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label10
-            // 
-            this.label10.Location = new System.Drawing.Point(6, 69);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 20);
-            this.label10.TabIndex = 35;
-            this.label10.Text = "Last Name:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label11
-            // 
-            this.label11.Location = new System.Drawing.Point(6, 95);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 20);
-            this.label11.TabIndex = 36;
-            this.label11.Text = "Extension:";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // BarangayCertDependent
             // 

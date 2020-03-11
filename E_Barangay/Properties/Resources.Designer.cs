@@ -93,6 +93,16 @@ namespace E_Barangay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap BrgyCertificationforBurial {
+            get {
+                object obj = ResourceManager.GetObject("BrgyCertificationforBurial", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap BuildingPermit {
             get {
                 object obj = ResourceManager.GetObject("BuildingPermit", resourceCulture);
