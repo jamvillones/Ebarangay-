@@ -54,8 +54,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Address = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.deathPlace = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.DeathPlace = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.DeathDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -362,8 +362,8 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.deathPlace);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.DeathPlace);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.DeathDate);
             this.groupBox1.Location = new System.Drawing.Point(12, 305);
@@ -373,6 +373,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Death Details";
             // 
+            // deathPlace
+            // 
+            this.deathPlace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.deathPlace.Location = new System.Drawing.Point(92, 16);
+            this.deathPlace.Name = "deathPlace";
+            this.deathPlace.Size = new System.Drawing.Size(230, 20);
+            this.deathPlace.TabIndex = 1;
+            // 
             // label5
             // 
             this.label5.Location = new System.Drawing.Point(6, 16);
@@ -381,15 +390,6 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "Place:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // DeathPlace
-            // 
-            this.DeathPlace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DeathPlace.Location = new System.Drawing.Point(92, 17);
-            this.DeathPlace.Name = "DeathPlace";
-            this.DeathPlace.Size = new System.Drawing.Size(230, 20);
-            this.DeathPlace.TabIndex = 1;
             // 
             // label14
             // 
@@ -490,11 +490,11 @@
         private System.Windows.Forms.ComboBox civilStatusOption;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox DeathPlace;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DateTimePicker DeathDate;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.ComboBox officerOption;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox deathPlace;
     }
 }

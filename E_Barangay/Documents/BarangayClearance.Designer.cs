@@ -89,7 +89,7 @@
             this.officerOption.Location = new System.Drawing.Point(106, 17);
             this.officerOption.Name = "officerOption";
             this.officerOption.Size = new System.Drawing.Size(216, 21);
-            this.officerOption.TabIndex = 35;
+            this.officerOption.TabIndex = 1;
             // 
             // label9
             // 
@@ -246,7 +246,7 @@
             this.SexOption.Location = new System.Drawing.Point(92, 173);
             this.SexOption.Name = "SexOption";
             this.SexOption.Size = new System.Drawing.Size(230, 21);
-            this.SexOption.TabIndex = 7;
+            this.SexOption.TabIndex = 6;
             // 
             // label6
             // 
@@ -316,7 +316,7 @@
             this.CStatusOption.Location = new System.Drawing.Point(92, 200);
             this.CStatusOption.Name = "CStatusOption";
             this.CStatusOption.Size = new System.Drawing.Size(230, 21);
-            this.CStatusOption.TabIndex = 8;
+            this.CStatusOption.TabIndex = 7;
             // 
             // label3
             // 

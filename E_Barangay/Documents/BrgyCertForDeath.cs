@@ -35,7 +35,7 @@ namespace E_Barangay.Documents
 
             string first = "To whom it may concern:" + Printing.LineSpace +
                             Printing.Indention + "This is to certify that as per record of this Barangay " + name + " legal age, " + civilStatusOption.Text + ", Filipino has been a resident of " + Address.Text + "." + Printing.LineSpace +
-                            Printing.Indention + "This is to certify further that "+name+" died last "+DeathDate.Value.ToString("MMMM dd,yyyy")+" at "+DeathPlace.Text+"."+Printing.LineSpace+
+                            Printing.Indention + "This is to certify further that "+name+" died last "+DeathDate.Value.ToString("MMMM dd,yyyy")+" at "+deathPlace.Text+"."+Printing.LineSpace+
                             Printing.Indention + "This certification is issued upon the request of " + Printing.HisOrHer(sexOption.Text) + " " + Relation.Text + " " + By.Text + " for whatever legal purpose it may serve " + Printing.HimOrHer(reqSexOption.Text) + "." + Printing.LineSpace +
                             Printing.Indention + "Issued this " + IssuedOn.Value.Day + "th of " + IssuedOn.Value.ToString("MMMM yyyy") + " Barangay Poblacion, Kalibo, Aklan."; 
 
@@ -47,7 +47,7 @@ namespace E_Barangay.Documents
         public override void InitializeControls()
         {
             base.InitializeControls();
-            AddControls(firstName, middleName, lastName, ext, sexOption, civilStatusOption, Address, By, reqSexOption, Relation, IssuedOn, officerOption); ;
+            AddControls(firstName, middleName, lastName, ext, sexOption, civilStatusOption, Address, By, reqSexOption, Relation, IssuedOn, officerOption,DeathDate,deathPlace); ;
            
             foreach (var x in o.sbMemebers)
             {
