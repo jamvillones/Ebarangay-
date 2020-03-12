@@ -136,6 +136,12 @@
     <Compile Include="Controls\RTPRint.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Documents\BarangayClearance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BarangayClearance.Designer.cs">
+      <DependentUpon>BarangayClearance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\BrgyCertForDeath.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -218,12 +224,6 @@
     </Compile>
     <Compile Include="Documents\DeathCertificate.Designer.cs">
       <DependentUpon>DeathCertificate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Documents\BarangayClearance.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Documents\BarangayClearance.Designer.cs">
-      <DependentUpon>BarangayClearance.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\CaptureImageForm.cs">
       <SubType>Form</SubType>
@@ -350,6 +350,9 @@
     <Compile Include="User.cs">
       <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Documents\BarangayClearance.resx">
+      <DependentUpon>BarangayClearance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Documents\BrgyCertForDeath.resx">
       <DependentUpon>BrgyCertForDeath.cs</DependentUpon>
     </EmbeddedResource>
@@ -382,9 +385,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\DeathCertificate.resx">
       <DependentUpon>DeathCertificate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Documents\BarangayClearance.resx">
-      <DependentUpon>BarangayClearance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CaptureImageForm.resx">
       <DependentUpon>CaptureImageForm.cs</DependentUpon>

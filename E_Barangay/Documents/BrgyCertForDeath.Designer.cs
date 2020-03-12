@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.officerOption = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.reqSexOption = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -61,58 +58,29 @@
             this.DeathPlace = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.DeathDate = new System.Windows.Forms.DateTimePicker();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.officerOption = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.FieldsPanel.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // FieldsPanel
             // 
-            this.FieldsPanel.Controls.Add(this.groupBox1);
             this.FieldsPanel.Controls.Add(this.groupBox5);
+            this.FieldsPanel.Controls.Add(this.groupBox1);
             this.FieldsPanel.Controls.Add(this.groupBox4);
             this.FieldsPanel.Controls.Add(this.groupBox2);
             this.FieldsPanel.Controls.Add(this.groupBox3);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox3, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox2, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox4, 0);
-            this.FieldsPanel.Controls.SetChildIndex(this.groupBox5, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox1, 0);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox5.Controls.Add(this.officerOption);
-            this.groupBox5.Controls.Add(this.label9);
-            this.groupBox5.Location = new System.Drawing.Point(12, 552);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(328, 55);
-            this.groupBox5.TabIndex = 6;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Signature";
-            // 
-            // officerOption
-            // 
-            this.officerOption.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.officerOption.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.officerOption.FormattingEnabled = true;
-            this.officerOption.Location = new System.Drawing.Point(107, 19);
-            this.officerOption.Name = "officerOption";
-            this.officerOption.Size = new System.Drawing.Size(215, 21);
-            this.officerOption.TabIndex = 5;
-            // 
-            // label9
-            // 
-            this.label9.Location = new System.Drawing.Point(6, 18);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 20);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Officer of the Day:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.FieldsPanel.Controls.SetChildIndex(this.groupBox5, 0);
             // 
             // groupBox4
             // 
@@ -443,6 +411,38 @@
             this.DeathDate.Size = new System.Drawing.Size(230, 20);
             this.DeathDate.TabIndex = 2;
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.officerOption);
+            this.groupBox5.Controls.Add(this.label9);
+            this.groupBox5.Location = new System.Drawing.Point(12, 552);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(328, 55);
+            this.groupBox5.TabIndex = 6;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Signature";
+            // 
+            // officerOption
+            // 
+            this.officerOption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.officerOption.FormattingEnabled = true;
+            this.officerOption.Location = new System.Drawing.Point(106, 17);
+            this.officerOption.Name = "officerOption";
+            this.officerOption.Size = new System.Drawing.Size(216, 21);
+            this.officerOption.TabIndex = 35;
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(6, 18);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 20);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "Officer of the Day:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // BrgyCertForDeath
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,7 +450,6 @@
             this.Name = "BrgyCertForDeath";
             this.Text = "Brgy. Cert for Death";
             this.FieldsPanel.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -458,15 +457,12 @@
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.ComboBox officerOption;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ComboBox reqSexOption;
         private System.Windows.Forms.Label label8;
@@ -497,5 +493,8 @@
         private System.Windows.Forms.TextBox DeathPlace;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DateTimePicker DeathDate;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ComboBox officerOption;
+        private System.Windows.Forms.Label label9;
     }
 }

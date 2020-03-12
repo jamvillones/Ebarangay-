@@ -32,8 +32,8 @@
             this.IdGroup = new System.Windows.Forms.GroupBox();
             this.AssignBtn = new System.Windows.Forms.Button();
             this.IDField = new System.Windows.Forms.TextBox();
-            this.printing = new E_Barangay.Forms.Printing();
             this.FieldsPanel = new System.Windows.Forms.Panel();
+            this.printing = new E_Barangay.Forms.Printing();
             this.IdGroup.SuspendLayout();
             this.FieldsPanel.SuspendLayout();
             this.SuspendLayout();
@@ -45,6 +45,7 @@
             this.ResetBtn.Name = "ResetBtn";
             this.ResetBtn.Size = new System.Drawing.Size(100, 25);
             this.ResetBtn.TabIndex = 7;
+            this.ResetBtn.TabStop = false;
             this.ResetBtn.Text = "Reset";
             this.ResetBtn.UseVisualStyleBackColor = true;
             this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
@@ -84,16 +85,6 @@
             this.IDField.Size = new System.Drawing.Size(316, 20);
             this.IDField.TabIndex = 3;
             // 
-            // printing
-            // 
-            this.printing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.printing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.printing.Dock = System.Windows.Forms.DockStyle.Right;
-            this.printing.Location = new System.Drawing.Point(352, 0);
-            this.printing.Name = "printing";
-            this.printing.Size = new System.Drawing.Size(562, 690);
-            this.printing.TabIndex = 0;
-            // 
             // FieldsPanel
             // 
             this.FieldsPanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
@@ -104,6 +95,17 @@
             this.FieldsPanel.Name = "FieldsPanel";
             this.FieldsPanel.Size = new System.Drawing.Size(352, 690);
             this.FieldsPanel.TabIndex = 8;
+            // 
+            // printing
+            // 
+            this.printing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.printing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.printing.Dock = System.Windows.Forms.DockStyle.Right;
+            this.printing.Location = new System.Drawing.Point(352, 0);
+            this.printing.Name = "printing";
+            this.printing.Size = new System.Drawing.Size(562, 690);
+            this.printing.TabIndex = 0;
+            this.printing.TabStop = false;
             // 
             // BaseDocForm
             // 

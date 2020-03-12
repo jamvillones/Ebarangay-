@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using E_Barangay.Class;
 using E_Barangay.Documents;
 using E_Barangay.Forms;
 
@@ -15,12 +16,15 @@ namespace E_Barangay.Documents
 {
     public partial class BrgyCertForDeath : BaseDocForm
     {
+        OfficersForInfoForPrinting o = new OfficersForInfoForPrinting();
         public BrgyCertForDeath()
         {
             InitializeComponent();
         }
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
+            //if (o == null)
+            //    o = new Class.OfficersForInfoForPrinting();
             e.Graphics.DrawImage(Properties.Resources.DeathCertificate, new PointF(0, 0));
 
             Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 32,
@@ -42,7 +46,9 @@ namespace E_Barangay.Documents
         }
         public override void InitializeControls()
         {
+            base.InitializeControls();
             AddControls(firstName, middleName, lastName, ext, sexOption, civilStatusOption, Address, By, reqSexOption, Relation, IssuedOn, officerOption); ;
+           
             foreach (var x in o.sbMemebers)
             {
                 officerOption.Items.Add(x);

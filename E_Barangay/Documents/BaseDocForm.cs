@@ -17,12 +17,13 @@ namespace E_Barangay.Forms
     public partial class BaseDocForm : Form
     {
         protected List<Control> controls = new List<Control>();
-        protected OfficersForInfoForPrinting o;
+        protected string capt = string.Empty;
 
 
         public BaseDocForm()
         {
             InitializeComponent();
+            
 
         }
         public virtual void InitializeControls() { }
@@ -93,16 +94,11 @@ namespace E_Barangay.Forms
 
         private void goLoad(object sender, EventArgs e)
         {
-            o = new OfficersForInfoForPrinting();
+            //o = new OfficersForInfoForPrinting();
             InitializeControls();
             subscribe();
             printing.PrintPage += Printing_PrintPage;
 
         }
-
-        //void ICitizenAcceptor.AcceptCitizen(Citizen citizen)
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }
