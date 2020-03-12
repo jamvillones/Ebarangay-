@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace E_Barangay.Forms
 {
     public partial class CertIndigentMedicalAssistance : Form
@@ -22,7 +23,7 @@ namespace E_Barangay.Forms
         private void DeathCertificate_Load(object sender, EventArgs e)
         {
             printing.PrintPage += Printing_PrintPage;
-            printing.SubscribeToFields(firstName, Age, Address, DeathPlace, IssuedOn, By, SexOption, Relation, officerOption);
+            printing.SubscribeToFields(IDField,firstName,middleName,lastName,ext,sexOption, Age, Address, FromTo, IssuedOn, By, reqSexOption, Relation, officerOption);
 
             o = new Class.OfficersForInfoForPrinting();
             foreach (var x in o.sbMemebers)
@@ -35,24 +36,21 @@ namespace E_Barangay.Forms
 
         private void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
-           // e.Graphics.DrawImage(Properties.Resources.DeathCertificate, new PointF(0, 0));
-            Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 + 50, 550, 380);
+            e.Graphics.DrawImage(Properties.Resources.CertIndigentMedicalAssistance, new PointF(0, 0));
+            Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 32, e.PageBounds.Height / 3 - 10, 550, 380);
             string name = Printing.GetFullName(firstName, middleName, lastName, ext);
-            string first = string.Empty;
+            string first = "To whom it may concern:" + Printing.LineSpace +
+                            Printing.Indention + "This is to certify that " + name + ", " + Age.Text + " years old " + reqSexOption.Text + ", Filipino and a resident of " + Address.Text + " and a duly resident of this Barangay belongs to an indigent family." + Printing.LineSpace +
+                            Printing.Indention + "This certification is issued upon the request of " + reqSexOption.MrMs() + " " + By.Text + ", " + sexOption.HisHer() + " " + Relation.Text + " of legal age, who would like to seek Financial/Medical Assistance from the " + FromTo.Text + " in behalf of their immediate family member." + Printing.LineSpace +
+                            Printing.Indention + "Issued this " + IssuedOn.Value.Day + "th day of " + IssuedOn.Value.ToString("MMMM, yyyy") + " Barangay Poblacion, Kalibo, Aklan.";
 
             e.Graphics.DrawString(first, Printing.font, Brushes.Black, rect);
             DrawDebugRecs(rect, e);
 
-            StringFormat format = new StringFormat();
-            format.Alignment = StringAlignment.Center;
+            Printing.DrawCapSb(e, o.captName, officerOption.Text);
 
-            Rectangle captRec = new Rectangle(e.PageBounds.Width * 3 / 5 - 2, e.PageBounds.Height * 2 / 3 + 45, 270, 28);
-            e.Graphics.DrawString(o.captName.ToUpper(), Printing.fontBold, Brushes.Black, captRec, format);
-            DrawDebugRecs(captRec, e);
 
-            Rectangle sbRect = new Rectangle(e.PageBounds.Width * 3 / 5 - 2, e.PageBounds.Height * 3 / 4 + 22, 270, 28);
-            e.Graphics.DrawString(Printing.IfControlEmpty(officerOption).ToUpper(), Printing.fontBold, Brushes.Black, sbRect, format);
-            DrawDebugRecs(sbRect, e);
+
         }
 
         bool debug = false;
@@ -79,7 +77,7 @@ namespace E_Barangay.Forms
             middleName.Text = c.MiddleName;
             lastName.Text = c.LastName;
             ext.Text = c.Extension;
-
+            sexOption.Text = c.Gender;
             int age = DateTime.Today.Year - c.Birthday.Year;
             Age.Text = age > 0 ? age.ToString() : 1.ToString();
             Address.Text = c.Address;
@@ -97,7 +95,7 @@ namespace E_Barangay.Forms
         #region Clearing
         private void ResetBtn_Click(object sender, EventArgs e)
         {
-            clearFields(firstName, Age, Address, DeathPlace, IssuedOn, By, SexOption, Relation);
+            clearFields(firstName,middleName,lastName,ext,IDField,sexOption, Age, Address, FromTo, IssuedOn, By, reqSexOption, Relation);
         }
         void clearFields(params Control[] controls)
         {

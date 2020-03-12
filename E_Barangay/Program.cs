@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using E_Barangay.Forms;
 using E_Barangay.Class;
+using E_Barangay.Documents;
 
 namespace E_Barangay
 {
@@ -26,7 +27,8 @@ namespace E_Barangay
             if (login.UserSuccessfullyAuthenticated)
                 Application.Run(new MainPage());
 
-            // Application.Run(new DeathCertificate());
+
+            // Application.Run(new BrgyCertForDeath());
         }
     }
 }

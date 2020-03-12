@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using E_Barangay.Documents;
 
 namespace E_Barangay.Forms
 {
@@ -21,7 +22,9 @@ namespace E_Barangay.Forms
             "Certificate of Appearance",
             "Certificate of Indigency",
             "Cert Dependent",
-            "Brgy Certificate for Burial"
+            "Brgy Certificate for Burial",
+            "Cert. Indigent Medical Assistance",
+            "Brgy. Certificate for Death"
         };
         public PrintingDocument()
         {
@@ -135,6 +138,12 @@ namespace E_Barangay.Forms
                     break;
                 case "Brgy Certificate for Burial":
                     CreateForm<BrgyCertificationforBurial>();
+                    break;
+                case "Cert. Indigent Medical Assistance":
+                    CreateForm<CertIndigentMedicalAssistance>();
+                    break;
+                case "Brgy. Certificate for Death":
+                    CreateForm<BrgyCertForDeath>();
                     break;
                 default:
                     break;

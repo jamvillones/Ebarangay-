@@ -46,27 +46,27 @@ namespace E_Barangay.Forms
             e.Graphics.DrawString(first, Printing.font, Brushes.Black, rect);
             DrawDebugRecs(rect, e);
 
+            Printing.DrawCapSb(e,o.captName,officerOption.Text.ToUpper());
+            //SizeF capBoxSize = e.Graphics.MeasureString(o.captName, Printing.fontBold);
+            //SizeF titleBoxSize = e.Graphics.MeasureString(o.captName, Printing.font);
+            //StringFormat format = new StringFormat();
+            //format.Alignment = StringAlignment.Center;
 
-            SizeF capBoxSize = e.Graphics.MeasureString(o.captName, Printing.fontBold);
-            SizeF titleBoxSize = e.Graphics.MeasureString(o.captName, Printing.font);
-            StringFormat format = new StringFormat();
-            format.Alignment = StringAlignment.Center;
+            //Rectangle captRec = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, e.PageBounds.Height * 2 / 3 + 40, 270, (int)capBoxSize.Height);
+            //e.Graphics.DrawString(o.captName.ToUpper(), Printing.fontBold, Brushes.Black, captRec, format);
+            //DrawDebugRecs(captRec, e);
 
-            Rectangle captRec = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, e.PageBounds.Height * 2 / 3+40, 270, (int)capBoxSize.Height);
-            e.Graphics.DrawString(o.captName.ToUpper(), Printing.fontBold, Brushes.Black, captRec, format);
-            DrawDebugRecs(captRec, e);
+            //Rectangle capRecTitle = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, captRec.Top + (int)capBoxSize.Height, 270, (int)titleBoxSize.Height * 2);
+            //e.Graphics.DrawString("Punong Barangay", Printing.font, Brushes.Black, capRecTitle, format);
+            //DrawDebugRecs(capRecTitle, e);
 
-            Rectangle capRecTitle = new Rectangle(e.PageBounds.Width * 3 / 5 + 20,captRec.Top + (int)capBoxSize.Height, 270, (int)titleBoxSize.Height * 2);
-            e.Graphics.DrawString("Punong Barangay", Printing.font, Brushes.Black, capRecTitle, format);
-            DrawDebugRecs(capRecTitle, e);
+            //Rectangle sbRect = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, capRecTitle.Bottom + 30, 270, (int)capBoxSize.Height);
+            //e.Graphics.DrawString(Printing.IfControlEmpty(officerOption).ToUpper(), Printing.fontBold, Brushes.Black, sbRect, format);
+            //DrawDebugRecs(sbRect, e);
 
-            Rectangle sbRect = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, capRecTitle.Bottom+30, 270, (int)capBoxSize.Height);
-            e.Graphics.DrawString(Printing.IfControlEmpty(officerOption).ToUpper(), Printing.fontBold, Brushes.Black, sbRect, format);
-            DrawDebugRecs(sbRect, e);
-
-            Rectangle sbRectTitle = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, sbRect.Top + (int)capBoxSize.Height, 270, (int)titleBoxSize.Height * 2);
-            e.Graphics.DrawString("Sangguniang Barangay Member Officer of the Day", Printing.font, Brushes.Black, sbRectTitle, format);
-            DrawDebugRecs(sbRectTitle, e);
+            //Rectangle sbRectTitle = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, sbRect.Top + (int)capBoxSize.Height, 270, (int)titleBoxSize.Height * 2);
+            //e.Graphics.DrawString("Sangguniang Barangay Member Officer of the Day", Printing.font, Brushes.Black, sbRectTitle, format);
+            //DrawDebugRecs(sbRectTitle, e);
         }
 
         bool debug = false;

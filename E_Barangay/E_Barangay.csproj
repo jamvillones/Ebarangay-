@@ -116,6 +116,7 @@
       <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Class\CitizenExtensions.cs" />
+    <Compile Include="Class\PrintingExtensions.cs" />
     <Compile Include="Controls\CustomDataGridView.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -134,6 +135,12 @@
     </Compile>
     <Compile Include="Controls\RTPRint.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Documents\BrgyCertForDeath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BrgyCertForDeath.Designer.cs">
+      <DependentUpon>BrgyCertForDeath.cs</DependentUpon>
     </Compile>
     <Compile Include="Documents\CertificateAppearance.cs">
       <SubType>Form</SubType>
@@ -164,6 +171,12 @@
     </Compile>
     <Compile Include="Documents\BrgyCertificationforBurial.Designer.cs">
       <DependentUpon>BrgyCertificationforBurial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\BaseDocForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BaseDocForm.Designer.cs">
+      <DependentUpon>BaseDocForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Documents\CertIndigentMedicalAssistance.cs">
       <SubType>Form</SubType>
@@ -337,6 +350,9 @@
     <Compile Include="User.cs">
       <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Documents\BrgyCertForDeath.resx">
+      <DependentUpon>BrgyCertForDeath.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertificateAppearance.resx">
       <DependentUpon>CertificateAppearance.cs</DependentUpon>
     </EmbeddedResource>
@@ -351,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BrgyCertificationforBurial.resx">
       <DependentUpon>BrgyCertificationforBurial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BaseDocForm.resx">
+      <DependentUpon>BaseDocForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertIndigentMedicalAssistance.resx">
       <DependentUpon>CertIndigentMedicalAssistance.cs</DependentUpon>
@@ -470,6 +489,7 @@
       <LastGenOutput>EBModel.cs</LastGenOutput>
     </Content>
     <Content Include="favicon.ico" />
+    <None Include="Resources\CertIndigentMedicalAssistance.png" />
     <None Include="Resources\BrgyCertificationforBurial.png" />
     <None Include="Resources\BarangayClearance_tmp.png" />
     <None Include="Resources\BarangayCertDEPENDENT.png" />
