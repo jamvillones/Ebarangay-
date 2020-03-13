@@ -178,11 +178,11 @@
     <Compile Include="Documents\BrgyCertificationforBurial.Designer.cs">
       <DependentUpon>BrgyCertificationforBurial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Documents\BaseDocForm.cs">
+    <Compile Include="Documents\DocumentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Documents\BaseDocForm.Designer.cs">
-      <DependentUpon>BaseDocForm.cs</DependentUpon>
+    <Compile Include="Documents\DocumentForm.Designer.cs">
+      <DependentUpon>DocumentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Documents\CertIndigentMedicalAssistance.cs">
       <SubType>Form</SubType>
@@ -371,8 +371,8 @@
     <EmbeddedResource Include="Documents\BrgyCertificationforBurial.resx">
       <DependentUpon>BrgyCertificationforBurial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Documents\BaseDocForm.resx">
-      <DependentUpon>BaseDocForm.cs</DependentUpon>
+    <EmbeddedResource Include="Documents\DocumentForm.resx">
+      <DependentUpon>DocumentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertIndigentMedicalAssistance.resx">
       <DependentUpon>CertIndigentMedicalAssistance.cs</DependentUpon>
