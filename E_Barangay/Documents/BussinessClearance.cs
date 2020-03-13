@@ -12,7 +12,7 @@ using E_Barangay.Class;
 
 namespace E_Barangay.Forms
 {
-    public partial class BussinessClearance : BaseDocForm
+    public partial class BussinessClearance : DocumentForm
     {
         public BussinessClearance()
         {

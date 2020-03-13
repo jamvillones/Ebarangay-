@@ -13,7 +13,7 @@ using E_Barangay.Class;
 
 namespace E_Barangay.Documents
 {
-    public partial class BarangayClearance : BaseDocForm
+    public partial class BarangayClearance : DocumentForm
     {
         OfficersForInfoForPrinting o = new OfficersForInfoForPrinting();
         public BarangayClearance()

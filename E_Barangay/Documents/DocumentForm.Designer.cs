@@ -1,6 +1,6 @@
 ﻿namespace E_Barangay.Forms
 {
-    partial class BaseDocForm
+    partial class DocumentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -94,7 +94,7 @@
             this.FieldsPanel.Location = new System.Drawing.Point(0, 0);
             this.FieldsPanel.Name = "FieldsPanel";
             this.FieldsPanel.Size = new System.Drawing.Size(352, 690);
-            this.FieldsPanel.TabIndex = 8;
+            this.FieldsPanel.TabIndex = 19;
             // 
             // printing
             // 
@@ -107,7 +107,7 @@
             this.printing.TabIndex = 20;
             this.printing.TabStop = false;
             // 
-            // BaseDocForm
+            // DocumentForm
             // 
             this.AcceptButton = this.AssignBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -119,7 +119,7 @@
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "BaseDocForm";
+            this.Name = "DocumentForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "[Set Name]";

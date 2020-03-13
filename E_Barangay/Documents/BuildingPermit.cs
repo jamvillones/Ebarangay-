@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace E_Barangay.Forms
 {
-    public partial class BuildingPermit : BaseDocForm
+    public partial class BuildingPermit : DocumentForm
     {
         public BuildingPermit()
         {

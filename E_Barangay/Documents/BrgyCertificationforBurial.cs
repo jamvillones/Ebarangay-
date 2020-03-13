@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace E_Barangay.Forms
 {
-    public partial class BrgyCertificationforBurial : BaseDocForm
+    public partial class BrgyCertificationforBurial : DocumentForm
     {
         OfficersForInfoForPrinting o = new OfficersForInfoForPrinting();
         public BrgyCertificationforBurial()

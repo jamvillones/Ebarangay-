@@ -14,7 +14,7 @@ using E_Barangay.Forms;
 
 namespace E_Barangay.Documents
 {
-    public partial class BrgyCertForDeath : BaseDocForm
+    public partial class BrgyCertForDeath : DocumentForm
     {
         OfficersForInfoForPrinting o = new OfficersForInfoForPrinting();
         public BrgyCertForDeath()

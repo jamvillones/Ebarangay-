@@ -14,13 +14,13 @@ using E_Barangay.Interface;
 
 namespace E_Barangay.Forms
 {
-    public partial class BaseDocForm : Form
+    public partial class DocumentForm : Form
     {
         protected List<Control> controls = new List<Control>();
         protected string capt = string.Empty;
 
 
-        public BaseDocForm()
+        public DocumentForm()
         {
             InitializeComponent();
             
