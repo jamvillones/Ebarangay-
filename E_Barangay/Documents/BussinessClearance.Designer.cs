@@ -28,176 +28,75 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ORIssueDate = new System.Windows.Forms.DateTimePicker();
-            this.OrValidityDate = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.OrNo = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.IdGroup = new System.Windows.Forms.GroupBox();
-            this.AssignBtn = new System.Windows.Forms.Button();
-            this.IDField = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.BussAdress = new System.Windows.Forms.TextBox();
+            this.bussAdd = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.Establishment = new System.Windows.Forms.TextBox();
+            this.establishmentName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.OrAmount = new System.Windows.Forms.TextBox();
+            this.orAmount = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.ResetBtn = new System.Windows.Forms.Button();
+            this.orNo = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.orValidityDate = new System.Windows.Forms.DateTimePicker();
+            this.orIssueDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.extension = new System.Windows.Forms.TextBox();
+            this.lastName = new System.Windows.Forms.TextBox();
+            this.middleName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.IssuedOn = new System.Windows.Forms.DateTimePicker();
+            this.issuedOn = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.firstName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Address = new System.Windows.Forms.TextBox();
-            this.printing = new E_Barangay.Forms.Printing();
-            this.middleName = new System.Windows.Forms.TextBox();
-            this.lastName = new System.Windows.Forms.TextBox();
-            this.extension = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.IdGroup.SuspendLayout();
+            this.address = new System.Windows.Forms.TextBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.FieldsPanel.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ORIssueDate
+            // FieldsPanel
             // 
-            this.ORIssueDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ORIssueDate.CustomFormat = "MMMM dd, yyyy";
-            this.ORIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ORIssueDate.Location = new System.Drawing.Point(83, 69);
-            this.ORIssueDate.Name = "ORIssueDate";
-            this.ORIssueDate.Size = new System.Drawing.Size(240, 20);
-            this.ORIssueDate.TabIndex = 3;
-            // 
-            // OrValidityDate
-            // 
-            this.OrValidityDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrValidityDate.CustomFormat = "MMMM dd, yyyy";
-            this.OrValidityDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.OrValidityDate.Location = new System.Drawing.Point(83, 95);
-            this.OrValidityDate.Name = "OrValidityDate";
-            this.OrValidityDate.Size = new System.Drawing.Size(240, 20);
-            this.OrValidityDate.TabIndex = 4;
-            // 
-            // label8
-            // 
-            this.label8.Location = new System.Drawing.Point(3, 96);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(60, 20);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "VALIDITY:";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
-            this.label7.Location = new System.Drawing.Point(3, 69);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 20);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Issued On:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // OrNo
-            // 
-            this.OrNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrNo.Location = new System.Drawing.Point(83, 17);
-            this.OrNo.MaxLength = 13;
-            this.OrNo.Name = "OrNo";
-            this.OrNo.Size = new System.Drawing.Size(240, 20);
-            this.OrNo.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(3, 16);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 20);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "ORNO:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel1.Controls.Add(this.IdGroup);
-            this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.ResetBtn);
-            this.panel1.Controls.Add(this.groupBox3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(352, 690);
-            this.panel1.TabIndex = 0;
-            // 
-            // IdGroup
-            // 
-            this.IdGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IdGroup.Controls.Add(this.AssignBtn);
-            this.IdGroup.Controls.Add(this.IDField);
-            this.IdGroup.Location = new System.Drawing.Point(12, 12);
-            this.IdGroup.Name = "IdGroup";
-            this.IdGroup.Size = new System.Drawing.Size(329, 77);
-            this.IdGroup.TabIndex = 1;
-            this.IdGroup.TabStop = false;
-            this.IdGroup.Text = "User ID";
-            // 
-            // AssignBtn
-            // 
-            this.AssignBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AssignBtn.Location = new System.Drawing.Point(127, 45);
-            this.AssignBtn.Name = "AssignBtn";
-            this.AssignBtn.Size = new System.Drawing.Size(75, 23);
-            this.AssignBtn.TabIndex = 4;
-            this.AssignBtn.Text = "Assign";
-            this.AssignBtn.UseVisualStyleBackColor = true;
-            this.AssignBtn.Click += new System.EventHandler(this.AssignBtn_Click);
-            // 
-            // IDField
-            // 
-            this.IDField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IDField.Location = new System.Drawing.Point(6, 19);
-            this.IDField.MaxLength = 10;
-            this.IDField.Name = "IDField";
-            this.IDField.Size = new System.Drawing.Size(317, 20);
-            this.IDField.TabIndex = 3;
+            this.FieldsPanel.Controls.Add(this.groupBox4);
+            this.FieldsPanel.Controls.Add(this.groupBox2);
+            this.FieldsPanel.Controls.Add(this.groupBox1);
+            this.FieldsPanel.Controls.Add(this.groupBox3);
+            this.FieldsPanel.Controls.SetChildIndex(this.groupBox3, 0);
+            this.FieldsPanel.Controls.SetChildIndex(this.groupBox1, 0);
+            this.FieldsPanel.Controls.SetChildIndex(this.groupBox2, 0);
+            this.FieldsPanel.Controls.SetChildIndex(this.groupBox4, 0);
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.BussAdress);
+            this.groupBox2.Controls.Add(this.bussAdd);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.Establishment);
-            this.groupBox2.Location = new System.Drawing.Point(12, 274);
+            this.groupBox2.Controls.Add(this.establishmentName);
+            this.groupBox2.Location = new System.Drawing.Point(12, 253);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(329, 75);
-            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bussiness";
             // 
             // BussAdress
             // 
-            this.BussAdress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.bussAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.BussAdress.Location = new System.Drawing.Point(83, 43);
-            this.BussAdress.Name = "BussAdress";
-            this.BussAdress.Size = new System.Drawing.Size(240, 20);
-            this.BussAdress.TabIndex = 12;
+            this.bussAdd.Location = new System.Drawing.Point(93, 43);
+            this.bussAdd.Name = "BussAdress";
+            this.bussAdd.Size = new System.Drawing.Size(230, 20);
+            this.bussAdd.TabIndex = 12;
             // 
             // label13
             // 
@@ -219,41 +118,50 @@
             // 
             // Establishment
             // 
-            this.Establishment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.establishmentName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Establishment.Location = new System.Drawing.Point(83, 17);
-            this.Establishment.Name = "Establishment";
-            this.Establishment.Size = new System.Drawing.Size(240, 20);
-            this.Establishment.TabIndex = 11;
+            this.establishmentName.Location = new System.Drawing.Point(93, 17);
+            this.establishmentName.Name = "Establishment";
+            this.establishmentName.Size = new System.Drawing.Size(230, 20);
+            this.establishmentName.TabIndex = 11;
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.OrAmount);
+            this.groupBox1.Controls.Add(this.orAmount);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.OrNo);
+            this.groupBox1.Controls.Add(this.orNo);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.OrValidityDate);
-            this.groupBox1.Controls.Add(this.ORIssueDate);
-            this.groupBox1.Location = new System.Drawing.Point(12, 355);
+            this.groupBox1.Controls.Add(this.orValidityDate);
+            this.groupBox1.Controls.Add(this.orIssueDate);
+            this.groupBox1.Location = new System.Drawing.Point(12, 334);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(329, 129);
-            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "OR";
             // 
             // OrAmount
             // 
-            this.OrAmount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.orAmount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.OrAmount.Location = new System.Drawing.Point(83, 43);
-            this.OrAmount.MaxLength = 13;
-            this.OrAmount.Name = "OrAmount";
-            this.OrAmount.Size = new System.Drawing.Size(240, 20);
-            this.OrAmount.TabIndex = 2;
+            this.orAmount.Location = new System.Drawing.Point(93, 43);
+            this.orAmount.MaxLength = 13;
+            this.orAmount.Name = "OrAmount";
+            this.orAmount.Size = new System.Drawing.Size(230, 20);
+            this.orAmount.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(3, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 20);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "ORNO:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
             // 
@@ -264,17 +172,55 @@
             this.label4.Text = "AMOUNT";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // ResetBtn
+            // OrNo
             // 
-            this.ResetBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.orNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ResetBtn.Location = new System.Drawing.Point(126, 653);
-            this.ResetBtn.Name = "ResetBtn";
-            this.ResetBtn.Size = new System.Drawing.Size(99, 25);
-            this.ResetBtn.TabIndex = 5;
-            this.ResetBtn.Text = "Reset";
-            this.ResetBtn.UseVisualStyleBackColor = true;
-            this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
+            this.orNo.Location = new System.Drawing.Point(93, 17);
+            this.orNo.MaxLength = 13;
+            this.orNo.Name = "OrNo";
+            this.orNo.Size = new System.Drawing.Size(230, 20);
+            this.orNo.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(3, 69);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 20);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Issued On:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(3, 96);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(60, 20);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "VALIDITY:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // OrValidityDate
+            // 
+            this.orValidityDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.orValidityDate.CustomFormat = "MMMM dd, yyyy";
+            this.orValidityDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.orValidityDate.Location = new System.Drawing.Point(93, 95);
+            this.orValidityDate.Name = "OrValidityDate";
+            this.orValidityDate.Size = new System.Drawing.Size(230, 20);
+            this.orValidityDate.TabIndex = 4;
+            // 
+            // ORIssueDate
+            // 
+            this.orIssueDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.orIssueDate.CustomFormat = "MMMM dd, yyyy";
+            this.orIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.orIssueDate.Location = new System.Drawing.Point(93, 69);
+            this.orIssueDate.Name = "ORIssueDate";
+            this.orIssueDate.Size = new System.Drawing.Size(230, 20);
+            this.orIssueDate.TabIndex = 3;
             // 
             // groupBox3
             // 
@@ -286,23 +232,77 @@
             this.groupBox3.Controls.Add(this.extension);
             this.groupBox3.Controls.Add(this.lastName);
             this.groupBox3.Controls.Add(this.middleName);
-            this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Controls.Add(this.IssuedOn);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.firstName);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.Address);
+            this.groupBox3.Controls.Add(this.address);
             this.groupBox3.Location = new System.Drawing.Point(12, 95);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(329, 173);
-            this.groupBox3.TabIndex = 2;
+            this.groupBox3.Size = new System.Drawing.Size(329, 152);
+            this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DETAILS";
             // 
+            // label10
+            // 
+            this.label10.Location = new System.Drawing.Point(6, 95);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(81, 20);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Extension:";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(6, 69);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(81, 20);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Last Name:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(6, 43);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 20);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Middle Name:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // extension
+            // 
+            this.extension.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.extension.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.extension.Location = new System.Drawing.Point(93, 95);
+            this.extension.Name = "extension";
+            this.extension.Size = new System.Drawing.Size(230, 20);
+            this.extension.TabIndex = 8;
+            // 
+            // lastName
+            // 
+            this.lastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lastName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.lastName.Location = new System.Drawing.Point(93, 69);
+            this.lastName.Name = "lastName";
+            this.lastName.Size = new System.Drawing.Size(230, 20);
+            this.lastName.TabIndex = 7;
+            // 
+            // middleName
+            // 
+            this.middleName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.middleName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.middleName.Location = new System.Drawing.Point(93, 43);
+            this.middleName.Name = "middleName";
+            this.middleName.Size = new System.Drawing.Size(230, 20);
+            this.middleName.TabIndex = 6;
+            // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.Location = new System.Drawing.Point(6, 149);
+            this.label2.Location = new System.Drawing.Point(6, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 20);
             this.label2.TabIndex = 4;
@@ -311,14 +311,14 @@
             // 
             // IssuedOn
             // 
-            this.IssuedOn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.issuedOn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.IssuedOn.CustomFormat = "MMMM dd, yyyy";
-            this.IssuedOn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.IssuedOn.Location = new System.Drawing.Point(93, 147);
-            this.IssuedOn.Name = "IssuedOn";
-            this.IssuedOn.Size = new System.Drawing.Size(230, 20);
-            this.IssuedOn.TabIndex = 5;
+            this.issuedOn.CustomFormat = "MMMM dd, yyyy";
+            this.issuedOn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.issuedOn.Location = new System.Drawing.Point(93, 16);
+            this.issuedOn.Name = "IssuedOn";
+            this.issuedOn.Size = new System.Drawing.Size(230, 20);
+            this.issuedOn.TabIndex = 1;
             // 
             // label1
             // 
@@ -341,7 +341,6 @@
             // 
             // label3
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.Location = new System.Drawing.Point(6, 121);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 20);
@@ -351,143 +350,75 @@
             // 
             // Address
             // 
-            this.Address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Address.Location = new System.Drawing.Point(93, 121);
-            this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(230, 20);
-            this.Address.TabIndex = 4;
+            this.address.Location = new System.Drawing.Point(93, 121);
+            this.address.Name = "Address";
+            this.address.Size = new System.Drawing.Size(230, 20);
+            this.address.TabIndex = 4;
             // 
-            // printing
+            // groupBox4
             // 
-            this.printing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.printing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.printing.Dock = System.Windows.Forms.DockStyle.Right;
-            this.printing.Location = new System.Drawing.Point(352, 0);
-            this.printing.Name = "printing";
-            this.printing.Size = new System.Drawing.Size(562, 690);
-            this.printing.TabIndex = 1;
-            // 
-            // middleName
-            // 
-            this.middleName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.middleName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.middleName.Location = new System.Drawing.Point(93, 43);
-            this.middleName.Name = "middleName";
-            this.middleName.Size = new System.Drawing.Size(230, 20);
-            this.middleName.TabIndex = 6;
-            // 
-            // lastName
-            // 
-            this.lastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lastName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.lastName.Location = new System.Drawing.Point(93, 69);
-            this.lastName.Name = "lastName";
-            this.lastName.Size = new System.Drawing.Size(230, 20);
-            this.lastName.TabIndex = 7;
-            // 
-            // extension
-            // 
-            this.extension.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.extension.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.extension.Location = new System.Drawing.Point(93, 95);
-            this.extension.Name = "extension";
-            this.extension.Size = new System.Drawing.Size(230, 20);
-            this.extension.TabIndex = 8;
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(6, 43);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 20);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Middle Name:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label9
-            // 
-            this.label9.Location = new System.Drawing.Point(6, 69);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(81, 20);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Last Name:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label10
-            // 
-            this.label10.Location = new System.Drawing.Point(6, 95);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 20);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Extension:";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.groupBox4.Controls.Add(this.issuedOn);
+            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Location = new System.Drawing.Point(12, 469);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(329, 49);
+            this.groupBox4.TabIndex = 4;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Misc";
             // 
             // BussinessClearance
             // 
-            this.AcceptButton = this.AssignBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(914, 690);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.printing);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "BussinessClearance";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bussiness Clearance";
-            this.Load += new System.EventHandler(this.BarangaCertificationforBusiness_Load);
-            this.panel1.ResumeLayout(false);
-            this.IdGroup.ResumeLayout(false);
-            this.IdGroup.PerformLayout();
+            this.FieldsPanel.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DateTimePicker ORIssueDate;
-        private System.Windows.Forms.DateTimePicker OrValidityDate;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox OrNo;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker IssuedOn;
-        private System.Windows.Forms.Button ResetBtn;
-        private System.Windows.Forms.GroupBox IdGroup;
-        private System.Windows.Forms.Button AssignBtn;
-        private System.Windows.Forms.TextBox IDField;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox firstName;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Address;
-        private System.Windows.Forms.TextBox Establishment;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox BussAdress;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox OrAmount;
-        private System.Windows.Forms.Label label4;
+
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox bussAdd;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox establishmentName;
         private System.Windows.Forms.GroupBox groupBox1;
-        private Printing printing;
-        private System.Windows.Forms.TextBox extension;
-        private System.Windows.Forms.TextBox lastName;
-        private System.Windows.Forms.TextBox middleName;
+        private System.Windows.Forms.TextBox orAmount;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox orNo;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker orValidityDate;
+        private System.Windows.Forms.DateTimePicker orIssueDate;
+        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox extension;
+        private System.Windows.Forms.TextBox lastName;
+        private System.Windows.Forms.TextBox middleName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker issuedOn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox firstName;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox address;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }

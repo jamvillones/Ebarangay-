@@ -12,30 +12,14 @@ using E_Barangay.Class;
 
 namespace E_Barangay.Forms
 {
-    public partial class BussinessClearance : Form, Interface.ICitizenAcceptor
+    public partial class BussinessClearance : BaseDocForm
     {
-        List<Control> controls = new List<Control>();
         public BussinessClearance()
         {
             InitializeComponent();
-
-            controls.Add(firstName);
-            controls.Add(Address);
-            controls.Add(OrNo);
-            controls.Add(OrAmount);
-            controls.Add(IssuedOn);
-            controls.Add(ORIssueDate);
-            controls.Add(Establishment);
-            controls.Add(BussAdress);
         }
 
-        private void BarangaCertificationforBusiness_Load(object sender, EventArgs e)
-        {
-            printing.PrintPage += Printing_PrintPage;
-            printing.SubscribeToFields(controls.ToArray());
-        }
-
-        private void Printing_PrintPage(object sender, PrintPageEventArgs e)
+        public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(Properties.Resources.BussinessClearance, 0, 0);
             string name = Printing.IfControlEmpty(this.firstName);
@@ -44,7 +28,7 @@ namespace E_Barangay.Forms
             #region firstbatch
             Rectangle firstRect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 - 10, 548, 50);
             string FirstBatch = Printing.Indention + Printing.GetFullName(firstName, middleName, lastName, extension) + " of legal age, Filipino and residing at " +
-                                Printing.IfControlEmpty(Address) + " to operate:";
+                                Printing.IfControlEmpty(address) + " to operate:";
             e.Graphics.DrawString(FirstBatch, Printing.font, Brushes.Black, firstRect);
             DrawDebugRecs(firstRect, e);
             #endregion
@@ -54,17 +38,17 @@ namespace E_Barangay.Forms
             StringFormat format = new StringFormat();
             format.Alignment = StringAlignment.Center;
 
-            e.Graphics.DrawString(Printing.IfControlEmpty(Establishment), Printing.fontBold, Brushes.Black, bussRect, format);
+            e.Graphics.DrawString(Printing.IfControlEmpty(establishmentName), Printing.fontBold, Brushes.Black, bussRect, format);
             // e.Graphics.DrawRectangle(Printing.pen, rect1);
             DrawDebugRecs(bussRect, e);
             #endregion
 
             #region thirdbatch
             Rectangle rect2 = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 + 120, 548, 295);
-            string details = "With business address at " + Printing.IfControlEmpty(BussAdress) + ".\n" +
+            string details = "With business address at " + Printing.IfControlEmpty(bussAdd) + ".\n" +
                              "This further certifies that the said applicant applying for Business Permit has no records of violations or pending case in this Barangay that could affect the general welfare in the area." +
                              Printing.LineSpace + "This BARANGAY CLEARANCE is hereby issued to the above application in Accordance with Section 152 ©. Of the Local Government Code of 1991." +
-                             Printing.LineSpace + "This " + IssuedOn.Value.Day + "th day of " + IssuedOn.Value.ToString("MMMM") + ", " + IssuedOn.Value.Year + " at Barangay Hall, Poblacion, Kalibo, Aklan." +
+                             Printing.LineSpace + "This " + issuedOn.Value.Day + "th day of " + issuedOn.Value.ToString("MMMM") + ", " + issuedOn.Value.Year + " at Barangay Hall, Poblacion, Kalibo, Aklan." +
                              Printing.LineSpace + "Conforme";
             e.Graphics.DrawString(details, Printing.font, Brushes.Black, rect2);
             // e.Graphics.DrawRectangle(Printing.pen, rect2);
@@ -92,10 +76,10 @@ namespace E_Barangay.Forms
 
             #region OR
             var ORRect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height + 10 - 260, 240, 85);
-            string orTxt = "OR No: " + Printing.IfControlEmpty(OrNo) + "\n" +
-                           "DATE: " + ORIssueDate.Value.ToString("MMMM") + " " + ORIssueDate.Value.Day.ToString() + ", " + ORIssueDate.Value.Year.ToString() + "\n" +
-                           "AMOUNT:" + Printing.IfControlEmpty(OrAmount) + "\n" +
-                           "Note: Valid Until: " + OrValidityDate.Value.ToString("MMMM") + " " + OrValidityDate.Value.Day.ToString() + ", " + OrValidityDate.Value.Year.ToString();
+            string orTxt = "OR No: " + Printing.IfControlEmpty(orNo) + "\n" +
+                           "DATE: " + orIssueDate.Value.ToString("MMMM") + " " + orIssueDate.Value.Day.ToString() + ", " + orIssueDate.Value.Year.ToString() + "\n" +
+                           "AMOUNT:" + Printing.IfControlEmpty(orAmount) + "\n" +
+                           "Note: Valid Until: " + orValidityDate.Value.ToString("MMMM") + " " + orValidityDate.Value.Day.ToString() + ", " + orValidityDate.Value.Year.ToString();
 
             e.Graphics.DrawString(orTxt, Printing.font, Brushes.Black, ORRect);
 
@@ -104,56 +88,34 @@ namespace E_Barangay.Forms
             #endregion
 
         }
-
-        bool debug = false;
-        void DrawDebugRecs(Rectangle rec, PrintPageEventArgs e)
+        public override void InitializeControls()
         {
-            if (debug)
-            {
-                e.Graphics.DrawRectangle(Printing.pen, rec);
-            }
+            AddControls(firstName,
+                        middleName,
+                        lastName,
+                        extension,
+                        address,
+                        establishmentName,
+                        bussAdd,
+                        orNo,
+                        orAmount,
+                        orIssueDate,
+                        orValidityDate,
+                        issuedOn);
         }
-
-        #region Assigning
-        private void AssignBtn_Click(object sender, EventArgs e)
-        {
-            using (var entity = new EBarangayEntities())
-            {
-                var citizen = entity.Citizens.Find(IDField.Text);
-                AcceptCitizen(citizen);
-            }
-        }
-
-        public void AcceptCitizen(Citizen citizen)
+        public override void AcceptCitizen(Citizen citizen)
         {
             if (citizen == null)
             {
                 MessageBox.Show("User Not found");
-                IDField.SelectAll();
-                this.ActiveControl = IDField;
                 return;
             }
             firstName.Text = citizen.FirstName;
             middleName.Text = citizen.MiddleName;
             lastName.Text = citizen.LastName;
             extension.Text = citizen.Extension;
-            Address.Text = citizen.Address;
+            address.Text = citizen.Address;
         }
-        #endregion
-
-        #region Clearing
-        private void ResetBtn_Click(object sender, EventArgs e)
-        {
-            clearFields(controls.ToArray());
-        }
-        void clearFields(params Control[] controls)
-        {
-            foreach (Control c in controls)
-            {
-                c.ResetText();
-            }
-        }
-        #endregion
-
+       
     }
 }
