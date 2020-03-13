@@ -32,7 +32,15 @@ namespace E_Barangay.Forms
         }
         public override void InitializeControls()
         {
-            AddControls(firstName, middleName, lastName, extension, Address,SexOption,tdNoField,specField,IssuedOn);
+            AddControls(firstName,
+                        middleName,
+                        lastName, 
+                        extension,
+                        Address,
+                        SexOption,
+                        tdNoField,
+                        specField,
+                        IssuedOn);
         }
         public override void AcceptCitizen(Citizen c)
         {
