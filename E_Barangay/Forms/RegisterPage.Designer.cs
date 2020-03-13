@@ -522,7 +522,8 @@
             this.CivilStatusOption.Items.AddRange(new object[] {
             "Single",
             "Married",
-            "Widowed"});
+            "Separated",
+            "Widow"});
             this.CivilStatusOption.Location = new System.Drawing.Point(232, 66);
             this.CivilStatusOption.Name = "CivilStatusOption";
             this.CivilStatusOption.Size = new System.Drawing.Size(67, 22);

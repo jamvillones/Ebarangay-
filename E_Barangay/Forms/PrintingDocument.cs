@@ -24,7 +24,8 @@ namespace E_Barangay.Forms
             "Cert Dependent",
             "Brgy Certificate for Burial",
             "Cert. Indigent Medical Assistance",
-            "Brgy. Certificate for Death"
+            "Brgy. Certificate for Death",
+            "Brgy. Certification for Business"
         };
         public PrintingDocument()
         {
@@ -144,6 +145,9 @@ namespace E_Barangay.Forms
                     break;
                 case "Brgy. Certificate for Death":
                     CreateForm<BrgyCertForDeath>();
+                    break;
+                case "Brgy. Certification for Business":
+                    CreateForm<BrgyCertificationforbusiness>();
                     break;
                 default:
                     break;
