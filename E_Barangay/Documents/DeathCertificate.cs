@@ -12,123 +12,66 @@ using System.Windows.Forms;
 
 namespace E_Barangay.Forms
 {
-    public partial class DeathCertificate : Form
+    public partial class DeathCertificate : DocumentForm
     {
+        OfficersForInfoForPrinting o = new OfficersForInfoForPrinting();
         public DeathCertificate()
         {
             InitializeComponent();
         }
-        Class.OfficersForInfoForPrinting o;
-        private void DeathCertificate_Load(object sender, EventArgs e)
-        {
-            printing.PrintPage += Printing_PrintPage;
-            printing.SubscribeToFields(firstName, Age, Address, DeathPlace, DeathDate, IssuedOn, By, SexOption, Relation, officerOption);
-
-            o = new Class.OfficersForInfoForPrinting();
-            foreach (var x in o.sbMemebers)
-            {
-                officerOption.Items.Add(x);
-                officerOption.AutoCompleteCustomSource.Add(x);
-            }
-        }
-
-
-        private void Printing_PrintPage(object sender, PrintPageEventArgs e)
+        public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(Properties.Resources.DeathCertificate, new PointF(0, 0));
-            Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3, 550, 380);
+            Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30,
+                                           e.PageBounds.Height / 3,
+                                           550, 380);
+
             string name = Printing.GetFullName(firstName, middleName, lastName, ext);
             string first = "To whom it may concern:" + Printing.LineSpace +
                            Printing.Indention + "This is to certify that as per record of this Barangay, " + name + " " + Printing.IfControlEmpty(Age) + " years old, Filipino and a resident of " + Printing.IfControlEmpty(Address) + "." + Printing.LineSpace +
                            Printing.Indention + "This is to certify further that " + name + " died last " + DeathDate.Value.ToString("MMMM dd, yyyy") + " at " + Printing.IfControlEmpty(DeathPlace) + "." + Printing.LineSpace +
-                           Printing.Indention + "This certification is issued upon the request of " + Printing.HisOrHer(SexOption.Text) + " " + Relation.Text + " " + By.Text + " for whatever legal purpose it may serve " + Printing.HimOrHer(SexOption.Text) + "." + Printing.LineSpace +
+                           Printing.Indention + "This certification is issued upon the request of " + Printing.HisOrHer(sex.Text) + " " + Relation.Text + " " + By.Text + " for whatever legal purpose it may serve " + Printing.HimOrHer(reqSexOption.Text) + "." + Printing.LineSpace +
                            Printing.Indention + "Issued this " + IssuedOn.Value.Day + "th of " + IssuedOn.Value.ToString("MMMM yyyy") + " Barangay Poblacion, Kalibo, Aklan.";
+
             e.Graphics.DrawString(first, Printing.font, Brushes.Black, rect);
             DrawDebugRecs(rect, e);
 
-            SizeF capBoxSize = e.Graphics.MeasureString(o.captName, Printing.fontBold);
-            SizeF titleBoxSize = e.Graphics.MeasureString(o.captName, Printing.font);
-            StringFormat format = new StringFormat();
-            format.Alignment = StringAlignment.Center;
-
-            Rectangle captRec = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, e.PageBounds.Height * 2 / 3 + 40, 270, (int)capBoxSize.Height);
-            e.Graphics.DrawString(o.captName.ToUpper(), Printing.fontBold, Brushes.Black, captRec, format);
-            DrawDebugRecs(captRec, e);
-
-            Rectangle capRecTitle = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, captRec.Top + (int)capBoxSize.Height, 270, (int)titleBoxSize.Height * 2);
-            e.Graphics.DrawString("Punong Barangay", Printing.font, Brushes.Black, capRecTitle, format);
-            DrawDebugRecs(capRecTitle, e);
-
-            Rectangle sbRect = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, capRecTitle.Bottom + 30, 270, (int)capBoxSize.Height);
-            e.Graphics.DrawString(Printing.IfControlEmpty(officerOption).ToUpper(), Printing.fontBold, Brushes.Black, sbRect, format);
-            DrawDebugRecs(sbRect, e);
-
-            Rectangle sbRectTitle = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, sbRect.Top + (int)capBoxSize.Height, 270, (int)titleBoxSize.Height * 2);
-            e.Graphics.DrawString("Sangguniang Barangay Member Officer of the Day", Printing.font, Brushes.Black, sbRectTitle, format);
-            DrawDebugRecs(sbRectTitle, e);
+            Printing.DrawCapSb(e, o.captName, officerOption.Text);
         }
-
-        bool debug = false;
-        void DrawDebugRecs(Rectangle rec, PrintPageEventArgs e)
-        {
-            if (debug)
-            {
-                e.Graphics.DrawRectangle(Printing.pen, rec);
-            }
-        }
-
-        #region autoAssign
-        public void AcceptCitizen(Citizen c)
+        public override void AcceptCitizen(Citizen c)
         {
             if (c == null)
             {
                 MessageBox.Show("Not found");
-                IDField.SelectAll();
-                this.ActiveControl = IDField;
                 return;
             }
-            //Class.NameSeparatingHelper helper = new Class.NameSeparatingHelper(c.Name);
+
             firstName.Text = c.FirstName;
             middleName.Text = c.MiddleName;
             lastName.Text = c.LastName;
             ext.Text = c.Extension;
 
+            sex.Text = c.Gender;
             int age = DateTime.Today.Year - c.Birthday.Year;
             Age.Text = age > 0 ? age.ToString() : 1.ToString();
             Address.Text = c.Address;
         }
-        private void AssignBtn_Click(object sender, EventArgs e)
+        public override void InitializeControls()
         {
-            using (var entity = new EBarangayEntities())
-            {
-                var citizen = entity.Citizens.Find(IDField.Text);
-                AcceptCitizen(citizen);
-            }
-        }
-        #endregion
-
-        #region Clearing
-        private void ResetBtn_Click(object sender, EventArgs e)
-        {
-            clearFields(IDField,firstName, middleName, lastName, ext, Age, Address, DeathPlace, DeathDate, IssuedOn, By, SexOption, Relation,officerOption);
-        }
-        void clearFields(params Control[] controls)
-        {
-            foreach (Control c in controls)
-            {
-                c.ResetText();
-            }
-        }
-
-        #endregion
-
-        private void DeathCertificate_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.F4)
-            {
-                debug = !debug;
-                printing.UpdateDocument();
-            }
+            o.InitDropdowns(officerOption);
+            AddControls(firstName,
+                        middleName,
+                        lastName,
+                        ext,
+                        Address,
+                        Age,
+                        sex,
+                        By,
+                        reqSexOption,
+                        Relation,
+                        DeathPlace,
+                        DeathDate,
+                        IssuedOn);
         }
     }
 }
