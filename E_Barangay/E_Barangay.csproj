@@ -321,12 +321,6 @@
     <Compile Include="Forms\StatForm.Designer.cs">
       <DependentUpon>StatForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\YesOrNoPrompt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -433,9 +427,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StatForm.resx">
       <DependentUpon>StatForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\YesOrNoPrompt.resx">
       <DependentUpon>YesOrNoPrompt.cs</DependentUpon>
