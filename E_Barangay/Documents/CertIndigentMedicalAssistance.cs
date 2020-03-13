@@ -13,31 +13,22 @@ using System.Windows.Forms;
 
 namespace E_Barangay.Forms
 {
-    public partial class CertIndigentMedicalAssistance : Form
+    public partial class CertIndigentMedicalAssistance : DocumentForm
     {
+        OfficersForInfoForPrinting o = new OfficersForInfoForPrinting();
         public CertIndigentMedicalAssistance()
         {
             InitializeComponent();
         }
-        Class.OfficersForInfoForPrinting o;
-        private void DeathCertificate_Load(object sender, EventArgs e)
-        {
-            printing.PrintPage += Printing_PrintPage;
-            printing.SubscribeToFields(IDField,firstName,middleName,lastName,ext,sexOption, Age, Address, FromTo, IssuedOn, By, reqSexOption, Relation, officerOption);
 
-            o = new Class.OfficersForInfoForPrinting();
-            foreach (var x in o.sbMemebers)
-            {
-                officerOption.Items.Add(x);
-                officerOption.AutoCompleteCustomSource.Add(x);
-            }
-        }
-
-
-        private void Printing_PrintPage(object sender, PrintPageEventArgs e)
+        public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(Properties.Resources.CertIndigentMedicalAssistance, new PointF(0, 0));
-            Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 32, e.PageBounds.Height / 3 - 10, 550, 380);
+            Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 32,
+                                           e.PageBounds.Height / 3 - 10,
+                                           550,
+                                           380);
+
             string name = Printing.GetFullName(firstName, middleName, lastName, ext);
             string first = "To whom it may concern:" + Printing.LineSpace +
                             Printing.Indention + "This is to certify that " + name + ", " + Age.Text + " years old " + reqSexOption.Text + ", Filipino and a resident of " + Address.Text + " and a duly resident of this Barangay belongs to an indigent family." + Printing.LineSpace +
@@ -48,31 +39,17 @@ namespace E_Barangay.Forms
             DrawDebugRecs(rect, e);
 
             Printing.DrawCapSb(e, o.captName, officerOption.Text);
-
-
-
         }
 
-        bool debug = false;
-        void DrawDebugRecs(Rectangle rec, PrintPageEventArgs e)
-        {
-            if (debug)
-            {
-                e.Graphics.DrawRectangle(Printing.pen, rec);
-            }
-        }
 
-        #region autoAssign
-        public void AcceptCitizen(Citizen c)
+        public override void AcceptCitizen(Citizen c)
         {
             if (c == null)
             {
                 MessageBox.Show("Not found");
-                IDField.SelectAll();
-                this.ActiveControl = IDField;
                 return;
             }
-            //Class.NameSeparatingHelper helper = new Class.NameSeparatingHelper(c.Name);
+
             firstName.Text = c.FirstName;
             middleName.Text = c.MiddleName;
             lastName.Text = c.LastName;
@@ -82,38 +59,23 @@ namespace E_Barangay.Forms
             Age.Text = age > 0 ? age.ToString() : 1.ToString();
             Address.Text = c.Address;
         }
-        private void AssignBtn_Click(object sender, EventArgs e)
+        public override void InitializeControls()
         {
-            using (var entity = new EBarangayEntities())
-            {
-                var citizen = entity.Citizens.Find(IDField.Text);
-                AcceptCitizen(citizen);
-            }
-        }
-        #endregion
-
-        #region Clearing
-        private void ResetBtn_Click(object sender, EventArgs e)
-        {
-            clearFields(firstName,middleName,lastName,ext,IDField,sexOption, Age, Address, FromTo, IssuedOn, By, reqSexOption, Relation);
-        }
-        void clearFields(params Control[] controls)
-        {
-            foreach (Control c in controls)
-            {
-                c.ResetText();
-            }
+            o.InitDropdowns(officerOption);
+            AddControls(firstName,
+                        middleName,
+                        lastName,
+                        ext,
+                        Address,
+                        sexOption,
+                        Age,
+                        By,
+                        reqSexOption,
+                        Relation,
+                        FromTo,
+                        IssuedOn,
+                        officerOption);
         }
 
-        #endregion
-
-        private void DeathCertificate_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.F4)
-            {
-                debug = !debug;
-                printing.UpdateDocument();
-            }
-        }
     }
 }
