@@ -28,17 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.officerOption = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.IssuedOn = new System.Windows.Forms.DateTimePicker();
-            this.ResetBtn = new System.Windows.Forms.Button();
-            this.IdGroup = new System.Windows.Forms.GroupBox();
-            this.AssignBtn = new System.Windows.Forms.Button();
-            this.IDField = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -56,27 +51,20 @@
             this.firstName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.addressField = new System.Windows.Forms.TextBox();
-            this.printing = new E_Barangay.Forms.Printing();
-            this.panel1.SuspendLayout();
+            this.FieldsPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.IdGroup.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // FieldsPanel
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.ResetBtn);
-            this.panel1.Controls.Add(this.IdGroup);
-            this.panel1.Controls.Add(this.groupBox3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(352, 690);
-            this.panel1.TabIndex = 2;
+            this.FieldsPanel.Controls.Add(this.groupBox1);
+            this.FieldsPanel.Controls.Add(this.groupBox2);
+            this.FieldsPanel.Controls.Add(this.groupBox3);
+            this.FieldsPanel.Controls.SetChildIndex(this.groupBox3, 0);
+            this.FieldsPanel.Controls.SetChildIndex(this.groupBox2, 0);
+            this.FieldsPanel.Controls.SetChildIndex(this.groupBox1, 0);
             // 
             // groupBox1
             // 
@@ -87,7 +75,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 388);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(328, 55);
-            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Signature";
             // 
@@ -99,7 +87,7 @@
             this.officerOption.Location = new System.Drawing.Point(107, 19);
             this.officerOption.Name = "officerOption";
             this.officerOption.Size = new System.Drawing.Size(215, 21);
-            this.officerOption.TabIndex = 5;
+            this.officerOption.TabIndex = 1;
             // 
             // label7
             // 
@@ -119,7 +107,7 @@
             this.groupBox2.Location = new System.Drawing.Point(12, 335);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(328, 47);
-            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "MISC";
             // 
@@ -141,51 +129,7 @@
             this.IssuedOn.Location = new System.Drawing.Point(92, 14);
             this.IssuedOn.Name = "IssuedOn";
             this.IssuedOn.Size = new System.Drawing.Size(230, 20);
-            this.IssuedOn.TabIndex = 2;
-            // 
-            // ResetBtn
-            // 
-            this.ResetBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ResetBtn.Location = new System.Drawing.Point(126, 653);
-            this.ResetBtn.Name = "ResetBtn";
-            this.ResetBtn.Size = new System.Drawing.Size(100, 25);
-            this.ResetBtn.TabIndex = 5;
-            this.ResetBtn.Text = "Reset";
-            this.ResetBtn.UseVisualStyleBackColor = true;
-            // 
-            // IdGroup
-            // 
-            this.IdGroup.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IdGroup.Controls.Add(this.AssignBtn);
-            this.IdGroup.Controls.Add(this.IDField);
-            this.IdGroup.Location = new System.Drawing.Point(12, 12);
-            this.IdGroup.Name = "IdGroup";
-            this.IdGroup.Size = new System.Drawing.Size(328, 77);
-            this.IdGroup.TabIndex = 1;
-            this.IdGroup.TabStop = false;
-            this.IdGroup.Text = "User ID";
-            // 
-            // AssignBtn
-            // 
-            this.AssignBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AssignBtn.Location = new System.Drawing.Point(127, 45);
-            this.AssignBtn.Name = "AssignBtn";
-            this.AssignBtn.Size = new System.Drawing.Size(75, 23);
-            this.AssignBtn.TabIndex = 4;
-            this.AssignBtn.Text = "Assign";
-            this.AssignBtn.UseVisualStyleBackColor = true;
-            this.AssignBtn.Click += new System.EventHandler(this.AssignBtn_Click);
-            // 
-            // IDField
-            // 
-            this.IDField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IDField.Location = new System.Drawing.Point(6, 19);
-            this.IDField.MaxLength = 10;
-            this.IDField.Name = "IDField";
-            this.IDField.Size = new System.Drawing.Size(316, 20);
-            this.IDField.TabIndex = 3;
+            this.IssuedOn.TabIndex = 1;
             // 
             // groupBox3
             // 
@@ -210,7 +154,7 @@
             this.groupBox3.Location = new System.Drawing.Point(12, 95);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(328, 234);
-            this.groupBox3.TabIndex = 2;
+            this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DETAILS";
             // 
@@ -378,39 +322,16 @@
             this.addressField.Size = new System.Drawing.Size(230, 20);
             this.addressField.TabIndex = 6;
             // 
-            // printing
-            // 
-            this.printing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.printing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.printing.Dock = System.Windows.Forms.DockStyle.Right;
-            this.printing.Location = new System.Drawing.Point(352, 0);
-            this.printing.Name = "printing";
-            this.printing.Size = new System.Drawing.Size(562, 690);
-            this.printing.TabIndex = 0;
-            // 
             // CertificateOfIndigency
             // 
-            this.AcceptButton = this.AssignBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 690);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.printing);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.KeyPreview = true;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "CertificateOfIndigency";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Certificate of Indigency";
-            this.Load += new System.EventHandler(this.DeathCertificate_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DeathCertificate_KeyDown);
-            this.panel1.ResumeLayout(false);
+            this.FieldsPanel.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.IdGroup.ResumeLayout(false);
-            this.IdGroup.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -418,34 +339,29 @@
         }
 
         #endregion
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker IssuedOn;
-        private System.Windows.Forms.Button ResetBtn;
-        private System.Windows.Forms.GroupBox IdGroup;
-        private System.Windows.Forms.Button AssignBtn;
-        private System.Windows.Forms.TextBox IDField;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox firstName;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox addressField;
-        private Printing printing;
-        private System.Windows.Forms.ComboBox SexOption;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox civilStatusOption;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox ageField;
+
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox officerOption;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker IssuedOn;
+        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox ext;
         private System.Windows.Forms.TextBox lastName;
         private System.Windows.Forms.TextBox middleName;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox ageField;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox civilStatusOption;
+        private System.Windows.Forms.ComboBox SexOption;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox firstName;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox addressField;
     }
 }

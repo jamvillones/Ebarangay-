@@ -58,11 +58,7 @@ namespace E_Barangay.Documents
         public override void InitializeControls()
         {
             AddControls(firstText, middleText, lastText, extText, Age, SexOption, Address, Purpose, CStatusOption, officerOption, IssuedOn);
-            foreach (var x in o.sbMemebers)
-            {
-                officerOption.Items.Add(x);
-                officerOption.AutoCompleteCustomSource.Add(x);
-            }
+            o.InitDropdowns(officerOption);
         }
     }
 }
