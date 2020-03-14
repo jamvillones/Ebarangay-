@@ -55,7 +55,7 @@ namespace E_Barangay.Documents
             //string name = Printing.IfControlEmpty(firstName);
             //var h = new Class.NameHelper(name);
             string name = Printing.GetFullName(firstName, middleName, lastName, extension);
-            string text = "To whome it may concern:" + Printing.LineSpace +
+            string text = "To whom it may concern:" + Printing.LineSpace +
                            Printing.Indention + "This is to certify that " + name + " of legal age, Filipino and a resident of " + Printing.IfControlEmpty(address) + "." + Printing.LineSpace +
                            Printing.Indention + "This is to certify further that " + name + " is the dependent of " + Printing.IfControlEmpty(supportNameField) + " who is presently staying at " + Printing.IfControlEmpty(supportAddressField) + " since " + sinceDate.Value.Year.ToString() + "." + Printing.LineSpace +
                            Printing.Indention + "This certification is issued upon the request of " + Printing.MrOrMrs(sexOption.Text) + " " + lastName.Text + (string.IsNullOrEmpty(extension.Text) ? "" : " " + extension.Text) + " for whatever legal purpose it may serve " + Printing.HisOrHer(sexOption.Text) + "." + Printing.LineSpace +
