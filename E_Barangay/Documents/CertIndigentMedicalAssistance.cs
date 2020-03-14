@@ -45,7 +45,7 @@ namespace E_Barangay.Forms
         {
             if (c == null)
             {
-                MessageBox.Show("Not found");
+                ShowNotFound();
                 return;
             }
 

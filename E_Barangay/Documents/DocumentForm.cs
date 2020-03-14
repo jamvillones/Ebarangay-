@@ -18,12 +18,24 @@ namespace E_Barangay.Forms
     {
         protected List<Control> controls = new List<Control>();
         protected string capt = string.Empty;
+        protected Rectangle rect;
 
+        protected void InitBodyRect(PrintPageEventArgs e)
+        {
+            rect.X = e.PageBounds.Width / 3 - 30;
+            rect.Y = e.PageBounds.Height / 3 - 10;
+            rect.Width = 550;
+            rect.Height = 380;
+        }
 
+        public void ShowNotFound()
+        {
+            MessageBox.Show("Not Found.");
+        }
         public DocumentForm()
         {
             InitializeComponent();
-            
+
 
         }
         public virtual void InitializeControls() { }

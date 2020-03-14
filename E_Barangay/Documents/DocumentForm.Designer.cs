@@ -44,7 +44,7 @@
             this.ResetBtn.Location = new System.Drawing.Point(126, 653);
             this.ResetBtn.Name = "ResetBtn";
             this.ResetBtn.Size = new System.Drawing.Size(100, 25);
-            this.ResetBtn.TabIndex = 2;
+            this.ResetBtn.TabIndex = 0;
             this.ResetBtn.TabStop = false;
             this.ResetBtn.Text = "Reset";
             this.ResetBtn.UseVisualStyleBackColor = true;
@@ -104,7 +104,7 @@
             this.printing.Location = new System.Drawing.Point(352, 0);
             this.printing.Name = "printing";
             this.printing.Size = new System.Drawing.Size(562, 690);
-            this.printing.TabIndex = 1;
+            this.printing.TabIndex = 0;
             this.printing.TabStop = false;
             // 
             // DocumentForm

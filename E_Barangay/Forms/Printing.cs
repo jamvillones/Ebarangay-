@@ -33,10 +33,33 @@ namespace E_Barangay.Forms
 
         private void Printing_Load(object sender, EventArgs e)
         {
-           // printPreviewControl.Document = printDocument;
+            // printPreviewControl.Document = printDocument;
 
         }
-        public static void DrawCapSb(PrintPageEventArgs e,string cap, string sb)
+        public static void DrawSpecimenSignature(PrintPageEventArgs e, string nnn)
+        {
+            string name = string.IsNullOrEmpty(nnn.Trim(' ')) ? "BLANK" : nnn;
+            StringFormat format = new StringFormat();
+            format.Alignment = StringAlignment.Center;
+
+            SizeF n = e.Graphics.MeasureString(name.ToUpper(), Printing.fontBoldUnderline);
+            SizeF titleBoxSize = e.Graphics.MeasureString("Specimen Signature of Applicant", Printing.font);
+
+            Rectangle nameRec = new Rectangle(e.PageBounds.Width / 3 - 30,
+                                              e.PageBounds.Height * 2 / 3 + 40,
+                                              n.Width < titleBoxSize.Width ? (int)titleBoxSize.Width + 1 : (int)n.Width, (int)n.Height);
+
+            e.Graphics.DrawString(name, Printing.fontBold, Brushes.Black, nameRec, format);
+
+
+            Rectangle titleRec = new Rectangle(e.PageBounds.Width / 3 - 30,
+                                               nameRec.Bottom,
+                                               nameRec.Width, (int)titleBoxSize.Height * 2);
+
+            e.Graphics.DrawString("Specimen Signature of Applicant", Printing.font, Brushes.Black, titleRec, format);
+
+        }
+        public static void DrawCapSb(PrintPageEventArgs e, string cap, string sb)
         {
             SizeF capBoxSize = e.Graphics.MeasureString(cap, Printing.fontBold);
             SizeF titleBoxSize = e.Graphics.MeasureString(cap, Printing.font);
@@ -52,16 +75,16 @@ namespace E_Barangay.Forms
             //DrawDebugRecs(capRecTitle, e);
 
             Rectangle sbRect = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, capRecTitle.Bottom + 30, 270, (int)capBoxSize.Height);
-            e.Graphics.DrawString((string.IsNullOrEmpty(sb)?"BLANK":sb.ToUpper()), Printing.fontBold, Brushes.Black, sbRect, format);
-           // DrawDebugRecs(sbRect, e);
+            e.Graphics.DrawString((string.IsNullOrEmpty(sb) ? "BLANK" : sb.ToUpper()), Printing.fontBold, Brushes.Black, sbRect, format);
+            // DrawDebugRecs(sbRect, e);
 
             Rectangle sbRectTitle = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, sbRect.Top + (int)capBoxSize.Height, 270, (int)titleBoxSize.Height * 2);
             e.Graphics.DrawString("Sangguniang Barangay Member Officer of the Day", Printing.font, Brushes.Black, sbRectTitle, format);
             //DrawDebugRecs(sbRectTitle, e);
         }
-        public static string GetFullName(Control f, Control m,Control l, Control e)
+        public static string GetFullName(Control f, Control m, Control l, Control e)
         {
-            return f.Text + " " + m.Text + " " + l.Text + " " + (string.IsNullOrEmpty(e.Text)?"":" "+e.Text);
+            return f.Text + " " + m.Text + " " + l.Text + " " + (string.IsNullOrEmpty(e.Text) ? "" : " " + e.Text);
         }
         public static Pen pen = new Pen(Color.Black);
         public static Font font = new Font("Arial Narrow", 12, FontStyle.Regular);
