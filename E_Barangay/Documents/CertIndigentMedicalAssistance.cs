@@ -15,7 +15,7 @@ namespace E_Barangay.Forms
 {
     public partial class CertIndigentMedicalAssistance : DocumentForm
     {
-        OfficersForInfoForPrinting o = new OfficersForInfoForPrinting();
+        OfficerInfo o = new OfficerInfo();
         public CertIndigentMedicalAssistance()
         {
             InitializeComponent();

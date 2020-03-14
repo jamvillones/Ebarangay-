@@ -14,7 +14,7 @@ namespace E_Barangay.Forms
 {
     public partial class CertificateOfIndigency : DocumentForm
     {
-        OfficersForInfoForPrinting o = new OfficersForInfoForPrinting();
+        OfficerInfo o = new OfficerInfo();
         public CertificateOfIndigency()
         {
             InitializeComponent();

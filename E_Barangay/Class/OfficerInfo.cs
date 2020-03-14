@@ -7,9 +7,9 @@ using System.Windows.Forms;
 
 namespace E_Barangay.Class
 {
-    public class OfficersForInfoForPrinting
+    public class OfficerInfo
     {
-        public OfficersForInfoForPrinting()
+        public OfficerInfo()
         {
             using (var ent = new EBarangayEntities())
             {

@@ -19,13 +19,13 @@ namespace E_Barangay.Forms
             InitializeComponent();
         }
 
-        Class.OfficersForInfoForPrinting o;
+        Class.OfficerInfo o;
         private void DeathCertificate_Load(object sender, EventArgs e)
         {
             printing.PrintPage += Printing_PrintPage;
             printing.SubscribeToFields(sinceDate,IDField,firstName, middleName, lastName, extension, address, IssuedOn, supportNameField, sexOption, supportAddressField, officerOption);
 
-            o = new Class.OfficersForInfoForPrinting();
+            o = new Class.OfficerInfo();
             foreach (var x in o.sbMemebers)
             {
                 officerOption.Items.Add(x);

@@ -123,7 +123,7 @@
     <Compile Include="Class\DateTimeExtension.cs" />
     <Compile Include="Class\ImageConverter.cs" />
     <Compile Include="Class\NameSeparatingHelper.cs" />
-    <Compile Include="Class\OfficersForInfoForPrinting.cs" />
+    <Compile Include="Class\OfficerInfo.cs" />
     <Compile Include="Class\PasswordToFormHandler.cs" />
     <Compile Include="Controls\RichTextBoxPrintControl.cs">
       <SubType>Component</SubType>
@@ -147,6 +147,12 @@
     </Compile>
     <Compile Include="Documents\BrgyCertForDeath.Designer.cs">
       <DependentUpon>BrgyCertForDeath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\BrgyCertforFinancialSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BrgyCertforFinancialSupport.Designer.cs">
+      <DependentUpon>BrgyCertforFinancialSupport.cs</DependentUpon>
     </Compile>
     <Compile Include="Documents\BrgyCertificationforbusiness.cs">
       <SubType>Form</SubType>
@@ -355,6 +361,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BrgyCertForDeath.resx">
       <DependentUpon>BrgyCertForDeath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BrgyCertforFinancialSupport.resx">
+      <DependentUpon>BrgyCertforFinancialSupport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BrgyCertificationforbusiness.resx">
       <DependentUpon>BrgyCertificationforbusiness.cs</DependentUpon>

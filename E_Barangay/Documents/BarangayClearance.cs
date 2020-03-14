@@ -15,7 +15,7 @@ namespace E_Barangay.Documents
 {
     public partial class BarangayClearance : DocumentForm
     {
-        OfficersForInfoForPrinting o = new OfficersForInfoForPrinting();
+        OfficerInfo o = new OfficerInfo();
         public BarangayClearance()
         {
             InitializeComponent();

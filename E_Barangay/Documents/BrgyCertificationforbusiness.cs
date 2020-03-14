@@ -15,7 +15,7 @@ namespace E_Barangay.Documents
 {
     public partial class BrgyCertificationforbusiness : DocumentForm
     {
-        OfficersForInfoForPrinting o = new OfficersForInfoForPrinting();
+        OfficerInfo o = new OfficerInfo();
         public BrgyCertificationforbusiness()
         {
             InitializeComponent();
