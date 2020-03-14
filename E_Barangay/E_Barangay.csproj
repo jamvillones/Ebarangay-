@@ -142,6 +142,12 @@
     <Compile Include="Documents\BarangayClearance.Designer.cs">
       <DependentUpon>BarangayClearance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\BrgyCertDependent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BrgyCertDependent.Designer.cs">
+      <DependentUpon>BrgyCertDependent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\BrgyCertForDeath.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,12 +183,6 @@
     </Compile>
     <Compile Include="Documents\CertificateOfIndigency.designer.cs">
       <DependentUpon>CertificateOfIndigency.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Documents\BarangayCertDependent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Documents\BarangayCertDependent.Designer.cs">
-      <DependentUpon>BarangayCertDependent.cs</DependentUpon>
     </Compile>
     <Compile Include="Documents\BrgyCertificationforBurial.cs">
       <SubType>Form</SubType>
@@ -359,6 +359,9 @@
     <EmbeddedResource Include="Documents\BarangayClearance.resx">
       <DependentUpon>BarangayClearance.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BrgyCertDependent.resx">
+      <DependentUpon>BrgyCertDependent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Documents\BrgyCertForDeath.resx">
       <DependentUpon>BrgyCertForDeath.cs</DependentUpon>
     </EmbeddedResource>
@@ -373,9 +376,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BuildingPermit.resx">
       <DependentUpon>BuildingPermit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Documents\BarangayCertDependent.resx">
-      <DependentUpon>BarangayCertDependent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertificateOfIndigency.resx">
       <DependentUpon>CertificateOfIndigency.cs</DependentUpon>

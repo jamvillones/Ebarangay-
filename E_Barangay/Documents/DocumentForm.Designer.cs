@@ -1,4 +1,5 @@
-﻿namespace E_Barangay.Forms
+﻿
+namespace E_Barangay.Forms
 {
     partial class DocumentForm
     {

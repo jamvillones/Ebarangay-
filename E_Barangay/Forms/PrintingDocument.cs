@@ -11,7 +11,7 @@ using E_Barangay.Documents;
 
 namespace E_Barangay.Forms
 {
-    public partial class PrintingDocument : UserControl, Interface.IAccept
+    public partial class PrintingDocument : UserControl
     {
         Form form;
         string[] docNames = {
@@ -28,17 +28,11 @@ namespace E_Barangay.Forms
             "Brgy. Certification for Business",
             "Brgy. Certification for Financial Support"
         };
+
         public PrintingDocument()
         {
             InitializeComponent();
         }
-
-        public Button getAcceptButton()
-        {
-            return null;
-        }
-
-
 
         private void PrintingDocument_Load(object sender, EventArgs e)
         {
@@ -48,10 +42,11 @@ namespace E_Barangay.Forms
         {
             DocumentList.Rows.Clear();
 
-            foreach (var name in docNames)
-                DocumentList.Rows.Add("Open", name);
+            foreach (var x in docNames)
+            {
+                DocumentList.Rows.Add("OPEN", x);
+            }
             DocumentList.Sort(DocumentList.Columns[1], ListSortDirection.Ascending);
-
         }
         public event EventHandler<bool> OpeningForm;
 
@@ -70,38 +65,13 @@ namespace E_Barangay.Forms
             {
                 MessageBox.Show("A form is already open");
             }
-
         }
+
         private void Form_FormClosed(object sender, FormClosedEventArgs e)
         {
             OpeningForm?.Invoke(this, false);
             form = null;
         }
-
-        //private void button1_Click(object sender, EventArgs e)
-        //{
-        //    CreateForm<BarangayClearance>();
-        //}
-        //private void BussClearanceBtn_Click(object sender, EventArgs e)
-        //{
-        //    CreateForm<BussinessClearance>();
-        //}
-        //private void deathCertBtn_Click(object sender, EventArgs e)
-        //{
-        //    CreateForm<DeathCertificate>();
-        //}
-        //private void buildingPermitBtn_Click(object sender, EventArgs e)
-        //{
-        //    CreateForm<BuildingPermit>();
-        //}
-        //private void certAppearanceBtn_Click(object sender, EventArgs e)
-        //{
-        //    CreateForm<CertificateAppearance>();
-        //}
-        //private void certIndigencyBtn_Click(object sender, EventArgs e)
-        //{
-        //    CreateForm<CertificateOfIndigency>();
-        //}
 
         private void DocumentList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -136,7 +106,7 @@ namespace E_Barangay.Forms
                     CreateForm<CertificateOfIndigency>();
                     break;
                 case "Cert Dependent":
-                    CreateForm<BarangayCertDependent>();
+                    CreateForm<BrgyCertDependent>();
                     break;
                 case "Brgy Certificate for Burial":
                     CreateForm<BrgyCertificationforBurial>();
