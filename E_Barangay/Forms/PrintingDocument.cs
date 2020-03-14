@@ -25,7 +25,8 @@ namespace E_Barangay.Forms
             "Brgy Certificate for Burial",
             "Cert. Indigent Medical Assistance",
             "Brgy. Certificate for Death",
-            "Brgy. Certification for Business"
+            "Brgy. Certification for Business",
+            "Brgy. Certification for Financial Support"
         };
         public PrintingDocument()
         {
@@ -148,6 +149,9 @@ namespace E_Barangay.Forms
                     break;
                 case "Brgy. Certification for Business":
                     CreateForm<BrgyCertificationforbusiness>();
+                    break;
+                case "Brgy. Certification for Financial Support":
+                    CreateForm<BrgyCertforFinancialSupport>();
                     break;
                 default:
                     break;

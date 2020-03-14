@@ -44,6 +44,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.address = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.relations = new System.Windows.Forms.TextBox();
+            this.reqSex = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -51,7 +54,6 @@
             this.institution = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.inBehalf = new System.Windows.Forms.TextBox();
-            this.reqSex = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.issuedOn = new System.Windows.Forms.DateTimePicker();
@@ -246,6 +248,8 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.relations);
             this.groupBox1.Controls.Add(this.reqSex);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label8);
@@ -256,14 +260,46 @@
             this.groupBox1.Controls.Add(this.inBehalf);
             this.groupBox1.Location = new System.Drawing.Point(12, 306);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(328, 123);
+            this.groupBox1.Size = new System.Drawing.Size(328, 152);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "REQUEST";
             // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(6, 70);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 20);
+            this.label5.TabIndex = 39;
+            this.label5.Text = "Relationship:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // relations
+            // 
+            this.relations.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.relations.Location = new System.Drawing.Point(92, 70);
+            this.relations.Name = "relations";
+            this.relations.Size = new System.Drawing.Size(230, 20);
+            this.relations.TabIndex = 3;
+            // 
+            // reqSex
+            // 
+            this.reqSex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.reqSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.reqSex.FormattingEnabled = true;
+            this.reqSex.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.reqSex.Location = new System.Drawing.Point(92, 43);
+            this.reqSex.Name = "reqSex";
+            this.reqSex.Size = new System.Drawing.Size(230, 21);
+            this.reqSex.TabIndex = 2;
+            // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(6, 95);
+            this.label6.Location = new System.Drawing.Point(6, 122);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 20);
             this.label6.TabIndex = 29;
@@ -272,7 +308,7 @@
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(6, 69);
+            this.label8.Location = new System.Drawing.Point(6, 96);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 20);
             this.label8.TabIndex = 28;
@@ -293,19 +329,19 @@
             this.forWhat.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.forWhat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.forWhat.Location = new System.Drawing.Point(92, 95);
+            this.forWhat.Location = new System.Drawing.Point(92, 122);
             this.forWhat.Name = "forWhat";
             this.forWhat.Size = new System.Drawing.Size(230, 20);
-            this.forWhat.TabIndex = 4;
+            this.forWhat.TabIndex = 5;
             // 
             // institution
             // 
             this.institution.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.institution.Location = new System.Drawing.Point(92, 69);
+            this.institution.Location = new System.Drawing.Point(92, 96);
             this.institution.Name = "institution";
             this.institution.Size = new System.Drawing.Size(230, 20);
-            this.institution.TabIndex = 3;
+            this.institution.TabIndex = 4;
             // 
             // label15
             // 
@@ -320,24 +356,11 @@
             // 
             this.inBehalf.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.inBehalf.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.inBehalf.Location = new System.Drawing.Point(92, 17);
             this.inBehalf.Name = "inBehalf";
             this.inBehalf.Size = new System.Drawing.Size(230, 20);
             this.inBehalf.TabIndex = 1;
-            // 
-            // reqSex
-            // 
-            this.reqSex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.reqSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.reqSex.FormattingEnabled = true;
-            this.reqSex.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.reqSex.Location = new System.Drawing.Point(92, 43);
-            this.reqSex.Name = "reqSex";
-            this.reqSex.Size = new System.Drawing.Size(230, 21);
-            this.reqSex.TabIndex = 37;
             // 
             // groupBox2
             // 
@@ -345,7 +368,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.issuedOn);
-            this.groupBox2.Location = new System.Drawing.Point(12, 435);
+            this.groupBox2.Location = new System.Drawing.Point(12, 464);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(328, 52);
             this.groupBox2.TabIndex = 4;
@@ -378,7 +401,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.officerOption);
             this.groupBox5.Controls.Add(this.label4);
-            this.groupBox5.Location = new System.Drawing.Point(12, 493);
+            this.groupBox5.Location = new System.Drawing.Point(12, 522);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(328, 55);
             this.groupBox5.TabIndex = 5;
@@ -453,5 +476,7 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.ComboBox officerOption;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox relations;
     }
 }
