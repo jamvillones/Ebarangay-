@@ -166,6 +166,12 @@
     <Compile Include="Documents\BrgyCertificationforbusiness.Designer.cs">
       <DependentUpon>BrgyCertificationforbusiness.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\BrgyClearance_Akelco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BrgyClearance_Akelco.Designer.cs">
+      <DependentUpon>BrgyClearance_Akelco.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\CertificateAppearance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -370,6 +376,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BrgyCertificationforbusiness.resx">
       <DependentUpon>BrgyCertificationforbusiness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BrgyClearance_Akelco.resx">
+      <DependentUpon>BrgyClearance_Akelco.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertificateAppearance.resx">
       <DependentUpon>CertificateAppearance.cs</DependentUpon>
