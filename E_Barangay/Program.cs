@@ -28,7 +28,7 @@ namespace E_Barangay
                 Application.Run(new MainPage());
 
 
-            // Application.Run(new BrgyCertForDeath());
+            //Application.Run(new BrgyClearance_Akelco());
         }
     }
 }
