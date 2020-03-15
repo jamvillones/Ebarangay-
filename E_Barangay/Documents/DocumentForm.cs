@@ -24,6 +24,15 @@ namespace E_Barangay.Forms
         {
             MessageBox.Show("Not Found.");
         }
+        protected bool NullCheck(Citizen c)
+        {
+            if(c == null)
+            {
+                ShowNotFound();
+                return true;
+            }
+            return false;
+        }
         public DocumentForm()
         {
             InitializeComponent();
