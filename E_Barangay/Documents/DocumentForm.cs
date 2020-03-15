@@ -66,6 +66,17 @@ namespace E_Barangay.Forms
             using (var entity = new EBarangayEntities())
             {
                 var citizen = entity.Citizens.Find(IDField.Text);
+                if (citizen == null)
+                {
+                    MessageBox.Show("ID not found!");
+                    return;
+                }
+
+                if (!string.IsNullOrEmpty(citizen.RefRecords))
+                {
+
+                    MessageBox.Show("Warning! This person has complaint recorded to its name.");
+                }
                 AcceptCitizen(citizen);
             }
         }
