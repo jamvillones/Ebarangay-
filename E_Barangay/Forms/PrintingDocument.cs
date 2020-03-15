@@ -26,7 +26,8 @@ namespace E_Barangay.Forms
             "Cert. Indigent Medical Assistance",
             "Brgy. Certificate for Death",
             "Brgy. Certification for Business",
-            "Brgy. Certification for Financial Support"
+            "Brgy. Certification for Financial Support",
+            "Brgy. Clearance Akelco"
         };
 
         public PrintingDocument()
@@ -122,6 +123,9 @@ namespace E_Barangay.Forms
                     break;
                 case "Brgy. Certification for Financial Support":
                     CreateForm<BrgyCertforFinancialSupport>();
+                    break;
+                case "Brgy. Clearance Akelco":
+                    CreateForm<BrgyClearance_Akelco>();
                     break;
                 default:
                     break;
