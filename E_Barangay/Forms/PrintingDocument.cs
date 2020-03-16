@@ -27,7 +27,8 @@ namespace E_Barangay.Forms
             "Brgy. Certificate for Death",
             "Brgy. Certification for Business",
             "Brgy. Certification for Financial Support",
-            "Brgy. Clearance Akelco"
+            "Brgy. Clearance Akelco",
+            "Cert. SSS Requirement"
         };
 
         public PrintingDocument()
@@ -126,6 +127,9 @@ namespace E_Barangay.Forms
                     break;
                 case "Brgy. Clearance Akelco":
                     CreateForm<BrgyClearance_Akelco>();
+                    break;
+                case "Cert. SSS Requirement":
+                    CreateForm<CertSSSReq>();
                     break;
                 default:
                     break;

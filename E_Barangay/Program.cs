@@ -26,9 +26,6 @@ namespace E_Barangay
 
             if (login.UserSuccessfullyAuthenticated)
                 Application.Run(new MainPage());
-
-
-            //Application.Run(new BrgyClearance_Akelco());
         }
     }
 }
