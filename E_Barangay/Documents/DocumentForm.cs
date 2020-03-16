@@ -90,7 +90,7 @@ namespace E_Barangay.Forms
                 if (!string.IsNullOrEmpty(citizen.RefRecords))
                 {
 
-                    MessageBox.Show("Warning! This person has complaint recorded to its name.");
+                    MessageBox.Show("A complaint is associated with this ID. Are you sure you want to continue?");
                 }
                 AcceptCitizen(citizen);
             }
