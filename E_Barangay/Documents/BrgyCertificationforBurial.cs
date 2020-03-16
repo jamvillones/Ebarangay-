@@ -22,8 +22,9 @@ namespace E_Barangay.Forms
 
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(Properties.Resources.BrgyCertificationforBurial, new PointF(0, 0));
+            e.Graphics.DrawImage(Properties.Resources.BrgyCertificationforBurial, Point.Empty);
             Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 - 10, 550, 380);
+
             string name = Printing.GetFullName(firstName, middleName, lastName, ext);
             string first = "To whom it may concern:" + Printing.LineSpace +
                             Printing.Indention + "This is to certify that " + Printing.MrOrMrs(sex.Text) + " " + name + " of legal age, " + cStatus.Text + ", Filipino, has been a resident of " + Address.Text + " belongs to an  indigent family in this Barangay."+Printing.LineSpace+

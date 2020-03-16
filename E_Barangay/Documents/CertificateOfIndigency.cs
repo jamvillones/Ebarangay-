@@ -21,6 +21,7 @@ namespace E_Barangay.Forms
         }
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
+            // base.Printing_PrintPage(sender, e);
             e.Graphics.DrawImage(Properties.Resources.CertificateOfIndigency, new PointF(0, 0));
             Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 32,
                                            e.PageBounds.Height / 3 - 5,

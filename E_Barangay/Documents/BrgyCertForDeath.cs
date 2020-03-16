@@ -23,13 +23,14 @@ namespace E_Barangay.Documents
         }
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
+            base.Printing_PrintPage(sender, e);
             //if (o == null)
             //    o = new Class.OfficersForInfoForPrinting();
-            e.Graphics.DrawImage(Properties.Resources.DeathCertificate, new PointF(0, 0));
+            //e.Graphics.DrawImage(Properties.Resources.DeathCertificate, new PointF(0, 0));
 
-            Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 32,
-                                           e.PageBounds.Height / 3 - 10,
-                                           550, 380);
+            //Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 32,
+            //                               e.PageBounds.Height / 3 - 10,
+            //                               550, 380);
 
             string name = Printing.GetFullName(firstName, middleName, lastName, ext);
 

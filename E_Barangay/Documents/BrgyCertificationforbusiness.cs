@@ -41,8 +41,7 @@ namespace E_Barangay.Documents
         }
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(Properties.Resources.DeathCertificate, Point.Empty);
-            InitBodyRect(e);
+            base.Printing_PrintPage(sender, e);
 
             string name = firstName.Text + " " + middleName.Text + " " + lastName.Text + (string.IsNullOrEmpty(ext.Text) ? "" : " " + ext.Text);
             string text = "To whom it may concern:" + Printing.LineSpace +

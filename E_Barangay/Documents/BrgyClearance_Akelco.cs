@@ -43,8 +43,7 @@ namespace E_Barangay.Documents
         }
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(Properties.Resources.DeathCertificate, Point.Empty);
-            InitBodyRect(e);
+            base.Printing_PrintPage(sender, e);
 
             string name = Printing.GetName(firstName, middleName, lastName, ext);
 

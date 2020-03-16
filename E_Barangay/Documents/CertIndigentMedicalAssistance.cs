@@ -23,10 +23,7 @@ namespace E_Barangay.Forms
 
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(Properties.Resources.CertIndigentMedicalAssistance, new PointF(0, 0));
-            Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 32,
-                                           e.PageBounds.Height / 3 - 10,
-                                           550, 380);
+            base.Printing_PrintPage(sender, e);
 
             string name = Printing.GetFullName(firstName, middleName, lastName, ext);
             string first = "To whom it may concern:" + Printing.LineSpace +

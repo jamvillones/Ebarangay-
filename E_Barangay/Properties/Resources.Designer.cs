@@ -143,9 +143,9 @@ namespace E_Barangay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap DeathCertificate {
+        public static System.Drawing.Bitmap eye_20px {
             get {
-                object obj = ResourceManager.GetObject("DeathCertificate", resourceCulture);
+                object obj = ResourceManager.GetObject("eye_20px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace E_Barangay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap eye_20px {
+        public static System.Drawing.Bitmap GenericBG {
             get {
-                object obj = ResourceManager.GetObject("eye_20px", resourceCulture);
+                object obj = ResourceManager.GetObject("GenericBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

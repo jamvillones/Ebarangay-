@@ -22,12 +22,12 @@ namespace E_Barangay.Forms
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
             e.Graphics.DrawImage(Properties.Resources.BussinessClearance, 0, 0);
-            string name = Printing.IfControlEmpty(this.firstName);
+            string name = Printing.GetFullName(firstName, middleName, lastName, extension);
             //var helper = new Class.NameHelper(name);
 
             #region firstbatch
             Rectangle firstRect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 - 10, 548, 50);
-            string FirstBatch = Printing.Indention + Printing.GetFullName(firstName, middleName, lastName, extension) + " of legal age, Filipino and residing at " +
+            string FirstBatch = Printing.Indention + name + " of legal age, Filipino and residing at " +
                                 Printing.IfControlEmpty(address) + " to operate:";
             e.Graphics.DrawString(FirstBatch, Printing.font, Brushes.Black, firstRect);
             DrawDebugRecs(firstRect, e);

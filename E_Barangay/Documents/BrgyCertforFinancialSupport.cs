@@ -57,8 +57,7 @@ namespace E_Barangay.Documents
         }
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(Properties.Resources.DeathCertificate, Point.Empty);
-            InitBodyRect(e);
+            base.Printing_PrintPage(sender, e);
 
             string name = firstName.Text + " " + middleName.Text + " " + lastName.Text + (string.IsNullOrEmpty(ext.Text) ? "" : " " + ext.Text);
             string text = "To whom it may concern:" + Printing.LineSpace +
@@ -66,6 +65,7 @@ namespace E_Barangay.Documents
                           Printing.Indention + "This certification is issued upon the request of "+name+"  in support to "+sexOption.HisHer()+" claim for the assistance extended to their family." + Printing.LineSpace +
                           Printing.Indention + "Issued this "+issuedOn.Value.Day+"th day of "+issuedOn.Value.ToString("MMMM, yyyy")+" Barangay Poblacion, Kalibo, Aklan.";
             e.Graphics.DrawString(text, Printing.font, Brushes.Black, rect);
+            DrawDebugRecs(rect, e);
             Printing.DrawCapSb(e, o.captName, officerOption.Text);
         }
     }

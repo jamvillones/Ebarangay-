@@ -26,7 +26,7 @@ namespace E_Barangay.Forms
         }
         protected bool NullCheck(Citizen c)
         {
-            if(c == null)
+            if (c == null)
             {
                 ShowNotFound();
                 return true;
@@ -53,7 +53,13 @@ namespace E_Barangay.Forms
             printing.SubscribeToFields(controls.ToArray());
         }
 
-        public virtual void Printing_PrintPage(object sender, PrintPageEventArgs e) { }
+        public virtual void Printing_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(Properties.Resources.GenericBG, Point.Empty);
+            InitBodyRect(e);
+
+        }
+
 
         public bool debug = false;
         protected void DrawDebugRecs(Rectangle rec, PrintPageEventArgs e)

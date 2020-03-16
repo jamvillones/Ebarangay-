@@ -100,6 +100,29 @@ namespace E_Barangay.Forms
             e.Graphics.DrawString("Sangguniang Barangay Member Officer of the Day", Printing.font, Brushes.Black, sbRectTitle, format);
             //DrawDebugRecs(sbRectTitle, e);
         }
+        public static void DrawCap(PrintPageEventArgs e, string cap)
+        {
+            SizeF capBoxSize = e.Graphics.MeasureString(cap, Printing.fontBold);
+            SizeF titleBoxSize = e.Graphics.MeasureString(cap, Printing.font);
+            StringFormat format = new StringFormat();
+            format.Alignment = StringAlignment.Center;
+
+            Rectangle captRec = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, e.PageBounds.Height * 2 / 3 + 40, 270, (int)capBoxSize.Height);
+            e.Graphics.DrawString(cap.ToUpper(), Printing.fontBold, Brushes.Black, captRec, format);
+            //DrawDebugRecs(captRec, e);
+
+            Rectangle capRecTitle = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, captRec.Top + (int)capBoxSize.Height, 270, (int)titleBoxSize.Height * 2);
+            e.Graphics.DrawString("Punong Barangay", Printing.font, Brushes.Black, capRecTitle, format);
+            //DrawDebugRecs(capRecTitle, e);
+
+            //Rectangle sbRect = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, capRecTitle.Bottom + 30, 270, (int)capBoxSize.Height);
+            //e.Graphics.DrawString((string.IsNullOrEmpty(sb) ? "BLANK" : sb.ToUpper()), Printing.fontBold, Brushes.Black, sbRect, format);
+            //// DrawDebugRecs(sbRect, e);
+
+            //Rectangle sbRectTitle = new Rectangle(e.PageBounds.Width * 3 / 5 + 20, sbRect.Top + (int)capBoxSize.Height, 270, (int)titleBoxSize.Height * 2);
+            //e.Graphics.DrawString("Sangguniang Barangay Member Officer of the Day", Printing.font, Brushes.Black, sbRectTitle, format);
+            ////DrawDebugRecs(sbRectTitle, e);
+        }
         public static string GetFullName(Control f, Control m, Control l, Control e)
         {
             return f.Text + " " + m.Text + " " + l.Text + " " + (string.IsNullOrEmpty(e.Text) ? "" : " " + e.Text);
