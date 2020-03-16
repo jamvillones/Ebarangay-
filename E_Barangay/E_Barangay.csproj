@@ -196,6 +196,12 @@
     <Compile Include="Documents\BrgyCertificationforBurial.Designer.cs">
       <DependentUpon>BrgyCertificationforBurial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\CertofP4s.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertofP4s.Designer.cs">
+      <DependentUpon>CertofP4s.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\CertSSSReq.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -397,6 +403,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BrgyCertificationforBurial.resx">
       <DependentUpon>BrgyCertificationforBurial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertofP4s.resx">
+      <DependentUpon>CertofP4s.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertSSSReq.resx">
       <DependentUpon>CertSSSReq.cs</DependentUpon>
