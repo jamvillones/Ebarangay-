@@ -28,7 +28,8 @@ namespace E_Barangay.Forms
             "Brgy. Certification for Business",
             "Brgy. Certification for Financial Support",
             "Brgy. Clearance Akelco",
-            "Cert. SSS Requirement"
+            "Cert. SSS Requirement",
+            "Cert. of 4P's"
         };
 
         public PrintingDocument()
@@ -130,6 +131,9 @@ namespace E_Barangay.Forms
                     break;
                 case "Cert. SSS Requirement":
                     CreateForm<CertSSSReq>();
+                    break;
+                case "Cert. of 4P's":
+                    CreateForm<CertofP4s>();
                     break;
                 default:
                     break;
