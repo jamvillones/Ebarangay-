@@ -25,6 +25,13 @@ namespace E_Barangay.Documents
         {
             MessageBox.Show("Not Found.");
         }
+        protected string ToWhom
+        {
+            get
+            {
+                return "To whom it may concern";
+            }
+        }
         protected bool NullCheck(Citizen c)
         {
             if (c == null)

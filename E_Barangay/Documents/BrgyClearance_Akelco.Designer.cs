@@ -340,9 +340,9 @@
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.orValidityDate);
             this.groupBox1.Controls.Add(this.orIssueDate);
-            this.groupBox1.Location = new System.Drawing.Point(11, 398);
+            this.groupBox1.Location = new System.Drawing.Point(12, 398);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(329, 100);
+            this.groupBox1.Size = new System.Drawing.Size(328, 100);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "OR";
@@ -363,7 +363,7 @@
             this.orNo.Location = new System.Drawing.Point(93, 17);
             this.orNo.MaxLength = 13;
             this.orNo.Name = "orNo";
-            this.orNo.Size = new System.Drawing.Size(230, 20);
+            this.orNo.Size = new System.Drawing.Size(229, 20);
             this.orNo.TabIndex = 1;
             // 
             // label11
@@ -392,7 +392,7 @@
             this.orValidityDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.orValidityDate.Location = new System.Drawing.Point(93, 69);
             this.orValidityDate.Name = "orValidityDate";
-            this.orValidityDate.Size = new System.Drawing.Size(230, 20);
+            this.orValidityDate.Size = new System.Drawing.Size(229, 20);
             this.orValidityDate.TabIndex = 4;
             // 
             // orIssueDate
@@ -403,7 +403,7 @@
             this.orIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.orIssueDate.Location = new System.Drawing.Point(93, 43);
             this.orIssueDate.Name = "orIssueDate";
-            this.orIssueDate.Size = new System.Drawing.Size(230, 20);
+            this.orIssueDate.Size = new System.Drawing.Size(229, 20);
             this.orIssueDate.TabIndex = 3;
             // 
             // BrgyClearance_Akelco

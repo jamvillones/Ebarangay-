@@ -25,6 +25,11 @@ public static class PrintingExtensions
         if (string.IsNullOrEmpty(c.Text)) return "(BLANK)";
         return c.Text == "Male" ? "him" : "her";
     }
+    public static string HeShe(this Control c)
+    {
+        if (string.IsNullOrEmpty(c.Text)) return "(BLANK)";
+        return c.Text == "Male" ? "he" : "she";
+    }
    
 }
 

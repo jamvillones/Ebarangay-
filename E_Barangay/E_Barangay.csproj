@@ -173,6 +173,12 @@
     <Compile Include="Documents\BrgyCertforNoIncome.Designer.cs">
       <DependentUpon>BrgyCertforNoIncome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\BrgyCertforResidency.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BrgyCertforResidency.Designer.cs">
+      <DependentUpon>BrgyCertforResidency.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\BrgyCertificationforbusiness.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -404,6 +410,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BrgyCertforNoIncome.resx">
       <DependentUpon>BrgyCertforNoIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BrgyCertforResidency.resx">
+      <DependentUpon>BrgyCertforResidency.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BrgyCertificationforbusiness.resx">
       <DependentUpon>BrgyCertificationforbusiness.cs</DependentUpon>
