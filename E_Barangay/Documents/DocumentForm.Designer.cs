@@ -40,8 +40,8 @@
             // 
             // ResetBtn
             // 
-            this.ResetBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ResetBtn.Location = new System.Drawing.Point(126, 653);
+            this.ResetBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ResetBtn.Location = new System.Drawing.Point(126, 658);
             this.ResetBtn.Name = "ResetBtn";
             this.ResetBtn.Size = new System.Drawing.Size(100, 25);
             this.ResetBtn.TabIndex = 0;

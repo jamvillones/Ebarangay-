@@ -24,7 +24,9 @@ namespace E_Barangay.Forms
             "Brgy. Certification for Financial Support",
             "Brgy. Clearance Akelco",
             "Cert. SSS Requirement",
-            "Cert. of 4P's"
+            "Cert. of 4P's",
+            "Brgy. Certification for Guardian",
+            "Brgy. Certification for no Income"
         };
 
         public PrintingDocument()
@@ -127,6 +129,12 @@ namespace E_Barangay.Forms
                     break;
                 case "Cert. of 4P's":
                     CreateForm<CertofP4s>();
+                    break;
+                case "Brgy. Certification for Guardian":
+                    CreateForm<BrgyCertforGuardian>();
+                    break;
+                case "Brgy. Certification for no Income":
+                    CreateForm<BrgyCertforNoIncome>();
                     break;
                 default:
                     break;
