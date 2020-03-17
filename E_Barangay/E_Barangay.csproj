@@ -116,6 +116,7 @@
       <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Class\CitizenExtensions.cs" />
+    <Compile Include="Class\DocumentInstantiator.cs" />
     <Compile Include="Class\PrintingExtensions.cs" />
     <Compile Include="Controls\CustomDataGridView.cs">
       <SubType>Component</SubType>

@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using E_Barangay.Documents;
+using E_Barangay.Class;
 
 namespace E_Barangay.Forms
 {
     public partial class PrintingDocument : UserControl
     {
         Form form;
+
         string[] docNames = {
             "Barangay Clearance",
             "Business Clearance",
