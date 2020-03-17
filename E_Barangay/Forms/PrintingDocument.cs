@@ -16,7 +16,7 @@ namespace E_Barangay.Forms
             "Building Permit",
             "Certificate of Appearance",
             "Certificate of Indigency",
-            "Cert Dependent",
+            "Cert. Dependent",
             "Brgy Certificate for Burial",
             "Cert. Indigent Medical Assistance",
             "Brgy. Certificate for Death",
@@ -27,7 +27,8 @@ namespace E_Barangay.Forms
             "Cert. of 4P's",
             "Brgy. Certification for Guardian",
             "Brgy. Certification for no Income",
-            "Brgy. Certification for Residency"
+            "Brgy. Certification for Residency",
+            "Cert. Animal Bite"
         };
 
         public PrintingDocument()
@@ -104,7 +105,7 @@ namespace E_Barangay.Forms
                 case "Certificate of Indigency":
                     CreateForm<CertificateOfIndigency>();
                     break;
-                case "Cert Dependent":
+                case "Cert. Dependent":
                     CreateForm<BrgyCertDependent>();
                     break;
                 case "Brgy Certificate for Burial":
@@ -139,6 +140,9 @@ namespace E_Barangay.Forms
                     break;
                 case "Brgy. Certification for Residency":
                     CreateForm<BrgyCertforResidency>();
+                    break;
+                case "Cert. Animal Bite":
+                    CreateForm<CertAnimalBite>();
                     break;
                 default:
                     break;
