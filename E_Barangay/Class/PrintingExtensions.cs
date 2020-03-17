@@ -15,6 +15,13 @@ public static class PrintingExtensions
 
         return c.Text == "Male" ? "Mr." : "Ms.";
     }
+    public static string MrMrs(this Control c)
+    {
+        if (c.Text == "")
+            return "(BLANK)";
+
+        return c.Text == "Male" ? "Mr." : "Mrs.";
+    }
     public static string HisHer(this Control c)
     {
         if (c.Text == "") return "(BLANK)";
