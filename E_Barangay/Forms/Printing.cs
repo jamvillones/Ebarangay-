@@ -36,20 +36,20 @@ namespace E_Barangay.Forms
             // printPreviewControl.Document = printDocument;
 
         }
-        public static void DrawValidityOr(PrintPageEventArgs e,string orNo,DateTime orIssue, DateTime vdt)
+        public static void DrawValidityOr(PrintPageEventArgs e, string orNo, DateTime orIssue, DateTime vdt)
         {
             string validity = vdt.ToString("MMMM dd, yyyy");
             string issuedOn = orIssue.ToString("MMMM dd, yyyy");
-            string text = "Note: Valid until: " + validity+"\n"+
-                          "Paid under Or No.:"+orNo+"\n"+
-                          "Issued on:"+issuedOn;
+            string text = "Note: Valid until: " + validity + "\n" +
+                          "Paid under Or No.: " + orNo + "\n" +
+                          "Issued on: " + issuedOn;
             StringFormat format = new StringFormat();
             format.Alignment = StringAlignment.Near;
 
             SizeF s = e.Graphics.MeasureString(text, Printing.font);
-            Rectangle r = new Rectangle(e.PageBounds.Width/3-30,
-                                        e.PageBounds.Height*4/5-15,
-                                        (int)s.Width+1,(int)s.Height);
+            Rectangle r = new Rectangle(e.PageBounds.Width / 3 - 30,
+                                        e.PageBounds.Height * 4 / 5 - 15,
+                                        (int)s.Width + 1, (int)s.Height);
 
             e.Graphics.DrawString(text, Printing.font, Brushes.Black, r);
 
@@ -129,7 +129,7 @@ namespace E_Barangay.Forms
         }
         public static string GetName(Control f, Control m, Control l, Control e)
         {
-            return  f.Text + " " + (string.IsNullOrEmpty(m.Text)?"":m.Text[0].ToString().ToUpper()+".") + " " + l.Text + " " + (string.IsNullOrEmpty(e.Text) ? "" : " " + e.Text);
+            return f.Text + " " + (string.IsNullOrEmpty(m.Text) ? "" : m.Text[0].ToString().ToUpper() + ".") + " " + l.Text + " " + (string.IsNullOrEmpty(e.Text) ? "" : " " + e.Text);
         }
         public static Pen pen = new Pen(Color.Black);
         public static Font font = new Font("Arial Narrow", 12, FontStyle.Regular);

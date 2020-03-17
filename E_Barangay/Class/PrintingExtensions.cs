@@ -30,6 +30,10 @@ public static class PrintingExtensions
         if (string.IsNullOrEmpty(c.Text)) return "(BLANK)";
         return c.Text == "Male" ? "he" : "she";
     }
+    public static string GetYears(this NumericUpDown n)
+    {
+        return n.Value > 1 ? n.Value + " years" : "a year";
+    }
    
 }
 

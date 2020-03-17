@@ -48,10 +48,10 @@ namespace E_Barangay.Documents
 
             string name = Printing.GetFullName(firstText, middleText, lastText, extText);
             string _name = Printing.GetName(firstText, middleText, lastText, extText);
-            string yearNum = (residencyYear.Value > 1) ? residencyYear.Value+" years." : " a year.";
+            string yearNum = residencyYear.GetYears();
 
             string text = ToWhom + Printing.LineSpace +
-                          Printing.Indention + "This is to certify that  "+name+", "+age.Text+" years old, "+CStatusOption.Text+", Filipino, and a resident of Purok "+Address.Text+", and "+sex.HeShe()+"’s been staying at barangay Poblacion for almost "+yearNum + Printing.LineSpace +
+                          Printing.Indention + "This is to certify that  "+name+", "+age.Text+" years old, "+CStatusOption.Text+", Filipino, and a resident of Purok "+Address.Text+", and "+sex.HeShe()+"’s been staying at barangay Poblacion for almost "+yearNum+"." + Printing.LineSpace +
                           Printing.Indention + "This certification issued upon the request of "+sex.MrMs()+" "+lastText.Text+" for the purpose of "+sex.HisHer()+" residency." + Printing.LineSpace +
                           Printing.Indention + "Issued this "+IssuedOn.Value.Day+"th day of "+IssuedOn.Value.ToString("MMMM, yyyy")+" Barangay Poblacion, Kalibo, Aklan.";
 
