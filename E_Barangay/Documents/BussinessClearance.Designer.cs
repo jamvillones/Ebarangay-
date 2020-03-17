@@ -1,4 +1,4 @@
-﻿namespace E_Barangay.Forms
+﻿namespace E_Barangay.Documents
 {
     partial class BussinessClearance
     {

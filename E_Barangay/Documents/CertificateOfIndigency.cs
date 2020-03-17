@@ -9,8 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using E_Barangay.Forms;
 
-namespace E_Barangay.Forms
+namespace E_Barangay.Documents
 {
     public partial class CertificateOfIndigency : DocumentForm
     {

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Windows.Forms;
+using E_Barangay.Forms;
 
-namespace E_Barangay.Forms
+namespace E_Barangay.Documents
 {
     public partial class DocumentForm : Form
     {

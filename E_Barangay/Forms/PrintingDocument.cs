@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using E_Barangay.Documents;
-using E_Barangay.Class;
 
 namespace E_Barangay.Forms
 {
@@ -61,10 +54,8 @@ namespace E_Barangay.Forms
             {
                 OpeningForm?.Invoke(this, true);
                 form = new T();
-                // form.TopMost = true;
                 form.FormClosed += Form_FormClosed;
                 form.Show();
-                //form.Activate();
             }
             else
             {

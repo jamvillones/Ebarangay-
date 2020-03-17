@@ -1,5 +1,4 @@
-﻿
-namespace E_Barangay.Forms
+﻿namespace E_Barangay.Documents
 {
     partial class DocumentForm
     {
@@ -138,7 +137,7 @@ namespace E_Barangay.Forms
         private System.Windows.Forms.GroupBox IdGroup;
         private System.Windows.Forms.Button AssignBtn;
         private System.Windows.Forms.TextBox IDField;
-        private Printing printing;
+        private E_Barangay.Forms.Printing printing;
         public System.Windows.Forms.Panel FieldsPanel;
     }
 }

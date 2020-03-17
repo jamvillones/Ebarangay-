@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Printing;
 using E_Barangay.Class;
-
-namespace E_Barangay.Forms
+using E_Barangay.Forms;
+namespace E_Barangay.Documents
 {
     public partial class BussinessClearance : DocumentForm
     {

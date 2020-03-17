@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace E_Barangay.Documents
 {
-    public partial class BrgyCertDependent : Forms.DocumentForm
+    public partial class BrgyCertDependent : DocumentForm
     {
         OfficerInfo o = new OfficerInfo();
         public BrgyCertDependent()

@@ -137,14 +137,14 @@ namespace E_Barangay.Forms
             // throw new NotImplementedException();
         }
 
-        BussinessClearance bussincessClearance;
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            bussincessClearance = new BussinessClearance();
-            bussincessClearance.FormClosing += (s, en) => { this.Enabled = true; };
-            bussincessClearance.Show();
-            this.Enabled = false;
-        }
+        //BussinessClearance bussincessClearance;
+        //private void button2_Click_1(object sender, EventArgs e)
+        //{
+        //    bussincessClearance = new BussinessClearance();
+        //    bussincessClearance.FormClosing += (s, en) => { this.Enabled = true; };
+        //    bussincessClearance.Show();
+        //    this.Enabled = false;
+        //}
 
         private void MainPage_KeyDown(object sender, KeyEventArgs e)
         {
