@@ -18,6 +18,7 @@ namespace E_Barangay.Documents
         public CustomCertification()
         {
             InitializeComponent();
+            wordNum.Text = body.TextLength.ToString();
         }
         public override void InitializeControls()
         {
