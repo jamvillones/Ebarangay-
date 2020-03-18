@@ -76,7 +76,7 @@
             this.groupBox4.Controls.Add(this.label9);
             this.groupBox4.Location = new System.Drawing.Point(14, 416);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(324, 55);
+            this.groupBox4.Size = new System.Drawing.Size(325, 55);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Signature";
@@ -88,7 +88,7 @@
             this.officerOption.FormattingEnabled = true;
             this.officerOption.Location = new System.Drawing.Point(106, 17);
             this.officerOption.Name = "officerOption";
-            this.officerOption.Size = new System.Drawing.Size(212, 21);
+            this.officerOption.Size = new System.Drawing.Size(213, 21);
             this.officerOption.TabIndex = 1;
             // 
             // label9
@@ -110,7 +110,7 @@
             this.groupBox2.Controls.Add(this.IssuedOn);
             this.groupBox2.Location = new System.Drawing.Point(14, 334);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(324, 76);
+            this.groupBox2.Size = new System.Drawing.Size(325, 76);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "MISC";
@@ -131,7 +131,7 @@
             this.Purpose.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Purpose.Location = new System.Drawing.Point(92, 17);
             this.Purpose.Name = "Purpose";
-            this.Purpose.Size = new System.Drawing.Size(226, 20);
+            this.Purpose.Size = new System.Drawing.Size(227, 20);
             this.Purpose.TabIndex = 1;
             // 
             // label2
@@ -151,7 +151,7 @@
             this.IssuedOn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.IssuedOn.Location = new System.Drawing.Point(92, 43);
             this.IssuedOn.Name = "IssuedOn";
-            this.IssuedOn.Size = new System.Drawing.Size(226, 20);
+            this.IssuedOn.Size = new System.Drawing.Size(227, 20);
             this.IssuedOn.TabIndex = 2;
             // 
             // groupBox3
@@ -176,7 +176,7 @@
             this.groupBox3.Controls.Add(this.Address);
             this.groupBox3.Location = new System.Drawing.Point(14, 95);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(324, 233);
+            this.groupBox3.Size = new System.Drawing.Size(325, 233);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DETAILS";
@@ -215,7 +215,7 @@
             this.extText.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.extText.Location = new System.Drawing.Point(92, 95);
             this.extText.Name = "extText";
-            this.extText.Size = new System.Drawing.Size(226, 20);
+            this.extText.Size = new System.Drawing.Size(227, 20);
             this.extText.TabIndex = 4;
             // 
             // lastText
@@ -225,7 +225,7 @@
             this.lastText.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.lastText.Location = new System.Drawing.Point(92, 69);
             this.lastText.Name = "lastText";
-            this.lastText.Size = new System.Drawing.Size(226, 20);
+            this.lastText.Size = new System.Drawing.Size(227, 20);
             this.lastText.TabIndex = 3;
             // 
             // middleText
@@ -235,7 +235,7 @@
             this.middleText.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.middleText.Location = new System.Drawing.Point(92, 43);
             this.middleText.Name = "middleText";
-            this.middleText.Size = new System.Drawing.Size(226, 20);
+            this.middleText.Size = new System.Drawing.Size(227, 20);
             this.middleText.TabIndex = 2;
             // 
             // SexOption
@@ -249,7 +249,7 @@
             "Female"});
             this.SexOption.Location = new System.Drawing.Point(92, 173);
             this.SexOption.Name = "SexOption";
-            this.SexOption.Size = new System.Drawing.Size(226, 21);
+            this.SexOption.Size = new System.Drawing.Size(227, 21);
             this.SexOption.TabIndex = 7;
             // 
             // label6
@@ -277,7 +277,7 @@
             this.Age.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Age.Location = new System.Drawing.Point(92, 121);
             this.Age.Name = "Age";
-            this.Age.Size = new System.Drawing.Size(226, 20);
+            this.Age.Size = new System.Drawing.Size(227, 20);
             this.Age.TabIndex = 5;
             // 
             // label1
@@ -305,7 +305,7 @@
             this.firstText.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.firstText.Location = new System.Drawing.Point(92, 17);
             this.firstText.Name = "firstText";
-            this.firstText.Size = new System.Drawing.Size(226, 20);
+            this.firstText.Size = new System.Drawing.Size(227, 20);
             this.firstText.TabIndex = 1;
             // 
             // CStatusOption
@@ -319,7 +319,7 @@
             "Married"});
             this.CStatusOption.Location = new System.Drawing.Point(92, 200);
             this.CStatusOption.Name = "CStatusOption";
-            this.CStatusOption.Size = new System.Drawing.Size(226, 21);
+            this.CStatusOption.Size = new System.Drawing.Size(227, 21);
             this.CStatusOption.TabIndex = 8;
             // 
             // label3
@@ -337,7 +337,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Address.Location = new System.Drawing.Point(92, 147);
             this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(226, 20);
+            this.Address.Size = new System.Drawing.Size(227, 20);
             this.Address.TabIndex = 6;
             // 
             // BarangayClearance
