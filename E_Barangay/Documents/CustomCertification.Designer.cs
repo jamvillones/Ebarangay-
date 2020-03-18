@@ -36,6 +36,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.FieldsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -120,6 +122,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.wordNum);
             this.panel1.Controls.Add(this.body);
@@ -138,6 +142,27 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Character Count:";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(323, 5);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 14);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Max Character Count:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(437, 5);
+            this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label5.Size = new System.Drawing.Size(31, 14);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "1950";
+            // 
             // CustomCertification
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,7 +170,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CustomCertification";
-            this.Text = "CustomCertification";
+            this.Text = "Custom Certification";
             this.FieldsPanel.ResumeLayout(false);
             this.FieldsPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -163,5 +188,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
