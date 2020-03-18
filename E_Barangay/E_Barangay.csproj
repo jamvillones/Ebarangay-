@@ -143,6 +143,12 @@
     <Compile Include="Documents\BarangayClearance.Designer.cs">
       <DependentUpon>BarangayClearance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\Base.Designer.cs">
+      <DependentUpon>Base.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\BrgyCertDependent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -179,6 +185,12 @@
     <Compile Include="Documents\BrgyCertforResidency.Designer.cs">
       <DependentUpon>BrgyCertforResidency.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\BrgyCertificationforBurial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BrgyCertificationforBurial.Designer.cs">
+      <DependentUpon>BrgyCertificationforBurial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\BrgyCertificationforbusiness.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +202,18 @@
     </Compile>
     <Compile Include="Documents\BrgyClearance_Akelco.Designer.cs">
       <DependentUpon>BrgyClearance_Akelco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\BuildingPermit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BuildingPermit.Designer.cs">
+      <DependentUpon>BuildingPermit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\BussinessClearance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BussinessClearance.Designer.cs">
+      <DependentUpon>BussinessClearance.cs</DependentUpon>
     </Compile>
     <Compile Include="Documents\CertAnimalBite.cs">
       <SubType>Form</SubType>
@@ -203,23 +227,17 @@
     <Compile Include="Documents\CertificateAppearance.Designer.cs">
       <DependentUpon>CertificateAppearance.cs</DependentUpon>
     </Compile>
-    <Compile Include="Documents\BuildingPermit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Documents\BuildingPermit.Designer.cs">
-      <DependentUpon>BuildingPermit.cs</DependentUpon>
-    </Compile>
     <Compile Include="Documents\CertificateOfIndigency.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Documents\CertificateOfIndigency.designer.cs">
       <DependentUpon>CertificateOfIndigency.cs</DependentUpon>
     </Compile>
-    <Compile Include="Documents\BrgyCertificationforBurial.cs">
+    <Compile Include="Documents\CertIndigentMedicalAssistance.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Documents\BrgyCertificationforBurial.Designer.cs">
-      <DependentUpon>BrgyCertificationforBurial.cs</DependentUpon>
+    <Compile Include="Documents\CertIndigentMedicalAssistance.Designer.cs">
+      <DependentUpon>CertIndigentMedicalAssistance.cs</DependentUpon>
     </Compile>
     <Compile Include="Documents\CertofP4s.cs">
       <SubType>Form</SubType>
@@ -233,17 +251,23 @@
     <Compile Include="Documents\CertSSSReq.Designer.cs">
       <DependentUpon>CertSSSReq.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\CustomCertification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CustomCertification.Designer.cs">
+      <DependentUpon>CustomCertification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\DeathCertificate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\DeathCertificate.Designer.cs">
+      <DependentUpon>DeathCertificate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\DocumentForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Documents\DocumentForm.Designer.cs">
       <DependentUpon>DocumentForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Documents\CertIndigentMedicalAssistance.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Documents\CertIndigentMedicalAssistance.Designer.cs">
-      <DependentUpon>CertIndigentMedicalAssistance.cs</DependentUpon>
     </Compile>
     <Compile Include="EBModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -268,18 +292,6 @@
     </Compile>
     <Compile Include="Class\Statistics.cs" />
     <Compile Include="Class\UserManager.cs" />
-    <Compile Include="Documents\BussinessClearance.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Documents\BussinessClearance.Designer.cs">
-      <DependentUpon>BussinessClearance.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Documents\DeathCertificate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Documents\DeathCertificate.Designer.cs">
-      <DependentUpon>DeathCertificate.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\CaptureImageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -402,6 +414,9 @@
     <EmbeddedResource Include="Documents\BarangayClearance.resx">
       <DependentUpon>BarangayClearance.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Documents\Base.resx">
+      <DependentUpon>Base.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Documents\BrgyCertDependent.resx">
       <DependentUpon>BrgyCertDependent.cs</DependentUpon>
     </EmbeddedResource>
@@ -420,11 +435,20 @@
     <EmbeddedResource Include="Documents\BrgyCertforResidency.resx">
       <DependentUpon>BrgyCertforResidency.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BrgyCertificationforBurial.resx">
+      <DependentUpon>BrgyCertificationforBurial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Documents\BrgyCertificationforbusiness.resx">
       <DependentUpon>BrgyCertificationforbusiness.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BrgyClearance_Akelco.resx">
       <DependentUpon>BrgyClearance_Akelco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BuildingPermit.resx">
+      <DependentUpon>BuildingPermit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BussinessClearance.resx">
+      <DependentUpon>BussinessClearance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertAnimalBite.resx">
       <DependentUpon>CertAnimalBite.cs</DependentUpon>
@@ -432,14 +456,11 @@
     <EmbeddedResource Include="Documents\CertificateAppearance.resx">
       <DependentUpon>CertificateAppearance.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Documents\BuildingPermit.resx">
-      <DependentUpon>BuildingPermit.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertificateOfIndigency.resx">
       <DependentUpon>CertificateOfIndigency.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Documents\BrgyCertificationforBurial.resx">
-      <DependentUpon>BrgyCertificationforBurial.cs</DependentUpon>
+    <EmbeddedResource Include="Documents\CertIndigentMedicalAssistance.resx">
+      <DependentUpon>CertIndigentMedicalAssistance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertofP4s.resx">
       <DependentUpon>CertofP4s.cs</DependentUpon>
@@ -447,20 +468,17 @@
     <EmbeddedResource Include="Documents\CertSSSReq.resx">
       <DependentUpon>CertSSSReq.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Documents\DocumentForm.resx">
-      <DependentUpon>DocumentForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Documents\CertIndigentMedicalAssistance.resx">
-      <DependentUpon>CertIndigentMedicalAssistance.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\EditPage.resx">
-      <DependentUpon>EditPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Documents\BussinessClearance.resx">
-      <DependentUpon>BussinessClearance.cs</DependentUpon>
+    <EmbeddedResource Include="Documents\CustomCertification.resx">
+      <DependentUpon>CustomCertification.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\DeathCertificate.resx">
       <DependentUpon>DeathCertificate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\DocumentForm.resx">
+      <DependentUpon>DocumentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditPage.resx">
+      <DependentUpon>EditPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CaptureImageForm.resx">
       <DependentUpon>CaptureImageForm.cs</DependentUpon>

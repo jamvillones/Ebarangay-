@@ -67,7 +67,7 @@ namespace E_Barangay.Forms
                                               e.PageBounds.Height * 2 / 3 + 40,
                                               n.Width < titleBoxSize.Width ? (int)titleBoxSize.Width + 1 : (int)n.Width, (int)n.Height);
 
-            e.Graphics.DrawString(name, Printing.fontBold, Brushes.Black, nameRec, format);
+            e.Graphics.DrawString(name.ToUpper(), Printing.fontBold, Brushes.Black, nameRec, format);
 
 
             Rectangle titleRec = new Rectangle(e.PageBounds.Width / 3 - 30,

@@ -27,28 +27,19 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
-        {
-            this.ResetBtn = new System.Windows.Forms.Button();
+        { 
             this.IdGroup = new System.Windows.Forms.GroupBox();
             this.AssignBtn = new System.Windows.Forms.Button();
             this.IDField = new System.Windows.Forms.TextBox();
-            this.FieldsPanel = new System.Windows.Forms.Panel();
-            this.printing = new E_Barangay.Forms.Printing();
-            this.IdGroup.SuspendLayout();
+            this.ResetBtn = new System.Windows.Forms.Button();
             this.FieldsPanel.SuspendLayout();
+            this.IdGroup.SuspendLayout();
             this.SuspendLayout();
             // 
-            // ResetBtn
+            // FieldsPanel
             // 
-            this.ResetBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.ResetBtn.Location = new System.Drawing.Point(126, 658);
-            this.ResetBtn.Name = "ResetBtn";
-            this.ResetBtn.Size = new System.Drawing.Size(100, 25);
-            this.ResetBtn.TabIndex = 0;
-            this.ResetBtn.TabStop = false;
-            this.ResetBtn.Text = "Reset";
-            this.ResetBtn.UseVisualStyleBackColor = true;
-            this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
+            this.FieldsPanel.Controls.Add(this.IdGroup);
+            this.FieldsPanel.Controls.Add(this.ResetBtn);
             // 
             // IdGroup
             // 
@@ -57,17 +48,17 @@
             this.IdGroup.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.IdGroup.Controls.Add(this.AssignBtn);
             this.IdGroup.Controls.Add(this.IDField);
-            this.IdGroup.Location = new System.Drawing.Point(12, 12);
+            this.IdGroup.Location = new System.Drawing.Point(11, 10);
             this.IdGroup.Name = "IdGroup";
-            this.IdGroup.Size = new System.Drawing.Size(328, 77);
-            this.IdGroup.TabIndex = 0;
+            this.IdGroup.Size = new System.Drawing.Size(334, 77);
+            this.IdGroup.TabIndex = 3;
             this.IdGroup.TabStop = false;
             this.IdGroup.Text = "User ID";
             // 
             // AssignBtn
             // 
             this.AssignBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AssignBtn.Location = new System.Drawing.Point(127, 45);
+            this.AssignBtn.Location = new System.Drawing.Point(130, 45);
             this.AssignBtn.Name = "AssignBtn";
             this.AssignBtn.Size = new System.Drawing.Size(75, 23);
             this.AssignBtn.TabIndex = 4;
@@ -82,62 +73,46 @@
             this.IDField.Location = new System.Drawing.Point(6, 19);
             this.IDField.MaxLength = 10;
             this.IDField.Name = "IDField";
-            this.IDField.Size = new System.Drawing.Size(316, 20);
+            this.IDField.Size = new System.Drawing.Size(322, 20);
             this.IDField.TabIndex = 3;
             // 
-            // FieldsPanel
+            // ResetBtn
             // 
-            this.FieldsPanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.FieldsPanel.Controls.Add(this.IdGroup);
-            this.FieldsPanel.Controls.Add(this.ResetBtn);
-            this.FieldsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FieldsPanel.Location = new System.Drawing.Point(0, 0);
-            this.FieldsPanel.Name = "FieldsPanel";
-            this.FieldsPanel.Size = new System.Drawing.Size(352, 690);
-            this.FieldsPanel.TabIndex = 19;
-            // 
-            // printing
-            // 
-            this.printing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.printing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.printing.Dock = System.Windows.Forms.DockStyle.Right;
-            this.printing.Location = new System.Drawing.Point(352, 0);
-            this.printing.Name = "printing";
-            this.printing.Size = new System.Drawing.Size(562, 690);
-            this.printing.TabIndex = 0;
-            this.printing.TabStop = false;
+            this.ResetBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.ResetBtn.Location = new System.Drawing.Point(128, 660);
+            this.ResetBtn.Name = "ResetBtn";
+            this.ResetBtn.Size = new System.Drawing.Size(100, 25);
+            this.ResetBtn.TabIndex = 4;
+            this.ResetBtn.TabStop = false;
+            this.ResetBtn.Text = "Reset";
+            this.ResetBtn.UseVisualStyleBackColor = true;
+            this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
             // 
             // DocumentForm
             // 
             this.AcceptButton = this.AssignBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 690);
-            this.Controls.Add(this.FieldsPanel);
-            this.Controls.Add(this.printing);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.KeyPreview = true;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.ClientSize = new System.Drawing.Size(918, 694);
             this.Name = "DocumentForm";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "[Set Name]";
-            this.Load += new System.EventHandler(this.goLoad);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DeathCertificate_KeyDown);
+            this.FieldsPanel.ResumeLayout(false);
             this.IdGroup.ResumeLayout(false);
             this.IdGroup.PerformLayout();
-            this.FieldsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
-        #endregion
-        private System.Windows.Forms.Button ResetBtn;
-        private System.Windows.Forms.GroupBox IdGroup;
+        protected System.Windows.Forms.GroupBox IdGroup;
         private System.Windows.Forms.Button AssignBtn;
         private System.Windows.Forms.TextBox IDField;
-        private E_Barangay.Forms.Printing printing;
-        public System.Windows.Forms.Panel FieldsPanel;
+        protected System.Windows.Forms.Button ResetBtn;
+
+        //protected System.Windows.Forms.GroupBox IdGroup;
+        //private System.Windows.Forms.Button AssignBtn;
+        //private System.Windows.Forms.TextBox IDField;
+        //protected System.Windows.Forms.Button ResetBtn;
+
+        #endregion
+        //private E_Barangay.Forms.Printing printing;
+        //public System.Windows.Forms.Panel FieldsPanel;
     }
 }

@@ -7,19 +7,14 @@ using E_Barangay.Forms;
 
 namespace E_Barangay.Documents
 {
-    public partial class DocumentForm : Form
+    public partial class DocumentForm : Base
     {
-        protected List<Control> controls = new List<Control>();
-        protected string capt = string.Empty;
-        protected Rectangle rect;
-
-        protected void InitBodyRect(PrintPageEventArgs e)
+        public DocumentForm()
         {
-            rect.X = e.PageBounds.Width / 3 - 30;
-            rect.Y = e.PageBounds.Height / 3 - 10;
-            rect.Width = 550;
-            rect.Height = 380;
+            InitializeComponent();
         }
+
+        protected string capt = string.Empty;
 
         public void ShowNotFound()
         {
@@ -41,42 +36,8 @@ namespace E_Barangay.Documents
             }
             return false;
         }
-        public DocumentForm()
-        {
-            InitializeComponent();
 
-
-        }
-        public virtual void InitializeControls() { }
-
-        protected void AddControls(params Control[] c)
-        {
-            foreach (var i in c)
-            {
-                controls.Add(i);
-            }
-        }
-        void subscribe()
-        {
-            printing.SubscribeToFields(controls.ToArray());
-        }
-
-        public virtual void Printing_PrintPage(object sender, PrintPageEventArgs e)
-        {
-            e.Graphics.DrawImage(Properties.Resources.GenericBG, Point.Empty);
-            InitBodyRect(e);
-
-        }
-
-
-        public bool debug = false;
-        protected void DrawDebugRecs(Rectangle rec, PrintPageEventArgs e)
-        {
-            if (debug)
-            {
-                e.Graphics.DrawRectangle(Printing.pen, rec);
-            }
-        }
+       
 
         #region autoAssign
         public virtual void AcceptCitizen(Citizen c)
@@ -111,6 +72,7 @@ namespace E_Barangay.Documents
             clearFields(controls.ToArray());
             IDField.Clear();
         }
+
         void clearFields(params Control[] controls)
         {
             foreach (Control c in controls)
@@ -118,25 +80,6 @@ namespace E_Barangay.Documents
                 c.ResetText();
             }
         }
-
         #endregion
-
-        private void DeathCertificate_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.F4)
-            {
-                debug = !debug;
-                printing.UpdateDocument();
-            }
-        }
-
-        private void goLoad(object sender, EventArgs e)
-        {
-            //o = new OfficersForInfoForPrinting();
-            InitializeControls();
-            subscribe();
-            printing.PrintPage += Printing_PrintPage;
-
-        }
     }
 }
