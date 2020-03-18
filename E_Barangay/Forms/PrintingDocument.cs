@@ -148,5 +148,10 @@ namespace E_Barangay.Forms
                     break;
             }
         }
+
+        private void createCustBtn_Click(object sender, EventArgs e)
+        {
+            CreateForm<CustomCertification>();
+        }
     }
 }

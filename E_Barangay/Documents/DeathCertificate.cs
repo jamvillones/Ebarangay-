@@ -22,14 +22,14 @@ namespace E_Barangay.Documents
         }
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
-            base.Printing_PrintPage(sender,e);
+            base.Printing_PrintPage(sender, e);
 
             string name = Printing.GetFullName(firstName, middleName, lastName, ext);
             string first = "To whom it may concern:" + Printing.LineSpace +
                            Printing.Indention + "This is to certify that as per record of this Barangay, " + name + " " + Printing.IfControlEmpty(Age) + " years old, Filipino and a resident of " + Printing.IfControlEmpty(Address) + "." + Printing.LineSpace +
                            Printing.Indention + "This is to certify further that " + name + " died last " + DeathDate.Value.ToString("MMMM dd, yyyy") + " at " + Printing.IfControlEmpty(DeathPlace) + "." + Printing.LineSpace +
                            Printing.Indention + "This certification is issued upon the request of " + Printing.HisOrHer(sex.Text) + " " + Relation.Text + " " + By.Text + " for whatever legal purpose it may serve " + Printing.HimOrHer(reqSexOption.Text) + "." + Printing.LineSpace +
-                           Printing.Indention + "Issued this " + IssuedOn.Value.Day + "th of " + IssuedOn.Value.ToString("MMMM yyyy") + " Barangay Poblacion, Kalibo, Aklan.";
+                           Printing.Indention + "Issued this " + IssuedOn.customFormat() + " Barangay Poblacion, Kalibo, Aklan.";
 
             e.Graphics.DrawString(first, Printing.font, Brushes.Black, rect);
             DrawDebugRecs(rect, e);

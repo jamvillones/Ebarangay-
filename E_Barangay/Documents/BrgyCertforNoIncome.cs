@@ -54,7 +54,7 @@ namespace E_Barangay.Documents
                           Printing.Indention + "This is to certify that " + name + " of legal age, " + CStatusOption.Text + ", Filipino, and a resident of " + Address.Text + "." + Printing.LineSpace +
                           Printing.Indention + "This is to certify further that " + SexOption.MrMs() + " " + name + " is a " + employment.Text + " and has limited source of income averaging " + income.Text + " per month." + Printing.LineSpace +
                           Printing.Indention + "This certification is issued to upon the request of " + SexOption.MrMs() + " " + lastText.Text + " as requirements for the " + purpose.Text + " of " + SexOption.HisHer() + " " + relations.Text + " " + wardName.Text + " who is " + status.Text + " in " + institution.Text + "." + Printing.LineSpace +
-                          Printing.Indention + "Issued this " + IssuedOn.Value.Day + "th day of " + IssuedOn.Value.ToString("MMMM, yyyy") + " Barangay Poblacion, Kalibo, Aklan.";
+                          Printing.Indention + "Issued this " + IssuedOn.Value.Day + "th day of " + IssuedOn.customFormat() + " Barangay Poblacion, Kalibo, Aklan.";
 
             e.Graphics.DrawString(text, Printing.font, Brushes.Black, rect);
             DrawDebugRecs(rect, e);

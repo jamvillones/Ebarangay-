@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.DocumentList = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.docName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createCustBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DocumentList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,36 +60,36 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DocumentList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bebas Neue Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DocumentList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.DarkSlateGray;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Bebas Neue Regular", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DocumentList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.DocumentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DocumentList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
             this.docName});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DocumentList.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DocumentList.DefaultCellStyle = dataGridViewCellStyle9;
             this.DocumentList.EnableHeadersVisualStyles = false;
             this.DocumentList.GridColor = System.Drawing.SystemColors.ButtonShadow;
-            this.DocumentList.Location = new System.Drawing.Point(15, 31);
+            this.DocumentList.Location = new System.Drawing.Point(15, 48);
             this.DocumentList.MultiSelect = false;
             this.DocumentList.Name = "DocumentList";
             this.DocumentList.ReadOnly = true;
             this.DocumentList.RowHeadersVisible = false;
             this.DocumentList.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.DocumentList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DocumentList.Size = new System.Drawing.Size(722, 340);
+            this.DocumentList.Size = new System.Drawing.Size(722, 323);
             this.DocumentList.StandardTab = true;
             this.DocumentList.TabIndex = 2;
             this.DocumentList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DocumentList_CellContentClick);
@@ -105,17 +106,32 @@
             // docName
             // 
             this.docName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.docName.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            this.docName.DefaultCellStyle = dataGridViewCellStyle8;
             this.docName.HeaderText = "Document Name";
             this.docName.Name = "docName";
             this.docName.ReadOnly = true;
+            // 
+            // createCustBtn
+            // 
+            this.createCustBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.createCustBtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.createCustBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.createCustBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.createCustBtn.Location = new System.Drawing.Point(578, 19);
+            this.createCustBtn.Name = "createCustBtn";
+            this.createCustBtn.Size = new System.Drawing.Size(159, 23);
+            this.createCustBtn.TabIndex = 3;
+            this.createCustBtn.Text = "Create Custom Document";
+            this.createCustBtn.UseVisualStyleBackColor = false;
+            this.createCustBtn.Click += new System.EventHandler(this.createCustBtn_Click);
             // 
             // PrintingDocument
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Controls.Add(this.createCustBtn);
             this.Controls.Add(this.DocumentList);
             this.Controls.Add(this.label1);
             this.Name = "PrintingDocument";
@@ -132,5 +148,6 @@
         private System.Windows.Forms.DataGridView DocumentList;
         private System.Windows.Forms.DataGridViewButtonColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn docName;
+        private System.Windows.Forms.Button createCustBtn;
     }
 }

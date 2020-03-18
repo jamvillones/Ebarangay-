@@ -40,6 +40,7 @@
             // 
             this.FieldsPanel.Controls.Add(this.IdGroup);
             this.FieldsPanel.Controls.Add(this.ResetBtn);
+            this.FieldsPanel.Size = new System.Drawing.Size(352, 690);
             // 
             // IdGroup
             // 
@@ -48,9 +49,9 @@
             this.IdGroup.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.IdGroup.Controls.Add(this.AssignBtn);
             this.IdGroup.Controls.Add(this.IDField);
-            this.IdGroup.Location = new System.Drawing.Point(11, 10);
+            this.IdGroup.Location = new System.Drawing.Point(14, 10);
             this.IdGroup.Name = "IdGroup";
-            this.IdGroup.Size = new System.Drawing.Size(334, 77);
+            this.IdGroup.Size = new System.Drawing.Size(325, 77);
             this.IdGroup.TabIndex = 3;
             this.IdGroup.TabStop = false;
             this.IdGroup.Text = "User ID";
@@ -58,7 +59,7 @@
             // AssignBtn
             // 
             this.AssignBtn.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AssignBtn.Location = new System.Drawing.Point(130, 45);
+            this.AssignBtn.Location = new System.Drawing.Point(125, 45);
             this.AssignBtn.Name = "AssignBtn";
             this.AssignBtn.Size = new System.Drawing.Size(75, 23);
             this.AssignBtn.TabIndex = 4;
@@ -73,13 +74,13 @@
             this.IDField.Location = new System.Drawing.Point(6, 19);
             this.IDField.MaxLength = 10;
             this.IDField.Name = "IDField";
-            this.IDField.Size = new System.Drawing.Size(322, 20);
+            this.IDField.Size = new System.Drawing.Size(313, 20);
             this.IDField.TabIndex = 3;
             // 
             // ResetBtn
             // 
             this.ResetBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.ResetBtn.Location = new System.Drawing.Point(128, 660);
+            this.ResetBtn.Location = new System.Drawing.Point(126, 656);
             this.ResetBtn.Name = "ResetBtn";
             this.ResetBtn.Size = new System.Drawing.Size(100, 25);
             this.ResetBtn.TabIndex = 4;
@@ -92,7 +93,7 @@
             // 
             this.AcceptButton = this.AssignBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(918, 694);
+            this.ClientSize = new System.Drawing.Size(914, 690);
             this.Name = "DocumentForm";
             this.FieldsPanel.ResumeLayout(false);
             this.IdGroup.ResumeLayout(false);
@@ -101,10 +102,10 @@
 
         }
 
-        protected System.Windows.Forms.GroupBox IdGroup;
+        private System.Windows.Forms.GroupBox IdGroup;
         private System.Windows.Forms.Button AssignBtn;
         private System.Windows.Forms.TextBox IDField;
-        protected System.Windows.Forms.Button ResetBtn;
+        private System.Windows.Forms.Button ResetBtn;
 
         //protected System.Windows.Forms.GroupBox IdGroup;
         //private System.Windows.Forms.Button AssignBtn;

@@ -41,6 +41,21 @@ public static class PrintingExtensions
     {
         return n.Value > 1 ? n.Value + " years" : "a year";
     }
-   
+    public static string customFormat(this DateTimePicker dt)
+    {
+        string end = dt.Value.ToString("MMMM ,yyyy");
+
+        if (dt.Value.Day == 1)
+            return "1st day of " + end;
+
+        if (dt.Value.Day == 2)
+            return "2nd day of " + end;
+
+        if (dt.Value.Day == 3)
+            return "3rd day of " + end;
+
+        return dt.Value.Day + "th day of " + end;
+    }
+
 }
 

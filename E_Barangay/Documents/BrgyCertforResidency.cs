@@ -40,7 +40,7 @@ namespace E_Barangay.Documents
             o.InitDropdowns(officerOption);
             AddControls(firstText, middleText, lastText, extText,
                         age, sex, CStatusOption, Address,
-                        residencyYear,orNo, orValidityDate, orIssueDate);
+                        residencyYear, orNo, orValidityDate, orIssueDate);
         }
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
@@ -51,9 +51,9 @@ namespace E_Barangay.Documents
             string yearNum = residencyYear.GetYears();
 
             string text = ToWhom + Printing.LineSpace +
-                          Printing.Indention + "This is to certify that  "+name+", "+age.Text+" years old, "+CStatusOption.Text+", Filipino, and a resident of Purok "+Address.Text+", and "+sex.HeShe()+"’s been staying at barangay Poblacion for almost "+yearNum+"." + Printing.LineSpace +
-                          Printing.Indention + "This certification issued upon the request of "+sex.MrMs()+" "+lastText.Text+" for the purpose of "+sex.HisHer()+" residency." + Printing.LineSpace +
-                          Printing.Indention + "Issued this "+IssuedOn.Value.Day+"th day of "+IssuedOn.Value.ToString("MMMM, yyyy")+" Barangay Poblacion, Kalibo, Aklan.";
+                          Printing.Indention + "This is to certify that  " + name + ", " + age.Text + " years old, " + CStatusOption.Text + ", Filipino, and a resident of Purok " + Address.Text + ", and " + sex.HeShe() + "’s been staying at barangay Poblacion for almost " + yearNum + "." + Printing.LineSpace +
+                          Printing.Indention + "This certification issued upon the request of " + sex.MrMs() + " " + lastText.Text + " for the purpose of " + sex.HisHer() + " residency." + Printing.LineSpace +
+                          Printing.Indention + "Issued this " + IssuedOn.customFormat() + " Barangay Poblacion, Kalibo, Aklan.";
 
             e.Graphics.DrawString(text, Printing.font, Brushes.Black, rect);
             DrawDebugRecs(rect, e);

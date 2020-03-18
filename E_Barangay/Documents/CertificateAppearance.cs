@@ -27,7 +27,7 @@ namespace E_Barangay.Documents
             InitBodyRect(e);
             string first = Printing.Indention + "This is to certify that " + Printing.MrOrMrs(SexOption.Text) + " " + Printing.GetFullName(firstName, middleName, lastName, extension) + " has appeared in my office." + Printing.LineSpace +
                            Printing.Indention + "This certification is issued to " + Printing.MrOrMrs(SexOption.Text) + " " + lastName.Text + (string.IsNullOrEmpty(extension.Text) ? "" : " " + extension.Text) + "  for whatever legal intent it may serve " + Printing.HimOrHer(SexOption.Text) + "." + Printing.LineSpace +
-                           Printing.Indention + "Issued this " + IssuedOn.Value.Day + "th day of " + IssuedOn.Value.ToString("MMMM, yyyy") + " Barangay Poblacion, Kalibo, Aklan.";
+                           Printing.Indention + "Issued this " + IssuedOn.customFormat() + " Barangay Poblacion, Kalibo, Aklan.";
 
             e.Graphics.DrawString(first, Printing.font, Brushes.Black, rect);
             DrawDebugRecs(rect, e);

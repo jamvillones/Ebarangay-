@@ -61,9 +61,9 @@ namespace E_Barangay.Documents
 
             string name = firstName.Text + " " + middleName.Text + " " + lastName.Text + (string.IsNullOrEmpty(ext.Text) ? "" : " " + ext.Text);
             string text = "To whom it may concern:" + Printing.LineSpace +
-                          Printing.Indention + "This is to certify further that "+sexOption.MrMs()+" "+name+" belongs to an indigent family in this barangay and is asking for utmost humanitarian consideration and possible assistance from the "+institution.Text+" for "+forWhat.Text+", in behalf of "+sexOption.HisHer()+" "+relations.Text+" "+inBehalf.Text+"." + Printing.LineSpace +
-                          Printing.Indention + "This certification is issued upon the request of "+name+"  in support to "+sexOption.HisHer()+" claim for the assistance extended to their family." + Printing.LineSpace +
-                          Printing.Indention + "Issued this "+issuedOn.Value.Day+"th day of "+issuedOn.Value.ToString("MMMM, yyyy")+" Barangay Poblacion, Kalibo, Aklan.";
+                          Printing.Indention + "This is to certify further that " + sexOption.MrMs() + " " + name + " belongs to an indigent family in this barangay and is asking for utmost humanitarian consideration and possible assistance from the " + institution.Text + " for " + forWhat.Text + ", in behalf of " + sexOption.HisHer() + " " + relations.Text + " " + inBehalf.Text + "." + Printing.LineSpace +
+                          Printing.Indention + "This certification is issued upon the request of " + name + "  in support to " + sexOption.HisHer() + " claim for the assistance extended to their family." + Printing.LineSpace +
+                          Printing.Indention + "Issued this " + issuedOn.customFormat() + " Barangay Poblacion, Kalibo, Aklan.";
             e.Graphics.DrawString(text, Printing.font, Brushes.Black, rect);
             DrawDebugRecs(rect, e);
             Printing.DrawCapSb(e, o.captName, officerOption.Text);

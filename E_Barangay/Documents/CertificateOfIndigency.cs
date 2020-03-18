@@ -32,7 +32,7 @@ namespace E_Barangay.Documents
             string first = "To whom it may concern:"+Printing.LineSpace+
                            Printing.Indention + "This is to certify that " + name + ", " + Printing.IfControlEmpty(ageField) + " years old, " + Printing.IfControlEmpty(SexOption) + ", " + Printing.IfControlEmpty(civilStatusOption) + ",    Filipino and a resident of " + Printing.IfControlEmpty(addressField) + ", belongs to an indigent family in this Barangay" + Printing.LineSpace +
                            Printing.Indention + "This certification is issued to " + Printing.MrOrMrs(SexOption.Text) + " " + lastName.Text + (string.IsNullOrEmpty(ext.Text) ? "" : " " + ext.Text) + "  for whatever legal purposes it may serve " + Printing.HimOrHer(SexOption.Text) + " best." + Printing.LineSpace +
-                           Printing.Indention + "Issued this " + IssuedOn.Value.Day + "th day of " + IssuedOn.Value.ToString("MMMM, yyyy") + " Barangay Poblacion, Kalibo, Aklan.";
+                           Printing.Indention + "Issued this " + IssuedOn.customFormat() + " Barangay Poblacion, Kalibo, Aklan.";
 
             e.Graphics.DrawString(first, Printing.font, Brushes.Black, rect);
             DrawDebugRecs(rect, e);

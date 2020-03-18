@@ -25,9 +25,9 @@ namespace E_Barangay.Documents
             base.Printing_PrintPage(sender, e);
             //e.Graphics.DrawImage(Properties.Resources.BuildingPermit, new PointF(0, 0));
             //Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 + 50, 550, 380);
-            string name = Printing.GetFullName(firstName,middleName,lastName,extension);
+            string name = Printing.GetFullName(firstName, middleName, lastName, extension);
             string first = Printing.Indention + "This certification is issued to " + Printing.GetFullName(firstName, middleName, lastName, extension) + ", of legal age, Filipino and a residing at " + Printing.IfControlEmpty(Address) + ", per TD No." + Printing.IfControlEmpty(tdNoField) + " in support of " + Printing.HisOrHer(SexOption.Text) + " application for " + Printing.IfControlEmpty(specField) + " permit with the Local Government Unit (LGU) Kalibo." + Printing.LineSpace +
-                           Printing.Indention + "Issued this " + IssuedOn.Value.Day + "th day of " + IssuedOn.Value.ToString("MMMM, yyyy") + " at Barangay Poblacion, Kalibo, Aklan.";
+                           Printing.Indention + "Issued this " + IssuedOn.customFormat() + " at Barangay Poblacion, Kalibo, Aklan.";
 
             e.Graphics.DrawString(first, Printing.font, Brushes.Black, rect);
             DrawDebugRecs(rect, e);
@@ -38,7 +38,7 @@ namespace E_Barangay.Documents
         {
             AddControls(firstName,
                         middleName,
-                        lastName, 
+                        lastName,
                         extension,
                         Address,
                         SexOption,
