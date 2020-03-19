@@ -43,16 +43,22 @@ public static class PrintingExtensions
     }
     public static string customFormat(this DateTimePicker dt)
     {
-        string end = dt.Value.ToString("MMMM ,yyyy");
+        string end = dt.Value.ToString("MMMM, yyyy");
 
         if (dt.Value.Day == 1)
             return "1st day of " + end;
-
         if (dt.Value.Day == 2)
             return "2nd day of " + end;
-
         if (dt.Value.Day == 3)
             return "3rd day of " + end;
+        if (dt.Value.Day == 21)
+            return "21st day of " + end;
+        if (dt.Value.Day == 22)
+            return "22nd day of " + end;
+        if (dt.Value.Day == 23)
+            return "23rd day of " + end;
+        if (dt.Value.Day == 31)
+            return "31st day of " + end;
 
         return dt.Value.Day + "th day of " + end;
     }

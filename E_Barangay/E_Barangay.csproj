@@ -221,6 +221,12 @@
     <Compile Include="Documents\CertAnimalBite.Designer.cs">
       <DependentUpon>CertAnimalBite.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\CertforPRC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertforPRC.Designer.cs">
+      <DependentUpon>CertforPRC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\CertificateAppearance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -232,6 +238,12 @@
     </Compile>
     <Compile Include="Documents\CertificateOfIndigency.designer.cs">
       <DependentUpon>CertificateOfIndigency.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\CertificationForGoodMoral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertificationForGoodMoral.Designer.cs">
+      <DependentUpon>CertificationForGoodMoral.cs</DependentUpon>
     </Compile>
     <Compile Include="Documents\CertIndigentMedicalAssistance.cs">
       <SubType>Form</SubType>
@@ -268,6 +280,12 @@
     </Compile>
     <Compile Include="Documents\DocumentForm.Designer.cs">
       <DependentUpon>DocumentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\SSSPension.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\SSSPension.Designer.cs">
+      <DependentUpon>SSSPension.cs</DependentUpon>
     </Compile>
     <Compile Include="EBModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -376,6 +394,12 @@
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Separator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Separator.Designer.cs">
+      <DependentUpon>Separator.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -387,6 +411,12 @@
     </Compile>
     <Compile Include="Forms\StatForm.Designer.cs">
       <DependentUpon>StatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\temp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\temp.Designer.cs">
+      <DependentUpon>temp.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\YesOrNoPrompt.cs">
       <SubType>Form</SubType>
@@ -453,11 +483,17 @@
     <EmbeddedResource Include="Documents\CertAnimalBite.resx">
       <DependentUpon>CertAnimalBite.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertforPRC.resx">
+      <DependentUpon>CertforPRC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertificateAppearance.resx">
       <DependentUpon>CertificateAppearance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertificateOfIndigency.resx">
       <DependentUpon>CertificateOfIndigency.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertificationForGoodMoral.resx">
+      <DependentUpon>CertificationForGoodMoral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertIndigentMedicalAssistance.resx">
       <DependentUpon>CertIndigentMedicalAssistance.cs</DependentUpon>
@@ -476,6 +512,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\DocumentForm.resx">
       <DependentUpon>DocumentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\SSSPension.resx">
+      <DependentUpon>SSSPension.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditPage.resx">
       <DependentUpon>EditPage.cs</DependentUpon>
@@ -522,11 +561,17 @@
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Separator.resx">
+      <DependentUpon>Separator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StatForm.resx">
       <DependentUpon>StatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\temp.resx">
+      <DependentUpon>temp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\YesOrNoPrompt.resx">
       <DependentUpon>YesOrNoPrompt.cs</DependentUpon>

@@ -29,7 +29,7 @@ namespace E_Barangay
                 Application.Run(new MainPage());
             #endregion
 
-            //Application.Run(new Documents.CustomCertification());
+            ///Application.Run(new Documents.SSSPension());
         }
     }
 }

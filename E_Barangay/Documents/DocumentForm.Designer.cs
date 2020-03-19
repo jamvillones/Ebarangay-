@@ -52,7 +52,7 @@
             this.IdGroup.Location = new System.Drawing.Point(14, 10);
             this.IdGroup.Name = "IdGroup";
             this.IdGroup.Size = new System.Drawing.Size(325, 77);
-            this.IdGroup.TabIndex = 3;
+            this.IdGroup.TabIndex = 0;
             this.IdGroup.TabStop = false;
             this.IdGroup.Text = "User ID";
             // 
@@ -83,7 +83,7 @@
             this.ResetBtn.Location = new System.Drawing.Point(126, 656);
             this.ResetBtn.Name = "ResetBtn";
             this.ResetBtn.Size = new System.Drawing.Size(100, 25);
-            this.ResetBtn.TabIndex = 4;
+            this.ResetBtn.TabIndex = 0;
             this.ResetBtn.TabStop = false;
             this.ResetBtn.Text = "Reset";
             this.ResetBtn.UseVisualStyleBackColor = true;
@@ -102,10 +102,10 @@
 
         }
 
-        private System.Windows.Forms.GroupBox IdGroup;
+        protected System.Windows.Forms.GroupBox IdGroup;
         private System.Windows.Forms.Button AssignBtn;
         private System.Windows.Forms.TextBox IDField;
-        private System.Windows.Forms.Button ResetBtn;
+        public System.Windows.Forms.Button ResetBtn;
 
         //protected System.Windows.Forms.GroupBox IdGroup;
         //private System.Windows.Forms.Button AssignBtn;
