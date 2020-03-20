@@ -49,7 +49,7 @@ namespace E_Barangay.Documents
         {
             using (var entity = new EBarangayEntities())
             {
-                var citizen = entity.Citizens.Find(IDField.Text);
+                var citizen = entity.Citizens.Find(idField.Text);
                 if (citizen == null)
                 {
                     MessageBox.Show("ID not found!");
@@ -70,7 +70,7 @@ namespace E_Barangay.Documents
         private void ResetBtn_Click(object sender, EventArgs e)
         {
             clearFields(controls.ToArray());
-            IDField.Clear();
+            idField.Clear();
         }
 
         void clearFields(params Control[] controls)

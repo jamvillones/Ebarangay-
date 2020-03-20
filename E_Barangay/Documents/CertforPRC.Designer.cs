@@ -64,7 +64,7 @@
             this.FieldsPanel.Controls.Add(this.groupBox2);
             this.FieldsPanel.Controls.Add(this.groupBox3);
             this.FieldsPanel.Controls.SetChildIndex(this.ResetBtn, 0);
-            this.FieldsPanel.Controls.SetChildIndex(this.IdGroup, 0);
+            this.FieldsPanel.Controls.SetChildIndex(this.IDGroup, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox3, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox2, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox6, 0);

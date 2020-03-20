@@ -31,7 +31,8 @@ namespace E_Barangay.Forms
             "Cert. Animal Bite",
             "Cert. SSS Pension",
             "Cert. for PRC",
-            "Certification for Good Moral Character"
+            "Certification for Good Moral Character",
+            "Cert. for Educational Assistance"
         };
 
         public PrintingDocument()
@@ -155,6 +156,9 @@ namespace E_Barangay.Forms
                     break;
                 case "Certification for Good Moral Character":
                     CreateForm<CertificationForGoodMoral>();
+                    break;
+                case "Cert. for Educational Assistance":
+                    CreateForm<CertForEducationalAssistance>();
                     break;
                 default:
                     break;

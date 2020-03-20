@@ -40,18 +40,18 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.extText = new System.Windows.Forms.TextBox();
-            this.lastText = new System.Windows.Forms.TextBox();
-            this.middleText = new System.Windows.Forms.TextBox();
-            this.SexOption = new System.Windows.Forms.ComboBox();
+            this.extension = new System.Windows.Forms.TextBox();
+            this.lastName = new System.Windows.Forms.TextBox();
+            this.middleName = new System.Windows.Forms.TextBox();
+            this.sex = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.firstText = new System.Windows.Forms.TextBox();
-            this.CStatusOption = new System.Windows.Forms.ComboBox();
+            this.firstName = new System.Windows.Forms.TextBox();
+            this.civilStatus = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Address = new System.Windows.Forms.TextBox();
+            this.address = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -159,18 +159,18 @@
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.extText);
-            this.groupBox3.Controls.Add(this.lastText);
-            this.groupBox3.Controls.Add(this.middleText);
-            this.groupBox3.Controls.Add(this.SexOption);
+            this.groupBox3.Controls.Add(this.extension);
+            this.groupBox3.Controls.Add(this.lastName);
+            this.groupBox3.Controls.Add(this.middleName);
+            this.groupBox3.Controls.Add(this.sex);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.firstText);
-            this.groupBox3.Controls.Add(this.CStatusOption);
+            this.groupBox3.Controls.Add(this.firstName);
+            this.groupBox3.Controls.Add(this.civilStatus);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.Address);
+            this.groupBox3.Controls.Add(this.address);
             this.groupBox3.Location = new System.Drawing.Point(129, 280);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(325, 233);
@@ -182,7 +182,7 @@
             // 
             this.age.Location = new System.Drawing.Point(92, 121);
             this.age.Name = "age";
-            this.age.Size = new System.Drawing.Size(108, 20);
+            this.age.Size = new System.Drawing.Size(62, 20);
             this.age.TabIndex = 5;
             // 
             // label14
@@ -212,49 +212,49 @@
             this.label10.Text = "Middle Name:";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // extText
+            // extension
             // 
-            this.extText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.extension.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.extText.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.extText.Location = new System.Drawing.Point(92, 95);
-            this.extText.Name = "extText";
-            this.extText.Size = new System.Drawing.Size(227, 20);
-            this.extText.TabIndex = 4;
+            this.extension.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.extension.Location = new System.Drawing.Point(92, 95);
+            this.extension.Name = "extension";
+            this.extension.Size = new System.Drawing.Size(227, 20);
+            this.extension.TabIndex = 4;
             // 
-            // lastText
+            // lastName
             // 
-            this.lastText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lastName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lastText.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.lastText.Location = new System.Drawing.Point(92, 69);
-            this.lastText.Name = "lastText";
-            this.lastText.Size = new System.Drawing.Size(227, 20);
-            this.lastText.TabIndex = 3;
+            this.lastName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.lastName.Location = new System.Drawing.Point(92, 69);
+            this.lastName.Name = "lastName";
+            this.lastName.Size = new System.Drawing.Size(227, 20);
+            this.lastName.TabIndex = 3;
             // 
-            // middleText
+            // middleName
             // 
-            this.middleText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.middleName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.middleText.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.middleText.Location = new System.Drawing.Point(92, 43);
-            this.middleText.Name = "middleText";
-            this.middleText.Size = new System.Drawing.Size(227, 20);
-            this.middleText.TabIndex = 2;
+            this.middleName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.middleName.Location = new System.Drawing.Point(92, 43);
+            this.middleName.Name = "middleName";
+            this.middleName.Size = new System.Drawing.Size(227, 20);
+            this.middleName.TabIndex = 2;
             // 
-            // SexOption
+            // sex
             // 
-            this.SexOption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.sex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.SexOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SexOption.FormattingEnabled = true;
-            this.SexOption.Items.AddRange(new object[] {
+            this.sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sex.FormattingEnabled = true;
+            this.sex.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.SexOption.Location = new System.Drawing.Point(92, 147);
-            this.SexOption.Name = "SexOption";
-            this.SexOption.Size = new System.Drawing.Size(120, 21);
-            this.SexOption.TabIndex = 6;
+            this.sex.Location = new System.Drawing.Point(92, 147);
+            this.sex.Name = "sex";
+            this.sex.Size = new System.Drawing.Size(120, 21);
+            this.sex.TabIndex = 6;
             // 
             // label6
             // 
@@ -292,29 +292,29 @@
             this.label4.Text = "Civil Status";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // firstText
+            // firstName
             // 
-            this.firstText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.firstName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.firstText.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.firstText.Location = new System.Drawing.Point(92, 17);
-            this.firstText.Name = "firstText";
-            this.firstText.Size = new System.Drawing.Size(227, 20);
-            this.firstText.TabIndex = 1;
+            this.firstName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.firstName.Location = new System.Drawing.Point(92, 17);
+            this.firstName.Name = "firstName";
+            this.firstName.Size = new System.Drawing.Size(227, 20);
+            this.firstName.TabIndex = 1;
             // 
-            // CStatusOption
+            // civilStatus
             // 
-            this.CStatusOption.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.civilStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CStatusOption.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CStatusOption.FormattingEnabled = true;
-            this.CStatusOption.Items.AddRange(new object[] {
+            this.civilStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.civilStatus.FormattingEnabled = true;
+            this.civilStatus.Items.AddRange(new object[] {
             "Single",
             "Married"});
-            this.CStatusOption.Location = new System.Drawing.Point(92, 174);
-            this.CStatusOption.Name = "CStatusOption";
-            this.CStatusOption.Size = new System.Drawing.Size(120, 21);
-            this.CStatusOption.TabIndex = 7;
+            this.civilStatus.Location = new System.Drawing.Point(92, 174);
+            this.civilStatus.Name = "civilStatus";
+            this.civilStatus.Size = new System.Drawing.Size(120, 21);
+            this.civilStatus.TabIndex = 7;
             // 
             // label3
             // 
@@ -325,14 +325,14 @@
             this.label3.Text = "Address";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Address
+            // address
             // 
-            this.Address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Address.Location = new System.Drawing.Point(92, 201);
-            this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(227, 20);
-            this.Address.TabIndex = 8;
+            this.address.Location = new System.Drawing.Point(92, 201);
+            this.address.Name = "address";
+            this.address.Size = new System.Drawing.Size(227, 20);
+            this.address.TabIndex = 8;
             // 
             // groupBox5
             // 
@@ -462,7 +462,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.Controls.Add(this.comboBox1);
             this.groupBox6.Controls.Add(this.label18);
-            this.groupBox6.Location = new System.Drawing.Point(592, 349);
+            this.groupBox6.Location = new System.Drawing.Point(496, 288);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(328, 55);
             this.groupBox6.TabIndex = 15;
@@ -527,18 +527,18 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox extText;
-        private System.Windows.Forms.TextBox lastText;
-        private System.Windows.Forms.TextBox middleText;
-        private System.Windows.Forms.ComboBox SexOption;
+        private System.Windows.Forms.TextBox extension;
+        private System.Windows.Forms.TextBox lastName;
+        private System.Windows.Forms.TextBox middleName;
+        private System.Windows.Forms.ComboBox sex;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox firstText;
-        private System.Windows.Forms.ComboBox CStatusOption;
+        private System.Windows.Forms.TextBox firstName;
+        private System.Windows.Forms.ComboBox civilStatus;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Address;
+        private System.Windows.Forms.TextBox address;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
