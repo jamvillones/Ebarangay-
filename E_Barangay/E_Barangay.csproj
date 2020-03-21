@@ -269,6 +269,12 @@
     <Compile Include="Documents\CertSSSReq.Designer.cs">
       <DependentUpon>CertSSSReq.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\CertTransferofBusinessName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertTransferofBusinessName.Designer.cs">
+      <DependentUpon>CertTransferofBusinessName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\CustomCertification.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -513,6 +519,9 @@
     <EmbeddedResource Include="Documents\CertSSSReq.resx">
       <DependentUpon>CertSSSReq.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertTransferofBusinessName.resx">
+      <DependentUpon>CertTransferofBusinessName.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Documents\CustomCertification.resx">
       <DependentUpon>CustomCertification.cs</DependentUpon>
     </EmbeddedResource>
@@ -525,7 +534,6 @@
     <EmbeddedResource Include="Documents\SSSPension.resx">
       <DependentUpon>SSSPension.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Documents\SSSPensionFormat.resx" />
     <EmbeddedResource Include="Forms\EditPage.resx">
       <DependentUpon>EditPage.cs</DependentUpon>
     </EmbeddedResource>

@@ -61,10 +61,10 @@
             this.IDGroup.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.IDGroup.Controls.Add(this.assignBtn);
             this.IDGroup.Controls.Add(this.idField);
-            this.IDGroup.Location = new System.Drawing.Point(14, 12);
+            this.IDGroup.Location = new System.Drawing.Point(16, 12);
             this.IDGroup.Name = "IDGroup";
             this.IDGroup.Size = new System.Drawing.Size(321, 77);
-            this.IDGroup.TabIndex = 2;
+            this.IDGroup.TabIndex = 0;
             this.IDGroup.TabStop = false;
             this.IDGroup.Text = "User ID";
             // 
@@ -77,6 +77,7 @@
             this.assignBtn.TabIndex = 4;
             this.assignBtn.Text = "Assign";
             this.assignBtn.UseVisualStyleBackColor = true;
+            this.assignBtn.Click += new System.EventHandler(this.AssignBtn_Click);
             // 
             // idField
             // 
@@ -86,12 +87,14 @@
             this.idField.MaxLength = 10;
             this.idField.Name = "idField";
             this.idField.Size = new System.Drawing.Size(309, 20);
-            this.idField.TabIndex = 3;
+            this.idField.TabIndex = 0;
             // 
             // DocumentForm
             // 
+            this.AcceptButton = this.assignBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(914, 690);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "DocumentForm";
             this.FieldsPanel.ResumeLayout(false);
             this.IDGroup.ResumeLayout(false);

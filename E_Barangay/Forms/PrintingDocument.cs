@@ -32,7 +32,8 @@ namespace E_Barangay.Forms
             "Cert. SSS Pension",
             "Cert. for PRC",
             "Certification for Good Moral Character",
-            "Cert. for Educational Assistance"
+            "Cert. for Educational Assistance",
+            "Cert. Transfer for Business Name"
         };
 
         public PrintingDocument()
@@ -91,6 +92,9 @@ namespace E_Barangay.Forms
         {
             switch (name)
             {
+                case "Cert. Transfer for Business Name":
+                    CreateForm<CertTransferofBusinessName>();
+                    break;
                 case "Barangay Clearance":
                     CreateForm<BarangayClearance>();
                     break;
