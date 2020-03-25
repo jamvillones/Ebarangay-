@@ -73,6 +73,8 @@
             this.FieldsPanel.Controls.Add(this.groupBox2);
             this.FieldsPanel.Controls.Add(this.groupBox1);
             this.FieldsPanel.Controls.Add(this.groupBox3);
+            this.FieldsPanel.Controls.SetChildIndex(this.ResetBtn, 0);
+            this.FieldsPanel.Controls.SetChildIndex(this.IDGroup, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox3, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox1, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox2, 0);
@@ -432,7 +434,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(914, 690);
             this.Name = "BrgyCertforFinancialSupport";
-            this.Text = "Brgy. Certification for Financial Support";
+            this.Text = "Brgy. Certification of Indigency for Financial Support";
             this.FieldsPanel.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

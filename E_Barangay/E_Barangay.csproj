@@ -185,23 +185,29 @@
     <Compile Include="Documents\BrgyCertforResidency.Designer.cs">
       <DependentUpon>BrgyCertforResidency.cs</DependentUpon>
     </Compile>
-    <Compile Include="Documents\BrgyCertificationforBurial.cs">
+    <Compile Include="Documents\BrgyCertofIndigencyForBurial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Documents\BrgyCertificationforBurial.Designer.cs">
-      <DependentUpon>BrgyCertificationforBurial.cs</DependentUpon>
+    <Compile Include="Documents\BrgyCertofIndigencyForBurial.Designer.cs">
+      <DependentUpon>BrgyCertofIndigencyForBurial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Documents\BrgyCertificationforbusiness.cs">
+    <Compile Include="Documents\BrgyCertofEmployment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Documents\BrgyCertificationforbusiness.Designer.cs">
-      <DependentUpon>BrgyCertificationforbusiness.cs</DependentUpon>
+    <Compile Include="Documents\BrgyCertofEmployment.Designer.cs">
+      <DependentUpon>BrgyCertofEmployment.cs</DependentUpon>
     </Compile>
-    <Compile Include="Documents\BrgyClearance_Akelco.cs">
+    <Compile Include="Documents\BrgyClearanceRequirementsFor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Documents\BrgyClearance_Akelco.Designer.cs">
-      <DependentUpon>BrgyClearance_Akelco.cs</DependentUpon>
+    <Compile Include="Documents\BrgyClearanceRequirementsFor.Designer.cs">
+      <DependentUpon>BrgyClearanceRequirementsFor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\BrgyCertforElectricConnectionAkelco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BrgyCertforElectricConnectionAkelco.Designer.cs">
+      <DependentUpon>BrgyCertforElectricConnectionAkelco.cs</DependentUpon>
     </Compile>
     <Compile Include="Documents\BuildingPermit.cs">
       <SubType>Form</SubType>
@@ -280,12 +286,6 @@
     </Compile>
     <Compile Include="Documents\CustomCertification.Designer.cs">
       <DependentUpon>CustomCertification.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Documents\DeathCertificate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Documents\DeathCertificate.Designer.cs">
-      <DependentUpon>DeathCertificate.cs</DependentUpon>
     </Compile>
     <Compile Include="Documents\DocumentForm.cs">
       <SubType>Form</SubType>
@@ -477,14 +477,17 @@
     <EmbeddedResource Include="Documents\BrgyCertforResidency.resx">
       <DependentUpon>BrgyCertforResidency.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Documents\BrgyCertificationforBurial.resx">
-      <DependentUpon>BrgyCertificationforBurial.cs</DependentUpon>
+    <EmbeddedResource Include="Documents\BrgyCertofIndigencyForBurial.resx">
+      <DependentUpon>BrgyCertofIndigencyForBurial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Documents\BrgyCertificationforbusiness.resx">
-      <DependentUpon>BrgyCertificationforbusiness.cs</DependentUpon>
+    <EmbeddedResource Include="Documents\BrgyCertofEmployment.resx">
+      <DependentUpon>BrgyCertofEmployment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Documents\BrgyClearance_Akelco.resx">
-      <DependentUpon>BrgyClearance_Akelco.cs</DependentUpon>
+    <EmbeddedResource Include="Documents\BrgyClearanceRequirementsFor.resx">
+      <DependentUpon>BrgyClearanceRequirementsFor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BrgyCertforElectricConnectionAkelco.resx">
+      <DependentUpon>BrgyCertforElectricConnectionAkelco.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BuildingPermit.resx">
       <DependentUpon>BuildingPermit.cs</DependentUpon>
@@ -524,9 +527,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\CustomCertification.resx">
       <DependentUpon>CustomCertification.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Documents\DeathCertificate.resx">
-      <DependentUpon>DeathCertificate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\DocumentForm.resx">
       <DependentUpon>DocumentForm.cs</DependentUpon>
@@ -643,6 +643,7 @@
       <LastGenOutput>EBModel.cs</LastGenOutput>
     </Content>
     <Content Include="favicon.ico" />
+    <None Include="Resources\CertCustomHeader.png" />
     <None Include="Resources\CertIndigentMedicalAssistance.png" />
     <None Include="Resources\BrgyCertificationforBurial.png" />
     <None Include="Resources\BarangayClearance_tmp.png" />

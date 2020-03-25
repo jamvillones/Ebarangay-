@@ -15,6 +15,28 @@ public static class PrintingExtensions
 
         return c.Text == "Male" ? "Mr." : "Ms.";
     }
+    public static string PrintAge(this NumericUpDown n)
+    {
+
+        string end = "of age";
+        if(n.Value <= 1)
+        {
+            return n.Value + " year "+end;
+        }
+
+        return n.Value+" years "+end+(n.Value >= 18?"(of legal age)":string.Empty);
+    }
+    //public static string AddLegalif(this Control c)
+    //{
+    //    ///fail safe
+    //    if (string.IsNullOrEmpty(c.Text))
+    //        return string.Empty;
+
+    //    int age = Convert.ToInt32(c.Text);
+    //    if (age >= 18)
+    //        return "(of legal age)";
+    //    return string.Empty;
+    //}
     public static string MrMrs(this Control c)
     {
         if (c.Text == "")

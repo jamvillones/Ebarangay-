@@ -1,6 +1,6 @@
 ﻿namespace E_Barangay.Documents
 {
-    partial class BrgyClearance_Akelco
+    partial class BrgyCertofEmployment
     {
         /// <summary>
         /// Required designer variable.
@@ -39,42 +39,48 @@
             this.ext = new System.Windows.Forms.TextBox();
             this.lastName = new System.Windows.Forms.TextBox();
             this.middleName = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.age = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.firstName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Address = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.officerOption = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dtValidity = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.IssuedOn = new System.Windows.Forms.DateTimePicker();
+            this.address = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.orNo = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.income = new System.Windows.Forms.TextBox();
+            this.institution = new System.Windows.Forms.TextBox();
+            this.profStatus = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.profession = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.officerOption = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.orValidityDate = new System.Windows.Forms.DateTimePicker();
-            this.orIssueDate = new System.Windows.Forms.DateTimePicker();
+            this.issuedOn = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.purpose = new System.Windows.Forms.TextBox();
             this.FieldsPanel.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // FieldsPanel
             // 
-            this.FieldsPanel.Controls.Add(this.groupBox1);
             this.FieldsPanel.Controls.Add(this.groupBox5);
-            this.FieldsPanel.Controls.Add(this.groupBox3);
             this.FieldsPanel.Controls.Add(this.groupBox2);
-            this.FieldsPanel.Controls.SetChildIndex(this.groupBox2, 0);
+            this.FieldsPanel.Controls.Add(this.groupBox1);
+            this.FieldsPanel.Controls.Add(this.groupBox3);
+            this.FieldsPanel.Controls.SetChildIndex(this.ResetBtn, 0);
+            this.FieldsPanel.Controls.SetChildIndex(this.IDGroup, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox3, 0);
-            this.FieldsPanel.Controls.SetChildIndex(this.groupBox5, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox1, 0);
+            this.FieldsPanel.Controls.SetChildIndex(this.groupBox2, 0);
+            this.FieldsPanel.Controls.SetChildIndex(this.groupBox5, 0);
             // 
             // groupBox3
             // 
@@ -90,14 +96,16 @@
             this.groupBox3.Controls.Add(this.ext);
             this.groupBox3.Controls.Add(this.lastName);
             this.groupBox3.Controls.Add(this.middleName);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.age);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.firstName);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.Address);
+            this.groupBox3.Controls.Add(this.address);
             this.groupBox3.Location = new System.Drawing.Point(12, 95);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(328, 204);
-            this.groupBox3.TabIndex = 2;
+            this.groupBox3.Size = new System.Drawing.Size(328, 234);
+            this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DETAILS";
             // 
@@ -110,8 +118,7 @@
             this.cStatus.Items.AddRange(new object[] {
             "Single",
             "Married",
-            "Separated",
-            "Widow"});
+            "Separated"});
             this.cStatus.Location = new System.Drawing.Point(92, 148);
             this.cStatus.Name = "cStatus";
             this.cStatus.Size = new System.Drawing.Size(230, 21);
@@ -206,6 +213,25 @@
             this.middleName.Size = new System.Drawing.Size(230, 20);
             this.middleName.TabIndex = 2;
             // 
+            // label11
+            // 
+            this.label11.Location = new System.Drawing.Point(6, 175);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(36, 20);
+            this.label11.TabIndex = 26;
+            this.label11.Text = "Age:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // age
+            // 
+            this.age.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.age.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.age.Location = new System.Drawing.Point(92, 175);
+            this.age.Name = "age";
+            this.age.Size = new System.Drawing.Size(230, 20);
+            this.age.TabIndex = 7;
+            // 
             // label1
             // 
             this.label1.Location = new System.Drawing.Point(6, 17);
@@ -227,32 +253,126 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(6, 174);
+            this.label3.Location = new System.Drawing.Point(6, 201);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Address";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Address
+            // address
             // 
-            this.Address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Address.Location = new System.Drawing.Point(92, 174);
-            this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(230, 20);
-            this.Address.TabIndex = 7;
+            this.address.Location = new System.Drawing.Point(92, 201);
+            this.address.Name = "address";
+            this.address.Size = new System.Drawing.Size(230, 20);
+            this.address.TabIndex = 8;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.income);
+            this.groupBox1.Controls.Add(this.institution);
+            this.groupBox1.Controls.Add(this.profStatus);
+            this.groupBox1.Controls.Add(this.label15);
+            this.groupBox1.Controls.Add(this.profession);
+            this.groupBox1.Location = new System.Drawing.Point(12, 335);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(328, 123);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "EMPLOYMENT DETAILS";
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(6, 95);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 20);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Income:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(6, 69);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 20);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Institution:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(6, 43);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 20);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Status:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // income
+            // 
+            this.income.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.income.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.income.Location = new System.Drawing.Point(92, 95);
+            this.income.Name = "income";
+            this.income.Size = new System.Drawing.Size(230, 20);
+            this.income.TabIndex = 4;
+            // 
+            // institution
+            // 
+            this.institution.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.institution.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.institution.Location = new System.Drawing.Point(92, 69);
+            this.institution.Name = "institution";
+            this.institution.Size = new System.Drawing.Size(230, 20);
+            this.institution.TabIndex = 3;
+            // 
+            // profStatus
+            // 
+            this.profStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.profStatus.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.profStatus.Location = new System.Drawing.Point(92, 43);
+            this.profStatus.Name = "profStatus";
+            this.profStatus.Size = new System.Drawing.Size(230, 20);
+            this.profStatus.TabIndex = 2;
+            // 
+            // label15
+            // 
+            this.label15.Location = new System.Drawing.Point(6, 17);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(80, 20);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Profession:";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // profession
+            // 
+            this.profession.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.profession.Location = new System.Drawing.Point(92, 17);
+            this.profession.Name = "profession";
+            this.profession.Size = new System.Drawing.Size(230, 20);
+            this.profession.TabIndex = 1;
             // 
             // groupBox5
             // 
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.officerOption);
-            this.groupBox5.Controls.Add(this.label9);
-            this.groupBox5.Location = new System.Drawing.Point(12, 504);
+            this.groupBox5.Controls.Add(this.label4);
+            this.groupBox5.Location = new System.Drawing.Point(12, 546);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(328, 55);
-            this.groupBox5.TabIndex = 5;
+            this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Signature";
             // 
@@ -264,161 +384,84 @@
             this.officerOption.Location = new System.Drawing.Point(107, 19);
             this.officerOption.Name = "officerOption";
             this.officerOption.Size = new System.Drawing.Size(215, 21);
-            this.officerOption.TabIndex = 5;
+            this.officerOption.TabIndex = 1;
             // 
-            // label9
+            // label4
             // 
-            this.label9.Location = new System.Drawing.Point(6, 18);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 20);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Officer of the Day:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label4.Location = new System.Drawing.Point(6, 18);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 20);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Officer of the Day:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.dtValidity);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.IssuedOn);
-            this.groupBox2.Location = new System.Drawing.Point(12, 305);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.purpose);
+            this.groupBox2.Controls.Add(this.issuedOn);
+            this.groupBox2.Location = new System.Drawing.Point(12, 464);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(328, 87);
+            this.groupBox2.Size = new System.Drawing.Size(328, 76);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "MISC";
             // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(6, 45);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 20);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Valid Until:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // dtValidity
-            // 
-            this.dtValidity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtValidity.CustomFormat = "MMMM dd, yyyy";
-            this.dtValidity.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtValidity.Location = new System.Drawing.Point(92, 45);
-            this.dtValidity.Name = "dtValidity";
-            this.dtValidity.Size = new System.Drawing.Size(230, 20);
-            this.dtValidity.TabIndex = 2;
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(6, 21);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Issued On:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // IssuedOn
-            // 
-            this.IssuedOn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.IssuedOn.CustomFormat = "MMMM dd, yyyy";
-            this.IssuedOn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.IssuedOn.Location = new System.Drawing.Point(92, 19);
-            this.IssuedOn.Name = "IssuedOn";
-            this.IssuedOn.Size = new System.Drawing.Size(230, 20);
-            this.IssuedOn.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.orNo);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.orValidityDate);
-            this.groupBox1.Controls.Add(this.orIssueDate);
-            this.groupBox1.Location = new System.Drawing.Point(12, 398);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(328, 100);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "OR";
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(3, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 20);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "ORNO:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // orNo
-            // 
-            this.orNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.orNo.Location = new System.Drawing.Point(93, 17);
-            this.orNo.MaxLength = 13;
-            this.orNo.Name = "orNo";
-            this.orNo.Size = new System.Drawing.Size(229, 20);
-            this.orNo.TabIndex = 1;
-            // 
-            // label11
-            // 
-            this.label11.Location = new System.Drawing.Point(3, 43);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 20);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Issued On:";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // label14
             // 
-            this.label14.Location = new System.Drawing.Point(3, 70);
+            this.label14.Location = new System.Drawing.Point(6, 45);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(60, 20);
-            this.label14.TabIndex = 17;
-            this.label14.Text = "VALIDITY:";
+            this.label14.TabIndex = 4;
+            this.label14.Text = "Issued On:";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // orValidityDate
+            // issuedOn
             // 
-            this.orValidityDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.issuedOn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.orValidityDate.CustomFormat = "MMMM dd, yyyy";
-            this.orValidityDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.orValidityDate.Location = new System.Drawing.Point(93, 69);
-            this.orValidityDate.Name = "orValidityDate";
-            this.orValidityDate.Size = new System.Drawing.Size(229, 20);
-            this.orValidityDate.TabIndex = 4;
+            this.issuedOn.CustomFormat = "MMMM dd, yyyy";
+            this.issuedOn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.issuedOn.Location = new System.Drawing.Point(92, 45);
+            this.issuedOn.Name = "issuedOn";
+            this.issuedOn.Size = new System.Drawing.Size(230, 20);
+            this.issuedOn.TabIndex = 2;
             // 
-            // orIssueDate
+            // label5
             // 
-            this.orIssueDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label5.Location = new System.Drawing.Point(6, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 20);
+            this.label5.TabIndex = 31;
+            this.label5.Text = "Purpose:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // purpose
+            // 
+            this.purpose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.orIssueDate.CustomFormat = "MMMM dd, yyyy";
-            this.orIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.orIssueDate.Location = new System.Drawing.Point(93, 43);
-            this.orIssueDate.Name = "orIssueDate";
-            this.orIssueDate.Size = new System.Drawing.Size(229, 20);
-            this.orIssueDate.TabIndex = 3;
+            this.purpose.Location = new System.Drawing.Point(92, 19);
+            this.purpose.Name = "purpose";
+            this.purpose.Size = new System.Drawing.Size(230, 20);
+            this.purpose.TabIndex = 1;
             // 
-            // BrgyClearance_Akelco
+            // BrgyCertificationforbusiness
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(914, 690);
-            this.Name = "BrgyClearance_Akelco";
-            this.Text = "Brgy. Clearance Akelco";
+            this.Name = "BrgyCertificationforbusiness";
+            this.Text = "Brgy. Certification of Employment";
             this.FieldsPanel.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -434,26 +477,30 @@
         private System.Windows.Forms.TextBox ext;
         private System.Windows.Forms.TextBox lastName;
         private System.Windows.Forms.TextBox middleName;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox age;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox firstName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox Address;
+        private System.Windows.Forms.TextBox address;
         private System.Windows.Forms.ComboBox cStatus;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.ComboBox officerOption;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker IssuedOn;
-        private System.Windows.Forms.DateTimePicker dtValidity;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox orNo;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox income;
+        private System.Windows.Forms.TextBox institution;
+        private System.Windows.Forms.TextBox profStatus;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox profession;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.ComboBox officerOption;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker orValidityDate;
-        private System.Windows.Forms.DateTimePicker orIssueDate;
+        private System.Windows.Forms.DateTimePicker issuedOn;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox purpose;
     }
 }

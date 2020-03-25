@@ -67,6 +67,7 @@ namespace E_Barangay.Documents
         {
             e.Graphics.DrawImage(Properties.Resources.GenericBG, Point.Empty);
             InitBodyRect(e);
+            DrawDebugRecs(rect, e);
         }
         #endregion
 

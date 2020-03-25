@@ -20,6 +20,18 @@ namespace E_Barangay.Documents
         {
             MessageBox.Show("Not Found.");
         }
+        public void CustomHeaderCert(PrintPageEventArgs e, string header)
+        {
+            e.Graphics.DrawImage(Properties.Resources.CertCustomHeader, Point.Empty);
+            Rectangle r = new Rectangle(e.PageBounds.Width / 3 - 30,
+                                      e.PageBounds.Height / 5 + 20,
+                                      550, 100);
+            StringFormat s = new StringFormat();
+            s.Alignment = StringAlignment.Center;
+            e.Graphics.DrawString(header, Printing.headerFont, Brushes.Red, r, s);
+            DrawDebugRecs(r, e);
+
+        }
         protected string ToWhom
         {
             get
@@ -37,7 +49,7 @@ namespace E_Barangay.Documents
             return false;
         }
 
-       
+
 
         #region autoAssign
         public virtual void AcceptCitizen(Citizen c)
@@ -77,7 +89,13 @@ namespace E_Barangay.Documents
         {
             foreach (Control c in controls)
             {
-                c.ResetText();
+                if (c is NumericUpDown)
+                {
+                    var n = (NumericUpDown)c;
+                    n.Value = n.Minimum;
+                }
+                else
+                    c.ResetText();
             }
         }
         #endregion

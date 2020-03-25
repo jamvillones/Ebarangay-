@@ -1,6 +1,6 @@
 ﻿namespace E_Barangay.Documents
 {
-    partial class BrgyCertificationforBurial
+    partial class BrgyCertofIndigencyForBurial
     {
         /// <summary>
         /// Required designer variable.
@@ -73,6 +73,8 @@
             this.FieldsPanel.Controls.Add(this.groupBox4);
             this.FieldsPanel.Controls.Add(this.groupBox2);
             this.FieldsPanel.Controls.Add(this.groupBox3);
+            this.FieldsPanel.Controls.SetChildIndex(this.ResetBtn, 0);
+            this.FieldsPanel.Controls.SetChildIndex(this.IDGroup, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox3, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox2, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox4, 0);
@@ -428,13 +430,13 @@
             this.label9.Text = "Officer of the Day:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // BrgyCertificationforBurial
+            // BrgyCertofIndigencyForBurial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 690);
-            this.Name = "BrgyCertificationforBurial";
-            this.Text = "Brgy. Certification for Burial";
+            this.Name = "BrgyCertofIndigencyForBurial";
+            this.Text = "Brgy. Certification of Indigency for Burial";
             this.FieldsPanel.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();

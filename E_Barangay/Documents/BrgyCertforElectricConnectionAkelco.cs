@@ -13,10 +13,10 @@ using E_Barangay.Class;
 
 namespace E_Barangay.Documents
 {
-    public partial class BrgyClearance_Akelco : DocumentForm
+    public partial class BrgyCertforElectricConnectionAkelco : DocumentForm
     {
         OfficerInfo o = new OfficerInfo();
-        public BrgyClearance_Akelco()
+        public BrgyCertforElectricConnectionAkelco()
         {
             InitializeComponent();
         }

@@ -359,7 +359,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 690);
             this.Name = "CertForEducationalAssistance";
-            this.Text = "Cert. For Educational Assistance";
+            this.Text = "Brgy. Certification of Indigency for Educational Assistance";
             this.FieldsPanel.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();

@@ -10,30 +10,30 @@ namespace E_Barangay.Forms
         Form form;
 
         string[] docNames = {
-            "Barangay Clearance",
+            "Brgy. Clearance",
             "Business Clearance",
-            "Death Certificate",
             "Building Permit",
             "Certificate of Appearance",
-            "Certificate of Indigency",
             "Cert. Dependent",
-            "Brgy Certificate for Burial",
-            "Cert. Indigent Medical Assistance",
-            "Brgy. Certificate for Death",
-            "Brgy. Certification for Business",
-            "Brgy. Certification for Financial Support",
-            "Brgy. Clearance Akelco",
+            "Brgy. Certification for Electric Connection at Akelco",
+            "Brgy. Certification for Death",
+            "Brgy. Certification of Employment",
+            "Brgy. Certification of Indigency",
+            "Brgy. Certification of Indigency for Financial Support",
+            "Brgy. Certification of Indigency for Educational Assistance",
+            "Brgy. Certification of Indigency for Medical Assistance",
+            "Brgy. Certification of Indigency for Burial",
+            "Brgy. Certification of Indigency for 4P's",
             "Cert. SSS Requirement",
-            "Cert. of 4P's",
             "Brgy. Certification for Guardian",
-            "Brgy. Certification for no Income",
+            "Brgy. Certification for No Income",
             "Brgy. Certification for Residency",
             "Cert. Animal Bite",
             "Cert. SSS Pension",
             "Cert. for PRC",
             "Certification for Good Moral Character",
-            "Cert. for Educational Assistance",
-            "Cert. Transfer for Business Name"
+            "Cert. Transfer for Business Name",
+            "Brgy. Clearance  - Requirements For"
         };
 
         public PrintingDocument()
@@ -95,14 +95,11 @@ namespace E_Barangay.Forms
                 case "Cert. Transfer for Business Name":
                     CreateForm<CertTransferofBusinessName>();
                     break;
-                case "Barangay Clearance":
+                case "Brgy. Clearance":
                     CreateForm<BarangayClearance>();
                     break;
                 case "Business Clearance":
                     CreateForm<BussinessClearance>();
-                    break;
-                case "Death Certificate":
-                    CreateForm<DeathCertificate>();
                     break;
                 case "Building Permit":
                     CreateForm<BuildingPermit>();
@@ -110,40 +107,40 @@ namespace E_Barangay.Forms
                 case "Certificate of Appearance":
                     CreateForm<CertificateAppearance>();
                     break;
-                case "Certificate of Indigency":
+                case "Brgy. Certification of Indigency":
                     CreateForm<CertificateOfIndigency>();
                     break;
                 case "Cert. Dependent":
                     CreateForm<BrgyCertDependent>();
                     break;
-                case "Brgy Certificate for Burial":
-                    CreateForm<BrgyCertificationforBurial>();
+                case "Brgy. Certification of Indigency for Burial":
+                    CreateForm<BrgyCertofIndigencyForBurial>();
                     break;
-                case "Cert. Indigent Medical Assistance":
+                case "Brgy. Certification of Indigency for Medical Assistance":
                     CreateForm<CertIndigentMedicalAssistance>();
                     break;
-                case "Brgy. Certificate for Death":
+                case "Brgy. Certification for Death":
                     CreateForm<BrgyCertForDeath>();
                     break;
-                case "Brgy. Certification for Business":
-                    CreateForm<BrgyCertificationforbusiness>();
+                case "Brgy. Certification of Employment":
+                    CreateForm<BrgyCertofEmployment>();
                     break;
-                case "Brgy. Certification for Financial Support":
+                case "Brgy. Certification of Indigency for Financial Support":
                     CreateForm<BrgyCertforFinancialSupport>();
                     break;
-                case "Brgy. Clearance Akelco":
-                    CreateForm<BrgyClearance_Akelco>();
+                case "Brgy. Certification for Electric Connection at Akelco":
+                    CreateForm<BrgyCertforElectricConnectionAkelco>();
                     break;
                 case "Cert. SSS Requirement":
                     CreateForm<CertSSSReq>();
                     break;
-                case "Cert. of 4P's":
+                case "Brgy. Certification of Indigency for 4P's":
                     CreateForm<CertofP4s>();
                     break;
                 case "Brgy. Certification for Guardian":
                     CreateForm<BrgyCertforGuardian>();
                     break;
-                case "Brgy. Certification for no Income":
+                case "Brgy. Certification for No Income":
                     CreateForm<BrgyCertforNoIncome>();
                     break;
                 case "Brgy. Certification for Residency":
@@ -161,8 +158,11 @@ namespace E_Barangay.Forms
                 case "Certification for Good Moral Character":
                     CreateForm<CertificationForGoodMoral>();
                     break;
-                case "Cert. for Educational Assistance":
+                case "Brgy. Certification of Indigency for Educational Assistance":
                     CreateForm<CertForEducationalAssistance>();
+                    break;
+                case "Brgy. Clearance  - Requirements For":
+                    CreateForm<BrgyClearanceRequirementsFor>();
                     break;
                 default:
                     break;

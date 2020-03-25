@@ -13,10 +13,10 @@ using System.Windows.Forms;
 
 namespace E_Barangay.Documents
 {
-    public partial class BrgyCertificationforbusiness : DocumentForm
+    public partial class BrgyCertofEmployment : DocumentForm
     {
         OfficerInfo o = new OfficerInfo();
-        public BrgyCertificationforbusiness()
+        public BrgyCertofEmployment()
         {
             InitializeComponent();
         }
