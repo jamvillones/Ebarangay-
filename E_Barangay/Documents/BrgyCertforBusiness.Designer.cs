@@ -96,6 +96,11 @@
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox4, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.ResetBtn, 0);
             // 
+            // printing
+            // 
+            this.printing.Location = new System.Drawing.Point(352, 0);
+            this.printing.Size = new System.Drawing.Size(562, 700);
+            // 
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 

@@ -64,11 +64,16 @@
             this.FieldsPanel.Controls.Add(this.groupBox4);
             this.FieldsPanel.Controls.Add(this.groupBox2);
             this.FieldsPanel.Controls.Add(this.groupBox3);
-            //this.FieldsPanel.Controls.SetChildIndex(this.ResetBtn, 0);
+            this.FieldsPanel.Controls.SetChildIndex(this.ResetBtn, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.IDGroup, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox3, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox2, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox4, 0);
+            // 
+            // printing
+            // 
+            this.printing.Location = new System.Drawing.Point(352, 0);
+            this.printing.Size = new System.Drawing.Size(562, 690);
             // 
             // groupBox4
             // 

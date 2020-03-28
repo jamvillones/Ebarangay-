@@ -34,11 +34,13 @@
             // 
             // FieldsPanel
             // 
+            this.FieldsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.FieldsPanel.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.FieldsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FieldsPanel.Location = new System.Drawing.Point(0, 0);
             this.FieldsPanel.Name = "FieldsPanel";
-            this.FieldsPanel.Size = new System.Drawing.Size(356, 694);
+            this.FieldsPanel.Size = new System.Drawing.Size(352, 690);
             this.FieldsPanel.TabIndex = 0;
             // 
             // printing
@@ -46,9 +48,9 @@
             this.printing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.printing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.printing.Dock = System.Windows.Forms.DockStyle.Right;
-            this.printing.Location = new System.Drawing.Point(356, 0);
+            this.printing.Location = new System.Drawing.Point(352, 0);
             this.printing.Name = "printing";
-            this.printing.Size = new System.Drawing.Size(562, 694);
+            this.printing.Size = new System.Drawing.Size(562, 690);
             this.printing.TabIndex = 0;
             this.printing.TabStop = false;
             // 
@@ -56,7 +58,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(918, 694);
+            this.ClientSize = new System.Drawing.Size(914, 690);
             this.Controls.Add(this.FieldsPanel);
             this.Controls.Add(this.printing);
             this.KeyPreview = true;
@@ -71,7 +73,7 @@
         }
 
         #endregion
-        private Forms.Printing printing;
         protected System.Windows.Forms.Panel FieldsPanel;
+        protected Forms.Printing printing;
     }
 }
