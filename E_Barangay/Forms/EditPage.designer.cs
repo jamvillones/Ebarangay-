@@ -109,7 +109,7 @@
             groupBox2.Location = new System.Drawing.Point(584, 297);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new System.Drawing.Size(293, 113);
-            groupBox2.TabIndex = 4;
+            groupBox2.TabIndex = 5;
             groupBox2.TabStop = false;
             groupBox2.Text = "Status";
             // 
@@ -161,7 +161,7 @@
             this.firstField.MaxLength = 10;
             this.firstField.Name = "firstField";
             this.firstField.Size = new System.Drawing.Size(286, 20);
-            this.firstField.TabIndex = 2;
+            this.firstField.TabIndex = 1;
             this.firstField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegisterControl_KeyDown);
             // 
             // label1
@@ -687,7 +687,7 @@
             this.extensionField.MaxLength = 5;
             this.extensionField.Name = "extensionField";
             this.extensionField.Size = new System.Drawing.Size(286, 20);
-            this.extensionField.TabIndex = 23;
+            this.extensionField.TabIndex = 4;
             // 
             // lastField
             // 
@@ -697,7 +697,7 @@
             this.lastField.MaxLength = 10;
             this.lastField.Name = "lastField";
             this.lastField.Size = new System.Drawing.Size(286, 20);
-            this.lastField.TabIndex = 22;
+            this.lastField.TabIndex = 3;
             // 
             // middleField
             // 
@@ -707,7 +707,7 @@
             this.middleField.MaxLength = 10;
             this.middleField.Name = "middleField";
             this.middleField.Size = new System.Drawing.Size(286, 20);
-            this.middleField.TabIndex = 21;
+            this.middleField.TabIndex = 2;
             // 
             // idField
             // 
@@ -720,6 +720,7 @@
             this.idField.ReadOnly = true;
             this.idField.Size = new System.Drawing.Size(286, 20);
             this.idField.TabIndex = 20;
+            this.idField.TabStop = false;
             // 
             // label19
             // 
@@ -746,7 +747,7 @@
             this.groupBox6.Location = new System.Drawing.Point(9, 297);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(569, 113);
-            this.groupBox6.TabIndex = 13;
+            this.groupBox6.TabIndex = 4;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "ID\'s";
             // 
