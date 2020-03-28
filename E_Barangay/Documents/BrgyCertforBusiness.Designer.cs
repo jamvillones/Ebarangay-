@@ -78,7 +78,7 @@
             // 
             // ResetBtn
             // 
-            this.ResetBtn.Location = new System.Drawing.Point(126, 665);
+            this.ResetBtn.Location = new System.Drawing.Point(126, 663);
             // 
             // FieldsPanel
             // 
@@ -87,7 +87,7 @@
             this.FieldsPanel.Controls.Add(this.groupBox2);
             this.FieldsPanel.Controls.Add(this.groupBox1);
             this.FieldsPanel.Controls.Add(this.groupBox3);
-            this.FieldsPanel.Size = new System.Drawing.Size(352, 700);
+            this.FieldsPanel.Size = new System.Drawing.Size(352, 698);
             this.FieldsPanel.Controls.SetChildIndex(this.IDGroup, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox3, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox1, 0);
@@ -98,8 +98,7 @@
             // 
             // printing
             // 
-            this.printing.Location = new System.Drawing.Point(352, 0);
-            this.printing.Size = new System.Drawing.Size(562, 700);
+            this.printing.Size = new System.Drawing.Size(562, 698);
             // 
             // groupBox3
             // 
@@ -525,7 +524,7 @@
             // BrgyCertforBusiness
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(914, 700);
+            this.ClientSize = new System.Drawing.Size(914, 698);
             this.Name = "BrgyCertforBusiness";
             this.Text = "Brgy. Certication for Business";
             this.FieldsPanel.ResumeLayout(false);
