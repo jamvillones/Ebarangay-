@@ -305,6 +305,12 @@
     <Compile Include="Documents\SSSPension.Designer.cs">
       <DependentUpon>SSSPension.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\testing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\testing.Designer.cs">
+      <DependentUpon>testing.cs</DependentUpon>
+    </Compile>
     <Compile Include="EBModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -430,12 +436,6 @@
     <Compile Include="Forms\StatForm.Designer.cs">
       <DependentUpon>StatForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\temp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\temp.Designer.cs">
-      <DependentUpon>temp.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\YesOrNoPrompt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -543,6 +543,9 @@
     <EmbeddedResource Include="Documents\SSSPension.resx">
       <DependentUpon>SSSPension.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Documents\testing.resx">
+      <DependentUpon>testing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditPage.resx">
       <DependentUpon>EditPage.cs</DependentUpon>
     </EmbeddedResource>
@@ -596,9 +599,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StatForm.resx">
       <DependentUpon>StatForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\temp.resx">
-      <DependentUpon>temp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\YesOrNoPrompt.resx">
       <DependentUpon>YesOrNoPrompt.cs</DependentUpon>
