@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Windows.Forms;
+using E_Barangay.Class;
 using E_Barangay.Forms;
 
 namespace E_Barangay.Documents
@@ -19,6 +20,16 @@ namespace E_Barangay.Documents
         public void ShowNotFound()
         {
             MessageBox.Show("Not Found.");
+        }
+        public override void InitializeControls()
+        {
+            base.InitializeControls();
+            controls.AddRange(FieldsPanel.GetContainedControls<TextBox>());
+            controls.AddRange(FieldsPanel.GetContainedControls<ComboBox>());
+            controls.AddRange(FieldsPanel.GetContainedControls<DateTimePicker>());
+            controls.AddRange(FieldsPanel.GetContainedControls<NumericUpDown>());
+            controls.Remove(idField);
+            //AddControls(FieldsPanel.GetContainedControls<TextBox>().ToArray());
         }
         public void CustomHeaderCert(PrintPageEventArgs e, string header)
         {
@@ -99,5 +110,21 @@ namespace E_Barangay.Documents
             }
         }
         #endregion
+        private OfficerInfo info;
+        protected OfficerInfo getOfficerInfo
+        {
+            get
+            {
+                if(UserManager.instance == null)
+                {
+                    info = new OfficerInfo();
+                }
+
+                info = UserManager.instance.Officers;
+                return info;
+            }
+        }
+        
+       
     }
 }

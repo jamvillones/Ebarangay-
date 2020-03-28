@@ -22,7 +22,7 @@ namespace E_Barangay.Documents
         }
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
-            CustomHeaderCert(e, "BARANGAY/CERTIFICATION/INDIGENCY");
+            CustomHeaderCert(e, "BARANGAY CERTIFICATION/INDIGENCY");
 
             InitBodyRect(e);
 

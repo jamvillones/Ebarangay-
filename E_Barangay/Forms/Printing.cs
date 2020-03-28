@@ -138,6 +138,7 @@ namespace E_Barangay.Forms
         public static Font fontBoldUnderline = new Font("Arial Narrow", 12, FontStyle.Bold | FontStyle.Underline);
         public static string Indention { get { return "        "; } }
         public static string LineSpace { get { return "\n\n\n"; } }
+        public static string ShortLineSpace { get { return "\n\n"; } }
 
         public static string MrOrMrs(string sex)
         {

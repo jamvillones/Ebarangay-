@@ -14,5 +14,15 @@ namespace E_Barangay.Class
         }
         public static UserManager instance;
         public User currentUser { get; set; }
+        private OfficerInfo info;
+        public OfficerInfo Officers
+        {
+            get
+            {
+                if (info == null)
+                    info = new OfficerInfo();
+                return info;
+            }
+        }
     }
 }

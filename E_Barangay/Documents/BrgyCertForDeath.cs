@@ -24,18 +24,12 @@ namespace E_Barangay.Documents
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
             base.Printing_PrintPage(sender, e);
-            //if (o == null)
-            //    o = new Class.OfficersForInfoForPrinting();
-            //e.Graphics.DrawImage(Properties.Resources.DeathCertificate, new PointF(0, 0));
-
-            //Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 32,
-            //                               e.PageBounds.Height / 3 - 10,
-            //                               550, 380);
 
             string name = Printing.GetFullName(firstName, middleName, lastName, ext);
+            string _name = Printing.GetName(firstName, middleName, lastName, ext);
 
             string first = "To whom it may concern:" + Printing.LineSpace +
-                            Printing.Indention + "This is to certify that as per record of this Barangay " + name + " legal age, " + civilStatusOption.Text + ", Filipino has been a resident of " + Address.Text + "." + Printing.LineSpace +
+                            Printing.Indention + "This is to certify that as per record of this Barangay " + name + ", "+age.PrintAge()+", " + civilStatusOption.Text + ", Filipino has been a resident of " + Address.Text + "." + Printing.LineSpace +
                             Printing.Indention + "This is to certify further that "+name+" died last "+DeathDate.Value.ToString("MMMM dd,yyyy")+" at "+deathPlace.Text+"."+Printing.LineSpace+
                             Printing.Indention + "This certification is issued upon the request of " + Printing.HisOrHer(sexOption.Text) + " " + Relation.Text + " " + By.Text + " for whatever legal purpose it may serve " + Printing.HimOrHer(reqSexOption.Text) + "." + Printing.LineSpace +
                             Printing.Indention + "Issued this " + IssuedOn.customFormat() + " Barangay Poblacion, Kalibo, Aklan."; 
@@ -44,11 +38,12 @@ namespace E_Barangay.Documents
             DrawDebugRecs(rect, e);
 
             Printing.DrawCapSb(e, o.captName, officerOption.Text);
+            Printing.DrawSpecimenSignature(e, _name);
         }
         public override void InitializeControls()
         {
             base.InitializeControls();
-            AddControls(firstName, middleName, lastName, ext, sexOption, civilStatusOption, Address, By, reqSexOption, Relation, IssuedOn, officerOption,DeathDate,deathPlace); ;
+            AddControls(firstName, middleName, lastName, ext,age, sexOption, civilStatusOption, Address, By, reqSexOption, Relation, IssuedOn, officerOption,DeathDate,deathPlace); ;
            
             foreach (var x in o.sbMemebers)
             {
@@ -71,6 +66,7 @@ namespace E_Barangay.Documents
             civilStatusOption.Text = c.CivilStatus;
             sexOption.Text = c.Gender;
             Address.Text = c.Address;
+            age.Value = c.getAGe();
         }
     }
 }

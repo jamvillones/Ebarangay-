@@ -61,12 +61,15 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.officerOption = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.age = new System.Windows.Forms.NumericUpDown();
+            this.label15 = new System.Windows.Forms.Label();
             this.FieldsPanel.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.age)).BeginInit();
             this.SuspendLayout();
             // 
             // FieldsPanel
@@ -94,7 +97,7 @@
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.label4);
             this.groupBox4.Controls.Add(this.By);
-            this.groupBox4.Location = new System.Drawing.Point(16, 387);
+            this.groupBox4.Location = new System.Drawing.Point(16, 418);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(321, 100);
             this.groupBox4.TabIndex = 4;
@@ -167,7 +170,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.IssuedOn);
-            this.groupBox2.Location = new System.Drawing.Point(16, 493);
+            this.groupBox2.Location = new System.Drawing.Point(16, 524);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(321, 53);
             this.groupBox2.TabIndex = 5;
@@ -198,6 +201,8 @@
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.label15);
+            this.groupBox3.Controls.Add(this.age);
             this.groupBox3.Controls.Add(this.civilStatusOption);
             this.groupBox3.Controls.Add(this.sexOption);
             this.groupBox3.Controls.Add(this.label7);
@@ -214,7 +219,7 @@
             this.groupBox3.Controls.Add(this.Address);
             this.groupBox3.Location = new System.Drawing.Point(16, 95);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(321, 204);
+            this.groupBox3.Size = new System.Drawing.Size(321, 235);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DETAILS";
@@ -254,7 +259,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 20);
             this.label7.TabIndex = 34;
-            this.label7.Text = "Gender";
+            this.label7.Text = "Gender:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label13
@@ -348,7 +353,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 20);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Address";
+            this.label3.Text = "Address:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Address
@@ -368,7 +373,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.DeathDate);
-            this.groupBox1.Location = new System.Drawing.Point(16, 305);
+            this.groupBox1.Location = new System.Drawing.Point(16, 336);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(321, 76);
             this.groupBox1.TabIndex = 3;
@@ -419,7 +424,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.officerOption);
             this.groupBox5.Controls.Add(this.label9);
-            this.groupBox5.Location = new System.Drawing.Point(16, 552);
+            this.groupBox5.Location = new System.Drawing.Point(16, 583);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(321, 55);
             this.groupBox5.TabIndex = 6;
@@ -445,6 +450,22 @@
             this.label9.Text = "Officer of the Day:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // age
+            // 
+            this.age.Location = new System.Drawing.Point(92, 201);
+            this.age.Name = "age";
+            this.age.Size = new System.Drawing.Size(120, 20);
+            this.age.TabIndex = 35;
+            // 
+            // label15
+            // 
+            this.label15.Location = new System.Drawing.Point(6, 201);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(60, 20);
+            this.label15.TabIndex = 36;
+            this.label15.Text = "Age:";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // BrgyCertForDeath
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -460,6 +481,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.age)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -498,5 +520,7 @@
         private System.Windows.Forms.ComboBox officerOption;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox deathPlace;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.NumericUpDown age;
     }
 }

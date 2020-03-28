@@ -155,6 +155,12 @@
     <Compile Include="Documents\BrgyCertDependent.Designer.cs">
       <DependentUpon>BrgyCertDependent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\BrgyCertforBusiness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BrgyCertforBusiness.Designer.cs">
+      <DependentUpon>BrgyCertforBusiness.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\BrgyCertForDeath.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -461,6 +467,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BrgyCertDependent.resx">
       <DependentUpon>BrgyCertDependent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BrgyCertforBusiness.resx">
+      <DependentUpon>BrgyCertforBusiness.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BrgyCertForDeath.resx">
       <DependentUpon>BrgyCertForDeath.cs</DependentUpon>

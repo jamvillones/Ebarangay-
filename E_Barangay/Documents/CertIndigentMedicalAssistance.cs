@@ -24,8 +24,8 @@ namespace E_Barangay.Documents
 
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
-            base.Printing_PrintPage(sender, e);
-
+            CustomHeaderCert(e, "BARANGAY CERTIFICATION/INDIGENCY");
+            InitBodyRect(e);
             string name = Printing.GetFullName(firstName, middleName, lastName, ext);
             string first = "To whom it may concern:" + Printing.LineSpace +
                             Printing.Indention + "This is to certify that " + name + ", " + Age.Text + " years old " + reqSexOption.Text + ", Filipino and a resident of " + Address.Text + " and a duly resident of this Barangay belongs to an indigent family." + Printing.LineSpace +

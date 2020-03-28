@@ -102,10 +102,10 @@
             this.ResumeLayout(false);
 
         }
-        public System.Windows.Forms.Button ResetBtn;
         protected System.Windows.Forms.GroupBox IDGroup;
         private System.Windows.Forms.Button assignBtn;
         private System.Windows.Forms.TextBox idField;
+        protected System.Windows.Forms.Button ResetBtn;
 
         //protected System.Windows.Forms.GroupBox IdGroup;
         //private System.Windows.Forms.Button AssignBtn;
