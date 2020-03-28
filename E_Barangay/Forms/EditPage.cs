@@ -14,9 +14,9 @@ namespace E_Barangay.Forms
 {
     public partial class EditPage : Form
     {
-        List<Complaint> tobeAdded = new List<Complaint>();
-        List<Complaint> toBeRemoved = new List<Complaint>();
-        List<Complaint> recordList = new List<Complaint>();
+        //List<Complaint> tobeAdded = new List<Complaint>();
+        //List<Complaint> toBeRemoved = new List<Complaint>();
+        //List<Complaint> recordList = new List<Complaint>();
 
         List<Control> address = new List<Control>();
 
@@ -124,6 +124,11 @@ namespace E_Barangay.Forms
             addressArray[2] = BarangayField;
             addressArray[3] = MunicipalityField;
             addressArray[4] = ProvinceField;
+
+            foreach (var i in this.GetContainedControls<TextBox>())
+            {
+                i.Validated += Helper.TextBoxTrimSpaces;
+            }
         }
 
         private void Password_OnCorrectPassword(object sender, bool e)
