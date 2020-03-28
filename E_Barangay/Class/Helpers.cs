@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-public static class PrintingExtensions
+public static class Helper
 {
     public static string MrMs(this Control c)
     {
