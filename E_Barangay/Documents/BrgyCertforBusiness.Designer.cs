@@ -87,14 +87,14 @@
             this.FieldsPanel.Controls.Add(this.groupBox2);
             this.FieldsPanel.Controls.Add(this.groupBox1);
             this.FieldsPanel.Controls.Add(this.groupBox3);
-            this.FieldsPanel.Size = new System.Drawing.Size(352, 701);
-            this.FieldsPanel.Controls.SetChildIndex(this.ResetBtn, 0);
+            this.FieldsPanel.Size = new System.Drawing.Size(352, 696);
             this.FieldsPanel.Controls.SetChildIndex(this.IDGroup, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox3, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox1, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox2, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox5, 0);
             this.FieldsPanel.Controls.SetChildIndex(this.groupBox4, 0);
+            this.FieldsPanel.Controls.SetChildIndex(this.ResetBtn, 0);
             // 
             // groupBox3
             // 
@@ -520,7 +520,7 @@
             // BrgyCertforBusiness
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(914, 701);
+            this.ClientSize = new System.Drawing.Size(914, 696);
             this.Name = "BrgyCertforBusiness";
             this.Text = "Brgy. Certication for Business";
             this.FieldsPanel.ResumeLayout(false);
