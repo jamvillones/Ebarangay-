@@ -25,6 +25,11 @@ namespace E_Barangay.Forms
         {
             InitializeComponent();
             InitRequiredFields();
+
+            foreach(var i in this.GetContainedControls<TextBox>())
+            {
+                i.Validated += Helper.TextBoxTrimSpaces;
+            }
         }
         public void AcceptNewUser(object sender, string id)
         {
