@@ -42,6 +42,7 @@ namespace E_Barangay.Documents
         {
             base.Printing_PrintPage(sender, e);
             string _name = Printing.GetName(firstName, middleName, lastName, ext);
+
             rect.Height = rect.Height + 100;
             string text = "To whom it may concern:" + Printing.LineSpace +
                            Printing.Indention + "This is to certify that "+sexOption.MrMrs()+" "+_name+", "+age.PrintAge()+", "+civilStatusOption.Text+", Filipino is a resident of "+Address.Text+"." + Printing.ShortLineSpace +
