@@ -117,7 +117,7 @@
     </Compile>
     <Compile Include="Class\CitizenExtensions.cs" />
     <Compile Include="Class\DocumentInstantiator.cs" />
-    <Compile Include="Class\PrintingExtensions.cs" />
+    <Compile Include="Class\Helpers.cs" />
     <Compile Include="Controls\CustomDataGridView.cs">
       <SubType>Component</SubType>
     </Compile>
