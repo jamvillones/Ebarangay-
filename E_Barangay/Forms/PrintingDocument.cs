@@ -53,10 +53,7 @@ namespace E_Barangay.Forms
             DocumentList.Rows.Clear();
             var d = docNames.OrderBy(x => x);
             foreach (var x in d)
-            {
                 DocumentList.Rows.Add("OPEN", x);
-            }
-           // DocumentList.Sort(DocumentList.Columns[1], ListSortDirection.Ascending);
         }
         public event EventHandler<bool> OpeningForm;
 
@@ -70,9 +67,8 @@ namespace E_Barangay.Forms
                 form.Show();
             }
             else
-            {
                 MessageBox.Show("A form is already open");
-            }
+
         }
 
         private void Form_FormClosed(object sender, FormClosedEventArgs e)
