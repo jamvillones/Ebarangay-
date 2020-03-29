@@ -76,8 +76,8 @@
             // 
             // printing
             // 
-            this.printing.Location = new System.Drawing.Point(352, 0);
-            this.printing.Size = new System.Drawing.Size(562, 690);
+            //this.printing.Location = new System.Drawing.Point(352, 0);
+            //this.printing.Size = new System.Drawing.Size(562, 690);
             // 
             // groupBox1
             // 

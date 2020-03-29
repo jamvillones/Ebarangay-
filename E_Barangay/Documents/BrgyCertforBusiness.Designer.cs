@@ -98,7 +98,7 @@
             // 
             // printing
             // 
-            this.printing.Size = new System.Drawing.Size(562, 698);
+           // this.printing.Size = new System.Drawing.Size(562, 698);
             // 
             // groupBox3
             // 

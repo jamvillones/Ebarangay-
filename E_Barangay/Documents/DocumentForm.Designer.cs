@@ -40,17 +40,16 @@
             // 
             this.FieldsPanel.Controls.Add(this.IDGroup);
             this.FieldsPanel.Controls.Add(this.ResetBtn);
-            this.FieldsPanel.Size = new System.Drawing.Size(352, 690);
+            this.FieldsPanel.Size = new System.Drawing.Size(352, 691);
             // 
             // printing
             // 
-            this.printing.Location = new System.Drawing.Point(352, 0);
-            this.printing.Size = new System.Drawing.Size(562, 690);
+            //this.printing.Size = new System.Drawing.Size(562, 691);
             // 
             // ResetBtn
             // 
             this.ResetBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.ResetBtn.Location = new System.Drawing.Point(124, 652);
+            this.ResetBtn.Location = new System.Drawing.Point(124, 653);
             this.ResetBtn.Name = "ResetBtn";
             this.ResetBtn.Size = new System.Drawing.Size(100, 25);
             this.ResetBtn.TabIndex = 0;
@@ -98,7 +97,7 @@
             // 
             this.AcceptButton = this.assignBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(914, 690);
+            this.ClientSize = new System.Drawing.Size(914, 691);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "DocumentForm";
             this.FieldsPanel.ResumeLayout(false);

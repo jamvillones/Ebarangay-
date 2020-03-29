@@ -74,6 +74,6 @@
 
         #endregion
         protected System.Windows.Forms.Panel FieldsPanel;
-        protected Forms.Printing printing;
+        private Forms.Printing printing;
     }
 }
