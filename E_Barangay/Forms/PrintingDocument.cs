@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq.Expressions;
+using System.Linq;
 using System.ComponentModel;
 using System.Windows.Forms;
 using E_Barangay.Documents;
@@ -49,12 +51,12 @@ namespace E_Barangay.Forms
         void setDataList()
         {
             DocumentList.Rows.Clear();
-
-            foreach (var x in docNames)
+            var d = docNames.OrderBy(x => x);
+            foreach (var x in d)
             {
                 DocumentList.Rows.Add("OPEN", x);
             }
-            DocumentList.Sort(DocumentList.Columns[1], ListSortDirection.Ascending);
+           // DocumentList.Sort(DocumentList.Columns[1], ListSortDirection.Ascending);
         }
         public event EventHandler<bool> OpeningForm;
 
