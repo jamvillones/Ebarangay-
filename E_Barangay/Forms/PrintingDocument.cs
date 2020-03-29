@@ -66,6 +66,7 @@ namespace E_Barangay.Forms
                 form.FormClosed += Form_FormClosed;
                 form.Show();
             }
+
             else
                 MessageBox.Show("A form is already open");
 
