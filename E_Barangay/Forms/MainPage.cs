@@ -64,15 +64,11 @@ namespace E_Barangay.Forms
             ActiveControl = Current;
         }
 
-        void SwitchAccept(Interface.IAccept accept)
-        {
-
-        }
-
         private void MainPage_Load(object sender, EventArgs e)
         {
             User curr = UserManager.instance.currentUser;
-            UserWelcomeTxt.Text = "WELCOME " + curr.Username;
+            UserWelcomeTxt.Text = curr.Username;
+            Console.WriteLine(UserWelcomeTxt.TextAlign.ToString());
             Current = DashControl;
             printingFiles.OpeningForm += (x, y) => { Enabled = !y; };
             try
@@ -86,15 +82,6 @@ namespace E_Barangay.Forms
 
             }
         }
-        private void SelectionPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void QueryPage_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -104,17 +91,6 @@ namespace E_Barangay.Forms
         private void MaximizeBtn_Click(object sender, EventArgs e)
         {
             this.WindowState = this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
-            /// MaximizeBtn.Text = this.WindowState == FormWindowState.Maximized ? "Minimize" : "Maximize";
-        }
-
-        private void dashboard1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         Form cl;
@@ -137,17 +113,13 @@ namespace E_Barangay.Forms
             // throw new NotImplementedException();
         }
 
-        //BussinessClearance bussincessClearance;
-        //private void button2_Click_1(object sender, EventArgs e)
-        //{
-        //    bussincessClearance = new BussinessClearance();
-        //    bussincessClearance.FormClosing += (s, en) => { this.Enabled = true; };
-        //    bussincessClearance.Show();
-        //    this.Enabled = false;
-        //}
-
         private void MainPage_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Escape)
+            {
+                if (this.FormBorderStyle == FormBorderStyle.None)
+                    this.FormBorderStyle = FormBorderStyle.Sizable;
+            }
             if (e.KeyCode == Keys.F1)
             {
                 OpenCreateLogin();
@@ -195,7 +167,7 @@ namespace E_Barangay.Forms
                     return;
                 }
             }
-                OpenStats();
+            OpenStats();
         }
 
         private void LoginBtn_Click(object sender, EventArgs e)

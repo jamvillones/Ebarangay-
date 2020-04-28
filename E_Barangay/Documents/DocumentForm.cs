@@ -28,6 +28,7 @@ namespace E_Barangay.Documents
             controls.AddRange(FieldsPanel.GetContainedControls<ComboBox>());
             controls.AddRange(FieldsPanel.GetContainedControls<DateTimePicker>());
             controls.AddRange(FieldsPanel.GetContainedControls<NumericUpDown>());
+            controls.AddRange(FieldsPanel.GetContainedControls<CheckBox>());
             controls.Remove(idField);
             //AddControls(FieldsPanel.GetContainedControls<TextBox>().ToArray());
         }

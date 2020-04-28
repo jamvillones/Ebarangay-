@@ -195,7 +195,14 @@ namespace E_Barangay.Forms
         public void SubscribeToFields(params Control[] c)
         {
             foreach (Control cont in c)
+            {
+                if(cont is CheckBox)
+                {
+                    CheckBox i = (CheckBox)cont;
+                    i.CheckedChanged += EditCallback;
+                }
                 cont.TextChanged += EditCallback;
+            }
         }
         #endregion
 

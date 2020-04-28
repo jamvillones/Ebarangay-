@@ -164,7 +164,6 @@
             this.SelectionPanel.Name = "SelectionPanel";
             this.SelectionPanel.Size = new System.Drawing.Size(5, 34);
             this.SelectionPanel.TabIndex = 2;
-            this.SelectionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.SelectionPanel_Paint);
             // 
             // DashBtn
             // 
@@ -281,14 +280,16 @@
             // 
             // UserWelcomeTxt
             // 
+            this.UserWelcomeTxt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.UserWelcomeTxt.BackColor = System.Drawing.Color.DarkSlateGray;
             this.UserWelcomeTxt.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserWelcomeTxt.ForeColor = System.Drawing.Color.White;
-            this.UserWelcomeTxt.Location = new System.Drawing.Point(235, 8);
+            this.UserWelcomeTxt.Location = new System.Drawing.Point(705, 7);
             this.UserWelcomeTxt.Name = "UserWelcomeTxt";
             this.UserWelcomeTxt.Size = new System.Drawing.Size(215, 23);
             this.UserWelcomeTxt.TabIndex = 2;
-            this.UserWelcomeTxt.Text = "Welcome";
-            this.UserWelcomeTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.UserWelcomeTxt.Text = "Lerum Ipsum";
+            this.UserWelcomeTxt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 

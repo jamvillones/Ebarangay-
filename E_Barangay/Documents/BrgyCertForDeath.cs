@@ -29,10 +29,10 @@ namespace E_Barangay.Documents
             string _name = Printing.GetName(firstName, middleName, lastName, ext);
 
             string first = "To whom it may concern:" + Printing.LineSpace +
-                            Printing.Indention + "This is to certify that as per record of this Barangay " + name + ", "+age.PrintAge()+", " + civilStatusOption.Text + ", Filipino has been a resident of " + Address.Text + "." + Printing.LineSpace +
-                            Printing.Indention + "This is to certify further that "+name+" died last "+DeathDate.Value.ToString("MMMM dd,yyyy")+" at "+deathPlace.Text+"."+Printing.LineSpace+
-                            Printing.Indention + "This certification is issued upon the request of " + Printing.HisOrHer(sexOption.Text) + " " + Relation.Text + " " + By.Text + " for whatever legal purpose it may serve " + Printing.HimOrHer(reqSexOption.Text) + "." + Printing.LineSpace +
-                            Printing.Indention + "Issued this " + IssuedOn.customFormat() + " Barangay Poblacion, Kalibo, Aklan."; 
+                            Printing.Indention + "This is to certify that as per record of this Barangay " + name + ", " + age.PrintAge() + ", " + civilStatusOption.Text + ", Filipino has been a resident of " + Address.Text + (isIndigent.Checked ? ", belongs to an indigent family." : ".") + (yearsOfStay.Value > 0 ? " " + sexOption.HeShe(true) + "'s been stayin at Barangay Poblacion for " + yearsOfStay.Value + " years." : "") + Printing.LineSpace +
+                            Printing.Indention + "This is to certify further that " + name + " died last " + DeathDate.Value.ToString("MMMM dd,yyyy") + " at " + deathPlace.Text + "." + Printing.LineSpace +
+                            Printing.Indention + "This certification is issued upon the request of " + Printing.HisOrHer(sexOption.Text) + " " + Relation.Text + " " + By.Text + " for "+(string.IsNullOrEmpty(purpose.Text)? "whatever legal purpose it may serve " + reqSexOption.HimHer():purpose.Text) + "." + Printing.LineSpace +
+                            Printing.Indention + "Issued this " + IssuedOn.customFormat() + " Barangay Poblacion, Kalibo, Aklan.";
 
             e.Graphics.DrawString(first, Printing.font, Brushes.Black, rect);
             DrawDebugRecs(rect, e);
@@ -43,8 +43,8 @@ namespace E_Barangay.Documents
         public override void InitializeControls()
         {
             base.InitializeControls();
-            AddControls(firstName, middleName, lastName, ext,age, sexOption, civilStatusOption, Address, By, reqSexOption, Relation, IssuedOn, officerOption,DeathDate,deathPlace); ;
-           
+            AddControls(firstName, middleName, lastName, ext, age, sexOption, civilStatusOption, Address, By, reqSexOption, Relation, IssuedOn, officerOption, DeathDate, deathPlace); ;
+
             foreach (var x in o.sbMemebers)
             {
                 officerOption.Items.Add(x);
@@ -67,6 +67,7 @@ namespace E_Barangay.Documents
             sexOption.Text = c.Gender;
             Address.Text = c.Address;
             age.Value = c.getAGe();
+            isIndigent.Checked = c.Indigent;
         }
     }
 }
