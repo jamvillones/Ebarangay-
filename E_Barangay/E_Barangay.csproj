@@ -137,6 +137,12 @@
     <Compile Include="Controls\RTPRint.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Documents\BarangayCertPao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BarangayCertPao.Designer.cs">
+      <DependentUpon>BarangayCertPao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\BarangayClearance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -459,6 +465,9 @@
     <Compile Include="User.cs">
       <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Documents\BarangayCertPao.resx">
+      <DependentUpon>BarangayCertPao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Documents\BarangayClearance.resx">
       <DependentUpon>BarangayClearance.cs</DependentUpon>
     </EmbeddedResource>

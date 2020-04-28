@@ -19,12 +19,12 @@ public static class Helper
     {
 
         string end = "of age";
-        if(n.Value <= 1)
+        if (n.Value <= 1)
         {
-            return n.Value + " year "+end;
+            return n.Value + " year " + end;
         }
 
-        return n.Value+" years "+end+(n.Value >= 18?"(of legal age)":string.Empty);
+        return n.Value + " years " + end + (n.Value >= 18 ? "(of legal age)" : string.Empty);
     }
     /// <summary>
     /// callback for trimming excess spaces in textboxes after an edit is made
@@ -86,25 +86,28 @@ public static class Helper
 
         return c.Text == "Male" ? "Mr." : "Mrs.";
     }
-    public static string HisHer(this Control c)
+    public static string HisHer(this Control c, bool firstCap = false)
     {
         if (c.Text == "") return "(BLANK)";
-        return c.Text == "Male" ? "his" : "her";
+        string t =  c.Text == "Male" ? "his" : "her";
+        if (firstCap)
+            t.Replace('h', 'H');
+        return t;
     }
-    public static string HimHer(this Control c)
+    public static string HimHer(this Control c, bool firstCap = false)
     {
         if (string.IsNullOrEmpty(c.Text)) return "(BLANK)";
-        return c.Text == "Male" ? "him" : "her";
+
+        string t = c.Text == "Male" ? "him" : "her";
+
+        if (firstCap)
+            t.Replace('h', 'H');
+        return t;
     }
-    public static string HeShe(this Control c)
+    public static string HeShe(this Control c, bool firstCapitalize = false)
     {
         if (string.IsNullOrEmpty(c.Text)) return "(BLANK)";
-        return c.Text == "Male" ? "he" : "she";
-    }
-    public static string HeShe(this Control c,bool firstCapitalize)
-    {
-        if (string.IsNullOrEmpty(c.Text)) return "(BLANK)";
-        return c.Text == "Male" ? (firstCapitalize?"He":"he") : (firstCapitalize?"She":"she");
+        return c.Text == "Male" ? (firstCapitalize ? "He" : "he") : (firstCapitalize ? "She" : "she");
     }
     public static string GetYears(this NumericUpDown n)
     {
