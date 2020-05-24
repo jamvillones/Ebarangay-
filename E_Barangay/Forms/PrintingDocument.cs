@@ -36,7 +36,8 @@ namespace E_Barangay.Forms
             "Certification for Good Moral Character",
             "Cert. Transfer for Business Name",
             "Brgy. Clearance  - Requirements For",
-            "Brgy. Certification for Business"
+            "Brgy. Certification for Business",
+            "Brgy. Certification for PAO"
         };
 
         public PrintingDocument()
@@ -166,6 +167,9 @@ namespace E_Barangay.Forms
                     break;
                 case "Brgy. Certification for Business":
                     CreateForm<BrgyCertforBusiness>();
+                    break;
+                case "Brgy. Certification for PAO":
+                    CreateForm<BarangayCertPao>();
                     break;
                 default:
                     break;

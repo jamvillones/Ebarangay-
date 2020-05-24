@@ -21,15 +21,15 @@ namespace E_Barangay
             Application.SetCompatibleTextRenderingDefault(false);
 
             #region main application
-            //UserManager.instance = new UserManager();
-            //Login login = new Login();
-            //Application.Run(login);
+            UserManager.instance = new UserManager();
+            Login login = new Login();
+            Application.Run(login);
 
-            //if (login.UserSuccessfullyAuthenticated)
-            //    Application.Run(new MainPage());
+            if (login.UserSuccessfullyAuthenticated)
+                Application.Run(new MainPage());
             #endregion
 
-            Application.Run(new BarangayCertPao());
+            //Application.Run(new BarangayCertPao());
         }
     }
 }
