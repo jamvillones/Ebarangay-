@@ -29,8 +29,14 @@ namespace E_Barangay.Forms
             InitializeComponent();
 
         }
+        private Image cropImage(Image img, Rectangle cropArea)
+        {
+            Bitmap bmpImage = new Bitmap(img);
+            Bitmap bmpCrop = bmpImage.Clone(cropArea,
+            bmpImage.PixelFormat);
+            return (Image)(bmpCrop);
+        }
 
-       
 
         private void CaptureImageForm_Load(object sender, EventArgs e)
         {
@@ -74,7 +80,19 @@ namespace E_Barangay.Forms
 
         private void CaptureBtn_Click(object sender, EventArgs e)
         {
-            CaptureImage.Image = (Bitmap)PreviewImage.Image.Clone();
+            //int dimension = 380;
+            //Console.WriteLine(PreviewImage.Image.Size.Width);
+            //Console.WriteLine(PreviewImage.Image.Size.Height);
+            //var rect = new Rectangle();
+            //rect.Width = rect.Height = dimension;
+            //rect.X = PreviewImage.Image.Size.Width / 5 + 6;
+            //rect.Y = PreviewImage.Image.Size.Height / 6 - 23;
+            ////rect.X = PreviewImage.Image.Size.Width / 2 - (dimension / 2);
+            ////rect.X = PreviewImage.Image.Size.Height / 2 - (dimension / 2);
+
+            //var im = cropImage(PreviewImage.Image, rect);
+            ////var im = cropAtRect(PreviewImage.Image as Bitmap, rect);
+            CaptureImage.Image = PreviewImage.Image;
             SaveBtn.Enabled = true;
         }
 

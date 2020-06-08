@@ -735,9 +735,9 @@
             // ImageBox
             // 
             this.ImageBox.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ImageBox.Location = new System.Drawing.Point(-30, -2);
+            this.ImageBox.Location = new System.Drawing.Point(-40, -14);
             this.ImageBox.Name = "ImageBox";
-            this.ImageBox.Size = new System.Drawing.Size(166, 111);
+            this.ImageBox.Size = new System.Drawing.Size(186, 134);
             this.ImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImageBox.TabIndex = 0;
             this.ImageBox.TabStop = false;

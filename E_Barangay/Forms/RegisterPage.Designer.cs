@@ -687,7 +687,7 @@
             this.panel1.Controls.Add(this.ImageBox);
             this.panel1.Location = new System.Drawing.Point(9, 15);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(103, 105);
+            this.panel1.Size = new System.Drawing.Size(100, 100);
             this.panel1.TabIndex = 18;
             // 
             // AddImage
@@ -706,9 +706,9 @@
             // ImageBox
             // 
             this.ImageBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ImageBox.Location = new System.Drawing.Point(-37, -1);
+            this.ImageBox.Location = new System.Drawing.Point(-2, -2);
             this.ImageBox.Name = "ImageBox";
-            this.ImageBox.Size = new System.Drawing.Size(172, 105);
+            this.ImageBox.Size = new System.Drawing.Size(100, 100);
             this.ImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImageBox.TabIndex = 0;
             this.ImageBox.TabStop = false;

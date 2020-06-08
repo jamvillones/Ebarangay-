@@ -69,9 +69,9 @@
             // 
             // PreviewImage
             // 
-            this.PreviewImage.Location = new System.Drawing.Point(-35, -2);
+            this.PreviewImage.Location = new System.Drawing.Point(-83, -36);
             this.PreviewImage.Name = "PreviewImage";
-            this.PreviewImage.Size = new System.Drawing.Size(266, 200);
+            this.PreviewImage.Size = new System.Drawing.Size(362, 269);
             this.PreviewImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PreviewImage.TabIndex = 0;
             this.PreviewImage.TabStop = false;
@@ -101,9 +101,9 @@
             // 
             // CaptureImage
             // 
-            this.CaptureImage.Location = new System.Drawing.Point(-35, -2);
+            this.CaptureImage.Location = new System.Drawing.Point(-83, -36);
             this.CaptureImage.Name = "CaptureImage";
-            this.CaptureImage.Size = new System.Drawing.Size(266, 200);
+            this.CaptureImage.Size = new System.Drawing.Size(362, 269);
             this.CaptureImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.CaptureImage.TabIndex = 0;
             this.CaptureImage.TabStop = false;

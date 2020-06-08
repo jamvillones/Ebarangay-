@@ -21,7 +21,6 @@ namespace E_Barangay.Documents
         }
         public override void AcceptCitizen(Citizen c)
         {
-            //base.AcceptCitizen(c);
             if (NullCheck(c))
                 return;
             firstText.Text = c.FirstName;
@@ -45,7 +44,7 @@ namespace E_Barangay.Documents
             string text = "To whom it may concern:" + Printing.LineSpace +
                           Printing.Indention + "This is to certify that " + _name + ", " + Age.PrintAge() + ", Filipino, " + CStatusOption.Text + " and a resident of " + Address.Text + ", belongs to an indigent family in this Barangay." + Printing.LineSpace +
                           Printing.Indention + SexOption.HeShe(true) + " is asking for utmost humanitarian consideration and possible Legal Assistance." + Printing.LineSpace +
-                          Printing.Indention + "This certification is issued upon the request of " + SexOption.MrMrs() + " "+lastText.Text+" in support to " + SexOption.HisHer() + " request for Legal Assistance from the Public Attorney's Office (PAO)." + Printing.LineSpace +
+                          Printing.Indention + "This certification is issued upon the request of " + SexOption.MrMrs() + " " + lastText.Text + " in support to " + SexOption.HisHer() + " request for Legal Assistance from the Public Attorney's Office (PAO)." + Printing.LineSpace +
                           Printing.Indention + "Issued this " + IssuedOn.customFormat() + " Barangay Poblacion, Kalibo, Aklan.";
 
             e.Graphics.DrawString(text, Printing.font, Brushes.Black, rect);

@@ -185,6 +185,12 @@
     <Compile Include="Documents\BrgyCertforGuardian.Designer.cs">
       <DependentUpon>BrgyCertforGuardian.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\BrgyCertForNGO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\BrgyCertForNGO.Designer.cs">
+      <DependentUpon>BrgyCertForNGO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\BrgyCertforNoIncome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -442,6 +448,12 @@
     <Compile Include="Forms\StatForm.Designer.cs">
       <DependentUpon>StatForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\YesOrNoPrompt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -488,6 +500,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BrgyCertforGuardian.resx">
       <DependentUpon>BrgyCertforGuardian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\BrgyCertForNGO.resx">
+      <DependentUpon>BrgyCertForNGO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\BrgyCertforNoIncome.resx">
       <DependentUpon>BrgyCertforNoIncome.cs</DependentUpon>
@@ -605,6 +620,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StatForm.resx">
       <DependentUpon>StatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\YesOrNoPrompt.resx">
       <DependentUpon>YesOrNoPrompt.cs</DependentUpon>
