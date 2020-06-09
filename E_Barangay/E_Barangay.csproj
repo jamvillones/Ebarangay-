@@ -311,12 +311,6 @@
     <Compile Include="Documents\DocumentForm.Designer.cs">
       <DependentUpon>DocumentForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Documents\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Documents\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Documents\SSSPension.cs">
       <SubType>Form</SubType>
     </Compile>

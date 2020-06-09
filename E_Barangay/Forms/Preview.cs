@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using E_Barangay.Interface;
 using System.IO;
 using E_Barangay.Class;
+using System.Drawing.Imaging;
 
 namespace E_Barangay.Forms
 {
@@ -60,7 +61,7 @@ namespace E_Barangay.Forms
         {
             if (target == null)
             {
-                MessageBox.Show("Citizen Instance not assigned");
+                MessageBox.Show("Citizen instance not assigned.");
                 return;
             }
             IDTxt.Text = target.ID;
