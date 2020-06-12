@@ -706,9 +706,9 @@
             // ImageBox
             // 
             this.ImageBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ImageBox.Location = new System.Drawing.Point(-2, -2);
+            this.ImageBox.Location = new System.Drawing.Point(-32, -2);
             this.ImageBox.Name = "ImageBox";
-            this.ImageBox.Size = new System.Drawing.Size(100, 100);
+            this.ImageBox.Size = new System.Drawing.Size(161, 100);
             this.ImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ImageBox.TabIndex = 0;
             this.ImageBox.TabStop = false;
