@@ -19,9 +19,14 @@ namespace E_Barangay.Forms
             InitializeComponent();
         }
         Complaint[] recs;
-        private void ComplaintControl_Load(object sender, EventArgs e)
-        {
 
+        public void InitButtons()
+        {
+            User user = UserManager.instance.currentUser;
+            if(user != null)
+            {
+                addComplaintBtn.Enabled = user.canRegister ? true : false;
+            }
         }
         public void LoadValues()
         {

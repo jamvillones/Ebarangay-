@@ -25,7 +25,7 @@ namespace E_Barangay.Forms
             InitializeComponent();
             using (var ent = new EBarangayEntities())
             {
-                currRec = ent.Complaints.FirstOrDefault(x=>x.ID == id);
+                currRec = ent.Complaints.FirstOrDefault(x => x.ID == id);
                 initializeFields();
             }
 
@@ -50,10 +50,10 @@ namespace E_Barangay.Forms
             {
                 foreach (var c in compNames)
                 {
-                   var citizen = ent.Citizens.FirstOrDefault(x => x.ID == c).getNameWithSpace();
-                    lvComplainants.Items.Add((citizen?? c));
+                    var citizen = ent.Citizens.FirstOrDefault(x => x.ID == c).getNameWithSpace();
+                    lvComplainants.Items.Add((citizen ?? c));
                 }
-                    
+
             }
 
             var respNames = currRec.RespNames.Split(',');
@@ -67,10 +67,12 @@ namespace E_Barangay.Forms
 
             }
         }
-
+        User user;
         private void RecordView_Load(object sender, EventArgs e)
         {
+            user = UserManager.instance != null ? UserManager.instance.currentUser : null;
 
+            DoneBtn.Enabled = user.canEdit ? true : false;
         }
 
         private void DoneBtn_Click(object sender, EventArgs e)

@@ -63,12 +63,20 @@ namespace E_Barangay.Forms
             ///this is lazy load
             ActiveControl = Current;
         }
+        User curr;
 
         private void MainPage_Load(object sender, EventArgs e)
         {
-            User curr = UserManager.instance.currentUser;
+            ///assign current logged user
+            if (UserManager.instance != null)
+                curr = UserManager.instance.currentUser;
+
+            ///activate addnew log in button depending on user privileges
+            AddNewLoginBtn.Enabled = curr.canAddUser ? true : false;
+
+            ///set the text to userwelcome text
             UserWelcomeTxt.Text = curr.Username;
-            Console.WriteLine(UserWelcomeTxt.TextAlign.ToString());
+            
             Current = DashControl;
             printingFiles.OpeningForm += (x, y) => { Enabled = !y; };
             try
@@ -76,16 +84,12 @@ namespace E_Barangay.Forms
                 DashControl.InitValues();
                 QueryPage.setUser();
                 complaintPage.LoadValues();
+                complaintPage.InitButtons();
             }
             catch
             {
 
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void MaximizeBtn_Click(object sender, EventArgs e)

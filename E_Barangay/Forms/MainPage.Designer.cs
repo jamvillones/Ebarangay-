@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.LoginBtn = new System.Windows.Forms.Button();
+            this.AddNewLoginBtn = new System.Windows.Forms.Button();
             this.StatBtn = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -42,14 +42,14 @@
             this.IssueBtn = new System.Windows.Forms.Button();
             this.complaintsBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.UserWelcomeTxt = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.DashControl = new E_Barangay.Forms.Dashboard();
             this.QueryPage = new E_Barangay.Forms.QueryControl();
             this.printingFiles = new E_Barangay.Forms.PrintingDocument();
             this.complaintPage = new E_Barangay.Forms.ComplaintControl();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.UserWelcomeTxt = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,7 +61,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.panel1.Controls.Add(this.LoginBtn);
+            this.panel1.Controls.Add(this.AddNewLoginBtn);
             this.panel1.Controls.Add(this.StatBtn);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
@@ -77,27 +77,27 @@
             this.panel1.Size = new System.Drawing.Size(168, 597);
             this.panel1.TabIndex = 0;
             // 
-            // LoginBtn
+            // AddNewLoginBtn
             // 
-            this.LoginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.LoginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.LoginBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.LoginBtn.FlatAppearance.BorderSize = 0;
-            this.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoginBtn.Font = new System.Drawing.Font("Arial Narrow", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginBtn.ForeColor = System.Drawing.Color.White;
-            this.LoginBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LoginBtn.Location = new System.Drawing.Point(40, 544);
-            this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.LoginBtn.Size = new System.Drawing.Size(88, 25);
-            this.LoginBtn.TabIndex = 9;
-            this.LoginBtn.TabStop = false;
-            this.LoginBtn.Text = "F1 ADD NEW LOGIN";
-            this.LoginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LoginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.LoginBtn.UseVisualStyleBackColor = true;
-            this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
+            this.AddNewLoginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.AddNewLoginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.AddNewLoginBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.AddNewLoginBtn.FlatAppearance.BorderSize = 0;
+            this.AddNewLoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddNewLoginBtn.Font = new System.Drawing.Font("Arial Narrow", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddNewLoginBtn.ForeColor = System.Drawing.Color.White;
+            this.AddNewLoginBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddNewLoginBtn.Location = new System.Drawing.Point(40, 544);
+            this.AddNewLoginBtn.Name = "AddNewLoginBtn";
+            this.AddNewLoginBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.AddNewLoginBtn.Size = new System.Drawing.Size(88, 25);
+            this.AddNewLoginBtn.TabIndex = 9;
+            this.AddNewLoginBtn.TabStop = false;
+            this.AddNewLoginBtn.Text = "F1 ADD NEW LOGIN";
+            this.AddNewLoginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddNewLoginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.AddNewLoginBtn.UseVisualStyleBackColor = true;
+            this.AddNewLoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
             // StatBtn
             // 
@@ -266,6 +266,44 @@
             this.panel3.Size = new System.Drawing.Size(920, 548);
             this.panel3.TabIndex = 3;
             // 
+            // DashControl
+            // 
+            this.DashControl.BackColor = System.Drawing.Color.Silver;
+            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DashControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashControl.Location = new System.Drawing.Point(0, 0);
+            this.DashControl.Name = "DashControl";
+            this.DashControl.Size = new System.Drawing.Size(920, 548);
+            this.DashControl.TabIndex = 3;
+            // 
+            // QueryPage
+            // 
+            this.QueryPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueryPage.Location = new System.Drawing.Point(0, 0);
+            this.QueryPage.Name = "QueryPage";
+            this.QueryPage.Size = new System.Drawing.Size(920, 548);
+            this.QueryPage.TabIndex = 5;
+            // 
+            // printingFiles
+            // 
+            this.printingFiles.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.printingFiles.Location = new System.Drawing.Point(0, 0);
+            this.printingFiles.Name = "printingFiles";
+            this.printingFiles.Size = new System.Drawing.Size(920, 548);
+            this.printingFiles.TabIndex = 4;
+            this.printingFiles.TabStop = false;
+            // 
+            // complaintPage
+            // 
+            this.complaintPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.complaintPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.complaintPage.Location = new System.Drawing.Point(0, 0);
+            this.complaintPage.Name = "complaintPage";
+            this.complaintPage.Size = new System.Drawing.Size(920, 548);
+            this.complaintPage.TabIndex = 6;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -311,44 +349,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
-            // 
-            // DashControl
-            // 
-            this.DashControl.BackColor = System.Drawing.Color.Silver;
-            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DashControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashControl.Location = new System.Drawing.Point(0, 0);
-            this.DashControl.Name = "DashControl";
-            this.DashControl.Size = new System.Drawing.Size(920, 548);
-            this.DashControl.TabIndex = 3;
-            // 
-            // QueryPage
-            // 
-            this.QueryPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QueryPage.Location = new System.Drawing.Point(0, 0);
-            this.QueryPage.Name = "QueryPage";
-            this.QueryPage.Size = new System.Drawing.Size(920, 548);
-            this.QueryPage.TabIndex = 5;
-            // 
-            // printingFiles
-            // 
-            this.printingFiles.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.printingFiles.Location = new System.Drawing.Point(0, 0);
-            this.printingFiles.Name = "printingFiles";
-            this.printingFiles.Size = new System.Drawing.Size(920, 548);
-            this.printingFiles.TabIndex = 4;
-            this.printingFiles.TabStop = false;
-            // 
-            // complaintPage
-            // 
-            this.complaintPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.complaintPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.complaintPage.Location = new System.Drawing.Point(0, 0);
-            this.complaintPage.Name = "complaintPage";
-            this.complaintPage.Size = new System.Drawing.Size(920, 548);
-            this.complaintPage.TabIndex = 6;
             // 
             // MainPage
             // 
@@ -399,7 +399,7 @@
         private QueryControl QueryPage;
         private System.Windows.Forms.Button StatBtn;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button LoginBtn;
+        private System.Windows.Forms.Button AddNewLoginBtn;
         private System.Windows.Forms.Button complaintsBtn;
         private ComplaintControl complaintPage;
     }

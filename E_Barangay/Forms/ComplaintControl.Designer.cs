@@ -261,7 +261,7 @@ namespace E_Barangay.Forms
             this.Controls.Add(this.overdueBtn);
             this.Name = "ComplaintControl";
             this.Size = new System.Drawing.Size(840, 497);
-            this.Load += new System.EventHandler(this.ComplaintControl_Load);
+            //this.Load += new System.EventHandler(this.ComplaintControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).EndInit();
             this.ResumeLayout(false);
 

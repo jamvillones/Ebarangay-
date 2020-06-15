@@ -25,9 +25,9 @@ namespace E_Barangay.Forms
         {
             if (UserManager.instance.currentUser == null)
                 return;
-            User u = UserManager.instance.currentUser;
-            CreateBtn.Enabled = u.canRegister ? true : false;
-            ModifyBtn.Enabled = u.canEdit ? true : false;
+            user = UserManager.instance.currentUser;
+            CreateBtn.Enabled = user.canRegister ? true : false;
+            ModifyBtn.Enabled = user.canEdit ? true : false;
             //DeleteBtn.Enabled = u.canDelete ? true : false;
         }
 
@@ -47,6 +47,11 @@ namespace E_Barangay.Forms
             using (var context = new EBarangayEntities())
             {
                 SearchedElements = context.Citizens.Where(x => (x.FirstName + x.MiddleName + x.LastName + x.Extension).Contains(SearchBox.Text));
+                //if(true)
+                //{
+                //    SearchedElements = SearchedElements.Where(x => x.Indigent == true);
+                //    PopulateTable(SearchedElements.ToArray());
+                //}
                 if (SearchedElements.Count() > 0)
                 {
                     PopulateTable(SearchedElements.ToArray());
@@ -113,10 +118,15 @@ namespace E_Barangay.Forms
         }
 
         private void SearchBtn_Click(object sender, EventArgs e) => PerformQuery();
-
+        User user;
         private void QueryControl_Load(object sender, EventArgs e)
         {
+            //if (UserManager.instance != null)
+            //    user = UserManager.instance.currentUser;
+            //CreateBtn.Enabled = user.canRegister ? true : false;
+            //ModifyBtn.Enabled = user.canEdit ? true : false;
             IDEmptySearch += OpenReg;
+
         }
 
         private void SearchBox_KeyDown(object sender, KeyEventArgs e)
@@ -291,6 +301,11 @@ namespace E_Barangay.Forms
             }
 
             OpenEditPage(getCitizenByIndex);
+
+        }
+
+        private void ResultTxt_Click(object sender, EventArgs e)
+        {
 
         }
     }
