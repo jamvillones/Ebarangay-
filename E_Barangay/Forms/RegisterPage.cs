@@ -176,13 +176,14 @@ namespace E_Barangay.Forms
             {
                 c.BackColor = c.Text == "" ? Color.Pink : c.BackColor;
             }
-
         }
+
         void ChangeNormalColors()
         {
             foreach (var c in requiredControls)
                 c.BackColor = Color.White;
         }
+
         void CleanFields()
         {
             extField.Clear();
