@@ -67,14 +67,9 @@ namespace E_Barangay.Forms
             SexOption.SelectedIndex = CivilStatusOption.SelectedIndex = 0;
         }
 
-        void save()
+        void SaveCitizen()
         {
-            ///checking if valid for registration
-            if (!CanSave())
-            {
-                ReddenRequiredFields();
-                return;
-            }
+           
 
             Citizen temp = new Citizen();
             temp.ID = IDField.Text == string.Empty ? Guid.NewGuid().ToString() : IDField.Text;
@@ -92,9 +87,9 @@ namespace E_Barangay.Forms
                                MunicipalityField.Text + ", " +
                                ProvinceField.Text;
             }
+
             else
                 temp.Address = NumberField.Text + ", " + AreaOption.Text + ", " + BarangayField.Text + ", " + MunicipalityField.Text + ", " + ProvinceField.Text;
-
 
             temp.Birthday = dtBday.Value;
             temp.ContactInfo = ContactField.Text;
@@ -132,6 +127,13 @@ namespace E_Barangay.Forms
 
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
+            ///checking if valid for registration
+            if (!CanSave())
+            {
+                ReddenRequiredFields();
+                return;
+            }
+
             var yesorno = new YesOrNoPrompt("Are you sure you want to save?");
             yesorno.onBtnClick += Yesorno_onBtnClick;
             yesorno.FormClosed += (ss, ee) => { Enabled = true; };
@@ -142,7 +144,7 @@ namespace E_Barangay.Forms
         private void Yesorno_onBtnClick(object sender, bool e)
         {
             if (e)
-                save();
+                SaveCitizen();
         }
 
         public bool FieldEmpty(TextBox t)
@@ -234,44 +236,7 @@ namespace E_Barangay.Forms
         {
             AgeField.Text = Class.DateTimeExtension.ToAge(dtBday.Value.Date).years.ToString(); ;
         }
-        //RecordForm record;
-        //private void button3_Click(object sender, EventArgs e)
-        //{
-        //    if (record == null)
-        //    {
-        //        record = new RecordForm();
-        //        record.FormClosed += Record_FormClosed;
-        //        record.OnSave += Record_OnSave;
-        //        //record.GetRef(this);
-        //        record.Show();
-        //        return;
-        //    }
-        //    record.BringToFront();
-        //}
 
-        //private void Record_OnSave(object sender, Record e)
-        //{
-        //    //records.Add(e);
-        //    //RecordsTable.Rows.Add(e.DateIssued, e.Name, e.Details);
-        //    //// throw new NotImplementedException();
-        //}
-
-        //private void Record_FormClosed(object sender, FormClosedEventArgs e)
-        //{
-        //    record = null;
-        //    // ShowRecords();
-        //}
-        //void ShowRecords()
-        //{
-        //    //RecordsTable.Rows.Clear();
-        //    //for (int i = 0; i < records.Count; i++)
-        //    //{
-        //    //    RecordsTable.Rows.Add();
-        //    //    RecordsTable.Rows[i].Cells[0].Value = records[i].DateIssued;
-        //    //    RecordsTable.Rows[i].Cells[1].Value = records[i].Name;
-        //    //    RecordsTable.Rows[i].Cells[2].Value = records[i].Details;
-        //    //}
-        //}
         CaptureImageForm captureForm;
         private void AddImage_Click(object sender, EventArgs e)
         {
@@ -297,7 +262,11 @@ namespace E_Barangay.Forms
         {
             VoterIDField.Enabled = PrecinctNumField.Enabled = VoterCheckbox.Checked ? true : false;
         }
-
+        /// <summary>
+        /// please remove this upon deployment. This is for diagnostics only :)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RegisterControl_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F12)
