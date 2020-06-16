@@ -148,6 +148,11 @@ namespace E_Barangay.Forms
         }
         void OpenCreateLogin()
         {
+            if (!curr.canAddUser)
+            {
+                MessageBox.Show("Current User does not have the administrative privilege to perform this action.");
+                return;
+            }
             this.Enabled = false;
             CreateLogin createLogin = new CreateLogin();
             createLogin.FormClosed += (s, eventdetails) => { Enabled = true; };

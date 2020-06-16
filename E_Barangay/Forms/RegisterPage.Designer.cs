@@ -467,13 +467,14 @@
             // 
             // dtBday
             // 
+            this.dtBday.Checked = false;
             this.dtBday.CustomFormat = "MMMM dd, yyyy";
             this.dtBday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtBday.Location = new System.Drawing.Point(68, 14);
             this.dtBday.Name = "dtBday";
             this.dtBday.Size = new System.Drawing.Size(158, 20);
             this.dtBday.TabIndex = 28;
-            this.dtBday.Value = new System.DateTime(2020, 3, 1, 17, 41, 2, 0);
+            this.dtBday.Value = new System.DateTime(2020, 6, 16, 0, 0, 0, 0);
             // 
             // label17
             // 

@@ -32,14 +32,11 @@ namespace E_Barangay.Forms
         }
         void initializeFields()
         {
-            // Person.Text = currRec.Citizen.Name;
             controlNumberField.Text = currRec.ID;
             Status.Text = currRec.Status;
             Status.ForeColor = currRec.Status == "Pending" ? Color.Red : Color.Green;
             locationTxt.Text = currRec.Location;
             narrativeField.Text = currRec.Narrative;
-            //TitleField.Text = currRec.Name;
-            //DetailsField.Text = currRec.Details;
 
             During.Text = currRec.DateHappened.Value.ToString("MMMM dd, yyyy hh:mm tt");
             RecordedOn.Text = currRec.DateIssued.Value.ToString("MMMM dd, yyyy hh:mm tt");
@@ -57,6 +54,7 @@ namespace E_Barangay.Forms
             }
 
             var respNames = currRec.RespNames.Split(',');
+
             using (var ent = new EBarangayEntities())
             {
                 foreach (var c in respNames)
@@ -64,7 +62,6 @@ namespace E_Barangay.Forms
                     var citizen = ent.Citizens.FirstOrDefault(x => x.ID == c).getNameWithSpace();
                     lvRespondents.Items.Add((citizen ?? c));
                 }
-
             }
         }
         User user;

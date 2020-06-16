@@ -26,7 +26,7 @@ namespace E_Barangay.Forms
             InitializeComponent();
             InitRequiredFields();
 
-            foreach(var i in this.GetContainedControls<TextBox>())
+            foreach (var i in this.GetContainedControls<TextBox>())
             {
                 i.Validated += Helper.TextBoxTrimSpaces;
             }
@@ -40,10 +40,10 @@ namespace E_Barangay.Forms
             requiredControls.Add(FirstNameField);
             requiredControls.Add(MiddleNameField);
             requiredControls.Add(LastNameField);
-           // requiredControls.Add(BarangayField);
+            // requiredControls.Add(BarangayField);
             requiredControls.Add(AreaOption);
-          //  requiredControls.Add(ProvinceField);
-           // requiredControls.Add(MunicipalityField);
+            //  requiredControls.Add(ProvinceField);
+            // requiredControls.Add(MunicipalityField);
             requiredControls.Add(ContactField);
             requiredControls.Add(FatherField);
             requiredControls.Add(MotherField);
@@ -214,10 +214,7 @@ namespace E_Barangay.Forms
 
             NumberField.Clear();
             AreaOption.ResetText();
-            //MunicipalityField.ResetText();
-            //BarangayField.Clear();
-            //ProvinceField.Clear();
-            //ContactField.Clear();
+            ContactField.Clear();
 
             ImageBox.Image = null;
             VoterIDField.Clear();
