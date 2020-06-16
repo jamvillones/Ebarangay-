@@ -14,45 +14,40 @@ namespace E_Barangay.Forms
 {
     public partial class RegisterPage : Form
     {
-        //List<Record> records = new List<Record>();
         List<Control> requiredControls = new List<Control>();
+
         public void SetId(string id)
         {
             IDField.Text = id;
             IDField.ReadOnly = id == string.Empty ? false : true;
         }
+
         public RegisterPage()
         {
             InitializeComponent();
             InitRequiredFields();
 
             foreach (var i in this.GetContainedControls<TextBox>())
-            {
                 i.Validated += Helper.TextBoxTrimSpaces;
-            }
         }
+
         public void AcceptNewUser(object sender, string id)
         {
             IDField.Text = id;
         }
+
         void InitRequiredFields()
         {
             requiredControls.Add(FirstNameField);
             requiredControls.Add(MiddleNameField);
             requiredControls.Add(LastNameField);
-            // requiredControls.Add(BarangayField);
             requiredControls.Add(AreaOption);
-            //  requiredControls.Add(ProvinceField);
-            // requiredControls.Add(MunicipalityField);
             requiredControls.Add(ContactField);
             requiredControls.Add(FatherField);
             requiredControls.Add(MotherField);
             requiredControls.Add(IDField);
         }
-        //public void AcceptRecord(Record c)
-        //{
-        //    records.Add(c);
-        //}
+
         void InitializeDropdown(string[] values, int startIndex, ref ComboBox comboBox)
         {
             for (int i = startIndex; i < values.Length; i++)
@@ -61,6 +56,7 @@ namespace E_Barangay.Forms
                 comboBox.AutoCompleteCustomSource.Add(values[i]);
             }
         }
+
         public void LoadValues()
         {
             using (var ent = new EBarangayEntities())
@@ -70,25 +66,19 @@ namespace E_Barangay.Forms
             }
             SexOption.SelectedIndex = CivilStatusOption.SelectedIndex = 0;
         }
-        private void RegisterControl_Load(object sender, EventArgs e)
-        {
 
-
-        }
         void save()
         {
             ///checking if valid for registration
             if (!CanSave())
             {
                 ReddenRequiredFields();
-                //MessageBox.Show("Cannot Save. Fill out required fields or the id is already taken!");
                 return;
             }
 
             Citizen temp = new Citizen();
             temp.ID = IDField.Text == string.Empty ? Guid.NewGuid().ToString() : IDField.Text;
 
-            //temp.Name = FirstNameField.Text + "," + MiddleNameField.Text + "," + LastNameField.Text + (extField.Text == string.Empty ? "" : "," + extField.Text);
             temp.FirstName = FirstNameField.Text.Trim(' ');
             temp.MiddleName = MiddleNameField.Text.Trim(' ');
             temp.LastName = LastNameField.Text.Trim(' ');
@@ -103,9 +93,7 @@ namespace E_Barangay.Forms
                                ProvinceField.Text;
             }
             else
-            {
                 temp.Address = NumberField.Text + ", " + AreaOption.Text + ", " + BarangayField.Text + ", " + MunicipalityField.Text + ", " + ProvinceField.Text;
-            }
 
 
             temp.Birthday = dtBday.Value;
@@ -140,8 +128,8 @@ namespace E_Barangay.Forms
             ChangeNormalColors();
             this.ActiveControl = FirstNameField;
             CleanFields();
-
         }
+
         private void RegisterBtn_Click(object sender, EventArgs e)
         {
             var yesorno = new YesOrNoPrompt("Are you sure you want to save?");
@@ -161,6 +149,7 @@ namespace E_Barangay.Forms
         {
             return t.Text == string.Empty || t.Text == "required";
         }
+
         bool CanSave()
         {
             using (var c = new EBarangayEntities())
@@ -173,13 +162,11 @@ namespace E_Barangay.Forms
             }
             foreach (var c in requiredControls)
             {
-
                 if (c.Text == "")
                 {
                     MessageBox.Show("Please fill out required fields");
                     return false;
                 }
-
             }
             return true;
         }
@@ -224,7 +211,6 @@ namespace E_Barangay.Forms
             PHField.Clear();
             SSSField.Clear();
             IsPwd.Checked = isIndigent.Checked = IsSenior.Checked = false;
-
         }
 
         private void CancelBtn_Click(object sender, EventArgs e)
@@ -292,7 +278,6 @@ namespace E_Barangay.Forms
             this.Enabled = false;
             captureForm.OnSave += CaptureForm_OnSave;
             captureForm.FormClosed += CaptureForm_FormClosed;
-
             captureForm.Show();
         }
 
@@ -305,39 +290,27 @@ namespace E_Barangay.Forms
         {
             this.Enabled = true;
             ImageBox.Image = e;
-
         }
-
 
         private void VoterCheckbox_CheckedChanged(object sender, EventArgs e)
         {
-
             VoterIDField.Enabled = PrecinctNumField.Enabled = VoterCheckbox.Checked ? true : false;
-
         }
 
         private void RegisterControl_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F12)
             {
-                //foreach (var c in requiredControls)
-                //    c.Text = "test_dummy";
-                //IDField.Text =string.IsNullOrEmpty(IDField.Text) ? Guid.NewGuid().ToString():IDField.Text;
                 IDField.Text = IDField.Text.NonBlankValueOf(Guid.NewGuid().ToString());
 
                 FirstNameField.Text = FirstNameField.Text.NonBlankValueOf("Test");
                 MiddleNameField.Text = MiddleNameField.Text.NonBlankValueOf("Test");
                 LastNameField.Text = LastNameField.Text.NonBlankValueOf("Test");
-                //extField.Text = extField.Text.NonBlankValueOf("Test");
 
                 Random rnd = new Random();
 
                 NumberField.Text = NumberField.Text.NonBlankValueOf("0000");
                 AreaOption.SelectedIndex = rnd.Next(0, AreaOption.Items.Count);
-
-                //BarangayField.Text = BarangayField.Text.NonBlankValueOf("Poblacion");
-                //MunicipalityField.Text = MunicipalityField.Text.NonBlankValueOf("Kalibo");
-                //ProvinceField.Text = ProvinceField.Text.NonBlankValueOf("Aklan");
 
                 ContactField.Text = ContactField.Text.NonBlankValueOf("00000000000");
                 MotherField.Text = MotherField.Text.NonBlankValueOf("Blank");
@@ -345,31 +318,6 @@ namespace E_Barangay.Forms
 
                 SexOption.SelectedIndex = rnd.Next(0, SexOption.Items.Count);
             }
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AgeField_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox4_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

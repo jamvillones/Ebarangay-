@@ -243,7 +243,6 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Address";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // AreaOption
             // 
@@ -284,7 +283,6 @@
             this.label8.Size = new System.Drawing.Size(49, 14);
             this.label8.TabIndex = 21;
             this.label8.Text = "Province";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label4
             // 
@@ -463,7 +461,6 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Basic Info";
-            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // dtBday
             // 
@@ -543,7 +540,6 @@
             this.AgeField.Size = new System.Drawing.Size(36, 13);
             this.AgeField.TabIndex = 14;
             this.AgeField.TabStop = false;
-            this.AgeField.TextChanged += new System.EventHandler(this.AgeField_TextChanged);
             // 
             // label14
             // 
@@ -876,7 +872,6 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
-            this.Load += new System.EventHandler(this.RegisterControl_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
