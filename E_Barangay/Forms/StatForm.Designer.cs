@@ -210,7 +210,7 @@
             dataPoint13.AxisLabel = "";
             dataPoint13.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             dataPoint13.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataPoint13.LegendText = "Not Voter";
+            dataPoint13.LegendText = "Non Voter";
             series3.Points.Add(dataPoint12);
             series3.Points.Add(dataPoint13);
             this.voterChart.Series.Add(series3);
