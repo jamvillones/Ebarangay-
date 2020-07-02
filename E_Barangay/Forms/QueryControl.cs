@@ -67,8 +67,14 @@ namespace E_Barangay.Forms
                     }
                 }
 
+                //if(!UserManager.instance.currentUser.canRegister)
+                //{
+                //    MessageBox.Show("User not found");
+                //    return;
+                //}
+
                 Citizen c = context.Citizens.FirstOrDefault(x => x.ID == SearchBox.Text);
-                if (c == null)
+                if (c == null && UserManager.instance.currentUser.canRegister)
                 {
                     var yesorno = new YesOrNoPrompt("Entry Not found. Would you like to go register instead?");
                     yesorno.FormClosed += (xx, yy) => { Enabled = true; };
@@ -79,6 +85,7 @@ namespace E_Barangay.Forms
                             IDEmptySearch?.Invoke(this, new EventArgs());
                             return;
                         }
+                        /// set the total entries tag to 0
                         ResultTxt.Text = 0.ToString();
                     };
                     yesorno.Show();
@@ -119,14 +126,10 @@ namespace E_Barangay.Forms
 
         private void SearchBtn_Click(object sender, EventArgs e) => PerformQuery();
         User user;
+
         private void QueryControl_Load(object sender, EventArgs e)
         {
-            //if (UserManager.instance != null)
-            //    user = UserManager.instance.currentUser;
-            //CreateBtn.Enabled = user.canRegister ? true : false;
-            //ModifyBtn.Enabled = user.canEdit ? true : false;
             IDEmptySearch += OpenReg;
-
         }
 
         private void SearchBox_KeyDown(object sender, KeyEventArgs e)
@@ -214,6 +217,11 @@ namespace E_Barangay.Forms
         Preview preview;
         void OpenPreview(Citizen citizen)
         {
+            if (citizen == null)
+            {
+                MessageBox.Show("User not found.");
+                return;
+            }
             if (preview == null)
             {
                 preview = new Preview();

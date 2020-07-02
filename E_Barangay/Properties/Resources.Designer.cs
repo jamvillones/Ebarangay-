@@ -63,6 +63,26 @@ namespace E_Barangay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap add_user_group_man_man_20px {
+            get {
+                object obj = ResourceManager.GetObject("add_user_group_man_man_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap add_user_male_10px {
+            get {
+                object obj = ResourceManager.GetObject("add_user_male_10px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap BARANGAY_CLEARANCE {
             get {
                 object obj = ResourceManager.GetObject("BARANGAY_CLEARANCE", resourceCulture);
