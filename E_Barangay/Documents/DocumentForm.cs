@@ -80,11 +80,11 @@ namespace E_Barangay.Documents
                     return;
                 }
 
-                if (!string.IsNullOrEmpty(citizen.RefRecords))
-                {
+                //if (!string.IsNullOrEmpty(citizen.RefRecords))
+                //{
 
-                    MessageBox.Show("A complaint is associated with this ID. Are you sure you want to continue?");
-                }
+                //    MessageBox.Show("A complaint is associated with this ID. Are you sure you want to continue?");
+                //}
                 AcceptCitizen(citizen);
             }
         }

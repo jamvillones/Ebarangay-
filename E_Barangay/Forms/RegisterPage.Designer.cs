@@ -771,11 +771,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.IDField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IDField.Location = new System.Drawing.Point(81, 14);
-            this.IDField.MaxLength = 10;
+            this.IDField.MaxLength = 13;
             this.IDField.Name = "IDField";
             this.IDField.Size = new System.Drawing.Size(222, 20);
             this.IDField.TabIndex = 1;
             this.IDField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RegisterControl_KeyDown);
+            this.IDField.Leave += new System.EventHandler(this.IDField_Leave);
             // 
             // groupBox6
             // 

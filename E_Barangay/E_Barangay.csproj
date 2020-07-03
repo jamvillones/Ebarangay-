@@ -28,7 +28,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>E_Barangay</ProductName>
     <PublisherName>Ninotech_Jam</PublisherName>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -115,6 +115,9 @@
       <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Citizen.cs">
+      <DependentUpon>EBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CitizenToComplaint.cs">
       <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Class\CitizenExtensions.cs" />

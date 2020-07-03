@@ -28,7 +28,7 @@ namespace E_Barangay.Forms
             InitRequiredFields();
 
             foreach (var i in this.GetContainedControls<TextBox>())
-                i.Validated += Helper.TextBoxTrimSpaces;
+                i.Leave += Helper.TextBoxTrimSpaces;
         }
 
         public void AcceptNewUser(object sender, string id)
@@ -69,7 +69,7 @@ namespace E_Barangay.Forms
 
         void SaveCitizen()
         {
-           
+
 
             Citizen temp = new Citizen();
             temp.ID = IDField.Text == string.Empty ? Guid.NewGuid().ToString() : IDField.Text;
@@ -288,6 +288,17 @@ namespace E_Barangay.Forms
 
                 SexOption.SelectedIndex = rnd.Next(0, SexOption.Items.Count);
             }
+        }
+        //char[] characters = new char[13];
+        private void IDField_Leave(object sender, EventArgs e)
+        {
+            if (IDField.Text.Count() > IDField.MaxLength)
+            {
+                IDField.Text = IDField.Text.Remove(IDField.MaxLength);
+                return;
+            }
+            IDField.Text = IDField.Text.Replace(" ", "");
+            IDField.Text = IDField.Text.PadLeft(IDField.MaxLength, '0');
         }
     }
 }

@@ -14,6 +14,12 @@ namespace E_Barangay
     
     public partial class Complaint
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Complaint()
+        {
+            this.CitizenToComplaints = new HashSet<CitizenToComplaint>();
+        }
+    
         public string ID { get; set; }
         public string Narrative { get; set; }
         public Nullable<System.DateTime> DateIssued { get; set; }
@@ -23,5 +29,8 @@ namespace E_Barangay
         public Nullable<System.DateTime> SettlementDate { get; set; }
         public string CompNames { get; set; }
         public string RespNames { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CitizenToComplaint> CitizenToComplaints { get; set; }
     }
 }

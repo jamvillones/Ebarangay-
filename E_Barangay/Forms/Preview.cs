@@ -100,17 +100,23 @@ namespace E_Barangay.Forms
                 var t = ent.Citizens.FirstOrDefault(r => r.ID == target.ID);
                 ImageBox.Image = t.Picture == null ? Properties.Resources.image_50px : Class.ImageConverter.byteArrayToImage(t.Picture);
 
-                if (string.IsNullOrEmpty(t.RefRecords))
+                var connector = ent.CitizenToComplaints.Where(x => x.CitizenId == target.ID);
+                foreach(var c in connector)
                 {
-                    return;
+                    var comp = c.Complaint;
+                    RecordsTable.Rows.Add(comp.ID, comp.SettlementDate.Value.ToString("MMMM dd, yyyy"), comp.Status);
                 }
-                var recs = t.RefRecords.Split(',');
-                foreach (var ids in recs)
-                {
-                    var complaint = ent.Complaints.FirstOrDefault(x => x.ID == ids);
-                    if (complaint != null)
-                        RecordsTable.Rows.Add(complaint.ID, complaint.SettlementDate.Value.ToString("MMMM dd, yyyy"), complaint.Status);
-                }
+                //if (string.IsNullOrEmpty(t.RefRecords))
+                //{
+                //    return;
+                //}
+                //var recs = t.RefRecords.Split(',');
+                //foreach (var ids in recs)
+                //{
+                //    var complaint = ent.Complaints.FirstOrDefault(x => x.ID == ids);
+                //    if (complaint != null)
+                //        RecordsTable.Rows.Add(complaint.ID, complaint.SettlementDate.Value.ToString("MMMM dd, yyyy"), complaint.Status);
+                //}
             }
         }
 

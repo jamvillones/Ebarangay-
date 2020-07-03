@@ -19,6 +19,7 @@ namespace E_Barangay.Forms
         public FileComplaintForm()
         {
             InitializeComponent();
+            
         }
 
         private void FileComplaintForm_Load(object sender, EventArgs e)
@@ -131,19 +132,22 @@ namespace E_Barangay.Forms
             }
             ///end if
 
-            connectComplaintToCitizen(rec.ID, dgvComplainants);
-            connectComplaintToCitizen(rec.ID, dgvRespondents);
+            
 
             using (var ent = new EBarangayEntities())
             {
                 ent.Complaints.Add(rec);
                 ent.SaveChanges();
             }
+
+            connectComplaintToCitizen(rec, dgvComplainants);
+            connectComplaintToCitizen(rec, dgvRespondents);
+
             ComplaintAdded?.Invoke(this, new EventArgs());
             Cleanup();
         }
 
-        void connectComplaintToCitizen(string controlNumber, DataGridView dgv)
+        void connectComplaintToCitizen(Complaint comp, DataGridView dgv)
         {
             using (var ent = new EBarangayEntities())
             {
@@ -154,7 +158,15 @@ namespace E_Barangay.Forms
                         string id = dgv.Rows[i].Cells[1].Value.ToString();
                         Citizen c = ent.Citizens.FirstOrDefault(x => x.ID == id);
                         if (c != null)
-                            c.RefRecords += (string.IsNullOrEmpty(c.RefRecords)) ? controlNumber : "," + controlNumber;
+                        {
+                            //c.RefRecords += (string.IsNullOrEmpty(c.RefRecords)) ? controlNumber : "," + controlNumber;
+                            CitizenToComplaint cc = new CitizenToComplaint();
+                            //cc.Id = 1;
+                            cc.ComplaintId = comp.ID;
+                            cc.Citizen = c;
+
+                            ent.CitizenToComplaints.Add(cc);
+                        }
                     }
                 }
                 ent.SaveChanges();

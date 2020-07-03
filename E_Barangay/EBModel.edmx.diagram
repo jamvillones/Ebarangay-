@@ -11,8 +11,13 @@
         <EntityTypeShape EntityType="EBarangayModel.Municipality" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EBarangayModel.Official" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EBarangayModel.User" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="EBarangayModel.Citizen" Width="1.5" PointX="3" PointY="0.875" />
+        <EntityTypeShape EntityType="EBarangayModel.CitizenToComplaint" Width="1.5" PointX="8" PointY="4" />
+        <AssociationConnector Association="EBarangayModel.FK_Complaint_CitizenToComplaint" />
+        <EntityTypeShape EntityType="EBarangayModel.Citizen" Width="1.5" PointX="3" PointY="0.75" />
         <AssociationConnector Association="EBarangayModel.FK_Citizen_Area" />
+        <AssociationConnector Association="EBarangayModel.FK_Citizen_CitizenToComplaint" />
+        <EntityTypeShape EntityType="EBarangayModel.Document" Width="1.5" PointX="5.25" PointY="7.75" />
+        <AssociationConnector Association="EBarangayModel.FK_Citizen_Documents" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
