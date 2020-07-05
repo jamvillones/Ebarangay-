@@ -72,11 +72,11 @@ namespace E_Barangay.Forms
                 curr = UserManager.instance.currentUser;
 
             ///activate addnew log in button depending on user privileges
-            AddNewLoginBtn.Enabled = curr.canAddUser ? true : false;
+            //AddNewLoginBtn.Enabled = curr.canAddUser ? true : false;
 
             ///set the text to userwelcome text
             UserWelcomeTxt.Text = curr.Username;
-            
+
             Current = DashControl;
             printingFiles.OpeningForm += (x, y) => { Enabled = !y; };
             try
@@ -179,16 +179,25 @@ namespace E_Barangay.Forms
             OpenStats();
         }
 
-        private void LoginBtn_Click(object sender, EventArgs e)
-        {
-            OpenCreateLogin();
-        }
-
         private void complaintsBtn_Click(object sender, EventArgs e)
         {
             SetSelectionPanel(complaintsBtn);
             SwitchPage(complaintPage);
             complaintPage.BringToFront();
+        }
+
+        private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenCreateLogin();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Enabled = false;
+            ChangePass changepass = new ChangePass();
+            changepass.SetUser(curr.Username);
+            changepass.FormClosed += (s, eventdetails) => { Enabled = true; };
+            changepass.Show();
         }
     }
 }

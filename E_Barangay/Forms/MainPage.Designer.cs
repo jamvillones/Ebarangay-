@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.AddNewLoginBtn = new System.Windows.Forms.Button();
             this.StatBtn = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -41,27 +40,35 @@
             this.QueryBtn = new System.Windows.Forms.Button();
             this.IssueBtn = new System.Windows.Forms.Button();
             this.complaintsBtn = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.DashControl = new E_Barangay.Forms.Dashboard();
-            this.QueryPage = new E_Barangay.Forms.QueryControl();
-            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
-            this.complaintPage = new E_Barangay.Forms.ComplaintControl();
+            this.ContentHolder = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.UserWelcomeTxt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.stripPanel = new System.Windows.Forms.Panel();
+            this.OptionStrip = new System.Windows.Forms.MenuStrip();
+            this.userToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.officialsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DashControl = new E_Barangay.Forms.Dashboard();
+            this.QueryPage = new E_Barangay.Forms.QueryControl();
+            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
+            this.complaintPage = new E_Barangay.Forms.ComplaintControl();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel3.SuspendLayout();
+            this.ContentHolder.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.stripPanel.SuspendLayout();
+            this.OptionStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.panel1.Controls.Add(this.AddNewLoginBtn);
             this.panel1.Controls.Add(this.StatBtn);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
@@ -74,31 +81,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(168, 597);
+            this.panel1.Size = new System.Drawing.Size(168, 613);
             this.panel1.TabIndex = 0;
-            // 
-            // AddNewLoginBtn
-            // 
-            this.AddNewLoginBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.AddNewLoginBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.AddNewLoginBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.AddNewLoginBtn.FlatAppearance.BorderSize = 0;
-            this.AddNewLoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddNewLoginBtn.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddNewLoginBtn.ForeColor = System.Drawing.Color.White;
-            this.AddNewLoginBtn.Image = ((System.Drawing.Image)(resources.GetObject("AddNewLoginBtn.Image")));
-            this.AddNewLoginBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddNewLoginBtn.Location = new System.Drawing.Point(9, 542);
-            this.AddNewLoginBtn.Name = "AddNewLoginBtn";
-            this.AddNewLoginBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.AddNewLoginBtn.Size = new System.Drawing.Size(150, 25);
-            this.AddNewLoginBtn.TabIndex = 9;
-            this.AddNewLoginBtn.TabStop = false;
-            this.AddNewLoginBtn.Text = "ADD NEW LOGIN [F1]";
-            this.AddNewLoginBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddNewLoginBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.AddNewLoginBtn.UseVisualStyleBackColor = true;
-            this.AddNewLoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
             // StatBtn
             // 
@@ -111,7 +95,7 @@
             this.StatBtn.ForeColor = System.Drawing.Color.White;
             this.StatBtn.Image = ((System.Drawing.Image)(resources.GetObject("StatBtn.Image")));
             this.StatBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.StatBtn.Location = new System.Drawing.Point(9, 567);
+            this.StatBtn.Location = new System.Drawing.Point(9, 557);
             this.StatBtn.Name = "StatBtn";
             this.StatBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StatBtn.Size = new System.Drawing.Size(150, 25);
@@ -127,7 +111,7 @@
             // 
             this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.panel6.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel6.Location = new System.Drawing.Point(9, 533);
+            this.panel6.Location = new System.Drawing.Point(9, 549);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(150, 3);
             this.panel6.TabIndex = 7;
@@ -255,57 +239,19 @@
             this.complaintsBtn.UseVisualStyleBackColor = true;
             this.complaintsBtn.Click += new System.EventHandler(this.complaintsBtn_Click);
             // 
-            // panel3
+            // ContentHolder
             // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ContentHolder.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.DashControl);
-            this.panel3.Controls.Add(this.QueryPage);
-            this.panel3.Controls.Add(this.printingFiles);
-            this.panel3.Controls.Add(this.complaintPage);
-            this.panel3.Location = new System.Drawing.Point(168, 37);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(920, 548);
-            this.panel3.TabIndex = 3;
-            // 
-            // DashControl
-            // 
-            this.DashControl.BackColor = System.Drawing.Color.Silver;
-            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DashControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashControl.Location = new System.Drawing.Point(0, 0);
-            this.DashControl.Name = "DashControl";
-            this.DashControl.Size = new System.Drawing.Size(920, 548);
-            this.DashControl.TabIndex = 3;
-            // 
-            // QueryPage
-            // 
-            this.QueryPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QueryPage.Location = new System.Drawing.Point(0, 0);
-            this.QueryPage.Name = "QueryPage";
-            this.QueryPage.Size = new System.Drawing.Size(920, 548);
-            this.QueryPage.TabIndex = 5;
-            // 
-            // printingFiles
-            // 
-            this.printingFiles.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.printingFiles.Location = new System.Drawing.Point(0, 0);
-            this.printingFiles.Name = "printingFiles";
-            this.printingFiles.Size = new System.Drawing.Size(920, 548);
-            this.printingFiles.TabIndex = 4;
-            this.printingFiles.TabStop = false;
-            // 
-            // complaintPage
-            // 
-            this.complaintPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.complaintPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.complaintPage.Location = new System.Drawing.Point(0, 0);
-            this.complaintPage.Name = "complaintPage";
-            this.complaintPage.Size = new System.Drawing.Size(920, 548);
-            this.complaintPage.TabIndex = 6;
+            this.ContentHolder.Controls.Add(this.DashControl);
+            this.ContentHolder.Controls.Add(this.QueryPage);
+            this.ContentHolder.Controls.Add(this.printingFiles);
+            this.ContentHolder.Controls.Add(this.complaintPage);
+            this.ContentHolder.Location = new System.Drawing.Point(174, 70);
+            this.ContentHolder.Name = "ContentHolder";
+            this.ContentHolder.Size = new System.Drawing.Size(995, 538);
+            this.ContentHolder.TabIndex = 3;
             // 
             // panel2
             // 
@@ -314,9 +260,10 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(168, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(932, 38);
+            this.panel2.Size = new System.Drawing.Size(1008, 38);
             this.panel2.TabIndex = 4;
             // 
             // UserWelcomeTxt
@@ -325,7 +272,7 @@
             this.UserWelcomeTxt.BackColor = System.Drawing.Color.DarkSlateGray;
             this.UserWelcomeTxt.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserWelcomeTxt.ForeColor = System.Drawing.Color.White;
-            this.UserWelcomeTxt.Location = new System.Drawing.Point(705, 7);
+            this.UserWelcomeTxt.Location = new System.Drawing.Point(781, 7);
             this.UserWelcomeTxt.Name = "UserWelcomeTxt";
             this.UserWelcomeTxt.Size = new System.Drawing.Size(215, 23);
             this.UserWelcomeTxt.TabIndex = 2;
@@ -336,9 +283,9 @@
             // 
             this.label1.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(43, 0);
+            this.label1.Location = new System.Drawing.Point(43, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 38);
+            this.label1.Size = new System.Drawing.Size(108, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "E Barangay";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -353,14 +300,113 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // stripPanel
+            // 
+            this.stripPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.stripPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.stripPanel.Controls.Add(this.OptionStrip);
+            this.stripPanel.Location = new System.Drawing.Point(168, 38);
+            this.stripPanel.Name = "stripPanel";
+            this.stripPanel.Size = new System.Drawing.Size(1008, 26);
+            this.stripPanel.TabIndex = 5;
+            // 
+            // OptionStrip
+            // 
+            this.OptionStrip.BackColor = System.Drawing.Color.Teal;
+            this.OptionStrip.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OptionStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.userToolStripMenuItem,
+            this.editToolStripMenuItem});
+            this.OptionStrip.Location = new System.Drawing.Point(0, 0);
+            this.OptionStrip.Name = "OptionStrip";
+            this.OptionStrip.Size = new System.Drawing.Size(1008, 24);
+            this.OptionStrip.TabIndex = 0;
+            // 
+            // userToolStripMenuItem
+            // 
+            this.userToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addUserToolStripMenuItem,
+            this.changePasswordToolStripMenuItem});
+            this.userToolStripMenuItem.Name = "userToolStripMenuItem";
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
+            this.userToolStripMenuItem.Text = "User";
+            // 
+            // addUserToolStripMenuItem
+            // 
+            this.addUserToolStripMenuItem.Name = "addUserToolStripMenuItem";
+            this.addUserToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.addUserToolStripMenuItem.Text = "Add New Login";
+            this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.officialsToolStripMenuItem});
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
+            this.editToolStripMenuItem.Text = "Edit";
+            // 
+            // officialsToolStripMenuItem
+            // 
+            this.officialsToolStripMenuItem.Name = "officialsToolStripMenuItem";
+            this.officialsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.officialsToolStripMenuItem.Text = "Officials";
+            // 
+            // DashControl
+            // 
+            this.DashControl.BackColor = System.Drawing.Color.Silver;
+            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DashControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashControl.Location = new System.Drawing.Point(0, 0);
+            this.DashControl.Name = "DashControl";
+            this.DashControl.Size = new System.Drawing.Size(995, 538);
+            this.DashControl.TabIndex = 3;
+            // 
+            // QueryPage
+            // 
+            this.QueryPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueryPage.Location = new System.Drawing.Point(0, 0);
+            this.QueryPage.Name = "QueryPage";
+            this.QueryPage.Size = new System.Drawing.Size(995, 538);
+            this.QueryPage.TabIndex = 5;
+            // 
+            // printingFiles
+            // 
+            this.printingFiles.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.printingFiles.Location = new System.Drawing.Point(0, 0);
+            this.printingFiles.Name = "printingFiles";
+            this.printingFiles.Size = new System.Drawing.Size(995, 538);
+            this.printingFiles.TabIndex = 4;
+            this.printingFiles.TabStop = false;
+            // 
+            // complaintPage
+            // 
+            this.complaintPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.complaintPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.complaintPage.Location = new System.Drawing.Point(0, 0);
+            this.complaintPage.Name = "complaintPage";
+            this.complaintPage.Size = new System.Drawing.Size(995, 538);
+            this.complaintPage.TabIndex = 6;
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
-            this.ClientSize = new System.Drawing.Size(1100, 597);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1176, 613);
+            this.Controls.Add(this.stripPanel);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.ContentHolder);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -375,9 +421,13 @@
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel3.ResumeLayout(false);
+            this.ContentHolder.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.stripPanel.ResumeLayout(false);
+            this.stripPanel.PerformLayout();
+            this.OptionStrip.ResumeLayout(false);
+            this.OptionStrip.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -386,7 +436,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button QueryBtn;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel ContentHolder;
         private System.Windows.Forms.Panel SelectionPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
@@ -402,8 +452,14 @@
         private QueryControl QueryPage;
         private System.Windows.Forms.Button StatBtn;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button AddNewLoginBtn;
         private System.Windows.Forms.Button complaintsBtn;
         private ComplaintControl complaintPage;
+        private System.Windows.Forms.Panel stripPanel;
+        private System.Windows.Forms.MenuStrip OptionStrip;
+        private System.Windows.Forms.ToolStripMenuItem userToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addUserToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem officialsToolStripMenuItem;
     }
 }
