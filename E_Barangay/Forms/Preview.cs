@@ -139,11 +139,13 @@ namespace E_Barangay.Forms
             {
                 using (var eb = new EBarangayEntities())
                 {
-                    var c = eb.Citizens.Find(IDTxt.Text);
+                    var c = eb.Citizens.FirstOrDefault(x => x.ID ==IDTxt.Text);
 
                     //foreach (var rec in c.Records.ToArray())
                     //    eb.Records.Remove(rec);
-
+                    var instances = eb.CitizenToComplaints.Where(x => x.CitizenId == IDTxt.Text);
+                    foreach (var i in instances)
+                        eb.CitizenToComplaints.Remove(i);
                     eb.Citizens.Remove(c);
 
                     eb.SaveChanges();

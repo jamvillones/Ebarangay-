@@ -28,7 +28,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>E_Barangay</ProductName>
     <PublisherName>Ninotech_Jam</PublisherName>
-    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -141,6 +141,9 @@
     </Compile>
     <Compile Include="Controls\RTPRint.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Document.cs">
+      <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Documents\BarangayCertPao.cs">
       <SubType>Form</SubType>
