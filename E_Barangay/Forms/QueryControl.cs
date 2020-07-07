@@ -309,11 +309,19 @@ namespace E_Barangay.Forms
             }
 
             OpenEditPage(getCitizenByIndex);
-
         }
 
-        private void ResultTxt_Click(object sender, EventArgs e)
+        AdvancedSearchForm adv;
+        private void adSearchBtn_Click(object sender, EventArgs e)
         {
+            if (adv == null)
+            {
+                adv = new AdvancedSearchForm();
+                adv.FormClosed += (a, b) => { adv = null; };
+                adv.Show();                
+                return;
+            }
+            adv.BringToFront();
 
         }
     }

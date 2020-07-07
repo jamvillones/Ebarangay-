@@ -45,9 +45,10 @@
             this.sexOption = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.civilStatusOption = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.createCSVBtn = new System.Windows.Forms.Button();
+            this.searchBtn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.isVoter = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataTable)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -89,7 +90,7 @@
             this.DataTable.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataTable.EnableHeadersVisualStyles = false;
             this.DataTable.GridColor = System.Drawing.Color.White;
-            this.DataTable.Location = new System.Drawing.Point(12, 129);
+            this.DataTable.Location = new System.Drawing.Point(12, 117);
             this.DataTable.MultiSelect = false;
             this.DataTable.Name = "DataTable";
             this.DataTable.ReadOnly = true;
@@ -103,9 +104,11 @@
             this.DataTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DataTable.RowHeadersVisible = false;
             this.DataTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataTable.Size = new System.Drawing.Size(776, 309);
+            this.DataTable.Size = new System.Drawing.Size(776, 345);
             this.DataTable.StandardTab = true;
             this.DataTable.TabIndex = 3;
+            this.DataTable.TabStop = false;
+            this.DataTable.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataTable_CellMouseDoubleClick);
             // 
             // Column1
             // 
@@ -139,7 +142,7 @@
             // isIndigent
             // 
             this.isIndigent.AutoSize = true;
-            this.isIndigent.Location = new System.Drawing.Point(273, 15);
+            this.isIndigent.Location = new System.Drawing.Point(308, 15);
             this.isIndigent.Name = "isIndigent";
             this.isIndigent.Size = new System.Drawing.Size(64, 17);
             this.isIndigent.TabIndex = 7;
@@ -172,7 +175,7 @@
             this.areaOptions.Location = new System.Drawing.Point(77, 13);
             this.areaOptions.Name = "areaOptions";
             this.areaOptions.Size = new System.Drawing.Size(121, 21);
-            this.areaOptions.TabIndex = 6;
+            this.areaOptions.TabIndex = 1;
             // 
             // label1
             // 
@@ -198,7 +201,7 @@
             this.sexOption.Location = new System.Drawing.Point(77, 40);
             this.sexOption.Name = "sexOption";
             this.sexOption.Size = new System.Drawing.Size(121, 21);
-            this.sexOption.TabIndex = 8;
+            this.sexOption.TabIndex = 2;
             // 
             // label3
             // 
@@ -215,31 +218,35 @@
             this.civilStatusOption.Location = new System.Drawing.Point(77, 67);
             this.civilStatusOption.Name = "civilStatusOption";
             this.civilStatusOption.Size = new System.Drawing.Size(121, 21);
-            this.civilStatusOption.TabIndex = 10;
+            this.civilStatusOption.TabIndex = 3;
             // 
-            // button1
+            // createCSVBtn
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(589, 49);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 31);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Create Comma Separated Value(CSV)";
-            this.button1.UseVisualStyleBackColor = true;
+            this.createCSVBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.createCSVBtn.Location = new System.Drawing.Point(588, 49);
+            this.createCSVBtn.Name = "createCSVBtn";
+            this.createCSVBtn.Size = new System.Drawing.Size(199, 31);
+            this.createCSVBtn.TabIndex = 13;
+            this.createCSVBtn.TabStop = false;
+            this.createCSVBtn.Text = "Create Comma Separated Value(CSV)";
+            this.createCSVBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // searchBtn
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(589, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(199, 31);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = true;
+            this.searchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.searchBtn.Location = new System.Drawing.Point(588, 12);
+            this.searchBtn.Name = "searchBtn";
+            this.searchBtn.Size = new System.Drawing.Size(199, 31);
+            this.searchBtn.TabIndex = 14;
+            this.searchBtn.TabStop = false;
+            this.searchBtn.Text = "Search";
+            this.searchBtn.UseVisualStyleBackColor = true;
+            this.searchBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox1.Controls.Add(this.isVoter);
             this.groupBox1.Controls.Add(this.isIndigent);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.civilStatusOption);
@@ -250,21 +257,32 @@
             this.groupBox1.Controls.Add(this.isStudent);
             this.groupBox1.Controls.Add(this.isPwd);
             this.groupBox1.Controls.Add(this.areaOptions);
-            this.groupBox1.Location = new System.Drawing.Point(13, 12);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(570, 111);
+            this.groupBox1.Size = new System.Drawing.Size(570, 99);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filter";
             // 
+            // isVoter
+            // 
+            this.isVoter.AutoSize = true;
+            this.isVoter.Location = new System.Drawing.Point(308, 42);
+            this.isVoter.Name = "isVoter";
+            this.isVoter.Size = new System.Drawing.Size(56, 17);
+            this.isVoter.TabIndex = 8;
+            this.isVoter.Text = "Voters";
+            this.isVoter.UseVisualStyleBackColor = true;
+            // 
             // AdvancedSearchForm
             // 
+            this.AcceptButton = this.searchBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 474);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.searchBtn);
+            this.Controls.Add(this.createCSVBtn);
             this.Controls.Add(this.DataTable);
             this.Name = "AdvancedSearchForm";
             this.ShowIcon = false;
@@ -291,10 +309,11 @@
         private System.Windows.Forms.ComboBox sexOption;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox civilStatusOption;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button createCSVBtn;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox isVoter;
     }
 }

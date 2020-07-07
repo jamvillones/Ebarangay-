@@ -43,6 +43,7 @@ namespace E_Barangay.Forms
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.adSearchBtn = new System.Windows.Forms.Button();
             this.DataTable = new E_Barangay.Class.CustomDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,9 +53,10 @@ namespace E_Barangay.Forms
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(354, 15);
+            this.label1.Location = new System.Drawing.Point(319, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 23);
             this.label1.TabIndex = 8;
@@ -63,28 +65,25 @@ namespace E_Barangay.Forms
             // 
             // ResultTxt
             // 
-            this.ResultTxt.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ResultTxt.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ResultTxt.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.ResultTxt.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResultTxt.ForeColor = System.Drawing.Color.White;
-            this.ResultTxt.Location = new System.Drawing.Point(445, 14);
+            this.ResultTxt.Location = new System.Drawing.Point(410, 14);
             this.ResultTxt.Name = "ResultTxt";
             this.ResultTxt.Size = new System.Drawing.Size(128, 23);
             this.ResultTxt.TabIndex = 9;
             this.ResultTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ResultTxt.Click += new System.EventHandler(this.ResultTxt_Click);
             // 
             // CreateBtn
             // 
-            this.CreateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CreateBtn.BackColor = System.Drawing.Color.LightGray;
             this.CreateBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.CreateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateBtn.ForeColor = System.Drawing.Color.Black;
             this.CreateBtn.Image = ((System.Drawing.Image)(resources.GetObject("CreateBtn.Image")));
-            this.CreateBtn.Location = new System.Drawing.Point(769, 6);
+            this.CreateBtn.Location = new System.Drawing.Point(171, 47);
             this.CreateBtn.Name = "CreateBtn";
             this.CreateBtn.Size = new System.Drawing.Size(80, 35);
             this.CreateBtn.TabIndex = 5;
@@ -95,14 +94,13 @@ namespace E_Barangay.Forms
             // 
             // InspectBtn
             // 
-            this.InspectBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.InspectBtn.BackColor = System.Drawing.Color.LightGray;
             this.InspectBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.InspectBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.InspectBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InspectBtn.ForeColor = System.Drawing.Color.Black;
             this.InspectBtn.Image = ((System.Drawing.Image)(resources.GetObject("InspectBtn.Image")));
-            this.InspectBtn.Location = new System.Drawing.Point(606, 6);
+            this.InspectBtn.Location = new System.Drawing.Point(8, 47);
             this.InspectBtn.Name = "InspectBtn";
             this.InspectBtn.Size = new System.Drawing.Size(83, 35);
             this.InspectBtn.TabIndex = 3;
@@ -113,14 +111,13 @@ namespace E_Barangay.Forms
             // 
             // ModifyBtn
             // 
-            this.ModifyBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ModifyBtn.BackColor = System.Drawing.Color.LightGray;
             this.ModifyBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.ModifyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ModifyBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModifyBtn.ForeColor = System.Drawing.Color.Black;
             this.ModifyBtn.Image = ((System.Drawing.Image)(resources.GetObject("ModifyBtn.Image")));
-            this.ModifyBtn.Location = new System.Drawing.Point(689, 6);
+            this.ModifyBtn.Location = new System.Drawing.Point(91, 47);
             this.ModifyBtn.Name = "ModifyBtn";
             this.ModifyBtn.Size = new System.Drawing.Size(80, 35);
             this.ModifyBtn.TabIndex = 4;
@@ -136,9 +133,9 @@ namespace E_Barangay.Forms
             this.SearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SearchBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBox.ForeColor = System.Drawing.Color.Black;
-            this.SearchBox.Location = new System.Drawing.Point(12, 15);
+            this.SearchBox.Location = new System.Drawing.Point(8, 14);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(306, 22);
+            this.SearchBox.Size = new System.Drawing.Size(208, 22);
             this.SearchBox.TabIndex = 0;
             this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
             this.SearchBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SearchBox_KeyDown);
@@ -152,7 +149,7 @@ namespace E_Barangay.Forms
             this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SearchBtn.ForeColor = System.Drawing.Color.White;
             this.SearchBtn.Image = ((System.Drawing.Image)(resources.GetObject("SearchBtn.Image")));
-            this.SearchBtn.Location = new System.Drawing.Point(325, 9);
+            this.SearchBtn.Location = new System.Drawing.Point(222, 7);
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.Size = new System.Drawing.Size(23, 28);
             this.SearchBtn.TabIndex = 1;
@@ -163,10 +160,27 @@ namespace E_Barangay.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(12, 36);
+            this.panel1.Location = new System.Drawing.Point(8, 36);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(336, 1);
+            this.panel1.Size = new System.Drawing.Size(240, 1);
             this.panel1.TabIndex = 11;
+            // 
+            // adSearchBtn
+            // 
+            this.adSearchBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.adSearchBtn.BackColor = System.Drawing.Color.LightGray;
+            this.adSearchBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.adSearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.adSearchBtn.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.adSearchBtn.ForeColor = System.Drawing.Color.Black;
+            this.adSearchBtn.Location = new System.Drawing.Point(606, 9);
+            this.adSearchBtn.Name = "adSearchBtn";
+            this.adSearchBtn.Size = new System.Drawing.Size(243, 35);
+            this.adSearchBtn.TabIndex = 12;
+            this.adSearchBtn.Text = "Advanced Search";
+            this.adSearchBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.adSearchBtn.UseVisualStyleBackColor = false;
+            this.adSearchBtn.Click += new System.EventHandler(this.adSearchBtn_Click);
             // 
             // DataTable
             // 
@@ -206,7 +220,7 @@ namespace E_Barangay.Forms
             this.DataTable.DefaultCellStyle = dataGridViewCellStyle3;
             this.DataTable.EnableHeadersVisualStyles = false;
             this.DataTable.GridColor = System.Drawing.Color.White;
-            this.DataTable.Location = new System.Drawing.Point(8, 46);
+            this.DataTable.Location = new System.Drawing.Point(8, 88);
             this.DataTable.MultiSelect = false;
             this.DataTable.Name = "DataTable";
             this.DataTable.ReadOnly = true;
@@ -220,7 +234,7 @@ namespace E_Barangay.Forms
             this.DataTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.DataTable.RowHeadersVisible = false;
             this.DataTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataTable.Size = new System.Drawing.Size(841, 480);
+            this.DataTable.Size = new System.Drawing.Size(841, 438);
             this.DataTable.StandardTab = true;
             this.DataTable.TabIndex = 2;
             this.DataTable.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataTable_CellMouseDoubleClick);
@@ -259,6 +273,7 @@ namespace E_Barangay.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.Controls.Add(this.adSearchBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.CreateBtn);
             this.Controls.Add(this.ResultTxt);
@@ -292,5 +307,6 @@ namespace E_Barangay.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.Button adSearchBtn;
     }
 }
