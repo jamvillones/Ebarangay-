@@ -63,19 +63,19 @@ namespace E_Barangay.Forms
             ///this is lazy load
             ActiveControl = Current;
         }
-        User curr;
+        User currUser;
 
         private void MainPage_Load(object sender, EventArgs e)
         {
             ///assign current logged user
             if (UserManager.instance != null)
-                curr = UserManager.instance.currentUser;
+                currUser = UserManager.instance.currentUser;
 
             ///activate addnew log in button depending on user privileges
             //AddNewLoginBtn.Enabled = curr.canAddUser ? true : false;
 
             ///set the text to userwelcome text
-            UserWelcomeTxt.Text = curr.Username;
+            UserWelcomeTxt.Text = currUser.Username;
 
             Current = DashControl;
             printingFiles.OpeningForm += (x, y) => { Enabled = !y; };
@@ -148,7 +148,7 @@ namespace E_Barangay.Forms
         }
         void OpenCreateLogin()
         {
-            if (!curr.canAddUser)
+            if (!currUser.canAddUser)
             {
                 MessageBox.Show("Current User does not have the administrative privilege to perform this action.");
                 return;
@@ -195,9 +195,22 @@ namespace E_Barangay.Forms
         {
             this.Enabled = false;
             ChangePass changepass = new ChangePass();
-            changepass.SetUser(curr.Username);
+            changepass.SetUser(currUser.Username);
             changepass.FormClosed += (s, eventdetails) => { Enabled = true; };
             changepass.Show();
+        }
+
+        private void officialsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(currUser.ID != "ninotech")
+            {
+                MessageBox.Show("You do not have administrative previlege to perform this action!");
+                return;
+            }
+            this.Enabled = false;
+            EditOfficials editOfficials = new EditOfficials();
+            editOfficials.FormClosed += (s, eventdetails) => { Enabled = true; };
+            editOfficials.Show();
         }
     }
 }

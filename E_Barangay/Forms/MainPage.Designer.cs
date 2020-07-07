@@ -388,7 +388,6 @@
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.officialsToolStripMenuItem});
-            this.editToolStripMenuItem.Enabled = false;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
@@ -398,6 +397,7 @@
             this.officialsToolStripMenuItem.Name = "officialsToolStripMenuItem";
             this.officialsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.officialsToolStripMenuItem.Text = "Officials";
+            this.officialsToolStripMenuItem.Click += new System.EventHandler(this.officialsToolStripMenuItem_Click);
             // 
             // MainPage
             // 

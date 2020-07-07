@@ -352,6 +352,12 @@
     <Compile Include="Forms\ChangePass.Designer.cs">
       <DependentUpon>ChangePass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditOfficials.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditOfficials.Designer.cs">
+      <DependentUpon>EditOfficials.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EditPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -586,6 +592,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ChangePass.resx">
       <DependentUpon>ChangePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditOfficials.resx">
+      <DependentUpon>EditOfficials.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditPage.resx">
       <DependentUpon>EditPage.cs</DependentUpon>
