@@ -28,7 +28,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>E_Barangay</ProductName>
     <PublisherName>Ninotech_Jam</PublisherName>
-    <ApplicationRevision>10</ApplicationRevision>
+    <ApplicationRevision>11</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -340,6 +340,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EBModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AdvancedSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdvancedSearchForm.Designer.cs">
+      <DependentUpon>AdvancedSearchForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ChangePass.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -574,6 +580,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\SSSPension.resx">
       <DependentUpon>SSSPension.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdvancedSearchForm.resx">
+      <DependentUpon>AdvancedSearchForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ChangePass.resx">
       <DependentUpon>ChangePass.cs</DependentUpon>
