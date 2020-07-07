@@ -19,7 +19,7 @@ namespace E_Barangay.Forms
         public FileComplaintForm()
         {
             InitializeComponent();
-            
+
         }
 
         private void FileComplaintForm_Load(object sender, EventArgs e)
@@ -98,41 +98,51 @@ namespace E_Barangay.Forms
             rec.Status = ComplaintStatus.Pending.ToString();
 
             /// saving names in comps and resps
+            //for (int i = 0; i < dgvComplainants.RowCount; i++)
+            //{
+            //    if (dgvComplainants.Rows[i].Cells[0].Value != null)
+            //    {
+            //        ///get the string of the id column
+            //        string idString = dgvComplainants.Rows[i].Cells[1].Value.ToString();
+            //        //if (!string.IsNullOrEmpty(idString))
+            //        //    rec.CompNames += dgvComplainants.Rows[i].Cells[1].Value.ToString() + (i == dgvComplainants.RowCount - 2 ? "" : ",");
+            //        Citizen c;
+            //        if (CitizenExtensions.CitizenById(idString, out c))
+            //            rec.CompNames += dgvComplainants.Rows[i].Cells[1].Value.ToString() + (i == dgvComplainants.RowCount - 2 ? "" : ",");
+
+            //        else
+            //            rec.CompNames += dgvComplainants.Rows[i].Cells[0].Value.ToString() + (i == dgvComplainants.RowCount - 2 ? "" : ",");
+            //    }
+            //}
+
+            //for (int i = 0; i < dgvRespondents.RowCount; i++)
+            //{
+            //    if (dgvRespondents.Rows[i].Cells[0].Value != null)
+            //    {
+            //        ///get the string of the id column
+            //        string idString = dgvRespondents.Rows[i].Cells[1].Value.ToString();
+            //        Citizen c;
+            //        if (CitizenExtensions.CitizenById(idString, out c))
+            //            rec.RespNames += dgvRespondents.Rows[i].Cells[1].Value.ToString() + (i == dgvRespondents.RowCount - 2 ? "" : ",");
+
+            //        else
+            //            rec.RespNames += dgvRespondents.Rows[i].Cells[0].Value.ToString() + (i == dgvRespondents.RowCount - 2 ? "" : ",");
+
+            //    }
+            //}
             for (int i = 0; i < dgvComplainants.RowCount; i++)
             {
                 if (dgvComplainants.Rows[i].Cells[0].Value != null)
-                {
-                    ///get the string of the id column
-                    string idString = dgvComplainants.Rows[i].Cells[1].Value.ToString();
-                    //if (!string.IsNullOrEmpty(idString))
-                    //    rec.CompNames += dgvComplainants.Rows[i].Cells[1].Value.ToString() + (i == dgvComplainants.RowCount - 2 ? "" : ",");
-                    Citizen c;
-                    if (CitizenExtensions.CitizenById(idString, out c))
-                        rec.CompNames += dgvComplainants.Rows[i].Cells[1].Value.ToString() + (i == dgvComplainants.RowCount - 2 ? "" : ",");
-
-                    else
-                        rec.CompNames += dgvComplainants.Rows[i].Cells[0].Value.ToString() + (i == dgvComplainants.RowCount - 2 ? "" : ",");
-                }
+                    rec.CompNames += dgvComplainants.Rows[i].Cells[0].Value.ToString() + (i == dgvComplainants.RowCount - 2 ? "" : ",");
             }
-
             for (int i = 0; i < dgvRespondents.RowCount; i++)
             {
                 if (dgvRespondents.Rows[i].Cells[0].Value != null)
-                {
-                    ///get the string of the id column
-                    string idString = dgvRespondents.Rows[i].Cells[1].Value.ToString();
-                    Citizen c;
-                    if (CitizenExtensions.CitizenById(idString, out c))
-                        rec.RespNames += dgvRespondents.Rows[i].Cells[1].Value.ToString() + (i == dgvRespondents.RowCount - 2 ? "" : ",");
-
-                    else
-                        rec.RespNames += dgvRespondents.Rows[i].Cells[0].Value.ToString() + (i == dgvRespondents.RowCount - 2 ? "" : ",");
-
-                }
+                    rec.RespNames += dgvRespondents.Rows[i].Cells[0].Value.ToString() + (i == dgvRespondents.RowCount - 2 ? "" : ",");
             }
             ///end if
 
-            
+
 
             using (var ent = new EBarangayEntities())
             {

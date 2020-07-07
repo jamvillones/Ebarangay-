@@ -43,26 +43,30 @@ namespace E_Barangay.Forms
             settleSched.Text = currRec.SettlementDate.Value.ToString("MMMM dd, yyyy hh:mm tt");
 
             var compNames = currRec.CompNames.Split(',');
-            using (var ent = new EBarangayEntities())
-            {
-                foreach (var c in compNames)
-                {
-                    var citizen = ent.Citizens.FirstOrDefault(x => x.ID == c).getNameWithSpace();
-                    lvComplainants.Items.Add((citizen ?? c));
-                }
+            foreach (var c in compNames)
+                lvComplainants.Items.Add(c);
+            //using (var ent = new EBarangayEntities())
+            //{
+            //    foreach (var c in compNames)
+            //    {
+            //        var citizen = ent.Citizens.FirstOrDefault(x => x.ID == c).getNameWithSpace();
+            //        lvComplainants.Items.Add((citizen ?? c));
+            //    }
 
-            }
+            //}
 
             var respNames = currRec.RespNames.Split(',');
+            foreach (var c in respNames)
+                lvRespondents.Items.Add(c);
 
-            using (var ent = new EBarangayEntities())
-            {
-                foreach (var c in respNames)
-                {
-                    var citizen = ent.Citizens.FirstOrDefault(x => x.ID == c).getNameWithSpace();
-                    lvRespondents.Items.Add((citizen ?? c));
-                }
-            }
+            //using (var ent = new EBarangayEntities())
+            //{
+            //    foreach (var c in respNames)
+            //    {
+            //        var citizen = ent.Citizens.FirstOrDefault(x => x.ID == c).getNameWithSpace();
+            //        lvRespondents.Items.Add((citizen ?? c));
+            //    }
+            //}
         }
         User user;
         private void RecordView_Load(object sender, EventArgs e)
