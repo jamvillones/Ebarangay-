@@ -230,6 +230,7 @@
             this.createCSVBtn.TabStop = false;
             this.createCSVBtn.Text = "Create Comma Separated Value(CSV)";
             this.createCSVBtn.UseVisualStyleBackColor = true;
+            this.createCSVBtn.Visible = false;
             // 
             // searchBtn
             // 
