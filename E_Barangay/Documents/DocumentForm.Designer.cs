@@ -42,10 +42,6 @@
             this.FieldsPanel.Controls.Add(this.ResetBtn);
             this.FieldsPanel.Size = new System.Drawing.Size(352, 691);
             // 
-            // printing
-            // 
-            //this.printing.Size = new System.Drawing.Size(562, 691);
-            // 
             // ResetBtn
             // 
             this.ResetBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -88,7 +84,7 @@
             this.idField.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.idField.Location = new System.Drawing.Point(6, 19);
-            this.idField.MaxLength = 10;
+            this.idField.MaxLength = 13;
             this.idField.Name = "idField";
             this.idField.Size = new System.Drawing.Size(309, 20);
             this.idField.TabIndex = 0;

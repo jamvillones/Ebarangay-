@@ -24,6 +24,15 @@ namespace E_Barangay.Forms
                 MessageBox.Show("fields must not be empty!");
                 return;
             }
+            using (var eb = new EBarangayEntities())
+            {
+                var u = eb.Users.FirstOrDefault(x => x.Username == UsernameTxt.Text);
+                if (u != null)
+                {
+                    MessageBox.Show("Username already taken.");
+                    return;
+                }
+            }
             if (!SamePassword)
             {
                 ActiveControl = PasswordTxt;
