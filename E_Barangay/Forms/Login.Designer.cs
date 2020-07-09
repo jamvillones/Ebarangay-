@@ -117,13 +117,13 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Location = new System.Drawing.Point(96, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 23);
             this.label1.TabIndex = 6;
-            this.label1.Text = "E Barangay";
+            this.label1.Text = "E-BARANGAY";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox2
@@ -149,7 +149,7 @@
             this.LoginBtn.BackColor = System.Drawing.Color.Teal;
             this.LoginBtn.FlatAppearance.BorderSize = 0;
             this.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoginBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginBtn.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.ForeColor = System.Drawing.Color.Transparent;
             this.LoginBtn.Location = new System.Drawing.Point(108, 348);
             this.LoginBtn.Name = "LoginBtn";

@@ -48,7 +48,7 @@ namespace E_Barangay.Documents
             string details = "With business address at " + Printing.IfControlEmpty(bussAdd) + ".\n" +
                              "This further certifies that the said applicant applying for Business Permit has no records of violations or pending case in this Barangay that could affect the general welfare in the area." +
                              Printing.LineSpace + "This BARANGAY CLEARANCE is hereby issued to the above application in Accordance with Section 152 ©. Of the Local Government Code of 1991." +
-                             Printing.LineSpace + "This " + issuedOn.customFormat()+ ", " + issuedOn.Value.Year + " at Barangay Hall, Poblacion, Kalibo, Aklan." +
+                             Printing.LineSpace + "This " + issuedOn.customFormat()+ ", at Barangay Hall, Poblacion, Kalibo, Aklan." +
                              Printing.LineSpace + "Conforme";
             e.Graphics.DrawString(details, Printing.font, Brushes.Black, rect2);
             // e.Graphics.DrawRectangle(Printing.pen, rect2);

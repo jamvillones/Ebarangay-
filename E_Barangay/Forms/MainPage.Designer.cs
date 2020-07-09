@@ -1,4 +1,6 @@
-﻿namespace E_Barangay.Forms
+﻿using System.Drawing;
+
+namespace E_Barangay.Forms
 {
     partial class MainPage
     {
@@ -41,10 +43,6 @@
             this.IssueBtn = new System.Windows.Forms.Button();
             this.complaintsBtn = new System.Windows.Forms.Button();
             this.ContentHolder = new System.Windows.Forms.Panel();
-            this.DashControl = new E_Barangay.Forms.Dashboard();
-            this.QueryPage = new E_Barangay.Forms.QueryControl();
-            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
-            this.complaintPage = new E_Barangay.Forms.ComplaintControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.UserWelcomeTxt = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,6 +54,10 @@
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.officialsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DashControl = new E_Barangay.Forms.Dashboard();
+            this.QueryPage = new E_Barangay.Forms.QueryControl();
+            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
+            this.complaintPage = new E_Barangay.Forms.ComplaintControl();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -158,7 +160,7 @@
             this.DashBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.DashBtn.FlatAppearance.BorderSize = 0;
             this.DashBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DashBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DashBtn.ForeColor = System.Drawing.Color.White;
             this.DashBtn.Image = ((System.Drawing.Image)(resources.GetObject("DashBtn.Image")));
             this.DashBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -171,6 +173,7 @@
             this.DashBtn.Text = "Home";
             this.DashBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DashBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.DashBtn.UseCompatibleTextRendering = true;
             this.DashBtn.UseVisualStyleBackColor = true;
             this.DashBtn.Click += new System.EventHandler(this.DashBtn_Click);
             // 
@@ -180,7 +183,7 @@
             this.QueryBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.QueryBtn.FlatAppearance.BorderSize = 0;
             this.QueryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.QueryBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QueryBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QueryBtn.ForeColor = System.Drawing.Color.White;
             this.QueryBtn.Image = ((System.Drawing.Image)(resources.GetObject("QueryBtn.Image")));
             this.QueryBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -193,6 +196,7 @@
             this.QueryBtn.Text = "Records";
             this.QueryBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.QueryBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.QueryBtn.UseCompatibleTextRendering = true;
             this.QueryBtn.UseVisualStyleBackColor = true;
             this.QueryBtn.Click += new System.EventHandler(this.QueryBtn_Click);
             // 
@@ -202,7 +206,7 @@
             this.IssueBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.IssueBtn.FlatAppearance.BorderSize = 0;
             this.IssueBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.IssueBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IssueBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IssueBtn.ForeColor = System.Drawing.Color.White;
             this.IssueBtn.Image = ((System.Drawing.Image)(resources.GetObject("IssueBtn.Image")));
             this.IssueBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -214,6 +218,7 @@
             this.IssueBtn.Text = "Issue Document";
             this.IssueBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.IssueBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.IssueBtn.UseCompatibleTextRendering = true;
             this.IssueBtn.UseVisualStyleBackColor = true;
             this.IssueBtn.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -223,7 +228,7 @@
             this.complaintsBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.complaintsBtn.FlatAppearance.BorderSize = 0;
             this.complaintsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.complaintsBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.complaintsBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.complaintsBtn.ForeColor = System.Drawing.Color.White;
             this.complaintsBtn.Image = ((System.Drawing.Image)(resources.GetObject("complaintsBtn.Image")));
             this.complaintsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -236,6 +241,7 @@
             this.complaintsBtn.Text = "Complaints";
             this.complaintsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.complaintsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.complaintsBtn.UseCompatibleTextRendering = true;
             this.complaintsBtn.UseVisualStyleBackColor = true;
             this.complaintsBtn.Click += new System.EventHandler(this.complaintsBtn_Click);
             // 
@@ -252,44 +258,6 @@
             this.ContentHolder.Name = "ContentHolder";
             this.ContentHolder.Size = new System.Drawing.Size(995, 538);
             this.ContentHolder.TabIndex = 3;
-            // 
-            // DashControl
-            // 
-            this.DashControl.BackColor = System.Drawing.Color.Silver;
-            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DashControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashControl.Location = new System.Drawing.Point(0, 0);
-            this.DashControl.Name = "DashControl";
-            this.DashControl.Size = new System.Drawing.Size(995, 538);
-            this.DashControl.TabIndex = 3;
-            // 
-            // QueryPage
-            // 
-            this.QueryPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QueryPage.Location = new System.Drawing.Point(0, 0);
-            this.QueryPage.Name = "QueryPage";
-            this.QueryPage.Size = new System.Drawing.Size(995, 538);
-            this.QueryPage.TabIndex = 5;
-            // 
-            // printingFiles
-            // 
-            this.printingFiles.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.printingFiles.Location = new System.Drawing.Point(0, 0);
-            this.printingFiles.Name = "printingFiles";
-            this.printingFiles.Size = new System.Drawing.Size(995, 538);
-            this.printingFiles.TabIndex = 4;
-            this.printingFiles.TabStop = false;
-            // 
-            // complaintPage
-            // 
-            this.complaintPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.complaintPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.complaintPage.Location = new System.Drawing.Point(0, 0);
-            this.complaintPage.Name = "complaintPage";
-            this.complaintPage.Size = new System.Drawing.Size(995, 538);
-            this.complaintPage.TabIndex = 6;
             // 
             // panel2
             // 
@@ -319,14 +287,15 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Bebas Neue Regular", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(43, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 23);
+            this.label1.Size = new System.Drawing.Size(122, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "E Barangay";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.UseCompatibleTextRendering = true;
             // 
             // pictureBox2
             // 
@@ -395,9 +364,47 @@
             // officialsToolStripMenuItem
             // 
             this.officialsToolStripMenuItem.Name = "officialsToolStripMenuItem";
-            this.officialsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.officialsToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.officialsToolStripMenuItem.Text = "Officials";
             this.officialsToolStripMenuItem.Click += new System.EventHandler(this.officialsToolStripMenuItem_Click);
+            // 
+            // DashControl
+            // 
+            this.DashControl.BackColor = System.Drawing.Color.Silver;
+            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DashControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashControl.Location = new System.Drawing.Point(0, 0);
+            this.DashControl.Name = "DashControl";
+            this.DashControl.Size = new System.Drawing.Size(995, 538);
+            this.DashControl.TabIndex = 3;
+            // 
+            // QueryPage
+            // 
+            this.QueryPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueryPage.Location = new System.Drawing.Point(0, 0);
+            this.QueryPage.Name = "QueryPage";
+            this.QueryPage.Size = new System.Drawing.Size(995, 538);
+            this.QueryPage.TabIndex = 5;
+            // 
+            // printingFiles
+            // 
+            this.printingFiles.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.printingFiles.Location = new System.Drawing.Point(0, 0);
+            this.printingFiles.Name = "printingFiles";
+            this.printingFiles.Size = new System.Drawing.Size(995, 538);
+            this.printingFiles.TabIndex = 4;
+            this.printingFiles.TabStop = false;
+            // 
+            // complaintPage
+            // 
+            this.complaintPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.complaintPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.complaintPage.Location = new System.Drawing.Point(0, 0);
+            this.complaintPage.Name = "complaintPage";
+            this.complaintPage.Size = new System.Drawing.Size(995, 538);
+            this.complaintPage.TabIndex = 6;
             // 
             // MainPage
             // 

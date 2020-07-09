@@ -49,7 +49,7 @@ namespace E_Barangay.Documents
             string text = "To whom it may concern:" + Printing.LineSpace
                           + Printing.Indention + "This is to certify that as per record of this Barangay " + name + ", " + Printing.IfControlEmpty(Age) + " years old, " + Printing.IfControlEmpty(CStatusOption) + ", Filipino and a resident of " + Printing.IfControlEmpty(Address) + ", whose signature appears below has no criminal, civil or administrative charges before this office and has good moral standing in the community." + Printing.LineSpace
                           + Printing.Indention + "This certification is issued upon the request of " + Printing.MrOrMrs(SexOption.Text) + " " + lastText.Text + (string.IsNullOrEmpty(extText.Text) ? "" : " " + extText.Text) + " for the purpose of " + Printing.HisOrHer(SexOption.Text) + " " + Printing.IfControlEmpty(Purpose) + "." + Printing.LineSpace
-                          + "WITNESS MY HAND SEAL, this " + IssuedOn.customFormat() + ", " + IssuedOn.Value.Year + " at Barangay Poblacion, Kalibo, Aklan, Philippines.";
+                          + "WITNESS MY HAND SEAL, this " + IssuedOn.customFormat() + ", at Barangay Poblacion, Kalibo, Aklan, Philippines.";
 
             e.Graphics.DrawString(text, Printing.font, Brushes.Black, rect);
             Printing.DrawSpecimenSignature(e, name);

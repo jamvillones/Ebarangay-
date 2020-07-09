@@ -35,6 +35,8 @@
             this.PrintBtn = new System.Windows.Forms.Button();
             this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
             this.printDialog = new System.Windows.Forms.PrintDialog();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // printPreviewControl
@@ -96,12 +98,30 @@
             this.printDialog.Document = this.printDocument;
             this.printDialog.UseEXDialog = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(269, 9);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(284, 20);
+            this.textBox1.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(203, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Control No.";
+            // 
             // Printing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.UpdateBtn);
             this.Controls.Add(this.PrintBtn);
             this.Controls.Add(this.printPreviewControl);
@@ -109,6 +129,7 @@
             this.Size = new System.Drawing.Size(597, 799);
             this.Load += new System.EventHandler(this.Printing_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -120,5 +141,7 @@
         private System.Drawing.Printing.PrintDocument printDocument;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog;
         private System.Windows.Forms.PrintDialog printDialog;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

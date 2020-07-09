@@ -707,6 +707,7 @@
     <Content Include="favicon.ico" />
     <None Include="Resources\add_user_group_man_man_20px.png" />
     <None Include="Resources\add_user_male_10px.png" />
+    <None Include="Resources\BebasNeue Regular.otf" />
     <None Include="Resources\CertCustomHeader.png" />
     <None Include="Resources\CertIndigentMedicalAssistance.png" />
     <None Include="Resources\BrgyCertificationforBurial.png" />
