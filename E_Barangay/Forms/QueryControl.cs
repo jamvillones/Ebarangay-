@@ -26,8 +26,8 @@ namespace E_Barangay.Forms
             if (UserManager.instance.currentUser == null)
                 return;
             user = UserManager.instance.currentUser;
-            CreateBtn.Enabled = user.canRegister ? true : false;
-            ModifyBtn.Enabled = user.canEdit ? true : false;
+            CreateBtn.Enabled = user.Rec_Create ? true : false;
+            ModifyBtn.Enabled = user.Rec_Edit ? true : false;
             //DeleteBtn.Enabled = u.canDelete ? true : false;
         }
 
@@ -74,7 +74,7 @@ namespace E_Barangay.Forms
                 //}
 
                 Citizen c = context.Citizens.FirstOrDefault(x => x.ID == SearchBox.Text);
-                if (c == null && UserManager.instance.currentUser.canRegister)
+                if (c == null && UserManager.instance.currentUser.Rec_Create)
                 {
                     var yesorno = new YesOrNoPrompt("Entry Not found. Would you like to go register instead?");
                     yesorno.FormClosed += (xx, yy) => { Enabled = true; };

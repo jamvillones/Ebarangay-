@@ -265,6 +265,12 @@
     <Compile Include="Documents\CertforPRC.Designer.cs">
       <DependentUpon>CertforPRC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Documents\CertForVoucherProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Documents\CertForVoucherProgram.Designer.cs">
+      <DependentUpon>CertForVoucherProgram.cs</DependentUpon>
+    </Compile>
     <Compile Include="Documents\CertificateAppearance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -483,6 +489,21 @@
     <Compile Include="Interface\ICitizenAcceptor.cs" />
     <Compile Include="Interface\IAccept.cs" />
     <Compile Include="Interface\IImageAcceptor.cs" />
+    <Compile Include="LoginModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoginModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoginModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LoginModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Municipality.cs">
       <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
@@ -495,7 +516,7 @@
       <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>EBModel.tt</DependentUpon>
+      <DependentUpon>LoginModel.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Documents\BarangayCertPao.resx">
       <DependentUpon>BarangayCertPao.cs</DependentUpon>
@@ -556,6 +577,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertforPRC.resx">
       <DependentUpon>CertforPRC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documents\CertForVoucherProgram.resx">
+      <DependentUpon>CertForVoucherProgram.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertificateAppearance.resx">
       <DependentUpon>CertificateAppearance.cs</DependentUpon>
@@ -674,6 +698,13 @@
       <DependentUpon>EBModel.edmx</DependentUpon>
     </None>
     <None Include="E_Barangay_TemporaryKey.pfx" />
+    <EntityDeploy Include="LoginModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LoginModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="LoginModel.edmx.diagram">
+      <DependentUpon>LoginModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -705,6 +736,16 @@
       <LastGenOutput>EBModel.cs</LastGenOutput>
     </Content>
     <Content Include="favicon.ico" />
+    <Content Include="LoginModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LoginModel.edmx</DependentUpon>
+      <LastGenOutput>LoginModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="LoginModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LoginModel.edmx</DependentUpon>
+      <LastGenOutput>LoginModel.cs</LastGenOutput>
+    </Content>
     <None Include="Resources\add_user_group_man_man_20px.png" />
     <None Include="Resources\add_user_male_10px.png" />
     <None Include="Resources\BebasNeue Regular.otf" />

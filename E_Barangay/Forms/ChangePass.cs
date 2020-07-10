@@ -23,7 +23,7 @@ namespace E_Barangay.Forms
         }
         public void SetUser(string u)
         {
-            using (var eb = new EBarangayEntities())
+            using (var eb = new EB_LoginsEntities())
             {
                 var user = eb.Users.FirstOrDefault(x => x.Username == u);
                 currentUser = user;
@@ -49,7 +49,7 @@ namespace E_Barangay.Forms
             if (!canSave())
                 return;
 
-            using (var eb = new EBarangayEntities())
+            using (var eb = new EB_LoginsEntities())
             {
                 var u = eb.Users.FirstOrDefault(x => x.Username == currentUser.Username);
                 if (u != null)

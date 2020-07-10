@@ -24,7 +24,7 @@ namespace E_Barangay.Forms
                 MessageBox.Show("fields must not be empty!");
                 return;
             }
-            using (var eb = new EBarangayEntities())
+            using (var eb = new EB_LoginsEntities())
             {
                 var u = eb.Users.FirstOrDefault(x => x.Username == UsernameTxt.Text);
                 if (u != null)
@@ -41,16 +41,21 @@ namespace E_Barangay.Forms
                 ConfirmPassTxt.Clear();
                 return;
             }
-            using (var a = new EBarangayEntities())
+            using (var a = new EB_LoginsEntities())
             {
                 var user = new User();
-                user.ID = Guid.NewGuid().ToString();
+                user.Id = Guid.NewGuid().ToString();
                 user.Username = UsernameTxt.Text;
                 user.Password = PasswordTxt.Text;
-                user.canAddUser = CanAddUser.Checked;
-                user.canDelete = CanDelete.Checked;
-                user.canEdit = CanEdit.Checked;
-                user.canRegister = CanReg.Checked;
+
+                user.AddLogin = CanAddUser.Checked;
+                user.Rec_Delete = CanDelete.Checked;
+                user.Rec_Edit = CanEdit.Checked;
+                user.Rec_Create = CanReg.Checked;
+                user.Comp_Create = Comp_Reg_cb.Checked;
+                user.Comp_Edit = Comp_Edit_cb.Checked;
+                user.IssueDocument = Issue_Doc_cb.Checked;
+
                 a.Users.Add(user);
                 a.SaveChanges();
             }

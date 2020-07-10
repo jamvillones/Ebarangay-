@@ -50,7 +50,7 @@ namespace E_Barangay.Forms
                 return;
             }
 
-            using (var t = new EBarangayEntities())
+            using (var t = new EB_LoginsEntities())
             {
                 var u = from user in t.Users
                         where user.Username == UsernameTxt.Text && user.Password == PasswordTxt.Text

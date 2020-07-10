@@ -32,7 +32,6 @@ namespace E_Barangay
         public virtual DbSet<Complaint> Complaints { get; set; }
         public virtual DbSet<Municipality> Municipalities { get; set; }
         public virtual DbSet<Official> Officials { get; set; }
-        public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<CitizenToComplaint> CitizenToComplaints { get; set; }
         public virtual DbSet<Citizen> Citizens { get; set; }
         public virtual DbSet<Document> Documents { get; set; }

@@ -41,7 +41,16 @@
             this.ConfirmPassTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.checkImage = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Comp_Edit_cb = new System.Windows.Forms.CheckBox();
+            this.Comp_Reg_cb = new System.Windows.Forms.CheckBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.Issue_Doc_cb = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.checkImage)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -84,7 +93,7 @@
             // 
             this.CanEdit.AutoSize = true;
             this.CanEdit.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CanEdit.Location = new System.Drawing.Point(17, 103);
+            this.CanEdit.Location = new System.Drawing.Point(6, 19);
             this.CanEdit.Name = "CanEdit";
             this.CanEdit.Size = new System.Drawing.Size(66, 18);
             this.CanEdit.TabIndex = 4;
@@ -95,7 +104,7 @@
             // 
             this.CanDelete.AutoSize = true;
             this.CanDelete.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CanDelete.Location = new System.Drawing.Point(17, 127);
+            this.CanDelete.Location = new System.Drawing.Point(6, 43);
             this.CanDelete.Name = "CanDelete";
             this.CanDelete.Size = new System.Drawing.Size(77, 18);
             this.CanDelete.TabIndex = 5;
@@ -106,7 +115,7 @@
             // 
             this.CanReg.AutoSize = true;
             this.CanReg.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CanReg.Location = new System.Drawing.Point(17, 151);
+            this.CanReg.Location = new System.Drawing.Point(6, 67);
             this.CanReg.Name = "CanReg";
             this.CanReg.Size = new System.Drawing.Size(84, 18);
             this.CanReg.TabIndex = 6;
@@ -117,7 +126,7 @@
             // 
             this.CanAddUser.AutoSize = true;
             this.CanAddUser.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CanAddUser.Location = new System.Drawing.Point(17, 175);
+            this.CanAddUser.Location = new System.Drawing.Point(6, 19);
             this.CanAddUser.Name = "CanAddUser";
             this.CanAddUser.Size = new System.Drawing.Size(117, 18);
             this.CanAddUser.TabIndex = 7;
@@ -126,7 +135,7 @@
             // 
             // ConfirmBtn
             // 
-            this.ConfirmBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ConfirmBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmBtn.Location = new System.Drawing.Point(101, 210);
             this.ConfirmBtn.Name = "ConfirmBtn";
             this.ConfirmBtn.Size = new System.Drawing.Size(75, 23);
@@ -165,20 +174,86 @@
             this.checkImage.TabStop = false;
             this.checkImage.Visible = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.CanEdit);
+            this.groupBox1.Controls.Add(this.CanDelete);
+            this.groupBox1.Controls.Add(this.CanReg);
+            this.groupBox1.Location = new System.Drawing.Point(18, 104);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(100, 100);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Citizen";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.Comp_Edit_cb);
+            this.groupBox2.Controls.Add(this.Comp_Reg_cb);
+            this.groupBox2.Location = new System.Drawing.Point(124, 104);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(100, 100);
+            this.groupBox2.TabIndex = 13;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Complaint";
+            // 
+            // Comp_Edit_cb
+            // 
+            this.Comp_Edit_cb.AutoSize = true;
+            this.Comp_Edit_cb.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Comp_Edit_cb.Location = new System.Drawing.Point(6, 19);
+            this.Comp_Edit_cb.Name = "Comp_Edit_cb";
+            this.Comp_Edit_cb.Size = new System.Drawing.Size(66, 18);
+            this.Comp_Edit_cb.TabIndex = 4;
+            this.Comp_Edit_cb.Text = "Can Edit";
+            this.Comp_Edit_cb.UseVisualStyleBackColor = true;
+            // 
+            // Comp_Reg_cb
+            // 
+            this.Comp_Reg_cb.AutoSize = true;
+            this.Comp_Reg_cb.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Comp_Reg_cb.Location = new System.Drawing.Point(6, 43);
+            this.Comp_Reg_cb.Name = "Comp_Reg_cb";
+            this.Comp_Reg_cb.Size = new System.Drawing.Size(84, 18);
+            this.Comp_Reg_cb.TabIndex = 6;
+            this.Comp_Reg_cb.Text = "Can Register";
+            this.Comp_Reg_cb.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.Issue_Doc_cb);
+            this.groupBox3.Controls.Add(this.CanAddUser);
+            this.groupBox3.Location = new System.Drawing.Point(230, 104);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(127, 100);
+            this.groupBox3.TabIndex = 14;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Others";
+            // 
+            // Issue_Doc_cb
+            // 
+            this.Issue_Doc_cb.AutoSize = true;
+            this.Issue_Doc_cb.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Issue_Doc_cb.Location = new System.Drawing.Point(6, 43);
+            this.Issue_Doc_cb.Name = "Issue_Doc_cb";
+            this.Issue_Doc_cb.Size = new System.Drawing.Size(99, 18);
+            this.Issue_Doc_cb.TabIndex = 8;
+            this.Issue_Doc_cb.Text = "Issue Document";
+            this.Issue_Doc_cb.UseVisualStyleBackColor = true;
+            // 
             // CreateLogin
             // 
             this.AcceptButton = this.ConfirmBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(277, 245);
+            this.ClientSize = new System.Drawing.Size(371, 245);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.checkImage);
             this.Controls.Add(this.ConfirmPassTxt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ConfirmBtn);
-            this.Controls.Add(this.CanAddUser);
-            this.Controls.Add(this.CanReg);
-            this.Controls.Add(this.CanDelete);
-            this.Controls.Add(this.CanEdit);
             this.Controls.Add(this.PasswordTxt);
             this.Controls.Add(this.UsernameTxt);
             this.Controls.Add(this.label2);
@@ -191,6 +266,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Login";
             ((System.ComponentModel.ISupportInitialize)(this.checkImage)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,5 +291,11 @@
         private System.Windows.Forms.TextBox ConfirmPassTxt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox checkImage;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.CheckBox Comp_Edit_cb;
+        private System.Windows.Forms.CheckBox Comp_Reg_cb;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.CheckBox Issue_Doc_cb;
     }
 }

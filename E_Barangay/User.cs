@@ -14,12 +14,16 @@ namespace E_Barangay
     
     public partial class User
     {
-        public string ID { get; set; }
+        public string Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
-        public bool canEdit { get; set; }
-        public bool canDelete { get; set; }
-        public bool canRegister { get; set; }
-        public bool canAddUser { get; set; }
+        public bool Rec_Create { get; set; }
+        public bool Rec_Edit { get; set; }
+        public bool Rec_Delete { get; set; }
+        public bool Comp_Create { get; set; }
+        public bool Comp_Edit { get; set; }
+        public bool Comp_Delete { get; set; }
+        public bool IssueDocument { get; set; }
+        public bool AddLogin { get; set; }
     }
 }

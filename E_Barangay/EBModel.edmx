@@ -96,18 +96,6 @@
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Position" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <EntityType Name="Users">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Username" Type="nvarchar" MaxLength="50" />
-          <Property Name="Password" Type="nvarchar" MaxLength="50" />
-          <Property Name="canEdit" Type="bit" Nullable="false" />
-          <Property Name="canDelete" Type="bit" Nullable="false" />
-          <Property Name="canRegister" Type="bit" Nullable="false" />
-          <Property Name="canAddUser" Type="bit" Nullable="false" />
-        </EntityType>
         <Association Name="FK_Citizen_Area">
           <End Role="Area" Type="Self.Area" Multiplicity="0..1" />
           <End Role="Citizen" Type="Self.Citizen" Multiplicity="*" />
@@ -166,7 +154,6 @@
           <EntitySet Name="Documents" EntityType="Self.Documents" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Municipality" EntityType="Self.Municipality" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Officials" EntityType="Self.Officials" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Citizen_Area" Association="Self.FK_Citizen_Area">
             <End Role="Area" EntitySet="Area" />
             <End Role="Citizen" EntitySet="Citizen" />
@@ -234,25 +221,12 @@
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
-        <EntityType Name="User">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="canEdit" Type="Boolean" Nullable="false" />
-          <Property Name="canDelete" Type="Boolean" Nullable="false" />
-          <Property Name="canRegister" Type="Boolean" Nullable="false" />
-          <Property Name="canAddUser" Type="Boolean" Nullable="false" />
-        </EntityType>
         <EntityContainer Name="EBarangayEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Areas" EntityType="Self.Area" />
           <EntitySet Name="Barangays" EntityType="Self.Barangay" />
           <EntitySet Name="Complaints" EntityType="Self.Complaint" />
           <EntitySet Name="Municipalities" EntityType="Self.Municipality" />
           <EntitySet Name="Officials" EntityType="Self.Official" />
-          <EntitySet Name="Users" EntityType="Self.User" />
           <FunctionImport Name="spCitizen_getFullName" ReturnType="Collection(EBarangayModel.spCitizen_getFullName_Result)" />
           <EntitySet Name="CitizenToComplaints" EntityType="EBarangayModel.CitizenToComplaint" />
           <AssociationSet Name="FK_Complaint_CitizenToComplaint" Association="EBarangayModel.FK_Complaint_CitizenToComplaint">
@@ -433,19 +407,6 @@
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Position" ColumnName="Position" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Users">
-            <EntityTypeMapping TypeName="EBarangayModel.User">
-              <MappingFragment StoreEntitySet="Users">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Username" ColumnName="Username" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="canEdit" ColumnName="canEdit" />
-                <ScalarProperty Name="canDelete" ColumnName="canDelete" />
-                <ScalarProperty Name="canRegister" ColumnName="canRegister" />
-                <ScalarProperty Name="canAddUser" ColumnName="canAddUser" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

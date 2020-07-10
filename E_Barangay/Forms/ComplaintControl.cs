@@ -25,7 +25,7 @@ namespace E_Barangay.Forms
             User user = UserManager.instance.currentUser;
             if(user != null)
             {
-                addComplaintBtn.Enabled = user.canRegister ? true : false;
+                addComplaintBtn.Enabled = user.Comp_Create ? true : false;
             }
         }
         public void LoadValues()

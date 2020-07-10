@@ -187,6 +187,7 @@
             this.Status.Size = new System.Drawing.Size(248, 15);
             this.Status.TabIndex = 28;
             this.Status.TabStop = false;
+            this.Status.TextChanged += new System.EventHandler(this.Status_TextChanged);
             // 
             // DoneBtn
             // 
@@ -349,7 +350,7 @@
             this.lvComplainants.UseCompatibleStateImageBehavior = false;
             this.lvComplainants.View = System.Windows.Forms.View.List;
             // 
-            // RecordView
+            // ComplaintViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -376,7 +377,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "RecordView";
+            this.Name = "ComplaintViewForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Complaint Preview";
             this.Load += new System.EventHandler(this.RecordView_Load);

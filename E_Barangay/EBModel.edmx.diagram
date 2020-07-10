@@ -9,8 +9,7 @@
         <EntityTypeShape EntityType="EBarangayModel.Barangay" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EBarangayModel.Complaint" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EBarangayModel.Municipality" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="EBarangayModel.Official" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="EBarangayModel.User" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EBarangayModel.Official" Width="1.5" PointX="2.5" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EBarangayModel.CitizenToComplaint" Width="1.5" PointX="8" PointY="4" />
         <AssociationConnector Association="EBarangayModel.FK_Complaint_CitizenToComplaint" />
         <EntityTypeShape EntityType="EBarangayModel.Citizen" Width="1.5" PointX="3" PointY="0.75" />

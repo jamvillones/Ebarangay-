@@ -98,7 +98,8 @@ namespace E_Barangay.Forms
             ///assign current logged user
             if (UserManager.instance != null)
                 currUser = UserManager.instance.currentUser;
-
+            if (!currUser.IssueDocument)
+                IssueBtn.Enabled = false;
             ///activate addnew log in button depending on user privileges
             //AddNewLoginBtn.Enabled = curr.canAddUser ? true : false;
 
@@ -176,7 +177,7 @@ namespace E_Barangay.Forms
         }
         void OpenCreateLogin()
         {
-            if (!currUser.canAddUser)
+            if (!currUser.AddLogin)
             {
                 MessageBox.Show("Current User does not have the administrative privilege to perform this action.");
                 return;
@@ -230,7 +231,7 @@ namespace E_Barangay.Forms
 
         private void officialsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(currUser.ID != "ninotech")
+            if(currUser.Id != "ninotech")
             {
                 MessageBox.Show("You do not have administrative previlege to perform this action!");
                 return;

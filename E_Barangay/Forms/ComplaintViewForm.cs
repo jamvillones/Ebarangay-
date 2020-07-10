@@ -73,7 +73,7 @@ namespace E_Barangay.Forms
         {
             user = UserManager.instance != null ? UserManager.instance.currentUser : null;
 
-            DoneBtn.Enabled = user.canEdit ? true : false;
+            DoneBtn.Visible = user.Comp_Edit ? true : false;
         }
 
         private void DoneBtn_Click(object sender, EventArgs e)
@@ -130,6 +130,11 @@ namespace E_Barangay.Forms
         }
 
         private void During_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Status_TextChanged(object sender, EventArgs e)
         {
 
         }

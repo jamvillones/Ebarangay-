@@ -30,8 +30,8 @@ namespace E_Barangay.Forms
             User user = Class.UserManager.instance.currentUser;
             if (user == null)
                 return;
-            EditBtn.Enabled = user.canEdit ? true : false;
-            DeleteBtn.Enabled = user.canDelete ? true : false;
+            EditBtn.Visible = user.Rec_Edit ? true : false;
+            DeleteBtn.Visible = user.Rec_Delete ? true : false;
         }
         public void AcceptDetails(Citizen c)
         {
