@@ -472,6 +472,7 @@
             this.dtBday.Size = new System.Drawing.Size(158, 20);
             this.dtBday.TabIndex = 28;
             this.dtBday.Value = new System.DateTime(2020, 6, 16, 0, 0, 0, 0);
+            this.dtBday.ValueChanged += new System.EventHandler(this.BdayPicker_ValueChanged);
             // 
             // label17
             // 
@@ -531,13 +532,13 @@
             // AgeField
             // 
             this.AgeField.BackColor = System.Drawing.Color.Silver;
-            this.AgeField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AgeField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AgeField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgeField.Location = new System.Drawing.Point(263, 17);
+            this.AgeField.Location = new System.Drawing.Point(263, 14);
             this.AgeField.MaxLength = 11;
             this.AgeField.Name = "AgeField";
             this.AgeField.ReadOnly = true;
-            this.AgeField.Size = new System.Drawing.Size(36, 13);
+            this.AgeField.Size = new System.Drawing.Size(36, 20);
             this.AgeField.TabIndex = 14;
             this.AgeField.TabStop = false;
             // 

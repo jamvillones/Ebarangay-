@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DeleteBtn = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label16 = new System.Windows.Forms.Label();
@@ -104,6 +104,7 @@
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.Size = new System.Drawing.Size(74, 23);
             this.DeleteBtn.TabIndex = 80;
+            this.DeleteBtn.TabStop = false;
             this.DeleteBtn.Text = "Delete";
             this.DeleteBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DeleteBtn.UseVisualStyleBackColor = true;
@@ -148,6 +149,7 @@
             this.PagIbig.ReadOnly = true;
             this.PagIbig.Size = new System.Drawing.Size(383, 13);
             this.PagIbig.TabIndex = 58;
+            this.PagIbig.TabStop = false;
             // 
             // SSS
             // 
@@ -161,6 +163,7 @@
             this.SSS.ReadOnly = true;
             this.SSS.Size = new System.Drawing.Size(383, 13);
             this.SSS.TabIndex = 53;
+            this.SSS.TabStop = false;
             // 
             // label14
             // 
@@ -194,6 +197,7 @@
             this.Philhealth.ReadOnly = true;
             this.Philhealth.Size = new System.Drawing.Size(383, 13);
             this.Philhealth.TabIndex = 56;
+            this.Philhealth.TabStop = false;
             // 
             // panel6
             // 
@@ -221,6 +225,7 @@
             this.VotersID.ReadOnly = true;
             this.VotersID.Size = new System.Drawing.Size(311, 13);
             this.VotersID.TabIndex = 53;
+            this.VotersID.TabStop = false;
             // 
             // label3
             // 
@@ -254,6 +259,7 @@
             this.PrecinctNumber.ReadOnly = true;
             this.PrecinctNumber.Size = new System.Drawing.Size(311, 13);
             this.PrecinctNumber.TabIndex = 56;
+            this.PrecinctNumber.TabStop = false;
             // 
             // panel5
             // 
@@ -283,35 +289,35 @@
             this.RecordsTable.AllowUserToDeleteRows = false;
             this.RecordsTable.AllowUserToResizeColumns = false;
             this.RecordsTable.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.RecordsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.RecordsTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.RecordsTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RecordsTable.BackgroundColor = System.Drawing.SystemColors.Control;
             this.RecordsTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.RecordsTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.RecordsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.RecordsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.RecordsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.RecordsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.RecordsTable.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.RecordsTable.DefaultCellStyle = dataGridViewCellStyle3;
             this.RecordsTable.EnableHeadersVisualStyles = false;
             this.RecordsTable.GridColor = System.Drawing.Color.DarkGray;
             this.RecordsTable.Location = new System.Drawing.Point(13, 31);
@@ -322,6 +328,7 @@
             this.RecordsTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.RecordsTable.Size = new System.Drawing.Size(410, 324);
             this.RecordsTable.TabIndex = 0;
+            this.RecordsTable.TabStop = false;
             this.RecordsTable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RecordsTable_CellDoubleClick);
             // 
             // Column1
@@ -417,6 +424,7 @@
             this.CivilStatusTxt.ReadOnly = true;
             this.CivilStatusTxt.Size = new System.Drawing.Size(383, 13);
             this.CivilStatusTxt.TabIndex = 57;
+            this.CivilStatusTxt.TabStop = false;
             // 
             // MotherTxt
             // 
@@ -430,6 +438,7 @@
             this.MotherTxt.ReadOnly = true;
             this.MotherTxt.Size = new System.Drawing.Size(383, 13);
             this.MotherTxt.TabIndex = 47;
+            this.MotherTxt.TabStop = false;
             // 
             // SpouseTxt
             // 
@@ -443,6 +452,7 @@
             this.SpouseTxt.ReadOnly = true;
             this.SpouseTxt.Size = new System.Drawing.Size(383, 13);
             this.SpouseTxt.TabIndex = 50;
+            this.SpouseTxt.TabStop = false;
             // 
             // FatherTxt
             // 
@@ -456,6 +466,7 @@
             this.FatherTxt.ReadOnly = true;
             this.FatherTxt.Size = new System.Drawing.Size(383, 13);
             this.FatherTxt.TabIndex = 51;
+            this.FatherTxt.TabStop = false;
             // 
             // panel3
             // 
@@ -502,6 +513,7 @@
             this.ContactTxt.ReadOnly = true;
             this.ContactTxt.Size = new System.Drawing.Size(383, 13);
             this.ContactTxt.TabIndex = 50;
+            this.ContactTxt.TabStop = false;
             // 
             // NameTxt
             // 
@@ -515,6 +527,7 @@
             this.NameTxt.ReadOnly = true;
             this.NameTxt.Size = new System.Drawing.Size(383, 13);
             this.NameTxt.TabIndex = 20;
+            this.NameTxt.TabStop = false;
             // 
             // label1
             // 
@@ -568,6 +581,7 @@
             this.SexTxt.ReadOnly = true;
             this.SexTxt.Size = new System.Drawing.Size(383, 13);
             this.SexTxt.TabIndex = 43;
+            this.SexTxt.TabStop = false;
             // 
             // BdayTxt
             // 
@@ -581,6 +595,7 @@
             this.BdayTxt.ReadOnly = true;
             this.BdayTxt.Size = new System.Drawing.Size(383, 13);
             this.BdayTxt.TabIndex = 44;
+            this.BdayTxt.TabStop = false;
             // 
             // AgeTxt
             // 
@@ -594,6 +609,7 @@
             this.AgeTxt.ReadOnly = true;
             this.AgeTxt.Size = new System.Drawing.Size(383, 13);
             this.AgeTxt.TabIndex = 45;
+            this.AgeTxt.TabStop = false;
             // 
             // label2
             // 
@@ -617,6 +633,7 @@
             this.AddressTxt.ReadOnly = true;
             this.AddressTxt.Size = new System.Drawing.Size(383, 13);
             this.AddressTxt.TabIndex = 48;
+            this.AddressTxt.TabStop = false;
             // 
             // panel2
             // 
@@ -641,6 +658,7 @@
             this.IsIndigent.Name = "IsIndigent";
             this.IsIndigent.Size = new System.Drawing.Size(79, 21);
             this.IsIndigent.TabIndex = 28;
+            this.IsIndigent.TabStop = false;
             this.IsIndigent.Text = "Indigent";
             this.IsIndigent.UseVisualStyleBackColor = true;
             // 
@@ -654,6 +672,7 @@
             this.IsPwd.Name = "IsPwd";
             this.IsPwd.Size = new System.Drawing.Size(58, 21);
             this.IsPwd.TabIndex = 29;
+            this.IsPwd.TabStop = false;
             this.IsPwd.Text = "PWD";
             this.IsPwd.UseVisualStyleBackColor = true;
             // 
@@ -667,6 +686,7 @@
             this.IsSenior.Name = "IsSenior";
             this.IsSenior.Size = new System.Drawing.Size(66, 21);
             this.IsSenior.TabIndex = 30;
+            this.IsSenior.TabStop = false;
             this.IsSenior.Text = "Senior";
             this.IsSenior.UseVisualStyleBackColor = true;
             // 
@@ -680,6 +700,7 @@
             this.IsStudent.Name = "IsStudent";
             this.IsStudent.Size = new System.Drawing.Size(74, 21);
             this.IsStudent.TabIndex = 31;
+            this.IsStudent.TabStop = false;
             this.IsStudent.Text = "Student";
             this.IsStudent.UseVisualStyleBackColor = true;
             // 
@@ -704,6 +725,7 @@
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.Size = new System.Drawing.Size(74, 23);
             this.EditBtn.TabIndex = 71;
+            this.EditBtn.TabStop = false;
             this.EditBtn.Text = "Edit Info";
             this.EditBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.EditBtn.UseVisualStyleBackColor = true;

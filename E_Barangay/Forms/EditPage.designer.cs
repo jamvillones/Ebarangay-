@@ -473,13 +473,13 @@
             // AgeField
             // 
             this.AgeField.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.AgeField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AgeField.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AgeField.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AgeField.Location = new System.Drawing.Point(263, 19);
+            this.AgeField.Location = new System.Drawing.Point(263, 14);
             this.AgeField.MaxLength = 11;
             this.AgeField.Name = "AgeField";
             this.AgeField.ReadOnly = true;
-            this.AgeField.Size = new System.Drawing.Size(36, 13);
+            this.AgeField.Size = new System.Drawing.Size(36, 20);
             this.AgeField.TabIndex = 14;
             this.AgeField.TabStop = false;
             // 
@@ -579,8 +579,8 @@
             this.BdayPicker.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.BdayPicker.Checked = false;
-            this.BdayPicker.CustomFormat = "";
-            this.BdayPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.BdayPicker.CustomFormat = "MMMM ,dd yyyy";
+            this.BdayPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.BdayPicker.Location = new System.Drawing.Point(68, 14);
             this.BdayPicker.Name = "BdayPicker";
             this.BdayPicker.Size = new System.Drawing.Size(158, 20);

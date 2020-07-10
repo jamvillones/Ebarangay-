@@ -40,7 +40,7 @@ namespace E_Barangay.Forms
 
                 foreach (var a in area)
                 {
-                    string s = "(" + a.Citizens.Count() + ")" + a.Name;
+                    string s = a.Name;
                     areaList.Items.Add(s);
                 }               
             }
