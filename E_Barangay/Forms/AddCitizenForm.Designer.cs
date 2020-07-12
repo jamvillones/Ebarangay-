@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCitizenForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.takePhotoBtn = new System.Windows.Forms.Button();
+            this.imagePanel = new System.Windows.Forms.Panel();
             this.picBox = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.firstName = new System.Windows.Forms.TextBox();
@@ -49,6 +51,11 @@
             this.age = new System.Windows.Forms.TextBox();
             this.birthdate = new System.Windows.Forms.DateTimePicker();
             this.contactgroup = new System.Windows.Forms.GroupBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.contact3 = new System.Windows.Forms.TextBox();
+            this.contact2 = new System.Windows.Forms.TextBox();
             this.contact1 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
@@ -79,16 +86,10 @@
             this.precinctNumber = new System.Windows.Forms.TextBox();
             this.registerBtn = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.imagePanel = new System.Windows.Forms.Panel();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.Id = new System.Windows.Forms.TextBox();
-            this.contact2 = new System.Windows.Forms.TextBox();
-            this.contact3 = new System.Windows.Forms.TextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.takePhotoBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            this.imagePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -108,7 +109,6 @@
             this.groupBox17.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.groupBox19.SuspendLayout();
-            this.imagePanel.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,6 +122,29 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Picture";
+            // 
+            // takePhotoBtn
+            // 
+            this.takePhotoBtn.Image = ((System.Drawing.Image)(resources.GetObject("takePhotoBtn.Image")));
+            this.takePhotoBtn.Location = new System.Drawing.Point(25, 120);
+            this.takePhotoBtn.Name = "takePhotoBtn";
+            this.takePhotoBtn.Size = new System.Drawing.Size(100, 23);
+            this.takePhotoBtn.TabIndex = 100;
+            this.takePhotoBtn.TabStop = false;
+            this.takePhotoBtn.Text = "Take photo";
+            this.takePhotoBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.takePhotoBtn.UseVisualStyleBackColor = true;
+            this.takePhotoBtn.Click += new System.EventHandler(this.takePhotoBtn_Click);
+            // 
+            // imagePanel
+            // 
+            this.imagePanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.imagePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.imagePanel.Controls.Add(this.picBox);
+            this.imagePanel.Location = new System.Drawing.Point(25, 14);
+            this.imagePanel.Name = "imagePanel";
+            this.imagePanel.Size = new System.Drawing.Size(100, 100);
+            this.imagePanel.TabIndex = 0;
             // 
             // picBox
             // 
@@ -346,6 +369,60 @@
             this.contactgroup.TabIndex = 10;
             this.contactgroup.TabStop = false;
             this.contactgroup.Text = "Contact Number";
+            // 
+            // panel10
+            // 
+            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel10.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel10.Location = new System.Drawing.Point(87, 33);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(30, 1);
+            this.panel10.TabIndex = 9;
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel9.Location = new System.Drawing.Point(46, 33);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(30, 1);
+            this.panel9.TabIndex = 8;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel8.Location = new System.Drawing.Point(5, 33);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(30, 1);
+            this.panel8.TabIndex = 7;
+            // 
+            // contact3
+            // 
+            this.contact3.BackColor = System.Drawing.SystemColors.Control;
+            this.contact3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contact3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contact3.Location = new System.Drawing.Point(87, 19);
+            this.contact3.MaxLength = 4;
+            this.contact3.Name = "contact3";
+            this.contact3.Size = new System.Drawing.Size(30, 15);
+            this.contact3.TabIndex = 2;
+            this.contact3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // contact2
+            // 
+            this.contact2.BackColor = System.Drawing.SystemColors.Control;
+            this.contact2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contact2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contact2.Location = new System.Drawing.Point(46, 19);
+            this.contact2.MaxLength = 3;
+            this.contact2.Name = "contact2";
+            this.contact2.Size = new System.Drawing.Size(30, 15);
+            this.contact2.TabIndex = 1;
+            this.contact2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // contact1
             // 
@@ -700,16 +777,6 @@
             this.panel7.Size = new System.Drawing.Size(746, 1);
             this.panel7.TabIndex = 10;
             // 
-            // imagePanel
-            // 
-            this.imagePanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.imagePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.imagePanel.Controls.Add(this.picBox);
-            this.imagePanel.Location = new System.Drawing.Point(25, 14);
-            this.imagePanel.Name = "imagePanel";
-            this.imagePanel.Size = new System.Drawing.Size(100, 100);
-            this.imagePanel.TabIndex = 0;
-            // 
             // groupBox12
             // 
             this.groupBox12.Controls.Add(this.Id);
@@ -733,74 +800,8 @@
             this.Id.Name = "Id";
             this.Id.Size = new System.Drawing.Size(579, 15);
             this.Id.TabIndex = 1;
+            this.Id.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Id_KeyDown);
             this.Id.Leave += new System.EventHandler(this.Id_Leave);
-            // 
-            // contact2
-            // 
-            this.contact2.BackColor = System.Drawing.SystemColors.Control;
-            this.contact2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contact2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contact2.Location = new System.Drawing.Point(46, 19);
-            this.contact2.MaxLength = 3;
-            this.contact2.Name = "contact2";
-            this.contact2.Size = new System.Drawing.Size(30, 15);
-            this.contact2.TabIndex = 1;
-            this.contact2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // contact3
-            // 
-            this.contact3.BackColor = System.Drawing.SystemColors.Control;
-            this.contact3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contact3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contact3.Location = new System.Drawing.Point(87, 19);
-            this.contact3.MaxLength = 4;
-            this.contact3.Name = "contact3";
-            this.contact3.Size = new System.Drawing.Size(30, 15);
-            this.contact3.TabIndex = 2;
-            this.contact3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel8
-            // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel8.Location = new System.Drawing.Point(5, 33);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(30, 1);
-            this.panel8.TabIndex = 7;
-            // 
-            // panel9
-            // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel9.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel9.Location = new System.Drawing.Point(46, 33);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(30, 1);
-            this.panel9.TabIndex = 8;
-            // 
-            // panel10
-            // 
-            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel10.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel10.Location = new System.Drawing.Point(87, 33);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(30, 1);
-            this.panel10.TabIndex = 9;
-            // 
-            // takePhotoBtn
-            // 
-            this.takePhotoBtn.Image = ((System.Drawing.Image)(resources.GetObject("takePhotoBtn.Image")));
-            this.takePhotoBtn.Location = new System.Drawing.Point(25, 120);
-            this.takePhotoBtn.Name = "takePhotoBtn";
-            this.takePhotoBtn.Size = new System.Drawing.Size(100, 23);
-            this.takePhotoBtn.TabIndex = 100;
-            this.takePhotoBtn.TabStop = false;
-            this.takePhotoBtn.Text = "Take photo";
-            this.takePhotoBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.takePhotoBtn.UseVisualStyleBackColor = true;
-            this.takePhotoBtn.Click += new System.EventHandler(this.takePhotoBtn_Click);
             // 
             // AddCitizenForm
             // 
@@ -846,6 +847,7 @@
             this.Text = "Add Citizen";
             this.Load += new System.EventHandler(this.AddCitizenForm_Load);
             this.groupBox1.ResumeLayout(false);
+            this.imagePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -880,7 +882,6 @@
             this.groupBox18.PerformLayout();
             this.groupBox19.ResumeLayout(false);
             this.groupBox19.PerformLayout();
-            this.imagePanel.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.ResumeLayout(false);

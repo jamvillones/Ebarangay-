@@ -120,11 +120,11 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="takePhotoBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAC/SURBVDhPzdI9DgFRFMXxia+aRIFSQ42IBWiUVHYhNiCiNb2GDViAgkI0NCJWoLIQ/5M37+VJ
-        ZibTcZJfcm/m3GQmmeDv0kTXoz0xbQwjE7xx8mgfw3bUd9nghn1kBD/a7TP11HfRMsUCDdSxg4pb1GCj
-        XuxxCUU8MUMLczxQgJJ4rAxwNKOLvrtvxvTjHs5mdLmgY8b04zz0rUvoLVa4Igcl9VipIMQBa5RhE3v8
-        wj0D9b6Oq9BflJX6P0sQfACNTzG4kTiaHgAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAABGdBTUEAALGPC/xhBQAAAL9JREFUOE/N
+        0j0OAVEUxfGJr5pEgVJDjYgFaJRUdiE2IKI1vYYNWICCQjQ0IlagshD/kzfv5UlmJtNxkl9yb+bcZCaZ
+        4O/SRNejPTFtDCMTvHHyaB/DdtR32eCGfWQEP9rtM/XUd9EyxQIN1LGDilvUYKNe7HEJRTwxQwtzPFCA
+        knisDHA0o4u+u2/G9OMezmZ0uaBjxvTjPPStS+gtVrgiByX1WKkgxAFrlGETe/zCPQP1vo6r0F+Ulfo/
+        SxB8AI1PMbiROJoeAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

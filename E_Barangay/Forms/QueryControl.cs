@@ -276,29 +276,28 @@ namespace E_Barangay.Forms
             }
         }
 
-        RegisterPage reg;
         private void CreateBtn_Click(object sender, EventArgs e)
         {
             OpenReg(this, new EventArgs());
         }
+
+        AddCitizenForm addCitizenForm;
         void OpenReg(object o, EventArgs e)
         {
-            if (reg == null)
+            if (addCitizenForm == null)
             {
-                reg = new RegisterPage();
-                reg.FormClosed += Reg_FormClosed;
-                //reg.SetId();
-                reg.LoadValues();
-                reg.Show();
+                addCitizenForm = new AddCitizenForm();
+                addCitizenForm.FormClosed += Reg_FormClosed;               
+                addCitizenForm.Show();
                 return;
             }
-            reg.BringToFront();
+            addCitizenForm.BringToFront();
         }
 
         private void Reg_FormClosed(object sender, FormClosedEventArgs e)
         {
             //throw new NotImplementedException();
-            reg = null;
+            addCitizenForm = null;
         }
         //PasswordForm passwordForm;
         private void ModifyBtn_Click(object sender, EventArgs e)

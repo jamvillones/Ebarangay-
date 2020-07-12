@@ -92,7 +92,9 @@ namespace E_Barangay.Forms
                 MessageBox.Show("Fill out required fields.");
                 return;
             }
-
+            MessageBox.Show("Registered successfully.");
+            registerCitizen();
+            clearFields();
             changeFieldColors(backColor);
         }
         void addReqControl(params Control[] c)
@@ -131,8 +133,6 @@ namespace E_Barangay.Forms
             foreach (var t in target)
                 t.Leave += NameTextBox_Callback;
         }
-        Color backColor;
-        List<Control> requiredControls = new List<Control>();
 
         private void birthdate_ValueChanged(object sender, EventArgs e)
         {
@@ -153,5 +153,80 @@ namespace E_Barangay.Forms
         {
             picBox.Image = e;
         }
+        void registerCitizen()
+        {
+            using (var eb = new EBarangayEntities())
+            {
+                var c = eb.Citizens.FirstOrDefault(x => x.ID == Id.Text);
+                if (c != null)
+                {
+                    MessageBox.Show("Id is already taken.");
+                    return;
+                }
+                Citizen citizen = new Citizen();
+
+                var a = eb.Areas.FirstOrDefault(x => x.Name == area.Text);
+                if (a != null)
+                    citizen.Area = a;
+                else
+                    citizen.Area = eb.Areas.First();
+
+                citizen.Picture = Class.ImageConverter.imageToByteArray(picBox.Image);
+
+                citizen.ID = Id.Text;
+                citizen.FirstName = firstName.Text;
+                citizen.MiddleName = middleName.Text;
+                citizen.LastName = lastName.Text;
+                citizen.Extension = extensionName.Text;
+
+                citizen.Address = address.Text;
+                citizen.Birthday = birthdate.Value;
+                citizen.Gender = sex.Text;
+                citizen.ContactInfo = contact1.Text + contact2.Text + contact3.Text;
+                citizen.CivilStatus = civilStatus.Text;
+
+                citizen.SpouseName = !string.IsNullOrEmpty(spouseName.Text) ? spouseName.Text : null;
+                citizen.FathersName = !string.IsNullOrEmpty(fathersName.Text) ? fathersName.Text : null;
+                citizen.MothersName = !string.IsNullOrEmpty(mothersName.Text) ? mothersName.Text : null;
+
+                citizen.Indigent = indigent.Checked;
+                citizen.Student = student.Checked;
+                citizen.PWD = pwd.Checked;
+                citizen.SeniorCitizen = senior.Checked;
+
+                citizen.SSS = !string.IsNullOrEmpty(sss.Text) ? sss.Text : null;
+                citizen.Philhealth = !string.IsNullOrEmpty(philhealth.Text) ? philhealth.Text : null;
+                citizen.PagIbig = !string.IsNullOrEmpty(pagibig.Text) ? pagibig.Text : null;
+                citizen.VoterID = !string.IsNullOrEmpty(votersId.Text) ? votersId.Text : null;
+                citizen.PrecinctNumber = !string.IsNullOrEmpty(precinctNumber.Text) ? precinctNumber.Text : null;
+
+                eb.Citizens.Add(citizen);
+                eb.SaveChanges();
+            }
+        }
+        void clearFields()
+        {
+            var textBoxes = this.GetContainedControls<TextBox>();
+            foreach (var t in textBoxes)
+                t.Clear();
+            var combos = this.GetContainedControls<ComboBox>();
+            foreach (var c in combos)
+                c.Text = string.Empty;
+            var checkBoxes = this.GetContainedControls<CheckBox>();
+            foreach (var cb in checkBoxes)
+                cb.Checked = false;
+
+            picBox.Image = null;
+        }
+        private void Id_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+
+            }
+        }
+        Color backColor;
+        List<Control> requiredControls = new List<Control>();
+
     }
 }
