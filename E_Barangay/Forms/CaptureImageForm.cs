@@ -16,14 +16,9 @@ namespace E_Barangay.Forms
     public partial class CaptureImageForm : Form
     {
         public event EventHandler<Image> OnSave;
-
-        //Interface.IImageAcceptor acceptor;
         FilterInfoCollection fic;
         VideoCaptureDevice vcd;
-        //public void GetAcceptor(Interface.IImageAcceptor i)
-        //{
-        //    acceptor = i;
-        //}
+       
         public CaptureImageForm()
         {
             InitializeComponent();
@@ -47,8 +42,10 @@ namespace E_Barangay.Forms
             if (DeviceOption.Items.Count == 0)
             {
                 MessageBox.Show("no camera detected");
-                CaptureBtn.Enabled = false;
-                SaveBtn.Enabled = false;
+                this.Close();
+
+                //CaptureBtn.Enabled = false;
+                //SaveBtn.Enabled = false;
                 return;
             }
 
