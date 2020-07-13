@@ -71,6 +71,7 @@ namespace E_Barangay.Forms
             SexTxt.Text = target.Gender;
             ContactTxt.Text = target.ContactInfo;
 
+
             CivilStatusTxt.Text = target.CivilStatus;
 
             MotherTxt.Text = target.MothersName;
@@ -99,24 +100,13 @@ namespace E_Barangay.Forms
             {
                 var t = ent.Citizens.FirstOrDefault(r => r.ID == target.ID);
                 ImageBox.Image = t.Picture == null ? Properties.Resources.image_50px : Class.ImageConverter.byteArrayToImage(t.Picture);
-
+                area.Text = t.Area.Name;
                 var connector = ent.CitizenToComplaints.Where(x => x.CitizenId == target.ID);
-                foreach(var c in connector)
+                foreach (var c in connector)
                 {
                     var comp = c.Complaint;
                     RecordsTable.Rows.Add(comp.ID, comp.SettlementDate.Value.ToString("MMMM dd, yyyy"), comp.Status);
                 }
-                //if (string.IsNullOrEmpty(t.RefRecords))
-                //{
-                //    return;
-                //}
-                //var recs = t.RefRecords.Split(',');
-                //foreach (var ids in recs)
-                //{
-                //    var complaint = ent.Complaints.FirstOrDefault(x => x.ID == ids);
-                //    if (complaint != null)
-                //        RecordsTable.Rows.Add(complaint.ID, complaint.SettlementDate.Value.ToString("MMMM dd, yyyy"), complaint.Status);
-                //}
             }
         }
 
@@ -139,7 +129,7 @@ namespace E_Barangay.Forms
             {
                 using (var eb = new EBarangayEntities())
                 {
-                    var c = eb.Citizens.FirstOrDefault(x => x.ID ==IDTxt.Text);
+                    var c = eb.Citizens.FirstOrDefault(x => x.ID == IDTxt.Text);
 
                     //foreach (var rec in c.Records.ToArray())
                     //    eb.Records.Remove(rec);
