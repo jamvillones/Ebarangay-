@@ -67,7 +67,7 @@ namespace E_Barangay.Forms
             IDTxt.Text = target.ID;
             NameTxt.Text = target.getNameWithSpace();
             AddressTxt.Text = target.Address;
-            BdayTxt.Text = target.Birthday.ToShortDateString();
+            BdayTxt.Text = target.Birthday.ToString("MMMM dd, yyyy");
             SexTxt.Text = target.Gender;
             ContactTxt.Text = target.ContactInfo;
 
