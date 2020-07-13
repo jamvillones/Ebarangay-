@@ -46,11 +46,11 @@ namespace E_Barangay.Forms
 
         /// EditPage epage;
         // PasswordForm passwordForm;
-        Class.PasswordToFormHandler<EditPage> passwordToFormHandler;
+        Class.PasswordToFormHandler<EditCitizen> passwordToFormHandler;
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            passwordToFormHandler = new Class.PasswordToFormHandler<EditPage>();
-            EditPage ep = passwordToFormHandler.form;
+            passwordToFormHandler = new Class.PasswordToFormHandler<EditCitizen>();
+            var ep = passwordToFormHandler.form;
             ep.AssignCitizen(target);
             this.Close();
 

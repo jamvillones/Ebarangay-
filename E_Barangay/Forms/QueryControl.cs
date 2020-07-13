@@ -190,17 +190,17 @@ namespace E_Barangay.Forms
         }
 
         #region Modify
-        PasswordToFormHandler<EditPage> edithandler;
+        PasswordToFormHandler<EditCitizen> edithandler;
         void OpenEditPage(Citizen c)
         {
             if (edithandler == null)
             {
-                edithandler = new PasswordToFormHandler<EditPage>();
+                edithandler = new PasswordToFormHandler<EditCitizen>();
                 edithandler.OnExit += Edithandler_OnExit;
                 /// disable modify button
                 ModifyBtn.Enabled = false;
                 /// set details to be edited
-                EditPage editPage = edithandler.form;
+                EditCitizen editPage = edithandler.form;
                 editPage.AssignCitizen(c);
             }
 

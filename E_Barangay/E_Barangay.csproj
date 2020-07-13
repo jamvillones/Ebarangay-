@@ -346,6 +346,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EBModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EditCitizen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditCitizen.Designer.cs">
+      <DependentUpon>EditCitizen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddCitizenForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -369,12 +375,6 @@
     </Compile>
     <Compile Include="Forms\EditOfficials.Designer.cs">
       <DependentUpon>EditOfficials.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\EditPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\EditPage.designer.cs">
-      <DependentUpon>EditPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Class\Statistics.cs" />
     <Compile Include="Class\UserManager.cs" />
@@ -449,12 +449,6 @@
     </Compile>
     <Compile Include="Forms\ComplaintViewForm.Designer.cs">
       <DependentUpon>ComplaintViewForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\RegisterPage.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\RegisterPage.Designer.cs">
-      <DependentUpon>RegisterPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Dashboard.cs">
       <SubType>UserControl</SubType>
@@ -617,6 +611,9 @@
     <EmbeddedResource Include="Documents\SSSPension.resx">
       <DependentUpon>SSSPension.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditCitizen.resx">
+      <DependentUpon>EditCitizen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddCitizenForm.resx">
       <DependentUpon>AddCitizenForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -628,9 +625,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditOfficials.resx">
       <DependentUpon>EditOfficials.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\EditPage.resx">
-      <DependentUpon>EditPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CaptureImageForm.resx">
       <DependentUpon>CaptureImageForm.cs</DependentUpon>
@@ -667,9 +661,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ComplaintViewForm.resx">
       <DependentUpon>ComplaintViewForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\RegisterPage.resx">
-      <DependentUpon>RegisterPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
