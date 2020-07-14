@@ -42,13 +42,13 @@ namespace E_Barangay.Documents
         }
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(Properties.Resources.BARANGAY_CLEARANCE, Point.Empty);
+            e.Graphics.DrawImage(Properties.Resources.Certificate_Template, Point.Empty);
             InitBodyRect(e);
             //Rectangle bodyRect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3, 548, 300);
-            string name = Printing.GetFullName(firstText,middleText,lastText,extText);
+            string name = Printing.GetName(firstText,middleText,lastText,extText);
             string text = "To whom it may concern:" + Printing.LineSpace
                           + Printing.Indention + "This is to certify that as per record of this Barangay " + name + ", " + Printing.IfControlEmpty(Age) + " years old, " + Printing.IfControlEmpty(CStatusOption) + ", Filipino and a resident of " + Printing.IfControlEmpty(Address) + ", whose signature appears below has no criminal, civil or administrative charges before this office and has good moral standing in the community." + Printing.LineSpace
-                          + Printing.Indention + "This certification is issued upon the request of " + Printing.MrOrMrs(SexOption.Text) + " " + lastText.Text + (string.IsNullOrEmpty(extText.Text) ? "" : " " + extText.Text) + " for the purpose of " + Printing.HisOrHer(SexOption.Text) + " " + Printing.IfControlEmpty(Purpose) + "." + Printing.LineSpace
+                          + Printing.Indention + "This certification is issued upon the request of " + Printing.MrOrMrs(SexOption.Text) + " " + lastText.Text + (string.IsNullOrEmpty(extText.Text) ? "" : " " + extText.Text) + " for " + Printing.IfControlEmpty(Purpose) + "." + Printing.LineSpace
                           + "WITNESS MY HAND SEAL, this " + IssuedOn.customFormat() + ", at Barangay Poblacion, Kalibo, Aklan, Philippines.";
 
             e.Graphics.DrawString(text, Printing.font, Brushes.Black, rect);

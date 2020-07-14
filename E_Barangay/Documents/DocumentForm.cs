@@ -34,7 +34,7 @@ namespace E_Barangay.Documents
         }
         public void CustomHeaderCert(PrintPageEventArgs e, string header)
         {
-            e.Graphics.DrawImage(Properties.Resources.CertCustomHeader, Point.Empty);
+            e.Graphics.DrawImage(Properties.Resources.Certificate_Template, Point.Empty);
             Rectangle r = new Rectangle(e.PageBounds.Width / 3 - 30,
                                       e.PageBounds.Height / 5 + 20,
                                       550, 100);

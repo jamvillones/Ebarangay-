@@ -737,6 +737,7 @@
             this.Id.ReadOnly = true;
             this.Id.Size = new System.Drawing.Size(579, 15);
             this.Id.TabIndex = 1;
+            this.Id.TabStop = false;
             this.Id.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Id_KeyDown);
             this.Id.Leave += new System.EventHandler(this.Id_Leave);
             // 

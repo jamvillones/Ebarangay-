@@ -130,7 +130,6 @@
             // 
             this.Purpose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Purpose.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Purpose.Location = new System.Drawing.Point(92, 17);
             this.Purpose.Name = "Purpose";
             this.Purpose.Size = new System.Drawing.Size(227, 20);

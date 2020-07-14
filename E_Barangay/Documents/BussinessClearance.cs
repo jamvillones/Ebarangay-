@@ -21,7 +21,7 @@ namespace E_Barangay.Documents
 
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(Properties.Resources.BussinessClearance, 0, 0);
+            e.Graphics.DrawImage(Properties.Resources.Certificate_Template, 0, 0);
             string name = Printing.GetFullName(firstName, middleName, lastName, extension);
             //var helper = new Class.NameHelper(name);
 

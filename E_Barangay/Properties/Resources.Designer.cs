@@ -63,119 +63,9 @@ namespace E_Barangay.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap add_user_group_man_man_20px {
+        public static System.Drawing.Bitmap Certificate_Template {
             get {
-                object obj = ResourceManager.GetObject("add_user_group_man_man_20px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap add_user_male_10px {
-            get {
-                object obj = ResourceManager.GetObject("add_user_male_10px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap BARANGAY_CLEARANCE {
-            get {
-                object obj = ResourceManager.GetObject("BARANGAY_CLEARANCE", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap BarangayCertDEPENDENT {
-            get {
-                object obj = ResourceManager.GetObject("BarangayCertDEPENDENT", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        public static byte[] BebasNeue_Regular {
-            get {
-                object obj = ResourceManager.GetObject("BebasNeue_Regular", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap BrgyCertificationforBurial {
-            get {
-                object obj = ResourceManager.GetObject("BrgyCertificationforBurial", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap BuildingPermit {
-            get {
-                object obj = ResourceManager.GetObject("BuildingPermit", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap BussinessClearance {
-            get {
-                object obj = ResourceManager.GetObject("BussinessClearance", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap CertAppearance {
-            get {
-                object obj = ResourceManager.GetObject("CertAppearance", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap CertCustomHeader {
-            get {
-                object obj = ResourceManager.GetObject("CertCustomHeader", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap CertificateOfIndigency {
-            get {
-                object obj = ResourceManager.GetObject("CertificateOfIndigency", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap CertIndigentMedicalAssistance {
-            get {
-                object obj = ResourceManager.GetObject("CertIndigentMedicalAssistance", resourceCulture);
+                object obj = ResourceManager.GetObject("Certificate_Template", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,26 +76,6 @@ namespace E_Barangay.Properties {
         public static System.Drawing.Bitmap eye_20px {
             get {
                 object obj = ResourceManager.GetObject("eye_20px", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap GenericBG {
-            get {
-                object obj = ResourceManager.GetObject("GenericBG", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        public static System.Drawing.Bitmap image_50px {
-            get {
-                object obj = ResourceManager.GetObject("image_50px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

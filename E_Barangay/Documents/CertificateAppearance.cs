@@ -22,7 +22,7 @@ namespace E_Barangay.Documents
         }
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(Properties.Resources.CertAppearance, new PointF(0, 0));
+            e.Graphics.DrawImage(Properties.Resources.Certificate_Template, new PointF(0, 0));
             // Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 + 50, 550, 380);
             InitBodyRect(e);
             string first = Printing.Indention + "This is to certify that " + Printing.MrOrMrs(SexOption.Text) + " " + Printing.GetFullName(firstName, middleName, lastName, extension) + " has appeared in my office." + Printing.LineSpace +

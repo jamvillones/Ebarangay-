@@ -118,52 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CertCustomHeader" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CertCustomHeader.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="image_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Certificate_Template" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Certificate Template.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="eye_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eye_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BussinessClearance" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BussinessClearance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CertAppearance" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CertAppearance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="add_user_male_10px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_user_male_10px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CertIndigentMedicalAssistance" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CertIndigentMedicalAssistance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="invisible_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\invisible_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BARANGAY_CLEARANCE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Barangay Clearance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BrgyCertificationforBurial" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BrgyCertificationforBurial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GenericBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Death Cert.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CertificateOfIndigency" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CertificateOfIndigency.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BarangayCertDEPENDENT" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BarangayCertDEPENDENT.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BuildingPermit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BuildingPermit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="add_user_group_man_man_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add_user_group_man_man_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BebasNeue_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BebasNeue Regular.otf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

@@ -49,7 +49,7 @@ namespace E_Barangay.Documents
         }
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(E_Barangay.Properties.Resources.BarangayCertDEPENDENT, new PointF(0, 0));
+            e.Graphics.DrawImage(E_Barangay.Properties.Resources.Certificate_Template, new PointF(0, 0));
             InitBodyRect(e);
             string name = Printing.GetFullName(firstName, middleName, lastName, extension);
             string text = "To whom it may concern:" + Printing.LineSpace +

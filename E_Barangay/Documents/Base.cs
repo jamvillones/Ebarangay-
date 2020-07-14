@@ -32,7 +32,7 @@ namespace E_Barangay.Documents
         {
             if (e.KeyCode == Keys.F4)
             {
-                Console.WriteLine("f4");
+                ///Console.WriteLine("f4");
                 debug = !debug;
                 printing.UpdateDocument();
             }
@@ -65,9 +65,10 @@ namespace E_Barangay.Documents
         }
         public virtual void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(Properties.Resources.GenericBG, Point.Empty);
+            //e.Graphics.DrawString("Test", Printing.font,Brushes.Black,Point.Empty);
+            e.Graphics.DrawImage(Properties.Resources.Certificate_Template, Point.Empty);
             InitBodyRect(e);
-            //DrawDebugRecs(rect, e);
+            ////DrawDebugRecs(rect, e);
         }
         #endregion
 

@@ -30,13 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Printing));
             this.printPreviewControl = new System.Windows.Forms.PrintPreviewControl();
-            this.printDocument = new System.Drawing.Printing.PrintDocument();
             this.UpdateBtn = new System.Windows.Forms.Button();
             this.PrintBtn = new System.Windows.Forms.Button();
             this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument = new System.Drawing.Printing.PrintDocument();
             this.printDialog = new System.Windows.Forms.PrintDialog();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // printPreviewControl
@@ -95,26 +93,7 @@
             // 
             // printDialog
             // 
-            this.printDialog.Document = this.printDocument;
             this.printDialog.UseEXDialog = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(269, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(284, 20);
-            this.textBox1.TabIndex = 9;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(203, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Control No.";
             // 
             // Printing
             // 
@@ -122,8 +101,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.UpdateBtn);
             this.Controls.Add(this.PrintBtn);
             this.Controls.Add(this.printPreviewControl);
@@ -131,7 +108,6 @@
             this.Size = new System.Drawing.Size(597, 799);
             this.Load += new System.EventHandler(this.Printing_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -140,10 +116,8 @@
         private System.Windows.Forms.PrintPreviewControl printPreviewControl;
         private System.Windows.Forms.Button UpdateBtn;
         private System.Windows.Forms.Button PrintBtn;
-        private System.Drawing.Printing.PrintDocument printDocument;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog;
         private System.Windows.Forms.PrintDialog printDialog;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Drawing.Printing.PrintDocument printDocument;
     }
 }

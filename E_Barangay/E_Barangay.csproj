@@ -28,8 +28,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>E_Barangay</ProductName>
     <PublisherName>Ninotech_Jam</PublisherName>
-    <ApplicationRevision>17</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>19</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -69,6 +69,15 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>E_Barangay.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AForge">
       <HintPath>..\packages\Aforge\AForge.dll</HintPath>
@@ -84,12 +93,6 @@
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="LibUsbDotNet.LibUsbDotNet, Version=2.2.0.0, Culture=neutral, PublicKeyToken=c677239abe1e02a9, processorArchitecture=MSIL">
-      <HintPath>..\packages\LibUsbDotNet.2.2.29\lib\net45\LibUsbDotNet.LibUsbDotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -264,12 +267,6 @@
     </Compile>
     <Compile Include="Documents\CertforPRC.Designer.cs">
       <DependentUpon>CertforPRC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Documents\CertForVoucherProgram.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Documents\CertForVoucherProgram.Designer.cs">
-      <DependentUpon>CertForVoucherProgram.cs</DependentUpon>
     </Compile>
     <Compile Include="Documents\CertificateAppearance.cs">
       <SubType>Form</SubType>
@@ -578,9 +575,6 @@
     <EmbeddedResource Include="Documents\CertforPRC.resx">
       <DependentUpon>CertforPRC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Documents\CertForVoucherProgram.resx">
-      <DependentUpon>CertForVoucherProgram.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Documents\CertificateAppearance.resx">
       <DependentUpon>CertificateAppearance.cs</DependentUpon>
     </EmbeddedResource>
@@ -706,6 +700,7 @@
       <DependentUpon>LoginModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -746,23 +741,10 @@
       <DependentUpon>LoginModel.edmx</DependentUpon>
       <LastGenOutput>LoginModel.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\add_user_group_man_man_20px.png" />
-    <None Include="Resources\add_user_male_10px.png" />
-    <None Include="Resources\BebasNeue Regular.otf" />
-    <None Include="Resources\CertCustomHeader.png" />
-    <None Include="Resources\CertIndigentMedicalAssistance.png" />
-    <None Include="Resources\BrgyCertificationforBurial.png" />
-    <None Include="Resources\BarangayClearance_tmp.png" />
-    <None Include="Resources\BarangayCertDEPENDENT.png" />
-    <None Include="Resources\CertificateOfIndigency.png" />
-    <None Include="Resources\CertAppearance.png" />
-    <None Include="Resources\BuildingPermit.png" />
-    <None Include="Resources\Death Cert.png" />
-    <None Include="Resources\BussinessClearance.png" />
+    <None Include="Resources\Certificate Template.jpg" />
+    <None Include="Resources\CertBG.png" />
     <None Include="Resources\invisible_20px.png" />
     <None Include="Resources\eye_20px.png" />
-    <None Include="Resources\image_50px.png" />
-    <None Include="Resources\Barangay Clearance.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

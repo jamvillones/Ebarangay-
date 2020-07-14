@@ -23,7 +23,7 @@ namespace E_Barangay.Documents
 
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(Properties.Resources.BrgyCertificationforBurial, Point.Empty);
+            e.Graphics.DrawImage(Properties.Resources.Certificate_Template, Point.Empty);
             Rectangle rect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3 - 10, 550, 380);
 
             string name = Printing.GetFullName(firstName, middleName, lastName, ext);

@@ -33,7 +33,7 @@ namespace E_Barangay.Forms
 
         private void Printing_Load(object sender, EventArgs e)
         {
-            // printPreviewControl.Document = printDocument;
+            printPreviewControl.Document = printDocument;
 
         }
         public static void DrawValidityOr(PrintPageEventArgs e, string orNo, DateTime orIssue, DateTime vdt)
@@ -65,7 +65,7 @@ namespace E_Barangay.Forms
 
             Rectangle nameRec = new Rectangle(e.PageBounds.Width / 3 - 30,
                                               e.PageBounds.Height * 2 / 3 + 40,
-                                              n.Width < titleBoxSize.Width ? (int)titleBoxSize.Width + 1 : (int)n.Width, (int)n.Height);
+                                              n.Width < titleBoxSize.Width ? (int)titleBoxSize.Width + 2 : (int)n.Width, (int)n.Height);
 
             e.Graphics.DrawString(name.ToUpper(), Printing.fontBold, Brushes.Black, nameRec, format);
 
@@ -212,16 +212,11 @@ namespace E_Barangay.Forms
         {
             ToggleEdit();
         }
-        //private void PrintPreviewBtn_Click(object sender, EventArgs e)
-        //{
-        //    ToggleEdit();
-        //    printPreviewDialog.Document = document;
-        //    printPreviewDialog.ShowDialog();
-        //}
 
         private void PrintBtn_Click(object sender, EventArgs e)
         {
             printDialog.Document = document;
+            //document.Print();
             DialogResult result = printDialog.ShowDialog();
             if (result == DialogResult.OK)
             {
