@@ -64,7 +64,7 @@ namespace E_Barangay.Forms
         {
             dgvRecords.Rows.Clear();
             foreach (var x in recs)
-                dgvRecords.Rows.Add(x.ID, x.Status, x.SettlementDate, x.DateHappened);
+                dgvRecords.Rows.Add(x.ID, x.Status, x.SettlementDate.Value.ToString("MMMM dd, yyyy hh:mm tt"), x.DateHappened.Value.ToString("MMMM dd, yyyy hh:mm tt"));
         }
         FileComplaintForm comp;
         private void addComplaintBtn_Click(object sender, EventArgs e)
