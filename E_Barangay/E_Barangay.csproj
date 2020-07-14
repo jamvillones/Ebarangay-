@@ -742,7 +742,6 @@
       <LastGenOutput>LoginModel.cs</LastGenOutput>
     </Content>
     <None Include="Resources\Certificate Template.jpg" />
-    <None Include="Resources\CertBG.png" />
     <None Include="Resources\invisible_20px.png" />
     <None Include="Resources\eye_20px.png" />
   </ItemGroup>
