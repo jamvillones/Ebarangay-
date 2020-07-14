@@ -51,12 +51,7 @@
             this.age = new System.Windows.Forms.TextBox();
             this.birthdate = new System.Windows.Forms.DateTimePicker();
             this.contactgroup = new System.Windows.Forms.GroupBox();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.contact3 = new System.Windows.Forms.TextBox();
-            this.contact2 = new System.Windows.Forms.TextBox();
-            this.contact1 = new System.Windows.Forms.TextBox();
+            this.contact = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.sex = new System.Windows.Forms.ComboBox();
@@ -356,85 +351,28 @@
             // 
             // contactgroup
             // 
-            this.contactgroup.Controls.Add(this.panel10);
-            this.contactgroup.Controls.Add(this.panel9);
-            this.contactgroup.Controls.Add(this.panel8);
-            this.contactgroup.Controls.Add(this.contact3);
-            this.contactgroup.Controls.Add(this.contact2);
-            this.contactgroup.Controls.Add(this.contact1);
+            this.contactgroup.Controls.Add(this.contact);
             this.contactgroup.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contactgroup.Location = new System.Drawing.Point(500, 162);
             this.contactgroup.Name = "contactgroup";
             this.contactgroup.Size = new System.Drawing.Size(258, 40);
             this.contactgroup.TabIndex = 10;
             this.contactgroup.TabStop = false;
-            this.contactgroup.Text = "Contact Number";
+            this.contactgroup.Text = "Contact Details";
             // 
-            // panel10
+            // contact
             // 
-            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.contact.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel10.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel10.Location = new System.Drawing.Point(87, 33);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(30, 1);
-            this.panel10.TabIndex = 9;
-            // 
-            // panel9
-            // 
-            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel9.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel9.Location = new System.Drawing.Point(46, 33);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(30, 1);
-            this.panel9.TabIndex = 8;
-            // 
-            // panel8
-            // 
-            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel8.Location = new System.Drawing.Point(5, 33);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(30, 1);
-            this.panel8.TabIndex = 7;
-            // 
-            // contact3
-            // 
-            this.contact3.BackColor = System.Drawing.SystemColors.Control;
-            this.contact3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contact3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contact3.Location = new System.Drawing.Point(87, 19);
-            this.contact3.MaxLength = 4;
-            this.contact3.Name = "contact3";
-            this.contact3.Size = new System.Drawing.Size(30, 15);
-            this.contact3.TabIndex = 2;
-            this.contact3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // contact2
-            // 
-            this.contact2.BackColor = System.Drawing.SystemColors.Control;
-            this.contact2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contact2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contact2.Location = new System.Drawing.Point(46, 19);
-            this.contact2.MaxLength = 3;
-            this.contact2.Name = "contact2";
-            this.contact2.Size = new System.Drawing.Size(30, 15);
-            this.contact2.TabIndex = 1;
-            this.contact2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // contact1
-            // 
-            this.contact1.BackColor = System.Drawing.SystemColors.Control;
-            this.contact1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contact1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contact1.Location = new System.Drawing.Point(5, 19);
-            this.contact1.MaxLength = 4;
-            this.contact1.Name = "contact1";
-            this.contact1.Size = new System.Drawing.Size(30, 15);
-            this.contact1.TabIndex = 0;
-            this.contact1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.contact.BackColor = System.Drawing.SystemColors.Control;
+            this.contact.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.contact.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contact.Location = new System.Drawing.Point(5, 19);
+            this.contact.MaxLength = 4;
+            this.contact.Name = "contact";
+            this.contact.Size = new System.Drawing.Size(247, 15);
+            this.contact.TabIndex = 0;
+            this.contact.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel3
             // 
@@ -910,7 +848,7 @@
         private System.Windows.Forms.DateTimePicker birthdate;
         private System.Windows.Forms.TextBox age;
         private System.Windows.Forms.GroupBox contactgroup;
-        private System.Windows.Forms.TextBox contact1;
+        private System.Windows.Forms.TextBox contact;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.ComboBox sex;
@@ -944,11 +882,6 @@
         private System.Windows.Forms.Panel imagePanel;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.TextBox Id;
-        private System.Windows.Forms.TextBox contact3;
-        private System.Windows.Forms.TextBox contact2;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button takePhotoBtn;
     }
 }

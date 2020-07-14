@@ -42,7 +42,6 @@
             this.DoneBtn = new System.Windows.Forms.Button();
             this.During = new System.Windows.Forms.TextBox();
             this.RecordedOn = new System.Windows.Forms.TextBox();
-            this.settleSched = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -53,6 +52,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lvComplainants = new System.Windows.Forms.ListView();
+            this.settleSched = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -60,9 +60,10 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(417, 78);
+            this.label6.Location = new System.Drawing.Point(523, 78);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(102, 14);
             this.label6.TabIndex = 25;
@@ -136,7 +137,7 @@
             this.narrativeField.Name = "narrativeField";
             this.narrativeField.ReadOnly = true;
             this.narrativeField.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.narrativeField.Size = new System.Drawing.Size(758, 146);
+            this.narrativeField.Size = new System.Drawing.Size(864, 219);
             this.narrativeField.TabIndex = 21;
             this.narrativeField.TabStop = false;
             // 
@@ -166,9 +167,10 @@
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(482, 9);
+            this.label8.Location = new System.Drawing.Point(588, 9);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(37, 14);
             this.label8.TabIndex = 29;
@@ -176,11 +178,12 @@
             // 
             // Status
             // 
+            this.Status.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Status.BackColor = System.Drawing.SystemColors.Control;
             this.Status.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Status.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Status.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Status.Location = new System.Drawing.Point(525, 8);
+            this.Status.Location = new System.Drawing.Point(631, 8);
             this.Status.MaxLength = 50;
             this.Status.Name = "Status";
             this.Status.ReadOnly = true;
@@ -191,9 +194,10 @@
             // 
             // DoneBtn
             // 
+            this.DoneBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.DoneBtn.BackColor = System.Drawing.SystemColors.ControlLight;
             this.DoneBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DoneBtn.Location = new System.Drawing.Point(336, 446);
+            this.DoneBtn.Location = new System.Drawing.Point(388, 519);
             this.DoneBtn.Name = "DoneBtn";
             this.DoneBtn.Size = new System.Drawing.Size(112, 23);
             this.DoneBtn.TabIndex = 30;
@@ -229,41 +233,34 @@
             this.RecordedOn.TabStop = false;
             this.RecordedOn.TextChanged += new System.EventHandler(this.RecordedOn_TextChanged);
             // 
-            // settleSched
-            // 
-            this.settleSched.BackColor = System.Drawing.SystemColors.Control;
-            this.settleSched.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.settleSched.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settleSched.Location = new System.Drawing.Point(525, 77);
-            this.settleSched.MaxLength = 50;
-            this.settleSched.Name = "settleSched";
-            this.settleSched.ReadOnly = true;
-            this.settleSched.Size = new System.Drawing.Size(248, 15);
-            this.settleSched.TabIndex = 33;
-            this.settleSched.TabStop = false;
-            // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(12, 129);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(761, 1);
+            this.panel1.Size = new System.Drawing.Size(867, 1);
             this.panel1.TabIndex = 34;
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(12, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(761, 1);
+            this.panel2.Size = new System.Drawing.Size(867, 1);
             this.panel2.TabIndex = 35;
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(12, 268);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(761, 1);
+            this.panel3.Size = new System.Drawing.Size(867, 1);
             this.panel3.TabIndex = 35;
             // 
             // tableLayoutPanel1
@@ -279,7 +276,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(761, 118);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(867, 118);
             this.tableLayoutPanel1.TabIndex = 36;
             // 
             // panel5
@@ -287,9 +284,9 @@
             this.panel5.Controls.Add(this.label9);
             this.panel5.Controls.Add(this.lvRespondents);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(383, 3);
+            this.panel5.Location = new System.Drawing.Point(436, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(375, 112);
+            this.panel5.Size = new System.Drawing.Size(428, 112);
             this.panel5.TabIndex = 38;
             // 
             // label9
@@ -311,7 +308,7 @@
             this.lvRespondents.HideSelection = false;
             this.lvRespondents.Location = new System.Drawing.Point(0, 28);
             this.lvRespondents.Name = "lvRespondents";
-            this.lvRespondents.Size = new System.Drawing.Size(375, 84);
+            this.lvRespondents.Size = new System.Drawing.Size(428, 84);
             this.lvRespondents.TabIndex = 0;
             this.lvRespondents.UseCompatibleStateImageBehavior = false;
             this.lvRespondents.View = System.Windows.Forms.View.List;
@@ -323,7 +320,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(374, 112);
+            this.panel4.Size = new System.Drawing.Size(427, 112);
             this.panel4.TabIndex = 0;
             // 
             // label2
@@ -345,21 +342,32 @@
             this.lvComplainants.HideSelection = false;
             this.lvComplainants.Location = new System.Drawing.Point(0, 28);
             this.lvComplainants.Name = "lvComplainants";
-            this.lvComplainants.Size = new System.Drawing.Size(374, 84);
+            this.lvComplainants.Size = new System.Drawing.Size(427, 84);
             this.lvComplainants.TabIndex = 0;
             this.lvComplainants.UseCompatibleStateImageBehavior = false;
             this.lvComplainants.View = System.Windows.Forms.View.List;
+            // 
+            // settleSched
+            // 
+            this.settleSched.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.settleSched.CustomFormat = "MMMM dd, yyyy hh:mm tt";
+            this.settleSched.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.settleSched.Location = new System.Drawing.Point(631, 72);
+            this.settleSched.Name = "settleSched";
+            this.settleSched.Size = new System.Drawing.Size(245, 20);
+            this.settleSched.TabIndex = 37;
+            this.settleSched.ValueChanged += new System.EventHandler(this.settleSched_ValueChanged);
             // 
             // ComplaintViewForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(785, 481);
+            this.ClientSize = new System.Drawing.Size(891, 554);
+            this.Controls.Add(this.settleSched);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.settleSched);
             this.Controls.Add(this.RecordedOn);
             this.Controls.Add(this.During);
             this.Controls.Add(this.DoneBtn);
@@ -407,7 +415,6 @@
         private System.Windows.Forms.Button DoneBtn;
         private System.Windows.Forms.TextBox During;
         private System.Windows.Forms.TextBox RecordedOn;
-        private System.Windows.Forms.TextBox settleSched;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
@@ -418,5 +425,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ListView lvRespondents;
+        private System.Windows.Forms.DateTimePicker settleSched;
     }
 }

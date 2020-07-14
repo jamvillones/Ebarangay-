@@ -17,6 +17,20 @@ namespace E_Barangay.Forms
         {
             InitializeComponent();
         }
+        void setTextBoxTextLimit()
+        {
+            Id.MaxLength = 13;
+            firstName.MaxLength = middleName.MaxLength = lastName.MaxLength = 20;
+            extensionName.MaxLength = 10;
+            address.MaxLength = 50;
+
+            sex.MaxLength = 50;
+            civilStatus.MaxLength = 50;
+
+            spouseName.MaxLength = fathersName.MaxLength = mothersName.MaxLength = 50;
+            contact.MaxLength = 50;
+            votersId.MaxLength = precinctNumber.MaxLength = sss.MaxLength = philhealth.MaxLength = pagibig.MaxLength = 50;
+        }
         public void AssignCitizen(Citizen c)
         {
             citizen = c;
@@ -55,8 +69,9 @@ namespace E_Barangay.Forms
                 area.Text = t.Area.Name;
             }
         }
-        private void AddCitizen_Load(object sender, EventArgs e)
+        private void EditCitizen_Load(object sender, EventArgs e)
         {
+            setTextBoxTextLimit();
             //AssignCitizen();
 
             backColor = this.BackColor;

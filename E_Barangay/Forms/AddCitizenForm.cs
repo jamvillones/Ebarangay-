@@ -17,9 +17,25 @@ namespace E_Barangay.Forms
         {
             InitializeComponent();
         }
+        void setTextBoxTextLimit()
+        {
+            Id.MaxLength = 13;
+            firstName.MaxLength = middleName.MaxLength = lastName.MaxLength = 20;
+            extensionName.MaxLength = 10;
+            address.MaxLength = 50;
+
+            sex.MaxLength = 50;
+            civilStatus.MaxLength = 50;
+
+            spouseName.MaxLength = fathersName.MaxLength = mothersName.MaxLength = 50;
+            contact.MaxLength = 50;
+            votersId.MaxLength = precinctNumber.MaxLength = sss.MaxLength = philhealth.MaxLength = pagibig.MaxLength = 50;
+        }
 
         private void AddCitizenForm_Load(object sender, EventArgs e)
         {
+            setTextBoxTextLimit();
+
             backColor = this.BackColor;
 
             capitalizeFirstLetterTextboxes(firstName, middleName, lastName, extensionName);
@@ -32,8 +48,9 @@ namespace E_Barangay.Forms
             /// gets textboxes in contact group and subscribe it to callback
             var contactTexts = contactgroup.GetContainedControls<TextBox>();
             Console.WriteLine(contactTexts.Count);
-            foreach (var c in contactTexts)
-                c.TextChanged += contactText_Callback;
+
+            //foreach (var c in contactTexts)
+            //    c.TextChanged += contactText_Callback;
 
             area.Items.Clear();
             using (var eb = new EBarangayEntities())
@@ -48,6 +65,7 @@ namespace E_Barangay.Forms
             addReqControl(Id, firstName, middleName, lastName, address, area, birthdate, sex, civilStatus);
             Console.WriteLine(requiredControls.Count);
         }
+
         /// <summary>
         /// this enables and disable spouse field depending in civil status input
         /// </summary>
@@ -64,12 +82,13 @@ namespace E_Barangay.Forms
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        void contactText_Callback(object sender, EventArgs e)
-        {
-            TextBox t = (TextBox)sender;
-            if (t.TextLength == t.MaxLength)
-                this.SelectNextControl(t, true, true, true, true);
-        }
+        //void contactText_Callback(object sender, EventArgs e)
+        //{
+        //    TextBox t = (TextBox)sender;
+        //    if (t.TextLength == t.MaxLength)
+        //        this.SelectNextControl(t, true, true, true, true);
+        //}
+
         bool canSave()
         {
             foreach (var c in requiredControls)
@@ -182,7 +201,7 @@ namespace E_Barangay.Forms
                 citizen.Address = address.Text;
                 citizen.Birthday = birthdate.Value;
                 citizen.Gender = sex.Text;
-                citizen.ContactInfo = contact1.Text + contact2.Text + contact3.Text;
+                citizen.ContactInfo = contact.Text;
                 citizen.CivilStatus = civilStatus.Text;
 
                 citizen.SpouseName = !string.IsNullOrEmpty(spouseName.Text) ? spouseName.Text : null;

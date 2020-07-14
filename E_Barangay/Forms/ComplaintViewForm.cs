@@ -13,7 +13,7 @@ namespace E_Barangay.Forms
 {
     public partial class ComplaintViewForm : Form
     {
-        public event EventHandler OnMarkedSettled;
+        public event EventHandler OnComplaintChanges;
 
         Complaint currRec;
         public ComplaintViewForm()
@@ -40,7 +40,7 @@ namespace E_Barangay.Forms
 
             During.Text = currRec.DateHappened.Value.ToString("MMMM dd, yyyy hh:mm tt");
             RecordedOn.Text = currRec.DateIssued.Value.ToString("MMMM dd, yyyy hh:mm tt");
-            settleSched.Text = currRec.SettlementDate.Value.ToString("MMMM dd, yyyy hh:mm tt");
+            settleSched.Value = currRec.SettlementDate.Value;
 
             var compNames = currRec.CompNames.Split(',');
             foreach (var c in compNames)
@@ -74,6 +74,7 @@ namespace E_Barangay.Forms
             user = UserManager.instance != null ? UserManager.instance.currentUser : null;
 
             DoneBtn.Visible = user.Comp_Edit ? true : false;
+            settleSched.Enabled = user.Comp_Edit ? true : false;
         }
 
         private void DoneBtn_Click(object sender, EventArgs e)
@@ -109,7 +110,7 @@ namespace E_Barangay.Forms
 
                 rec.Status = "Settled";
                 eb.SaveChanges();
-                OnMarkedSettled?.Invoke(this, new EventArgs());
+                OnComplaintChanges?.Invoke(this, new EventArgs());
 
             }
         }
@@ -137,6 +138,17 @@ namespace E_Barangay.Forms
         private void Status_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void settleSched_ValueChanged(object sender, EventArgs e)
+        {
+            using(var eb = new EBarangayEntities())
+            {
+                var c = eb.Complaints.FirstOrDefault(x => x.ID == controlNumberField.Text);
+                c.SettlementDate = settleSched.Value;
+                eb.SaveChanges();
+            }
+            OnComplaintChanges?.Invoke(this, new EventArgs());
         }
     }
 }

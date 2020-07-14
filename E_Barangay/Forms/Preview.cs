@@ -53,7 +53,6 @@ namespace E_Barangay.Forms
             var ep = passwordToFormHandler.form;
             ep.AssignCitizen(target);
             this.Close();
-
         }
 
         string emptyField = string.Empty;

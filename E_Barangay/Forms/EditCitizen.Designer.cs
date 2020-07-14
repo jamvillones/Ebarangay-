@@ -358,7 +358,7 @@
             this.contactgroup.Size = new System.Drawing.Size(258, 40);
             this.contactgroup.TabIndex = 10;
             this.contactgroup.TabStop = false;
-            this.contactgroup.Text = "Contact Number";
+            this.contactgroup.Text = "Contact Details";
             // 
             // contact
             // 
@@ -782,7 +782,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit Citizen";
-            this.Load += new System.EventHandler(this.AddCitizen_Load);
+            this.Load += new System.EventHandler(this.EditCitizen_Load);
             this.groupBox1.ResumeLayout(false);
             this.imagePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
