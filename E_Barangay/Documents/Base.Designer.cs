@@ -45,11 +45,9 @@
             // 
             // printing
             // 
-            this.printing.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.printing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.printing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.printing.Dock = System.Windows.Forms.DockStyle.Right;
             this.printing.Location = new System.Drawing.Point(352, 0);
             this.printing.Name = "printing";
             this.printing.Size = new System.Drawing.Size(562, 690);
