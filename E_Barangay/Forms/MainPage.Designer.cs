@@ -291,9 +291,9 @@ namespace E_Barangay.Forms
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(43, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 23);
+            this.label1.Size = new System.Drawing.Size(157, 23);
             this.label1.TabIndex = 1;
-            this.label1.Text = "E Barangay";
+            this.label1.Text = "E-BARANGAY";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.UseCompatibleTextRendering = true;
             // 

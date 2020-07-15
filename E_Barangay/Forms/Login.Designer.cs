@@ -53,7 +53,7 @@
             this.UsernameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UsernameTxt.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameTxt.ForeColor = System.Drawing.SystemColors.Info;
-            this.UsernameTxt.Location = new System.Drawing.Point(68, 51);
+            this.UsernameTxt.Location = new System.Drawing.Point(68, 59);
             this.UsernameTxt.Name = "UsernameTxt";
             this.UsernameTxt.Size = new System.Drawing.Size(240, 22);
             this.UsernameTxt.TabIndex = 0;
@@ -64,7 +64,7 @@
             this.PasswordTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PasswordTxt.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordTxt.ForeColor = System.Drawing.SystemColors.Info;
-            this.PasswordTxt.Location = new System.Drawing.Point(68, 97);
+            this.PasswordTxt.Location = new System.Drawing.Point(68, 105);
             this.PasswordTxt.Name = "PasswordTxt";
             this.PasswordTxt.PasswordChar = '*';
             this.PasswordTxt.Size = new System.Drawing.Size(214, 22);
@@ -73,7 +73,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(34, 75);
+            this.panel1.Location = new System.Drawing.Point(34, 83);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(274, 1);
             this.panel1.TabIndex = 4;
@@ -81,7 +81,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(34, 121);
+            this.panel2.Location = new System.Drawing.Point(34, 129);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(274, 1);
             this.panel2.TabIndex = 5;
@@ -106,7 +106,7 @@
             this.RevealBtn.FlatAppearance.BorderSize = 0;
             this.RevealBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RevealBtn.Image = global::E_Barangay.Properties.Resources.eye_20px;
-            this.RevealBtn.Location = new System.Drawing.Point(282, 97);
+            this.RevealBtn.Location = new System.Drawing.Point(278, 105);
             this.RevealBtn.Name = "RevealBtn";
             this.RevealBtn.Size = new System.Drawing.Size(28, 22);
             this.RevealBtn.TabIndex = 7;
@@ -117,11 +117,11 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(96, 9);
+            this.label1.Location = new System.Drawing.Point(72, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 23);
+            this.label1.Size = new System.Drawing.Size(199, 39);
             this.label1.TabIndex = 6;
             this.label1.Text = "E-BARANGAY";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,7 +129,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(34, 92);
+            this.pictureBox2.Location = new System.Drawing.Point(34, 100);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(27, 27);
             this.pictureBox2.TabIndex = 3;
@@ -138,7 +138,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(34, 46);
+            this.pictureBox1.Location = new System.Drawing.Point(34, 54);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(27, 27);
             this.pictureBox1.TabIndex = 2;
@@ -149,14 +149,14 @@
             this.LoginBtn.BackColor = System.Drawing.Color.Teal;
             this.LoginBtn.FlatAppearance.BorderSize = 0;
             this.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LoginBtn.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBtn.ForeColor = System.Drawing.Color.Transparent;
             this.LoginBtn.Location = new System.Drawing.Point(108, 348);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(150, 43);
             this.LoginBtn.TabIndex = 8;
             this.LoginBtn.TabStop = false;
-            this.LoginBtn.Text = "Login";
+            this.LoginBtn.Text = "LOGIN";
             this.LoginBtn.UseVisualStyleBackColor = false;
             this.LoginBtn.Click += new System.EventHandler(this.LoginBtn_Click);
             // 
@@ -165,7 +165,7 @@
             this.ExitBtn.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ExitBtn.FlatAppearance.BorderSize = 0;
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitBtn.ForeColor = System.Drawing.Color.Black;
             this.ExitBtn.Image = ((System.Drawing.Image)(resources.GetObject("ExitBtn.Image")));
             this.ExitBtn.Location = new System.Drawing.Point(334, 12);

@@ -36,7 +36,7 @@ namespace E_Barangay.Forms
                 var area = statistics.areas[i];
 
                 point.YValues[0] = statistics.areas[i].PopulationCount;
-                point.Label = statistics.areas[i].GetPercentage(statistics.totalPopulation).ToString() + "%";
+                point.Label = statistics.areas[i].PopulationCount == 0?"": statistics.areas[i].GetPercentage(statistics.totalPopulation).ToString() + "%";
                 point.LegendText = statistics.areas[i].Name + "(" + area.PopulationCount + ")";
             }
 
