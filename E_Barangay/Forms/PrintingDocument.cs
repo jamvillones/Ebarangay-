@@ -9,7 +9,7 @@ namespace E_Barangay.Forms
 {
     public partial class PrintingDocument : UserControl
     {
-        Form form;
+        ///Form form;
 
         string[] docNames = {
             "Brgy. Clearance",
@@ -56,27 +56,32 @@ namespace E_Barangay.Forms
             foreach (var x in d)
                 DocumentList.Rows.Add("OPEN", x);
         }
-        public event EventHandler<bool> OpeningForm;
+
+        //public event EventHandler<bool> OpeningForm;
 
         void CreateForm<T>() where T : Form, new()
         {
-            if (form == null)
-            {
-                OpeningForm?.Invoke(this, true);
-                form = new T();
-                form.FormClosed += Form_FormClosed;
-                form.Show();
-            }
+            //if (form == null)
+            //{
+            //    OpeningForm?.Invoke(this, true);
+            //    form = new T();
+            //    form.FormClosed += Form_FormClosed;
+            //    form.Show();
+            //}
 
-            else
-                MessageBox.Show("A form is already open");
+            //else
+            //    MessageBox.Show("A form is already open");
+            using (var form = new T())
+            {
+                form.ShowDialog();
+            }
 
         }
 
         private void Form_FormClosed(object sender, FormClosedEventArgs e)
         {
-            OpeningForm?.Invoke(this, false);
-            form = null;
+            //OpeningForm?.Invoke(this, false);
+            //form = null;
         }
 
         private void DocumentList_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -11,44 +11,41 @@ namespace E_Barangay.Class
     public class PasswordToFormHandler<T> where T : Form, new()
     {
         public T form { get; private set; }
-        private PasswordForm passwordForm;
-
-        public event EventHandler OnExit;
-        //  public EventHandler OnSuccess;
-
+        private bool correctPass;
+        public event EventHandler<T> InitNextForm;
         public PasswordToFormHandler()
         {
-            //form =  Initialize<T>() 
-            //form = new T where T: Form;
-            form = new T();
-            form.FormClosed += Form_FormClosed;
 
-            passwordForm = new PasswordForm("Please re enter your password to continue");
-            passwordForm.FormClosing += PasswordForm_FormClosing;
-            passwordForm.OnCorrectPassword += PasswordForm_OnCorrectPassword;
-            passwordForm.Show();
+           
+        }
+        public void Start()
+        {
+            form = new T();
+            correctPass = false;
+
+            using (var passwordForm = new PasswordForm("Please re enter you password to continue."))
+            {
+                passwordForm.OnCorrectPassword += PasswordForm_OnCorrectPassword;
+                passwordForm.Disposed += PasswordForm_Disposed;
+                passwordForm.ShowDialog();
+            }
         }
 
-        private void PasswordForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void PasswordForm_Disposed(object sender, EventArgs e)
         {
-            //throw new NotImplementedException();
-            OnExit?.Invoke(this, new EventArgs());
+            if (!correctPass)
+                return;
+
+            using (form)
+            {
+                InitNextForm?.Invoke(this,form);
+                form.ShowDialog();
+            }
         }
 
         private void PasswordForm_OnCorrectPassword(object sender, bool e)
         {
-            if (e)
-                form.Show();
-            else
-            {
-                OnExit?.Invoke(this, new EventArgs());
-            }
-            // throw new NotImplementedException();
-        }
-
-        private void Form_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            OnExit?.Invoke(this, new EventArgs());
+            correctPass = e;
         }
     }
 }

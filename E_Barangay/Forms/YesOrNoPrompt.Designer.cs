@@ -48,8 +48,9 @@
             // 
             this.YesBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.YesBtn.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.YesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.YesBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YesBtn.FlatAppearance.BorderSize = 0;
+            this.YesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.YesBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.YesBtn.Location = new System.Drawing.Point(123, 113);
             this.YesBtn.Name = "YesBtn";
             this.YesBtn.Size = new System.Drawing.Size(75, 23);
@@ -61,8 +62,9 @@
             // NoBtn
             // 
             this.NoBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.NoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NoBtn.Font = new System.Drawing.Font("Bebas Neue Regular", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NoBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.NoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.NoBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NoBtn.Location = new System.Drawing.Point(204, 113);
             this.NoBtn.Name = "NoBtn";
             this.NoBtn.Size = new System.Drawing.Size(75, 23);
@@ -81,7 +83,7 @@
             this.Controls.Add(this.NoBtn);
             this.Controls.Add(this.YesBtn);
             this.Controls.Add(this.MessageTxt);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "YesOrNoPrompt";

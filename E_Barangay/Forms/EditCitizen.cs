@@ -147,9 +147,22 @@ namespace E_Barangay.Forms
                 MessageBox.Show("Fill out required fields.");
                 return;
             }
-            MessageBox.Show("Edit successfull.");
-            saveCitizen();
-            this.Close();
+            using (var yon = new YesOrNoPrompt("Would you like to save changes?"))
+            {
+                yon.onBtnClick += (a, b) =>
+                {
+                    if (b)
+                    {
+                        MessageBox.Show("Edit successfull.");
+                        saveCitizen();
+                        this.Close();
+                    }
+                };
+                yon.ShowDialog();
+            }
+            //MessageBox.Show("Edit successfull.");
+            //saveCitizen();
+            //this.Close();
         }
         void addReqControl(params Control[] c)
         {
@@ -196,11 +209,11 @@ namespace E_Barangay.Forms
 
         private void takePhotoBtn_Click(object sender, EventArgs e)
         {
-            var cam = new CaptureImageForm();
-            cam.OnSave += Cam_OnSave;
-            cam.FormClosing += (a, b) => { this.Enabled = true; };
-            this.Enabled = false;
-            cam.Show();
+            using (var cam = new CaptureImageForm())
+            {
+                cam.OnSave += Cam_OnSave;
+                cam.ShowDialog();
+            }
         }
 
         private void Cam_OnSave(object sender, Image e)
@@ -212,11 +225,7 @@ namespace E_Barangay.Forms
             using (var eb = new EBarangayEntities())
             {
                 var c = eb.Citizens.FirstOrDefault(x => x.ID == Id.Text);
-                //if (c != null)
-                //{
-                //    MessageBox.Show("Id is already taken.");
-                //    return;
-                //}
+
                 Citizen citizen = c;
 
                 var a = eb.Areas.FirstOrDefault(x => x.Name == area.Text);
@@ -254,7 +263,6 @@ namespace E_Barangay.Forms
                 citizen.VoterID = !string.IsNullOrEmpty(votersId.Text) ? votersId.Text : null;
                 citizen.PrecinctNumber = !string.IsNullOrEmpty(precinctNumber.Text) ? precinctNumber.Text : null;
 
-                //eb.Citizens.Add(citizen);
                 eb.SaveChanges();
             }
         }

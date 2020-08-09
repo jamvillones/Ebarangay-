@@ -79,20 +79,21 @@ namespace E_Barangay.Forms
 
         private void DoneBtn_Click(object sender, EventArgs e)
         {
-            var yesorno = new YesOrNoPrompt("Are you sure you want to mark this record as settled?");
-            yesorno.onBtnClick += (se, ee) =>
-             {
-                 this.Enabled = true;
-                 if (ee)
+            using (var yesorno = new YesOrNoPrompt("Are you sure you want to mark this record as settled?"))
+            {
+                yesorno.onBtnClick += (se, ee) =>
                  {
-                     markAsDone();
-                     Status.Text = "Settled";
-                     Status.ForeColor = Color.Green;
-                     DoneBtn.Enabled = false;
-                 }
-             };
-            this.Enabled = false;
-            yesorno.Show();
+                    
+                     if (ee)
+                     {
+                         markAsDone();
+                         Status.Text = "Settled";
+                         Status.ForeColor = Color.Green;
+                         DoneBtn.Enabled = false;
+                     }
+                 };               
+                yesorno.ShowDialog();
+            }
 
         }
         void markAsDone()

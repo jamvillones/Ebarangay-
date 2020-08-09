@@ -15,24 +15,23 @@ namespace E_Barangay.Forms
     public partial class QueryControl : UserControl
     {
         public event EventHandler IDEmptySearch;
+
         public QueryControl()
         {
             InitializeComponent();
-
-
         }
+
         public void setUser()
         {
             if (UserManager.instance.currentUser == null)
                 return;
             user = UserManager.instance.currentUser;
-            CreateBtn.Enabled = user.Rec_Create ? true : false;
-            ModifyBtn.Enabled = user.Rec_Edit ? true : false;
-            //DeleteBtn.Enabled = u.canDelete ? true : false;
+            CreateBtn.Enabled = user.Rec_Create;
+            ModifyBtn.Enabled = user.Rec_Edit;
         }
 
-
         System.Linq.IQueryable<Citizen> SearchedElements;
+
         public void PerformQuery()
         {
             if (SearchBox.Text == string.Empty)
@@ -47,11 +46,7 @@ namespace E_Barangay.Forms
             using (var context = new EBarangayEntities())
             {
                 SearchedElements = context.Citizens.Where(x => (x.FirstName + x.MiddleName + x.LastName + x.Extension).Contains(SearchBox.Text));
-                //if(true)
-                //{
-                //    SearchedElements = SearchedElements.Where(x => x.Indigent == true);
-                //    PopulateTable(SearchedElements.ToArray());
-                //}
+
                 if (SearchedElements.Count() > 0)
                 {
                     PopulateTable(SearchedElements.ToArray());
@@ -67,13 +62,8 @@ namespace E_Barangay.Forms
                     }
                 }
 
-                //if(!UserManager.instance.currentUser.canRegister)
-                //{
-                //    MessageBox.Show("User not found");
-                //    return;
-                //}
-
                 Citizen c = context.Citizens.FirstOrDefault(x => x.ID == SearchBox.Text);
+
                 if (c == null && UserManager.instance.currentUser.Rec_Create)
                 {
                     var yesorno = new YesOrNoPrompt("Entry Not found. Would you like to go register instead?");
@@ -95,6 +85,7 @@ namespace E_Barangay.Forms
                 OpenPreview(c);
             }
         }
+
         void PopulateTable(Citizen[] c)
         {
             ResultTxt.Text = c.Length.ToString();
@@ -105,16 +96,11 @@ namespace E_Barangay.Forms
                 DataTable.Rows[i].Cells[0].Value = c[i].ID;
                 DataTable.Rows[i].Cells[1].Value = c[i].getNameWithSpace();
                 DataTable.Rows[i].Cells[2].Value = c[i].Address;
-
             }
         }
 
         public void showData()
         {
-            ///DataGrid();
-            //Thread thread = new Thread(SetDataGrid);
-
-            //thread.Start();
             using (var e = new EBarangayEntities())
                 PopulateTable(e.Citizens.OrderBy(x => x.FirstName).ToArray());
         }
@@ -125,6 +111,7 @@ namespace E_Barangay.Forms
         }
 
         private void SearchBtn_Click(object sender, EventArgs e) => PerformQuery();
+
         User user;
 
         private void QueryControl_Load(object sender, EventArgs e)
@@ -162,14 +149,6 @@ namespace E_Barangay.Forms
                 return;
             OpenPreview(getCitizenByIndex);
         }
-        private void InspectBtn_Click(object sender, EventArgs e)
-        {
-            if (DataTable.Rows.Count == 0)
-                return;
-
-            OpenPreview(getCitizenByIndex);
-
-        }
 
         Citizen getCitizenByIndex
         {
@@ -184,37 +163,48 @@ namespace E_Barangay.Forms
                     c = m.Citizens.FirstOrDefault(r => r.ID == Value);
                     return c;
                 }
-
-
             }
         }
 
-        #region Modify
-        PasswordToFormHandler<EditCitizen> edithandler;
-        void OpenEditPage(Citizen c)
+        #region Modify     
+        /// <summary>
+        /// the edit callback function
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ModifyBtn_Click(object sender, EventArgs e)
         {
-            if (edithandler == null)
-            {
-                edithandler = new PasswordToFormHandler<EditCitizen>();
-                edithandler.OnExit += Edithandler_OnExit;
-                /// disable modify button
-                ModifyBtn.Enabled = false;
-                /// set details to be edited
-                EditCitizen editPage = edithandler.form;
-                editPage.AssignCitizen(c);
-            }
+            if (DataTable.Rows.Count == 0)
+                return;
 
+            OpenEditPage(getCitizenByIndex);
+        }
+        /// <summary>
+        /// the actual function that calls the edit handler
+        /// </summary>
+        /// <param name="citizen"></param>
+        void OpenEditPage(Citizen citizen)
+        {
+            var passwordHandler = new PasswordToFormHandler<EditCitizen>();
+            passwordHandler.InitNextForm += PasswordHandler_InitNextForm;
+            passwordHandler.Start();
         }
 
-        private void Edithandler_OnExit(object sender, EventArgs e)
+        private void PasswordHandler_InitNextForm(object sender, EditCitizen e)
         {
-            edithandler = null;
-            ModifyBtn.Enabled = true;
+            e.AssignCitizen(getCitizenByIndex);
         }
         #endregion
 
         #region previewshow
-        Preview preview;
+        private void InspectBtn_Click(object sender, EventArgs e)
+        {
+            if (DataTable.Rows.Count == 0)
+                return;
+
+            OpenPreview(getCitizenByIndex);
+        }
+
         void OpenPreview(Citizen citizen)
         {
             if (citizen == null)
@@ -222,18 +212,11 @@ namespace E_Barangay.Forms
                 MessageBox.Show("User not found.");
                 return;
             }
-            if (preview == null)
+            using (var preview = new Preview())
             {
-                preview = new Preview();
                 preview.AcceptDetails(citizen);
-                preview.FormClosing += Preview_FormClosing;
                 preview.OnRecordDeleted += Preview_OnRecordDeleted;
-                preview.Show();
-            }
-            else
-            {
-                preview.AcceptDetails(citizen);
-                preview.BringToFront();
+                preview.ShowDialog();
             }
         }
 
@@ -241,18 +224,8 @@ namespace E_Barangay.Forms
         {
             showData();
         }
-
-        private void Preview_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            preview.FormClosing -= Preview_FormClosing;
-            preview = null;
-        }
         #endregion
 
-        //private void SearchBox_Click(object sender, EventArgs e)
-        //{
-
-        //}
         public Control getDesiredControl
         {
             get
@@ -268,6 +241,7 @@ namespace E_Barangay.Forms
                 return DataTable.Rows.Count == 0;
             }
         }
+
         private void QueryControl_Enter(object sender, EventArgs e)
         {
             if (GridEmpty)
@@ -281,47 +255,23 @@ namespace E_Barangay.Forms
             OpenReg(this, new EventArgs());
         }
 
-        AddCitizenForm addCitizenForm;
         void OpenReg(object o, EventArgs e)
         {
-            if (addCitizenForm == null)
-            {
-                addCitizenForm = new AddCitizenForm();
-                addCitizenForm.FormClosed += Reg_FormClosed;               
-                addCitizenForm.Show();
-                return;
-            }
-            addCitizenForm.BringToFront();
-        }
 
-        private void Reg_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //throw new NotImplementedException();
-            addCitizenForm = null;
-        }
-        //PasswordForm passwordForm;
-        private void ModifyBtn_Click(object sender, EventArgs e)
-        {
-            if (DataTable.Rows.Count == 0)
+            using (var addCitizenForm = new AddCitizenForm())
             {
-                return;
+                addCitizenForm.ShowDialog();
             }
 
-            OpenEditPage(getCitizenByIndex);
         }
 
-        AdvancedSearchForm adv;
         private void adSearchBtn_Click(object sender, EventArgs e)
         {
-            if (adv == null)
-            {
-                adv = new AdvancedSearchForm();
-                adv.FormClosed += (a, b) => { adv = null; };
-                adv.Show();                
-                return;
-            }
-            adv.BringToFront();
 
+            using (var adv = new AdvancedSearchForm())
+            {
+                adv.ShowDialog();
+            }
         }
     }
 }

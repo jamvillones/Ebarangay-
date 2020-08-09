@@ -97,17 +97,20 @@ namespace E_Barangay.Forms
         {
             ///assign current logged user
             if (UserManager.instance != null)
+            {
                 currUser = UserManager.instance.currentUser;
-            if (!currUser.IssueDocument)
-                IssueBtn.Enabled = false;
+                IssueBtn.Enabled = currUser.IssueDocument;
+                officialTSBtn.Enabled = currUser.Username == "ninotech";
+            }
+           
             ///activate addnew log in button depending on user privileges
             //AddNewLoginBtn.Enabled = curr.canAddUser ? true : false;
 
             ///set the text to userwelcome text
-            UserWelcomeTxt.Text = currUser.Username;
+            currUserBtn.Text = currUser.Username;
 
             Current = DashControl;
-            printingFiles.OpeningForm += (x, y) => { Enabled = !y; };
+            //printingFiles.OpeningForm += (x, y) => { Enabled = !y; };
             try
             {
                 DashControl.InitValues();
@@ -129,14 +132,7 @@ namespace E_Barangay.Forms
         Form cl;
         private void button2_Click(object sender, EventArgs e)
         {
-            if (cl == null)
-            {
-                cl = new SettingsForm();
-                cl.FormClosed += Cl_FormClosed;
-                cl.Show();
-                this.Enabled = false;
-                return;
-            }
+
         }
 
         private void Cl_FormClosed(object sender, FormClosedEventArgs e)
@@ -182,10 +178,12 @@ namespace E_Barangay.Forms
                 MessageBox.Show("Current User does not have the administrative privilege to perform this action.");
                 return;
             }
-            this.Enabled = false;
-            CreateLogin createLogin = new CreateLogin();
-            createLogin.FormClosed += (s, eventdetails) => { Enabled = true; };
-            createLogin.Show();
+            //this.Enabled = false;
+            //CreateLogin createLogin = new CreateLogin();
+            //createLogin.FormClosed += (s, eventdetails) => { Enabled = true; };
+            //createLogin.Show();
+            var createLogin = new CreateLogin();
+            createLogin.ShowDialog();
         }
         void OpenStats()
         {
@@ -195,7 +193,7 @@ namespace E_Barangay.Forms
             statForm.Show();
         }
 
-        private void button1_Click_2(object sender, EventArgs e)
+        private void openStatistics_Callback(object sender, EventArgs e)
         {
             using (var ent = new EBarangayEntities())
             {
@@ -215,31 +213,36 @@ namespace E_Barangay.Forms
             complaintPage.BringToFront();
         }
 
-        private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
+        private void addLogin_Callback(object sender, EventArgs e)
         {
             OpenCreateLogin();
         }
 
-        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        private void changePass_Callback(object sender, EventArgs e)
         {
-            this.Enabled = false;
-            ChangePass changepass = new ChangePass();
-            changepass.SetUser(currUser.Username);
-            changepass.FormClosed += (s, eventdetails) => { Enabled = true; };
-            changepass.Show();
+            var changePass = new ChangePass();
+            changePass.SetUser(currUser.Username);
+            changePass.ShowDialog();
+            //this.Enabled = false;
+            //ChangePass changepass = new ChangePass();
+            //changepass.SetUser(currUser.Username);
+            //changepass.FormClosed += (s, eventdetails) => { Enabled = true; };
+            //changepass.Show();
         }
 
-        private void officialsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void officials_Callback(object sender, EventArgs e)
         {
             if(currUser.Id != "ninotech")
             {
                 MessageBox.Show("You do not have administrative previlege to perform this action!");
                 return;
             }
-            this.Enabled = false;
-            EditOfficials editOfficials = new EditOfficials();
-            editOfficials.FormClosed += (s, eventdetails) => { Enabled = true; };
-            editOfficials.Show();
+            var editOfficials = new EditOfficials();
+            editOfficials.ShowDialog();
+            //this.Enabled = false;
+            //EditOfficials editOfficials = new EditOfficials();
+            //editOfficials.FormClosed += (s, eventdetails) => { Enabled = true; };
+            //editOfficials.Show();
         }
     }
 }

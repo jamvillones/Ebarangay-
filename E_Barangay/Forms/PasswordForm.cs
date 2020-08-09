@@ -14,34 +14,41 @@ namespace E_Barangay.Forms
     {
         public event EventHandler<bool> OnCorrectPassword;
         User user;
-        //public PasswordForm()
-        //{
-        //    user = Class.UserManager.instance.currentUser;
-        //    InitializeComponent();
-        //}
+
         public PasswordForm(string message)
         {
             user = Class.UserManager.instance.currentUser;
             InitializeComponent();
             MessageLabel.Text = "Please re-enter your password " + user.Username;
         }
+        bool correctPass
+        {
+            get
+            {
+                return PasswordTxt.Text == user.Password;
+            }
+        }
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-           // User user = Class.UserManager.instance.currentUser;
             if (user == null) return;
-            if(PasswordTxt.Text == user.Password)
-            {
-                OnCorrectPassword?.Invoke(this, true);
+            //if(PasswordTxt.Text == user.Password)
+            //{
+            //    this.Close();
+            //    OnCorrectPassword?.Invoke(this, true);
+            //    return;
+            //}
+
+            OnCorrectPassword?.Invoke(this, correctPass);
+
+            if (!correctPass)
+                MessageBox.Show("Wrong password");
+            else
                 this.Close();
-                return;
-            }
-            OnCorrectPassword?.Invoke(this, false);
-            MessageBox.Show("Wrong Password");
-            this.Close();
+
         }
-        public void CallerCloseCallback(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        //public void CallerCloseCallback(object sender, EventArgs e)
+        //{
+        //    this.Close();
+        //}
     }
 }

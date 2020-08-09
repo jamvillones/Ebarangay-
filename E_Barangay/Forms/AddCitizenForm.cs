@@ -161,11 +161,11 @@ namespace E_Barangay.Forms
 
         private void takePhotoBtn_Click(object sender, EventArgs e)
         {
-            var cam = new CaptureImageForm();
-            cam.OnSave += Cam_OnSave;
-            cam.FormClosing += (a, b) => { this.Enabled = true; };
-            this.Enabled = false;
-            cam.Show();
+            using (var cam = new CaptureImageForm())
+            {
+                cam.OnSave += Cam_OnSave;
+                cam.ShowDialog();
+            }
         }
 
         private void Cam_OnSave(object sender, Image e)

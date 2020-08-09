@@ -149,6 +149,7 @@
             this.MinimizeBox = false;
             this.Name = "ChangePass";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Change Password";
             this.ResumeLayout(false);

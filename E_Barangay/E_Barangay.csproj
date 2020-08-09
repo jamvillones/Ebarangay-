@@ -55,7 +55,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>favicon.ico</ApplicationIcon>
+    <ApplicationIcon>icons8_books.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>54705B6EBFE60FDE602C1651AD14FEB151815565</ManifestCertificateThumbprint>
@@ -730,7 +730,7 @@
       <DependentUpon>EBModel.edmx</DependentUpon>
       <LastGenOutput>EBModel.cs</LastGenOutput>
     </Content>
-    <Content Include="favicon.ico" />
+    <Content Include="icons8_books.ico" />
     <Content Include="LoginModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>LoginModel.edmx</DependentUpon>

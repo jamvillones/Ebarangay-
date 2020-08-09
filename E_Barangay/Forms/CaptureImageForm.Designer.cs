@@ -162,6 +162,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CaptureImageForm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Capture Image";
             this.Load += new System.EventHandler(this.CaptureImageForm_Load);

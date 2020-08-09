@@ -23,7 +23,7 @@ namespace E_Barangay.Forms
         public void InitButtons()
         {
             User user = UserManager.instance.currentUser;
-            if(user != null)
+            if (user != null)
             {
                 addComplaintBtn.Enabled = user.Comp_Create ? true : false;
             }
@@ -66,18 +66,15 @@ namespace E_Barangay.Forms
             foreach (var x in recs)
                 dgvRecords.Rows.Add(x.ID, x.Status, x.SettlementDate.Value.ToString("MMMM dd, yyyy hh:mm tt"), x.DateHappened.Value.ToString("MMMM dd, yyyy hh:mm tt"));
         }
-        FileComplaintForm comp;
+
         private void addComplaintBtn_Click(object sender, EventArgs e)
         {
-            if (comp == null)
-            {
-                comp = new FileComplaintForm();
-                comp.FormClosed += (ss, ee) => { comp = null; };
+
+            using (var comp = new FileComplaintForm())
+            {                
                 comp.ComplaintAdded += Comp_ComplaintAdded;
-                comp.Show();
-                return;
+                comp.ShowDialog();
             }
-            comp.BringToFront();
         }
 
         private void Comp_ComplaintAdded(object sender, EventArgs e)
@@ -93,11 +90,11 @@ namespace E_Barangay.Forms
             DataGridView v = (DataGridView)sender;
             var x = v.Rows[e.RowIndex].Cells[0].Value.ToString();
 
-            var view = new ComplaintViewForm(x);
-            view.OnComplaintChanges += View_OnMarkedSettled;
-            view.FormClosed += (ee, ss) => { this.Enabled = true; };
-            this.Enabled = false;
-            view.Show();
+            using (var view = new ComplaintViewForm(x))
+            {
+                view.OnComplaintChanges += View_OnMarkedSettled;
+                view.ShowDialog();
+            }
         }
 
         private void View_OnMarkedSettled(object sender, EventArgs e)

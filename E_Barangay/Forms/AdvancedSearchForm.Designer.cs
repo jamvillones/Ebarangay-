@@ -64,12 +64,12 @@
             this.DataTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataTable.BackgroundColor = System.Drawing.SystemColors.ControlDark;
+            this.DataTable.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DataTable.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.DataTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DataTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -287,6 +287,7 @@
             this.Controls.Add(this.DataTable);
             this.Name = "AdvancedSearchForm";
             this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Advanced Search";
             this.Load += new System.EventHandler(this.AdvancedSearchForm_Load);

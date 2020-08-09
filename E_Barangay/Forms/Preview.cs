@@ -46,13 +46,21 @@ namespace E_Barangay.Forms
 
         /// EditPage epage;
         // PasswordForm passwordForm;
-        Class.PasswordToFormHandler<EditCitizen> passwordToFormHandler;
+        //Class.PasswordToFormHandler<EditCitizen> passwordToFormHandler;
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            passwordToFormHandler = new Class.PasswordToFormHandler<EditCitizen>();
-            var ep = passwordToFormHandler.form;
-            ep.AssignCitizen(target);
             this.Close();
+            this.Disposed += (a, b) =>
+            {
+                var passwordToFormHandler = new Class.PasswordToFormHandler<EditCitizen>();
+                passwordToFormHandler.InitNextForm += PasswordToFormHandler_InitNextForm;
+                passwordToFormHandler.Start();
+            };
+        }
+
+        private void PasswordToFormHandler_InitNextForm(object sender, EditCitizen e)
+        {
+            e.AssignCitizen(target);
         }
 
         string emptyField = string.Empty;
@@ -111,10 +119,13 @@ namespace E_Barangay.Forms
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            YesOrNoPrompt yesOrNo = new YesOrNoPrompt("Are you sure you want to delete this item?");
-            yesOrNo.onBtnClick += YesOrNo_onBtnClick;
-            yesOrNo.Show();
-            this.Enabled = false;
+
+            using (YesOrNoPrompt yesOrNo = new YesOrNoPrompt("Are you sure you want to delete this item?"))
+            {
+                yesOrNo.onBtnClick += YesOrNo_onBtnClick;
+                yesOrNo.ShowDialog();
+            }
+           
 
         }
 
