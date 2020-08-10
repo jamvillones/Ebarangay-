@@ -41,10 +41,6 @@ namespace E_Barangay.Forms
             this.IssueBtn = new System.Windows.Forms.Button();
             this.complaintsBtn = new System.Windows.Forms.Button();
             this.ContentHolder = new System.Windows.Forms.Panel();
-            this.DashControl = new E_Barangay.Forms.Dashboard();
-            this.QueryPage = new E_Barangay.Forms.QueryControl();
-            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
-            this.complaintPage = new E_Barangay.Forms.ComplaintControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.currUserBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,6 +53,10 @@ namespace E_Barangay.Forms
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.officialTSBtn = new System.Windows.Forms.ToolStripButton();
+            this.DashControl = new E_Barangay.Forms.Dashboard();
+            this.QueryPage = new E_Barangay.Forms.QueryControl();
+            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
+            this.complaintPage = new E_Barangay.Forms.ComplaintControl();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -224,44 +224,6 @@ namespace E_Barangay.Forms
             this.ContentHolder.Size = new System.Drawing.Size(995, 538);
             this.ContentHolder.TabIndex = 3;
             // 
-            // DashControl
-            // 
-            this.DashControl.BackColor = System.Drawing.Color.Silver;
-            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DashControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashControl.Location = new System.Drawing.Point(0, 0);
-            this.DashControl.Name = "DashControl";
-            this.DashControl.Size = new System.Drawing.Size(995, 538);
-            this.DashControl.TabIndex = 3;
-            // 
-            // QueryPage
-            // 
-            this.QueryPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QueryPage.Location = new System.Drawing.Point(0, 0);
-            this.QueryPage.Name = "QueryPage";
-            this.QueryPage.Size = new System.Drawing.Size(995, 538);
-            this.QueryPage.TabIndex = 5;
-            // 
-            // printingFiles
-            // 
-            this.printingFiles.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.printingFiles.Location = new System.Drawing.Point(0, 0);
-            this.printingFiles.Name = "printingFiles";
-            this.printingFiles.Size = new System.Drawing.Size(995, 538);
-            this.printingFiles.TabIndex = 4;
-            this.printingFiles.TabStop = false;
-            // 
-            // complaintPage
-            // 
-            this.complaintPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.complaintPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.complaintPage.Location = new System.Drawing.Point(0, 0);
-            this.complaintPage.Name = "complaintPage";
-            this.complaintPage.Size = new System.Drawing.Size(995, 538);
-            this.complaintPage.TabIndex = 6;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -389,6 +351,44 @@ namespace E_Barangay.Forms
             this.officialTSBtn.Size = new System.Drawing.Size(23, 22);
             this.officialTSBtn.Text = "Edit Officials";
             this.officialTSBtn.Click += new System.EventHandler(this.officials_Callback);
+            // 
+            // DashControl
+            // 
+            this.DashControl.BackColor = System.Drawing.Color.Silver;
+            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DashControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashControl.Location = new System.Drawing.Point(0, 0);
+            this.DashControl.Name = "DashControl";
+            this.DashControl.Size = new System.Drawing.Size(995, 538);
+            this.DashControl.TabIndex = 3;
+            // 
+            // QueryPage
+            // 
+            this.QueryPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueryPage.Location = new System.Drawing.Point(0, 0);
+            this.QueryPage.Name = "QueryPage";
+            this.QueryPage.Size = new System.Drawing.Size(995, 538);
+            this.QueryPage.TabIndex = 5;
+            // 
+            // printingFiles
+            // 
+            this.printingFiles.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.printingFiles.Location = new System.Drawing.Point(0, 0);
+            this.printingFiles.Name = "printingFiles";
+            this.printingFiles.Size = new System.Drawing.Size(995, 538);
+            this.printingFiles.TabIndex = 4;
+            this.printingFiles.TabStop = false;
+            // 
+            // complaintPage
+            // 
+            this.complaintPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.complaintPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.complaintPage.Location = new System.Drawing.Point(0, 0);
+            this.complaintPage.Name = "complaintPage";
+            this.complaintPage.Size = new System.Drawing.Size(995, 538);
+            this.complaintPage.TabIndex = 6;
             // 
             // MainPage
             // 
