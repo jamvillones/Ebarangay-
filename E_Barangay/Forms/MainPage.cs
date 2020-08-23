@@ -21,7 +21,7 @@ namespace E_Barangay.Forms
         public MainPage()
         {
             InitializeComponent();
-           // InitCustomFont();
+            // InitCustomFont();
         }
         //void InitCustomFont()
         //{
@@ -102,7 +102,7 @@ namespace E_Barangay.Forms
                 IssueBtn.Enabled = currUser.IssueDocument;
                 officialTSBtn.Enabled = currUser.Username == "ninotech";
             }
-           
+
             ///activate addnew log in button depending on user privileges
             //AddNewLoginBtn.Enabled = curr.canAddUser ? true : false;
 
@@ -187,10 +187,10 @@ namespace E_Barangay.Forms
         }
         void OpenStats()
         {
-            this.Enabled = false;
-            StatForm statForm = new StatForm();
-            statForm.FormClosed += (a, b) => { Enabled = true; };
-            statForm.Show();
+            using (StatForm statForm = new StatForm())
+            {
+                statForm.ShowDialog();
+            }
         }
 
         private void openStatistics_Callback(object sender, EventArgs e)
@@ -232,7 +232,7 @@ namespace E_Barangay.Forms
 
         private void officials_Callback(object sender, EventArgs e)
         {
-            if(currUser.Id != "ninotech")
+            if (currUser.Id != "ninotech")
             {
                 MessageBox.Show("You do not have administrative previlege to perform this action!");
                 return;
