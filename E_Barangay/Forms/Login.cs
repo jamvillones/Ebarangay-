@@ -22,7 +22,17 @@ namespace E_Barangay.Forms
 
         private void Login_Load(object sender, EventArgs e)
         {
+            try
+            {
+                using (var x = new EB_LoginsEntities())
+                {
+                    UsernameTxt.AutoCompleteCustomSource.AddRange(x.Users.Select(y => y.Username).ToArray());
+                }
+            }
+            catch
+            {
 
+            }
 
         }
 

@@ -49,6 +49,8 @@
             // 
             // UsernameTxt
             // 
+            this.UsernameTxt.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.UsernameTxt.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.UsernameTxt.BackColor = System.Drawing.Color.DarkSlateGray;
             this.UsernameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UsernameTxt.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

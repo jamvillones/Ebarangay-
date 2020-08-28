@@ -35,7 +35,7 @@
           <Property Name="SpouseName" Type="nvarchar" MaxLength="50" />
           <Property Name="FathersName" Type="nvarchar" MaxLength="50" />
           <Property Name="MothersName" Type="nvarchar" MaxLength="50" />
-          <Property Name="ContactInfo" Type="nvarchar" MaxLength="11" />
+          <Property Name="ContactInfo" Type="nvarchar" MaxLength="50" />
           <Property Name="Indigent" Type="bit" Nullable="false" />
           <Property Name="SeniorCitizen" Type="bit" Nullable="false" />
           <Property Name="PWD" Type="bit" Nullable="false" />
@@ -109,7 +109,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Citizen_CitizenToComplaint">
-          <End Role="Citizen" Type="Self.Citizen" Multiplicity="1" />
+          <End Role="Citizen" Type="Self.Citizen" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="CitizenToComplaint" Type="Self.CitizenToComplaint" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Citizen">
@@ -121,7 +123,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Citizen_Documents">
-          <End Role="Citizen" Type="Self.Citizen" Multiplicity="0..1" />
+          <End Role="Citizen" Type="Self.Citizen" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="Documents" Type="Self.Documents" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Citizen">
@@ -133,7 +137,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Complaint_CitizenToComplaint">
-          <End Role="Complaints" Type="Self.Complaints" Multiplicity="1" />
+          <End Role="Complaints" Type="Self.Complaints" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
           <End Role="CitizenToComplaint" Type="Self.CitizenToComplaint" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Complaints">
@@ -292,7 +298,7 @@
           <Property Name="SpouseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="FathersName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="MothersName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ContactInfo" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="ContactInfo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Indigent" Type="Boolean" Nullable="false" />
           <Property Name="SeniorCitizen" Type="Boolean" Nullable="false" />
           <Property Name="PWD" Type="Boolean" Nullable="false" />
