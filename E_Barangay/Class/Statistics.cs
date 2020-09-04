@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace E_Barangay.Class
 {
-    class Area
+    struct Area
     {
         public string Name { get; set; }
         public int PopulationCount { get; set; }
@@ -71,11 +71,15 @@ namespace E_Barangay.Class
                 senior = ent.Citizens.Where(x => x.SeniorCitizen).Count();
                 #endregion
                 #region areas
-                foreach (var t in ent.Areas)
+                var areaGroup = ent.Citizens.GroupBy(x => x.AreaID);
+                foreach (var i in areaGroup)
                 {
-                    var area = new Area { Name = t.Name, PopulationCount = t.Citizens.Count };
+                    var t = ent.Areas.FirstOrDefault(x => x.ID == i.Key);
+
+                    var area = new Area { Name = t?.Name ?? "Not Assigned", PopulationCount = i.Count() };
                     areas.Add(area);
                 }
+
                 #endregion
                 #region genders
                 male = ent.Citizens.Where(x => x.Gender == "Male").Count();

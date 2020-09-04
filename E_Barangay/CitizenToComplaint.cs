@@ -18,7 +18,7 @@ namespace E_Barangay
         public int CitizenId { get; set; }
         public int ComplaintId { get; set; }
     
-        public virtual Citizen Citizen { get; set; }
         public virtual Complaint Complaint { get; set; }
+        public virtual Citizen Citizen { get; set; }
     }
 }

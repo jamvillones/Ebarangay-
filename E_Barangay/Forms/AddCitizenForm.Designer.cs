@@ -293,9 +293,9 @@
             // 
             this.area.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.area.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.area.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.area.BackColor = System.Drawing.SystemColors.Control;
+            this.area.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.area.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.area.FormattingEnabled = true;
             this.area.Location = new System.Drawing.Point(5, 14);
@@ -402,9 +402,9 @@
             this.sex.AutoCompleteCustomSource.AddRange(new string[] {
             "Male",
             "Female"});
-            this.sex.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.sex.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.sex.BackColor = System.Drawing.SystemColors.Control;
+            this.sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sex.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sex.FormattingEnabled = true;
             this.sex.Items.AddRange(new object[] {

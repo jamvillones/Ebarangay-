@@ -198,10 +198,7 @@ namespace E_Barangay.Forms
                 Citizen citizen = new Citizen();
 
                 var a = eb.Areas.FirstOrDefault(x => x.Name == area.Text);
-                if (a != null)
-                    citizen.Area = a;
-                else
-                    citizen.Area = eb.Areas.First();
+                citizen.Area = a;
 
                 citizen.Picture = Class.ImageConverter.imageToByteArray(picBox.Image);
 

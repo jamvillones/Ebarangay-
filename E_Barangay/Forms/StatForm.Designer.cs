@@ -145,7 +145,7 @@
             this.AreaChart.Legends.Add(legend1);
             this.AreaChart.Location = new System.Drawing.Point(12, 318);
             this.AreaChart.Name = "AreaChart";
-            this.AreaChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
+            this.AreaChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SemiTransparent;
             series2.BorderColor = System.Drawing.Color.Black;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;

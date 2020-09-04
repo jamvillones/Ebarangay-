@@ -67,7 +67,7 @@ namespace E_Barangay.Forms
             {
                 var t = con.Citizens.FirstOrDefault(r => r.ID == citizen.ID);
                 picBox.Image = Class.ImageConverter.byteArrayToImage(t.Picture);
-                area.Text = t.Area.Name;
+                area.Text = t.Area?.Name;
             }
         }
         private void EditCitizen_Load(object sender, EventArgs e)
@@ -100,7 +100,7 @@ namespace E_Barangay.Forms
                 }
             }
 
-            addReqControl(Id, firstName, middleName, lastName, address, area, birthdate, sex, civilStatus);
+            addReqControl(Id, firstName, middleName, lastName, address,birthdate, sex, civilStatus);
             Console.WriteLine(requiredControls.Count);
         }
         /// <summary>
@@ -246,11 +246,7 @@ namespace E_Barangay.Forms
                 var c = eb.Citizens.FirstOrDefault(x => x.ID == citizen.ID);
 
                 var a = eb.Areas.FirstOrDefault(x => x.Name == area.Text);
-                if (a != null)
-                    c.Area = a;
-                else
-                    c.Area = eb.Areas.First();
-
+                c.Area = a;
                 c.Picture = Class.ImageConverter.imageToByteArray(picBox.Image);
 
                 c.IdNumber = Id.Text;

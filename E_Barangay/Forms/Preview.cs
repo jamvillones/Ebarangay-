@@ -107,7 +107,7 @@ namespace E_Barangay.Forms
             {
                 var t = ent.Citizens.FirstOrDefault(r => r.ID == target.ID);
                 ImageBox.Image = t.Picture == null ? null : Class.ImageConverter.byteArrayToImage(t.Picture);
-                area.Text = t.Area.Name;
+                area.Text = (t.Area?.Name)??"Not Asigned";
                 var connector = ent.CitizenToComplaints.Where(x => x.CitizenId == target.ID);
                 foreach (var c in connector)
                 {

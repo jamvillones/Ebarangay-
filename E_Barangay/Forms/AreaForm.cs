@@ -54,15 +54,11 @@ namespace E_Barangay.Forms
             {
                 return;
             }
-            var id = (int)(areaTable.Rows[e.RowIndex].Cells[0].Value);
-            if (id == 0)
-            {
-                MessageBox.Show("This cannot be deleted.");
-                return;
-            }
+
             if (MessageBox.Show("Are you sure you want to remove item?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                 return;
 
+            var id = (int)(areaTable.Rows[e.RowIndex].Cells[0].Value);
             using (var p = new EBarangayEntities())
             {
                 var a = p.Areas.FirstOrDefault(x => x.ID == id);
@@ -75,11 +71,6 @@ namespace E_Barangay.Forms
         private void areaTable_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             targetId = (int)(areaTable.Rows[e.RowIndex].Cells[0].Value);
-            if (targetId == 0)
-            {
-                MessageBox.Show("This cannot be edited.");
-                e.Cancel = true;
-            }
         }
 
         private void areaTable_CellEndEdit(object sender, DataGridViewCellEventArgs e)

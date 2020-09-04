@@ -39,7 +39,7 @@ namespace E_Barangay
         public bool PWD { get; set; }
         public bool Student { get; set; }
         public byte[] Picture { get; set; }
-        public int AreaID { get; set; }
+        public Nullable<int> AreaID { get; set; }
         public string VoterID { get; set; }
         public string PrecinctNumber { get; set; }
         public string Philhealth { get; set; }
