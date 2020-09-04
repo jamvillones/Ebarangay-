@@ -127,14 +127,24 @@ namespace E_Barangay.Forms
             if (string.IsNullOrEmpty(t.Text))
                 return;
 
-            if (t.TextLength > t.MaxLength)
-            {
-                t.Text = t.Text.Remove(t.MaxLength);
-                return;
-            }
+            //if (t.TextLength > t.MaxLength)
+            //{
+            //    t.Text = t.Text.Remove(t.MaxLength);
+            //    return;
+            //}
 
-            t.Text = t.Text.Replace(" ", "");
-            t.Text = t.Text.PadLeft(t.MaxLength, '0');
+            //t.Text = t.Text.Replace(" ", "");
+            //t.Text = t.Text.PadLeft(t.MaxLength, '0');
+            using (var eb = new EBarangayEntities())
+            {
+                if (eb.Citizens.Any(x => x.IdNumber == t.Text))
+                {
+                    MessageBox.Show("Id already taken.");
+                    //t.Text = citizen.IdNumber;
+                    ActiveControl = t;
+                    t.SelectAll();
+                }
+            }
         }
         void NameTextBox_Callback(object sender, EventArgs e)
         {
@@ -176,7 +186,7 @@ namespace E_Barangay.Forms
         {
             using (var eb = new EBarangayEntities())
             {
-                var c = eb.Citizens.FirstOrDefault(x => x.ID == Id.Text);
+                var c = eb.Citizens.FirstOrDefault(x => x.IdNumber == Id.Text);
                 if (c != null)
                 {
                     MessageBox.Show("Id is already taken.");
@@ -192,7 +202,7 @@ namespace E_Barangay.Forms
 
                 citizen.Picture = Class.ImageConverter.imageToByteArray(picBox.Image);
 
-                citizen.ID = Id.Text;
+                citizen.IdNumber = Id.Text;
                 citizen.FirstName = firstName.Text;
                 citizen.MiddleName = middleName.Text;
                 citizen.LastName = lastName.Text;

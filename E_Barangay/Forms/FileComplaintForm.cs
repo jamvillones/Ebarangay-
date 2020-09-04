@@ -46,7 +46,7 @@ namespace E_Barangay.Forms
             Citizen citizen;
             if (CitizenExtensions.CitizenFound(value.ToString(), out citizen))
             {
-                view.Rows[e.RowIndex].Cells[1].Value = citizen.ID;
+                view.Rows[e.RowIndex].Cells[1].Value = citizen.IdNumber;
                 return;
             }
             view.Rows[e.RowIndex].Cells[1].Value = NotRegisteredId;
@@ -66,14 +66,6 @@ namespace E_Barangay.Forms
         }
         bool canSave()
         {
-            using (var ent = new EBarangayEntities())
-            {
-                if (ent.Complaints.Find(controlNumberField.Text) != null)
-                {
-                    MessageBox.Show("Control Number already taken.");
-                    return false;
-                }
-            }
             if (dgvComplainants.RowCount <= 1 || dgvRespondents.RowCount <= 1 || string.IsNullOrEmpty(locationField.Text) || string.IsNullOrEmpty(narrativeField.Text))
             {
                 MessageBox.Show("Location, Complainants, Respondents, and Narrative cannot be empty");
@@ -89,7 +81,7 @@ namespace E_Barangay.Forms
 
             var rec = new Complaint();
 
-            rec.ID = string.IsNullOrEmpty(controlNumberField.Text) ? Guid.NewGuid().ToString() : controlNumberField.Text;
+            //rec.ID = string.IsNullOrEmpty(controlNumberField.Text) ? Guid.NewGuid().ToString() : controlNumberField.Text;
             rec.Location = locationField.Text.TrimStart(' ').TrimEnd(' ');
             rec.DateHappened = dtIncident.Value;
             rec.DateIssued = DateTime.Now;
@@ -166,7 +158,7 @@ namespace E_Barangay.Forms
                     if (dgv.Rows[i].Cells[0].Value != null)
                     {
                         string id = dgv.Rows[i].Cells[1].Value.ToString();
-                        Citizen c = ent.Citizens.FirstOrDefault(x => x.ID == id);
+                        Citizen c = ent.Citizens.FirstOrDefault(x => x.IdNumber == id);
                         if (c != null)
                         {
                             //c.RefRecords += (string.IsNullOrEmpty(c.RefRecords)) ? controlNumber : "," + controlNumber;
@@ -192,7 +184,7 @@ namespace E_Barangay.Forms
             dgvRespondents.Rows.Clear();
             locationField.Clear();
             narrativeField.Clear();
-            controlNumberField.Clear();
+            //controlNumberField.Clear();
         }
 
         private void narrativeField_TextChanged(object sender, EventArgs e)

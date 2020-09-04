@@ -71,7 +71,7 @@ namespace E_Barangay.Forms
         {
 
             using (var comp = new FileComplaintForm())
-            {                
+            {
                 comp.ComplaintAdded += Comp_ComplaintAdded;
                 comp.ShowDialog();
             }
@@ -88,7 +88,7 @@ namespace E_Barangay.Forms
             if (e.RowIndex == -1) return;
 
             DataGridView v = (DataGridView)sender;
-            var x = v.Rows[e.RowIndex].Cells[0].Value.ToString();
+            var x = (int)(v.Rows[e.RowIndex].Cells[0].Value);
 
             using (var view = new ComplaintViewForm(x))
             {

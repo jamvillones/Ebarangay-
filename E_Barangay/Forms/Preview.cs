@@ -71,7 +71,7 @@ namespace E_Barangay.Forms
                 MessageBox.Show("Citizen instance not assigned.");
                 return;
             }
-            IDTxt.Text = target.ID;
+            IDTxt.Text = target.IdNumber;
             NameTxt.Text = target.getNameWithSpace();
             AddressTxt.Text = target.Address;
             BdayTxt.Text = target.Birthday.ToString("MMMM dd, yyyy");
@@ -125,7 +125,7 @@ namespace E_Barangay.Forms
                 yesOrNo.onBtnClick += YesOrNo_onBtnClick;
                 yesOrNo.ShowDialog();
             }
-           
+
 
         }
 
@@ -139,11 +139,11 @@ namespace E_Barangay.Forms
             {
                 using (var eb = new EBarangayEntities())
                 {
-                    var c = eb.Citizens.FirstOrDefault(x => x.ID == IDTxt.Text);
+                    var c = eb.Citizens.FirstOrDefault(x => x.IdNumber == IDTxt.Text);
 
                     //foreach (var rec in c.Records.ToArray())
                     //    eb.Records.Remove(rec);
-                    var instances = eb.CitizenToComplaints.Where(x => x.CitizenId == IDTxt.Text);
+                    var instances = eb.CitizenToComplaints.Where(x => x.Citizen.IdNumber == IDTxt.Text);
                     foreach (var i in instances)
                         eb.CitizenToComplaints.Remove(i);
                     eb.Citizens.Remove(c);
@@ -165,7 +165,7 @@ namespace E_Barangay.Forms
             if (e.RowIndex == -1)
                 return;
             DataGridView v = (DataGridView)sender;
-            var x = v.Rows[e.RowIndex].Cells[0].Value.ToString();
+            var x = (int)(v.SelectedCells[0].Value);
 
             var view = new ComplaintViewForm(x);
             view.FormClosed += (ee, ss) => { this.Enabled = true; };

@@ -60,7 +60,7 @@ namespace E_Barangay.Class
             string i = id.Trim(' ');
             using(var e = new EBarangayEntities())
             {
-                citizen = e.Citizens.FirstOrDefault(x => x.ID == i);
+                citizen = e.Citizens.FirstOrDefault(x => x.IdNumber == i);
             }
             return citizen != null;
         }

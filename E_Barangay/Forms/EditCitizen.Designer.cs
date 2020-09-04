@@ -732,12 +732,10 @@
             this.Id.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Id.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Id.Location = new System.Drawing.Point(5, 19);
-            this.Id.MaxLength = 13;
+            this.Id.MaxLength = 50;
             this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
             this.Id.Size = new System.Drawing.Size(579, 15);
             this.Id.TabIndex = 1;
-            this.Id.TabStop = false;
             this.Id.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Id_KeyDown);
             this.Id.Leave += new System.EventHandler(this.Id_Leave);
             // 

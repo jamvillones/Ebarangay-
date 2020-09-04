@@ -15,7 +15,7 @@ namespace E_Barangay
     public partial class Document
     {
         public int Id { get; set; }
-        public string CitizenId { get; set; }
+        public Nullable<int> CitizenId { get; set; }
         public string DocumentTitle { get; set; }
         public Nullable<System.DateTime> DateIssued { get; set; }
         public string ControlNumber { get; set; }

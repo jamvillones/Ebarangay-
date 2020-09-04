@@ -80,7 +80,7 @@ namespace E_Barangay.Forms
             DataTable.Rows.Clear();
             foreach (var x in c)
             {
-                DataTable.Rows.Add(x.ID, x.getNameWithSpace());
+                DataTable.Rows.Add(x.IdNumber, x.getNameWithSpace());
             }
         }
 
@@ -119,10 +119,10 @@ namespace E_Barangay.Forms
                 var c = new Citizen();
                 int selectedrowindex = DataTable.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = DataTable.Rows[selectedrowindex];
-                string Value = Convert.ToString(selectedRow.Cells[0].Value);
+                var Value = selectedRow.Cells[0].Value.ToString();
                 using (var m = new EBarangayEntities())
                 {
-                    c = m.Citizens.FirstOrDefault(r => r.ID == Value);
+                    c = m.Citizens.FirstOrDefault(r => r.IdNumber == Value);
                     return c;
                 }
 

@@ -35,7 +35,7 @@ namespace E_Barangay.Forms
         {
             citizen = c;
 
-            Id.Text = citizen.ID;
+            Id.Text = citizen.IdNumber;
             firstName.Text = citizen.FirstName;
             middleName.Text = citizen.MiddleName;
             lastName.Text = citizen.LastName;
@@ -127,6 +127,14 @@ namespace E_Barangay.Forms
 
         bool canSave()
         {
+            using (var eb = new EBarangayEntities())
+            {
+                if (eb.Citizens.Any(x => x.IdNumber == Id.Text))
+                {
+                    MessageBox.Show("Id already taken");
+                    return false;
+                }
+            }
             foreach (var c in requiredControls)
             {
                 if (string.IsNullOrEmpty(c.Text))
@@ -172,17 +180,27 @@ namespace E_Barangay.Forms
         private void Id_Leave(object sender, EventArgs e)
         {
             TextBox t = sender as TextBox;
-            if (string.IsNullOrEmpty(t.Text))
-                return;
+            //if (string.IsNullOrEmpty(t.Text))
+            //    return;
 
-            if (t.TextLength > t.MaxLength)
+            //if (t.TextLength > t.MaxLength)
+            //{
+            //    t.Text = t.Text.Remove(t.MaxLength);
+            //    return;
+            //}
+
+            //t.Text = t.Text.Replace(" ", "");
+            //t.Text = t.Text.PadLeft(t.MaxLength, '0');
+            using(var eb = new EBarangayEntities())
             {
-                t.Text = t.Text.Remove(t.MaxLength);
-                return;
+                if(eb.Citizens.Where(x=>x.IdNumber != citizen.IdNumber).Any(x=>x.IdNumber == t.Text))
+                {
+                    MessageBox.Show("Id already taken.");
+                    t.Text = citizen.IdNumber;
+                    ActiveControl = t;
+                    t.SelectAll();
+                }
             }
-
-            t.Text = t.Text.Replace(" ", "");
-            t.Text = t.Text.PadLeft(t.MaxLength, '0');
         }
         void NameTextBox_Callback(object sender, EventArgs e)
         {
@@ -224,7 +242,7 @@ namespace E_Barangay.Forms
         {
             using (var eb = new EBarangayEntities())
             {
-                var c = eb.Citizens.FirstOrDefault(x => x.ID == Id.Text);
+                var c = eb.Citizens.FirstOrDefault(x => x.IdNumber == Id.Text);
 
                 Citizen citizen = c;
 

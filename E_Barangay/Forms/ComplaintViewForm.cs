@@ -20,7 +20,7 @@ namespace E_Barangay.Forms
         {
             InitializeComponent();
         }
-        public ComplaintViewForm(string id)
+        public ComplaintViewForm(int id)
         {
             InitializeComponent();
             using (var ent = new EBarangayEntities())
@@ -32,7 +32,7 @@ namespace E_Barangay.Forms
         }
         void initializeFields()
         {
-            controlNumberField.Text = currRec.ID;
+            controlNumberField.Text = currRec.ID.ToString();
             Status.Text = currRec.Status;
             Status.ForeColor = currRec.Status == "Pending" ? Color.Red : Color.Green;
             locationTxt.Text = currRec.Location;
@@ -83,7 +83,7 @@ namespace E_Barangay.Forms
             {
                 yesorno.onBtnClick += (se, ee) =>
                  {
-                    
+
                      if (ee)
                      {
                          markAsDone();
@@ -91,7 +91,7 @@ namespace E_Barangay.Forms
                          Status.ForeColor = Color.Green;
                          DoneBtn.Enabled = false;
                      }
-                 };               
+                 };
                 yesorno.ShowDialog();
             }
 
@@ -143,9 +143,10 @@ namespace E_Barangay.Forms
 
         private void settleSched_ValueChanged(object sender, EventArgs e)
         {
-            using(var eb = new EBarangayEntities())
+            using (var eb = new EBarangayEntities())
             {
-                var c = eb.Complaints.FirstOrDefault(x => x.ID == controlNumberField.Text);
+                var id = Convert.ToInt32(controlNumberField.Text);
+                var c = eb.Complaints.FirstOrDefault(x => x.ID == id);
                 c.SettlementDate = settleSched.Value;
                 eb.SaveChanges();
             }

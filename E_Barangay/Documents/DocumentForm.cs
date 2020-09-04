@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.Linq;
 using System.Windows.Forms;
 using E_Barangay.Class;
 using E_Barangay.Forms;
@@ -73,7 +74,7 @@ namespace E_Barangay.Documents
         {
             using (var entity = new EBarangayEntities())
             {
-                var citizen = entity.Citizens.Find(idField.Text);
+                var citizen = entity.Citizens.FirstOrDefault(x => x.IdNumber == idField.Text);
                 if (citizen == null)
                 {
                     MessageBox.Show("ID not found!");

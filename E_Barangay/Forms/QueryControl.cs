@@ -62,7 +62,7 @@ namespace E_Barangay.Forms
                     }
                 }
 
-                Citizen c = context.Citizens.FirstOrDefault(x => x.ID == SearchBox.Text);
+                Citizen c = context.Citizens.FirstOrDefault(x => x.IdNumber == SearchBox.Text);
 
                 if (c == null && UserManager.instance.currentUser.Rec_Create)
                 {
@@ -93,7 +93,7 @@ namespace E_Barangay.Forms
             for (int i = 0; i < c.Length; i++)
             {
                 DataTable.Rows.Add();
-                DataTable.Rows[i].Cells[0].Value = c[i].ID;
+                DataTable.Rows[i].Cells[0].Value = c[i].IdNumber;
                 DataTable.Rows[i].Cells[1].Value = c[i].getNameWithSpace();
                 DataTable.Rows[i].Cells[2].Value = c[i].Address;
             }
@@ -156,11 +156,11 @@ namespace E_Barangay.Forms
             {
                 var c = new Citizen();
                 int selectedrowindex = DataTable.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = DataTable.Rows[selectedrowindex];
-                string Value = Convert.ToString(selectedRow.Cells[0].Value);
+                //DataGridViewRow selectedRow = DataTable.Rows[selectedrowindex];
+                string Value = DataTable.SelectedCells[0].Value.ToString();
                 using (var m = new EBarangayEntities())
                 {
-                    c = m.Citizens.FirstOrDefault(r => r.ID == Value);
+                    c = m.Citizens.FirstOrDefault(r => r.IdNumber == Value);
                     return c;
                 }
             }

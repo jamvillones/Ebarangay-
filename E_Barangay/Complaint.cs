@@ -20,7 +20,7 @@ namespace E_Barangay
             this.CitizenToComplaints = new HashSet<CitizenToComplaint>();
         }
     
-        public string ID { get; set; }
+        public int ID { get; set; }
         public string Narrative { get; set; }
         public Nullable<System.DateTime> DateIssued { get; set; }
         public Nullable<System.DateTime> DateHappened { get; set; }

@@ -129,19 +129,6 @@ namespace E_Barangay.Forms
             this.WindowState = this.WindowState == FormWindowState.Maximized ? FormWindowState.Normal : FormWindowState.Maximized;
         }
 
-        Form cl;
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Cl_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            cl = null;
-            this.Enabled = true;
-            // throw new NotImplementedException();
-        }
-
         private void MainPage_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -247,7 +234,7 @@ namespace E_Barangay.Forms
 
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            using(var areaform =new AreaForm())
+            using (var areaform = new AreaForm())
             {
                 areaform.ShowDialog();
             }
