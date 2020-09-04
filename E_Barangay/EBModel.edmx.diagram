@@ -5,17 +5,18 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="e886d49c120d4a9ab80d4ca083c4ba26" Name="Diagram1">
-        <EntityTypeShape EntityType="EBarangayModel.Area" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
         <EntityTypeShape EntityType="EBarangayModel.Barangay" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EBarangayModel.Complaint" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EBarangayModel.Municipality" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EBarangayModel.Official" Width="1.5" PointX="2.5" PointY="7.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EBarangayModel.CitizenToComplaint" Width="1.5" PointX="8" PointY="4" />
         <AssociationConnector Association="EBarangayModel.FK_Complaint_CitizenToComplaint" />
-        <EntityTypeShape EntityType="EBarangayModel.Citizen" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="EBarangayModel.Document" Width="1.5" PointX="5.25" PointY="7.75" />
+        <EntityTypeShape EntityType="EBarangayModel.Area" Width="1.5" PointX="1.5" PointY="1.125" />
+        <EntityTypeShape EntityType="EBarangayModel.Citizen" Width="1.5" PointX="0.75" PointY="3.875" />
+        <EntityTypeShape EntityType="EBarangayModel.sysdiagram" Width="1.5" PointX="3.125" PointY="3.75" />
         <AssociationConnector Association="EBarangayModel.FK_Citizen_Area" />
         <AssociationConnector Association="EBarangayModel.FK_Citizen_CitizenToComplaint" />
-        <EntityTypeShape EntityType="EBarangayModel.Document" Width="1.5" PointX="5.25" PointY="7.75" />
         <AssociationConnector Association="EBarangayModel.FK_Citizen_Documents" />
       </Diagram>
     </edmx:Diagrams>

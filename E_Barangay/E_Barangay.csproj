@@ -343,6 +343,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EBModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AreaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AreaForm.Designer.cs">
+      <DependentUpon>AreaForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EditCitizen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -512,6 +518,9 @@
     <Compile Include="spCitizen_getFullName_Result.cs">
       <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>EBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>LoginModel.tt</DependentUpon>
     </Compile>
@@ -604,6 +613,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Documents\SSSPension.resx">
       <DependentUpon>SSSPension.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AreaForm.resx">
+      <DependentUpon>AreaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EditCitizen.resx">
       <DependentUpon>EditCitizen.cs</DependentUpon>

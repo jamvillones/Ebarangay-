@@ -27,14 +27,15 @@ namespace E_Barangay
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Area> Areas { get; set; }
         public virtual DbSet<Barangay> Barangays { get; set; }
         public virtual DbSet<Complaint> Complaints { get; set; }
         public virtual DbSet<Municipality> Municipalities { get; set; }
         public virtual DbSet<Official> Officials { get; set; }
         public virtual DbSet<CitizenToComplaint> CitizenToComplaints { get; set; }
-        public virtual DbSet<Citizen> Citizens { get; set; }
         public virtual DbSet<Document> Documents { get; set; }
+        public virtual DbSet<Area> Areas { get; set; }
+        public virtual DbSet<Citizen> Citizens { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     
         public virtual ObjectResult<spCitizen_getFullName_Result> spCitizen_getFullName()
         {

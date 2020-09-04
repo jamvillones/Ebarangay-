@@ -27,6 +27,7 @@ namespace E_Barangay.Forms
                 using (var x = new EB_LoginsEntities())
                 {
                     UsernameTxt.AutoCompleteCustomSource.AddRange(x.Users.Select(y => y.Username).ToArray());
+                    
                 }
             }
             catch

@@ -244,5 +244,13 @@ namespace E_Barangay.Forms
             //editOfficials.FormClosed += (s, eventdetails) => { Enabled = true; };
             //editOfficials.Show();
         }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            using(var areaform =new AreaForm())
+            {
+                areaform.ShowDialog();
+            }
+        }
     }
 }
