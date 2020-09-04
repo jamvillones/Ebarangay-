@@ -13,6 +13,8 @@ namespace E_Barangay.Forms
 {
     public partial class AddCitizenForm : Form
     {
+        public event EventHandler Onsave;
+        bool editMade = false;
         public AddCitizenForm()
         {
             InitializeComponent();
@@ -115,6 +117,7 @@ namespace E_Barangay.Forms
             registerCitizen();
             clearFields();
             changeFieldColors(backColor);
+            editMade = true;
         }
         void addReqControl(params Control[] c)
         {
@@ -257,5 +260,10 @@ namespace E_Barangay.Forms
         Color backColor;
         List<Control> requiredControls = new List<Control>();
 
+        private void AddCitizenForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (editMade)
+                Onsave?.Invoke(this, null);
+        }
     }
 }

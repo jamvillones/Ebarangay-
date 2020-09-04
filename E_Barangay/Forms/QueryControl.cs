@@ -192,7 +192,17 @@ namespace E_Barangay.Forms
 
         private void PasswordHandler_InitNextForm(object sender, EditCitizen e)
         {
+            e.Onsave += Onsave_Callback;
             e.AssignCitizen(getCitizenByIndex);
+        }
+
+        private void Onsave_Callback(object sender, EventArgs e)
+        {
+            using(var eb = new EBarangayEntities())
+            {
+                PopulateTable(eb.Citizens.ToArray());
+            }
+            //throw new NotImplementedException();
         }
         #endregion
 
@@ -260,6 +270,7 @@ namespace E_Barangay.Forms
 
             using (var addCitizenForm = new AddCitizenForm())
             {
+                addCitizenForm.Onsave += Onsave_Callback;
                 addCitizenForm.ShowDialog();
             }
 

@@ -32,12 +32,13 @@ namespace E_Barangay.Forms
 
             for (int i = 0; i < statistics.areas.Count; i++)
             {
-                var point = AreaChart.Series[0].Points[i];
+                var point = new DataPoint();
                 var area = statistics.areas[i];
 
                 point.YValues[0] = statistics.areas[i].PopulationCount;
                 point.Label = statistics.areas[i].PopulationCount == 0?"": statistics.areas[i].GetPercentage(statistics.totalPopulation).ToString() + "%";
                 point.LegendText = statistics.areas[i].Name + "(" + area.PopulationCount + ")";
+                AreaChart.Series[0].Points.Add(point);
             }
 
             TypeChart.ChartAreas[0].AxisY.Minimum = 0;

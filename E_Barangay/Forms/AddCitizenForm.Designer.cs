@@ -784,6 +784,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Citizen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddCitizenForm_FormClosing);
             this.Load += new System.EventHandler(this.AddCitizenForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.imagePanel.ResumeLayout(false);

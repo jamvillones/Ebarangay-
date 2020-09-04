@@ -13,6 +13,7 @@ namespace E_Barangay.Forms
 {
     public partial class EditCitizen : Form
     {
+        public event EventHandler Onsave;
         public EditCitizen()
         {
             InitializeComponent();
@@ -127,14 +128,14 @@ namespace E_Barangay.Forms
 
         bool canSave()
         {
-            using (var eb = new EBarangayEntities())
-            {
-                if (eb.Citizens.Any(x => x.IdNumber == Id.Text))
-                {
-                    MessageBox.Show("Id already taken");
-                    return false;
-                }
-            }
+            //using (var eb = new EBarangayEntities())
+            //{
+            //    if (eb.Citizens.Any(x => x.IdNumber == Id.Text))
+            //    {
+            //        MessageBox.Show("Id already taken");
+            //        return false;
+            //    }
+            //}
             foreach (var c in requiredControls)
             {
                 if (string.IsNullOrEmpty(c.Text))
@@ -191,9 +192,9 @@ namespace E_Barangay.Forms
 
             //t.Text = t.Text.Replace(" ", "");
             //t.Text = t.Text.PadLeft(t.MaxLength, '0');
-            using(var eb = new EBarangayEntities())
+            using (var eb = new EBarangayEntities())
             {
-                if(eb.Citizens.Where(x=>x.IdNumber != citizen.IdNumber).Any(x=>x.IdNumber == t.Text))
+                if (eb.Citizens.Where(x => x.IdNumber != citizen.IdNumber).Any(x => x.IdNumber == t.Text))
                 {
                     MessageBox.Show("Id already taken.");
                     t.Text = citizen.IdNumber;
@@ -242,46 +243,45 @@ namespace E_Barangay.Forms
         {
             using (var eb = new EBarangayEntities())
             {
-                var c = eb.Citizens.FirstOrDefault(x => x.IdNumber == Id.Text);
-
-                Citizen citizen = c;
+                var c = eb.Citizens.FirstOrDefault(x => x.ID == citizen.ID);
 
                 var a = eb.Areas.FirstOrDefault(x => x.Name == area.Text);
                 if (a != null)
-                    citizen.Area = a;
+                    c.Area = a;
                 else
-                    citizen.Area = eb.Areas.First();
+                    c.Area = eb.Areas.First();
 
-                citizen.Picture = Class.ImageConverter.imageToByteArray(picBox.Image);
+                c.Picture = Class.ImageConverter.imageToByteArray(picBox.Image);
 
-                //citizen.ID = Id.Text;
-                citizen.FirstName = firstName.Text;
-                citizen.MiddleName = middleName.Text;
-                citizen.LastName = lastName.Text;
-                citizen.Extension = extensionName.Text;
+                c.IdNumber = Id.Text;
+                c.FirstName = firstName.Text;
+                c.MiddleName = middleName.Text;
+                c.LastName = lastName.Text;
+                c.Extension = extensionName.Text;
 
-                citizen.Address = address.Text;
-                citizen.Birthday = birthdate.Value;
-                citizen.Gender = sex.Text;
-                citizen.ContactInfo = contact.Text;
-                citizen.CivilStatus = civilStatus.Text;
+                c.Address = address.Text;
+                c.Birthday = birthdate.Value;
+                c.Gender = sex.Text;
+                c.ContactInfo = contact.Text;
+                c.CivilStatus = civilStatus.Text;
 
-                citizen.SpouseName = !string.IsNullOrEmpty(spouseName.Text) ? spouseName.Text : null;
-                citizen.FathersName = !string.IsNullOrEmpty(fathersName.Text) ? fathersName.Text : null;
-                citizen.MothersName = !string.IsNullOrEmpty(mothersName.Text) ? mothersName.Text : null;
+                c.SpouseName = !string.IsNullOrEmpty(spouseName.Text) ? spouseName.Text : null;
+                c.FathersName = !string.IsNullOrEmpty(fathersName.Text) ? fathersName.Text : null;
+                c.MothersName = !string.IsNullOrEmpty(mothersName.Text) ? mothersName.Text : null;
 
-                citizen.Indigent = indigent.Checked;
-                citizen.Student = student.Checked;
-                citizen.PWD = pwd.Checked;
-                citizen.SeniorCitizen = senior.Checked;
+                c.Indigent = indigent.Checked;
+                c.Student = student.Checked;
+                c.PWD = pwd.Checked;
+                c.SeniorCitizen = senior.Checked;
 
-                citizen.SSS = !string.IsNullOrEmpty(sss.Text) ? sss.Text : null;
-                citizen.Philhealth = !string.IsNullOrEmpty(philhealth.Text) ? philhealth.Text : null;
-                citizen.PagIbig = !string.IsNullOrEmpty(pagibig.Text) ? pagibig.Text : null;
-                citizen.VoterID = !string.IsNullOrEmpty(votersId.Text) ? votersId.Text : null;
-                citizen.PrecinctNumber = !string.IsNullOrEmpty(precinctNumber.Text) ? precinctNumber.Text : null;
+                c.SSS = !string.IsNullOrEmpty(sss.Text) ? sss.Text : null;
+                c.Philhealth = !string.IsNullOrEmpty(philhealth.Text) ? philhealth.Text : null;
+                c.PagIbig = !string.IsNullOrEmpty(pagibig.Text) ? pagibig.Text : null;
+                c.VoterID = !string.IsNullOrEmpty(votersId.Text) ? votersId.Text : null;
+                c.PrecinctNumber = !string.IsNullOrEmpty(precinctNumber.Text) ? precinctNumber.Text : null;
 
                 eb.SaveChanges();
+                Onsave?.Invoke(this, null);
             }
         }
         void clearFields()
