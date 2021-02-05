@@ -90,13 +90,8 @@ namespace E_Barangay.Forms
         {
             ResultTxt.Text = c.Length.ToString();
             DataTable.Rows.Clear();
-            for (int i = 0; i < c.Length; i++)
-            {
-                DataTable.Rows.Add();
-                DataTable.Rows[i].Cells[0].Value = c[i].IdNumber;
-                DataTable.Rows[i].Cells[1].Value = c[i].getNameWithSpace();
-                DataTable.Rows[i].Cells[2].Value = c[i].Address;
-            }
+            foreach (var i in c)
+                DataTable.Rows.Add(i.ID, i.IdNumber, i.getNameWithSpace(), i.Address);
         }
 
         public void showData()
@@ -157,10 +152,11 @@ namespace E_Barangay.Forms
                 var c = new Citizen();
                 int selectedrowindex = DataTable.SelectedCells[0].RowIndex;
                 //DataGridViewRow selectedRow = DataTable.Rows[selectedrowindex];
-                string Value = DataTable.SelectedCells[0].Value.ToString();
+                //string Value = DataTable.SelectedCells[0].Value.ToString();
+                var Value = (int)(DataTable.SelectedCells[0].Value);
                 using (var m = new EBarangayEntities())
                 {
-                    c = m.Citizens.FirstOrDefault(r => r.IdNumber == Value);
+                    c = m.Citizens.FirstOrDefault(r => r.ID == Value);
                     return c;
                 }
             }
@@ -198,7 +194,7 @@ namespace E_Barangay.Forms
 
         private void Onsave_Callback(object sender, EventArgs e)
         {
-            using(var eb = new EBarangayEntities())
+            using (var eb = new EBarangayEntities())
             {
                 PopulateTable(eb.Citizens.ToArray());
             }

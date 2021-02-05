@@ -22,13 +22,11 @@ namespace E_Barangay
     
         public int ID { get; set; }
         public string Narrative { get; set; }
-        public Nullable<System.DateTime> DateIssued { get; set; }
-        public Nullable<System.DateTime> DateHappened { get; set; }
         public string Location { get; set; }
         public string Status { get; set; }
+        public Nullable<System.DateTime> DateHappened { get; set; }
+        public Nullable<System.DateTime> DateIssued { get; set; }
         public Nullable<System.DateTime> SettlementDate { get; set; }
-        public string CompNames { get; set; }
-        public string RespNames { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CitizenToComplaint> CitizenToComplaints { get; set; }

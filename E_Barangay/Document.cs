@@ -19,6 +19,7 @@ namespace E_Barangay
         public string DocumentTitle { get; set; }
         public Nullable<System.DateTime> DateIssued { get; set; }
         public string ControlNumber { get; set; }
+        public byte[] documentPicture { get; set; }
     
         public virtual Citizen Citizen { get; set; }
     }

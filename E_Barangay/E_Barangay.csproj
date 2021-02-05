@@ -741,6 +741,7 @@
       <DependentUpon>LoginModel.edmx</DependentUpon>
       <LastGenOutput>LoginModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\NoHeader.jpg" />
     <None Include="Resources\Certificate Template.jpg" />
     <None Include="Resources\invisible_20px.png" />
     <None Include="Resources\eye_20px.png" />

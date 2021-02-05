@@ -14,8 +14,9 @@ namespace E_Barangay
     
     public partial class Official
     {
-        public string ID { get; set; }
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Position { get; set; }
+        public byte[] ProfilePicture { get; set; }
     }
 }

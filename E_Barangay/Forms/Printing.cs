@@ -23,6 +23,13 @@ namespace E_Barangay.Forms
             add { document.PrintPage += value; }
             remove { document.PrintPage -= value; }
         }
+        ////public Graphics docGraphics
+        ////{
+        ////    get
+        ////    {
+        ////        return printDocument.
+        ////    }
+        ////}
 
 
         public Printing()
@@ -220,9 +227,12 @@ namespace E_Barangay.Forms
             DialogResult result = printDialog.ShowDialog();
             if (result == DialogResult.OK)
             {
+                OnPrintDocument?.Invoke(this, null);
                 document.Print();
             }
         }
+
+        public event EventHandler OnPrintDocument;
         #endregion
     }
 }

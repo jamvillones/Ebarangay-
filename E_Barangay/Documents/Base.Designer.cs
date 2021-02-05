@@ -53,6 +53,7 @@
             this.printing.Size = new System.Drawing.Size(562, 690);
             this.printing.TabIndex = 0;
             this.printing.TabStop = false;
+            this.printing.OnPrintDocument += new System.EventHandler(this.printing_OnPrintDocument);
             // 
             // Base
             // 

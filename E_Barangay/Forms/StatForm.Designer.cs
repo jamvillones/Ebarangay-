@@ -182,7 +182,7 @@
             dataPoint6.AxisLabel = "";
             dataPoint6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             dataPoint6.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataPoint6.LegendText = "Non Voter";
+            dataPoint6.LegendText = "Non Voters";
             series3.Points.Add(dataPoint5);
             series3.Points.Add(dataPoint6);
             this.voterChart.Series.Add(series3);
@@ -286,12 +286,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(894, 631);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.AreaChart);
             this.Controls.Add(this.TypeChart);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "StatForm";

@@ -18,7 +18,7 @@ namespace E_Barangay.Class
                 {
                     sbMemebers.Add(s.Name);
                 }
-                captName = ent.Officials.FirstOrDefault(x => x.ID == "Punong_Barangay").Name;
+                captName = ent.Officials.FirstOrDefault(x => x.Position == "Punong Barangay").Name;
             }
         }
         public List<string> sbMemebers = new List<string>();

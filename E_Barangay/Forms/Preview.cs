@@ -114,6 +114,12 @@ namespace E_Barangay.Forms
                     var comp = c.Complaint;
                     RecordsTable.Rows.Add(comp.ID, comp.SettlementDate.Value.ToString("MMMM dd, yyyy"), comp.Status);
                 }
+                foreach( var c in ent.Documents.Where(x=>x.CitizenId ==target.ID ).OrderByDescending(y=>y.DateIssued))
+                {
+                    docTable.Rows.Add(c.ControlNumber,
+                                      c.DateIssued.Value.ToString("MMMM dd, yyyy hh:mm tt"),
+                                      c.DocumentTitle);
+                }
             }
         }
 

@@ -215,7 +215,7 @@ namespace E_Barangay.Forms
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "Control Number";
+            this.Column1.HeaderText = "Id";
             this.Column1.MinimumWidth = 200;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;

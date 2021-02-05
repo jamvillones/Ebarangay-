@@ -15,7 +15,7 @@ namespace E_Barangay.Forms
     {
         struct OfficialsMarker
         {
-            public string Id { get; set; }
+            public int Id { get; set; }
             public bool save { get; set; }
             //public bool {get; set;}
         }
@@ -25,8 +25,8 @@ namespace E_Barangay.Forms
             InitializeComponent();
             using (var eb = new EBarangayEntities())
             {                
-                officialsMarker[0].Id = eb.Officials.FirstOrDefault(x => x.ID == "Punong_Barangay").ID;
-                pbText.Text = eb.Officials.FirstOrDefault(x => x.ID == "Punong_Barangay").Name;
+                officialsMarker[0].Id = eb.Officials.FirstOrDefault(x => x.Position == "Punong_Barangay").ID;
+                pbText.Text = eb.Officials.FirstOrDefault(x => x.Position == "Punong_Barangay").Name;
                
                 var sbs = eb.Officials.Where(x => x.Position == "Sangguniang Barangay Member").OrderBy(x => x.ID).ToArray();
                 LoadSB(eb.Officials.Where(x => x.Position == "Sangguniang Barangay Member").OrderBy(x => x.ID).ToArray(),
@@ -37,11 +37,11 @@ namespace E_Barangay.Forms
                     officialsMarker[i].Id = sbs[i - 1].ID;
                     
                 }
-                var sec = eb.Officials.FirstOrDefault(x => x.ID == "Barangay_Secretary");
+                var sec = eb.Officials.FirstOrDefault(x => x.Position == "Barangay_Secretary");
                 officialsMarker[8].Id = sec.ID;
                 secText.Text = sec.Name;
 
-                var tres = eb.Officials.FirstOrDefault(x => x.ID == "Barangay_Treasurer");
+                var tres = eb.Officials.FirstOrDefault(x => x.Position == "Barangay_Treasurer");
                 officialsMarker[9].Id = tres.ID;
                 tresText.Text = tres.Name;
             }
@@ -138,7 +138,7 @@ namespace E_Barangay.Forms
                 {
                     if (officialsMarker[i].save)
                     {
-                        string id = officialsMarker[i].Id;
+                        int id = officialsMarker[i].Id;
                         var o = eb.Officials.FirstOrDefault(x => x.ID == id);
                         o.Name = control[i].Text;
                     }

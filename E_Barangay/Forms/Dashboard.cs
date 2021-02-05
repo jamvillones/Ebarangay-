@@ -22,7 +22,7 @@ namespace E_Barangay.Forms
         {
             using (var eb = new EBarangayEntities())
             {
-                captainTxt.Text = eb.Officials.Find("Punong_Barangay").Name;
+                captainTxt.Text = eb.Officials.FirstOrDefault(x=>x.Position == "Punong Barangay").Name;
 
                 var sb = from sbmemb in eb.Officials
                          where sbmemb.Position == "Sangguniang Barangay Member"

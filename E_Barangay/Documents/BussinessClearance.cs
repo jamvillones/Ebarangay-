@@ -21,7 +21,8 @@ namespace E_Barangay.Documents
 
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(Properties.Resources.Certificate_Template, 0, 0);
+            //e.Graphics.DrawImage(Properties.Resources.Certificate_Template, 0, 0);
+            CustomHeaderCert(e, "BARANGAY/BUSINESS CLEARANCE");
             string name = Printing.GetFullName(firstName, middleName, lastName, extension);
             //var helper = new Class.NameHelper(name);
 
@@ -87,6 +88,7 @@ namespace E_Barangay.Documents
             //e.Graphics.DrawRectangle(Printing.pen, ORRect);
             #endregion
 
+            Printing.DrawCap(e, "NEIL I. CANDELARIO");
         }
         public override void InitializeControls()
         {

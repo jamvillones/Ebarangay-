@@ -15,10 +15,12 @@ namespace E_Barangay
     public partial class CitizenToComplaint
     {
         public int Id { get; set; }
-        public int CitizenId { get; set; }
+        public Nullable<int> CitizenId { get; set; }
         public int ComplaintId { get; set; }
+        public string CitizenName { get; set; }
+        public bool conType { get; set; }
     
-        public virtual Complaint Complaint { get; set; }
         public virtual Citizen Citizen { get; set; }
+        public virtual Complaint Complaint { get; set; }
     }
 }

@@ -42,7 +42,10 @@ namespace E_Barangay.Documents
         }
         public override void Printing_PrintPage(object sender, PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(Properties.Resources.Certificate_Template, Point.Empty);
+            Console.WriteLine(e.PageBounds.Width * 3 / 5 + 20);
+            //e.Graphics.DrawImage(Properties.Resources.Certificate_Template, Point.Empty);
+            CustomHeaderCert(e, "BARANGAY CLEARANCE");
+
             InitBodyRect(e);
             //Rectangle bodyRect = new Rectangle(e.PageBounds.Width / 3 - 30, e.PageBounds.Height / 3, 548, 300);
             string name = Printing.GetName(firstText,middleText,lastText,extText);

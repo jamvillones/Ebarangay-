@@ -26,10 +26,10 @@ namespace E_Barangay
         }
     
         public virtual DbSet<Area> Areas { get; set; }
+        public virtual DbSet<Document> Documents { get; set; }
+        public virtual DbSet<Citizen> Citizens { get; set; }
+        public virtual DbSet<Official> Officials { get; set; }
         public virtual DbSet<CitizenToComplaint> CitizenToComplaints { get; set; }
         public virtual DbSet<Complaint> Complaints { get; set; }
-        public virtual DbSet<Document> Documents { get; set; }
-        public virtual DbSet<Official> Officials { get; set; }
-        public virtual DbSet<Citizen> Citizens { get; set; }
     }
 }

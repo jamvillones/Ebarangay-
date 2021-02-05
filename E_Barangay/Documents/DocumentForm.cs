@@ -35,7 +35,7 @@ namespace E_Barangay.Documents
         }
         public void CustomHeaderCert(PrintPageEventArgs e, string header)
         {
-            e.Graphics.DrawImage(Properties.Resources.Certificate_Template, Point.Empty);
+            e.Graphics.DrawImage(Properties.Resources.NoHeader, Point.Empty);
             Rectangle r = new Rectangle(e.PageBounds.Width / 3 - 30,
                                       e.PageBounds.Height / 5 + 20,
                                       550, 100);
@@ -44,6 +44,26 @@ namespace E_Barangay.Documents
             e.Graphics.DrawString(header, Printing.headerFont, Brushes.Red, r, s);
             DrawDebugRecs(r, e);
 
+        }
+        protected override void SaveToDatabase()
+        {
+            using(var eb = new EBarangayEntities())
+            {
+                var citizen = eb.Citizens.FirstOrDefault(x => x.IdNumber == idField.Text);
+                if(citizen == null)
+                {
+                    MessageBox.Show("Document not saved in citizen");
+                    return;
+                }
+
+                var newDocument = new Document();
+                newDocument.Citizen = citizen;
+                newDocument.DocumentTitle = this.Text;
+                newDocument.DateIssued = DateTime.Now;
+                newDocument.ControlNumber = Guid.NewGuid().ToString();
+                eb.Documents.Add(newDocument);
+                eb.SaveChanges();
+            }
         }
         protected string ToWhom
         {

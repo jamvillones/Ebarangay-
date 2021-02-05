@@ -69,9 +69,13 @@ namespace E_Barangay.Documents
             e.Graphics.DrawImage(Properties.Resources.Certificate_Template, Point.Empty);
             InitBodyRect(e);
             ////DrawDebugRecs(rect, e);
+            
         }
         #endregion
-
+        public Graphics documentGraphics
+        {
+            get; private set;
+        }
         #region debugs
         protected bool debug = false;
         protected void DrawDebugRecs(Rectangle rec, PrintPageEventArgs e)
@@ -82,5 +86,13 @@ namespace E_Barangay.Documents
             }
         }
         #endregion
+        protected virtual void SaveToDatabase()
+        {
+
+        }
+        private void printing_OnPrintDocument(object sender, EventArgs e)
+        {
+            SaveToDatabase();
+        }
     }
 }

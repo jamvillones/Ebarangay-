@@ -122,16 +122,16 @@ namespace E_Barangay.Forms
 
             //    }
             //}
-            for (int i = 0; i < dgvComplainants.RowCount; i++)
-            {
-                if (dgvComplainants.Rows[i].Cells[0].Value != null)
-                    rec.CompNames += dgvComplainants.Rows[i].Cells[0].Value.ToString() + (i == dgvComplainants.RowCount - 2 ? "" : ",");
-            }
-            for (int i = 0; i < dgvRespondents.RowCount; i++)
-            {
-                if (dgvRespondents.Rows[i].Cells[0].Value != null)
-                    rec.RespNames += dgvRespondents.Rows[i].Cells[0].Value.ToString() + (i == dgvRespondents.RowCount - 2 ? "" : ",");
-            }
+            //for (int i = 0; i < dgvComplainants.RowCount; i++)
+            //{
+            //    if (dgvComplainants.Rows[i].Cells[0].Value != null)
+            //        rec.CompNames += dgvComplainants.Rows[i].Cells[0].Value.ToString() + (i == dgvComplainants.RowCount - 2 ? "" : ",");
+            //}
+            //for (int i = 0; i < dgvRespondents.RowCount; i++)
+            //{
+            //    if (dgvRespondents.Rows[i].Cells[0].Value != null)
+            //        rec.RespNames += dgvRespondents.Rows[i].Cells[0].Value.ToString() + (i == dgvRespondents.RowCount - 2 ? "" : ",");
+            //}
             ///end if
 
 
