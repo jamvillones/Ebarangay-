@@ -12,23 +12,18 @@ namespace E_Barangay
     using System;
     using System.Collections.Generic;
     
-    public partial class Complaint
+    public partial class Tag
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Complaint()
+        public Tag()
         {
-            this.CitizenToComplaints = new HashSet<CitizenToComplaint>();
+            this.CitizenToTags = new HashSet<CitizenToTag>();
         }
     
-        public int ID { get; set; }
-        public string Narrative { get; set; }
-        public string Location { get; set; }
-        public string Status { get; set; }
-        public System.DateTime DateHappened { get; set; }
-        public System.DateTime DateIssued { get; set; }
-        public System.DateTime SettlementDate { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<CitizenToComplaint> CitizenToComplaints { get; set; }
+        public virtual ICollection<CitizenToTag> CitizenToTags { get; set; }
     }
 }

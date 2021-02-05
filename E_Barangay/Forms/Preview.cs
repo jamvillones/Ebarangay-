@@ -112,7 +112,7 @@ namespace E_Barangay.Forms
                 foreach (var c in connector)
                 {
                     var comp = c.Complaint;
-                    RecordsTable.Rows.Add(comp.ID, comp.SettlementDate.Value.ToString("MMMM dd, yyyy"), comp.Status);
+                    RecordsTable.Rows.Add(comp.ID, comp.SettlementDate.ToString("MMMM dd, yyyy"), comp.Status);
                 }
                 foreach( var c in ent.Documents.Where(x=>x.CitizenId ==target.ID ).OrderByDescending(y=>y.DateIssued))
                 {

@@ -38,9 +38,9 @@ namespace E_Barangay.Forms
             locationTxt.Text = currRec.Location;
             narrativeField.Text = currRec.Narrative;
 
-            During.Text = currRec.DateHappened.Value.ToString("MMMM dd, yyyy hh:mm tt");
-            RecordedOn.Text = currRec.DateIssued.Value.ToString("MMMM dd, yyyy hh:mm tt");
-            settleSched.Value = currRec.SettlementDate.Value;
+            During.Text = currRec.DateHappened.ToString("MMMM dd, yyyy hh:mm tt");
+            RecordedOn.Text = currRec.DateIssued.ToString("MMMM dd, yyyy hh:mm tt");
+            settleSched.Value = currRec.SettlementDate;
 
             //var compNames = currRec.CompNames.Split(',');
             //foreach (var c in compNames)

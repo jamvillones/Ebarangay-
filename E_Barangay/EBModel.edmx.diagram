@@ -15,6 +15,14 @@
         <EntityTypeShape EntityType="EBarangayModel.Complaint" Width="1.5" PointX="6" PointY="11" />
         <AssociationConnector Association="EBarangayModel.FK_CitizenToComplaint_Citizen" />
         <AssociationConnector Association="EBarangayModel.FK_Complaint_CitizenToComplaint" />
+        <EntityTypeShape EntityType="EBarangayModel.CitizenToIdentification" Width="1.5" PointX="10.25" PointY="0.75" />
+        <EntityTypeShape EntityType="EBarangayModel.CitizenToTag" Width="1.5" PointX="8.25" PointY="7.875" />
+        <EntityTypeShape EntityType="EBarangayModel.Identification" Width="1.5" PointX="8" PointY="15" />
+        <EntityTypeShape EntityType="EBarangayModel.Tag" Width="1.5" PointX="6" PointY="18" />
+        <AssociationConnector Association="EBarangayModel.FK_CitizenToIdentification_Citizen" />
+        <AssociationConnector Association="EBarangayModel.FK_CitizenToTag_Citizen" />
+        <AssociationConnector Association="EBarangayModel.FK_CitizenToIdentification_Identification" />
+        <AssociationConnector Association="EBarangayModel.FK_CitizenToTag_Tag" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -41,6 +41,7 @@
           <Property Name="SSS" Type="nvarchar" MaxLength="50" />
           <Property Name="PagIbig" Type="nvarchar" MaxLength="50" />
           <Property Name="IdNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="CitizenToComplaint">
           <Key>
@@ -52,17 +53,34 @@
           <Property Name="CitizenName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="conType" Type="bit" Nullable="false" />
         </EntityType>
+        <EntityType Name="CitizenToIdentification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CitizenId" Type="int" />
+          <Property Name="IdentificationId" Type="int" />
+          <Property Name="Value" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CitizenToTag">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CitizenId" Type="int" Nullable="false" />
+          <Property Name="TagId" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="Complaints">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Narrative" Type="nvarchar" MaxLength="3000" />
-          <Property Name="Location" Type="nvarchar" MaxLength="50" />
-          <Property Name="Status" Type="nvarchar" MaxLength="50" />
-          <Property Name="DateHappened" Type="datetime" />
-          <Property Name="DateIssued" Type="datetime" />
-          <Property Name="SettlementDate" Type="datetime" />
+          <Property Name="Narrative" Type="nvarchar" MaxLength="3000" Nullable="false" />
+          <Property Name="Location" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DateHappened" Type="datetime" Nullable="false" />
+          <Property Name="DateIssued" Type="datetime" Nullable="false" />
+          <Property Name="SettlementDate" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="Documents">
           <Key>
@@ -75,6 +93,13 @@
           <Property Name="ControlNumber" Type="nvarchar" MaxLength="50" />
           <Property Name="documentPicture" Type="image" />
         </EntityType>
+        <EntityType Name="Identification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
         <EntityType Name="Officials">
           <Key>
             <PropertyRef Name="ID" />
@@ -83,6 +108,13 @@
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Position" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ProfilePicture" Type="image" />
+        </EntityType>
+        <EntityType Name="Tag">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
         </EntityType>
         <Association Name="FK_Citizen_Area">
           <End Role="Area" Type="Self.Area" Multiplicity="0..1" />
@@ -105,6 +137,62 @@
             </Principal>
             <Dependent Role="CitizenToComplaint">
               <PropertyRef Name="CitizenId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CitizenToIdentification_Citizen">
+          <End Role="Citizen" Type="Self.Citizen" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CitizenToIdentification" Type="Self.CitizenToIdentification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Citizen">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CitizenToIdentification">
+              <PropertyRef Name="CitizenId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CitizenToIdentification_Identification">
+          <End Role="Identification" Type="Self.Identification" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CitizenToIdentification" Type="Self.CitizenToIdentification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Identification">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CitizenToIdentification">
+              <PropertyRef Name="IdentificationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CitizenToTag_Citizen">
+          <End Role="Citizen" Type="Self.Citizen" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CitizenToTag" Type="Self.CitizenToTag" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Citizen">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CitizenToTag">
+              <PropertyRef Name="CitizenId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CitizenToTag_Tag">
+          <End Role="Tag" Type="Self.Tag" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CitizenToTag" Type="Self.CitizenToTag" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tag">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CitizenToTag">
+              <PropertyRef Name="TagId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -140,9 +228,13 @@
           <EntitySet Name="Area" EntityType="Self.Area" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Citizen" EntityType="Self.Citizen" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CitizenToComplaint" EntityType="Self.CitizenToComplaint" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CitizenToIdentification" EntityType="Self.CitizenToIdentification" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CitizenToTag" EntityType="Self.CitizenToTag" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Complaints" EntityType="Self.Complaints" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Documents" EntityType="Self.Documents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Identification" EntityType="Self.Identification" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Officials" EntityType="Self.Officials" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tag" EntityType="Self.Tag" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Citizen_Area" Association="Self.FK_Citizen_Area">
             <End Role="Area" EntitySet="Area" />
             <End Role="Citizen" EntitySet="Citizen" />
@@ -150,6 +242,22 @@
           <AssociationSet Name="FK_CitizenToComplaint_Citizen" Association="Self.FK_CitizenToComplaint_Citizen">
             <End Role="Citizen" EntitySet="Citizen" />
             <End Role="CitizenToComplaint" EntitySet="CitizenToComplaint" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CitizenToIdentification_Citizen" Association="Self.FK_CitizenToIdentification_Citizen">
+            <End Role="Citizen" EntitySet="Citizen" />
+            <End Role="CitizenToIdentification" EntitySet="CitizenToIdentification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CitizenToIdentification_Identification" Association="Self.FK_CitizenToIdentification_Identification">
+            <End Role="Identification" EntitySet="Identification" />
+            <End Role="CitizenToIdentification" EntitySet="CitizenToIdentification" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CitizenToTag_Citizen" Association="Self.FK_CitizenToTag_Citizen">
+            <End Role="Citizen" EntitySet="Citizen" />
+            <End Role="CitizenToTag" EntitySet="CitizenToTag" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CitizenToTag_Tag" Association="Self.FK_CitizenToTag_Tag">
+            <End Role="Tag" EntitySet="Tag" />
+            <End Role="CitizenToTag" EntitySet="CitizenToTag" />
           </AssociationSet>
           <AssociationSet Name="FK_Complaint_CitizenToComplaint" Association="Self.FK_Complaint_CitizenToComplaint">
             <End Role="Complaints" EntitySet="Complaints" />
@@ -207,6 +315,26 @@
             <End Role="Complaint" EntitySet="Complaints" />
             <End Role="CitizenToComplaint" EntitySet="CitizenToComplaints" />
           </AssociationSet>
+          <EntitySet Name="CitizenToIdentifications" EntityType="EBarangayModel.CitizenToIdentification" />
+          <EntitySet Name="CitizenToTags" EntityType="EBarangayModel.CitizenToTag" />
+          <EntitySet Name="Identifications" EntityType="EBarangayModel.Identification" />
+          <EntitySet Name="Tags" EntityType="EBarangayModel.Tag" />
+          <AssociationSet Name="FK_CitizenToIdentification_Citizen" Association="EBarangayModel.FK_CitizenToIdentification_Citizen">
+            <End Role="Citizen" EntitySet="Citizens" />
+            <End Role="CitizenToIdentification" EntitySet="CitizenToIdentifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CitizenToTag_Citizen" Association="EBarangayModel.FK_CitizenToTag_Citizen">
+            <End Role="Citizen" EntitySet="Citizens" />
+            <End Role="CitizenToTag" EntitySet="CitizenToTags" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CitizenToIdentification_Identification" Association="EBarangayModel.FK_CitizenToIdentification_Identification">
+            <End Role="Identification" EntitySet="Identifications" />
+            <End Role="CitizenToIdentification" EntitySet="CitizenToIdentifications" />
+          </AssociationSet>
+          <AssociationSet Name="FK_CitizenToTag_Tag" Association="EBarangayModel.FK_CitizenToTag_Tag">
+            <End Role="Tag" EntitySet="Tags" />
+            <End Role="CitizenToTag" EntitySet="CitizenToTags" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Citizen">
           <Key>
@@ -240,6 +368,9 @@
           <NavigationProperty Name="Area" Relationship="EBarangayModel.FK_Citizen_Area" FromRole="Citizen" ToRole="Area" />
           <NavigationProperty Name="Documents" Relationship="EBarangayModel.FK_Documents_Citizen" FromRole="Citizen" ToRole="Document" />
           <NavigationProperty Name="CitizenToComplaints" Relationship="EBarangayModel.FK_CitizenToComplaint_Citizen" FromRole="Citizen" ToRole="CitizenToComplaint" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="CitizenToIdentifications" Relationship="EBarangayModel.FK_CitizenToIdentification_Citizen" FromRole="Citizen" ToRole="CitizenToIdentification" />
+          <NavigationProperty Name="CitizenToTags" Relationship="EBarangayModel.FK_CitizenToTag_Citizen" FromRole="Citizen" ToRole="CitizenToTag" />
         </EntityType>
         <Association Name="FK_Citizen_Area">
           <End Type="EBarangayModel.Area" Role="Area" Multiplicity="0..1" />
@@ -293,12 +424,12 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Narrative" Type="String" MaxLength="3000" FixedLength="false" Unicode="true" />
-          <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DateHappened" Type="DateTime" Precision="3" />
-          <Property Name="DateIssued" Type="DateTime" Precision="3" />
-          <Property Name="SettlementDate" Type="DateTime" Precision="3" />
+          <Property Name="Narrative" Type="String" MaxLength="3000" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Location" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DateHappened" Type="DateTime" Precision="3" Nullable="false" />
+          <Property Name="DateIssued" Type="DateTime" Precision="3" Nullable="false" />
+          <Property Name="SettlementDate" Type="DateTime" Precision="3" Nullable="false" />
           <NavigationProperty Name="CitizenToComplaints" Relationship="EBarangayModel.FK_Complaint_CitizenToComplaint" FromRole="Complaint" ToRole="CitizenToComplaint" />
         </EntityType>
         <Association Name="FK_CitizenToComplaint_Citizen">
@@ -324,6 +455,99 @@
             </Principal>
             <Dependent Role="CitizenToComplaint">
               <PropertyRef Name="ComplaintId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="CitizenToIdentification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CitizenId" Type="Int32" />
+          <Property Name="IdentificationId" Type="Int32" />
+          <Property Name="Value" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Citizen" Relationship="EBarangayModel.FK_CitizenToIdentification_Citizen" FromRole="CitizenToIdentification" ToRole="Citizen" />
+          <NavigationProperty Name="Identification" Relationship="EBarangayModel.FK_CitizenToIdentification_Identification" FromRole="CitizenToIdentification" ToRole="Identification" />
+        </EntityType>
+        <EntityType Name="CitizenToTag">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CitizenId" Type="Int32" Nullable="false" />
+          <Property Name="TagId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Citizen" Relationship="EBarangayModel.FK_CitizenToTag_Citizen" FromRole="CitizenToTag" ToRole="Citizen" />
+          <NavigationProperty Name="Tag" Relationship="EBarangayModel.FK_CitizenToTag_Tag" FromRole="CitizenToTag" ToRole="Tag" />
+        </EntityType>
+        <EntityType Name="Identification">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CitizenToIdentifications" Relationship="EBarangayModel.FK_CitizenToIdentification_Identification" FromRole="Identification" ToRole="CitizenToIdentification" />
+        </EntityType>
+        <EntityType Name="Tag">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="CitizenToTags" Relationship="EBarangayModel.FK_CitizenToTag_Tag" FromRole="Tag" ToRole="CitizenToTag" />
+        </EntityType>
+        <Association Name="FK_CitizenToIdentification_Citizen">
+          <End Type="EBarangayModel.Citizen" Role="Citizen" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="EBarangayModel.CitizenToIdentification" Role="CitizenToIdentification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Citizen">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CitizenToIdentification">
+              <PropertyRef Name="CitizenId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CitizenToTag_Citizen">
+          <End Type="EBarangayModel.Citizen" Role="Citizen" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="EBarangayModel.CitizenToTag" Role="CitizenToTag" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Citizen">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="CitizenToTag">
+              <PropertyRef Name="CitizenId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CitizenToIdentification_Identification">
+          <End Type="EBarangayModel.Identification" Role="Identification" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="EBarangayModel.CitizenToIdentification" Role="CitizenToIdentification" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Identification">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CitizenToIdentification">
+              <PropertyRef Name="IdentificationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_CitizenToTag_Tag">
+          <End Type="EBarangayModel.Tag" Role="Tag" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="EBarangayModel.CitizenToTag" Role="CitizenToTag" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tag">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="CitizenToTag">
+              <PropertyRef Name="TagId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -356,6 +580,7 @@
           <EntitySetMapping Name="Citizens">
             <EntityTypeMapping TypeName="EBarangayModel.Citizen">
               <MappingFragment StoreEntitySet="Citizen">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="IdNumber" ColumnName="IdNumber" />
                 <ScalarProperty Name="PagIbig" ColumnName="PagIbig" />
                 <ScalarProperty Name="SSS" ColumnName="SSS" />
@@ -415,6 +640,41 @@
                 <ScalarProperty Name="Location" ColumnName="Location" />
                 <ScalarProperty Name="Narrative" ColumnName="Narrative" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CitizenToIdentifications">
+            <EntityTypeMapping TypeName="EBarangayModel.CitizenToIdentification">
+              <MappingFragment StoreEntitySet="CitizenToIdentification">
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="IdentificationId" ColumnName="IdentificationId" />
+                <ScalarProperty Name="CitizenId" ColumnName="CitizenId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CitizenToTags">
+            <EntityTypeMapping TypeName="EBarangayModel.CitizenToTag">
+              <MappingFragment StoreEntitySet="CitizenToTag">
+                <ScalarProperty Name="TagId" ColumnName="TagId" />
+                <ScalarProperty Name="CitizenId" ColumnName="CitizenId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Identifications">
+            <EntityTypeMapping TypeName="EBarangayModel.Identification">
+              <MappingFragment StoreEntitySet="Identification">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tags">
+            <EntityTypeMapping TypeName="EBarangayModel.Tag">
+              <MappingFragment StoreEntitySet="Tag">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

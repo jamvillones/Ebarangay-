@@ -19,6 +19,8 @@ namespace E_Barangay
         {
             this.Documents = new HashSet<Document>();
             this.CitizenToComplaints = new HashSet<CitizenToComplaint>();
+            this.CitizenToIdentifications = new HashSet<CitizenToIdentification>();
+            this.CitizenToTags = new HashSet<CitizenToTag>();
         }
     
         public int ID { get; set; }
@@ -46,11 +48,16 @@ namespace E_Barangay
         public string SSS { get; set; }
         public string PagIbig { get; set; }
         public string IdNumber { get; set; }
+        public bool Status { get; set; }
     
         public virtual Area Area { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Document> Documents { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CitizenToComplaint> CitizenToComplaints { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CitizenToIdentification> CitizenToIdentifications { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CitizenToTag> CitizenToTags { get; set; }
     }
 }

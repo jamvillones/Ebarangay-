@@ -51,20 +51,20 @@ namespace E_Barangay.Forms
         void overDue()
         {
             dgvRecords.Rows.Clear();
-            var today = recs.Where(x => x.SettlementDate.Value.Date < DateTime.Today && x.Status == ComplaintStatus.Pending.ToString());
+            var today = recs.Where(x => x.SettlementDate.Date < DateTime.Today && x.Status == ComplaintStatus.Pending.ToString());
             fillDgv(today.ToArray());
         }
         void forToday()
         {
             dgvRecords.Rows.Clear();
-            var today = recs.Where(x => x.SettlementDate.Value.Date == DateTime.Today);
+            var today = recs.Where(x => x.SettlementDate.Date == DateTime.Today);
             fillDgv(today.ToArray());
         }
         void fillDgv(Complaint[] recs)
         {
             dgvRecords.Rows.Clear();
             foreach (var x in recs)
-                dgvRecords.Rows.Add(x.ID, x.Status, x.SettlementDate.Value.ToString("MMMM dd, yyyy hh:mm tt"), x.DateHappened.Value.ToString("MMMM dd, yyyy hh:mm tt"));
+                dgvRecords.Rows.Add(x.ID, x.Status, x.SettlementDate.ToString("MMMM dd, yyyy hh:mm tt"), x.DateHappened.ToString("MMMM dd, yyyy hh:mm tt"));
         }
 
         private void addComplaintBtn_Click(object sender, EventArgs e)

@@ -67,7 +67,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>E_Barangay.Program</StartupObject>
@@ -118,6 +118,12 @@
       <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="CitizenToComplaint.cs">
+      <DependentUpon>EBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CitizenToIdentification.cs">
+      <DependentUpon>EBModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CitizenToTag.cs">
       <DependentUpon>EBModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Class\CitizenExtensions.cs" />
@@ -486,6 +492,9 @@
     <Compile Include="Forms\YesOrNoPrompt.Designer.cs">
       <DependentUpon>YesOrNoPrompt.cs</DependentUpon>
     </Compile>
+    <Compile Include="Identification.cs">
+      <DependentUpon>EBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Interface\ICitizenAcceptor.cs" />
     <Compile Include="Interface\IAccept.cs" />
     <Compile Include="Interface\IImageAcceptor.cs" />
@@ -509,6 +518,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tag.cs">
+      <DependentUpon>EBModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>LoginModel.tt</DependentUpon>
     </Compile>
