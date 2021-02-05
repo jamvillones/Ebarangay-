@@ -41,10 +41,6 @@ namespace E_Barangay.Forms
             this.IssueBtn = new System.Windows.Forms.Button();
             this.complaintsBtn = new System.Windows.Forms.Button();
             this.ContentHolder = new System.Windows.Forms.Panel();
-            this.DashControl = new E_Barangay.Forms.Dashboard();
-            this.QueryPage = new E_Barangay.Forms.QueryControl();
-            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
-            this.complaintPage = new E_Barangay.Forms.ComplaintControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.currUserBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,8 +52,13 @@ namespace E_Barangay.Forms
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.officialTSBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.officialTSBtn = new System.Windows.Forms.ToolStripButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.DashControl = new E_Barangay.Forms.Dashboard();
+            this.QueryPage = new E_Barangay.Forms.QueryControl();
+            this.printingFiles = new E_Barangay.Forms.PrintingDocument();
+            this.complaintPage = new E_Barangay.Forms.ComplaintControl();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,18 +67,15 @@ namespace E_Barangay.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.stripPanel.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.SelectionPanel);
-            this.panel1.Controls.Add(this.DashBtn);
-            this.panel1.Controls.Add(this.QueryBtn);
-            this.panel1.Controls.Add(this.IssueBtn);
-            this.panel1.Controls.Add(this.complaintsBtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -115,7 +113,7 @@ namespace E_Barangay.Forms
             // SelectionPanel
             // 
             this.SelectionPanel.BackColor = System.Drawing.Color.White;
-            this.SelectionPanel.Location = new System.Drawing.Point(0, 113);
+            this.SelectionPanel.Location = new System.Drawing.Point(0, 0);
             this.SelectionPanel.Name = "SelectionPanel";
             this.SelectionPanel.Size = new System.Drawing.Size(5, 34);
             this.SelectionPanel.TabIndex = 2;
@@ -123,6 +121,7 @@ namespace E_Barangay.Forms
             // DashBtn
             // 
             this.DashBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.DashBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.DashBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.DashBtn.FlatAppearance.BorderSize = 0;
             this.DashBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -130,10 +129,10 @@ namespace E_Barangay.Forms
             this.DashBtn.ForeColor = System.Drawing.Color.White;
             this.DashBtn.Image = ((System.Drawing.Image)(resources.GetObject("DashBtn.Image")));
             this.DashBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DashBtn.Location = new System.Drawing.Point(3, 113);
+            this.DashBtn.Location = new System.Drawing.Point(0, 0);
             this.DashBtn.Name = "DashBtn";
             this.DashBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.DashBtn.Size = new System.Drawing.Size(165, 34);
+            this.DashBtn.Size = new System.Drawing.Size(168, 34);
             this.DashBtn.TabIndex = 3;
             this.DashBtn.TabStop = false;
             this.DashBtn.Text = "HOME";
@@ -146,6 +145,7 @@ namespace E_Barangay.Forms
             // QueryBtn
             // 
             this.QueryBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.QueryBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.QueryBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.QueryBtn.FlatAppearance.BorderSize = 0;
             this.QueryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -153,10 +153,10 @@ namespace E_Barangay.Forms
             this.QueryBtn.ForeColor = System.Drawing.Color.White;
             this.QueryBtn.Image = ((System.Drawing.Image)(resources.GetObject("QueryBtn.Image")));
             this.QueryBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.QueryBtn.Location = new System.Drawing.Point(3, 147);
+            this.QueryBtn.Location = new System.Drawing.Point(0, 34);
             this.QueryBtn.Name = "QueryBtn";
             this.QueryBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.QueryBtn.Size = new System.Drawing.Size(165, 34);
+            this.QueryBtn.Size = new System.Drawing.Size(168, 34);
             this.QueryBtn.TabIndex = 1;
             this.QueryBtn.TabStop = false;
             this.QueryBtn.Text = "RECORDS";
@@ -169,6 +169,7 @@ namespace E_Barangay.Forms
             // IssueBtn
             // 
             this.IssueBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.IssueBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.IssueBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.IssueBtn.FlatAppearance.BorderSize = 0;
             this.IssueBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -176,9 +177,9 @@ namespace E_Barangay.Forms
             this.IssueBtn.ForeColor = System.Drawing.Color.White;
             this.IssueBtn.Image = ((System.Drawing.Image)(resources.GetObject("IssueBtn.Image")));
             this.IssueBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.IssueBtn.Location = new System.Drawing.Point(3, 215);
+            this.IssueBtn.Location = new System.Drawing.Point(0, 102);
             this.IssueBtn.Name = "IssueBtn";
-            this.IssueBtn.Size = new System.Drawing.Size(165, 34);
+            this.IssueBtn.Size = new System.Drawing.Size(168, 34);
             this.IssueBtn.TabIndex = 4;
             this.IssueBtn.TabStop = false;
             this.IssueBtn.Text = "DOCUMENTS";
@@ -191,6 +192,7 @@ namespace E_Barangay.Forms
             // complaintsBtn
             // 
             this.complaintsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.complaintsBtn.Dock = System.Windows.Forms.DockStyle.Top;
             this.complaintsBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(43)))), ((int)(((byte)(52)))));
             this.complaintsBtn.FlatAppearance.BorderSize = 0;
             this.complaintsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -198,10 +200,10 @@ namespace E_Barangay.Forms
             this.complaintsBtn.ForeColor = System.Drawing.Color.White;
             this.complaintsBtn.Image = ((System.Drawing.Image)(resources.GetObject("complaintsBtn.Image")));
             this.complaintsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.complaintsBtn.Location = new System.Drawing.Point(3, 181);
+            this.complaintsBtn.Location = new System.Drawing.Point(0, 68);
             this.complaintsBtn.Name = "complaintsBtn";
             this.complaintsBtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.complaintsBtn.Size = new System.Drawing.Size(165, 34);
+            this.complaintsBtn.Size = new System.Drawing.Size(168, 34);
             this.complaintsBtn.TabIndex = 10;
             this.complaintsBtn.TabStop = false;
             this.complaintsBtn.Text = "COMPLAINTS";
@@ -209,6 +211,7 @@ namespace E_Barangay.Forms
             this.complaintsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.complaintsBtn.UseCompatibleTextRendering = true;
             this.complaintsBtn.UseVisualStyleBackColor = true;
+            this.complaintsBtn.Visible = false;
             this.complaintsBtn.Click += new System.EventHandler(this.complaintsBtn_Click);
             // 
             // ContentHolder
@@ -224,44 +227,6 @@ namespace E_Barangay.Forms
             this.ContentHolder.Name = "ContentHolder";
             this.ContentHolder.Size = new System.Drawing.Size(995, 538);
             this.ContentHolder.TabIndex = 3;
-            // 
-            // DashControl
-            // 
-            this.DashControl.BackColor = System.Drawing.Color.Silver;
-            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DashControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DashControl.Location = new System.Drawing.Point(0, 0);
-            this.DashControl.Name = "DashControl";
-            this.DashControl.Size = new System.Drawing.Size(995, 538);
-            this.DashControl.TabIndex = 3;
-            // 
-            // QueryPage
-            // 
-            this.QueryPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.QueryPage.Location = new System.Drawing.Point(0, 0);
-            this.QueryPage.Name = "QueryPage";
-            this.QueryPage.Size = new System.Drawing.Size(995, 538);
-            this.QueryPage.TabIndex = 5;
-            // 
-            // printingFiles
-            // 
-            this.printingFiles.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.printingFiles.Location = new System.Drawing.Point(0, 0);
-            this.printingFiles.Name = "printingFiles";
-            this.printingFiles.Size = new System.Drawing.Size(995, 538);
-            this.printingFiles.TabIndex = 4;
-            this.printingFiles.TabStop = false;
-            // 
-            // complaintPage
-            // 
-            this.complaintPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.complaintPage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.complaintPage.Location = new System.Drawing.Point(0, 0);
-            this.complaintPage.Name = "complaintPage";
-            this.complaintPage.Size = new System.Drawing.Size(995, 538);
-            this.complaintPage.TabIndex = 6;
             // 
             // panel2
             // 
@@ -382,16 +347,6 @@ namespace E_Barangay.Forms
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // officialTSBtn
-            // 
-            this.officialTSBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.officialTSBtn.Image = ((System.Drawing.Image)(resources.GetObject("officialTSBtn.Image")));
-            this.officialTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.officialTSBtn.Name = "officialTSBtn";
-            this.officialTSBtn.Size = new System.Drawing.Size(23, 22);
-            this.officialTSBtn.Text = "Edit Officials";
-            this.officialTSBtn.Click += new System.EventHandler(this.officials_Callback);
-            // 
             // toolStripButton2
             // 
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -402,6 +357,66 @@ namespace E_Barangay.Forms
             this.toolStripButton2.Text = "toolStripButton2";
             this.toolStripButton2.ToolTipText = "Areas";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // officialTSBtn
+            // 
+            this.officialTSBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.officialTSBtn.Image = ((System.Drawing.Image)(resources.GetObject("officialTSBtn.Image")));
+            this.officialTSBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.officialTSBtn.Name = "officialTSBtn";
+            this.officialTSBtn.Size = new System.Drawing.Size(23, 22);
+            this.officialTSBtn.Text = "Edit Officials";
+            this.officialTSBtn.Click += new System.EventHandler(this.officials_Callback);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.SelectionPanel);
+            this.panel3.Controls.Add(this.IssueBtn);
+            this.panel3.Controls.Add(this.complaintsBtn);
+            this.panel3.Controls.Add(this.QueryBtn);
+            this.panel3.Controls.Add(this.DashBtn);
+            this.panel3.Location = new System.Drawing.Point(0, 113);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(168, 497);
+            this.panel3.TabIndex = 11;
+            // 
+            // DashControl
+            // 
+            this.DashControl.BackColor = System.Drawing.Color.Silver;
+            this.DashControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DashControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DashControl.Location = new System.Drawing.Point(0, 0);
+            this.DashControl.Name = "DashControl";
+            this.DashControl.Size = new System.Drawing.Size(995, 538);
+            this.DashControl.TabIndex = 3;
+            // 
+            // QueryPage
+            // 
+            this.QueryPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.QueryPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.QueryPage.Location = new System.Drawing.Point(0, 0);
+            this.QueryPage.Name = "QueryPage";
+            this.QueryPage.Size = new System.Drawing.Size(995, 538);
+            this.QueryPage.TabIndex = 5;
+            // 
+            // printingFiles
+            // 
+            this.printingFiles.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.printingFiles.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.printingFiles.Location = new System.Drawing.Point(0, 0);
+            this.printingFiles.Name = "printingFiles";
+            this.printingFiles.Size = new System.Drawing.Size(995, 538);
+            this.printingFiles.TabIndex = 4;
+            this.printingFiles.TabStop = false;
+            // 
+            // complaintPage
+            // 
+            this.complaintPage.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.complaintPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.complaintPage.Location = new System.Drawing.Point(0, 0);
+            this.complaintPage.Name = "complaintPage";
+            this.complaintPage.Size = new System.Drawing.Size(995, 538);
+            this.complaintPage.TabIndex = 6;
             // 
             // MainPage
             // 
@@ -433,6 +448,7 @@ namespace E_Barangay.Forms
             this.stripPanel.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -466,5 +482,6 @@ namespace E_Barangay.Forms
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.Panel panel3;
     }
 }
